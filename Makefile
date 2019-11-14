@@ -85,6 +85,8 @@ clean:
 .PHONY: proto
 ## build proto
 proto: $(JAVASOURCES)
+	ls
+	ls $(JAVASOURCES)
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
