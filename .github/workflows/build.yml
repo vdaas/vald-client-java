@@ -1,0 +1,57 @@
+name: build protobuf
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          echo "Install dependencies"
+          sudo apt-get update
+          sudo apt-get install -y libprotobuf-dev libprotoc-dev protobuf-compiler
+      - name: Install grpc-java
+        run: |
+          echo "Install gRPC-Java"
+          sudo apt-get install -y autoconf libtool
+          mkdir -p $HOME/protobuf
+          curl -L https://github.com/protocolbuffers/protobuf/archive/v3.10.1.tar.gz | tar xvz --strip-components=1 -C $HOME/protobuf
+          cd $HOME/protobuf
+          autoreconf -f -i -Wall,no-obsolete
+          ./configure --prefix=/usr --enable-static=no
+          make -j2
+          mkdir -p $HOME/grpc-java
+          curl -L https://github.com/grpc/grpc-java/archive/v1.25.0.tar.gz | tar xvz --strip-components=1 -C $HOME/grpc-java
+          cd $HOME/grpc-java/compiler/src/java_plugin/cpp
+          g++ -I. -I$HOME/protobuf/src \
+          *.cpp \
+          -L$HOME/protobuf/src/.libs \
+          -lprotoc -lprotobuf -lpthread --std=c++0x -s \
+          -o protoc-gen-grpc-java
+          cp protoc-gen-grpc-java $HOME/grpc-java
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: |
+          echo "checkout master"
+          git checkout master
+      - run: |
+          echo "build"
+          export GOPATH=$HOME/go
+          export PATH=$HOME/grpc-java:$PATH
+          make vald
+          make all
+          make vald/sha/update
+      - run: |
+          echo "commit and push"
+          sha=`make vald/sha/print`
+          git config --global user.name 'VDaaS org'
+          git config --global user.email 'ci@vdaas.org'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git add .
+          git commit -m "[skip ci] Update [vald sha: ${sha}]"
+          git push
