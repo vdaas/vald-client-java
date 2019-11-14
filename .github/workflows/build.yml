@@ -24,7 +24,7 @@ jobs:
           autoreconf -f -i -Wall,no-obsolete
           ./configure --prefix=/usr --enable-static=no
           make -j2
-          make install
+          sudo make install
           mkdir -p $HOME/grpc-java
           curl -L https://github.com/grpc/grpc-java/archive/v1.25.0.tar.gz | tar xvz --strip-components=1 -C $HOME/grpc-java
           cd $HOME/grpc-java/compiler/src/java_plugin/cpp
