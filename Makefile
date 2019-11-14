@@ -86,7 +86,11 @@ clean:
 ## build proto
 proto: $(JAVASOURCES)
 
-$(JAVASOURCES): vald proto/deps
+$(JAVA_ROOT):
+	$(call mkdir, $@)
+	$(call rm, -rf, $@/*)
+
+$(JAVASOURCES): vald proto/deps $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
 	protoc \
 		$(PROTO_PATHS:%=-I %) \
