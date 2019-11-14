@@ -85,7 +85,6 @@ clean:
 .PHONY: proto
 ## build proto
 proto: $(JAVASOURCES)
-	ls $(JAVA_ROOT)/org/vdaas/vald
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
