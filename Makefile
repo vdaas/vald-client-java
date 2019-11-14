@@ -86,7 +86,7 @@ clean:
 ## build proto
 proto: $(JAVASOURCES)
 	ls
-	ls $(JAVASOURCES)
+	ls $(JAVA_ROOT)
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
