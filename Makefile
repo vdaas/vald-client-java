@@ -95,6 +95,7 @@ $(JAVASOURCES): vald proto/deps $(JAVA_ROOT)
 	protoc \
 		$(PROTO_PATHS:%=-I %) \
 		--plugin=protoc-gen-grpc-java=`which protoc-gen-grpc-java` \
+		--java_out=$(JAVA_ROOT) \
 		--grpc-java_out=$(JAVA_ROOT) \
 		$(patsubst $(JAVA_ROOT)/%.java,$(PROTO_ROOT)/%.proto,$@)
 
