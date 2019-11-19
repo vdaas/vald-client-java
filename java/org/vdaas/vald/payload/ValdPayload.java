@@ -205,6 +205,11 @@ public final class ValdPayload {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Info_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Info_Index_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Info_Index_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Info_Server_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -265,14 +270,17 @@ public final class ValdPayload {
       "etaVector\022\014\n\004uuid\030\001 \001(\t\022\014\n\004meta\030\002 \001(\t\022\030\n" +
       "\006vector\030\003 \003(\001B\010\372B\005\222\001\002\010\002\022\013\n\003ips\030\004 \003(\t\032:\n\013" +
       "MetaVectors\022+\n\007vectors\030\001 \003(\0132\032.payload.B" +
-      "ackup.MetaVector\"\302\001\n\004Info\032k\n\006Server\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\023\n\002ip\030\002 \001(\tB\007\372B\004r\002x\001\022$\n\006server" +
-      "\030\003 \001(\0132\024.payload.Info.Server\022\013\n\003cpu\030\004 \001(" +
-      "\001\022\013\n\003mem\030\005 \001(\001\032:\n\007Servers\022/\n\007Servers\030\001 \003" +
-      "(\0132\024.payload.Info.ServerB\010\372B\005\222\001\002\010\001\032\021\n\003IP" +
-      "s\022\n\n\002ip\030\001 \003(\t\"\007\n\005EmptyBP\n\026org.vdaas.vald" +
-      ".payloadB\013ValdPayloadP\001Z\'github.com/vdaa" +
-      "s/vald/apis/grpc/payloadb\006proto3"
+      "ackup.MetaVector\"\236\002\n\004Info\032Z\n\005Index\022\r\n\005co" +
+      "unt\030\001 \001(\r\022\031\n\021uncommitted_index\030\002 \001(\r\022\r\n\005" +
+      "uuids\030\003 \003(\t\022\030\n\020uncommitted_uuid\030\004 \003(\t\032k\n" +
+      "\006Server\022\014\n\004name\030\001 \001(\t\022\023\n\002ip\030\002 \001(\tB\007\372B\004r\002" +
+      "x\001\022$\n\006server\030\003 \001(\0132\024.payload.Info.Server" +
+      "\022\013\n\003cpu\030\004 \001(\001\022\013\n\003mem\030\005 \001(\001\032:\n\007Servers\022/\n" +
+      "\007Servers\030\001 \003(\0132\024.payload.Info.ServerB\010\372B" +
+      "\005\222\001\002\010\001\032\021\n\003IPs\022\n\n\002ip\030\001 \003(\t\"\007\n\005EmptyBP\n\026or" +
+      "g.vdaas.vald.payloadB\013ValdPayloadP\001Z\'git" +
+      "hub.com/vdaas/vald/apis/grpc/payloadb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -507,20 +515,26 @@ public final class ValdPayload {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Info_descriptor,
         new java.lang.String[] { });
-    internal_static_payload_Info_Server_descriptor =
+    internal_static_payload_Info_Index_descriptor =
       internal_static_payload_Info_descriptor.getNestedTypes().get(0);
+    internal_static_payload_Info_Index_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Info_Index_descriptor,
+        new java.lang.String[] { "Count", "UncommittedIndex", "Uuids", "UncommittedUuid", });
+    internal_static_payload_Info_Server_descriptor =
+      internal_static_payload_Info_descriptor.getNestedTypes().get(1);
     internal_static_payload_Info_Server_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Info_Server_descriptor,
         new java.lang.String[] { "Name", "Ip", "Server", "Cpu", "Mem", });
     internal_static_payload_Info_Servers_descriptor =
-      internal_static_payload_Info_descriptor.getNestedTypes().get(1);
+      internal_static_payload_Info_descriptor.getNestedTypes().get(2);
     internal_static_payload_Info_Servers_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Info_Servers_descriptor,
         new java.lang.String[] { "Servers", });
     internal_static_payload_Info_IPs_descriptor =
-      internal_static_payload_Info_descriptor.getNestedTypes().get(2);
+      internal_static_payload_Info_descriptor.getNestedTypes().get(3);
     internal_static_payload_Info_IPs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Info_IPs_descriptor,

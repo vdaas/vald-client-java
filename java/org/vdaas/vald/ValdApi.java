@@ -24,56 +24,51 @@ public final class ValdApi {
   static {
     java.lang.String[] descriptorData = {
       "\n\nvald.proto\022\004vald\032\rpayload.proto\032\034googl" +
-      "e/api/annotations.proto\032\014pb/gql.proto2\354\010" +
-      "\n\004Vald\022F\n\006Exists\022\022.payload.Object.ID\032\022.p" +
-      "ayload.Object.ID\"\024\202\323\344\223\002\016\022\014/exists/{id}\022O" +
-      "\n\006Search\022\027.payload.Search.Request\032\030.payl" +
-      "oad.Search.Response\"\022\202\323\344\223\002\014\"\007/search:\001*\022" +
-      "U\n\nSearchByID\022\031.payload.Search.IDRequest" +
-      "\032\030.payload.Search.Response\"\022\202\323\344\223\002\014\"\007/sea" +
-      "rch:\001*\022G\n\014StreamSearch\022\027.payload.Search." +
-      "Request\032\030.payload.Search.Response\"\000(\0010\001\022" +
-      "M\n\020StreamSearchByID\022\031.payload.Search.IDR" +
-      "equest\032\030.payload.Search.Response\"\000(\0010\001\022H" +
-      "\n\006Insert\022\026.payload.Object.Vector\032\016.paylo" +
-      "ad.Empty\"\026\202\323\344\223\002\014\"\007/insert:\001*\260\340\037\001\022<\n\014Stre" +
-      "amInsert\022\026.payload.Object.Vector\032\016.paylo" +
-      "ad.Empty\"\000(\0010\001\0228\n\013MultiInsert\022\027.payload." +
-      "Object.Vectors\032\016.payload.Empty\"\000\022H\n\006Upda" +
-      "te\022\026.payload.Object.Vector\032\016.payload.Emp" +
-      "ty\"\026\202\323\344\223\002\014\"\007/update:\001*\260\340\037\001\022<\n\014StreamUpda" +
-      "te\022\026.payload.Object.Vector\032\016.payload.Emp" +
-      "ty\"\000(\0010\001\0228\n\013MultiUpdate\022\027.payload.Object" +
-      ".Vectors\032\016.payload.Empty\"\000\022F\n\006Remove\022\022.p" +
-      "ayload.Object.ID\032\016.payload.Empty\"\030\202\323\344\223\002\016" +
-      "*\014/remove/{id}\260\340\037\001\0228\n\014StreamRemove\022\022.pay" +
-      "load.Object.ID\032\016.payload.Empty\"\000(\0010\001\0224\n\013" +
-      "MultiRemove\022\023.payload.Object.IDs\032\016.paylo" +
-      "ad.Empty\"\000\022Q\n\tGetObject\022\022.payload.Object" +
-      ".ID\032\032.payload.Backup.MetaVector\"\024\202\323\344\223\002\016\022" +
-      "\014/object/{id}\022G\n\017StreamGetObject\022\022.paylo" +
-      "ad.Object.ID\032\032.payload.Backup.MetaVector" +
-      "\"\000(\0010\001\032\004\260\340\037\002BA\n\016org.vdaas.valdB\007ValdApiP" +
-      "\001Z$github.com/vdaas/vald/apis/grpc/valdb" +
-      "\006proto3"
+      "e/api/annotations.proto2\332\010\n\004Vald\022F\n\006Exis" +
+      "ts\022\022.payload.Object.ID\032\022.payload.Object." +
+      "ID\"\024\202\323\344\223\002\016\022\014/exists/{id}\022O\n\006Search\022\027.pay" +
+      "load.Search.Request\032\030.payload.Search.Res" +
+      "ponse\"\022\202\323\344\223\002\014\"\007/search:\001*\022U\n\nSearchByID\022" +
+      "\031.payload.Search.IDRequest\032\030.payload.Sea" +
+      "rch.Response\"\022\202\323\344\223\002\014\"\007/search:\001*\022G\n\014Stre" +
+      "amSearch\022\027.payload.Search.Request\032\030.payl" +
+      "oad.Search.Response\"\000(\0010\001\022M\n\020StreamSearc" +
+      "hByID\022\031.payload.Search.IDRequest\032\030.paylo" +
+      "ad.Search.Response\"\000(\0010\001\022D\n\006Insert\022\026.pay" +
+      "load.Object.Vector\032\016.payload.Empty\"\022\202\323\344\223" +
+      "\002\014\"\007/insert:\001*\022<\n\014StreamInsert\022\026.payload" +
+      ".Object.Vector\032\016.payload.Empty\"\000(\0010\001\0228\n\013" +
+      "MultiInsert\022\027.payload.Object.Vectors\032\016.p" +
+      "ayload.Empty\"\000\022D\n\006Update\022\026.payload.Objec" +
+      "t.Vector\032\016.payload.Empty\"\022\202\323\344\223\002\014\"\007/updat" +
+      "e:\001*\022<\n\014StreamUpdate\022\026.payload.Object.Ve" +
+      "ctor\032\016.payload.Empty\"\000(\0010\001\0228\n\013MultiUpdat" +
+      "e\022\027.payload.Object.Vectors\032\016.payload.Emp" +
+      "ty\"\000\022B\n\006Remove\022\022.payload.Object.ID\032\016.pay" +
+      "load.Empty\"\024\202\323\344\223\002\016*\014/remove/{id}\0228\n\014Stre" +
+      "amRemove\022\022.payload.Object.ID\032\016.payload.E" +
+      "mpty\"\000(\0010\001\0224\n\013MultiRemove\022\023.payload.Obje" +
+      "ct.IDs\032\016.payload.Empty\"\000\022Q\n\tGetObject\022\022." +
+      "payload.Object.ID\032\032.payload.Backup.MetaV" +
+      "ector\"\024\202\323\344\223\002\016\022\014/object/{id}\022G\n\017StreamGet" +
+      "Object\022\022.payload.Object.ID\032\032.payload.Bac" +
+      "kup.MetaVector\"\000(\0010\001BA\n\016org.vdaas.valdB\007" +
+      "ValdApiP\001Z$github.com/vdaas/vald/apis/gr" +
+      "pc/valdb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.vdaas.vald.payload.ValdPayload.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          gql.Gql.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(gql.Gql.rpcType);
-    registry.add(gql.Gql.svcType);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     org.vdaas.vald.payload.ValdPayload.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    gql.Gql.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

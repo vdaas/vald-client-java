@@ -616,6 +616,37 @@ public final class AgentGrpc {
     return getCreateAndSaveIndexMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
+      org.vdaas.vald.payload.Info.Index> getIndexInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "IndexInfo",
+      requestType = org.vdaas.vald.payload.Empty.class,
+      responseType = org.vdaas.vald.payload.Info.Index.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
+      org.vdaas.vald.payload.Info.Index> getIndexInfoMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index> getIndexInfoMethod;
+    if ((getIndexInfoMethod = AgentGrpc.getIndexInfoMethod) == null) {
+      synchronized (AgentGrpc.class) {
+        if ((getIndexInfoMethod = AgentGrpc.getIndexInfoMethod) == null) {
+          AgentGrpc.getIndexInfoMethod = getIndexInfoMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IndexInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Info.Index.getDefaultInstance()))
+              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("IndexInfo"))
+              .build();
+        }
+      }
+    }
+    return getIndexInfoMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -776,6 +807,13 @@ public final class AgentGrpc {
       asyncUnimplementedUnaryCall(getCreateAndSaveIndexMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void indexInfo(org.vdaas.vald.payload.Empty request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index> responseObserver) {
+      asyncUnimplementedUnaryCall(getIndexInfoMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -911,6 +949,13 @@ public final class AgentGrpc {
                 org.vdaas.vald.payload.Controll.CreateIndexRequest,
                 org.vdaas.vald.payload.Empty>(
                   this, METHODID_CREATE_AND_SAVE_INDEX)))
+          .addMethod(
+            getIndexInfoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.vdaas.vald.payload.Empty,
+                org.vdaas.vald.payload.Info.Index>(
+                  this, METHODID_INDEX_INFO)))
           .build();
     }
   }
@@ -1084,6 +1129,14 @@ public final class AgentGrpc {
       asyncUnaryCall(
           getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void indexInfo(org.vdaas.vald.payload.Empty request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1193,6 +1246,13 @@ public final class AgentGrpc {
     public org.vdaas.vald.payload.Empty createAndSaveIndex(org.vdaas.vald.payload.Controll.CreateIndexRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateAndSaveIndexMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.vdaas.vald.payload.Info.Index indexInfo(org.vdaas.vald.payload.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), getIndexInfoMethod(), getCallOptions(), request);
     }
   }
 
@@ -1317,6 +1377,14 @@ public final class AgentGrpc {
       return futureUnaryCall(
           getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Info.Index> indexInfo(
+        org.vdaas.vald.payload.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXISTS = 0;
@@ -1332,12 +1400,13 @@ public final class AgentGrpc {
   private static final int METHODID_CREATE_INDEX = 10;
   private static final int METHODID_SAVE_INDEX = 11;
   private static final int METHODID_CREATE_AND_SAVE_INDEX = 12;
-  private static final int METHODID_STREAM_SEARCH = 13;
-  private static final int METHODID_STREAM_SEARCH_BY_ID = 14;
-  private static final int METHODID_STREAM_INSERT = 15;
-  private static final int METHODID_STREAM_UPDATE = 16;
-  private static final int METHODID_STREAM_REMOVE = 17;
-  private static final int METHODID_STREAM_GET_OBJECT = 18;
+  private static final int METHODID_INDEX_INFO = 13;
+  private static final int METHODID_STREAM_SEARCH = 14;
+  private static final int METHODID_STREAM_SEARCH_BY_ID = 15;
+  private static final int METHODID_STREAM_INSERT = 16;
+  private static final int METHODID_STREAM_UPDATE = 17;
+  private static final int METHODID_STREAM_REMOVE = 18;
+  private static final int METHODID_STREAM_GET_OBJECT = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1407,6 +1476,10 @@ public final class AgentGrpc {
         case METHODID_CREATE_AND_SAVE_INDEX:
           serviceImpl.createAndSaveIndex((org.vdaas.vald.payload.Controll.CreateIndexRequest) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
+          break;
+        case METHODID_INDEX_INFO:
+          serviceImpl.indexInfo((org.vdaas.vald.payload.Empty) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1506,6 +1579,7 @@ public final class AgentGrpc {
               .addMethod(getCreateIndexMethod())
               .addMethod(getSaveIndexMethod())
               .addMethod(getCreateAndSaveIndexMethod())
+              .addMethod(getIndexInfoMethod())
               .build();
         }
       }
