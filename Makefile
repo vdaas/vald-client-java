@@ -92,6 +92,7 @@ $(JAVA_ROOT):
 
 $(JAVASOURCES): vald proto/deps $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
+	sed -i -e '/^.*gql\.proto.*$$\|^.*gql\..*_type.*$$/d' $(patsubst $(JAVA_ROOT)/%.java,$(PROTO_ROOT)/%.proto,$@)
 	protoc \
 		$(PROTO_PATHS:%=-I %) \
 		--plugin=protoc-gen-grpc-java=`which protoc-gen-grpc-java` \
