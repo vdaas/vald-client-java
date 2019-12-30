@@ -8260,6 +8260,2218 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface CompressedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.Backup.Compressed)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code payload.Backup.Compressed}
+   */
+  public  static final class Compressed extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.Backup.Compressed)
+      CompressedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Compressed.newBuilder() to construct.
+    private Compressed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Compressed() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Compressed();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Compressed(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.payload.Backup.Compressed.class, org.vdaas.vald.payload.Backup.Compressed.Builder.class);
+    }
+
+    public interface MetaVectorOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.Backup.Compressed.MetaVector)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string uuid = 1;</code>
+       * @return The uuid.
+       */
+      java.lang.String getUuid();
+      /**
+       * <code>string uuid = 1;</code>
+       * @return The bytes for uuid.
+       */
+      com.google.protobuf.ByteString
+          getUuidBytes();
+
+      /**
+       * <code>string meta = 2;</code>
+       * @return The meta.
+       */
+      java.lang.String getMeta();
+      /**
+       * <code>string meta = 2;</code>
+       * @return The bytes for meta.
+       */
+      com.google.protobuf.ByteString
+          getMetaBytes();
+
+      /**
+       * <code>bytes vector = 3;</code>
+       * @return The vector.
+       */
+      com.google.protobuf.ByteString getVector();
+
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @return A list containing the ips.
+       */
+      java.util.List<java.lang.String>
+          getIpsList();
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @return The count of ips.
+       */
+      int getIpsCount();
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @param index The index of the element to return.
+       * @return The ips at the given index.
+       */
+      java.lang.String getIps(int index);
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ips at the given index.
+       */
+      com.google.protobuf.ByteString
+          getIpsBytes(int index);
+    }
+    /**
+     * Protobuf type {@code payload.Backup.Compressed.MetaVector}
+     */
+    public  static final class MetaVector extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.Backup.Compressed.MetaVector)
+        MetaVectorOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MetaVector.newBuilder() to construct.
+      private MetaVector(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MetaVector() {
+        uuid_ = "";
+        meta_ = "";
+        vector_ = com.google.protobuf.ByteString.EMPTY;
+        ips_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MetaVector();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MetaVector(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                uuid_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                meta_ = s;
+                break;
+              }
+              case 26: {
+
+                vector_ = input.readBytes();
+                break;
+              }
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  ips_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                ips_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            ips_ = ips_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVector_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.payload.Backup.Compressed.MetaVector.class, org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder.class);
+      }
+
+      public static final int UUID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object uuid_;
+      /**
+       * <code>string uuid = 1;</code>
+       * @return The uuid.
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string uuid = 1;</code>
+       * @return The bytes for uuid.
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int META_FIELD_NUMBER = 2;
+      private volatile java.lang.Object meta_;
+      /**
+       * <code>string meta = 2;</code>
+       * @return The meta.
+       */
+      public java.lang.String getMeta() {
+        java.lang.Object ref = meta_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          meta_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string meta = 2;</code>
+       * @return The bytes for meta.
+       */
+      public com.google.protobuf.ByteString
+          getMetaBytes() {
+        java.lang.Object ref = meta_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          meta_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VECTOR_FIELD_NUMBER = 3;
+      private com.google.protobuf.ByteString vector_;
+      /**
+       * <code>bytes vector = 3;</code>
+       * @return The vector.
+       */
+      public com.google.protobuf.ByteString getVector() {
+        return vector_;
+      }
+
+      public static final int IPS_FIELD_NUMBER = 4;
+      private com.google.protobuf.LazyStringList ips_;
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @return A list containing the ips.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getIpsList() {
+        return ips_;
+      }
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @return The count of ips.
+       */
+      public int getIpsCount() {
+        return ips_.size();
+      }
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @param index The index of the element to return.
+       * @return The ips at the given index.
+       */
+      public java.lang.String getIps(int index) {
+        return ips_.get(index);
+      }
+      /**
+       * <code>repeated string ips = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ips at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getIpsBytes(int index) {
+        return ips_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getUuidBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
+        }
+        if (!getMetaBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, meta_);
+        }
+        if (!vector_.isEmpty()) {
+          output.writeBytes(3, vector_);
+        }
+        for (int i = 0; i < ips_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ips_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getUuidBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
+        }
+        if (!getMetaBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, meta_);
+        }
+        if (!vector_.isEmpty()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(3, vector_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < ips_.size(); i++) {
+            dataSize += computeStringSizeNoTag(ips_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getIpsList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.payload.Backup.Compressed.MetaVector)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.payload.Backup.Compressed.MetaVector other = (org.vdaas.vald.payload.Backup.Compressed.MetaVector) obj;
+
+        if (!getUuid()
+            .equals(other.getUuid())) return false;
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+        if (!getVector()
+            .equals(other.getVector())) return false;
+        if (!getIpsList()
+            .equals(other.getIpsList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+        hash = (37 * hash) + VECTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getVector().hashCode();
+        if (getIpsCount() > 0) {
+          hash = (37 * hash) + IPS_FIELD_NUMBER;
+          hash = (53 * hash) + getIpsList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.payload.Backup.Compressed.MetaVector prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code payload.Backup.Compressed.MetaVector}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.Backup.Compressed.MetaVector)
+          org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVector_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVector_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.payload.Backup.Compressed.MetaVector.class, org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.payload.Backup.Compressed.MetaVector.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          uuid_ = "";
+
+          meta_ = "";
+
+          vector_ = com.google.protobuf.ByteString.EMPTY;
+
+          ips_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVector_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVector getDefaultInstanceForType() {
+          return org.vdaas.vald.payload.Backup.Compressed.MetaVector.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVector build() {
+          org.vdaas.vald.payload.Backup.Compressed.MetaVector result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVector buildPartial() {
+          org.vdaas.vald.payload.Backup.Compressed.MetaVector result = new org.vdaas.vald.payload.Backup.Compressed.MetaVector(this);
+          int from_bitField0_ = bitField0_;
+          result.uuid_ = uuid_;
+          result.meta_ = meta_;
+          result.vector_ = vector_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            ips_ = ips_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.ips_ = ips_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.payload.Backup.Compressed.MetaVector) {
+            return mergeFrom((org.vdaas.vald.payload.Backup.Compressed.MetaVector)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.payload.Backup.Compressed.MetaVector other) {
+          if (other == org.vdaas.vald.payload.Backup.Compressed.MetaVector.getDefaultInstance()) return this;
+          if (!other.getUuid().isEmpty()) {
+            uuid_ = other.uuid_;
+            onChanged();
+          }
+          if (!other.getMeta().isEmpty()) {
+            meta_ = other.meta_;
+            onChanged();
+          }
+          if (other.getVector() != com.google.protobuf.ByteString.EMPTY) {
+            setVector(other.getVector());
+          }
+          if (!other.ips_.isEmpty()) {
+            if (ips_.isEmpty()) {
+              ips_ = other.ips_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIpsIsMutable();
+              ips_.addAll(other.ips_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.vdaas.vald.payload.Backup.Compressed.MetaVector parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.vdaas.vald.payload.Backup.Compressed.MetaVector) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object uuid_ = "";
+        /**
+         * <code>string uuid = 1;</code>
+         * @return The uuid.
+         */
+        public java.lang.String getUuid() {
+          java.lang.Object ref = uuid_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            uuid_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string uuid = 1;</code>
+         * @return The bytes for uuid.
+         */
+        public com.google.protobuf.ByteString
+            getUuidBytes() {
+          java.lang.Object ref = uuid_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            uuid_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string uuid = 1;</code>
+         * @param value The uuid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUuid(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          uuid_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string uuid = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUuid() {
+          
+          uuid_ = getDefaultInstance().getUuid();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string uuid = 1;</code>
+         * @param value The bytes for uuid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUuidBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          uuid_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object meta_ = "";
+        /**
+         * <code>string meta = 2;</code>
+         * @return The meta.
+         */
+        public java.lang.String getMeta() {
+          java.lang.Object ref = meta_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            meta_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string meta = 2;</code>
+         * @return The bytes for meta.
+         */
+        public com.google.protobuf.ByteString
+            getMetaBytes() {
+          java.lang.Object ref = meta_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            meta_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string meta = 2;</code>
+         * @param value The meta to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMeta(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          meta_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string meta = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMeta() {
+          
+          meta_ = getDefaultInstance().getMeta();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string meta = 2;</code>
+         * @param value The bytes for meta to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMetaBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          meta_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.ByteString vector_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>bytes vector = 3;</code>
+         * @return The vector.
+         */
+        public com.google.protobuf.ByteString getVector() {
+          return vector_;
+        }
+        /**
+         * <code>bytes vector = 3;</code>
+         * @param value The vector to set.
+         * @return This builder for chaining.
+         */
+        public Builder setVector(com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          vector_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bytes vector = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearVector() {
+          
+          vector_ = getDefaultInstance().getVector();
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList ips_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureIpsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            ips_ = new com.google.protobuf.LazyStringArrayList(ips_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @return A list containing the ips.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getIpsList() {
+          return ips_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @return The count of ips.
+         */
+        public int getIpsCount() {
+          return ips_.size();
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @param index The index of the element to return.
+         * @return The ips at the given index.
+         */
+        public java.lang.String getIps(int index) {
+          return ips_.get(index);
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the ips at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getIpsBytes(int index) {
+          return ips_.getByteString(index);
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @param index The index to set the value at.
+         * @param value The ips to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIps(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIpsIsMutable();
+          ips_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @param value The ips to add.
+         * @return This builder for chaining.
+         */
+        public Builder addIps(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIpsIsMutable();
+          ips_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @param values The ips to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllIps(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureIpsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ips_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIps() {
+          ips_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string ips = 4;</code>
+         * @param value The bytes of the ips to add.
+         * @return This builder for chaining.
+         */
+        public Builder addIpsBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureIpsIsMutable();
+          ips_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.Backup.Compressed.MetaVector)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.Backup.Compressed.MetaVector)
+      private static final org.vdaas.vald.payload.Backup.Compressed.MetaVector DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.payload.Backup.Compressed.MetaVector();
+      }
+
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVector getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MetaVector>
+          PARSER = new com.google.protobuf.AbstractParser<MetaVector>() {
+        @java.lang.Override
+        public MetaVector parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MetaVector(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MetaVector> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MetaVector> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.payload.Backup.Compressed.MetaVector getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface MetaVectorsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.Backup.Compressed.MetaVectors)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      java.util.List<org.vdaas.vald.payload.Backup.Compressed.MetaVector> 
+          getVectorsList();
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      org.vdaas.vald.payload.Backup.Compressed.MetaVector getVectors(int index);
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      int getVectorsCount();
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      java.util.List<? extends org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder> 
+          getVectorsOrBuilderList();
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder getVectorsOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code payload.Backup.Compressed.MetaVectors}
+     */
+    public  static final class MetaVectors extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.Backup.Compressed.MetaVectors)
+        MetaVectorsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use MetaVectors.newBuilder() to construct.
+      private MetaVectors(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private MetaVectors() {
+        vectors_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MetaVectors();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private MetaVectors(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  vectors_ = new java.util.ArrayList<org.vdaas.vald.payload.Backup.Compressed.MetaVector>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                vectors_.add(
+                    input.readMessage(org.vdaas.vald.payload.Backup.Compressed.MetaVector.parser(), extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            vectors_ = java.util.Collections.unmodifiableList(vectors_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVectors_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVectors_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.payload.Backup.Compressed.MetaVectors.class, org.vdaas.vald.payload.Backup.Compressed.MetaVectors.Builder.class);
+      }
+
+      public static final int VECTORS_FIELD_NUMBER = 1;
+      private java.util.List<org.vdaas.vald.payload.Backup.Compressed.MetaVector> vectors_;
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      public java.util.List<org.vdaas.vald.payload.Backup.Compressed.MetaVector> getVectorsList() {
+        return vectors_;
+      }
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      public java.util.List<? extends org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder> 
+          getVectorsOrBuilderList() {
+        return vectors_;
+      }
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      public int getVectorsCount() {
+        return vectors_.size();
+      }
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      public org.vdaas.vald.payload.Backup.Compressed.MetaVector getVectors(int index) {
+        return vectors_.get(index);
+      }
+      /**
+       * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+       */
+      public org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder getVectorsOrBuilder(
+          int index) {
+        return vectors_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < vectors_.size(); i++) {
+          output.writeMessage(1, vectors_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < vectors_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, vectors_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.payload.Backup.Compressed.MetaVectors)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.payload.Backup.Compressed.MetaVectors other = (org.vdaas.vald.payload.Backup.Compressed.MetaVectors) obj;
+
+        if (!getVectorsList()
+            .equals(other.getVectorsList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getVectorsCount() > 0) {
+          hash = (37 * hash) + VECTORS_FIELD_NUMBER;
+          hash = (53 * hash) + getVectorsList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.payload.Backup.Compressed.MetaVectors prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code payload.Backup.Compressed.MetaVectors}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.Backup.Compressed.MetaVectors)
+          org.vdaas.vald.payload.Backup.Compressed.MetaVectorsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVectors_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVectors_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.payload.Backup.Compressed.MetaVectors.class, org.vdaas.vald.payload.Backup.Compressed.MetaVectors.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.payload.Backup.Compressed.MetaVectors.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getVectorsFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (vectorsBuilder_ == null) {
+            vectors_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            vectorsBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_MetaVectors_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVectors getDefaultInstanceForType() {
+          return org.vdaas.vald.payload.Backup.Compressed.MetaVectors.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVectors build() {
+          org.vdaas.vald.payload.Backup.Compressed.MetaVectors result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVectors buildPartial() {
+          org.vdaas.vald.payload.Backup.Compressed.MetaVectors result = new org.vdaas.vald.payload.Backup.Compressed.MetaVectors(this);
+          int from_bitField0_ = bitField0_;
+          if (vectorsBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              vectors_ = java.util.Collections.unmodifiableList(vectors_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.vectors_ = vectors_;
+          } else {
+            result.vectors_ = vectorsBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.payload.Backup.Compressed.MetaVectors) {
+            return mergeFrom((org.vdaas.vald.payload.Backup.Compressed.MetaVectors)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.payload.Backup.Compressed.MetaVectors other) {
+          if (other == org.vdaas.vald.payload.Backup.Compressed.MetaVectors.getDefaultInstance()) return this;
+          if (vectorsBuilder_ == null) {
+            if (!other.vectors_.isEmpty()) {
+              if (vectors_.isEmpty()) {
+                vectors_ = other.vectors_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureVectorsIsMutable();
+                vectors_.addAll(other.vectors_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.vectors_.isEmpty()) {
+              if (vectorsBuilder_.isEmpty()) {
+                vectorsBuilder_.dispose();
+                vectorsBuilder_ = null;
+                vectors_ = other.vectors_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                vectorsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getVectorsFieldBuilder() : null;
+              } else {
+                vectorsBuilder_.addAllMessages(other.vectors_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.vdaas.vald.payload.Backup.Compressed.MetaVectors parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.vdaas.vald.payload.Backup.Compressed.MetaVectors) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<org.vdaas.vald.payload.Backup.Compressed.MetaVector> vectors_ =
+          java.util.Collections.emptyList();
+        private void ensureVectorsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            vectors_ = new java.util.ArrayList<org.vdaas.vald.payload.Backup.Compressed.MetaVector>(vectors_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.vdaas.vald.payload.Backup.Compressed.MetaVector, org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder, org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder> vectorsBuilder_;
+
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public java.util.List<org.vdaas.vald.payload.Backup.Compressed.MetaVector> getVectorsList() {
+          if (vectorsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(vectors_);
+          } else {
+            return vectorsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public int getVectorsCount() {
+          if (vectorsBuilder_ == null) {
+            return vectors_.size();
+          } else {
+            return vectorsBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVector getVectors(int index) {
+          if (vectorsBuilder_ == null) {
+            return vectors_.get(index);
+          } else {
+            return vectorsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder setVectors(
+            int index, org.vdaas.vald.payload.Backup.Compressed.MetaVector value) {
+          if (vectorsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureVectorsIsMutable();
+            vectors_.set(index, value);
+            onChanged();
+          } else {
+            vectorsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder setVectors(
+            int index, org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder builderForValue) {
+          if (vectorsBuilder_ == null) {
+            ensureVectorsIsMutable();
+            vectors_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            vectorsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder addVectors(org.vdaas.vald.payload.Backup.Compressed.MetaVector value) {
+          if (vectorsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureVectorsIsMutable();
+            vectors_.add(value);
+            onChanged();
+          } else {
+            vectorsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder addVectors(
+            int index, org.vdaas.vald.payload.Backup.Compressed.MetaVector value) {
+          if (vectorsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureVectorsIsMutable();
+            vectors_.add(index, value);
+            onChanged();
+          } else {
+            vectorsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder addVectors(
+            org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder builderForValue) {
+          if (vectorsBuilder_ == null) {
+            ensureVectorsIsMutable();
+            vectors_.add(builderForValue.build());
+            onChanged();
+          } else {
+            vectorsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder addVectors(
+            int index, org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder builderForValue) {
+          if (vectorsBuilder_ == null) {
+            ensureVectorsIsMutable();
+            vectors_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            vectorsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder addAllVectors(
+            java.lang.Iterable<? extends org.vdaas.vald.payload.Backup.Compressed.MetaVector> values) {
+          if (vectorsBuilder_ == null) {
+            ensureVectorsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, vectors_);
+            onChanged();
+          } else {
+            vectorsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder clearVectors() {
+          if (vectorsBuilder_ == null) {
+            vectors_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            vectorsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public Builder removeVectors(int index) {
+          if (vectorsBuilder_ == null) {
+            ensureVectorsIsMutable();
+            vectors_.remove(index);
+            onChanged();
+          } else {
+            vectorsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder getVectorsBuilder(
+            int index) {
+          return getVectorsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder getVectorsOrBuilder(
+            int index) {
+          if (vectorsBuilder_ == null) {
+            return vectors_.get(index);  } else {
+            return vectorsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public java.util.List<? extends org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder> 
+             getVectorsOrBuilderList() {
+          if (vectorsBuilder_ != null) {
+            return vectorsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(vectors_);
+          }
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder addVectorsBuilder() {
+          return getVectorsFieldBuilder().addBuilder(
+              org.vdaas.vald.payload.Backup.Compressed.MetaVector.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder addVectorsBuilder(
+            int index) {
+          return getVectorsFieldBuilder().addBuilder(
+              index, org.vdaas.vald.payload.Backup.Compressed.MetaVector.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .payload.Backup.Compressed.MetaVector vectors = 1;</code>
+         */
+        public java.util.List<org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder> 
+             getVectorsBuilderList() {
+          return getVectorsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.vdaas.vald.payload.Backup.Compressed.MetaVector, org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder, org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder> 
+            getVectorsFieldBuilder() {
+          if (vectorsBuilder_ == null) {
+            vectorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                org.vdaas.vald.payload.Backup.Compressed.MetaVector, org.vdaas.vald.payload.Backup.Compressed.MetaVector.Builder, org.vdaas.vald.payload.Backup.Compressed.MetaVectorOrBuilder>(
+                    vectors_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            vectors_ = null;
+          }
+          return vectorsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.Backup.Compressed.MetaVectors)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.Backup.Compressed.MetaVectors)
+      private static final org.vdaas.vald.payload.Backup.Compressed.MetaVectors DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.payload.Backup.Compressed.MetaVectors();
+      }
+
+      public static org.vdaas.vald.payload.Backup.Compressed.MetaVectors getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<MetaVectors>
+          PARSER = new com.google.protobuf.AbstractParser<MetaVectors>() {
+        @java.lang.Override
+        public MetaVectors parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MetaVectors(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<MetaVectors> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<MetaVectors> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.payload.Backup.Compressed.MetaVectors getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.payload.Backup.Compressed)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.payload.Backup.Compressed other = (org.vdaas.vald.payload.Backup.Compressed) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.payload.Backup.Compressed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.payload.Backup.Compressed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.Backup.Compressed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.Backup.Compressed)
+        org.vdaas.vald.payload.Backup.CompressedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.payload.Backup.Compressed.class, org.vdaas.vald.payload.Backup.Compressed.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.payload.Backup.Compressed.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Backup_Compressed_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.payload.Backup.Compressed getDefaultInstanceForType() {
+        return org.vdaas.vald.payload.Backup.Compressed.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.payload.Backup.Compressed build() {
+        org.vdaas.vald.payload.Backup.Compressed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.payload.Backup.Compressed buildPartial() {
+        org.vdaas.vald.payload.Backup.Compressed result = new org.vdaas.vald.payload.Backup.Compressed(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.payload.Backup.Compressed) {
+          return mergeFrom((org.vdaas.vald.payload.Backup.Compressed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.payload.Backup.Compressed other) {
+        if (other == org.vdaas.vald.payload.Backup.Compressed.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.vdaas.vald.payload.Backup.Compressed parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.vdaas.vald.payload.Backup.Compressed) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.Backup.Compressed)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.Backup.Compressed)
+    private static final org.vdaas.vald.payload.Backup.Compressed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.payload.Backup.Compressed();
+    }
+
+    public static org.vdaas.vald.payload.Backup.Compressed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Compressed>
+        PARSER = new com.google.protobuf.AbstractParser<Compressed>() {
+      @java.lang.Override
+      public Compressed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Compressed(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Compressed> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Compressed> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.payload.Backup.Compressed getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {

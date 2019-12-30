@@ -200,6 +200,21 @@ public final class ValdPayload {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Backup_MetaVectors_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Backup_Compressed_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Backup_Compressed_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Backup_Compressed_MetaVector_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Backup_Compressed_MetaVector_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Backup_Compressed_MetaVectors_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Backup_Compressed_MetaVectors_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Info_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -259,7 +274,7 @@ public final class ValdPayload {
       "tor\"<\n\010Controll\0320\n\022CreateIndexRequest\022\032\n" +
       "\tpool_size\030\001 \001(\rB\007\372B\004*\002(\000\"<\n\nDiscoverer\032" +
       ".\n\007Request\022\025\n\004name\030\001 \001(\tB\007\372B\004r\002\020\001\022\014\n\004nod" +
-      "e\030\002 \001(\t\"\276\003\n\006Backup\032-\n\tGetVector\032 \n\007Reque" +
+      "e\030\002 \001(\t\"\333\004\n\006Backup\032-\n\tGetVector\032 \n\007Reque" +
       "st\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r\002\020\001\032-\n\tLocations\032 " +
       "\n\007Request\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r\002\020\001\032R\n\006Remo" +
       "ve\032 \n\007Request\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r\002\020\001\032&\n\014" +
@@ -270,17 +285,21 @@ public final class ValdPayload {
       "etaVector\022\014\n\004uuid\030\001 \001(\t\022\014\n\004meta\030\002 \001(\t\022\030\n" +
       "\006vector\030\003 \003(\001B\010\372B\005\222\001\002\010\002\022\013\n\003ips\030\004 \003(\t\032:\n\013" +
       "MetaVectors\022+\n\007vectors\030\001 \003(\0132\032.payload.B" +
-      "ackup.MetaVector\"\236\002\n\004Info\032Z\n\005Index\022\r\n\005co" +
-      "unt\030\001 \001(\r\022\031\n\021uncommitted_index\030\002 \001(\r\022\r\n\005" +
-      "uuids\030\003 \003(\t\022\030\n\020uncommitted_uuid\030\004 \003(\t\032k\n" +
-      "\006Server\022\014\n\004name\030\001 \001(\t\022\023\n\002ip\030\002 \001(\tB\007\372B\004r\002" +
-      "x\001\022$\n\006server\030\003 \001(\0132\024.payload.Info.Server" +
-      "\022\013\n\003cpu\030\004 \001(\001\022\013\n\003mem\030\005 \001(\001\032:\n\007Servers\022/\n" +
-      "\007Servers\030\001 \003(\0132\024.payload.Info.ServerB\010\372B" +
-      "\005\222\001\002\010\001\032\021\n\003IPs\022\n\n\002ip\030\001 \003(\t\"\007\n\005EmptyBP\n\026or" +
-      "g.vdaas.vald.payloadB\013ValdPayloadP\001Z\'git" +
-      "hub.com/vdaas/vald/apis/grpc/payloadb\006pr" +
-      "oto3"
+      "ackup.MetaVector\032\232\001\n\nCompressed\032E\n\nMetaV" +
+      "ector\022\014\n\004uuid\030\001 \001(\t\022\014\n\004meta\030\002 \001(\t\022\016\n\006vec" +
+      "tor\030\003 \001(\014\022\013\n\003ips\030\004 \003(\t\032E\n\013MetaVectors\0226\n" +
+      "\007vectors\030\001 \003(\0132%.payload.Backup.Compress" +
+      "ed.MetaVector\"\236\002\n\004Info\032Z\n\005Index\022\r\n\005count" +
+      "\030\001 \001(\r\022\031\n\021uncommitted_index\030\002 \001(\r\022\r\n\005uui" +
+      "ds\030\003 \003(\t\022\030\n\020uncommitted_uuid\030\004 \003(\t\032k\n\006Se" +
+      "rver\022\014\n\004name\030\001 \001(\t\022\023\n\002ip\030\002 \001(\tB\007\372B\004r\002x\001\022" +
+      "$\n\006server\030\003 \001(\0132\024.payload.Info.Server\022\013\n" +
+      "\003cpu\030\004 \001(\001\022\013\n\003mem\030\005 \001(\001\032:\n\007Servers\022/\n\007Se" +
+      "rvers\030\001 \003(\0132\024.payload.Info.ServerB\010\372B\005\222\001" +
+      "\002\010\001\032\021\n\003IPs\022\n\n\002ip\030\001 \003(\t\"\007\n\005EmptyBP\n\026org.v" +
+      "daas.vald.payloadB\013ValdPayloadP\001Z\'github" +
+      ".com/vdaas/vald/apis/grpc/payloadb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -508,6 +527,24 @@ public final class ValdPayload {
     internal_static_payload_Backup_MetaVectors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Backup_MetaVectors_descriptor,
+        new java.lang.String[] { "Vectors", });
+    internal_static_payload_Backup_Compressed_descriptor =
+      internal_static_payload_Backup_descriptor.getNestedTypes().get(6);
+    internal_static_payload_Backup_Compressed_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Backup_Compressed_descriptor,
+        new java.lang.String[] { });
+    internal_static_payload_Backup_Compressed_MetaVector_descriptor =
+      internal_static_payload_Backup_Compressed_descriptor.getNestedTypes().get(0);
+    internal_static_payload_Backup_Compressed_MetaVector_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Backup_Compressed_MetaVector_descriptor,
+        new java.lang.String[] { "Uuid", "Meta", "Vector", "Ips", });
+    internal_static_payload_Backup_Compressed_MetaVectors_descriptor =
+      internal_static_payload_Backup_Compressed_descriptor.getNestedTypes().get(1);
+    internal_static_payload_Backup_Compressed_MetaVectors_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Backup_Compressed_MetaVectors_descriptor,
         new java.lang.String[] { "Vectors", });
     internal_static_payload_Info_descriptor =
       getDescriptor().getMessageTypes().get(6);
