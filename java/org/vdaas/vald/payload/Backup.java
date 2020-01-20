@@ -6377,21 +6377,21 @@ private static final long serialVersionUID = 0L;
         getMetaBytes();
 
     /**
-     * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+     * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
      * @return A list containing the vector.
      */
-    java.util.List<java.lang.Double> getVectorList();
+    java.util.List<java.lang.Float> getVectorList();
     /**
-     * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+     * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
      * @return The count of vector.
      */
     int getVectorCount();
     /**
-     * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+     * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The vector at the given index.
      */
-    double getVector(int index);
+    float getVector(int index);
 
     /**
      * <code>repeated string ips = 4;</code>
@@ -6433,7 +6433,7 @@ private static final long serialVersionUID = 0L;
     private MetaVector() {
       uuid_ = "";
       meta_ = "";
-      vector_ = emptyDoubleList();
+      vector_ = emptyFloatList();
       ips_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -6480,23 +6480,23 @@ private static final long serialVersionUID = 0L;
               meta_ = s;
               break;
             }
-            case 25: {
+            case 29: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                vector_ = newDoubleList();
+                vector_ = newFloatList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              vector_.addDouble(input.readDouble());
+              vector_.addFloat(input.readFloat());
               break;
             }
             case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                vector_ = newDoubleList();
+                vector_ = newFloatList();
                 mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                vector_.addDouble(input.readDouble());
+                vector_.addFloat(input.readFloat());
               }
               input.popLimit(limit);
               break;
@@ -6621,29 +6621,29 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int VECTOR_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.DoubleList vector_;
+    private com.google.protobuf.Internal.FloatList vector_;
     /**
-     * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+     * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
      * @return A list containing the vector.
      */
-    public java.util.List<java.lang.Double>
+    public java.util.List<java.lang.Float>
         getVectorList() {
       return vector_;
     }
     /**
-     * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+     * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
      * @return The count of vector.
      */
     public int getVectorCount() {
       return vector_.size();
     }
     /**
-     * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+     * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The vector at the given index.
      */
-    public double getVector(int index) {
-      return vector_.getDouble(index);
+    public float getVector(int index) {
+      return vector_.getFloat(index);
     }
     private int vectorMemoizedSerializedSize = -1;
 
@@ -6708,7 +6708,7 @@ private static final long serialVersionUID = 0L;
         output.writeUInt32NoTag(vectorMemoizedSerializedSize);
       }
       for (int i = 0; i < vector_.size(); i++) {
-        output.writeDoubleNoTag(vector_.getDouble(i));
+        output.writeFloatNoTag(vector_.getFloat(i));
       }
       for (int i = 0; i < ips_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ips_.getRaw(i));
@@ -6730,7 +6730,7 @@ private static final long serialVersionUID = 0L;
       }
       {
         int dataSize = 0;
-        dataSize = 8 * getVectorList().size();
+        dataSize = 4 * getVectorList().size();
         size += dataSize;
         if (!getVectorList().isEmpty()) {
           size += 1;
@@ -6930,7 +6930,7 @@ private static final long serialVersionUID = 0L;
 
         meta_ = "";
 
-        vector_ = emptyDoubleList();
+        vector_ = emptyFloatList();
         bitField0_ = (bitField0_ & ~0x00000001);
         ips_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -7231,7 +7231,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList vector_ = emptyDoubleList();
+      private com.google.protobuf.Internal.FloatList vector_ = emptyFloatList();
       private void ensureVectorIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           vector_ = mutableCopy(vector_);
@@ -7239,60 +7239,60 @@ private static final long serialVersionUID = 0L;
          }
       }
       /**
-       * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+       * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
        * @return A list containing the vector.
        */
-      public java.util.List<java.lang.Double>
+      public java.util.List<java.lang.Float>
           getVectorList() {
         return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(vector_) : vector_;
       }
       /**
-       * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+       * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
        * @return The count of vector.
        */
       public int getVectorCount() {
         return vector_.size();
       }
       /**
-       * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+       * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
        * @return The vector at the given index.
        */
-      public double getVector(int index) {
-        return vector_.getDouble(index);
+      public float getVector(int index) {
+        return vector_.getFloat(index);
       }
       /**
-       * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+       * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The vector to set.
        * @return This builder for chaining.
        */
       public Builder setVector(
-          int index, double value) {
+          int index, float value) {
         ensureVectorIsMutable();
-        vector_.setDouble(index, value);
+        vector_.setFloat(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+       * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
        * @param value The vector to add.
        * @return This builder for chaining.
        */
-      public Builder addVector(double value) {
+      public Builder addVector(float value) {
         ensureVectorIsMutable();
-        vector_.addDouble(value);
+        vector_.addFloat(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+       * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
        * @param values The vector to add.
        * @return This builder for chaining.
        */
       public Builder addAllVector(
-          java.lang.Iterable<? extends java.lang.Double> values) {
+          java.lang.Iterable<? extends java.lang.Float> values) {
         ensureVectorIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, vector_);
@@ -7300,11 +7300,11 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>repeated double vector = 3 [(.validate.rules) = { ... }</code>
+       * <code>repeated float vector = 3 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearVector() {
-        vector_ = emptyDoubleList();
+        vector_ = emptyFloatList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
