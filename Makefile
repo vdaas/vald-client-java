@@ -24,7 +24,7 @@ PKGREPO     = github.com/$(REPO)/$(PKGNAME)
 VALD_SHA    = VALD_SHA
 
 PROTO_ROOT  = vald/apis/proto
-JAVA_ROOT   = java
+JAVA_ROOT   = src/java
 
 PROTOS      = vald/vald.proto agent/agent.proto payload/payload.proto
 PROTOS     := $(PROTOS:%=$(PROTO_ROOT)/%)
