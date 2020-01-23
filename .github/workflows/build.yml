@@ -72,6 +72,8 @@ jobs:
           signing.secretKeyRingFile=${HOME}/.gnupg/secring.gpg
           sonatypeUsername=${SONATYPE_USERNAME}
           sonatypePassword=${SONATYPE_PASSWORD}
+          nexusUsername=${SONATYPE_USERNAME}
+          nexusPassword=${SONATYPE_PASSWORD}
           EOF
         env:
           GPG_KEYID: ${{ secrets.GPG_KEYID }}
@@ -84,3 +86,4 @@ jobs:
           ./gradlew clean
           ./gradlew build
           ./gradlew uploadArchives -Prelease
+          ./gradlew closeAndReleaseRepository
