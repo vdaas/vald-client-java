@@ -14,21 +14,21 @@ plugins {
 apply plugin: "maven"
 apply plugin: "signing"
 
-group = "org.vdaas.val"
+group = "org.vdaas.vald"
 archivesBaseName = "vald-client-java"
 version ="0.0.1"
 description = "a client library for Vald (https://github.com/vdaas/vald)."
 
 def isDevBuild
-def isCiBuild
+def isSnapshotBuild
 def isReleaseBuild
 def sonatypeRepositoryUrl
 
 if (hasProperty("release")) {
     isReleaseBuild = true
     sonatypeRepositoryUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-} else if (hasProperty("ci")) {
-    isCiBuild = true
+} else if (hasProperty("snapshot")) {
+    isSnapshotBuild = true
     version += "-SNAPSHOT"
     sonatypeRepositoryUrl = "https://oss.sonatype.org/content/repositories/snapshots/"
 } else {

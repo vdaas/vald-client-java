@@ -57,3 +57,38 @@ jobs:
           git add .
           git commit -m "[skip ci] Update [vald sha: ${sha}]"
           git push
+  publish:
+    name: maven publish
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: prepare
+        run: |
+          ./gradlew clean
+          echo "${PGP_PRIVATE_KEY}" > private_key.txt
+          gpg --import --batch private_key.txt
+          rm -f private_key.txt
+          gpg --pinentry-mode loopback --passphrase "${GPG_PASSPHRASE}" --export-secret-keys -o ~/.gnupg/secring.gpg
+          cat << EOF > ~/.gradle/gradle.properties
+          org.gradle.daemon=true
+          signing.keyId=${GPG_KEYID}
+          signing.password=${GPG_PASSPHRASE}
+          signing.secretKeyRingFile=${HOME}/.gnupg/secring.gpg
+          sonatypeUsername=${SONATYPE_USERNAME}
+          sonatypePassword=${SONATYPE_PASSWORD}
+          EOF
+        env:
+          GPG_KEYID: ${{ secrets.GPG_KEYID }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          PGP_PRIVATE_KEY: ${{ secrets.PGP_PRIVATE_KEY }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+      - name: publish
+        run: |
+          ./gradlew clean
+          ./gradlew build
+          ./gradlew uploadArchives -Prelease
