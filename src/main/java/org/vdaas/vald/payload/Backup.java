@@ -2700,29 +2700,29 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-       * @return A list containing the uuid.
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+       * @return A list containing the uuids.
        */
       java.util.List<java.lang.String>
-          getUuidList();
+          getUuidsList();
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-       * @return The count of uuid.
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+       * @return The count of uuids.
        */
-      int getUuidCount();
+      int getUuidsCount();
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
-       * @return The uuid at the given index.
+       * @return The uuids at the given index.
        */
-      java.lang.String getUuid(int index);
+      java.lang.String getUuids(int index);
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
        * @param index The index of the value to return.
-       * @return The bytes of the uuid at the given index.
+       * @return The bytes of the uuids at the given index.
        */
       com.google.protobuf.ByteString
-          getUuidBytes(int index);
+          getUuidsBytes(int index);
     }
     /**
      * Protobuf type {@code payload.Backup.Remove.RequestMulti}
@@ -2737,7 +2737,7 @@ private static final long serialVersionUID = 0L;
         super(builder);
       }
       private RequestMulti() {
-        uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       }
 
       @java.lang.Override
@@ -2774,10 +2774,10 @@ private static final long serialVersionUID = 0L;
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  uuid_ = new com.google.protobuf.LazyStringArrayList();
+                  uuids_ = new com.google.protobuf.LazyStringArrayList();
                   mutable_bitField0_ |= 0x00000001;
                 }
-                uuid_.add(s);
+                uuids_.add(s);
                 break;
               }
               default: {
@@ -2796,7 +2796,7 @@ private static final long serialVersionUID = 0L;
               e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) != 0)) {
-            uuid_ = uuid_.getUnmodifiableView();
+            uuids_ = uuids_.getUnmodifiableView();
           }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
@@ -2815,39 +2815,39 @@ private static final long serialVersionUID = 0L;
                 org.vdaas.vald.payload.Backup.Remove.RequestMulti.class, org.vdaas.vald.payload.Backup.Remove.RequestMulti.Builder.class);
       }
 
-      public static final int UUID_FIELD_NUMBER = 1;
-      private com.google.protobuf.LazyStringList uuid_;
+      public static final int UUIDS_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList uuids_;
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-       * @return A list containing the uuid.
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+       * @return A list containing the uuids.
        */
       public com.google.protobuf.ProtocolStringList
-          getUuidList() {
-        return uuid_;
+          getUuidsList() {
+        return uuids_;
       }
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-       * @return The count of uuid.
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+       * @return The count of uuids.
        */
-      public int getUuidCount() {
-        return uuid_.size();
+      public int getUuidsCount() {
+        return uuids_.size();
       }
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
-       * @return The uuid at the given index.
+       * @return The uuids at the given index.
        */
-      public java.lang.String getUuid(int index) {
-        return uuid_.get(index);
+      public java.lang.String getUuids(int index) {
+        return uuids_.get(index);
       }
       /**
-       * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+       * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
        * @param index The index of the value to return.
-       * @return The bytes of the uuid at the given index.
+       * @return The bytes of the uuids at the given index.
        */
       public com.google.protobuf.ByteString
-          getUuidBytes(int index) {
-        return uuid_.getByteString(index);
+          getUuidsBytes(int index) {
+        return uuids_.getByteString(index);
       }
 
       private byte memoizedIsInitialized = -1;
@@ -2864,8 +2864,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        for (int i = 0; i < uuid_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_.getRaw(i));
+        for (int i = 0; i < uuids_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuids_.getRaw(i));
         }
         unknownFields.writeTo(output);
       }
@@ -2878,11 +2878,11 @@ private static final long serialVersionUID = 0L;
         size = 0;
         {
           int dataSize = 0;
-          for (int i = 0; i < uuid_.size(); i++) {
-            dataSize += computeStringSizeNoTag(uuid_.getRaw(i));
+          for (int i = 0; i < uuids_.size(); i++) {
+            dataSize += computeStringSizeNoTag(uuids_.getRaw(i));
           }
           size += dataSize;
-          size += 1 * getUuidList().size();
+          size += 1 * getUuidsList().size();
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -2899,8 +2899,8 @@ private static final long serialVersionUID = 0L;
         }
         org.vdaas.vald.payload.Backup.Remove.RequestMulti other = (org.vdaas.vald.payload.Backup.Remove.RequestMulti) obj;
 
-        if (!getUuidList()
-            .equals(other.getUuidList())) return false;
+        if (!getUuidsList()
+            .equals(other.getUuidsList())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -2912,9 +2912,9 @@ private static final long serialVersionUID = 0L;
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        if (getUuidCount() > 0) {
-          hash = (37 * hash) + UUID_FIELD_NUMBER;
-          hash = (53 * hash) + getUuidList().hashCode();
+        if (getUuidsCount() > 0) {
+          hash = (37 * hash) + UUIDS_FIELD_NUMBER;
+          hash = (53 * hash) + getUuidsList().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -3049,7 +3049,7 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
@@ -3079,10 +3079,10 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.payload.Backup.Remove.RequestMulti result = new org.vdaas.vald.payload.Backup.Remove.RequestMulti(this);
           int from_bitField0_ = bitField0_;
           if (((bitField0_ & 0x00000001) != 0)) {
-            uuid_ = uuid_.getUnmodifiableView();
+            uuids_ = uuids_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.uuid_ = uuid_;
+          result.uuids_ = uuids_;
           onBuilt();
           return result;
         }
@@ -3131,13 +3131,13 @@ private static final long serialVersionUID = 0L;
 
         public Builder mergeFrom(org.vdaas.vald.payload.Backup.Remove.RequestMulti other) {
           if (other == org.vdaas.vald.payload.Backup.Remove.RequestMulti.getDefaultInstance()) return this;
-          if (!other.uuid_.isEmpty()) {
-            if (uuid_.isEmpty()) {
-              uuid_ = other.uuid_;
+          if (!other.uuids_.isEmpty()) {
+            if (uuids_.isEmpty()) {
+              uuids_ = other.uuids_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureUuidIsMutable();
-              uuid_.addAll(other.uuid_);
+              ensureUuidsIsMutable();
+              uuids_.addAll(other.uuids_);
             }
             onChanged();
           }
@@ -3171,112 +3171,112 @@ private static final long serialVersionUID = 0L;
         }
         private int bitField0_;
 
-        private com.google.protobuf.LazyStringList uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureUuidIsMutable() {
+        private com.google.protobuf.LazyStringList uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureUuidsIsMutable() {
           if (!((bitField0_ & 0x00000001) != 0)) {
-            uuid_ = new com.google.protobuf.LazyStringArrayList(uuid_);
+            uuids_ = new com.google.protobuf.LazyStringArrayList(uuids_);
             bitField0_ |= 0x00000001;
            }
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-         * @return A list containing the uuid.
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+         * @return A list containing the uuids.
          */
         public com.google.protobuf.ProtocolStringList
-            getUuidList() {
-          return uuid_.getUnmodifiableView();
+            getUuidsList() {
+          return uuids_.getUnmodifiableView();
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-         * @return The count of uuid.
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+         * @return The count of uuids.
          */
-        public int getUuidCount() {
-          return uuid_.size();
+        public int getUuidsCount() {
+          return uuids_.size();
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
          * @param index The index of the element to return.
-         * @return The uuid at the given index.
+         * @return The uuids at the given index.
          */
-        public java.lang.String getUuid(int index) {
-          return uuid_.get(index);
+        public java.lang.String getUuids(int index) {
+          return uuids_.get(index);
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
          * @param index The index of the value to return.
-         * @return The bytes of the uuid at the given index.
+         * @return The bytes of the uuids at the given index.
          */
         public com.google.protobuf.ByteString
-            getUuidBytes(int index) {
-          return uuid_.getByteString(index);
+            getUuidsBytes(int index) {
+          return uuids_.getByteString(index);
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
          * @param index The index to set the value at.
-         * @param value The uuid to set.
+         * @param value The uuids to set.
          * @return This builder for chaining.
          */
-        public Builder setUuid(
+        public Builder setUuids(
             int index, java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  ensureUuidIsMutable();
-          uuid_.set(index, value);
+  ensureUuidsIsMutable();
+          uuids_.set(index, value);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-         * @param value The uuid to add.
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+         * @param value The uuids to add.
          * @return This builder for chaining.
          */
-        public Builder addUuid(
+        public Builder addUuids(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  ensureUuidIsMutable();
-          uuid_.add(value);
+  ensureUuidsIsMutable();
+          uuids_.add(value);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-         * @param values The uuid to add.
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+         * @param values The uuids to add.
          * @return This builder for chaining.
          */
-        public Builder addAllUuid(
+        public Builder addAllUuids(
             java.lang.Iterable<java.lang.String> values) {
-          ensureUuidIsMutable();
+          ensureUuidsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, uuid_);
+              values, uuids_);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
          * @return This builder for chaining.
          */
-        public Builder clearUuid() {
-          uuid_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        public Builder clearUuids() {
+          uuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string uuid = 1 [(.validate.rules) = { ... }</code>
-         * @param value The bytes of the uuid to add.
+         * <code>repeated string uuids = 1 [(.validate.rules) = { ... }</code>
+         * @param value The bytes of the uuids to add.
          * @return This builder for chaining.
          */
-        public Builder addUuidBytes(
+        public Builder addUuidsBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-          ensureUuidIsMutable();
-          uuid_.add(value);
+          ensureUuidsIsMutable();
+          uuids_.add(value);
           onChanged();
           return this;
         }
