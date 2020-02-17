@@ -22,6 +22,7 @@ PKGNAME     = $(NAME)-client-$(LANGUAGE)
 PKGREPO     = github.com/$(REPO)/$(PKGNAME)
 
 VALD_SHA    = VALD_SHA
+VALD_CLIENT_JAVA_VERSION = VALD_CLIENT_JAVA_VERSION
 
 PROTO_ROOT  = vald/apis/proto
 JAVA_ROOT   = src/main/java
@@ -111,6 +112,34 @@ vald/sha/print:
 ## update VALD_SHA value
 vald/sha/update: vald
 	(cd vald; git rev-parse HEAD > ../$(VALD_SHA))
+
+.PHONY: vald/client/java/version/print
+## print VALD_CLIENT_JAVA_VERSION value
+vald/client/java/version/print:
+	@cat $(VALD_CLIENT_JAVA_VERSION)
+
+.PHONY: vald/client/java/version/update
+## update VALD_CLIENT_JAVA_VERSION value
+vald/client/java/version/update: vald
+	(vald_version=`cat vald/versions/VALD_VERSION | sed -e 's/^v//'`; \
+	    client_version=`cat $(VALD_CLIENT_JAVA_VERSION)`; \
+	    major=$${client_version%%.*}; client_version="$${client_version#*.}"; \
+	    minor=$${client_version%%.*}; client_version="$${client_version#*.}"; \
+	    patch=$${client_version%%.*}; client_version="$${client_version#*.}"; \
+	    if [ "$${vald_version}" = "$${major}.$${minor}.$${patch}" ]; then \
+	        if [ "$${patch}" = "$${client_version}" ]; then \
+	            new_version="$${major}.$${minor}.$${patch}.Rev1"; \
+	        else \
+	            rev="$${client_version#Rev}"; \
+	            rev=$$((rev+1)); \
+	            new_version="$${major}.$${minor}.$${patch}.Rev$${rev}"; \
+	        fi; \
+	    else \
+	        new_version="$${vald_version}"; \
+	    fi; \
+	    echo "VALD_VERSION: $${vald_version}, NEW_CLIENT_VERSION: $${new_version}"; \
+	    echo "$${new_version}" > VALD_CLIENT_JAVA_VERSION)
+	sed -i -e "s/^version = ".*"\$$/version = \"`cat VALD_CLIENT_JAVA_VERSION`\"/" build.gradle
 
 .PHONY: proto/deps
 ## install proto deps

@@ -48,6 +48,7 @@ jobs:
           make vald
           make all
           make vald/sha/update
+          make vald/client/java/version/update
           rm -rf vald
       - run: |
           echo "commit and push"
