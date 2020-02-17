@@ -87,4 +87,5 @@ jobs:
           ./gradlew clean
           ./gradlew build
           ./gradlew uploadArchives -Prelease
+          sleep 30
           ./gradlew closeAndReleaseRepository
