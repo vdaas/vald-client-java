@@ -27,7 +27,7 @@ VALD_CLIENT_JAVA_VERSION = VALD_CLIENT_JAVA_VERSION
 PROTO_ROOT  = vald/apis/proto
 JAVA_ROOT   = src/main/java
 
-PROTOS      = vald/vald.proto agent/agent.proto payload/payload.proto
+PROTOS      = gateway/vald/vald.proto agent/agent.proto payload/payload.proto
 PROTOS     := $(PROTOS:%=$(PROTO_ROOT)/%)
 JAVASOURCES = $(PROTOS:$(PROTO_ROOT)/%.proto=$(JAVA_ROOT)/%.java)
 
