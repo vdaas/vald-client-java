@@ -523,27 +523,27 @@ public final class AgentGrpc {
     return getStreamGetObjectMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Controll.CreateIndexRequest,
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
       org.vdaas.vald.payload.Empty> getCreateIndexMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateIndex",
-      requestType = org.vdaas.vald.payload.Controll.CreateIndexRequest.class,
+      requestType = org.vdaas.vald.payload.Control.CreateIndexRequest.class,
       responseType = org.vdaas.vald.payload.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Controll.CreateIndexRequest,
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
       org.vdaas.vald.payload.Empty> getCreateIndexMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Controll.CreateIndexRequest, org.vdaas.vald.payload.Empty> getCreateIndexMethod;
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty> getCreateIndexMethod;
     if ((getCreateIndexMethod = AgentGrpc.getCreateIndexMethod) == null) {
       synchronized (AgentGrpc.class) {
         if ((getCreateIndexMethod = AgentGrpc.getCreateIndexMethod) == null) {
           AgentGrpc.getCreateIndexMethod = getCreateIndexMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Controll.CreateIndexRequest, org.vdaas.vald.payload.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateIndex"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Controll.CreateIndexRequest.getDefaultInstance()))
+                  org.vdaas.vald.payload.Control.CreateIndexRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
               .setSchemaDescriptor(new AgentMethodDescriptorSupplier("CreateIndex"))
@@ -585,27 +585,27 @@ public final class AgentGrpc {
     return getSaveIndexMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Controll.CreateIndexRequest,
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
       org.vdaas.vald.payload.Empty> getCreateAndSaveIndexMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateAndSaveIndex",
-      requestType = org.vdaas.vald.payload.Controll.CreateIndexRequest.class,
+      requestType = org.vdaas.vald.payload.Control.CreateIndexRequest.class,
       responseType = org.vdaas.vald.payload.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Controll.CreateIndexRequest,
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
       org.vdaas.vald.payload.Empty> getCreateAndSaveIndexMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Controll.CreateIndexRequest, org.vdaas.vald.payload.Empty> getCreateAndSaveIndexMethod;
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty> getCreateAndSaveIndexMethod;
     if ((getCreateAndSaveIndexMethod = AgentGrpc.getCreateAndSaveIndexMethod) == null) {
       synchronized (AgentGrpc.class) {
         if ((getCreateAndSaveIndexMethod = AgentGrpc.getCreateAndSaveIndexMethod) == null) {
           AgentGrpc.getCreateAndSaveIndexMethod = getCreateAndSaveIndexMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Controll.CreateIndexRequest, org.vdaas.vald.payload.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAndSaveIndex"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Controll.CreateIndexRequest.getDefaultInstance()))
+                  org.vdaas.vald.payload.Control.CreateIndexRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
               .setSchemaDescriptor(new AgentMethodDescriptorSupplier("CreateAndSaveIndex"))
@@ -788,7 +788,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public void createIndex(org.vdaas.vald.payload.Controll.CreateIndexRequest request,
+    public void createIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateIndexMethod(), responseObserver);
     }
@@ -802,7 +802,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public void createAndSaveIndex(org.vdaas.vald.payload.Controll.CreateIndexRequest request,
+    public void createAndSaveIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateAndSaveIndexMethod(), responseObserver);
     }
@@ -932,7 +932,7 @@ public final class AgentGrpc {
             getCreateIndexMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                org.vdaas.vald.payload.Controll.CreateIndexRequest,
+                org.vdaas.vald.payload.Control.CreateIndexRequest,
                 org.vdaas.vald.payload.Empty>(
                   this, METHODID_CREATE_INDEX)))
           .addMethod(
@@ -946,7 +946,7 @@ public final class AgentGrpc {
             getCreateAndSaveIndexMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                org.vdaas.vald.payload.Controll.CreateIndexRequest,
+                org.vdaas.vald.payload.Control.CreateIndexRequest,
                 org.vdaas.vald.payload.Empty>(
                   this, METHODID_CREATE_AND_SAVE_INDEX)))
           .addMethod(
@@ -1108,7 +1108,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public void createIndex(org.vdaas.vald.payload.Controll.CreateIndexRequest request,
+    public void createIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request, responseObserver);
@@ -1124,7 +1124,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public void createAndSaveIndex(org.vdaas.vald.payload.Controll.CreateIndexRequest request,
+    public void createAndSaveIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request, responseObserver);
@@ -1229,7 +1229,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public org.vdaas.vald.payload.Empty createIndex(org.vdaas.vald.payload.Controll.CreateIndexRequest request) {
+    public org.vdaas.vald.payload.Empty createIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateIndexMethod(), getCallOptions(), request);
     }
@@ -1243,7 +1243,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public org.vdaas.vald.payload.Empty createAndSaveIndex(org.vdaas.vald.payload.Controll.CreateIndexRequest request) {
+    public org.vdaas.vald.payload.Empty createAndSaveIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateAndSaveIndexMethod(), getCallOptions(), request);
     }
@@ -1357,7 +1357,7 @@ public final class AgentGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> createIndex(
-        org.vdaas.vald.payload.Controll.CreateIndexRequest request) {
+        org.vdaas.vald.payload.Control.CreateIndexRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request);
     }
@@ -1373,7 +1373,7 @@ public final class AgentGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> createAndSaveIndex(
-        org.vdaas.vald.payload.Controll.CreateIndexRequest request) {
+        org.vdaas.vald.payload.Control.CreateIndexRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request);
     }
@@ -1466,7 +1466,7 @@ public final class AgentGrpc {
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector>) responseObserver);
           break;
         case METHODID_CREATE_INDEX:
-          serviceImpl.createIndex((org.vdaas.vald.payload.Controll.CreateIndexRequest) request,
+          serviceImpl.createIndex((org.vdaas.vald.payload.Control.CreateIndexRequest) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
           break;
         case METHODID_SAVE_INDEX:
@@ -1474,7 +1474,7 @@ public final class AgentGrpc {
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
           break;
         case METHODID_CREATE_AND_SAVE_INDEX:
-          serviceImpl.createAndSaveIndex((org.vdaas.vald.payload.Controll.CreateIndexRequest) request,
+          serviceImpl.createAndSaveIndex((org.vdaas.vald.payload.Control.CreateIndexRequest) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
           break;
         case METHODID_INDEX_INFO:

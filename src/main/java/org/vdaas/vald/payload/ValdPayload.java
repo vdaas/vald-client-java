@@ -105,15 +105,15 @@ public final class ValdPayload {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Object_Vectors_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payload_Controll_descriptor;
+    internal_static_payload_Control_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payload_Controll_fieldAccessorTable;
+      internal_static_payload_Control_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payload_Controll_CreateIndexRequest_descriptor;
+    internal_static_payload_Control_CreateIndexRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payload_Controll_CreateIndexRequest_fieldAccessorTable;
+      internal_static_payload_Control_CreateIndexRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Discoverer_descriptor;
   static final 
@@ -225,15 +225,35 @@ public final class ValdPayload {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_Info_Index_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payload_Info_Server_descriptor;
+    internal_static_payload_Info_Pod_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payload_Info_Server_fieldAccessorTable;
+      internal_static_payload_Info_Pod_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payload_Info_Servers_descriptor;
+    internal_static_payload_Info_Node_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payload_Info_Servers_fieldAccessorTable;
+      internal_static_payload_Info_Node_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Info_CPU_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Info_CPU_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Info_Memory_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Info_Memory_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Info_Pods_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Info_Pods_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_Info_Nodes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_Info_Nodes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_Info_IPs_descriptor;
   static final 
@@ -271,35 +291,45 @@ public final class ValdPayload {
       "s\022\013\n\003ids\030\001 \003(\t\0327\n\006Vector\022\023\n\002id\030\001 \001(\tB\007\372B" +
       "\004r\002\020\001\022\030\n\006vector\030\002 \003(\002B\010\372B\005\222\001\002\010\002\0322\n\007Vecto" +
       "rs\022\'\n\007vectors\030\001 \003(\0132\026.payload.Object.Vec" +
-      "tor\"<\n\010Controll\0320\n\022CreateIndexRequest\022\032\n" +
-      "\tpool_size\030\001 \001(\rB\007\372B\004*\002(\000\"<\n\nDiscoverer\032" +
-      ".\n\007Request\022\025\n\004name\030\001 \001(\tB\007\372B\004r\002\020\001\022\014\n\004nod" +
-      "e\030\002 \001(\t\"\334\004\n\006Backup\032-\n\tGetVector\032 \n\007Reque" +
-      "st\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r\002\020\001\032-\n\tLocations\032 " +
-      "\n\007Request\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r\002\020\001\032S\n\006Remo" +
-      "ve\032 \n\007Request\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r\002\020\001\032\'\n\014" +
-      "RequestMulti\022\027\n\005uuids\030\001 \003(\tB\010\372B\005\222\001\002\010\001\032u\n" +
-      "\002IP\032C\n\010Register\0327\n\007Request\022\025\n\004uuid\030\001 \001(\t" +
-      "B\007\372B\004r\002\020\001\022\025\n\003ips\030\002 \003(\tB\010\372B\005\222\001\002\010\001\032*\n\006Remo" +
-      "ve\032 \n\007Request\022\025\n\003ips\030\001 \003(\tB\010\372B\005\222\001\002\010\001\032O\n\n" +
-      "MetaVector\022\014\n\004uuid\030\001 \001(\t\022\014\n\004meta\030\002 \001(\t\022\030" +
-      "\n\006vector\030\003 \003(\002B\010\372B\005\222\001\002\010\002\022\013\n\003ips\030\004 \003(\t\032:\n" +
-      "\013MetaVectors\022+\n\007vectors\030\001 \003(\0132\032.payload." +
-      "Backup.MetaVector\032\232\001\n\nCompressed\032E\n\nMeta" +
-      "Vector\022\014\n\004uuid\030\001 \001(\t\022\014\n\004meta\030\002 \001(\t\022\016\n\006ve" +
-      "ctor\030\003 \001(\014\022\013\n\003ips\030\004 \003(\t\032E\n\013MetaVectors\0226" +
-      "\n\007vectors\030\001 \003(\0132%.payload.Backup.Compres" +
-      "sed.MetaVector\"\236\002\n\004Info\032Z\n\005Index\022\r\n\005coun" +
-      "t\030\001 \001(\r\022\031\n\021uncommitted_index\030\002 \001(\r\022\r\n\005uu" +
-      "ids\030\003 \003(\t\022\030\n\020uncommitted_uuid\030\004 \003(\t\032k\n\006S" +
-      "erver\022\014\n\004name\030\001 \001(\t\022\023\n\002ip\030\002 \001(\tB\007\372B\004r\002x\001" +
-      "\022$\n\006server\030\003 \001(\0132\024.payload.Info.Server\022\013" +
-      "\n\003cpu\030\004 \001(\001\022\013\n\003mem\030\005 \001(\001\032:\n\007Servers\022/\n\007S" +
-      "ervers\030\001 \003(\0132\024.payload.Info.ServerB\010\372B\005\222" +
-      "\001\002\010\001\032\021\n\003IPs\022\n\n\002ip\030\001 \003(\t\"\007\n\005EmptyBP\n\026org." +
-      "vdaas.vald.payloadB\013ValdPayloadP\001Z\'githu" +
-      "b.com/vdaas/vald/apis/grpc/payloadb\006prot" +
-      "o3"
+      "tor\";\n\007Control\0320\n\022CreateIndexRequest\022\032\n\t" +
+      "pool_size\030\001 \001(\rB\007\372B\004*\002(\000\"O\n\nDiscoverer\032A" +
+      "\n\007Request\022\025\n\004name\030\001 \001(\tB\007\372B\004r\002\020\001\022\021\n\tname" +
+      "space\030\002 \001(\t\022\014\n\004node\030\003 \001(\t\"\334\004\n\006Backup\032-\n\t" +
+      "GetVector\032 \n\007Request\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r" +
+      "\002\020\001\032-\n\tLocations\032 \n\007Request\022\025\n\004uuid\030\001 \001(" +
+      "\tB\007\372B\004r\002\020\001\032S\n\006Remove\032 \n\007Request\022\025\n\004uuid\030" +
+      "\001 \001(\tB\007\372B\004r\002\020\001\032\'\n\014RequestMulti\022\027\n\005uuids\030" +
+      "\001 \003(\tB\010\372B\005\222\001\002\010\001\032u\n\002IP\032C\n\010Register\0327\n\007Req" +
+      "uest\022\025\n\004uuid\030\001 \001(\tB\007\372B\004r\002\020\001\022\025\n\003ips\030\002 \003(\t" +
+      "B\010\372B\005\222\001\002\010\001\032*\n\006Remove\032 \n\007Request\022\025\n\003ips\030\001" +
+      " \003(\tB\010\372B\005\222\001\002\010\001\032O\n\nMetaVector\022\014\n\004uuid\030\001 \001" +
+      "(\t\022\014\n\004meta\030\002 \001(\t\022\030\n\006vector\030\003 \003(\002B\010\372B\005\222\001\002" +
+      "\010\002\022\013\n\003ips\030\004 \003(\t\032:\n\013MetaVectors\022+\n\007vector" +
+      "s\030\001 \003(\0132\032.payload.Backup.MetaVector\032\232\001\n\n" +
+      "Compressed\032E\n\nMetaVector\022\014\n\004uuid\030\001 \001(\t\022\014" +
+      "\n\004meta\030\002 \001(\t\022\016\n\006vector\030\003 \001(\014\022\013\n\003ips\030\004 \003(" +
+      "\t\032E\n\013MetaVectors\0226\n\007vectors\030\001 \003(\0132%.payl" +
+      "oad.Backup.Compressed.MetaVector\"\300\005\n\004Inf" +
+      "o\032h\n\005Index\022\016\n\006stored\030\001 \001(\r\022\023\n\013uncommitte" +
+      "d\030\002 \001(\r\022\r\n\005uuids\030\003 \003(\t\022\031\n\021uncommitted_uu" +
+      "ids\030\004 \003(\t\022\020\n\010indexing\030\005 \001(\010\032\265\001\n\003Pod\022\020\n\010a" +
+      "pp_name\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tnamespace" +
+      "\030\003 \001(\t\022\023\n\002ip\030\004 \001(\tB\007\372B\004r\002x\001\022\036\n\003cpu\030\005 \001(\013" +
+      "2\021.payload.Info.CPU\022$\n\006memory\030\006 \001(\0132\024.pa" +
+      "yload.Info.Memory\022 \n\004node\030\007 \001(\0132\022.payloa" +
+      "d.Info.Node\032\252\001\n\004Node\022\014\n\004name\030\001 \001(\t\022\025\n\rin" +
+      "ternal_addr\030\002 \001(\t\022\025\n\rexternal_addr\030\003 \001(\t" +
+      "\022\036\n\003cpu\030\004 \001(\0132\021.payload.Info.CPU\022$\n\006memo" +
+      "ry\030\005 \001(\0132\024.payload.Info.Memory\022 \n\004Pods\030\006" +
+      " \001(\0132\022.payload.Info.Pods\0324\n\003CPU\022\r\n\005limit" +
+      "\030\001 \001(\001\022\017\n\007request\030\002 \001(\001\022\r\n\005usage\030\003 \001(\001\0327" +
+      "\n\006Memory\022\r\n\005limit\030\001 \001(\001\022\017\n\007request\030\002 \001(\001" +
+      "\022\r\n\005usage\030\003 \001(\001\0321\n\004Pods\022)\n\004pods\030\001 \003(\0132\021." +
+      "payload.Info.PodB\010\372B\005\222\001\002\010\001\0324\n\005Nodes\022+\n\005n" +
+      "odes\030\001 \003(\0132\022.payload.Info.NodeB\010\372B\005\222\001\002\010\001" +
+      "\032\021\n\003IPs\022\n\n\002ip\030\001 \003(\t\"\007\n\005EmptyBP\n\026org.vdaa" +
+      "s.vald.payloadB\013ValdPayloadP\001Z\'github.co" +
+      "m/vdaas/vald/apis/grpc/payloadb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -414,17 +444,17 @@ public final class ValdPayload {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Object_Vectors_descriptor,
         new java.lang.String[] { "Vectors", });
-    internal_static_payload_Controll_descriptor =
+    internal_static_payload_Control_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_payload_Controll_fieldAccessorTable = new
+    internal_static_payload_Control_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payload_Controll_descriptor,
+        internal_static_payload_Control_descriptor,
         new java.lang.String[] { });
-    internal_static_payload_Controll_CreateIndexRequest_descriptor =
-      internal_static_payload_Controll_descriptor.getNestedTypes().get(0);
-    internal_static_payload_Controll_CreateIndexRequest_fieldAccessorTable = new
+    internal_static_payload_Control_CreateIndexRequest_descriptor =
+      internal_static_payload_Control_descriptor.getNestedTypes().get(0);
+    internal_static_payload_Control_CreateIndexRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payload_Controll_CreateIndexRequest_descriptor,
+        internal_static_payload_Control_CreateIndexRequest_descriptor,
         new java.lang.String[] { "PoolSize", });
     internal_static_payload_Discoverer_descriptor =
       getDescriptor().getMessageTypes().get(4);
@@ -437,7 +467,7 @@ public final class ValdPayload {
     internal_static_payload_Discoverer_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Discoverer_Request_descriptor,
-        new java.lang.String[] { "Name", "Node", });
+        new java.lang.String[] { "Name", "Namespace", "Node", });
     internal_static_payload_Backup_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_payload_Backup_fieldAccessorTable = new
@@ -557,21 +587,45 @@ public final class ValdPayload {
     internal_static_payload_Info_Index_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Info_Index_descriptor,
-        new java.lang.String[] { "Count", "UncommittedIndex", "Uuids", "UncommittedUuid", });
-    internal_static_payload_Info_Server_descriptor =
+        new java.lang.String[] { "Stored", "Uncommitted", "Uuids", "UncommittedUuids", "Indexing", });
+    internal_static_payload_Info_Pod_descriptor =
       internal_static_payload_Info_descriptor.getNestedTypes().get(1);
-    internal_static_payload_Info_Server_fieldAccessorTable = new
+    internal_static_payload_Info_Pod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payload_Info_Server_descriptor,
-        new java.lang.String[] { "Name", "Ip", "Server", "Cpu", "Mem", });
-    internal_static_payload_Info_Servers_descriptor =
+        internal_static_payload_Info_Pod_descriptor,
+        new java.lang.String[] { "AppName", "Name", "Namespace", "Ip", "Cpu", "Memory", "Node", });
+    internal_static_payload_Info_Node_descriptor =
       internal_static_payload_Info_descriptor.getNestedTypes().get(2);
-    internal_static_payload_Info_Servers_fieldAccessorTable = new
+    internal_static_payload_Info_Node_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payload_Info_Servers_descriptor,
-        new java.lang.String[] { "Servers", });
-    internal_static_payload_Info_IPs_descriptor =
+        internal_static_payload_Info_Node_descriptor,
+        new java.lang.String[] { "Name", "InternalAddr", "ExternalAddr", "Cpu", "Memory", "Pods", });
+    internal_static_payload_Info_CPU_descriptor =
       internal_static_payload_Info_descriptor.getNestedTypes().get(3);
+    internal_static_payload_Info_CPU_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Info_CPU_descriptor,
+        new java.lang.String[] { "Limit", "Request", "Usage", });
+    internal_static_payload_Info_Memory_descriptor =
+      internal_static_payload_Info_descriptor.getNestedTypes().get(4);
+    internal_static_payload_Info_Memory_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Info_Memory_descriptor,
+        new java.lang.String[] { "Limit", "Request", "Usage", });
+    internal_static_payload_Info_Pods_descriptor =
+      internal_static_payload_Info_descriptor.getNestedTypes().get(5);
+    internal_static_payload_Info_Pods_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Info_Pods_descriptor,
+        new java.lang.String[] { "Pods", });
+    internal_static_payload_Info_Nodes_descriptor =
+      internal_static_payload_Info_descriptor.getNestedTypes().get(6);
+    internal_static_payload_Info_Nodes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_Info_Nodes_descriptor,
+        new java.lang.String[] { "Nodes", });
+    internal_static_payload_Info_IPs_descriptor =
+      internal_static_payload_Info_descriptor.getNestedTypes().get(7);
     internal_static_payload_Info_IPs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_Info_IPs_descriptor,

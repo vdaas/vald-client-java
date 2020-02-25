@@ -3,7 +3,7 @@
 
 package org.vdaas.vald.payload;
 
-public interface ControllOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:payload.Controll)
+public interface ControlOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:payload.Control)
     com.google.protobuf.MessageOrBuilder {
 }

@@ -4,25 +4,25 @@
 package org.vdaas.vald.payload;
 
 /**
- * Protobuf type {@code payload.Controll}
+ * Protobuf type {@code payload.Control}
  */
-public  final class Controll extends
+public  final class Control extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:payload.Controll)
-    ControllOrBuilder {
+    // @@protoc_insertion_point(message_implements:payload.Control)
+    ControlOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Controll.newBuilder() to construct.
-  private Controll(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use Control.newBuilder() to construct.
+  private Control(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Controll() {
+  private Control() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Controll();
+    return new Control();
   }
 
   @java.lang.Override
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Controll(
+  private Control(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -69,19 +69,19 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_descriptor;
+    return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_fieldAccessorTable
+    return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.vdaas.vald.payload.Controll.class, org.vdaas.vald.payload.Controll.Builder.class);
+            org.vdaas.vald.payload.Control.class, org.vdaas.vald.payload.Control.Builder.class);
   }
 
   public interface CreateIndexRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:payload.Controll.CreateIndexRequest)
+      // @@protoc_insertion_point(interface_extends:payload.Control.CreateIndexRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -91,11 +91,11 @@ private static final long serialVersionUID = 0L;
     int getPoolSize();
   }
   /**
-   * Protobuf type {@code payload.Controll.CreateIndexRequest}
+   * Protobuf type {@code payload.Control.CreateIndexRequest}
    */
   public  static final class CreateIndexRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:payload.Controll.CreateIndexRequest)
+      // @@protoc_insertion_point(message_implements:payload.Control.CreateIndexRequest)
       CreateIndexRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use CreateIndexRequest.newBuilder() to construct.
@@ -161,15 +161,15 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_CreateIndexRequest_descriptor;
+      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_CreateIndexRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_CreateIndexRequest_fieldAccessorTable
+      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_CreateIndexRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.vdaas.vald.payload.Controll.CreateIndexRequest.class, org.vdaas.vald.payload.Controll.CreateIndexRequest.Builder.class);
+              org.vdaas.vald.payload.Control.CreateIndexRequest.class, org.vdaas.vald.payload.Control.CreateIndexRequest.Builder.class);
     }
 
     public static final int POOL_SIZE_FIELD_NUMBER = 1;
@@ -222,10 +222,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.vdaas.vald.payload.Controll.CreateIndexRequest)) {
+      if (!(obj instanceof org.vdaas.vald.payload.Control.CreateIndexRequest)) {
         return super.equals(obj);
       }
-      org.vdaas.vald.payload.Controll.CreateIndexRequest other = (org.vdaas.vald.payload.Controll.CreateIndexRequest) obj;
+      org.vdaas.vald.payload.Control.CreateIndexRequest other = (org.vdaas.vald.payload.Control.CreateIndexRequest) obj;
 
       if (getPoolSize()
           != other.getPoolSize()) return false;
@@ -247,69 +247,69 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(byte[] data)
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(java.io.InputStream input)
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseDelimitedFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest parseFrom(
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -322,7 +322,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.vdaas.vald.payload.Controll.CreateIndexRequest prototype) {
+    public static Builder newBuilder(org.vdaas.vald.payload.Control.CreateIndexRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -338,26 +338,26 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code payload.Controll.CreateIndexRequest}
+     * Protobuf type {@code payload.Control.CreateIndexRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:payload.Controll.CreateIndexRequest)
-        org.vdaas.vald.payload.Controll.CreateIndexRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:payload.Control.CreateIndexRequest)
+        org.vdaas.vald.payload.Control.CreateIndexRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_CreateIndexRequest_descriptor;
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_CreateIndexRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_CreateIndexRequest_fieldAccessorTable
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_CreateIndexRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.vdaas.vald.payload.Controll.CreateIndexRequest.class, org.vdaas.vald.payload.Controll.CreateIndexRequest.Builder.class);
+                org.vdaas.vald.payload.Control.CreateIndexRequest.class, org.vdaas.vald.payload.Control.CreateIndexRequest.Builder.class);
       }
 
-      // Construct using org.vdaas.vald.payload.Controll.CreateIndexRequest.newBuilder()
+      // Construct using org.vdaas.vald.payload.Control.CreateIndexRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -383,17 +383,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_CreateIndexRequest_descriptor;
+        return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_CreateIndexRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.payload.Controll.CreateIndexRequest getDefaultInstanceForType() {
-        return org.vdaas.vald.payload.Controll.CreateIndexRequest.getDefaultInstance();
+      public org.vdaas.vald.payload.Control.CreateIndexRequest getDefaultInstanceForType() {
+        return org.vdaas.vald.payload.Control.CreateIndexRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.vdaas.vald.payload.Controll.CreateIndexRequest build() {
-        org.vdaas.vald.payload.Controll.CreateIndexRequest result = buildPartial();
+      public org.vdaas.vald.payload.Control.CreateIndexRequest build() {
+        org.vdaas.vald.payload.Control.CreateIndexRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -401,8 +401,8 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.payload.Controll.CreateIndexRequest buildPartial() {
-        org.vdaas.vald.payload.Controll.CreateIndexRequest result = new org.vdaas.vald.payload.Controll.CreateIndexRequest(this);
+      public org.vdaas.vald.payload.Control.CreateIndexRequest buildPartial() {
+        org.vdaas.vald.payload.Control.CreateIndexRequest result = new org.vdaas.vald.payload.Control.CreateIndexRequest(this);
         result.poolSize_ = poolSize_;
         onBuilt();
         return result;
@@ -442,16 +442,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.vdaas.vald.payload.Controll.CreateIndexRequest) {
-          return mergeFrom((org.vdaas.vald.payload.Controll.CreateIndexRequest)other);
+        if (other instanceof org.vdaas.vald.payload.Control.CreateIndexRequest) {
+          return mergeFrom((org.vdaas.vald.payload.Control.CreateIndexRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.vdaas.vald.payload.Controll.CreateIndexRequest other) {
-        if (other == org.vdaas.vald.payload.Controll.CreateIndexRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.vdaas.vald.payload.Control.CreateIndexRequest other) {
+        if (other == org.vdaas.vald.payload.Control.CreateIndexRequest.getDefaultInstance()) return this;
         if (other.getPoolSize() != 0) {
           setPoolSize(other.getPoolSize());
         }
@@ -470,11 +470,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        org.vdaas.vald.payload.Controll.CreateIndexRequest parsedMessage = null;
+        org.vdaas.vald.payload.Control.CreateIndexRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.vdaas.vald.payload.Controll.CreateIndexRequest) e.getUnfinishedMessage();
+          parsedMessage = (org.vdaas.vald.payload.Control.CreateIndexRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -526,16 +526,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:payload.Controll.CreateIndexRequest)
+      // @@protoc_insertion_point(builder_scope:payload.Control.CreateIndexRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:payload.Controll.CreateIndexRequest)
-    private static final org.vdaas.vald.payload.Controll.CreateIndexRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:payload.Control.CreateIndexRequest)
+    private static final org.vdaas.vald.payload.Control.CreateIndexRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.vdaas.vald.payload.Controll.CreateIndexRequest();
+      DEFAULT_INSTANCE = new org.vdaas.vald.payload.Control.CreateIndexRequest();
     }
 
-    public static org.vdaas.vald.payload.Controll.CreateIndexRequest getDefaultInstance() {
+    public static org.vdaas.vald.payload.Control.CreateIndexRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -560,7 +560,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.payload.Controll.CreateIndexRequest getDefaultInstanceForType() {
+    public org.vdaas.vald.payload.Control.CreateIndexRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -599,10 +599,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.vdaas.vald.payload.Controll)) {
+    if (!(obj instanceof org.vdaas.vald.payload.Control)) {
       return super.equals(obj);
     }
-    org.vdaas.vald.payload.Controll other = (org.vdaas.vald.payload.Controll) obj;
+    org.vdaas.vald.payload.Control other = (org.vdaas.vald.payload.Control) obj;
 
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -620,69 +620,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(byte[] data)
+  public static org.vdaas.vald.payload.Control parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(java.io.InputStream input)
+  public static org.vdaas.vald.payload.Control parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.vdaas.vald.payload.Controll parseDelimitedFrom(java.io.InputStream input)
+  public static org.vdaas.vald.payload.Control parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static org.vdaas.vald.payload.Controll parseDelimitedFrom(
+  public static org.vdaas.vald.payload.Control parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.vdaas.vald.payload.Controll parseFrom(
+  public static org.vdaas.vald.payload.Control parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.vdaas.vald.payload.Controll prototype) {
+  public static Builder newBuilder(org.vdaas.vald.payload.Control prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -711,26 +711,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code payload.Controll}
+   * Protobuf type {@code payload.Control}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:payload.Controll)
-      org.vdaas.vald.payload.ControllOrBuilder {
+      // @@protoc_insertion_point(builder_implements:payload.Control)
+      org.vdaas.vald.payload.ControlOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_descriptor;
+      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_fieldAccessorTable
+      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.vdaas.vald.payload.Controll.class, org.vdaas.vald.payload.Controll.Builder.class);
+              org.vdaas.vald.payload.Control.class, org.vdaas.vald.payload.Control.Builder.class);
     }
 
-    // Construct using org.vdaas.vald.payload.Controll.newBuilder()
+    // Construct using org.vdaas.vald.payload.Control.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -754,17 +754,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Controll_descriptor;
+      return org.vdaas.vald.payload.ValdPayload.internal_static_payload_Control_descriptor;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.payload.Controll getDefaultInstanceForType() {
-      return org.vdaas.vald.payload.Controll.getDefaultInstance();
+    public org.vdaas.vald.payload.Control getDefaultInstanceForType() {
+      return org.vdaas.vald.payload.Control.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.vdaas.vald.payload.Controll build() {
-      org.vdaas.vald.payload.Controll result = buildPartial();
+    public org.vdaas.vald.payload.Control build() {
+      org.vdaas.vald.payload.Control result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -772,8 +772,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.payload.Controll buildPartial() {
-      org.vdaas.vald.payload.Controll result = new org.vdaas.vald.payload.Controll(this);
+    public org.vdaas.vald.payload.Control buildPartial() {
+      org.vdaas.vald.payload.Control result = new org.vdaas.vald.payload.Control(this);
       onBuilt();
       return result;
     }
@@ -812,16 +812,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.vdaas.vald.payload.Controll) {
-        return mergeFrom((org.vdaas.vald.payload.Controll)other);
+      if (other instanceof org.vdaas.vald.payload.Control) {
+        return mergeFrom((org.vdaas.vald.payload.Control)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.vdaas.vald.payload.Controll other) {
-      if (other == org.vdaas.vald.payload.Controll.getDefaultInstance()) return this;
+    public Builder mergeFrom(org.vdaas.vald.payload.Control other) {
+      if (other == org.vdaas.vald.payload.Control.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -837,11 +837,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.vdaas.vald.payload.Controll parsedMessage = null;
+      org.vdaas.vald.payload.Control parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.vdaas.vald.payload.Controll) e.getUnfinishedMessage();
+        parsedMessage = (org.vdaas.vald.payload.Control) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -863,41 +863,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:payload.Controll)
+    // @@protoc_insertion_point(builder_scope:payload.Control)
   }
 
-  // @@protoc_insertion_point(class_scope:payload.Controll)
-  private static final org.vdaas.vald.payload.Controll DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:payload.Control)
+  private static final org.vdaas.vald.payload.Control DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.vdaas.vald.payload.Controll();
+    DEFAULT_INSTANCE = new org.vdaas.vald.payload.Control();
   }
 
-  public static org.vdaas.vald.payload.Controll getDefaultInstance() {
+  public static org.vdaas.vald.payload.Control getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Controll>
-      PARSER = new com.google.protobuf.AbstractParser<Controll>() {
+  private static final com.google.protobuf.Parser<Control>
+      PARSER = new com.google.protobuf.AbstractParser<Control>() {
     @java.lang.Override
-    public Controll parsePartialFrom(
+    public Control parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Controll(input, extensionRegistry);
+      return new Control(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<Controll> parser() {
+  public static com.google.protobuf.Parser<Control> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Controll> getParserForType() {
+  public com.google.protobuf.Parser<Control> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public org.vdaas.vald.payload.Controll getDefaultInstanceForType() {
+  public org.vdaas.vald.payload.Control getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

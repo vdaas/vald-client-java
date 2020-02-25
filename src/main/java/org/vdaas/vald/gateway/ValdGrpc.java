@@ -1,4 +1,4 @@
-package org.vdaas.vald;
+package org.vdaas.vald.gateway;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -19,7 +19,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
-    comments = "Source: vald.proto")
+    comments = "Source: vald/vald.proto")
 public final class ValdGrpc {
 
   private ValdGrpc() {}
@@ -368,6 +368,99 @@ public final class ValdGrpc {
     return getMultiUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getUpsertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Upsert",
+      requestType = org.vdaas.vald.payload.Object.Vector.class,
+      responseType = org.vdaas.vald.payload.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getUpsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getUpsertMethod;
+    if ((getUpsertMethod = ValdGrpc.getUpsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getUpsertMethod = ValdGrpc.getUpsertMethod) == null) {
+          ValdGrpc.getUpsertMethod = getUpsertMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Upsert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("Upsert"))
+              .build();
+        }
+      }
+    }
+    return getUpsertMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getStreamUpsertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamUpsert",
+      requestType = org.vdaas.vald.payload.Object.Vector.class,
+      responseType = org.vdaas.vald.payload.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getStreamUpsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getStreamUpsertMethod;
+    if ((getStreamUpsertMethod = ValdGrpc.getStreamUpsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamUpsertMethod = ValdGrpc.getStreamUpsertMethod) == null) {
+          ValdGrpc.getStreamUpsertMethod = getStreamUpsertMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamUpsert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamUpsert"))
+              .build();
+        }
+      }
+    }
+    return getStreamUpsertMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors,
+      org.vdaas.vald.payload.Empty> getMultiUpsertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MultiUpsert",
+      requestType = org.vdaas.vald.payload.Object.Vectors.class,
+      responseType = org.vdaas.vald.payload.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors,
+      org.vdaas.vald.payload.Empty> getMultiUpsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty> getMultiUpsertMethod;
+    if ((getMultiUpsertMethod = ValdGrpc.getMultiUpsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getMultiUpsertMethod = ValdGrpc.getMultiUpsertMethod) == null) {
+          ValdGrpc.getMultiUpsertMethod = getMultiUpsertMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiUpsert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Object.Vectors.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("MultiUpsert"))
+              .build();
+        }
+      }
+    }
+    return getMultiUpsertMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
       org.vdaas.vald.payload.Empty> getRemoveMethod;
 
@@ -629,6 +722,27 @@ public final class ValdGrpc {
 
     /**
      */
+    public void upsert(org.vdaas.vald.payload.Object.Vector request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> streamUpsert(
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      return asyncUnimplementedStreamingCall(getStreamUpsertMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void multiUpsert(org.vdaas.vald.payload.Object.Vectors request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getMultiUpsertMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void remove(org.vdaas.vald.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
@@ -741,6 +855,27 @@ public final class ValdGrpc {
                 org.vdaas.vald.payload.Object.Vectors,
                 org.vdaas.vald.payload.Empty>(
                   this, METHODID_MULTI_UPDATE)))
+          .addMethod(
+            getUpsertMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.vdaas.vald.payload.Object.Vector,
+                org.vdaas.vald.payload.Empty>(
+                  this, METHODID_UPSERT)))
+          .addMethod(
+            getStreamUpsertMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                org.vdaas.vald.payload.Object.Vector,
+                org.vdaas.vald.payload.Empty>(
+                  this, METHODID_STREAM_UPSERT)))
+          .addMethod(
+            getMultiUpsertMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.vdaas.vald.payload.Object.Vectors,
+                org.vdaas.vald.payload.Empty>(
+                  this, METHODID_MULTI_UPSERT)))
           .addMethod(
             getRemoveMethod(),
             asyncUnaryCall(
@@ -888,6 +1023,30 @@ public final class ValdGrpc {
 
     /**
      */
+    public void upsert(org.vdaas.vald.payload.Object.Vector request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpsertMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> streamUpsert(
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getStreamUpsertMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public void multiUpsert(org.vdaas.vald.payload.Object.Vectors request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMultiUpsertMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void remove(org.vdaas.vald.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnaryCall(
@@ -996,6 +1155,20 @@ public final class ValdGrpc {
 
     /**
      */
+    public org.vdaas.vald.payload.Empty upsert(org.vdaas.vald.payload.Object.Vector request) {
+      return blockingUnaryCall(
+          getChannel(), getUpsertMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.vdaas.vald.payload.Empty multiUpsert(org.vdaas.vald.payload.Object.Vectors request) {
+      return blockingUnaryCall(
+          getChannel(), getMultiUpsertMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public org.vdaas.vald.payload.Empty remove(org.vdaas.vald.payload.Object.ID request) {
       return blockingUnaryCall(
           getChannel(), getRemoveMethod(), getCallOptions(), request);
@@ -1092,6 +1265,22 @@ public final class ValdGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> upsert(
+        org.vdaas.vald.payload.Object.Vector request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpsertMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> multiUpsert(
+        org.vdaas.vald.payload.Object.Vectors request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMultiUpsertMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> remove(
         org.vdaas.vald.payload.Object.ID request) {
       return futureUnaryCall(
@@ -1122,15 +1311,18 @@ public final class ValdGrpc {
   private static final int METHODID_MULTI_INSERT = 4;
   private static final int METHODID_UPDATE = 5;
   private static final int METHODID_MULTI_UPDATE = 6;
-  private static final int METHODID_REMOVE = 7;
-  private static final int METHODID_MULTI_REMOVE = 8;
-  private static final int METHODID_GET_OBJECT = 9;
-  private static final int METHODID_STREAM_SEARCH = 10;
-  private static final int METHODID_STREAM_SEARCH_BY_ID = 11;
-  private static final int METHODID_STREAM_INSERT = 12;
-  private static final int METHODID_STREAM_UPDATE = 13;
-  private static final int METHODID_STREAM_REMOVE = 14;
-  private static final int METHODID_STREAM_GET_OBJECT = 15;
+  private static final int METHODID_UPSERT = 7;
+  private static final int METHODID_MULTI_UPSERT = 8;
+  private static final int METHODID_REMOVE = 9;
+  private static final int METHODID_MULTI_REMOVE = 10;
+  private static final int METHODID_GET_OBJECT = 11;
+  private static final int METHODID_STREAM_SEARCH = 12;
+  private static final int METHODID_STREAM_SEARCH_BY_ID = 13;
+  private static final int METHODID_STREAM_INSERT = 14;
+  private static final int METHODID_STREAM_UPDATE = 15;
+  private static final int METHODID_STREAM_UPSERT = 16;
+  private static final int METHODID_STREAM_REMOVE = 17;
+  private static final int METHODID_STREAM_GET_OBJECT = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1177,6 +1369,14 @@ public final class ValdGrpc {
           serviceImpl.multiUpdate((org.vdaas.vald.payload.Object.Vectors) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
           break;
+        case METHODID_UPSERT:
+          serviceImpl.upsert((org.vdaas.vald.payload.Object.Vector) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
+          break;
+        case METHODID_MULTI_UPSERT:
+          serviceImpl.multiUpsert((org.vdaas.vald.payload.Object.Vectors) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
+          break;
         case METHODID_REMOVE:
           serviceImpl.remove((org.vdaas.vald.payload.Object.ID) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
@@ -1211,6 +1411,9 @@ public final class ValdGrpc {
         case METHODID_STREAM_UPDATE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamUpdate(
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
+        case METHODID_STREAM_UPSERT:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamUpsert(
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
         case METHODID_STREAM_REMOVE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamRemove(
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
@@ -1229,7 +1432,7 @@ public final class ValdGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return org.vdaas.vald.ValdApi.getDescriptor();
+      return org.vdaas.vald.gateway.ValdApi.getDescriptor();
     }
 
     @java.lang.Override
@@ -1279,6 +1482,9 @@ public final class ValdGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getStreamUpdateMethod())
               .addMethod(getMultiUpdateMethod())
+              .addMethod(getUpsertMethod())
+              .addMethod(getStreamUpsertMethod())
+              .addMethod(getMultiUpsertMethod())
               .addMethod(getRemoveMethod())
               .addMethod(getStreamRemoveMethod())
               .addMethod(getMultiRemoveMethod())

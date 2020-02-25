@@ -24,7 +24,7 @@ public final class ValdAgent {
   static {
     java.lang.String[] descriptorData = {
       "\n\013agent.proto\022\005agent\032\rpayload.proto\032\034goo" +
-      "gle/api/annotations.proto2\245\013\n\005Agent\022F\n\006E" +
+      "gle/api/annotations.proto2\243\013\n\005Agent\022F\n\006E" +
       "xists\022\022.payload.Object.ID\032\022.payload.Obje" +
       "ct.ID\"\024\202\323\344\223\002\016\022\014/exists/{id}\022O\n\006Search\022\027." +
       "payload.Search.Request\032\030.payload.Search." +
@@ -52,17 +52,17 @@ public final class ValdAgent {
       "ect\022\022.payload.Object.ID\032\026.payload.Object" +
       ".Vector\"\024\202\323\344\223\002\016\022\014/object/{id}\022C\n\017StreamG" +
       "etObject\022\022.payload.Object.ID\032\026.payload.O" +
-      "bject.Vector\"\000(\0010\001\022Z\n\013CreateIndex\022$.payl" +
-      "oad.Controll.CreateIndexRequest\032\016.payloa" +
-      "d.Empty\"\025\202\323\344\223\002\017\022\r/index/create\022@\n\tSaveIn" +
-      "dex\022\016.payload.Empty\032\016.payload.Empty\"\023\202\323\344" +
-      "\223\002\r\022\013/index/save\022h\n\022CreateAndSaveIndex\022$" +
-      ".payload.Controll.CreateIndexRequest\032\016.p" +
-      "ayload.Empty\"\034\202\323\344\223\002\026\022\024/index/createandsa" +
-      "ve\022E\n\tIndexInfo\022\016.payload.Empty\032\023.payloa" +
-      "d.Info.Index\"\023\202\323\344\223\002\r\022\013/index/infoBJ\n\024org" +
-      ".vdaas.vald.agentB\tValdAgentP\001Z%github.c" +
-      "om/vdaas/vald/apis/grpc/agentb\006proto3"
+      "bject.Vector\"\000(\0010\001\022Y\n\013CreateIndex\022#.payl" +
+      "oad.Control.CreateIndexRequest\032\016.payload" +
+      ".Empty\"\025\202\323\344\223\002\017\022\r/index/create\022@\n\tSaveInd" +
+      "ex\022\016.payload.Empty\032\016.payload.Empty\"\023\202\323\344\223" +
+      "\002\r\022\013/index/save\022g\n\022CreateAndSaveIndex\022#." +
+      "payload.Control.CreateIndexRequest\032\016.pay" +
+      "load.Empty\"\034\202\323\344\223\002\026\022\024/index/createandsave" +
+      "\022E\n\tIndexInfo\022\016.payload.Empty\032\023.payload." +
+      "Info.Index\"\023\202\323\344\223\002\r\022\013/index/infoBJ\n\024org.v" +
+      "daas.vald.agentB\tValdAgentP\001Z%github.com" +
+      "/vdaas/vald/apis/grpc/agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
