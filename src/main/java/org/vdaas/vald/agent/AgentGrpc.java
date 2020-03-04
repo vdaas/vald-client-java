@@ -617,28 +617,28 @@ public final class AgentGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
-      org.vdaas.vald.payload.Info.Index> getIndexInfoMethod;
+      org.vdaas.vald.payload.Info.Index.Count> getIndexInfoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "IndexInfo",
       requestType = org.vdaas.vald.payload.Empty.class,
-      responseType = org.vdaas.vald.payload.Info.Index.class,
+      responseType = org.vdaas.vald.payload.Info.Index.Count.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
-      org.vdaas.vald.payload.Info.Index> getIndexInfoMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index> getIndexInfoMethod;
+      org.vdaas.vald.payload.Info.Index.Count> getIndexInfoMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index.Count> getIndexInfoMethod;
     if ((getIndexInfoMethod = AgentGrpc.getIndexInfoMethod) == null) {
       synchronized (AgentGrpc.class) {
         if ((getIndexInfoMethod = AgentGrpc.getIndexInfoMethod) == null) {
           AgentGrpc.getIndexInfoMethod = getIndexInfoMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IndexInfo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Info.Index.getDefaultInstance()))
+                  org.vdaas.vald.payload.Info.Index.Count.getDefaultInstance()))
               .setSchemaDescriptor(new AgentMethodDescriptorSupplier("IndexInfo"))
               .build();
         }
@@ -810,7 +810,7 @@ public final class AgentGrpc {
     /**
      */
     public void indexInfo(org.vdaas.vald.payload.Empty request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index.Count> responseObserver) {
       asyncUnimplementedUnaryCall(getIndexInfoMethod(), responseObserver);
     }
 
@@ -954,7 +954,7 @@ public final class AgentGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.payload.Empty,
-                org.vdaas.vald.payload.Info.Index>(
+                org.vdaas.vald.payload.Info.Index.Count>(
                   this, METHODID_INDEX_INFO)))
           .build();
     }
@@ -1133,7 +1133,7 @@ public final class AgentGrpc {
     /**
      */
     public void indexInfo(org.vdaas.vald.payload.Empty request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index.Count> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request, responseObserver);
     }
@@ -1250,7 +1250,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public org.vdaas.vald.payload.Info.Index indexInfo(org.vdaas.vald.payload.Empty request) {
+    public org.vdaas.vald.payload.Info.Index.Count indexInfo(org.vdaas.vald.payload.Empty request) {
       return blockingUnaryCall(
           getChannel(), getIndexInfoMethod(), getCallOptions(), request);
     }
@@ -1380,7 +1380,7 @@ public final class AgentGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Info.Index> indexInfo(
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Info.Index.Count> indexInfo(
         org.vdaas.vald.payload.Empty request) {
       return futureUnaryCall(
           getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request);
@@ -1479,7 +1479,7 @@ public final class AgentGrpc {
           break;
         case METHODID_INDEX_INFO:
           serviceImpl.indexInfo((org.vdaas.vald.payload.Empty) request,
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index.Count>) responseObserver);
           break;
         default:
           throw new AssertionError();
