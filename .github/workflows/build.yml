@@ -89,10 +89,3 @@ jobs:
           ./gradlew uploadArchives -Prelease
           sleep 30
           ./gradlew closeAndReleaseRepository
-      - name: dispatch build of clj
-        run: |
-          curl --fail -u "${USER}:${TOKEN}" -X POST https://api.github.com/repos/${REPO}/dispatches -H 'Accept: application/vnd.github.everest-preview+json' --data '{"event_type": "updated"}'
-        env:
-          REPO: vdaas/vald-client-clj
-          USER: ${{ secrets.DISPATCH_USER }}
-          TOKEN: ${{ secrets.DISPATCH_TOKEN }}
