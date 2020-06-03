@@ -1,4 +1,4 @@
-package org.vdaas.vald.agent;
+package org.vdaas.vald.gateway.vald;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -19,12 +19,12 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
-    comments = "Source: agent.proto")
-public final class AgentGrpc {
+    comments = "Source: vald/vald.proto")
+public final class ValdGrpc {
 
-  private AgentGrpc() {}
+  private ValdGrpc() {}
 
-  public static final String SERVICE_NAME = "agent.Agent";
+  public static final String SERVICE_NAME = "vald.Vald";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
@@ -38,10 +38,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
       org.vdaas.vald.payload.Object.ID> getExistsMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Object.ID> getExistsMethod;
-    if ((getExistsMethod = AgentGrpc.getExistsMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getExistsMethod = AgentGrpc.getExistsMethod) == null) {
-          AgentGrpc.getExistsMethod = getExistsMethod =
+    if ((getExistsMethod = ValdGrpc.getExistsMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getExistsMethod = ValdGrpc.getExistsMethod) == null) {
+          ValdGrpc.getExistsMethod = getExistsMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Object.ID>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Exists"))
@@ -50,7 +50,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.ID.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Object.ID.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("Exists"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("Exists"))
               .build();
         }
       }
@@ -69,10 +69,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.Request,
       org.vdaas.vald.payload.Search.Response> getSearchMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.Request, org.vdaas.vald.payload.Search.Response> getSearchMethod;
-    if ((getSearchMethod = AgentGrpc.getSearchMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getSearchMethod = AgentGrpc.getSearchMethod) == null) {
-          AgentGrpc.getSearchMethod = getSearchMethod =
+    if ((getSearchMethod = ValdGrpc.getSearchMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getSearchMethod = ValdGrpc.getSearchMethod) == null) {
+          ValdGrpc.getSearchMethod = getSearchMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Search.Request, org.vdaas.vald.payload.Search.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Search"))
@@ -81,7 +81,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Search.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Search.Response.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("Search"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("Search"))
               .build();
         }
       }
@@ -100,10 +100,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.IDRequest,
       org.vdaas.vald.payload.Search.Response> getSearchByIDMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.IDRequest, org.vdaas.vald.payload.Search.Response> getSearchByIDMethod;
-    if ((getSearchByIDMethod = AgentGrpc.getSearchByIDMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getSearchByIDMethod = AgentGrpc.getSearchByIDMethod) == null) {
-          AgentGrpc.getSearchByIDMethod = getSearchByIDMethod =
+    if ((getSearchByIDMethod = ValdGrpc.getSearchByIDMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getSearchByIDMethod = ValdGrpc.getSearchByIDMethod) == null) {
+          ValdGrpc.getSearchByIDMethod = getSearchByIDMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Search.IDRequest, org.vdaas.vald.payload.Search.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchByID"))
@@ -112,7 +112,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Search.IDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Search.Response.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("SearchByID"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("SearchByID"))
               .build();
         }
       }
@@ -131,10 +131,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.Request,
       org.vdaas.vald.payload.Search.Response> getStreamSearchMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.Request, org.vdaas.vald.payload.Search.Response> getStreamSearchMethod;
-    if ((getStreamSearchMethod = AgentGrpc.getStreamSearchMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getStreamSearchMethod = AgentGrpc.getStreamSearchMethod) == null) {
-          AgentGrpc.getStreamSearchMethod = getStreamSearchMethod =
+    if ((getStreamSearchMethod = ValdGrpc.getStreamSearchMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamSearchMethod = ValdGrpc.getStreamSearchMethod) == null) {
+          ValdGrpc.getStreamSearchMethod = getStreamSearchMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Search.Request, org.vdaas.vald.payload.Search.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamSearch"))
@@ -143,7 +143,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Search.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Search.Response.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("StreamSearch"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamSearch"))
               .build();
         }
       }
@@ -162,10 +162,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.IDRequest,
       org.vdaas.vald.payload.Search.Response> getStreamSearchByIDMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Search.IDRequest, org.vdaas.vald.payload.Search.Response> getStreamSearchByIDMethod;
-    if ((getStreamSearchByIDMethod = AgentGrpc.getStreamSearchByIDMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getStreamSearchByIDMethod = AgentGrpc.getStreamSearchByIDMethod) == null) {
-          AgentGrpc.getStreamSearchByIDMethod = getStreamSearchByIDMethod =
+    if ((getStreamSearchByIDMethod = ValdGrpc.getStreamSearchByIDMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamSearchByIDMethod = ValdGrpc.getStreamSearchByIDMethod) == null) {
+          ValdGrpc.getStreamSearchByIDMethod = getStreamSearchByIDMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Search.IDRequest, org.vdaas.vald.payload.Search.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamSearchByID"))
@@ -174,7 +174,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Search.IDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Search.Response.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("StreamSearchByID"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamSearchByID"))
               .build();
         }
       }
@@ -193,10 +193,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
       org.vdaas.vald.payload.Empty> getInsertMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getInsertMethod;
-    if ((getInsertMethod = AgentGrpc.getInsertMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getInsertMethod = AgentGrpc.getInsertMethod) == null) {
-          AgentGrpc.getInsertMethod = getInsertMethod =
+    if ((getInsertMethod = ValdGrpc.getInsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getInsertMethod = ValdGrpc.getInsertMethod) == null) {
+          ValdGrpc.getInsertMethod = getInsertMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Insert"))
@@ -205,7 +205,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("Insert"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("Insert"))
               .build();
         }
       }
@@ -224,10 +224,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
       org.vdaas.vald.payload.Empty> getStreamInsertMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getStreamInsertMethod;
-    if ((getStreamInsertMethod = AgentGrpc.getStreamInsertMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getStreamInsertMethod = AgentGrpc.getStreamInsertMethod) == null) {
-          AgentGrpc.getStreamInsertMethod = getStreamInsertMethod =
+    if ((getStreamInsertMethod = ValdGrpc.getStreamInsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamInsertMethod = ValdGrpc.getStreamInsertMethod) == null) {
+          ValdGrpc.getStreamInsertMethod = getStreamInsertMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamInsert"))
@@ -236,7 +236,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("StreamInsert"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamInsert"))
               .build();
         }
       }
@@ -255,10 +255,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors,
       org.vdaas.vald.payload.Empty> getMultiInsertMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty> getMultiInsertMethod;
-    if ((getMultiInsertMethod = AgentGrpc.getMultiInsertMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getMultiInsertMethod = AgentGrpc.getMultiInsertMethod) == null) {
-          AgentGrpc.getMultiInsertMethod = getMultiInsertMethod =
+    if ((getMultiInsertMethod = ValdGrpc.getMultiInsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getMultiInsertMethod = ValdGrpc.getMultiInsertMethod) == null) {
+          ValdGrpc.getMultiInsertMethod = getMultiInsertMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiInsert"))
@@ -267,7 +267,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.Vectors.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("MultiInsert"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("MultiInsert"))
               .build();
         }
       }
@@ -286,10 +286,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
       org.vdaas.vald.payload.Empty> getUpdateMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getUpdateMethod;
-    if ((getUpdateMethod = AgentGrpc.getUpdateMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getUpdateMethod = AgentGrpc.getUpdateMethod) == null) {
-          AgentGrpc.getUpdateMethod = getUpdateMethod =
+    if ((getUpdateMethod = ValdGrpc.getUpdateMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getUpdateMethod = ValdGrpc.getUpdateMethod) == null) {
+          ValdGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
@@ -298,7 +298,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("Update"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("Update"))
               .build();
         }
       }
@@ -317,10 +317,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
       org.vdaas.vald.payload.Empty> getStreamUpdateMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getStreamUpdateMethod;
-    if ((getStreamUpdateMethod = AgentGrpc.getStreamUpdateMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getStreamUpdateMethod = AgentGrpc.getStreamUpdateMethod) == null) {
-          AgentGrpc.getStreamUpdateMethod = getStreamUpdateMethod =
+    if ((getStreamUpdateMethod = ValdGrpc.getStreamUpdateMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamUpdateMethod = ValdGrpc.getStreamUpdateMethod) == null) {
+          ValdGrpc.getStreamUpdateMethod = getStreamUpdateMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamUpdate"))
@@ -329,7 +329,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("StreamUpdate"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamUpdate"))
               .build();
         }
       }
@@ -348,10 +348,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors,
       org.vdaas.vald.payload.Empty> getMultiUpdateMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty> getMultiUpdateMethod;
-    if ((getMultiUpdateMethod = AgentGrpc.getMultiUpdateMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getMultiUpdateMethod = AgentGrpc.getMultiUpdateMethod) == null) {
-          AgentGrpc.getMultiUpdateMethod = getMultiUpdateMethod =
+    if ((getMultiUpdateMethod = ValdGrpc.getMultiUpdateMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getMultiUpdateMethod = ValdGrpc.getMultiUpdateMethod) == null) {
+          ValdGrpc.getMultiUpdateMethod = getMultiUpdateMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiUpdate"))
@@ -360,12 +360,105 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.Vectors.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("MultiUpdate"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("MultiUpdate"))
               .build();
         }
       }
     }
     return getMultiUpdateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getUpsertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Upsert",
+      requestType = org.vdaas.vald.payload.Object.Vector.class,
+      responseType = org.vdaas.vald.payload.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getUpsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getUpsertMethod;
+    if ((getUpsertMethod = ValdGrpc.getUpsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getUpsertMethod = ValdGrpc.getUpsertMethod) == null) {
+          ValdGrpc.getUpsertMethod = getUpsertMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Upsert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("Upsert"))
+              .build();
+        }
+      }
+    }
+    return getUpsertMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getStreamUpsertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamUpsert",
+      requestType = org.vdaas.vald.payload.Object.Vector.class,
+      responseType = org.vdaas.vald.payload.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector,
+      org.vdaas.vald.payload.Empty> getStreamUpsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty> getStreamUpsertMethod;
+    if ((getStreamUpsertMethod = ValdGrpc.getStreamUpsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamUpsertMethod = ValdGrpc.getStreamUpsertMethod) == null) {
+          ValdGrpc.getStreamUpsertMethod = getStreamUpsertMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vector, org.vdaas.vald.payload.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamUpsert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamUpsert"))
+              .build();
+        }
+      }
+    }
+    return getStreamUpsertMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors,
+      org.vdaas.vald.payload.Empty> getMultiUpsertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MultiUpsert",
+      requestType = org.vdaas.vald.payload.Object.Vectors.class,
+      responseType = org.vdaas.vald.payload.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors,
+      org.vdaas.vald.payload.Empty> getMultiUpsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty> getMultiUpsertMethod;
+    if ((getMultiUpsertMethod = ValdGrpc.getMultiUpsertMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getMultiUpsertMethod = ValdGrpc.getMultiUpsertMethod) == null) {
+          ValdGrpc.getMultiUpsertMethod = getMultiUpsertMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.Vectors, org.vdaas.vald.payload.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiUpsert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Object.Vectors.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("MultiUpsert"))
+              .build();
+        }
+      }
+    }
+    return getMultiUpsertMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
@@ -379,10 +472,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
       org.vdaas.vald.payload.Empty> getRemoveMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Empty> getRemoveMethod;
-    if ((getRemoveMethod = AgentGrpc.getRemoveMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getRemoveMethod = AgentGrpc.getRemoveMethod) == null) {
-          AgentGrpc.getRemoveMethod = getRemoveMethod =
+    if ((getRemoveMethod = ValdGrpc.getRemoveMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getRemoveMethod = ValdGrpc.getRemoveMethod) == null) {
+          ValdGrpc.getRemoveMethod = getRemoveMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Remove"))
@@ -391,7 +484,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.ID.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("Remove"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("Remove"))
               .build();
         }
       }
@@ -410,10 +503,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
       org.vdaas.vald.payload.Empty> getStreamRemoveMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Empty> getStreamRemoveMethod;
-    if ((getStreamRemoveMethod = AgentGrpc.getStreamRemoveMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getStreamRemoveMethod = AgentGrpc.getStreamRemoveMethod) == null) {
-          AgentGrpc.getStreamRemoveMethod = getStreamRemoveMethod =
+    if ((getStreamRemoveMethod = ValdGrpc.getStreamRemoveMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamRemoveMethod = ValdGrpc.getStreamRemoveMethod) == null) {
+          ValdGrpc.getStreamRemoveMethod = getStreamRemoveMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamRemove"))
@@ -422,7 +515,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.ID.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("StreamRemove"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamRemove"))
               .build();
         }
       }
@@ -441,10 +534,10 @@ public final class AgentGrpc {
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.IDs,
       org.vdaas.vald.payload.Empty> getMultiRemoveMethod() {
     io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.IDs, org.vdaas.vald.payload.Empty> getMultiRemoveMethod;
-    if ((getMultiRemoveMethod = AgentGrpc.getMultiRemoveMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getMultiRemoveMethod = AgentGrpc.getMultiRemoveMethod) == null) {
-          AgentGrpc.getMultiRemoveMethod = getMultiRemoveMethod =
+    if ((getMultiRemoveMethod = ValdGrpc.getMultiRemoveMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getMultiRemoveMethod = ValdGrpc.getMultiRemoveMethod) == null) {
+          ValdGrpc.getMultiRemoveMethod = getMultiRemoveMethod =
               io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.IDs, org.vdaas.vald.payload.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiRemove"))
@@ -453,7 +546,7 @@ public final class AgentGrpc {
                   org.vdaas.vald.payload.Object.IDs.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("MultiRemove"))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("MultiRemove"))
               .build();
         }
       }
@@ -462,29 +555,29 @@ public final class AgentGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
-      org.vdaas.vald.payload.Object.Vector> getGetObjectMethod;
+      org.vdaas.vald.payload.Backup.MetaVector> getGetObjectMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetObject",
       requestType = org.vdaas.vald.payload.Object.ID.class,
-      responseType = org.vdaas.vald.payload.Object.Vector.class,
+      responseType = org.vdaas.vald.payload.Backup.MetaVector.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
-      org.vdaas.vald.payload.Object.Vector> getGetObjectMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Object.Vector> getGetObjectMethod;
-    if ((getGetObjectMethod = AgentGrpc.getGetObjectMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getGetObjectMethod = AgentGrpc.getGetObjectMethod) == null) {
-          AgentGrpc.getGetObjectMethod = getGetObjectMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Object.Vector>newBuilder()
+      org.vdaas.vald.payload.Backup.MetaVector> getGetObjectMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Backup.MetaVector> getGetObjectMethod;
+    if ((getGetObjectMethod = ValdGrpc.getGetObjectMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getGetObjectMethod = ValdGrpc.getGetObjectMethod) == null) {
+          ValdGrpc.getGetObjectMethod = getGetObjectMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Backup.MetaVector>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetObject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Object.ID.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("GetObject"))
+                  org.vdaas.vald.payload.Backup.MetaVector.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("GetObject"))
               .build();
         }
       }
@@ -493,29 +586,29 @@ public final class AgentGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
-      org.vdaas.vald.payload.Object.Vector> getStreamGetObjectMethod;
+      org.vdaas.vald.payload.Backup.MetaVector> getStreamGetObjectMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamGetObject",
       requestType = org.vdaas.vald.payload.Object.ID.class,
-      responseType = org.vdaas.vald.payload.Object.Vector.class,
+      responseType = org.vdaas.vald.payload.Backup.MetaVector.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID,
-      org.vdaas.vald.payload.Object.Vector> getStreamGetObjectMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Object.Vector> getStreamGetObjectMethod;
-    if ((getStreamGetObjectMethod = AgentGrpc.getStreamGetObjectMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getStreamGetObjectMethod = AgentGrpc.getStreamGetObjectMethod) == null) {
-          AgentGrpc.getStreamGetObjectMethod = getStreamGetObjectMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Object.Vector>newBuilder()
+      org.vdaas.vald.payload.Backup.MetaVector> getStreamGetObjectMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Backup.MetaVector> getStreamGetObjectMethod;
+    if ((getStreamGetObjectMethod = ValdGrpc.getStreamGetObjectMethod) == null) {
+      synchronized (ValdGrpc.class) {
+        if ((getStreamGetObjectMethod = ValdGrpc.getStreamGetObjectMethod) == null) {
+          ValdGrpc.getStreamGetObjectMethod = getStreamGetObjectMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Object.ID, org.vdaas.vald.payload.Backup.MetaVector>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamGetObject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.payload.Object.ID.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Object.Vector.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("StreamGetObject"))
+                  org.vdaas.vald.payload.Backup.MetaVector.getDefaultInstance()))
+              .setSchemaDescriptor(new ValdMethodDescriptorSupplier("StreamGetObject"))
               .build();
         }
       }
@@ -523,156 +616,53 @@ public final class AgentGrpc {
     return getStreamGetObjectMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
-      org.vdaas.vald.payload.Empty> getCreateIndexMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateIndex",
-      requestType = org.vdaas.vald.payload.Control.CreateIndexRequest.class,
-      responseType = org.vdaas.vald.payload.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
-      org.vdaas.vald.payload.Empty> getCreateIndexMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty> getCreateIndexMethod;
-    if ((getCreateIndexMethod = AgentGrpc.getCreateIndexMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getCreateIndexMethod = AgentGrpc.getCreateIndexMethod) == null) {
-          AgentGrpc.getCreateIndexMethod = getCreateIndexMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateIndex"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Control.CreateIndexRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("CreateIndex"))
-              .build();
-        }
-      }
-    }
-    return getCreateIndexMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
-      org.vdaas.vald.payload.Empty> getSaveIndexMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SaveIndex",
-      requestType = org.vdaas.vald.payload.Empty.class,
-      responseType = org.vdaas.vald.payload.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
-      org.vdaas.vald.payload.Empty> getSaveIndexMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Empty> getSaveIndexMethod;
-    if ((getSaveIndexMethod = AgentGrpc.getSaveIndexMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getSaveIndexMethod = AgentGrpc.getSaveIndexMethod) == null) {
-          AgentGrpc.getSaveIndexMethod = getSaveIndexMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SaveIndex"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("SaveIndex"))
-              .build();
-        }
-      }
-    }
-    return getSaveIndexMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
-      org.vdaas.vald.payload.Empty> getCreateAndSaveIndexMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateAndSaveIndex",
-      requestType = org.vdaas.vald.payload.Control.CreateIndexRequest.class,
-      responseType = org.vdaas.vald.payload.Empty.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest,
-      org.vdaas.vald.payload.Empty> getCreateAndSaveIndexMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty> getCreateAndSaveIndexMethod;
-    if ((getCreateAndSaveIndexMethod = AgentGrpc.getCreateAndSaveIndexMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getCreateAndSaveIndexMethod = AgentGrpc.getCreateAndSaveIndexMethod) == null) {
-          AgentGrpc.getCreateAndSaveIndexMethod = getCreateAndSaveIndexMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Control.CreateIndexRequest, org.vdaas.vald.payload.Empty>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAndSaveIndex"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Control.CreateIndexRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("CreateAndSaveIndex"))
-              .build();
-        }
-      }
-    }
-    return getCreateAndSaveIndexMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
-      org.vdaas.vald.payload.Info.Index.Count> getIndexInfoMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "IndexInfo",
-      requestType = org.vdaas.vald.payload.Empty.class,
-      responseType = org.vdaas.vald.payload.Info.Index.Count.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty,
-      org.vdaas.vald.payload.Info.Index.Count> getIndexInfoMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index.Count> getIndexInfoMethod;
-    if ((getIndexInfoMethod = AgentGrpc.getIndexInfoMethod) == null) {
-      synchronized (AgentGrpc.class) {
-        if ((getIndexInfoMethod = AgentGrpc.getIndexInfoMethod) == null) {
-          AgentGrpc.getIndexInfoMethod = getIndexInfoMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.payload.Empty, org.vdaas.vald.payload.Info.Index.Count>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IndexInfo"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Empty.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.payload.Info.Index.Count.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("IndexInfo"))
-              .build();
-        }
-      }
-    }
-    return getIndexInfoMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static AgentStub newStub(io.grpc.Channel channel) {
-    return new AgentStub(channel);
+  public static ValdStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ValdStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ValdStub>() {
+        @java.lang.Override
+        public ValdStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ValdStub(channel, callOptions);
+        }
+      };
+    return ValdStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static AgentBlockingStub newBlockingStub(
+  public static ValdBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AgentBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ValdBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ValdBlockingStub>() {
+        @java.lang.Override
+        public ValdBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ValdBlockingStub(channel, callOptions);
+        }
+      };
+    return ValdBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static AgentFutureStub newFutureStub(
+  public static ValdFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AgentFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ValdFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ValdFutureStub>() {
+        @java.lang.Override
+        public ValdFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ValdFutureStub(channel, callOptions);
+        }
+      };
+    return ValdFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class AgentImplBase implements io.grpc.BindableService {
+  public static abstract class ValdImplBase implements io.grpc.BindableService {
 
     /**
      */
@@ -753,6 +743,27 @@ public final class AgentGrpc {
 
     /**
      */
+    public void upsert(org.vdaas.vald.payload.Object.Vector request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> streamUpsert(
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      return asyncUnimplementedStreamingCall(getStreamUpsertMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void multiUpsert(org.vdaas.vald.payload.Object.Vectors request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getMultiUpsertMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void remove(org.vdaas.vald.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
@@ -775,43 +786,15 @@ public final class AgentGrpc {
     /**
      */
     public void getObject(org.vdaas.vald.payload.Object.ID request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Backup.MetaVector> responseObserver) {
       asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.ID> streamGetObject(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Backup.MetaVector> responseObserver) {
       return asyncUnimplementedStreamingCall(getStreamGetObjectMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void createIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateIndexMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void saveIndex(org.vdaas.vald.payload.Empty request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getSaveIndexMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void createAndSaveIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateAndSaveIndexMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void indexInfo(org.vdaas.vald.payload.Empty request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getIndexInfoMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -894,6 +877,27 @@ public final class AgentGrpc {
                 org.vdaas.vald.payload.Empty>(
                   this, METHODID_MULTI_UPDATE)))
           .addMethod(
+            getUpsertMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.vdaas.vald.payload.Object.Vector,
+                org.vdaas.vald.payload.Empty>(
+                  this, METHODID_UPSERT)))
+          .addMethod(
+            getStreamUpsertMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                org.vdaas.vald.payload.Object.Vector,
+                org.vdaas.vald.payload.Empty>(
+                  this, METHODID_STREAM_UPSERT)))
+          .addMethod(
+            getMultiUpsertMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                org.vdaas.vald.payload.Object.Vectors,
+                org.vdaas.vald.payload.Empty>(
+                  this, METHODID_MULTI_UPSERT)))
+          .addMethod(
             getRemoveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -919,63 +923,31 @@ public final class AgentGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.payload.Object.ID,
-                org.vdaas.vald.payload.Object.Vector>(
+                org.vdaas.vald.payload.Backup.MetaVector>(
                   this, METHODID_GET_OBJECT)))
           .addMethod(
             getStreamGetObjectMethod(),
             asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.payload.Object.ID,
-                org.vdaas.vald.payload.Object.Vector>(
+                org.vdaas.vald.payload.Backup.MetaVector>(
                   this, METHODID_STREAM_GET_OBJECT)))
-          .addMethod(
-            getCreateIndexMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.payload.Control.CreateIndexRequest,
-                org.vdaas.vald.payload.Empty>(
-                  this, METHODID_CREATE_INDEX)))
-          .addMethod(
-            getSaveIndexMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.payload.Empty,
-                org.vdaas.vald.payload.Empty>(
-                  this, METHODID_SAVE_INDEX)))
-          .addMethod(
-            getCreateAndSaveIndexMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.payload.Control.CreateIndexRequest,
-                org.vdaas.vald.payload.Empty>(
-                  this, METHODID_CREATE_AND_SAVE_INDEX)))
-          .addMethod(
-            getIndexInfoMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.payload.Empty,
-                org.vdaas.vald.payload.Info.Index.Count>(
-                  this, METHODID_INDEX_INFO)))
           .build();
     }
   }
 
   /**
    */
-  public static final class AgentStub extends io.grpc.stub.AbstractStub<AgentStub> {
-    private AgentStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AgentStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ValdStub extends io.grpc.stub.AbstractAsyncStub<ValdStub> {
+    private ValdStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgentStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
-      return new AgentStub(channel, callOptions);
+    protected ValdStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ValdStub(channel, callOptions);
     }
 
     /**
@@ -1068,6 +1040,30 @@ public final class AgentGrpc {
 
     /**
      */
+    public void upsert(org.vdaas.vald.payload.Object.Vector request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpsertMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> streamUpsert(
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getStreamUpsertMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public void multiUpsert(org.vdaas.vald.payload.Object.Vectors request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getMultiUpsertMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void remove(org.vdaas.vald.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
       asyncUnaryCall(
@@ -1093,7 +1089,7 @@ public final class AgentGrpc {
     /**
      */
     public void getObject(org.vdaas.vald.payload.Object.ID request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Backup.MetaVector> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetObjectMethod(), getCallOptions()), request, responseObserver);
     }
@@ -1101,60 +1097,24 @@ public final class AgentGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.ID> streamGetObject(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Backup.MetaVector> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getStreamGetObjectMethod(), getCallOptions()), responseObserver);
-    }
-
-    /**
-     */
-    public void createIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void saveIndex(org.vdaas.vald.payload.Empty request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getSaveIndexMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void createAndSaveIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void indexInfo(org.vdaas.vald.payload.Empty request,
-        io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index.Count> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class AgentBlockingStub extends io.grpc.stub.AbstractStub<AgentBlockingStub> {
-    private AgentBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AgentBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ValdBlockingStub extends io.grpc.stub.AbstractBlockingStub<ValdBlockingStub> {
+    private ValdBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgentBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
-      return new AgentBlockingStub(channel, callOptions);
+    protected ValdBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ValdBlockingStub(channel, callOptions);
     }
 
     /**
@@ -1208,6 +1168,20 @@ public final class AgentGrpc {
 
     /**
      */
+    public org.vdaas.vald.payload.Empty upsert(org.vdaas.vald.payload.Object.Vector request) {
+      return blockingUnaryCall(
+          getChannel(), getUpsertMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.vdaas.vald.payload.Empty multiUpsert(org.vdaas.vald.payload.Object.Vectors request) {
+      return blockingUnaryCall(
+          getChannel(), getMultiUpsertMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public org.vdaas.vald.payload.Empty remove(org.vdaas.vald.payload.Object.ID request) {
       return blockingUnaryCall(
           getChannel(), getRemoveMethod(), getCallOptions(), request);
@@ -1222,56 +1196,24 @@ public final class AgentGrpc {
 
     /**
      */
-    public org.vdaas.vald.payload.Object.Vector getObject(org.vdaas.vald.payload.Object.ID request) {
+    public org.vdaas.vald.payload.Backup.MetaVector getObject(org.vdaas.vald.payload.Object.ID request) {
       return blockingUnaryCall(
           getChannel(), getGetObjectMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public org.vdaas.vald.payload.Empty createIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getCreateIndexMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public org.vdaas.vald.payload.Empty saveIndex(org.vdaas.vald.payload.Empty request) {
-      return blockingUnaryCall(
-          getChannel(), getSaveIndexMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public org.vdaas.vald.payload.Empty createAndSaveIndex(org.vdaas.vald.payload.Control.CreateIndexRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getCreateAndSaveIndexMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public org.vdaas.vald.payload.Info.Index.Count indexInfo(org.vdaas.vald.payload.Empty request) {
-      return blockingUnaryCall(
-          getChannel(), getIndexInfoMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class AgentFutureStub extends io.grpc.stub.AbstractStub<AgentFutureStub> {
-    private AgentFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AgentFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ValdFutureStub extends io.grpc.stub.AbstractFutureStub<ValdFutureStub> {
+    private ValdFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgentFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
-      return new AgentFutureStub(channel, callOptions);
+    protected ValdFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ValdFutureStub(channel, callOptions);
     }
 
     /**
@@ -1332,6 +1274,22 @@ public final class AgentGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> upsert(
+        org.vdaas.vald.payload.Object.Vector request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpsertMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> multiUpsert(
+        org.vdaas.vald.payload.Object.Vectors request) {
+      return futureUnaryCall(
+          getChannel().newCall(getMultiUpsertMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> remove(
         org.vdaas.vald.payload.Object.ID request) {
       return futureUnaryCall(
@@ -1348,42 +1306,10 @@ public final class AgentGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Object.Vector> getObject(
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Backup.MetaVector> getObject(
         org.vdaas.vald.payload.Object.ID request) {
       return futureUnaryCall(
           getChannel().newCall(getGetObjectMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> createIndex(
-        org.vdaas.vald.payload.Control.CreateIndexRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> saveIndex(
-        org.vdaas.vald.payload.Empty request) {
-      return futureUnaryCall(
-          getChannel().newCall(getSaveIndexMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Empty> createAndSaveIndex(
-        org.vdaas.vald.payload.Control.CreateIndexRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.payload.Info.Index.Count> indexInfo(
-        org.vdaas.vald.payload.Empty request) {
-      return futureUnaryCall(
-          getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request);
     }
   }
 
@@ -1394,29 +1320,28 @@ public final class AgentGrpc {
   private static final int METHODID_MULTI_INSERT = 4;
   private static final int METHODID_UPDATE = 5;
   private static final int METHODID_MULTI_UPDATE = 6;
-  private static final int METHODID_REMOVE = 7;
-  private static final int METHODID_MULTI_REMOVE = 8;
-  private static final int METHODID_GET_OBJECT = 9;
-  private static final int METHODID_CREATE_INDEX = 10;
-  private static final int METHODID_SAVE_INDEX = 11;
-  private static final int METHODID_CREATE_AND_SAVE_INDEX = 12;
-  private static final int METHODID_INDEX_INFO = 13;
-  private static final int METHODID_STREAM_SEARCH = 14;
-  private static final int METHODID_STREAM_SEARCH_BY_ID = 15;
-  private static final int METHODID_STREAM_INSERT = 16;
-  private static final int METHODID_STREAM_UPDATE = 17;
-  private static final int METHODID_STREAM_REMOVE = 18;
-  private static final int METHODID_STREAM_GET_OBJECT = 19;
+  private static final int METHODID_UPSERT = 7;
+  private static final int METHODID_MULTI_UPSERT = 8;
+  private static final int METHODID_REMOVE = 9;
+  private static final int METHODID_MULTI_REMOVE = 10;
+  private static final int METHODID_GET_OBJECT = 11;
+  private static final int METHODID_STREAM_SEARCH = 12;
+  private static final int METHODID_STREAM_SEARCH_BY_ID = 13;
+  private static final int METHODID_STREAM_INSERT = 14;
+  private static final int METHODID_STREAM_UPDATE = 15;
+  private static final int METHODID_STREAM_UPSERT = 16;
+  private static final int METHODID_STREAM_REMOVE = 17;
+  private static final int METHODID_STREAM_GET_OBJECT = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AgentImplBase serviceImpl;
+    private final ValdImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AgentImplBase serviceImpl, int methodId) {
+    MethodHandlers(ValdImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1453,6 +1378,14 @@ public final class AgentGrpc {
           serviceImpl.multiUpdate((org.vdaas.vald.payload.Object.Vectors) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
           break;
+        case METHODID_UPSERT:
+          serviceImpl.upsert((org.vdaas.vald.payload.Object.Vector) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
+          break;
+        case METHODID_MULTI_UPSERT:
+          serviceImpl.multiUpsert((org.vdaas.vald.payload.Object.Vectors) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
+          break;
         case METHODID_REMOVE:
           serviceImpl.remove((org.vdaas.vald.payload.Object.ID) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
@@ -1463,23 +1396,7 @@ public final class AgentGrpc {
           break;
         case METHODID_GET_OBJECT:
           serviceImpl.getObject((org.vdaas.vald.payload.Object.ID) request,
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector>) responseObserver);
-          break;
-        case METHODID_CREATE_INDEX:
-          serviceImpl.createIndex((org.vdaas.vald.payload.Control.CreateIndexRequest) request,
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
-          break;
-        case METHODID_SAVE_INDEX:
-          serviceImpl.saveIndex((org.vdaas.vald.payload.Empty) request,
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
-          break;
-        case METHODID_CREATE_AND_SAVE_INDEX:
-          serviceImpl.createAndSaveIndex((org.vdaas.vald.payload.Control.CreateIndexRequest) request,
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
-          break;
-        case METHODID_INDEX_INFO:
-          serviceImpl.indexInfo((org.vdaas.vald.payload.Empty) request,
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Info.Index.Count>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Backup.MetaVector>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1503,44 +1420,47 @@ public final class AgentGrpc {
         case METHODID_STREAM_UPDATE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamUpdate(
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
+        case METHODID_STREAM_UPSERT:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamUpsert(
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
         case METHODID_STREAM_REMOVE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamRemove(
               (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Empty>) responseObserver);
         case METHODID_STREAM_GET_OBJECT:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamGetObject(
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Object.Vector>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.payload.Backup.MetaVector>) responseObserver);
         default:
           throw new AssertionError();
       }
     }
   }
 
-  private static abstract class AgentBaseDescriptorSupplier
+  private static abstract class ValdBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    AgentBaseDescriptorSupplier() {}
+    ValdBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return org.vdaas.vald.agent.ValdAgent.getDescriptor();
+      return org.vdaas.vald.gateway.vald.ValdApi.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("Agent");
+      return getFileDescriptor().findServiceByName("Vald");
     }
   }
 
-  private static final class AgentFileDescriptorSupplier
-      extends AgentBaseDescriptorSupplier {
-    AgentFileDescriptorSupplier() {}
+  private static final class ValdFileDescriptorSupplier
+      extends ValdBaseDescriptorSupplier {
+    ValdFileDescriptorSupplier() {}
   }
 
-  private static final class AgentMethodDescriptorSupplier
-      extends AgentBaseDescriptorSupplier
+  private static final class ValdMethodDescriptorSupplier
+      extends ValdBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    AgentMethodDescriptorSupplier(String methodName) {
+    ValdMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -1555,11 +1475,11 @@ public final class AgentGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (AgentGrpc.class) {
+      synchronized (ValdGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AgentFileDescriptorSupplier())
+              .setSchemaDescriptor(new ValdFileDescriptorSupplier())
               .addMethod(getExistsMethod())
               .addMethod(getSearchMethod())
               .addMethod(getSearchByIDMethod())
@@ -1571,15 +1491,14 @@ public final class AgentGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getStreamUpdateMethod())
               .addMethod(getMultiUpdateMethod())
+              .addMethod(getUpsertMethod())
+              .addMethod(getStreamUpsertMethod())
+              .addMethod(getMultiUpsertMethod())
               .addMethod(getRemoveMethod())
               .addMethod(getStreamRemoveMethod())
               .addMethod(getMultiRemoveMethod())
               .addMethod(getGetObjectMethod())
               .addMethod(getStreamGetObjectMethod())
-              .addMethod(getCreateIndexMethod())
-              .addMethod(getSaveIndexMethod())
-              .addMethod(getCreateAndSaveIndexMethod())
-              .addMethod(getIndexInfoMethod())
               .build();
         }
       }
