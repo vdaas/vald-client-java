@@ -38,6 +38,9 @@ if (hasProperty("release")) {
 
 nexusStaging {
     packageGroup = "org.vdaas.vald"
+    stagingProfileId = "24fc47a63d38e2"
+    numberOfRetries = 100
+    delayBetweenRetriesInMillis = 30000
 }
 
 repositories {
