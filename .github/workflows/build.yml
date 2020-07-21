@@ -12,12 +12,10 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          echo "Install dependencies"
           sudo apt-get update
           sudo apt-get install -y libprotobuf-dev libprotoc-dev protobuf-compiler
       - name: Install grpc-java
         run: |
-          echo "Install gRPC-Java"
           sudo apt-get install -y autoconf libtool
           mkdir -p $HOME/protobuf
           curl -L https://github.com/protocolbuffers/protobuf/archive/v3.11.4.tar.gz | tar xvz --strip-components=1 -C $HOME/protobuf
@@ -38,11 +36,11 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - run: |
-          echo "checkout master"
+      - name: checkout master
+        run: |
           git checkout master
-      - run: |
-          echo "build"
+      - name: build
+        run: |
           export GOPATH=$HOME/go
           export PATH=$HOME/grpc-java:$PATH
           make vald
@@ -50,8 +48,8 @@ jobs:
           make vald/sha/update
           make vald/client/java/version/update
           rm -rf vald
-      - run: |
-          echo "commit and push"
+      - name: commit and push
+        run: |
           sha=`make vald/sha/print`
           git config --global user.name 'VDaaS org'
           git config --global user.email 'ci@vdaas.org'
@@ -59,6 +57,12 @@ jobs:
           git add .
           git commit -m "[skip ci] Update [vald sha: ${sha}]"
           git push
+      - name: tag
+        continue-on-error: true
+        run: |
+          version=`make vald/client/java/version/print`
+          git tag ${version}
+          git push --tags
       - name: prepare for publish
         run: |
           ./gradlew clean
