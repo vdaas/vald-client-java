@@ -58,8 +58,8 @@ jobs:
           git commit -m "[skip ci] Update [vald sha: ${sha}]"
           git push
         env:
-          GITHUB_USER: ${{ secrets.DISPATCH_USER }}
-          GITHUB_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
+          GITHUB_USER: ${{ secrets.CI_USER }}
+          GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
       - name: tag
         continue-on-error: true
         run: |
