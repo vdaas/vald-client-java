@@ -35,7 +35,7 @@ jobs:
           cp protoc-gen-grpc-java $HOME/grpc-java
       - uses: actions/checkout@v1
         with:
-          fetch-depth: 1
+          fetch-depth: 10
       - name: checkout master
         run: |
           git checkout master
