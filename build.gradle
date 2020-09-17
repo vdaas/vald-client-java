@@ -16,7 +16,7 @@ apply plugin: 'io.codearte.nexus-staging'
 
 group = "org.vdaas.vald"
 archivesBaseName = "vald-client-java"
-version = "0.0.55"
+version = "0.0.56"
 description = "a client library for Vald (https://github.com/vdaas/vald)."
 
 def isDevBuild
