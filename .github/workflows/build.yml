@@ -15,14 +15,14 @@ jobs:
         run: |
           sudo apt-get install -y autoconf libtool
           mkdir -p $HOME/protobuf
-          curl -L https://github.com/protocolbuffers/protobuf/archive/v3.11.4.tar.gz | tar xvz --strip-components=1 -C $HOME/protobuf
+          curl -L https://github.com/protocolbuffers/protobuf/archive/${PROTOBUF_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/protobuf
           cd $HOME/protobuf
           autoreconf -f -i -Wall,no-obsolete
           ./configure --prefix=/usr --enable-static=no
           make -j2
           sudo make install
           mkdir -p $HOME/grpc-java
-          curl -L https://github.com/grpc/grpc-java/archive/v1.29.0.tar.gz | tar xvz --strip-components=1 -C $HOME/grpc-java
+          curl -L https://github.com/grpc/grpc-java/archive/${GRPC_JAVA_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/grpc-java
           cd $HOME/grpc-java/compiler/src/java_plugin/cpp
           g++ -I. -I$HOME/protobuf/src \
           *.cpp \
@@ -30,6 +30,9 @@ jobs:
           -lprotoc -lprotobuf -lpthread --std=c++0x -s \
           -o protoc-gen-grpc-java
           cp protoc-gen-grpc-java $HOME/grpc-java
+        env:
+          PROTOBUF_VERSION: v3.13.0
+          GRPC_JAVA_VERSION: v1.32.1
       - uses: actions/checkout@v1
         with:
           fetch-depth: 10
