@@ -37,8 +37,11 @@ implementation 'io.grpc:grpc-netty-shaded:x.y.z'
 ### Example
 
 ```java
-package org.vdaas.vald.Client
+package org.vdaas.vald.Client;
 
+import java.util.Arrays;
+
+import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
 import org.vdaas.vald.api.v1.vald.InsertGrpc;
@@ -60,19 +63,22 @@ public class Client {
     RemoveGrpc.RemoveBlockingStub rstub;
 
     public static Client create(String host, int port) {
+        Client client = new Client();
+
         // Generate channel and stubs
+        client.channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
 
-        channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
+        client.istub = InsertGrpc.newBlockingStub(channel);
+        client.sstub = SearchGrpc.newBlockingStub(channel);
+        client.ustub = UpdateGrpc.newBlockingStub(channel);
+        client.rstub = RemoveGrpc.newBlockingStub(channel);
 
-        istub = InsertGrpc.newBlockingStub(channel);
-        sstub = SearchGrpc.newBlockingStub(channel);
-        ustub = UpdateGrpc.newBlockingStub(channel);
-        rstub = RemoveGrpc.newBlockingStub(channel);
+        return client;
     }
 
     public void close() {
         // Close channel
-        channel.shutdown()
+        channel.shutdown();
     }
 
     public Object.Location insert(String id, List<Float> vec) {
@@ -83,7 +89,7 @@ public class Client {
                                 .build();
         Insert.Config icfg = Insert.Config.newBuilder()
                                 .setSkipStrictExistCheck(true)
-                                .build()
+                                .build();
         Insert.Request ireq = Insert.Request.newBuilder()
                                 .setVector(ovec)
                                 .setConfig(icfg)
@@ -93,11 +99,11 @@ public class Client {
 
     public Search.Response search(List<Float> vec) {
         // Search
-        Search.Config scfg = Search.Config.newBuilder().
+        Search.Config scfg = Search.Config.newBuilder()
                                 .setNum(10)
                                 .setRadius(-1.0)
                                 .setEpsilon(0.01)
-                                .setTimeout(3000000000)
+                                .setTimeout(3000000000L)
                                 .build();
         Search.Request sreq = Search.Request.newBuilder()
                                 .addAllVector(vec)
@@ -114,7 +120,7 @@ public class Client {
                                 .build();
         Update.Config ucfg = Update.Config.newBuilder()
                                 .setSkipStrictExistCheck(true)
-                                .build()
+                                .build();
         Update.Request ureq = Update.Request.newBuilder()
                                 .setVector(ovec)
                                 .setConfig(ucfg)
@@ -126,23 +132,23 @@ public class Client {
         // Remove
         Remove.Config rcfg = Remove.Config.newBuilder()
                                 .setSkipStrictExistCheck(true)
-                                .build()
+                                .build();
         Remove.Request rreq = Remove.Request.newBuilder()
                                 .setId(Object.ID.newBuilder().setId(id).build())
                                 .setConfig(rcfg)
-                                .build()
+                                .build();
         return rstub.remove(rreq);
     }
 
     public static void main(String[] args) throws Exception {
-        Client client = Client.create("gateway.vald.vdaas.org", 80)
+        Client client = Client.create("gateway.vald.vdaas.org", 80);
 
-        Object.Location ires = client.insert("vector_id_1", Arrays.asList(0.1, 0.2, 0.3...))
-        Search.Response sres = client.search(Arrays.asList(0.1, 0.2, 0.3...))
-        Object.Location ures = client.update("vector_id_1", Arrays.asList(0.1, 0.2, 0.3...))
-        Object.Location rres = client.remove("vector_id_1")
+        Object.Location ires = client.insert("vector_id_1", Arrays.asList(0.1, 0.2, 0.3));
+        Search.Response sres = client.search(Arrays.asList(0.1, 0.2, 0.3));
+        Object.Location ures = client.update("vector_id_1", Arrays.asList(0.1, 0.2, 0.3));
+        Object.Location rres = client.remove("vector_id_1");
 
-        client.close()
+        client.close();
     }
 }
 ```
