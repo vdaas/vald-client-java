@@ -38,45 +38,88 @@ implementation 'io.grpc:grpc-netty-shaded:x.y.z'
 ### Example
 
 ```java
+package org.vdaas.vald.Example
+
 import io.grpc.ManagedChannelBuilder;
+
 import org.vdaas.vald.api.v1.vald.InsertGrpc;
 import org.vdaas.vald.api.v1.vald.SearchGrpc;
+import org.vdaas.vald.api.v1.vald.UpdateGrpc;
+import org.vdaas.vald.api.v1.vald.RemoveGrpc;
+
 import org.vdaas.vald.api.v1.payload.Insert;
 import org.vdaas.vald.api.v1.payload.Search;
+import org.vdaas.vald.api.v1.payload.Update;
+import org.vdaas.vald.api.v1.payload.Remove;
 import org.vdaas.vald.api.v1.payload.Object;
 
-String host = "gateway.vald.vdaas.org";
-int port = 80;
+public class Example {
 
-// Generate channel and stubs
-ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
-InsertGrpc.InsertBlockingStub istub = InsertGrpc.newBlockingStub(channel);
-SearchGrpc.SearchBlockingStub sstub = SearchGrpc.newBlockingStub(channel);
+    String host = "gateway.vald.vdaas.org";
+    int port = 80;
 
-// Insert
-Object.Vector vec = Object.Vector.newBuilder()
-                        .setId("vector_id_1")
-                        .addAllVector(Arrays.asList(0.1, 0.2, 0.3...))
-                        .build();
-Insert.Config icfg = Insert.Config.newBuilder()
-                        .setSkipStrictExistCheck(true)
-                        .build()
-Insert.Request ireq = Insert.Request.newBuilder()
-                        .setVector(vec)
-                        .setConfig(icfg)
-                        .build();
-Object.Location ires = istub.insert(ireq);
+    public static void main(String[] args) throws Exception {
 
-// Search
-Search.Config scfg = Search.Config.newBuilder().
-                        .setNum(10)
-                        .setRadius(-1.0)
-                        .setEpsilon(0.01)
-                        .setTimeout(3000000000)
-                        .build();
-Search.Request sreq = Search.Request.newBuilder()
-                        .addAllVector(Arrays.asList(0.1, 0.2, 0.3...))
-                        .setConfig(scfg)
-                        .build();
-Search.Response sres = sstub.search(sreq);
+        // Generate channel and stubs
+        ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
+        InsertGrpc.InsertBlockingStub istub = InsertGrpc.newBlockingStub(channel);
+        SearchGrpc.SearchBlockingStub sstub = SearchGrpc.newBlockingStub(channel);
+        UpdateGrpc.UpdateBlockingStub ustub = UpdateGrpc.newBlockingStub(channel);
+        RemoveGrpc.RemoveBlockingStub rstub = RemoveGrpc.newBlockingStub(channel);
+
+        // Insert
+        Object.Vector vec = Object.Vector.newBuilder()
+                                .setId("vector_id_1")
+                                .addAllVector(Arrays.asList(0.1, 0.2, 0.3...))
+                                .build();
+        Insert.Config icfg = Insert.Config.newBuilder()
+                                .setSkipStrictExistCheck(true)
+                                .build()
+        Insert.Request ireq = Insert.Request.newBuilder()
+                                .setVector(vec)
+                                .setConfig(icfg)
+                                .build();
+        Object.Location ires = istub.insert(ireq);
+
+        // Search
+        Search.Config scfg = Search.Config.newBuilder().
+                                .setNum(10)
+                                .setRadius(-1.0)
+                                .setEpsilon(0.01)
+                                .setTimeout(3000000000)
+                                .build();
+        Search.Request sreq = Search.Request.newBuilder()
+                                .addAllVector(Arrays.asList(0.1, 0.2, 0.3...))
+                                .setConfig(scfg)
+                                .build();
+        Search.Response sres = sstub.search(sreq);
+
+        // Update
+        Object.Vector vec = Object.Vector.newBuilder()
+                                .setId("vector_id_1")
+                                .addAllVector(Arrays.asList(0.1, 0.2, 0.3...))
+                                .build();
+        Update.Config ucfg = Update.Config.newBuilder()
+                                .setSkipStrictExistCheck(true)
+                                .build()
+        Update.Request ureq = Update.Request.newBuilder()
+                                .setVector(vec)
+                                .setConfig(ucfg)
+                                .build();
+        Object.Location ures = ustub.update(ureq);
+
+        // Remove
+        Remove.Config rcfg = Remove.Config.newBuilder()
+                                .setSkipStrictExistCheck(true)
+                                .build()
+        Remove.Request rreq = Remove.Request.newBuilder()
+                                .setId(Object.ID.newBuilder().setId("vector_id_1").build())
+                                .setConfig(rcfg)
+                                .build()
+        Object.Location rres = rstub.remove(rreq);
+
+        // Close channel
+        channel.shutdown()
+    }
+}
 ```
