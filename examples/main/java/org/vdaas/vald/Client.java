@@ -1,6 +1,7 @@
 package org.vdaas.vald.Client;
 
 import java.util.Arrays;
+import java.util.List;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -29,10 +30,10 @@ public class Client {
         // Generate channel and stubs
         client.channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
 
-        client.istub = InsertGrpc.newBlockingStub(channel);
-        client.sstub = SearchGrpc.newBlockingStub(channel);
-        client.ustub = UpdateGrpc.newBlockingStub(channel);
-        client.rstub = RemoveGrpc.newBlockingStub(channel);
+        client.istub = InsertGrpc.newBlockingStub(client.channel);
+        client.sstub = SearchGrpc.newBlockingStub(client.channel);
+        client.ustub = UpdateGrpc.newBlockingStub(client.channel);
+        client.rstub = RemoveGrpc.newBlockingStub(client.channel);
 
         return client;
     }
