@@ -8,7 +8,7 @@ A Java gRPC client library for [Vald](https://github.com/vdaas/vald).
 
 ### Dependency
 
-Add vald-client-java into your project dependency.
+Add `vald-client-java` into your project dependency.
 
 For Maven `pom.xml`,
 
