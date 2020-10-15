@@ -1,4 +1,4 @@
-package org.vdaas.vald.Client;
+package org.vdaas.vald;
 
 import java.util.Arrays;
 import java.util.List;
@@ -47,7 +47,7 @@ public class Client {
         // Insert
         Object.Vector ovec = Object.Vector.newBuilder()
                                 .setId(id)
-                                .addAllVector()
+                                .addAllVector(vec)
                                 .build();
         Insert.Config icfg = Insert.Config.newBuilder()
                                 .setSkipStrictExistCheck(true)
@@ -63,8 +63,8 @@ public class Client {
         // Search
         Search.Config scfg = Search.Config.newBuilder()
                                 .setNum(10)
-                                .setRadius(-1.0)
-                                .setEpsilon(0.01)
+                                .setRadius(-1.0f)
+                                .setEpsilon(0.01f)
                                 .setTimeout(3000000000L)
                                 .build();
         Search.Request sreq = Search.Request.newBuilder()
@@ -105,9 +105,9 @@ public class Client {
     public static void main(String[] args) throws Exception {
         Client client = Client.create("gateway.vald.vdaas.org", 80);
 
-        Object.Location ires = client.insert("vector_id_1", Arrays.asList(0.1, 0.2, 0.3));
-        Search.Response sres = client.search(Arrays.asList(0.1, 0.2, 0.3));
-        Object.Location ures = client.update("vector_id_1", Arrays.asList(0.1, 0.2, 0.3));
+        Object.Location ires = client.insert("vector_id_1", Arrays.asList(0.1f, 0.2f, 0.3f));
+        Search.Response sres = client.search(Arrays.asList(0.1f, 0.2f, 0.3f));
+        Object.Location ures = client.update("vector_id_1", Arrays.asList(0.1f, 0.2f, 0.3f));
         Object.Location rres = client.remove("vector_id_1");
 
         client.close();

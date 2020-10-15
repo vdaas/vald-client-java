@@ -20,6 +20,11 @@ For Maven `pom.xml`,
 </dependency>
 <dependency>
   <groupId>io.grpc</groupId>
+  <artifactId>grpc-all</artifactId>
+  <version>x.y.z</version>
+</dependency>
+<dependency>
+  <groupId>io.grpc</groupId>
   <artifactId>grpc-netty-shaded</artifactId>
   <version>x.y.z</version>
 </dependency>
@@ -29,6 +34,7 @@ Gradle `build.gradle`,
 
 ```groovy
 implementation 'org.vdaas.vald:vald-client-java:x.y.z'
+implementation 'io.grpc:grpc-all:x.y.z'
 implementation 'io.grpc:grpc-netty-shaded:x.y.z'
 ```
 
