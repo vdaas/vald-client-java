@@ -32,9 +32,6 @@ PROTO_ROOT  = vald/apis/proto
 JAVA_ROOT   = src/main/java
 
 PROTOS = \
-	gateway/vald/vald.proto \
-	agent/core/agent.proto \
-	payload/payload.proto \
 	v1/agent/core/agent.proto \
 	v1/gateway/vald/vald.proto \
 	v1/vald/filter.proto \
