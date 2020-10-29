@@ -5,3 +5,8 @@
 build
 
 /vald
+
+.classpath
+.project
+.settings
+bin

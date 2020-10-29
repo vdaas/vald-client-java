@@ -103,12 +103,19 @@ public class Client {
     }
 
     public static void main(String[] args) throws Exception {
-        Client client = Client.create("gateway.vald.vdaas.org", 80);
+        Client client = Client.create("localhost", 8081);
 
         Object.Location ires = client.insert("vector_id_1", Arrays.asList(0.1f, 0.2f, 0.3f));
+        System.out.println(ires.toString());
+
         Search.Response sres = client.search(Arrays.asList(0.1f, 0.2f, 0.3f));
+        System.out.println(sres.toString());
+
         Object.Location ures = client.update("vector_id_1", Arrays.asList(0.1f, 0.2f, 0.3f));
+        System.out.println(ures.toString());
+
         Object.Location rres = client.remove("vector_id_1");
+        System.out.println(rres.toString());
 
         client.close();
     }

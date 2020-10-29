@@ -1,0 +1,45 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id 'java'
+}
+
+group = "org.vdaas.vald"
+archivesBaseName = "vald-client-java-example"
+version = "0.0.1"
+description = "an example of the client library for Vald (https://github.com/vdaas/vald)."
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(dir: '../build/libs', include: '*.jar')
+    implementation 'io.grpc:grpc-api:1.32.2'
+    implementation 'io.grpc:grpc-core:1.32.2'
+    implementation 'io.grpc:grpc-stub:1.32.2'
+    implementation 'io.grpc:grpc-protobuf:1.32.2'
+    implementation 'io.grpc:grpc-netty-shaded:1.32.2'
+    implementation 'io.envoyproxy.protoc-gen-validate:pgv-java-stub:0.4.1'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+        from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+        from javadoc.destinationDir
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.vdaas.vald.Client'
+    }
+}

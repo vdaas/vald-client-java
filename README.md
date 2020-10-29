@@ -35,12 +35,12 @@ For Maven `pom.xml`,
 </dependency>
 <dependency>
   <groupId>io.grpc</groupId>
-  <artifactId>grpc-netty-shaded</artifactId>
+  <artifactId>grpc-protobuf</artifactId>
   <version>x.y.z</version>
 </dependency>
 <dependency>
-  <groupId>com.google.protobuf</groupId>
-  <artifactId>protobuf-java</artifactId>
+  <groupId>io.grpc</groupId>
+  <artifactId>grpc-netty-shaded</artifactId>
   <version>x.y.z</version>
 </dependency>
 
@@ -53,8 +53,8 @@ implementation 'org.vdaas.vald:vald-client-java:x.y.z'
 implementation 'io.grpc:grpc-api:x.y.z'
 implementation 'io.grpc:grpc-core:x.y.z'
 implementation 'io.grpc:grpc-stub:x.y.z'
+implementation 'io.grpc:grpc-protobuf:x.y.z'
 implementation 'io.grpc:grpc-netty-shaded:x.y.z'
-implementation 'com.google.protobuf:protobuf-java:x.y.z'
 ```
 
 `io.grpc:grpc-netty-shaded` can be replaced by `io.grpc:grpc-okhttp` or `io.grpc:grpc-netty`.
@@ -62,3 +62,10 @@ implementation 'com.google.protobuf:protobuf-java:x.y.z'
 ### Example
 
 Please refer the [examples](./examples) directory.
+
+To run,
+
+    $ ./gradlew build
+    $ cd examples
+    $ ./gradlew shadowJar
+    $ java -jar build/libs/vald-client-java-example-0.0.1-all.jar
