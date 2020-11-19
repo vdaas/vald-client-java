@@ -69,3 +69,5 @@ To run,
     $ cd examples
     $ ./gradlew shadowJar
     $ java -jar build/libs/vald-client-java-example-0.0.1-all.jar
+
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B21465%2Fvald-client-java.svg?type=large)](https://app.fossa.com/projects/custom%2B21465%2Fvald-client-java?ref=badge_large)
