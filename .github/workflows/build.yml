@@ -31,8 +31,8 @@ jobs:
           -o protoc-gen-grpc-java
           cp protoc-gen-grpc-java $HOME/grpc-java
         env:
-          PROTOBUF_VERSION: v3.13.0
-          GRPC_JAVA_VERSION: v1.32.1
+          PROTOBUF_VERSION: v3.14.0
+          GRPC_JAVA_VERSION: v1.34.1
       - uses: actions/checkout@v1
         with:
           fetch-depth: 10
