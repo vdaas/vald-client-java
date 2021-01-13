@@ -21,24 +21,36 @@ LANGUAGE    = java
 PKGNAME     = $(NAME)-client-$(LANGUAGE)
 PKGREPO     = github.com/$(REPO)/$(PKGNAME)
 
+VALD_DIR    = vald
 VALD_SHA    = VALD_SHA
 VALD_CLIENT_JAVA_VERSION = VALD_CLIENT_JAVA_VERSION
+
+PWD    := $(eval PWD := $(shell pwd))$(PWD)
+GOPATH := $(eval GOPATH := $(shell go env GOPATH))$(GOPATH)
 
 PROTO_ROOT  = vald/apis/proto
 JAVA_ROOT   = src/main/java
 
-PROTOS      = gateway/vald/vald.proto agent/core/agent.proto payload/payload.proto
+PROTOS = \
+	v1/agent/core/agent.proto \
+	v1/gateway/vald/vald.proto \
+	v1/vald/filter.proto \
+	v1/vald/insert.proto \
+	v1/vald/object.proto \
+	v1/vald/remove.proto \
+	v1/vald/search.proto \
+	v1/vald/update.proto \
+	v1/vald/upsert.proto \
+	v1/payload/payload.proto
+
 PROTOS     := $(PROTOS:%=$(PROTO_ROOT)/%)
 JAVASOURCES = $(PROTOS:$(PROTO_ROOT)/%.proto=$(JAVA_ROOT)/%.java)
 
-PROTODIRS   = $(shell find $(PROTO_ROOT) -type d | sed -e "s%$(PROTO_ROOT)/%%g" | grep -v "$(PROTO_ROOT)")
-
 PROTO_PATHS = \
-	$(PROTODIRS:%=$(PROTO_ROOT)/%) \
-	$(GOPATH)/src/github.com/protocolbuffers/protobuf/src \
-	$(GOPATH)/src/github.com/gogo/protobuf/protobuf \
-	$(GOPATH)/src/github.com/googleapis/googleapis \
-	$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
+	$(PWD) \
+	$(PWD)/$(VALD_DIR) \
+	$(GOPATH)/src \
+	$(GOPATH)/src/github.com/googleapis/googleapis
 
 MAKELISTS   = Makefile
 
@@ -85,6 +97,7 @@ help:
 ## clean
 clean:
 	rm -rf $(JAVA_ROOT)
+	rm -rf $(VALD_DIR)
 
 .PHONY: proto
 ## build proto
@@ -96,7 +109,6 @@ $(JAVA_ROOT):
 
 $(JAVASOURCES): vald proto/deps $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
-	sed -i -e '/^.*gql\.proto.*$$\|^.*gql\..*_type.*$$/d' $(patsubst $(JAVA_ROOT)/%.java,$(PROTO_ROOT)/%.proto,$@)
 	protoc \
 		$(PROTO_PATHS:%=-I %) \
 		--plugin=protoc-gen-grpc-java=`which protoc-gen-grpc-java` \
@@ -104,8 +116,8 @@ $(JAVASOURCES): vald proto/deps $(JAVA_ROOT)
 		--grpc-java_out=$(JAVA_ROOT) \
 		$(patsubst $(JAVA_ROOT)/%.java,$(PROTO_ROOT)/%.proto,$@)
 
-vald:
-	git clone --depth 1 https://$(VALDREPO)
+$(VALD_DIR):
+	git clone --depth 1 https://$(VALDREPO) $(VALD_DIR)
 
 .PHONY: vald/sha/print
 ## print VALD_SHA value
@@ -148,27 +160,8 @@ vald/client/java/version/update: vald
 .PHONY: proto/deps
 ## install proto deps
 proto/deps: \
-	$(GOPATH)/bin/protoc-gen-doc \
-	$(GOPATH)/bin/protoc-gen-go \
-	$(GOPATH)/bin/protoc-gen-gogo \
-	$(GOPATH)/bin/protoc-gen-gofast \
-	$(GOPATH)/bin/protoc-gen-gogofast \
-	$(GOPATH)/bin/protoc-gen-gogofaster \
-	$(GOPATH)/bin/protoc-gen-gogoslick \
-	$(GOPATH)/bin/protoc-gen-grpc-gateway \
-	$(GOPATH)/bin/protoc-gen-swagger \
-	$(GOPATH)/bin/protoc-gen-validate \
-	$(GOPATH)/bin/prototool \
-	$(GOPATH)/bin/swagger \
-	$(GOPATH)/src/google.golang.org/genproto \
-	$(GOPATH)/src/github.com/protocolbuffers/protobuf \
-	$(GOPATH)/src/github.com/googleapis/googleapis
-
-$(GOPATH)/src/github.com/protocolbuffers/protobuf:
-	git clone \
-		--depth 1 \
-		https://github.com/protocolbuffers/protobuf \
-		$(GOPATH)/src/github.com/protocolbuffers/protobuf
+	$(GOPATH)/src/github.com/googleapis/googleapis \
+	$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
 
 $(GOPATH)/src/github.com/googleapis/googleapis:
 	git clone \
@@ -176,41 +169,8 @@ $(GOPATH)/src/github.com/googleapis/googleapis:
 		https://github.com/googleapis/googleapis \
 		$(GOPATH)/src/github.com/googleapis/googleapis
 
-$(GOPATH)/src/google.golang.org/genproto:
-	$(call go-get, google.golang.org/genproto/...)
-
-$(GOPATH)/bin/protoc-gen-go:
-	$(call go-get-no-mod, github.com/golang/protobuf/protoc-gen-go)
-
-$(GOPATH)/bin/protoc-gen-gogo:
-	$(call go-get-no-mod, github.com/gogo/protobuf/protoc-gen-gogo)
-
-$(GOPATH)/bin/protoc-gen-gofast:
-	$(call go-get-no-mod, github.com/gogo/protobuf/protoc-gen-gofast)
-
-$(GOPATH)/bin/protoc-gen-gogofast:
-	$(call go-get-no-mod, github.com/gogo/protobuf/protoc-gen-gogofast)
-
-$(GOPATH)/bin/protoc-gen-gogofaster:
-	$(call go-get-no-mod, github.com/gogo/protobuf/protoc-gen-gogofaster)
-
-$(GOPATH)/bin/protoc-gen-gogoslick:
-	$(call go-get-no-mod, github.com/gogo/protobuf/protoc-gen-gogoslick)
-
-$(GOPATH)/bin/protoc-gen-grpc-gateway:
-	$(call go-get, github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway)
-
-$(GOPATH)/bin/protoc-gen-swagger:
-	$(call go-get, github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger)
-
-$(GOPATH)/bin/protoc-gen-validate:
-	$(call go-get-no-mod, github.com/envoyproxy/protoc-gen-validate)
-
-$(GOPATH)/bin/prototool:
-	$(call go-get, github.com/uber/prototool/cmd/prototool)
-
-$(GOPATH)/bin/protoc-gen-doc:
-	$(call go-get, github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc)
-
-$(GOPATH)/bin/swagger:
-	$(call go-get-no-mod, github.com/go-swagger/go-swagger/cmd/swagger)
+$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate:
+	git clone \
+		--depth 1 \
+		https://github.com/envoyproxy/protoc-gen-validate \
+		$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
