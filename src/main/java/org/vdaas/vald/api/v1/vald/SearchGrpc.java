@@ -90,28 +90,28 @@ public final class SearchGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.Request,
-      org.vdaas.vald.api.v1.payload.Search.Response> getStreamSearchMethod;
+      org.vdaas.vald.api.v1.payload.Search.StreamResponse> getStreamSearchMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamSearch",
       requestType = org.vdaas.vald.api.v1.payload.Search.Request.class,
-      responseType = org.vdaas.vald.api.v1.payload.Search.Response.class,
+      responseType = org.vdaas.vald.api.v1.payload.Search.StreamResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.Request,
-      org.vdaas.vald.api.v1.payload.Search.Response> getStreamSearchMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.Request, org.vdaas.vald.api.v1.payload.Search.Response> getStreamSearchMethod;
+      org.vdaas.vald.api.v1.payload.Search.StreamResponse> getStreamSearchMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.Request, org.vdaas.vald.api.v1.payload.Search.StreamResponse> getStreamSearchMethod;
     if ((getStreamSearchMethod = SearchGrpc.getStreamSearchMethod) == null) {
       synchronized (SearchGrpc.class) {
         if ((getStreamSearchMethod = SearchGrpc.getStreamSearchMethod) == null) {
           SearchGrpc.getStreamSearchMethod = getStreamSearchMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Search.Request, org.vdaas.vald.api.v1.payload.Search.Response>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Search.Request, org.vdaas.vald.api.v1.payload.Search.StreamResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamSearch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.api.v1.payload.Search.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance()))
+                  org.vdaas.vald.api.v1.payload.Search.StreamResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SearchMethodDescriptorSupplier("StreamSearch"))
               .build();
         }
@@ -121,28 +121,28 @@ public final class SearchGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.IDRequest,
-      org.vdaas.vald.api.v1.payload.Search.Response> getStreamSearchByIDMethod;
+      org.vdaas.vald.api.v1.payload.Search.StreamResponse> getStreamSearchByIDMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamSearchByID",
       requestType = org.vdaas.vald.api.v1.payload.Search.IDRequest.class,
-      responseType = org.vdaas.vald.api.v1.payload.Search.Response.class,
+      responseType = org.vdaas.vald.api.v1.payload.Search.StreamResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.IDRequest,
-      org.vdaas.vald.api.v1.payload.Search.Response> getStreamSearchByIDMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.IDRequest, org.vdaas.vald.api.v1.payload.Search.Response> getStreamSearchByIDMethod;
+      org.vdaas.vald.api.v1.payload.Search.StreamResponse> getStreamSearchByIDMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Search.IDRequest, org.vdaas.vald.api.v1.payload.Search.StreamResponse> getStreamSearchByIDMethod;
     if ((getStreamSearchByIDMethod = SearchGrpc.getStreamSearchByIDMethod) == null) {
       synchronized (SearchGrpc.class) {
         if ((getStreamSearchByIDMethod = SearchGrpc.getStreamSearchByIDMethod) == null) {
           SearchGrpc.getStreamSearchByIDMethod = getStreamSearchByIDMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Search.IDRequest, org.vdaas.vald.api.v1.payload.Search.Response>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Search.IDRequest, org.vdaas.vald.api.v1.payload.Search.StreamResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamSearchByID"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.api.v1.payload.Search.IDRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance()))
+                  org.vdaas.vald.api.v1.payload.Search.StreamResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SearchMethodDescriptorSupplier("StreamSearchByID"))
               .build();
         }
@@ -278,14 +278,14 @@ public final class SearchGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return asyncUnimplementedStreamingCall(getStreamSearchMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return asyncUnimplementedStreamingCall(getStreamSearchByIDMethod(), responseObserver);
     }
 
@@ -324,14 +324,14 @@ public final class SearchGrpc {
             asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.Request,
-                org.vdaas.vald.api.v1.payload.Search.Response>(
+                org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
                   this, METHODID_STREAM_SEARCH)))
           .addMethod(
             getStreamSearchByIDMethod(),
             asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.IDRequest,
-                org.vdaas.vald.api.v1.payload.Search.Response>(
+                org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
                   this, METHODID_STREAM_SEARCH_BY_ID)))
           .addMethod(
             getMultiSearchMethod(),
@@ -384,7 +384,7 @@ public final class SearchGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getStreamSearchMethod(), getCallOptions()), responseObserver);
     }
@@ -392,7 +392,7 @@ public final class SearchGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getStreamSearchByIDMethod(), getCallOptions()), responseObserver);
     }
@@ -556,10 +556,10 @@ public final class SearchGrpc {
       switch (methodId) {
         case METHODID_STREAM_SEARCH:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamSearch(
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse>) responseObserver);
         case METHODID_STREAM_SEARCH_BY_ID:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamSearchByID(
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse>) responseObserver);
         default:
           throw new AssertionError();
       }

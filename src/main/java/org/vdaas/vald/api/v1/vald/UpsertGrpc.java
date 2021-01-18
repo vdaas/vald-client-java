@@ -59,28 +59,28 @@ public final class UpsertGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Upsert.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamUpsertMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamUpsertMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamUpsert",
       requestType = org.vdaas.vald.api.v1.payload.Upsert.Request.class,
-      responseType = org.vdaas.vald.api.v1.payload.Object.Location.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.StreamLocation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Upsert.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamUpsertMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Upsert.Request, org.vdaas.vald.api.v1.payload.Object.Location> getStreamUpsertMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamUpsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Upsert.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamUpsertMethod;
     if ((getStreamUpsertMethod = UpsertGrpc.getStreamUpsertMethod) == null) {
       synchronized (UpsertGrpc.class) {
         if ((getStreamUpsertMethod = UpsertGrpc.getStreamUpsertMethod) == null) {
           UpsertGrpc.getStreamUpsertMethod = getStreamUpsertMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Upsert.Request, org.vdaas.vald.api.v1.payload.Object.Location>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Upsert.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamUpsert"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.api.v1.payload.Upsert.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.api.v1.payload.Object.Location.getDefaultInstance()))
+                  org.vdaas.vald.api.v1.payload.Object.StreamLocation.getDefaultInstance()))
               .setSchemaDescriptor(new UpsertMethodDescriptorSupplier("StreamUpsert"))
               .build();
         }
@@ -178,7 +178,7 @@ public final class UpsertGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.Request> streamUpsert(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncUnimplementedStreamingCall(getStreamUpsertMethod(), responseObserver);
     }
 
@@ -203,7 +203,7 @@ public final class UpsertGrpc {
             asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Upsert.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
+                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_UPSERT)))
           .addMethod(
             getMultiUpsertMethod(),
@@ -241,7 +241,7 @@ public final class UpsertGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.Request> streamUpsert(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getStreamUpsertMethod(), getCallOptions()), responseObserver);
     }
@@ -356,7 +356,7 @@ public final class UpsertGrpc {
       switch (methodId) {
         case METHODID_STREAM_UPSERT:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamUpsert(
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation>) responseObserver);
         default:
           throw new AssertionError();
       }

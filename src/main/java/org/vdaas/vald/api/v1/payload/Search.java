@@ -6739,6 +6739,953 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface StreamResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Search.StreamResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.payload.v1.Search.Response response = 1;</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <code>.payload.v1.Search.Response response = 1;</code>
+     * @return The response.
+     */
+    org.vdaas.vald.api.v1.payload.Search.Response getResponse();
+    /**
+     * <code>.payload.v1.Search.Response response = 1;</code>
+     */
+    org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder getResponseOrBuilder();
+
+    /**
+     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     * @return Whether the error field is set.
+     */
+    boolean hasError();
+    /**
+     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     * @return The error.
+     */
+    org.vdaas.vald.api.v1.errors.Errors.RPC getError();
+    /**
+     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     */
+    org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder getErrorOrBuilder();
+
+    public org.vdaas.vald.api.v1.payload.Search.StreamResponse.PayloadCase getPayloadCase();
+  }
+  /**
+   * Protobuf type {@code payload.v1.Search.StreamResponse}
+   */
+  public static final class StreamResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Search.StreamResponse)
+      StreamResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamResponse.newBuilder() to construct.
+    private StreamResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StreamResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              org.vdaas.vald.api.v1.payload.Search.Response.Builder subBuilder = null;
+              if (payloadCase_ == 1) {
+                subBuilder = ((org.vdaas.vald.api.v1.payload.Search.Response) payload_).toBuilder();
+              }
+              payload_ =
+                  input.readMessage(org.vdaas.vald.api.v1.payload.Search.Response.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.vdaas.vald.api.v1.payload.Search.Response) payload_);
+                payload_ = subBuilder.buildPartial();
+              }
+              payloadCase_ = 1;
+              break;
+            }
+            case 18: {
+              org.vdaas.vald.api.v1.errors.Errors.RPC.Builder subBuilder = null;
+              if (payloadCase_ == 2) {
+                subBuilder = ((org.vdaas.vald.api.v1.errors.Errors.RPC) payload_).toBuilder();
+              }
+              payload_ =
+                  input.readMessage(org.vdaas.vald.api.v1.errors.Errors.RPC.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((org.vdaas.vald.api.v1.errors.Errors.RPC) payload_);
+                payload_ = subBuilder.buildPartial();
+              }
+              payloadCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Search_StreamResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Search_StreamResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Search.StreamResponse.class, org.vdaas.vald.api.v1.payload.Search.StreamResponse.Builder.class);
+    }
+
+    private int payloadCase_ = 0;
+    private java.lang.Object payload_;
+    public enum PayloadCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      RESPONSE(1),
+      ERROR(2),
+      PAYLOAD_NOT_SET(0);
+      private final int value;
+      private PayloadCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadCase forNumber(int value) {
+        switch (value) {
+          case 1: return RESPONSE;
+          case 2: return ERROR;
+          case 0: return PAYLOAD_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadCase
+    getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    /**
+     * <code>.payload.v1.Search.Response response = 1;</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return payloadCase_ == 1;
+    }
+    /**
+     * <code>.payload.v1.Search.Response response = 1;</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Search.Response getResponse() {
+      if (payloadCase_ == 1) {
+         return (org.vdaas.vald.api.v1.payload.Search.Response) payload_;
+      }
+      return org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
+    }
+    /**
+     * <code>.payload.v1.Search.Response response = 1;</code>
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder getResponseOrBuilder() {
+      if (payloadCase_ == 1) {
+         return (org.vdaas.vald.api.v1.payload.Search.Response) payload_;
+      }
+      return org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 2;
+    /**
+     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     * @return Whether the error field is set.
+     */
+    @java.lang.Override
+    public boolean hasError() {
+      return payloadCase_ == 2;
+    }
+    /**
+     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.errors.Errors.RPC getError() {
+      if (payloadCase_ == 2) {
+         return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+      }
+      return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+    }
+    /**
+     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder getErrorOrBuilder() {
+      if (payloadCase_ == 2) {
+         return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+      }
+      return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (payloadCase_ == 1) {
+        output.writeMessage(1, (org.vdaas.vald.api.v1.payload.Search.Response) payload_);
+      }
+      if (payloadCase_ == 2) {
+        output.writeMessage(2, (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (payloadCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (org.vdaas.vald.api.v1.payload.Search.Response) payload_);
+      }
+      if (payloadCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Search.StreamResponse)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Search.StreamResponse other = (org.vdaas.vald.api.v1.payload.Search.StreamResponse) obj;
+
+      if (!getPayloadCase().equals(other.getPayloadCase())) return false;
+      switch (payloadCase_) {
+        case 1:
+          if (!getResponse()
+              .equals(other.getResponse())) return false;
+          break;
+        case 2:
+          if (!getError()
+              .equals(other.getError())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (payloadCase_) {
+        case 1:
+          hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+          hash = (53 * hash) + getResponse().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + ERROR_FIELD_NUMBER;
+          hash = (53 * hash) + getError().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Search.StreamResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.v1.Search.StreamResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Search.StreamResponse)
+        org.vdaas.vald.api.v1.payload.Search.StreamResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Search_StreamResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Search_StreamResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Search.StreamResponse.class, org.vdaas.vald.api.v1.payload.Search.StreamResponse.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Search.StreamResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        payloadCase_ = 0;
+        payload_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Search_StreamResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Search.StreamResponse getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Search.StreamResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Search.StreamResponse build() {
+        org.vdaas.vald.api.v1.payload.Search.StreamResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Search.StreamResponse buildPartial() {
+        org.vdaas.vald.api.v1.payload.Search.StreamResponse result = new org.vdaas.vald.api.v1.payload.Search.StreamResponse(this);
+        if (payloadCase_ == 1) {
+          if (responseBuilder_ == null) {
+            result.payload_ = payload_;
+          } else {
+            result.payload_ = responseBuilder_.build();
+          }
+        }
+        if (payloadCase_ == 2) {
+          if (errorBuilder_ == null) {
+            result.payload_ = payload_;
+          } else {
+            result.payload_ = errorBuilder_.build();
+          }
+        }
+        result.payloadCase_ = payloadCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Search.StreamResponse) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Search.StreamResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Search.StreamResponse other) {
+        if (other == org.vdaas.vald.api.v1.payload.Search.StreamResponse.getDefaultInstance()) return this;
+        switch (other.getPayloadCase()) {
+          case RESPONSE: {
+            mergeResponse(other.getResponse());
+            break;
+          }
+          case ERROR: {
+            mergeError(other.getError());
+            break;
+          }
+          case PAYLOAD_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.vdaas.vald.api.v1.payload.Search.StreamResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.vdaas.vald.api.v1.payload.Search.StreamResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int payloadCase_ = 0;
+      private java.lang.Object payload_;
+      public PayloadCase
+          getPayloadCase() {
+        return PayloadCase.forNumber(
+            payloadCase_);
+      }
+
+      public Builder clearPayload() {
+        payloadCase_ = 0;
+        payload_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Search.Response, org.vdaas.vald.api.v1.payload.Search.Response.Builder, org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       * @return Whether the response field is set.
+       */
+      @java.lang.Override
+      public boolean hasResponse() {
+        return payloadCase_ == 1;
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       * @return The response.
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Search.Response getResponse() {
+        if (responseBuilder_ == null) {
+          if (payloadCase_ == 1) {
+            return (org.vdaas.vald.api.v1.payload.Search.Response) payload_;
+          }
+          return org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 1) {
+            return responseBuilder_.getMessage();
+          }
+          return org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       */
+      public Builder setResponse(org.vdaas.vald.api.v1.payload.Search.Response value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        payloadCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       */
+      public Builder setResponse(
+          org.vdaas.vald.api.v1.payload.Search.Response.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       */
+      public Builder mergeResponse(org.vdaas.vald.api.v1.payload.Search.Response value) {
+        if (responseBuilder_ == null) {
+          if (payloadCase_ == 1 &&
+              payload_ != org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance()) {
+            payload_ = org.vdaas.vald.api.v1.payload.Search.Response.newBuilder((org.vdaas.vald.api.v1.payload.Search.Response) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 1) {
+            responseBuilder_.mergeFrom(value);
+          }
+          responseBuilder_.setMessage(value);
+        }
+        payloadCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          if (payloadCase_ == 1) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 1) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          responseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Search.Response.Builder getResponseBuilder() {
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder getResponseOrBuilder() {
+        if ((payloadCase_ == 1) && (responseBuilder_ != null)) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 1) {
+            return (org.vdaas.vald.api.v1.payload.Search.Response) payload_;
+          }
+          return org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.payload.v1.Search.Response response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Search.Response, org.vdaas.vald.api.v1.payload.Search.Response.Builder, org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          if (!(payloadCase_ == 1)) {
+            payload_ = org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
+          }
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.vdaas.vald.api.v1.payload.Search.Response, org.vdaas.vald.api.v1.payload.Search.Response.Builder, org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder>(
+                  (org.vdaas.vald.api.v1.payload.Search.Response) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 1;
+        onChanged();;
+        return responseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.errors.Errors.RPC, org.vdaas.vald.api.v1.errors.Errors.RPC.Builder, org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder> errorBuilder_;
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * @return Whether the error field is set.
+       */
+      @java.lang.Override
+      public boolean hasError() {
+        return payloadCase_ == 2;
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.errors.Errors.RPC getError() {
+        if (errorBuilder_ == null) {
+          if (payloadCase_ == 2) {
+            return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+          }
+          return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 2) {
+            return errorBuilder_.getMessage();
+          }
+          return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       */
+      public Builder setError(org.vdaas.vald.api.v1.errors.Errors.RPC value) {
+        if (errorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(value);
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       */
+      public Builder setError(
+          org.vdaas.vald.api.v1.errors.Errors.RPC.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       */
+      public Builder mergeError(org.vdaas.vald.api.v1.errors.Errors.RPC value) {
+        if (errorBuilder_ == null) {
+          if (payloadCase_ == 2 &&
+              payload_ != org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance()) {
+            payload_ = org.vdaas.vald.api.v1.errors.Errors.RPC.newBuilder((org.vdaas.vald.api.v1.errors.Errors.RPC) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 2) {
+            errorBuilder_.mergeFrom(value);
+          }
+          errorBuilder_.setMessage(value);
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       */
+      public Builder clearError() {
+        if (errorBuilder_ == null) {
+          if (payloadCase_ == 2) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 2) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          errorBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       */
+      public org.vdaas.vald.api.v1.errors.Errors.RPC.Builder getErrorBuilder() {
+        return getErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder getErrorOrBuilder() {
+        if ((payloadCase_ == 2) && (errorBuilder_ != null)) {
+          return errorBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 2) {
+            return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+          }
+          return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.errors.Errors.RPC, org.vdaas.vald.api.v1.errors.Errors.RPC.Builder, org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder> 
+          getErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          if (!(payloadCase_ == 2)) {
+            payload_ = org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+          }
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.vdaas.vald.api.v1.errors.Errors.RPC, org.vdaas.vald.api.v1.errors.Errors.RPC.Builder, org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder>(
+                  (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 2;
+        onChanged();;
+        return errorBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Search.StreamResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Search.StreamResponse)
+    private static final org.vdaas.vald.api.v1.payload.Search.StreamResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Search.StreamResponse();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Search.StreamResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StreamResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StreamResponse>() {
+      @java.lang.Override
+      public StreamResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StreamResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Search.StreamResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {

@@ -59,28 +59,28 @@ public final class RemoveGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamRemoveMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamRemoveMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamRemove",
       requestType = org.vdaas.vald.api.v1.payload.Remove.Request.class,
-      responseType = org.vdaas.vald.api.v1.payload.Object.Location.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.StreamLocation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamRemoveMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.Request, org.vdaas.vald.api.v1.payload.Object.Location> getStreamRemoveMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamRemoveMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamRemoveMethod;
     if ((getStreamRemoveMethod = RemoveGrpc.getStreamRemoveMethod) == null) {
       synchronized (RemoveGrpc.class) {
         if ((getStreamRemoveMethod = RemoveGrpc.getStreamRemoveMethod) == null) {
           RemoveGrpc.getStreamRemoveMethod = getStreamRemoveMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Remove.Request, org.vdaas.vald.api.v1.payload.Object.Location>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Remove.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamRemove"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.api.v1.payload.Remove.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.api.v1.payload.Object.Location.getDefaultInstance()))
+                  org.vdaas.vald.api.v1.payload.Object.StreamLocation.getDefaultInstance()))
               .setSchemaDescriptor(new RemoveMethodDescriptorSupplier("StreamRemove"))
               .build();
         }
@@ -178,7 +178,7 @@ public final class RemoveGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncUnimplementedStreamingCall(getStreamRemoveMethod(), responseObserver);
     }
 
@@ -203,7 +203,7 @@ public final class RemoveGrpc {
             asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Remove.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
+                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_REMOVE)))
           .addMethod(
             getMultiRemoveMethod(),
@@ -241,7 +241,7 @@ public final class RemoveGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getStreamRemoveMethod(), getCallOptions()), responseObserver);
     }
@@ -356,7 +356,7 @@ public final class RemoveGrpc {
       switch (methodId) {
         case METHODID_STREAM_REMOVE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamRemove(
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation>) responseObserver);
         default:
           throw new AssertionError();
       }

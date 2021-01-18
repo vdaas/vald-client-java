@@ -25,16 +25,17 @@ public final class ValdUpdate {
     java.lang.String[] descriptorData = {
       "\n$vald/apis/proto/v1/vald/update.proto\022\007" +
       "vald.v1\032#apis/proto/v1/payload/payload.p" +
-      "roto\032\034google/api/annotations.proto2\376\001\n\006U" +
+      "roto\032\034google/api/annotations.proto2\237\002\n\006U" +
       "pdate\022U\n\006Update\022\032.payload.v1.Update.Requ" +
       "est\032\033.payload.v1.Object.Location\"\022\202\323\344\223\002\014" +
-      "\"\007/update:\001*\022M\n\014StreamUpdate\022\032.payload.v" +
-      "1.Update.Request\032\033.payload.v1.Object.Loc" +
-      "ation\"\000(\0010\001\022N\n\013MultiUpdate\022\037.payload.v1." +
-      "Update.MultiRequest\032\034.payload.v1.Object." +
-      "Locations\"\000BS\n\032org.vdaas.vald.api.v1.val" +
-      "dB\nValdUpdateP\001Z\'github.com/vdaas/vald/a" +
-      "pis/grpc/v1/valdb\006proto3"
+      "\"\007/update:\001*\022S\n\014StreamUpdate\022\032.payload.v" +
+      "1.Update.Request\032!.payload.v1.Object.Str" +
+      "eamLocation\"\000(\0010\001\022i\n\013MultiUpdate\022\037.paylo" +
+      "ad.v1.Update.MultiRequest\032\034.payload.v1.O" +
+      "bject.Locations\"\033\202\323\344\223\002\025\"\020/update/multipl" +
+      "e:\001*BS\n\032org.vdaas.vald.api.v1.valdB\nVald" +
+      "UpdateP\001Z\'github.com/vdaas/vald/apis/grp" +
+      "c/v1/valdb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

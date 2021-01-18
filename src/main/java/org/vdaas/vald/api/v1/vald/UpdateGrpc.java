@@ -59,28 +59,28 @@ public final class UpdateGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamUpdateMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamUpdate",
       requestType = org.vdaas.vald.api.v1.payload.Update.Request.class,
-      responseType = org.vdaas.vald.api.v1.payload.Object.Location.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.StreamLocation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamUpdateMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.Request, org.vdaas.vald.api.v1.payload.Object.Location> getStreamUpdateMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamUpdateMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamUpdateMethod;
     if ((getStreamUpdateMethod = UpdateGrpc.getStreamUpdateMethod) == null) {
       synchronized (UpdateGrpc.class) {
         if ((getStreamUpdateMethod = UpdateGrpc.getStreamUpdateMethod) == null) {
           UpdateGrpc.getStreamUpdateMethod = getStreamUpdateMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Update.Request, org.vdaas.vald.api.v1.payload.Object.Location>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Update.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamUpdate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.api.v1.payload.Update.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.api.v1.payload.Object.Location.getDefaultInstance()))
+                  org.vdaas.vald.api.v1.payload.Object.StreamLocation.getDefaultInstance()))
               .setSchemaDescriptor(new UpdateMethodDescriptorSupplier("StreamUpdate"))
               .build();
         }
@@ -178,7 +178,7 @@ public final class UpdateGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncUnimplementedStreamingCall(getStreamUpdateMethod(), responseObserver);
     }
 
@@ -203,7 +203,7 @@ public final class UpdateGrpc {
             asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Update.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
+                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_UPDATE)))
           .addMethod(
             getMultiUpdateMethod(),
@@ -241,7 +241,7 @@ public final class UpdateGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getStreamUpdateMethod(), getCallOptions()), responseObserver);
     }
@@ -356,7 +356,7 @@ public final class UpdateGrpc {
       switch (methodId) {
         case METHODID_STREAM_UPDATE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamUpdate(
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation>) responseObserver);
         default:
           throw new AssertionError();
       }

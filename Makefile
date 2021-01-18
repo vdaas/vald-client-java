@@ -34,6 +34,7 @@ JAVA_ROOT   = src/main/java
 PROTOS = \
 	v1/agent/core/agent.proto \
 	v1/gateway/vald/vald.proto \
+	v1/errors/errors.proto \
 	v1/vald/filter.proto \
 	v1/vald/insert.proto \
 	v1/vald/object.proto \

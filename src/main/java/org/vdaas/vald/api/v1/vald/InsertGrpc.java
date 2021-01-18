@@ -59,28 +59,28 @@ public final class InsertGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Insert.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamInsertMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamInsertMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamInsert",
       requestType = org.vdaas.vald.api.v1.payload.Insert.Request.class,
-      responseType = org.vdaas.vald.api.v1.payload.Object.Location.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.StreamLocation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
   public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Insert.Request,
-      org.vdaas.vald.api.v1.payload.Object.Location> getStreamInsertMethod() {
-    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Insert.Request, org.vdaas.vald.api.v1.payload.Object.Location> getStreamInsertMethod;
+      org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamInsertMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Insert.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation> getStreamInsertMethod;
     if ((getStreamInsertMethod = InsertGrpc.getStreamInsertMethod) == null) {
       synchronized (InsertGrpc.class) {
         if ((getStreamInsertMethod = InsertGrpc.getStreamInsertMethod) == null) {
           InsertGrpc.getStreamInsertMethod = getStreamInsertMethod =
-              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Insert.Request, org.vdaas.vald.api.v1.payload.Object.Location>newBuilder()
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Insert.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamInsert"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   org.vdaas.vald.api.v1.payload.Insert.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.vdaas.vald.api.v1.payload.Object.Location.getDefaultInstance()))
+                  org.vdaas.vald.api.v1.payload.Object.StreamLocation.getDefaultInstance()))
               .setSchemaDescriptor(new InsertMethodDescriptorSupplier("StreamInsert"))
               .build();
         }
@@ -178,7 +178,7 @@ public final class InsertGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncUnimplementedStreamingCall(getStreamInsertMethod(), responseObserver);
     }
 
@@ -203,7 +203,7 @@ public final class InsertGrpc {
             asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Insert.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
+                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_INSERT)))
           .addMethod(
             getMultiInsertMethod(),
@@ -241,7 +241,7 @@ public final class InsertGrpc {
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
-        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getStreamInsertMethod(), getCallOptions()), responseObserver);
     }
@@ -356,7 +356,7 @@ public final class InsertGrpc {
       switch (methodId) {
         case METHODID_STREAM_INSERT:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamInsert(
-              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location>) responseObserver);
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation>) responseObserver);
         default:
           throw new AssertionError();
       }

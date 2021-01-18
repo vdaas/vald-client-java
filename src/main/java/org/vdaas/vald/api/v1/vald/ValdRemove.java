@@ -25,16 +25,17 @@ public final class ValdRemove {
     java.lang.String[] descriptorData = {
       "\n$vald/apis/proto/v1/vald/remove.proto\022\007" +
       "vald.v1\032#apis/proto/v1/payload/payload.p" +
-      "roto\032\034google/api/annotations.proto2\354\001\n\006R" +
-      "emove\022C\n\006Remove\022\032.payload.v1.Remove.Requ" +
-      "est\032\033.payload.v1.Object.Location\"\000\022M\n\014St" +
-      "reamRemove\022\032.payload.v1.Remove.Request\032\033" +
-      ".payload.v1.Object.Location\"\000(\0010\001\022N\n\013Mul" +
-      "tiRemove\022\037.payload.v1.Remove.MultiReques" +
-      "t\032\034.payload.v1.Object.Locations\"\000BS\n\032org" +
-      ".vdaas.vald.api.v1.valdB\nValdRemoveP\001Z\'g" +
-      "ithub.com/vdaas/vald/apis/grpc/v1/valdb\006" +
-      "proto3"
+      "roto\032\034google/api/annotations.proto2\237\002\n\006R" +
+      "emove\022U\n\006Remove\022\032.payload.v1.Remove.Requ" +
+      "est\032\033.payload.v1.Object.Location\"\022\202\323\344\223\002\014" +
+      "\"\007/remove:\001*\022S\n\014StreamRemove\022\032.payload.v" +
+      "1.Remove.Request\032!.payload.v1.Object.Str" +
+      "eamLocation\"\000(\0010\001\022i\n\013MultiRemove\022\037.paylo" +
+      "ad.v1.Remove.MultiRequest\032\034.payload.v1.O" +
+      "bject.Locations\"\033\202\323\344\223\002\025\"\020/remove/multipl" +
+      "e:\001*BS\n\032org.vdaas.vald.api.v1.valdB\nVald" +
+      "RemoveP\001Z\'github.com/vdaas/vald/apis/grp" +
+      "c/v1/valdb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -42,6 +43,11 @@ public final class ValdRemove {
           org.vdaas.vald.api.v1.payload.ValdPayload.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     org.vdaas.vald.api.v1.payload.ValdPayload.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
