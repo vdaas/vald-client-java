@@ -47,10 +47,6 @@ PROTOS = \
 PROTOS     := $(PROTOS:%=$(PROTO_ROOT)/%)
 JAVASOURCES = $(PROTOS:$(PROTO_ROOT)/%.proto=$(JAVA_ROOT)/$(API_ROOT)/%.java)
 
-pr:
-	@echo $(PROTOS)
-	@echo $(JAVASOURCES)
-
 PROTO_PATHS = \
 	$(PWD) \
 	$(PWD)/$(VALD_DIR) \
