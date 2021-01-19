@@ -6759,19 +6759,19 @@ private static final long serialVersionUID = 0L;
     org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder getResponseOrBuilder();
 
     /**
-     * <code>.errors.v1.Errors.RPC error = 2;</code>
-     * @return Whether the error field is set.
+     * <code>.google.rpc.Status status = 2;</code>
+     * @return Whether the status field is set.
      */
-    boolean hasError();
+    boolean hasStatus();
     /**
-     * <code>.errors.v1.Errors.RPC error = 2;</code>
-     * @return The error.
+     * <code>.google.rpc.Status status = 2;</code>
+     * @return The status.
      */
-    org.vdaas.vald.api.v1.errors.Errors.RPC getError();
+    com.google.rpc.Status getStatus();
     /**
-     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     * <code>.google.rpc.Status status = 2;</code>
      */
-    org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder getErrorOrBuilder();
+    com.google.rpc.StatusOrBuilder getStatusOrBuilder();
 
     public org.vdaas.vald.api.v1.payload.Search.StreamResponse.PayloadCase getPayloadCase();
   }
@@ -6835,14 +6835,14 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              org.vdaas.vald.api.v1.errors.Errors.RPC.Builder subBuilder = null;
+              com.google.rpc.Status.Builder subBuilder = null;
               if (payloadCase_ == 2) {
-                subBuilder = ((org.vdaas.vald.api.v1.errors.Errors.RPC) payload_).toBuilder();
+                subBuilder = ((com.google.rpc.Status) payload_).toBuilder();
               }
               payload_ =
-                  input.readMessage(org.vdaas.vald.api.v1.errors.Errors.RPC.parser(), extensionRegistry);
+                  input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((org.vdaas.vald.api.v1.errors.Errors.RPC) payload_);
+                subBuilder.mergeFrom((com.google.rpc.Status) payload_);
                 payload_ = subBuilder.buildPartial();
               }
               payloadCase_ = 2;
@@ -6886,7 +6886,7 @@ private static final long serialVersionUID = 0L;
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RESPONSE(1),
-      ERROR(2),
+      STATUS(2),
       PAYLOAD_NOT_SET(0);
       private final int value;
       private PayloadCase(int value) {
@@ -6905,7 +6905,7 @@ private static final long serialVersionUID = 0L;
       public static PayloadCase forNumber(int value) {
         switch (value) {
           case 1: return RESPONSE;
-          case 2: return ERROR;
+          case 2: return STATUS;
           case 0: return PAYLOAD_NOT_SET;
           default: return null;
         }
@@ -6952,35 +6952,35 @@ private static final long serialVersionUID = 0L;
       return org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
     }
 
-    public static final int ERROR_FIELD_NUMBER = 2;
+    public static final int STATUS_FIELD_NUMBER = 2;
     /**
-     * <code>.errors.v1.Errors.RPC error = 2;</code>
-     * @return Whether the error field is set.
+     * <code>.google.rpc.Status status = 2;</code>
+     * @return Whether the status field is set.
      */
     @java.lang.Override
-    public boolean hasError() {
+    public boolean hasStatus() {
       return payloadCase_ == 2;
     }
     /**
-     * <code>.errors.v1.Errors.RPC error = 2;</code>
-     * @return The error.
+     * <code>.google.rpc.Status status = 2;</code>
+     * @return The status.
      */
     @java.lang.Override
-    public org.vdaas.vald.api.v1.errors.Errors.RPC getError() {
+    public com.google.rpc.Status getStatus() {
       if (payloadCase_ == 2) {
-         return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+         return (com.google.rpc.Status) payload_;
       }
-      return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+      return com.google.rpc.Status.getDefaultInstance();
     }
     /**
-     * <code>.errors.v1.Errors.RPC error = 2;</code>
+     * <code>.google.rpc.Status status = 2;</code>
      */
     @java.lang.Override
-    public org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder getErrorOrBuilder() {
+    public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
       if (payloadCase_ == 2) {
-         return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+         return (com.google.rpc.Status) payload_;
       }
-      return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+      return com.google.rpc.Status.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7001,7 +7001,7 @@ private static final long serialVersionUID = 0L;
         output.writeMessage(1, (org.vdaas.vald.api.v1.payload.Search.Response) payload_);
       }
       if (payloadCase_ == 2) {
-        output.writeMessage(2, (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_);
+        output.writeMessage(2, (com.google.rpc.Status) payload_);
       }
       unknownFields.writeTo(output);
     }
@@ -7018,7 +7018,7 @@ private static final long serialVersionUID = 0L;
       }
       if (payloadCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_);
+          .computeMessageSize(2, (com.google.rpc.Status) payload_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7042,8 +7042,8 @@ private static final long serialVersionUID = 0L;
               .equals(other.getResponse())) return false;
           break;
         case 2:
-          if (!getError()
-              .equals(other.getError())) return false;
+          if (!getStatus()
+              .equals(other.getStatus())) return false;
           break;
         case 0:
         default:
@@ -7065,8 +7065,8 @@ private static final long serialVersionUID = 0L;
           hash = (53 * hash) + getResponse().hashCode();
           break;
         case 2:
-          hash = (37 * hash) + ERROR_FIELD_NUMBER;
-          hash = (53 * hash) + getError().hashCode();
+          hash = (37 * hash) + STATUS_FIELD_NUMBER;
+          hash = (53 * hash) + getStatus().hashCode();
           break;
         case 0:
         default:
@@ -7240,10 +7240,10 @@ private static final long serialVersionUID = 0L;
           }
         }
         if (payloadCase_ == 2) {
-          if (errorBuilder_ == null) {
+          if (statusBuilder_ == null) {
             result.payload_ = payload_;
           } else {
-            result.payload_ = errorBuilder_.build();
+            result.payload_ = statusBuilder_.build();
           }
         }
         result.payloadCase_ = payloadCase_;
@@ -7300,8 +7300,8 @@ private static final long serialVersionUID = 0L;
             mergeResponse(other.getResponse());
             break;
           }
-          case ERROR: {
-            mergeError(other.getError());
+          case STATUS: {
+            mergeStatus(other.getStatus());
             break;
           }
           case PAYLOAD_NOT_SET: {
@@ -7494,71 +7494,71 @@ private static final long serialVersionUID = 0L;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.vdaas.vald.api.v1.errors.Errors.RPC, org.vdaas.vald.api.v1.errors.Errors.RPC.Builder, org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder> errorBuilder_;
+          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
-       * @return Whether the error field is set.
+       * <code>.google.rpc.Status status = 2;</code>
+       * @return Whether the status field is set.
        */
       @java.lang.Override
-      public boolean hasError() {
+      public boolean hasStatus() {
         return payloadCase_ == 2;
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
-       * @return The error.
+       * <code>.google.rpc.Status status = 2;</code>
+       * @return The status.
        */
       @java.lang.Override
-      public org.vdaas.vald.api.v1.errors.Errors.RPC getError() {
-        if (errorBuilder_ == null) {
+      public com.google.rpc.Status getStatus() {
+        if (statusBuilder_ == null) {
           if (payloadCase_ == 2) {
-            return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+            return (com.google.rpc.Status) payload_;
           }
-          return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+          return com.google.rpc.Status.getDefaultInstance();
         } else {
           if (payloadCase_ == 2) {
-            return errorBuilder_.getMessage();
+            return statusBuilder_.getMessage();
           }
-          return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+          return com.google.rpc.Status.getDefaultInstance();
         }
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * <code>.google.rpc.Status status = 2;</code>
        */
-      public Builder setError(org.vdaas.vald.api.v1.errors.Errors.RPC value) {
-        if (errorBuilder_ == null) {
+      public Builder setStatus(com.google.rpc.Status value) {
+        if (statusBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           payload_ = value;
           onChanged();
         } else {
-          errorBuilder_.setMessage(value);
+          statusBuilder_.setMessage(value);
         }
         payloadCase_ = 2;
         return this;
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * <code>.google.rpc.Status status = 2;</code>
        */
-      public Builder setError(
-          org.vdaas.vald.api.v1.errors.Errors.RPC.Builder builderForValue) {
-        if (errorBuilder_ == null) {
+      public Builder setStatus(
+          com.google.rpc.Status.Builder builderForValue) {
+        if (statusBuilder_ == null) {
           payload_ = builderForValue.build();
           onChanged();
         } else {
-          errorBuilder_.setMessage(builderForValue.build());
+          statusBuilder_.setMessage(builderForValue.build());
         }
         payloadCase_ = 2;
         return this;
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * <code>.google.rpc.Status status = 2;</code>
        */
-      public Builder mergeError(org.vdaas.vald.api.v1.errors.Errors.RPC value) {
-        if (errorBuilder_ == null) {
+      public Builder mergeStatus(com.google.rpc.Status value) {
+        if (statusBuilder_ == null) {
           if (payloadCase_ == 2 &&
-              payload_ != org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance()) {
-            payload_ = org.vdaas.vald.api.v1.errors.Errors.RPC.newBuilder((org.vdaas.vald.api.v1.errors.Errors.RPC) payload_)
+              payload_ != com.google.rpc.Status.getDefaultInstance()) {
+            payload_ = com.google.rpc.Status.newBuilder((com.google.rpc.Status) payload_)
                 .mergeFrom(value).buildPartial();
           } else {
             payload_ = value;
@@ -7566,18 +7566,18 @@ private static final long serialVersionUID = 0L;
           onChanged();
         } else {
           if (payloadCase_ == 2) {
-            errorBuilder_.mergeFrom(value);
+            statusBuilder_.mergeFrom(value);
           }
-          errorBuilder_.setMessage(value);
+          statusBuilder_.setMessage(value);
         }
         payloadCase_ = 2;
         return this;
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * <code>.google.rpc.Status status = 2;</code>
        */
-      public Builder clearError() {
-        if (errorBuilder_ == null) {
+      public Builder clearStatus() {
+        if (statusBuilder_ == null) {
           if (payloadCase_ == 2) {
             payloadCase_ = 0;
             payload_ = null;
@@ -7588,50 +7588,50 @@ private static final long serialVersionUID = 0L;
             payloadCase_ = 0;
             payload_ = null;
           }
-          errorBuilder_.clear();
+          statusBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * <code>.google.rpc.Status status = 2;</code>
        */
-      public org.vdaas.vald.api.v1.errors.Errors.RPC.Builder getErrorBuilder() {
-        return getErrorFieldBuilder().getBuilder();
+      public com.google.rpc.Status.Builder getStatusBuilder() {
+        return getStatusFieldBuilder().getBuilder();
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * <code>.google.rpc.Status status = 2;</code>
        */
       @java.lang.Override
-      public org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder getErrorOrBuilder() {
-        if ((payloadCase_ == 2) && (errorBuilder_ != null)) {
-          return errorBuilder_.getMessageOrBuilder();
+      public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
+        if ((payloadCase_ == 2) && (statusBuilder_ != null)) {
+          return statusBuilder_.getMessageOrBuilder();
         } else {
           if (payloadCase_ == 2) {
-            return (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_;
+            return (com.google.rpc.Status) payload_;
           }
-          return org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+          return com.google.rpc.Status.getDefaultInstance();
         }
       }
       /**
-       * <code>.errors.v1.Errors.RPC error = 2;</code>
+       * <code>.google.rpc.Status status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.vdaas.vald.api.v1.errors.Errors.RPC, org.vdaas.vald.api.v1.errors.Errors.RPC.Builder, org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder> 
-          getErrorFieldBuilder() {
-        if (errorBuilder_ == null) {
+          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
+          getStatusFieldBuilder() {
+        if (statusBuilder_ == null) {
           if (!(payloadCase_ == 2)) {
-            payload_ = org.vdaas.vald.api.v1.errors.Errors.RPC.getDefaultInstance();
+            payload_ = com.google.rpc.Status.getDefaultInstance();
           }
-          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.vdaas.vald.api.v1.errors.Errors.RPC, org.vdaas.vald.api.v1.errors.Errors.RPC.Builder, org.vdaas.vald.api.v1.errors.Errors.RPCOrBuilder>(
-                  (org.vdaas.vald.api.v1.errors.Errors.RPC) payload_,
+          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
+                  (com.google.rpc.Status) payload_,
                   getParentForChildren(),
                   isClean());
           payload_ = null;
         }
         payloadCase_ = 2;
         onChanged();;
-        return errorBuilder_;
+        return statusBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

@@ -10,3 +10,6 @@ build
 .project
 .settings
 bin
+
+# gogoproto
+src/main/java/com/google/protobuf/GoGoProtos.java

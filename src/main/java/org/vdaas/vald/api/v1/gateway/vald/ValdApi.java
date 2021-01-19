@@ -25,62 +25,71 @@ public final class ValdApi {
     java.lang.String[] descriptorData = {
       "\n*vald/apis/proto/v1/gateway/vald/vald.p" +
       "roto\022\007vald.v1\032#apis/proto/v1/payload/pay" +
-      "load.proto\032\034google/api/annotations.proto" +
-      "2\201\014\n\004Vald\022L\n\006Exists\022\025.payload.v1.Object." +
-      "ID\032\025.payload.v1.Object.ID\"\024\202\323\344\223\002\016\022\014/exis" +
-      "ts/{id}\022U\n\006Search\022\032.payload.v1.Search.Re" +
-      "quest\032\033.payload.v1.Search.Response\"\022\202\323\344\223" +
-      "\002\014\"\007/search:\001*\022^\n\nSearchByID\022\034.payload.v" +
-      "1.Search.IDRequest\032\033.payload.v1.Search.R" +
-      "esponse\"\025\202\323\344\223\002\017\"\n/search/id:\001*\022M\n\014Stream" +
-      "Search\022\032.payload.v1.Search.Request\032\033.pay" +
-      "load.v1.Search.Response\"\000(\0010\001\022S\n\020StreamS" +
-      "earchByID\022\034.payload.v1.Search.IDRequest\032" +
-      "\033.payload.v1.Search.Response\"\000(\0010\001\022T\n\006In" +
-      "sert\022\031.payload.v1.Object.Vector\032\033.payloa" +
-      "d.v1.Object.Location\"\022\202\323\344\223\002\014\"\007/insert:\001*" +
-      "\022L\n\014StreamInsert\022\031.payload.v1.Object.Vec" +
-      "tor\032\033.payload.v1.Object.Location\"\000(\0010\001\022I" +
-      "\n\013MultiInsert\022\032.payload.v1.Object.Vector" +
-      "s\032\034.payload.v1.Object.Locations\"\000\022T\n\006Upd" +
-      "ate\022\031.payload.v1.Object.Vector\032\033.payload" +
-      ".v1.Object.Location\"\022\202\323\344\223\002\014\"\007/update:\001*\022" +
-      "L\n\014StreamUpdate\022\031.payload.v1.Object.Vect" +
-      "or\032\033.payload.v1.Object.Location\"\000(\0010\001\022I\n" +
-      "\013MultiUpdate\022\032.payload.v1.Object.Vectors" +
-      "\032\034.payload.v1.Object.Locations\"\000\022T\n\006Upse" +
-      "rt\022\031.payload.v1.Object.Vector\032\033.payload." +
-      "v1.Object.Location\"\022\202\323\344\223\002\014\"\007/upsert:\001*\022L" +
-      "\n\014StreamUpsert\022\031.payload.v1.Object.Vecto" +
-      "r\032\033.payload.v1.Object.Location\"\000(\0010\001\022I\n\013" +
-      "MultiUpsert\022\032.payload.v1.Object.Vectors\032" +
-      "\034.payload.v1.Object.Locations\"\000\022R\n\006Remov" +
-      "e\022\025.payload.v1.Object.ID\032\033.payload.v1.Ob" +
-      "ject.Location\"\024\202\323\344\223\002\016*\014/remove/{id}\022H\n\014S" +
-      "treamRemove\022\025.payload.v1.Object.ID\032\033.pay" +
-      "load.v1.Object.Location\"\000(\0010\001\022E\n\013MultiRe" +
-      "move\022\026.payload.v1.Object.IDs\032\034.payload.v" +
-      "1.Object.Locations\"\000\022S\n\tGetObject\022\025.payl" +
-      "oad.v1.Object.ID\032\031.payload.v1.Object.Vec" +
-      "tor\"\024\202\323\344\223\002\016\022\014/object/{id}\022I\n\017StreamGetOb" +
-      "ject\022\025.payload.v1.Object.ID\032\031.payload.v1" +
-      ".Object.Vector\"\000(\0010\001B`\n\"org.vdaas.vald.a" +
-      "pi.v1.gateway.valdB\007ValdApiP\001Z/github.co" +
-      "m/vdaas/vald/apis/grpc/v1/gateway/valdb\006" +
-      "proto3"
+      "load.proto\032-github.com/gogo/protobuf/gog" +
+      "oproto/gogo.proto\0327github.com/gogo/googl" +
+      "eapis/google/api/annotations.proto2\201\014\n\004V" +
+      "ald\022L\n\006Exists\022\025.payload.v1.Object.ID\032\025.p" +
+      "ayload.v1.Object.ID\"\024\202\323\344\223\002\016\022\014/exists/{id" +
+      "}\022U\n\006Search\022\032.payload.v1.Search.Request\032" +
+      "\033.payload.v1.Search.Response\"\022\202\323\344\223\002\014\"\007/s" +
+      "earch:\001*\022^\n\nSearchByID\022\034.payload.v1.Sear" +
+      "ch.IDRequest\032\033.payload.v1.Search.Respons" +
+      "e\"\025\202\323\344\223\002\017\"\n/search/id:\001*\022M\n\014StreamSearch" +
+      "\022\032.payload.v1.Search.Request\032\033.payload.v" +
+      "1.Search.Response\"\000(\0010\001\022S\n\020StreamSearchB" +
+      "yID\022\034.payload.v1.Search.IDRequest\032\033.payl" +
+      "oad.v1.Search.Response\"\000(\0010\001\022T\n\006Insert\022\031" +
+      ".payload.v1.Object.Vector\032\033.payload.v1.O" +
+      "bject.Location\"\022\202\323\344\223\002\014\"\007/insert:\001*\022L\n\014St" +
+      "reamInsert\022\031.payload.v1.Object.Vector\032\033." +
+      "payload.v1.Object.Location\"\000(\0010\001\022I\n\013Mult" +
+      "iInsert\022\032.payload.v1.Object.Vectors\032\034.pa" +
+      "yload.v1.Object.Locations\"\000\022T\n\006Update\022\031." +
+      "payload.v1.Object.Vector\032\033.payload.v1.Ob" +
+      "ject.Location\"\022\202\323\344\223\002\014\"\007/update:\001*\022L\n\014Str" +
+      "eamUpdate\022\031.payload.v1.Object.Vector\032\033.p" +
+      "ayload.v1.Object.Location\"\000(\0010\001\022I\n\013Multi" +
+      "Update\022\032.payload.v1.Object.Vectors\032\034.pay" +
+      "load.v1.Object.Locations\"\000\022T\n\006Upsert\022\031.p" +
+      "ayload.v1.Object.Vector\032\033.payload.v1.Obj" +
+      "ect.Location\"\022\202\323\344\223\002\014\"\007/upsert:\001*\022L\n\014Stre" +
+      "amUpsert\022\031.payload.v1.Object.Vector\032\033.pa" +
+      "yload.v1.Object.Location\"\000(\0010\001\022I\n\013MultiU" +
+      "psert\022\032.payload.v1.Object.Vectors\032\034.payl" +
+      "oad.v1.Object.Locations\"\000\022R\n\006Remove\022\025.pa" +
+      "yload.v1.Object.ID\032\033.payload.v1.Object.L" +
+      "ocation\"\024\202\323\344\223\002\016*\014/remove/{id}\022H\n\014StreamR" +
+      "emove\022\025.payload.v1.Object.ID\032\033.payload.v" +
+      "1.Object.Location\"\000(\0010\001\022E\n\013MultiRemove\022\026" +
+      ".payload.v1.Object.IDs\032\034.payload.v1.Obje" +
+      "ct.Locations\"\000\022S\n\tGetObject\022\025.payload.v1" +
+      ".Object.ID\032\031.payload.v1.Object.Vector\"\024\202" +
+      "\323\344\223\002\016\022\014/object/{id}\022I\n\017StreamGetObject\022\025" +
+      ".payload.v1.Object.ID\032\031.payload.v1.Objec" +
+      "t.Vector\"\000(\0010\001Bt\n\"org.vdaas.vald.api.v1." +
+      "gateway.valdB\007ValdApiP\001Z/github.com/vdaa" +
+      "s/vald/apis/grpc/v1/gateway/vald\300\343\036\001\310\342\036\001" +
+      "\320\342\036\001\340\342\036\001\310\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.vdaas.vald.api.v1.payload.ValdPayload.getDescriptor(),
+          com.google.protobuf.GoGoProtos.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.protobuf.GoGoProtos.goprotoRegistration);
+    registry.add(com.google.protobuf.GoGoProtos.marshalerAll);
+    registry.add(com.google.protobuf.GoGoProtos.messagenameAll);
+    registry.add(com.google.protobuf.GoGoProtos.sizerAll);
+    registry.add(com.google.protobuf.GoGoProtos.unmarshalerAll);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     org.vdaas.vald.api.v1.payload.ValdPayload.getDescriptor();
+    com.google.protobuf.GoGoProtos.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

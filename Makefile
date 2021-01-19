@@ -30,11 +30,11 @@ GOPATH := $(eval GOPATH := $(shell go env GOPATH))$(GOPATH)
 
 PROTO_ROOT  = vald/apis/proto
 JAVA_ROOT   = src/main/java
+API_ROOT    = org/vdaas/vald/api
 
 PROTOS = \
 	v1/agent/core/agent.proto \
 	v1/gateway/vald/vald.proto \
-	v1/errors/errors.proto \
 	v1/vald/filter.proto \
 	v1/vald/insert.proto \
 	v1/vald/object.proto \
@@ -45,13 +45,17 @@ PROTOS = \
 	v1/payload/payload.proto
 
 PROTOS     := $(PROTOS:%=$(PROTO_ROOT)/%)
-JAVASOURCES = $(PROTOS:$(PROTO_ROOT)/%.proto=$(JAVA_ROOT)/%.java)
+JAVASOURCES = $(PROTOS:$(PROTO_ROOT)/%.proto=$(JAVA_ROOT)/$(API_ROOT)/%.java)
+
+pr:
+	@echo $(PROTOS)
+	@echo $(JAVASOURCES)
 
 PROTO_PATHS = \
 	$(PWD) \
 	$(PWD)/$(VALD_DIR) \
 	$(GOPATH)/src \
-	$(GOPATH)/src/github.com/googleapis/googleapis
+	$(GOPATH)/src/github.com/gogo/googleapis
 
 MAKELISTS   = Makefile
 
@@ -102,7 +106,7 @@ clean:
 
 .PHONY: proto
 ## build proto
-proto: $(JAVASOURCES)
+proto: $(JAVASOURCES) $(JAVA_ROOT)/com/google/protobuf/GoGoProtos.java
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
@@ -115,7 +119,16 @@ $(JAVASOURCES): vald proto/deps $(JAVA_ROOT)
 		--plugin=protoc-gen-grpc-java=`which protoc-gen-grpc-java` \
 		--java_out=$(JAVA_ROOT) \
 		--grpc-java_out=$(JAVA_ROOT) \
-		$(patsubst $(JAVA_ROOT)/%.java,$(PROTO_ROOT)/%.proto,$@)
+		$(patsubst $(JAVA_ROOT)/$(API_ROOT)/%.java,$(PROTO_ROOT)/%.proto,$@)
+
+$(JAVA_ROOT)/com/google/protobuf/GoGoProtos.java: proto/deps $(JAVA_ROOT)
+	@$(call green, "generating .java files...")
+	protoc \
+		$(PROTO_PATHS:%=-I %) \
+		--plugin=protoc-gen-grpc-java=`which protoc-gen-grpc-java` \
+		--java_out=$(JAVA_ROOT) \
+		--grpc-java_out=$(JAVA_ROOT) \
+		$(GOPATH)/src/github.com/gogo/protobuf/gogoproto/gogo.proto
 
 $(VALD_DIR):
 	git clone --depth 1 https://$(VALDREPO) $(VALD_DIR)
@@ -161,14 +174,21 @@ vald/client/java/version/update: vald
 .PHONY: proto/deps
 ## install proto deps
 proto/deps: \
-	$(GOPATH)/src/github.com/googleapis/googleapis \
+	$(GOPATH)/src/github.com/gogo/protobuf \
+	$(GOPATH)/src/github.com/gogo/googleapis \
 	$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
 
-$(GOPATH)/src/github.com/googleapis/googleapis:
+$(GOPATH)/src/github.com/gogo/protobuf:
 	git clone \
 		--depth 1 \
-		https://github.com/googleapis/googleapis \
-		$(GOPATH)/src/github.com/googleapis/googleapis
+		https://github.com/gogo/protobuf \
+		$(GOPATH)/src/github.com/gogo/protobuf
+
+$(GOPATH)/src/github.com/gogo/googleapis:
+	git clone \
+		--depth 1 \
+		https://github.com/gogo/googleapis \
+		$(GOPATH)/src/github.com/gogo/googleapis
 
 $(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate:
 	git clone \
