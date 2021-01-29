@@ -172,6 +172,7 @@ vald/client/java/version/update: vald
 proto/deps: \
 	$(GOPATH)/src/github.com/gogo/protobuf \
 	$(GOPATH)/src/github.com/gogo/googleapis \
+	$(GOPATH)/src/github.com/googleapis/googleapis \
 	$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
 
 $(GOPATH)/src/github.com/gogo/protobuf:
@@ -185,6 +186,12 @@ $(GOPATH)/src/github.com/gogo/googleapis:
 		--depth 1 \
 		https://github.com/gogo/googleapis \
 		$(GOPATH)/src/github.com/gogo/googleapis
+
+$(GOPATH)/src/github.com/googleapis/googleapis:
+	git clone \
+		--depth 1 \
+		https://github.com/googleapis/googleapis \
+		$(GOPATH)/src/github.com/googleapis/googleapis
 
 $(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate:
 	git clone \
