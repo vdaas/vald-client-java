@@ -80,6 +80,830 @@ private static final long serialVersionUID = 0L;
             org.vdaas.vald.api.v1.payload.Object.class, org.vdaas.vald.api.v1.payload.Object.Builder.class);
   }
 
+  public interface VectorRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Object.VectorRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
+     */
+    org.vdaas.vald.api.v1.payload.Object.ID getId();
+    /**
+     * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+     */
+    org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder();
+
+    /**
+     * <code>.payload.v1.Filter.Config filters = 2;</code>
+     * @return Whether the filters field is set.
+     */
+    boolean hasFilters();
+    /**
+     * <code>.payload.v1.Filter.Config filters = 2;</code>
+     * @return The filters.
+     */
+    org.vdaas.vald.api.v1.payload.Filter.Config getFilters();
+    /**
+     * <code>.payload.v1.Filter.Config filters = 2;</code>
+     */
+    org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getFiltersOrBuilder();
+  }
+  /**
+   * Protobuf type {@code payload.v1.Object.VectorRequest}
+   */
+  public static final class VectorRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Object.VectorRequest)
+      VectorRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VectorRequest.newBuilder() to construct.
+    private VectorRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VectorRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VectorRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VectorRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              org.vdaas.vald.api.v1.payload.Object.ID.Builder subBuilder = null;
+              if (id_ != null) {
+                subBuilder = id_.toBuilder();
+              }
+              id_ = input.readMessage(org.vdaas.vald.api.v1.payload.Object.ID.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(id_);
+                id_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              org.vdaas.vald.api.v1.payload.Filter.Config.Builder subBuilder = null;
+              if (filters_ != null) {
+                subBuilder = filters_.toBuilder();
+              }
+              filters_ = input.readMessage(org.vdaas.vald.api.v1.payload.Filter.Config.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filters_);
+                filters_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_VectorRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_VectorRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Object.VectorRequest.class, org.vdaas.vald.api.v1.payload.Object.VectorRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private org.vdaas.vald.api.v1.payload.Object.ID id_;
+    /**
+     * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Object.ID getId() {
+      return id_ == null ? org.vdaas.vald.api.v1.payload.Object.ID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder() {
+      return getId();
+    }
+
+    public static final int FILTERS_FIELD_NUMBER = 2;
+    private org.vdaas.vald.api.v1.payload.Filter.Config filters_;
+    /**
+     * <code>.payload.v1.Filter.Config filters = 2;</code>
+     * @return Whether the filters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilters() {
+      return filters_ != null;
+    }
+    /**
+     * <code>.payload.v1.Filter.Config filters = 2;</code>
+     * @return The filters.
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Filter.Config getFilters() {
+      return filters_ == null ? org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance() : filters_;
+    }
+    /**
+     * <code>.payload.v1.Filter.Config filters = 2;</code>
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getFiltersOrBuilder() {
+      return getFilters();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      if (filters_ != null) {
+        output.writeMessage(2, getFilters());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      if (filters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFilters());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Object.VectorRequest)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Object.VectorRequest other = (org.vdaas.vald.api.v1.payload.Object.VectorRequest) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (hasFilters() != other.hasFilters()) return false;
+      if (hasFilters()) {
+        if (!getFilters()
+            .equals(other.getFilters())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      if (hasFilters()) {
+        hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFilters().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Object.VectorRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.v1.Object.VectorRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Object.VectorRequest)
+        org.vdaas.vald.api.v1.payload.Object.VectorRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_VectorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_VectorRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Object.VectorRequest.class, org.vdaas.vald.api.v1.payload.Object.VectorRequest.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Object.VectorRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (idBuilder_ == null) {
+          id_ = null;
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
+        if (filtersBuilder_ == null) {
+          filters_ = null;
+        } else {
+          filters_ = null;
+          filtersBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_VectorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.VectorRequest getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Object.VectorRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.VectorRequest build() {
+        org.vdaas.vald.api.v1.payload.Object.VectorRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.VectorRequest buildPartial() {
+        org.vdaas.vald.api.v1.payload.Object.VectorRequest result = new org.vdaas.vald.api.v1.payload.Object.VectorRequest(this);
+        if (idBuilder_ == null) {
+          result.id_ = id_;
+        } else {
+          result.id_ = idBuilder_.build();
+        }
+        if (filtersBuilder_ == null) {
+          result.filters_ = filters_;
+        } else {
+          result.filters_ = filtersBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Object.VectorRequest) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Object.VectorRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Object.VectorRequest other) {
+        if (other == org.vdaas.vald.api.v1.payload.Object.VectorRequest.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        if (other.hasFilters()) {
+          mergeFilters(other.getFilters());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.vdaas.vald.api.v1.payload.Object.VectorRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.vdaas.vald.api.v1.payload.Object.VectorRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private org.vdaas.vald.api.v1.payload.Object.ID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Object.ID, org.vdaas.vald.api.v1.payload.Object.ID.Builder, org.vdaas.vald.api.v1.payload.Object.IDOrBuilder> idBuilder_;
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return idBuilder_ != null || id_ != null;
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       * @return The id.
+       */
+      public org.vdaas.vald.api.v1.payload.Object.ID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? org.vdaas.vald.api.v1.payload.Object.ID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       */
+      public Builder setId(org.vdaas.vald.api.v1.payload.Object.ID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
+        } else {
+          idBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       */
+      public Builder setId(
+          org.vdaas.vald.api.v1.payload.Object.ID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       */
+      public Builder mergeId(org.vdaas.vald.api.v1.payload.Object.ID value) {
+        if (idBuilder_ == null) {
+          if (id_ != null) {
+            id_ =
+              org.vdaas.vald.api.v1.payload.Object.ID.newBuilder(id_).mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       */
+      public Builder clearId() {
+        if (idBuilder_ == null) {
+          id_ = null;
+          onChanged();
+        } else {
+          id_ = null;
+          idBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Object.ID.Builder getIdBuilder() {
+        
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              org.vdaas.vald.api.v1.payload.Object.ID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Object.ID, org.vdaas.vald.api.v1.payload.Object.ID.Builder, org.vdaas.vald.api.v1.payload.Object.IDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.vdaas.vald.api.v1.payload.Object.ID, org.vdaas.vald.api.v1.payload.Object.ID.Builder, org.vdaas.vald.api.v1.payload.Object.IDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+
+      private org.vdaas.vald.api.v1.payload.Filter.Config filters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Filter.Config, org.vdaas.vald.api.v1.payload.Filter.Config.Builder, org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder> filtersBuilder_;
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       * @return Whether the filters field is set.
+       */
+      public boolean hasFilters() {
+        return filtersBuilder_ != null || filters_ != null;
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       * @return The filters.
+       */
+      public org.vdaas.vald.api.v1.payload.Filter.Config getFilters() {
+        if (filtersBuilder_ == null) {
+          return filters_ == null ? org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance() : filters_;
+        } else {
+          return filtersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       */
+      public Builder setFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
+        if (filtersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filters_ = value;
+          onChanged();
+        } else {
+          filtersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       */
+      public Builder setFilters(
+          org.vdaas.vald.api.v1.payload.Filter.Config.Builder builderForValue) {
+        if (filtersBuilder_ == null) {
+          filters_ = builderForValue.build();
+          onChanged();
+        } else {
+          filtersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       */
+      public Builder mergeFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
+        if (filtersBuilder_ == null) {
+          if (filters_ != null) {
+            filters_ =
+              org.vdaas.vald.api.v1.payload.Filter.Config.newBuilder(filters_).mergeFrom(value).buildPartial();
+          } else {
+            filters_ = value;
+          }
+          onChanged();
+        } else {
+          filtersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       */
+      public Builder clearFilters() {
+        if (filtersBuilder_ == null) {
+          filters_ = null;
+          onChanged();
+        } else {
+          filters_ = null;
+          filtersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Filter.Config.Builder getFiltersBuilder() {
+        
+        onChanged();
+        return getFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getFiltersOrBuilder() {
+        if (filtersBuilder_ != null) {
+          return filtersBuilder_.getMessageOrBuilder();
+        } else {
+          return filters_ == null ?
+              org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance() : filters_;
+        }
+      }
+      /**
+       * <code>.payload.v1.Filter.Config filters = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Filter.Config, org.vdaas.vald.api.v1.payload.Filter.Config.Builder, org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder> 
+          getFiltersFieldBuilder() {
+        if (filtersBuilder_ == null) {
+          filtersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.vdaas.vald.api.v1.payload.Filter.Config, org.vdaas.vald.api.v1.payload.Filter.Config.Builder, org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder>(
+                  getFilters(),
+                  getParentForChildren(),
+                  isClean());
+          filters_ = null;
+        }
+        return filtersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Object.VectorRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Object.VectorRequest)
+    private static final org.vdaas.vald.api.v1.payload.Object.VectorRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Object.VectorRequest();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.VectorRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VectorRequest>
+        PARSER = new com.google.protobuf.AbstractParser<VectorRequest>() {
+      @java.lang.Override
+      public VectorRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VectorRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VectorRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VectorRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Object.VectorRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DistanceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:payload.v1.Object.Distance)
       com.google.protobuf.MessageOrBuilder {

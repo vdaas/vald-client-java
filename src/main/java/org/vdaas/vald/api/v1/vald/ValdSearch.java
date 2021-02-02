@@ -27,7 +27,7 @@ public final class ValdSearch {
       "vald.v1\032#apis/proto/v1/payload/payload.p" +
       "roto\032-github.com/gogo/protobuf/gogoproto" +
       "/gogo.proto\0327github.com/gogo/googleapis/" +
-      "google/api/annotations.proto2\260\004\n\006Search\022" +
+      "google/api/annotations.proto2\316\004\n\006Search\022" +
       "U\n\006Search\022\032.payload.v1.Search.Request\032\033." +
       "payload.v1.Search.Response\"\022\202\323\344\223\002\014\"\007/sea" +
       "rch:\001*\022^\n\nSearchByID\022\034.payload.v1.Search" +
@@ -39,12 +39,13 @@ public final class ValdSearch {
       "payload.v1.Search.StreamResponse\"\000(\0010\001\022i" +
       "\n\013MultiSearch\022\037.payload.v1.Search.MultiR" +
       "equest\032\034.payload.v1.Search.Responses\"\033\202\323" +
-      "\344\223\002\025\"\020/search/multiple:\001*\022T\n\017MultiSearch" +
+      "\344\223\002\025\"\020/search/multiple:\001*\022r\n\017MultiSearch" +
       "ByID\022!.payload.v1.Search.MultiIDRequest\032" +
-      "\034.payload.v1.Search.Responses\"\000Bg\n\032org.v" +
-      "daas.vald.api.v1.valdB\nValdSearchP\001Z\'git" +
-      "hub.com/vdaas/vald/apis/grpc/v1/vald\310\342\036\001" +
-      "\320\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
+      "\034.payload.v1.Search.Responses\"\036\202\323\344\223\002\030\"\023/" +
+      "search/id/multiple:\001*Bg\n\032org.vdaas.vald." +
+      "api.v1.valdB\nValdSearchP\001Z\'github.com/vd" +
+      "aas/vald/apis/grpc/v1/vald\310\342\036\001\320\342\036\001\340\342\036\001\300\343" +
+      "\036\001\310\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -27,16 +27,17 @@ public final class ValdObject {
       "vald.v1\032#apis/proto/v1/payload/payload.p" +
       "roto\032-github.com/gogo/protobuf/gogoproto" +
       "/gogo.proto\0327github.com/gogo/googleapis/" +
-      "google/api/annotations.proto2\374\001\n\006Object\022" +
+      "google/api/annotations.proto2\225\002\n\006Object\022" +
       "L\n\006Exists\022\025.payload.v1.Object.ID\032\025.paylo" +
-      "ad.v1.Object.ID\"\024\202\323\344\223\002\016\022\014/exists/{id}\022S\n" +
-      "\tGetObject\022\025.payload.v1.Object.ID\032\031.payl" +
-      "oad.v1.Object.Vector\"\024\202\323\344\223\002\016\022\014/object/{i" +
-      "d}\022O\n\017StreamGetObject\022\025.payload.v1.Objec" +
-      "t.ID\032\037.payload.v1.Object.StreamVector\"\000(" +
-      "\0010\001Bg\n\032org.vdaas.vald.api.v1.valdB\nValdO" +
-      "bjectP\001Z\'github.com/vdaas/vald/apis/grpc" +
-      "/v1/vald\310\342\036\001\320\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
+      "ad.v1.Object.ID\"\024\202\323\344\223\002\016\022\014/exists/{id}\022a\n" +
+      "\tGetObject\022 .payload.v1.Object.VectorReq" +
+      "uest\032\031.payload.v1.Object.Vector\"\027\202\323\344\223\002\021\022" +
+      "\017/object/{id.id}\022Z\n\017StreamGetObject\022 .pa" +
+      "yload.v1.Object.VectorRequest\032\037.payload." +
+      "v1.Object.StreamVector\"\000(\0010\001Bg\n\032org.vdaa" +
+      "s.vald.api.v1.valdB\nValdObjectP\001Z\'github" +
+      ".com/vdaas/vald/apis/grpc/v1/vald\310\342\036\001\320\342\036" +
+      "\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

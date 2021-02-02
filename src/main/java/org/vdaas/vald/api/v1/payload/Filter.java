@@ -723,29 +723,28 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string targets = 1;</code>
-     * @return A list containing the targets.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
-    java.util.List<java.lang.String>
+    java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> 
         getTargetsList();
     /**
-     * <code>repeated string targets = 1;</code>
-     * @return The count of targets.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+     */
+    org.vdaas.vald.api.v1.payload.Filter.Target getTargets(int index);
+    /**
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
     int getTargetsCount();
     /**
-     * <code>repeated string targets = 1;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
-    java.lang.String getTargets(int index);
+    java.util.List<? extends org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+        getTargetsOrBuilderList();
     /**
-     * <code>repeated string targets = 1;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getTargetsBytes(int index);
+    org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getTargetsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code payload.v1.Filter.Config}
@@ -760,7 +759,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Config() {
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      targets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -795,12 +794,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targets_ = new com.google.protobuf.LazyStringArrayList();
+                targets_ = new java.util.ArrayList<org.vdaas.vald.api.v1.payload.Filter.Target>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              targets_.add(s);
+              targets_.add(
+                  input.readMessage(org.vdaas.vald.api.v1.payload.Filter.Target.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -819,7 +818,7 @@ private static final long serialVersionUID = 0L;
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          targets_ = targets_.getUnmodifiableView();
+          targets_ = java.util.Collections.unmodifiableList(targets_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -839,38 +838,43 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TARGETS_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList targets_;
+    private java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> targets_;
     /**
-     * <code>repeated string targets = 1;</code>
-     * @return A list containing the targets.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTargetsList() {
+    @java.lang.Override
+    public java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> getTargetsList() {
       return targets_;
     }
     /**
-     * <code>repeated string targets = 1;</code>
-     * @return The count of targets.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
+    @java.lang.Override
+    public java.util.List<? extends org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+        getTargetsOrBuilderList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+     */
+    @java.lang.Override
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
-     * <code>repeated string targets = 1;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
-    public java.lang.String getTargets(int index) {
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Filter.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
-     * <code>repeated string targets = 1;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
+     * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getTargetsBytes(int index) {
-      return targets_.getByteString(index);
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getTargetsOrBuilder(
+        int index) {
+      return targets_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -888,7 +892,7 @@ private static final long serialVersionUID = 0L;
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < targets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, targets_.getRaw(i));
+        output.writeMessage(1, targets_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -899,13 +903,9 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < targets_.size(); i++) {
-          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTargetsList().size();
+      for (int i = 0; i < targets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, targets_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1067,13 +1067,18 @@ private static final long serialVersionUID = 0L;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getTargetsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        if (targetsBuilder_ == null) {
+          targets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          targetsBuilder_.clear();
+        }
         return this;
       }
 
@@ -1101,11 +1106,15 @@ private static final long serialVersionUID = 0L;
       public org.vdaas.vald.api.v1.payload.Filter.Config buildPartial() {
         org.vdaas.vald.api.v1.payload.Filter.Config result = new org.vdaas.vald.api.v1.payload.Filter.Config(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (targetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            targets_ = java.util.Collections.unmodifiableList(targets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.targets_ = targets_;
+        } else {
+          result.targets_ = targetsBuilder_.build();
         }
-        result.targets_ = targets_;
         onBuilt();
         return result;
       }
@@ -1154,15 +1163,31 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Filter.Config other) {
         if (other == org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance()) return this;
-        if (!other.targets_.isEmpty()) {
-          if (targets_.isEmpty()) {
-            targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureTargetsIsMutable();
-            targets_.addAll(other.targets_);
+        if (targetsBuilder_ == null) {
+          if (!other.targets_.isEmpty()) {
+            if (targets_.isEmpty()) {
+              targets_ = other.targets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTargetsIsMutable();
+              targets_.addAll(other.targets_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.targets_.isEmpty()) {
+            if (targetsBuilder_.isEmpty()) {
+              targetsBuilder_.dispose();
+              targetsBuilder_ = null;
+              targets_ = other.targets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              targetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTargetsFieldBuilder() : null;
+            } else {
+              targetsBuilder_.addAllMessages(other.targets_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1194,114 +1219,244 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> targets_ =
+        java.util.Collections.emptyList();
       private void ensureTargetsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          targets_ = new java.util.ArrayList<org.vdaas.vald.api.v1.payload.Filter.Target>(targets_);
           bitField0_ |= 0x00000001;
          }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Filter.Target, org.vdaas.vald.api.v1.payload.Filter.Target.Builder, org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> targetsBuilder_;
+
       /**
-       * <code>repeated string targets = 1;</code>
-       * @return A list containing the targets.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getTargetsList() {
-        return targets_.getUnmodifiableView();
+      public java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> getTargetsList() {
+        if (targetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targets_);
+        } else {
+          return targetsBuilder_.getMessageList();
+        }
       }
       /**
-       * <code>repeated string targets = 1;</code>
-       * @return The count of targets.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
       public int getTargetsCount() {
-        return targets_.size();
+        if (targetsBuilder_ == null) {
+          return targets_.size();
+        } else {
+          return targetsBuilder_.getCount();
+        }
       }
       /**
-       * <code>repeated string targets = 1;</code>
-       * @param index The index of the element to return.
-       * @return The targets at the given index.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
-      public java.lang.String getTargets(int index) {
-        return targets_.get(index);
+      public org.vdaas.vald.api.v1.payload.Filter.Target getTargets(int index) {
+        if (targetsBuilder_ == null) {
+          return targets_.get(index);
+        } else {
+          return targetsBuilder_.getMessage(index);
+        }
       }
       /**
-       * <code>repeated string targets = 1;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the targets at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getTargetsBytes(int index) {
-        return targets_.getByteString(index);
-      }
-      /**
-       * <code>repeated string targets = 1;</code>
-       * @param index The index to set the value at.
-       * @param value The targets to set.
-       * @return This builder for chaining.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
       public Builder setTargets(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.set(index, value);
-        onChanged();
+          int index, org.vdaas.vald.api.v1.payload.Filter.Target value) {
+        if (targetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetsIsMutable();
+          targets_.set(index, value);
+          onChanged();
+        } else {
+          targetsBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string targets = 1;</code>
-       * @param value The targets to add.
-       * @return This builder for chaining.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public Builder setTargets(
+          int index, org.vdaas.vald.api.v1.payload.Filter.Target.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public Builder addTargets(org.vdaas.vald.api.v1.payload.Filter.Target value) {
+        if (targetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetsIsMutable();
+          targets_.add(value);
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
       public Builder addTargets(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.add(value);
-        onChanged();
+          int index, org.vdaas.vald.api.v1.payload.Filter.Target value) {
+        if (targetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetsIsMutable();
+          targets_.add(index, value);
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(index, value);
+        }
         return this;
       }
       /**
-       * <code>repeated string targets = 1;</code>
-       * @param values The targets to add.
-       * @return This builder for chaining.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public Builder addTargets(
+          org.vdaas.vald.api.v1.payload.Filter.Target.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public Builder addTargets(
+          int index, org.vdaas.vald.api.v1.payload.Filter.Target.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
       public Builder addAllTargets(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTargetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, targets_);
-        onChanged();
+          java.lang.Iterable<? extends org.vdaas.vald.api.v1.payload.Filter.Target> values) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, targets_);
+          onChanged();
+        } else {
+          targetsBuilder_.addAllMessages(values);
+        }
         return this;
       }
       /**
-       * <code>repeated string targets = 1;</code>
-       * @return This builder for chaining.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
       public Builder clearTargets() {
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        if (targetsBuilder_ == null) {
+          targets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          targetsBuilder_.clear();
+        }
         return this;
       }
       /**
-       * <code>repeated string targets = 1;</code>
-       * @param value The bytes of the targets to add.
-       * @return This builder for chaining.
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
        */
-      public Builder addTargetsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTargetsIsMutable();
-        targets_.add(value);
-        onChanged();
+      public Builder removeTargets(int index) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.remove(index);
+          onChanged();
+        } else {
+          targetsBuilder_.remove(index);
+        }
         return this;
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Filter.Target.Builder getTargetsBuilder(
+          int index) {
+        return getTargetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getTargetsOrBuilder(
+          int index) {
+        if (targetsBuilder_ == null) {
+          return targets_.get(index);  } else {
+          return targetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public java.util.List<? extends org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+           getTargetsOrBuilderList() {
+        if (targetsBuilder_ != null) {
+          return targetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(targets_);
+        }
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Filter.Target.Builder addTargetsBuilder() {
+        return getTargetsFieldBuilder().addBuilder(
+            org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Filter.Target.Builder addTargetsBuilder(
+          int index) {
+        return getTargetsFieldBuilder().addBuilder(
+            index, org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .payload.v1.Filter.Target targets = 1;</code>
+       */
+      public java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target.Builder> 
+           getTargetsBuilderList() {
+        return getTargetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Filter.Target, org.vdaas.vald.api.v1.payload.Filter.Target.Builder, org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+          getTargetsFieldBuilder() {
+        if (targetsBuilder_ == null) {
+          targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.vdaas.vald.api.v1.payload.Filter.Target, org.vdaas.vald.api.v1.payload.Filter.Target.Builder, org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder>(
+                  targets_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          targets_ = null;
+        }
+        return targetsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

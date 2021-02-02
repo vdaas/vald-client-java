@@ -27,35 +27,43 @@ public final class ValdFilter {
       "vald.v1\032#apis/proto/v1/payload/payload.p" +
       "roto\032-github.com/gogo/protobuf/gogoproto" +
       "/gogo.proto\0327github.com/gogo/googleapis/" +
-      "google/api/annotations.proto2\350\007\n\006Filter\022" +
+      "google/api/annotations.proto2\254\n\n\006Filter\022" +
       "h\n\014SearchObject\022 .payload.v1.Search.Obje" +
       "ctRequest\032\033.payload.v1.Search.Response\"\031" +
-      "\202\323\344\223\002\023\"\016/search/object:\001*\022_\n\022StreamSearc" +
-      "hObject\022 .payload.v1.Search.ObjectReques" +
-      "t\032!.payload.v1.Search.StreamResponse\"\000(\001" +
-      "0\001\022_\n\014InsertObject\022\027.payload.v1.Object.B" +
-      "lob\032\033.payload.v1.Object.Location\"\031\202\323\344\223\002\023" +
-      "\"\016/insert/object:\001*\022V\n\022StreamInsertObjec" +
-      "t\022\027.payload.v1.Object.Blob\032!.payload.v1." +
-      "Object.StreamLocation\"\000(\0010\001\022L\n\021MultiInse" +
-      "rtObject\022\027.payload.v1.Object.Blob\032\034.payl" +
-      "oad.v1.Object.Locations\"\000\022_\n\014UpdateObjec" +
-      "t\022\027.payload.v1.Object.Blob\032\033.payload.v1." +
-      "Object.Location\"\031\202\323\344\223\002\023\"\016/update/object:" +
-      "\001*\022V\n\022StreamUpdateObject\022\027.payload.v1.Ob" +
-      "ject.Blob\032!.payload.v1.Object.StreamLoca" +
-      "tion\"\000(\0010\001\022L\n\021MultiUpdateObject\022\027.payloa" +
-      "d.v1.Object.Blob\032\034.payload.v1.Object.Loc" +
-      "ations\"\000\022_\n\014UpsertObject\022\027.payload.v1.Ob" +
-      "ject.Blob\032\033.payload.v1.Object.Location\"\031" +
-      "\202\323\344\223\002\023\"\016/upsert/object:\001*\022V\n\022StreamUpser" +
-      "tObject\022\027.payload.v1.Object.Blob\032!.paylo" +
-      "ad.v1.Object.StreamLocation\"\000(\0010\001\022L\n\021Mul" +
-      "tiUpsertObject\022\027.payload.v1.Object.Blob\032" +
-      "\034.payload.v1.Object.Locations\"\000Bg\n\032org.v" +
-      "daas.vald.api.v1.valdB\nValdFilterP\001Z\'git" +
-      "hub.com/vdaas/vald/apis/grpc/v1/vald\310\342\036\001" +
-      "\320\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
+      "\202\323\344\223\002\023\"\016/search/object:\001*\022|\n\021MultiSearch" +
+      "Object\022%.payload.v1.Search.MultiObjectRe" +
+      "quest\032\034.payload.v1.Search.Responses\"\"\202\323\344" +
+      "\223\002\034\"\027/search/object/multiple:\001*\022_\n\022Strea" +
+      "mSearchObject\022 .payload.v1.Search.Object" +
+      "Request\032!.payload.v1.Search.StreamRespon" +
+      "se\"\000(\0010\001\022h\n\014InsertObject\022 .payload.v1.In" +
+      "sert.ObjectRequest\032\033.payload.v1.Object.L" +
+      "ocation\"\031\202\323\344\223\002\023\"\016/insert/object:\001*\022_\n\022St" +
+      "reamInsertObject\022 .payload.v1.Insert.Obj" +
+      "ectRequest\032!.payload.v1.Object.StreamLoc" +
+      "ation\"\000(\0010\001\022|\n\021MultiInsertObject\022%.paylo" +
+      "ad.v1.Insert.MultiObjectRequest\032\034.payloa" +
+      "d.v1.Object.Locations\"\"\202\323\344\223\002\034\"\027/insert/o" +
+      "bject/multiple:\001*\022h\n\014UpdateObject\022 .payl" +
+      "oad.v1.Update.ObjectRequest\032\033.payload.v1" +
+      ".Object.Location\"\031\202\323\344\223\002\023\"\016/update/object" +
+      ":\001*\022_\n\022StreamUpdateObject\022 .payload.v1.U" +
+      "pdate.ObjectRequest\032!.payload.v1.Object." +
+      "StreamLocation\"\000(\0010\001\022|\n\021MultiUpdateObjec" +
+      "t\022%.payload.v1.Update.MultiObjectRequest" +
+      "\032\034.payload.v1.Object.Locations\"\"\202\323\344\223\002\034\"\027" +
+      "/update/object/multiple:\001*\022h\n\014UpsertObje" +
+      "ct\022 .payload.v1.Upsert.ObjectRequest\032\033.p" +
+      "ayload.v1.Object.Location\"\031\202\323\344\223\002\023\"\016/upse" +
+      "rt/object:\001*\022_\n\022StreamUpsertObject\022 .pay" +
+      "load.v1.Upsert.ObjectRequest\032!.payload.v" +
+      "1.Object.StreamLocation\"\000(\0010\001\022|\n\021MultiUp" +
+      "sertObject\022%.payload.v1.Upsert.MultiObje" +
+      "ctRequest\032\034.payload.v1.Object.Locations\"" +
+      "\"\202\323\344\223\002\034\"\027/upsert/object/multiple:\001*Bg\n\032o" +
+      "rg.vdaas.vald.api.v1.valdB\nValdFilterP\001Z" +
+      "\'github.com/vdaas/vald/apis/grpc/v1/vald" +
+      "\310\342\036\001\320\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
