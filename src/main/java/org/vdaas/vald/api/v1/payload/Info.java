@@ -182,6 +182,12 @@ private static final long serialVersionUID = 0L;
        * @return The indexing.
        */
       boolean getIndexing();
+
+      /**
+       * <code>bool saving = 4;</code>
+       * @return The saving.
+       */
+      boolean getSaving();
     }
     /**
      * Protobuf type {@code payload.v1.Info.Index.Count}
@@ -241,6 +247,11 @@ private static final long serialVersionUID = 0L;
               case 24: {
 
                 indexing_ = input.readBool();
+                break;
+              }
+              case 32: {
+
+                saving_ = input.readBool();
                 break;
               }
               default: {
@@ -308,6 +319,17 @@ private static final long serialVersionUID = 0L;
         return indexing_;
       }
 
+      public static final int SAVING_FIELD_NUMBER = 4;
+      private boolean saving_;
+      /**
+       * <code>bool saving = 4;</code>
+       * @return The saving.
+       */
+      @java.lang.Override
+      public boolean getSaving() {
+        return saving_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -331,6 +353,9 @@ private static final long serialVersionUID = 0L;
         if (indexing_ != false) {
           output.writeBool(3, indexing_);
         }
+        if (saving_ != false) {
+          output.writeBool(4, saving_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -351,6 +376,10 @@ private static final long serialVersionUID = 0L;
         if (indexing_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(3, indexing_);
+        }
+        if (saving_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, saving_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -373,6 +402,8 @@ private static final long serialVersionUID = 0L;
             != other.getUncommitted()) return false;
         if (getIndexing()
             != other.getIndexing()) return false;
+        if (getSaving()
+            != other.getSaving()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -391,6 +422,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + INDEXING_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIndexing());
+        hash = (37 * hash) + SAVING_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getSaving());
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -530,6 +564,8 @@ private static final long serialVersionUID = 0L;
 
           indexing_ = false;
 
+          saving_ = false;
+
           return this;
         }
 
@@ -559,6 +595,7 @@ private static final long serialVersionUID = 0L;
           result.stored_ = stored_;
           result.uncommitted_ = uncommitted_;
           result.indexing_ = indexing_;
+          result.saving_ = saving_;
           onBuilt();
           return result;
         }
@@ -615,6 +652,9 @@ private static final long serialVersionUID = 0L;
           }
           if (other.getIndexing() != false) {
             setIndexing(other.getIndexing());
+          }
+          if (other.getSaving() != false) {
+            setSaving(other.getSaving());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -734,6 +774,37 @@ private static final long serialVersionUID = 0L;
         public Builder clearIndexing() {
           
           indexing_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean saving_ ;
+        /**
+         * <code>bool saving = 4;</code>
+         * @return The saving.
+         */
+        @java.lang.Override
+        public boolean getSaving() {
+          return saving_;
+        }
+        /**
+         * <code>bool saving = 4;</code>
+         * @param value The saving to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSaving(boolean value) {
+          
+          saving_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool saving = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSaving() {
+          
+          saving_ = false;
           onChanged();
           return this;
         }

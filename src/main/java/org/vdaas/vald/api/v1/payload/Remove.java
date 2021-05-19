@@ -1706,6 +1706,12 @@ private static final long serialVersionUID = 0L;
      * @return The skipStrictExistCheck.
      */
     boolean getSkipStrictExistCheck();
+
+    /**
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
   }
   /**
    * Protobuf type {@code payload.v1.Remove.Config}
@@ -1757,6 +1763,11 @@ private static final long serialVersionUID = 0L;
               skipStrictExistCheck_ = input.readBool();
               break;
             }
+            case 24: {
+
+              timestamp_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1800,6 +1811,17 @@ private static final long serialVersionUID = 0L;
       return skipStrictExistCheck_;
     }
 
+    public static final int TIMESTAMP_FIELD_NUMBER = 3;
+    private long timestamp_;
+    /**
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1817,6 +1839,9 @@ private static final long serialVersionUID = 0L;
       if (skipStrictExistCheck_ != false) {
         output.writeBool(1, skipStrictExistCheck_);
       }
+      if (timestamp_ != 0L) {
+        output.writeInt64(3, timestamp_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1829,6 +1854,10 @@ private static final long serialVersionUID = 0L;
       if (skipStrictExistCheck_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, skipStrictExistCheck_);
+      }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, timestamp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1847,6 +1876,8 @@ private static final long serialVersionUID = 0L;
 
       if (getSkipStrictExistCheck()
           != other.getSkipStrictExistCheck()) return false;
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1861,6 +1892,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKIP_STRICT_EXIST_CHECK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSkipStrictExistCheck());
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1996,6 +2030,8 @@ private static final long serialVersionUID = 0L;
         super.clear();
         skipStrictExistCheck_ = false;
 
+        timestamp_ = 0L;
+
         return this;
       }
 
@@ -2023,6 +2059,7 @@ private static final long serialVersionUID = 0L;
       public org.vdaas.vald.api.v1.payload.Remove.Config buildPartial() {
         org.vdaas.vald.api.v1.payload.Remove.Config result = new org.vdaas.vald.api.v1.payload.Remove.Config(this);
         result.skipStrictExistCheck_ = skipStrictExistCheck_;
+        result.timestamp_ = timestamp_;
         onBuilt();
         return result;
       }
@@ -2073,6 +2110,9 @@ private static final long serialVersionUID = 0L;
         if (other == org.vdaas.vald.api.v1.payload.Remove.Config.getDefaultInstance()) return this;
         if (other.getSkipStrictExistCheck() != false) {
           setSkipStrictExistCheck(other.getSkipStrictExistCheck());
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2130,6 +2170,37 @@ private static final long serialVersionUID = 0L;
       public Builder clearSkipStrictExistCheck() {
         
         skipStrictExistCheck_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+        
+        timestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        
+        timestamp_ = 0L;
         onChanged();
         return this;
       }

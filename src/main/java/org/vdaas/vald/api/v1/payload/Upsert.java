@@ -3541,6 +3541,12 @@ private static final long serialVersionUID = 0L;
      * <code>.payload.v1.Filter.Config filters = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getFiltersOrBuilder();
+
+    /**
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
   }
   /**
    * Protobuf type {@code payload.v1.Upsert.Config}
@@ -3603,6 +3609,11 @@ private static final long serialVersionUID = 0L;
                 filters_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 24: {
+
+              timestamp_ = input.readInt64();
               break;
             }
             default: {
@@ -3674,6 +3685,17 @@ private static final long serialVersionUID = 0L;
       return getFilters();
     }
 
+    public static final int TIMESTAMP_FIELD_NUMBER = 3;
+    private long timestamp_;
+    /**
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3694,6 +3716,9 @@ private static final long serialVersionUID = 0L;
       if (filters_ != null) {
         output.writeMessage(2, getFilters());
       }
+      if (timestamp_ != 0L) {
+        output.writeInt64(3, timestamp_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3710,6 +3735,10 @@ private static final long serialVersionUID = 0L;
       if (filters_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFilters());
+      }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, timestamp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3733,6 +3762,8 @@ private static final long serialVersionUID = 0L;
         if (!getFilters()
             .equals(other.getFilters())) return false;
       }
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3751,6 +3782,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FILTERS_FIELD_NUMBER;
         hash = (53 * hash) + getFilters().hashCode();
       }
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3892,6 +3926,8 @@ private static final long serialVersionUID = 0L;
           filters_ = null;
           filtersBuilder_ = null;
         }
+        timestamp_ = 0L;
+
         return this;
       }
 
@@ -3924,6 +3960,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.filters_ = filtersBuilder_.build();
         }
+        result.timestamp_ = timestamp_;
         onBuilt();
         return result;
       }
@@ -3977,6 +4014,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasFilters()) {
           mergeFilters(other.getFilters());
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4155,6 +4195,37 @@ private static final long serialVersionUID = 0L;
           filters_ = null;
         }
         return filtersBuilder_;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+        
+        timestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timestamp = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        
+        timestamp_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
