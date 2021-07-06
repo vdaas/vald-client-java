@@ -13,3 +13,5 @@ bin
 
 # gogoproto
 src/main/java/com/google/protobuf/GoGoProtos.java
+
+wordvecs1000.json

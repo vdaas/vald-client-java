@@ -1,0 +1,78 @@
+name: e2etest
+on:
+  pull_request:
+
+jobs:
+  e2etest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libprotobuf-dev libprotoc-dev protobuf-compiler autoconf libtool
+          mkdir -p $HOME/protobuf
+          curl -L https://github.com/protocolbuffers/protobuf/archive/${PROTOBUF_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/protobuf
+          cd $HOME/protobuf
+          autoreconf -f -i -Wall,no-obsolete
+          ./configure --prefix=/usr --enable-static=no
+          make -j2
+          sudo make install
+          mkdir -p $HOME/grpc-java
+          curl -L https://github.com/grpc/grpc-java/archive/${GRPC_JAVA_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/grpc-java
+          cd $HOME/grpc-java/compiler/src/java_plugin/cpp
+          g++ -I. -I$HOME/protobuf/src \
+          *.cpp \
+          -L$HOME/protobuf/src/.libs \
+          -lprotoc -lprotobuf -lpthread --std=c++0x -s \
+          -o protoc-gen-grpc-java
+          cp protoc-gen-grpc-java $HOME/grpc-java
+        env:
+          PROTOBUF_VERSION: v3.17.3
+          GRPC_JAVA_VERSION: v1.39.0
+      - name: build protobuf
+        run: |
+          export GOPATH=$HOME/go
+          export PATH=$HOME/grpc-java:$PATH
+          make all
+      - uses: rinx/setup-k3d@v0.0.2
+        with:
+          version: latest
+          name: vald
+          agents: 1
+      - name: check k3d
+        run: |
+          kubectl cluster-info
+      - uses: azure/setup-helm@v1
+      - name: Helm version
+        run: |
+          helm version
+      - name: deploy Vald
+        run: |
+          helm repo add vald https://vald.vdaas.org/charts
+          helm install \
+            --values ${VALUES} \
+            --set defaults.image.tag=nightly \
+            --set agent.ngt.dimension=300 \
+            --set agent.ngt.auto_index_length=2 \
+            --set agent.minReplicas=1 \
+            --set gateway.lb.enabled=false \
+            --set discoverer.enabled=false \
+            --set manager.index.enabled=false \
+            --generate-name vald/vald
+          sleep 3
+          kubectl wait --for=condition=ready pod -l app=vald-agent-ngt --timeout=3m
+          kubectl get pods
+        env:
+          VALUES: https://raw.githubusercontent.com/vdaas/vald/master/.github/helm/values/values-lb.yaml
+      - name: Download data
+        run: |
+          curl -OL https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json
+      - name: run tests
+        run: |
+          kubectl port-forward statefulset/vald-agent-ngt 8081:8081 &
+          pid=$!
+
+          ./gradlew test
+
+          kill $pid

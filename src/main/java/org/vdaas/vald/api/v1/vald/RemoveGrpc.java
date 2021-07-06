@@ -1,19 +1,6 @@
 package org.vdaas.vald.api.v1.vald;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -172,42 +159,42 @@ public final class RemoveGrpc {
      */
     public void remove(org.vdaas.vald.api.v1.payload.Remove.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamRemoveMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamRemoveMethod(), responseObserver);
     }
 
     /**
      */
     public void multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiRemoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiRemoveMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getRemoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Remove.Request,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_REMOVE)))
           .addMethod(
             getStreamRemoveMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Remove.Request,
                 org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_REMOVE)))
           .addMethod(
             getMultiRemoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Remove.MultiRequest,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
@@ -234,7 +221,7 @@ public final class RemoveGrpc {
      */
     public void remove(org.vdaas.vald.api.v1.payload.Remove.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -242,7 +229,7 @@ public final class RemoveGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamRemoveMethod(), getCallOptions()), responseObserver);
     }
 
@@ -250,7 +237,7 @@ public final class RemoveGrpc {
      */
     public void multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiRemoveMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -272,14 +259,14 @@ public final class RemoveGrpc {
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location remove(org.vdaas.vald.api.v1.payload.Remove.Request request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiRemoveMethod(), getCallOptions(), request);
     }
   }
@@ -302,7 +289,7 @@ public final class RemoveGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> remove(
         org.vdaas.vald.api.v1.payload.Remove.Request request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveMethod(), getCallOptions()), request);
     }
 
@@ -310,7 +297,7 @@ public final class RemoveGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiRemove(
         org.vdaas.vald.api.v1.payload.Remove.MultiRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiRemoveMethod(), getCallOptions()), request);
     }
   }

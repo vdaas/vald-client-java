@@ -1,19 +1,6 @@
 package org.vdaas.vald.api.v1.vald;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -172,42 +159,42 @@ public final class InsertGrpc {
      */
     public void insert(org.vdaas.vald.api.v1.payload.Insert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getInsertMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInsertMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamInsertMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamInsertMethod(), responseObserver);
     }
 
     /**
      */
     public void multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiInsertMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiInsertMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getInsertMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Insert.Request,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_INSERT)))
           .addMethod(
             getStreamInsertMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Insert.Request,
                 org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_INSERT)))
           .addMethod(
             getMultiInsertMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Insert.MultiRequest,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
@@ -234,7 +221,7 @@ public final class InsertGrpc {
      */
     public void insert(org.vdaas.vald.api.v1.payload.Insert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInsertMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -242,7 +229,7 @@ public final class InsertGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamInsertMethod(), getCallOptions()), responseObserver);
     }
 
@@ -250,7 +237,7 @@ public final class InsertGrpc {
      */
     public void multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiInsertMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -272,14 +259,14 @@ public final class InsertGrpc {
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location insert(org.vdaas.vald.api.v1.payload.Insert.Request request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInsertMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiInsertMethod(), getCallOptions(), request);
     }
   }
@@ -302,7 +289,7 @@ public final class InsertGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> insert(
         org.vdaas.vald.api.v1.payload.Insert.Request request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInsertMethod(), getCallOptions()), request);
     }
 
@@ -310,7 +297,7 @@ public final class InsertGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiInsert(
         org.vdaas.vald.api.v1.payload.Insert.MultiRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiInsertMethod(), getCallOptions()), request);
     }
   }

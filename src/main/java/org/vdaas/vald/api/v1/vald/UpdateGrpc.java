@@ -1,19 +1,6 @@
 package org.vdaas.vald.api.v1.vald;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -172,42 +159,42 @@ public final class UpdateGrpc {
      */
     public void update(org.vdaas.vald.api.v1.payload.Update.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamUpdateMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public void multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpdateMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Update.Request,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getStreamUpdateMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Update.Request,
                 org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_UPDATE)))
           .addMethod(
             getMultiUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Update.MultiRequest,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
@@ -234,7 +221,7 @@ public final class UpdateGrpc {
      */
     public void update(org.vdaas.vald.api.v1.payload.Update.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -242,7 +229,7 @@ public final class UpdateGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamUpdateMethod(), getCallOptions()), responseObserver);
     }
 
@@ -250,7 +237,7 @@ public final class UpdateGrpc {
      */
     public void multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiUpdateMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -272,14 +259,14 @@ public final class UpdateGrpc {
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location update(org.vdaas.vald.api.v1.payload.Update.Request request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiUpdateMethod(), getCallOptions(), request);
     }
   }
@@ -302,7 +289,7 @@ public final class UpdateGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> update(
         org.vdaas.vald.api.v1.payload.Update.Request request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -310,7 +297,7 @@ public final class UpdateGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpdate(
         org.vdaas.vald.api.v1.payload.Update.MultiRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiUpdateMethod(), getCallOptions()), request);
     }
   }

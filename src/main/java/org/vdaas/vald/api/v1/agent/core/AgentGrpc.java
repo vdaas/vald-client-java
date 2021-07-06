@@ -1,19 +1,6 @@
 package org.vdaas.vald.api.v1.agent.core;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -203,56 +190,56 @@ public final class AgentGrpc {
      */
     public void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateIndexMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateIndexMethod(), responseObserver);
     }
 
     /**
      */
     public void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getSaveIndexMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSaveIndexMethod(), responseObserver);
     }
 
     /**
      */
     public void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateAndSaveIndexMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAndSaveIndexMethod(), responseObserver);
     }
 
     /**
      */
     public void indexInfo(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getIndexInfoMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIndexInfoMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateIndexMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest,
                 org.vdaas.vald.api.v1.payload.Empty>(
                   this, METHODID_CREATE_INDEX)))
           .addMethod(
             getSaveIndexMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Empty,
                 org.vdaas.vald.api.v1.payload.Empty>(
                   this, METHODID_SAVE_INDEX)))
           .addMethod(
             getCreateAndSaveIndexMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest,
                 org.vdaas.vald.api.v1.payload.Empty>(
                   this, METHODID_CREATE_AND_SAVE_INDEX)))
           .addMethod(
             getIndexInfoMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Empty,
                 org.vdaas.vald.api.v1.payload.Info.Index.Count>(
@@ -279,7 +266,7 @@ public final class AgentGrpc {
      */
     public void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -287,7 +274,7 @@ public final class AgentGrpc {
      */
     public void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSaveIndexMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -295,7 +282,7 @@ public final class AgentGrpc {
      */
     public void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -303,7 +290,7 @@ public final class AgentGrpc {
      */
     public void indexInfo(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -325,28 +312,28 @@ public final class AgentGrpc {
     /**
      */
     public org.vdaas.vald.api.v1.payload.Empty createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateIndexMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Empty saveIndex(org.vdaas.vald.api.v1.payload.Empty request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSaveIndexMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Empty createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAndSaveIndexMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Info.Index.Count indexInfo(org.vdaas.vald.api.v1.payload.Empty request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIndexInfoMethod(), getCallOptions(), request);
     }
   }
@@ -369,7 +356,7 @@ public final class AgentGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> createIndex(
         org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request);
     }
 
@@ -377,7 +364,7 @@ public final class AgentGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> saveIndex(
         org.vdaas.vald.api.v1.payload.Empty request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSaveIndexMethod(), getCallOptions()), request);
     }
 
@@ -385,7 +372,7 @@ public final class AgentGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> createAndSaveIndex(
         org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAndSaveIndexMethod(), getCallOptions()), request);
     }
 
@@ -393,7 +380,7 @@ public final class AgentGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Info.Index.Count> indexInfo(
         org.vdaas.vald.api.v1.payload.Empty request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request);
     }
   }

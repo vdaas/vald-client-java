@@ -1,19 +1,6 @@
 package org.vdaas.vald.api.v1.vald;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -451,168 +438,168 @@ public final class FilterGrpc {
      */
     public void searchObject(org.vdaas.vald.api.v1.payload.Search.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(getSearchObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchObjectMethod(), responseObserver);
     }
 
     /**
      */
     public void multiSearchObject(org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiSearchObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiSearchObjectMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.ObjectRequest> streamSearchObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamSearchObjectMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamSearchObjectMethod(), responseObserver);
     }
 
     /**
      */
     public void insertObject(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getInsertObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInsertObjectMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.ObjectRequest> streamInsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamInsertObjectMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamInsertObjectMethod(), responseObserver);
     }
 
     /**
      */
     public void multiInsertObject(org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiInsertObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiInsertObjectMethod(), responseObserver);
     }
 
     /**
      */
     public void updateObject(org.vdaas.vald.api.v1.payload.Update.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateObjectMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.ObjectRequest> streamUpdateObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamUpdateObjectMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamUpdateObjectMethod(), responseObserver);
     }
 
     /**
      */
     public void multiUpdateObject(org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiUpdateObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpdateObjectMethod(), responseObserver);
     }
 
     /**
      */
     public void upsertObject(org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertObjectMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest> streamUpsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamUpsertObjectMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamUpsertObjectMethod(), responseObserver);
     }
 
     /**
      */
     public void multiUpsertObject(org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiUpsertObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpsertObjectMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getSearchObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Search.Response>(
                   this, METHODID_SEARCH_OBJECT)))
           .addMethod(
             getMultiSearchObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest,
                 org.vdaas.vald.api.v1.payload.Search.Responses>(
                   this, METHODID_MULTI_SEARCH_OBJECT)))
           .addMethod(
             getStreamSearchObjectMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
                   this, METHODID_STREAM_SEARCH_OBJECT)))
           .addMethod(
             getInsertObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Insert.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_INSERT_OBJECT)))
           .addMethod(
             getStreamInsertObjectMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Insert.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_INSERT_OBJECT)))
           .addMethod(
             getMultiInsertObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
                   this, METHODID_MULTI_INSERT_OBJECT)))
           .addMethod(
             getUpdateObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Update.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_UPDATE_OBJECT)))
           .addMethod(
             getStreamUpdateObjectMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Update.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_UPDATE_OBJECT)))
           .addMethod(
             getMultiUpdateObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
                   this, METHODID_MULTI_UPDATE_OBJECT)))
           .addMethod(
             getUpsertObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_UPSERT_OBJECT)))
           .addMethod(
             getStreamUpsertObjectMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
                   this, METHODID_STREAM_UPSERT_OBJECT)))
           .addMethod(
             getMultiUpsertObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
@@ -639,7 +626,7 @@ public final class FilterGrpc {
      */
     public void searchObject(org.vdaas.vald.api.v1.payload.Search.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -647,7 +634,7 @@ public final class FilterGrpc {
      */
     public void multiSearchObject(org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiSearchObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -655,7 +642,7 @@ public final class FilterGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.ObjectRequest> streamSearchObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamSearchObjectMethod(), getCallOptions()), responseObserver);
     }
 
@@ -663,7 +650,7 @@ public final class FilterGrpc {
      */
     public void insertObject(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInsertObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -671,7 +658,7 @@ public final class FilterGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.ObjectRequest> streamInsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamInsertObjectMethod(), getCallOptions()), responseObserver);
     }
 
@@ -679,7 +666,7 @@ public final class FilterGrpc {
      */
     public void multiInsertObject(org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiInsertObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -687,7 +674,7 @@ public final class FilterGrpc {
      */
     public void updateObject(org.vdaas.vald.api.v1.payload.Update.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -695,7 +682,7 @@ public final class FilterGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.ObjectRequest> streamUpdateObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamUpdateObjectMethod(), getCallOptions()), responseObserver);
     }
 
@@ -703,7 +690,7 @@ public final class FilterGrpc {
      */
     public void multiUpdateObject(org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiUpdateObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -711,7 +698,7 @@ public final class FilterGrpc {
      */
     public void upsertObject(org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -719,7 +706,7 @@ public final class FilterGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest> streamUpsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamUpsertObjectMethod(), getCallOptions()), responseObserver);
     }
 
@@ -727,7 +714,7 @@ public final class FilterGrpc {
      */
     public void multiUpsertObject(org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiUpsertObjectMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -749,56 +736,56 @@ public final class FilterGrpc {
     /**
      */
     public org.vdaas.vald.api.v1.payload.Search.Response searchObject(org.vdaas.vald.api.v1.payload.Search.ObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchObjectMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Search.Responses multiSearchObject(org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiSearchObjectMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location insertObject(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInsertObjectMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiInsertObject(org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiInsertObjectMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location updateObject(org.vdaas.vald.api.v1.payload.Update.ObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateObjectMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpdateObject(org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiUpdateObjectMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location upsertObject(org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertObjectMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpsertObject(org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiUpsertObjectMethod(), getCallOptions(), request);
     }
   }
@@ -821,7 +808,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Response> searchObject(
         org.vdaas.vald.api.v1.payload.Search.ObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchObjectMethod(), getCallOptions()), request);
     }
 
@@ -829,7 +816,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Responses> multiSearchObject(
         org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiSearchObjectMethod(), getCallOptions()), request);
     }
 
@@ -837,7 +824,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> insertObject(
         org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInsertObjectMethod(), getCallOptions()), request);
     }
 
@@ -845,7 +832,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiInsertObject(
         org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiInsertObjectMethod(), getCallOptions()), request);
     }
 
@@ -853,7 +840,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> updateObject(
         org.vdaas.vald.api.v1.payload.Update.ObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateObjectMethod(), getCallOptions()), request);
     }
 
@@ -861,7 +848,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpdateObject(
         org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiUpdateObjectMethod(), getCallOptions()), request);
     }
 
@@ -869,7 +856,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> upsertObject(
         org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertObjectMethod(), getCallOptions()), request);
     }
 
@@ -877,7 +864,7 @@ public final class FilterGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpsertObject(
         org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiUpsertObjectMethod(), getCallOptions()), request);
     }
   }
