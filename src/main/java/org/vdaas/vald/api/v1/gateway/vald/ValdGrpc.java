@@ -1,19 +1,6 @@
 package org.vdaas.vald.api.v1.gateway.vald;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -668,266 +655,266 @@ public final class ValdGrpc {
      */
     public void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> responseObserver) {
-      asyncUnimplementedUnaryCall(getExistsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExistsMethod(), responseObserver);
     }
 
     /**
      */
     public void search(org.vdaas.vald.api.v1.payload.Search.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
     }
 
     /**
      */
     public void searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(getSearchByIDMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchByIDMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamSearchMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamSearchMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamSearchByIDMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamSearchByIDMethod(), responseObserver);
     }
 
     /**
      */
     public void insert(org.vdaas.vald.api.v1.payload.Object.Vector request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getInsertMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInsertMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> streamInsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamInsertMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamInsertMethod(), responseObserver);
     }
 
     /**
      */
     public void multiInsert(org.vdaas.vald.api.v1.payload.Object.Vectors request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiInsertMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiInsertMethod(), responseObserver);
     }
 
     /**
      */
     public void update(org.vdaas.vald.api.v1.payload.Object.Vector request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> streamUpdate(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamUpdateMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public void multiUpdate(org.vdaas.vald.api.v1.payload.Object.Vectors request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public void upsert(org.vdaas.vald.api.v1.payload.Object.Vector request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> streamUpsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamUpsertMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamUpsertMethod(), responseObserver);
     }
 
     /**
      */
     public void multiUpsert(org.vdaas.vald.api.v1.payload.Object.Vectors request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiUpsertMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpsertMethod(), responseObserver);
     }
 
     /**
      */
     public void remove(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> streamRemove(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamRemoveMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamRemoveMethod(), responseObserver);
     }
 
     /**
      */
     public void multiRemove(org.vdaas.vald.api.v1.payload.Object.IDs request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiRemoveMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiRemoveMethod(), responseObserver);
     }
 
     /**
      */
     public void getObject(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> streamGetObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamGetObjectMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamGetObjectMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getExistsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.ID,
                 org.vdaas.vald.api.v1.payload.Object.ID>(
                   this, METHODID_EXISTS)))
           .addMethod(
             getSearchMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.Request,
                 org.vdaas.vald.api.v1.payload.Search.Response>(
                   this, METHODID_SEARCH)))
           .addMethod(
             getSearchByIDMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.IDRequest,
                 org.vdaas.vald.api.v1.payload.Search.Response>(
                   this, METHODID_SEARCH_BY_ID)))
           .addMethod(
             getStreamSearchMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.Request,
                 org.vdaas.vald.api.v1.payload.Search.Response>(
                   this, METHODID_STREAM_SEARCH)))
           .addMethod(
             getStreamSearchByIDMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Search.IDRequest,
                 org.vdaas.vald.api.v1.payload.Search.Response>(
                   this, METHODID_STREAM_SEARCH_BY_ID)))
           .addMethod(
             getInsertMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vector,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_INSERT)))
           .addMethod(
             getStreamInsertMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vector,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_STREAM_INSERT)))
           .addMethod(
             getMultiInsertMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vectors,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
                   this, METHODID_MULTI_INSERT)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vector,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getStreamUpdateMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vector,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_STREAM_UPDATE)))
           .addMethod(
             getMultiUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vectors,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
                   this, METHODID_MULTI_UPDATE)))
           .addMethod(
             getUpsertMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vector,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_UPSERT)))
           .addMethod(
             getStreamUpsertMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vector,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_STREAM_UPSERT)))
           .addMethod(
             getMultiUpsertMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.Vectors,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
                   this, METHODID_MULTI_UPSERT)))
           .addMethod(
             getRemoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.ID,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_REMOVE)))
           .addMethod(
             getStreamRemoveMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.ID,
                 org.vdaas.vald.api.v1.payload.Object.Location>(
                   this, METHODID_STREAM_REMOVE)))
           .addMethod(
             getMultiRemoveMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.IDs,
                 org.vdaas.vald.api.v1.payload.Object.Locations>(
                   this, METHODID_MULTI_REMOVE)))
           .addMethod(
             getGetObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.ID,
                 org.vdaas.vald.api.v1.payload.Object.Vector>(
                   this, METHODID_GET_OBJECT)))
           .addMethod(
             getStreamGetObjectMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.ID,
                 org.vdaas.vald.api.v1.payload.Object.Vector>(
@@ -954,7 +941,7 @@ public final class ValdGrpc {
      */
     public void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExistsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -962,7 +949,7 @@ public final class ValdGrpc {
      */
     public void search(org.vdaas.vald.api.v1.payload.Search.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -970,7 +957,7 @@ public final class ValdGrpc {
      */
     public void searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchByIDMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -978,7 +965,7 @@ public final class ValdGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamSearchMethod(), getCallOptions()), responseObserver);
     }
 
@@ -986,7 +973,7 @@ public final class ValdGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamSearchByIDMethod(), getCallOptions()), responseObserver);
     }
 
@@ -994,7 +981,7 @@ public final class ValdGrpc {
      */
     public void insert(org.vdaas.vald.api.v1.payload.Object.Vector request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInsertMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1002,7 +989,7 @@ public final class ValdGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> streamInsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamInsertMethod(), getCallOptions()), responseObserver);
     }
 
@@ -1010,7 +997,7 @@ public final class ValdGrpc {
      */
     public void multiInsert(org.vdaas.vald.api.v1.payload.Object.Vectors request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiInsertMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1018,7 +1005,7 @@ public final class ValdGrpc {
      */
     public void update(org.vdaas.vald.api.v1.payload.Object.Vector request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1026,7 +1013,7 @@ public final class ValdGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> streamUpdate(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamUpdateMethod(), getCallOptions()), responseObserver);
     }
 
@@ -1034,7 +1021,7 @@ public final class ValdGrpc {
      */
     public void multiUpdate(org.vdaas.vald.api.v1.payload.Object.Vectors request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1042,7 +1029,7 @@ public final class ValdGrpc {
      */
     public void upsert(org.vdaas.vald.api.v1.payload.Object.Vector request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1050,7 +1037,7 @@ public final class ValdGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> streamUpsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamUpsertMethod(), getCallOptions()), responseObserver);
     }
 
@@ -1058,7 +1045,7 @@ public final class ValdGrpc {
      */
     public void multiUpsert(org.vdaas.vald.api.v1.payload.Object.Vectors request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiUpsertMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1066,7 +1053,7 @@ public final class ValdGrpc {
      */
     public void remove(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1074,7 +1061,7 @@ public final class ValdGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> streamRemove(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamRemoveMethod(), getCallOptions()), responseObserver);
     }
 
@@ -1082,7 +1069,7 @@ public final class ValdGrpc {
      */
     public void multiRemove(org.vdaas.vald.api.v1.payload.Object.IDs request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiRemoveMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1090,7 +1077,7 @@ public final class ValdGrpc {
      */
     public void getObject(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1098,7 +1085,7 @@ public final class ValdGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> streamGetObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamGetObjectMethod(), getCallOptions()), responseObserver);
     }
   }
@@ -1120,84 +1107,84 @@ public final class ValdGrpc {
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.ID exists(org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExistsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Search.Response search(org.vdaas.vald.api.v1.payload.Search.Request request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Search.Response searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchByIDMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location insert(org.vdaas.vald.api.v1.payload.Object.Vector request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInsertMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiInsert(org.vdaas.vald.api.v1.payload.Object.Vectors request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiInsertMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location update(org.vdaas.vald.api.v1.payload.Object.Vector request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpdate(org.vdaas.vald.api.v1.payload.Object.Vectors request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location upsert(org.vdaas.vald.api.v1.payload.Object.Vector request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpsert(org.vdaas.vald.api.v1.payload.Object.Vectors request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiUpsertMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Location remove(org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiRemove(org.vdaas.vald.api.v1.payload.Object.IDs request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiRemoveMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Vector getObject(org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectMethod(), getCallOptions(), request);
     }
   }
@@ -1220,7 +1207,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.ID> exists(
         org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExistsMethod(), getCallOptions()), request);
     }
 
@@ -1228,7 +1215,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Response> search(
         org.vdaas.vald.api.v1.payload.Search.Request request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchMethod(), getCallOptions()), request);
     }
 
@@ -1236,7 +1223,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Response> searchByID(
         org.vdaas.vald.api.v1.payload.Search.IDRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchByIDMethod(), getCallOptions()), request);
     }
 
@@ -1244,7 +1231,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> insert(
         org.vdaas.vald.api.v1.payload.Object.Vector request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInsertMethod(), getCallOptions()), request);
     }
 
@@ -1252,7 +1239,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiInsert(
         org.vdaas.vald.api.v1.payload.Object.Vectors request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiInsertMethod(), getCallOptions()), request);
     }
 
@@ -1260,7 +1247,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> update(
         org.vdaas.vald.api.v1.payload.Object.Vector request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1268,7 +1255,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpdate(
         org.vdaas.vald.api.v1.payload.Object.Vectors request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiUpdateMethod(), getCallOptions()), request);
     }
 
@@ -1276,7 +1263,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> upsert(
         org.vdaas.vald.api.v1.payload.Object.Vector request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertMethod(), getCallOptions()), request);
     }
 
@@ -1284,7 +1271,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpsert(
         org.vdaas.vald.api.v1.payload.Object.Vectors request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiUpsertMethod(), getCallOptions()), request);
     }
 
@@ -1292,7 +1279,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> remove(
         org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveMethod(), getCallOptions()), request);
     }
 
@@ -1300,7 +1287,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiRemove(
         org.vdaas.vald.api.v1.payload.Object.IDs request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiRemoveMethod(), getCallOptions()), request);
     }
 
@@ -1308,7 +1295,7 @@ public final class ValdGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Vector> getObject(
         org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetObjectMethod(), getCallOptions()), request);
     }
   }
