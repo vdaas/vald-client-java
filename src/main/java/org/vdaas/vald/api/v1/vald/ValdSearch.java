@@ -25,47 +25,38 @@ public final class ValdSearch {
     java.lang.String[] descriptorData = {
       "\n$vald/apis/proto/v1/vald/search.proto\022\007" +
       "vald.v1\032#apis/proto/v1/payload/payload.p" +
-      "roto\032-github.com/gogo/protobuf/gogoproto" +
-      "/gogo.proto\0327github.com/gogo/googleapis/" +
-      "google/api/annotations.proto2\316\004\n\006Search\022" +
-      "U\n\006Search\022\032.payload.v1.Search.Request\032\033." +
-      "payload.v1.Search.Response\"\022\202\323\344\223\002\014\"\007/sea" +
-      "rch:\001*\022^\n\nSearchByID\022\034.payload.v1.Search" +
-      ".IDRequest\032\033.payload.v1.Search.Response\"" +
-      "\025\202\323\344\223\002\017\"\n/search/id:\001*\022S\n\014StreamSearch\022\032" +
-      ".payload.v1.Search.Request\032!.payload.v1." +
-      "Search.StreamResponse\"\000(\0010\001\022Y\n\020StreamSea" +
-      "rchByID\022\034.payload.v1.Search.IDRequest\032!." +
-      "payload.v1.Search.StreamResponse\"\000(\0010\001\022i" +
-      "\n\013MultiSearch\022\037.payload.v1.Search.MultiR" +
-      "equest\032\034.payload.v1.Search.Responses\"\033\202\323" +
-      "\344\223\002\025\"\020/search/multiple:\001*\022r\n\017MultiSearch" +
-      "ByID\022!.payload.v1.Search.MultiIDRequest\032" +
-      "\034.payload.v1.Search.Responses\"\036\202\323\344\223\002\030\"\023/" +
-      "search/id/multiple:\001*Bg\n\032org.vdaas.vald." +
-      "api.v1.valdB\nValdSearchP\001Z\'github.com/vd" +
-      "aas/vald/apis/grpc/v1/vald\310\342\036\001\320\342\036\001\340\342\036\001\300\343" +
-      "\036\001\310\343\036\001b\006proto3"
+      "roto\032=github.com/googleapis/googleapis/g" +
+      "oogle/api/annotations.proto2\316\004\n\006Search\022U" +
+      "\n\006Search\022\032.payload.v1.Search.Request\032\033.p" +
+      "ayload.v1.Search.Response\"\022\202\323\344\223\002\014\"\007/sear" +
+      "ch:\001*\022^\n\nSearchByID\022\034.payload.v1.Search." +
+      "IDRequest\032\033.payload.v1.Search.Response\"\025" +
+      "\202\323\344\223\002\017\"\n/search/id:\001*\022S\n\014StreamSearch\022\032." +
+      "payload.v1.Search.Request\032!.payload.v1.S" +
+      "earch.StreamResponse\"\000(\0010\001\022Y\n\020StreamSear" +
+      "chByID\022\034.payload.v1.Search.IDRequest\032!.p" +
+      "ayload.v1.Search.StreamResponse\"\000(\0010\001\022i\n" +
+      "\013MultiSearch\022\037.payload.v1.Search.MultiRe" +
+      "quest\032\034.payload.v1.Search.Responses\"\033\202\323\344" +
+      "\223\002\025\"\020/search/multiple:\001*\022r\n\017MultiSearchB" +
+      "yID\022!.payload.v1.Search.MultiIDRequest\032\034" +
+      ".payload.v1.Search.Responses\"\036\202\323\344\223\002\030\"\023/s" +
+      "earch/id/multiple:\001*BS\n\032org.vdaas.vald.a" +
+      "pi.v1.valdB\nValdSearchP\001Z\'github.com/vda" +
+      "as/vald/apis/grpc/v1/valdb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.vdaas.vald.api.v1.payload.ValdPayload.getDescriptor(),
-          com.google.protobuf.GoGoProtos.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.protobuf.GoGoProtos.goprotoRegistration);
-    registry.add(com.google.protobuf.GoGoProtos.marshalerAll);
-    registry.add(com.google.protobuf.GoGoProtos.messagenameAll);
-    registry.add(com.google.protobuf.GoGoProtos.sizerAll);
-    registry.add(com.google.protobuf.GoGoProtos.unmarshalerAll);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     org.vdaas.vald.api.v1.payload.ValdPayload.getDescriptor();
-    com.google.protobuf.GoGoProtos.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 
