@@ -7,32 +7,8 @@ jobs:
     name: build and publish
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libprotobuf-dev libprotoc-dev protobuf-compiler
-      - name: Install grpc-java
-        run: |
-          sudo apt-get install -y autoconf libtool
-          mkdir -p $HOME/protobuf
-          curl -L https://github.com/protocolbuffers/protobuf/archive/${PROTOBUF_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/protobuf
-          cd $HOME/protobuf
-          autoreconf -f -i -Wall,no-obsolete
-          ./configure --prefix=/usr --enable-static=no
-          make -j2
-          sudo make install
-          mkdir -p $HOME/grpc-java
-          curl -L https://github.com/grpc/grpc-java/archive/${GRPC_JAVA_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/grpc-java
-          cd $HOME/grpc-java/compiler/src/java_plugin/cpp
-          g++ -I. -I$HOME/protobuf/src \
-          *.cpp \
-          -L$HOME/protobuf/src/.libs \
-          -lprotoc -lprotobuf -lpthread --std=c++0x -s \
-          -o protoc-gen-grpc-java
-          cp protoc-gen-grpc-java $HOME/grpc-java
-        env:
-          PROTOBUF_VERSION: v3.14.0
-          GRPC_JAVA_VERSION: v1.34.1
+      - name: Install gRPC dependencies
+        uses: ./.github/actions/install-grpc-dependencies
       - uses: actions/checkout@v1
         with:
           fetch-depth: 10
@@ -43,7 +19,6 @@ jobs:
         run: |
           export GOPATH=$HOME/go
           export PATH=$HOME/grpc-java:$PATH
-          make vald
           make all
           make vald/sha/update
           make vald/client/java/version/update
@@ -66,33 +41,3 @@ jobs:
           version=`make vald/client/java/version/print`
           git tag ${version}
           git push --tags
-      - name: prepare for publish
-        run: |
-          ./gradlew clean
-          echo "${PGP_PRIVATE_KEY}" > private_key.txt
-          gpg --import --batch private_key.txt
-          rm -f private_key.txt
-          gpg --pinentry-mode loopback --passphrase "${GPG_PASSPHRASE}" --export-secret-keys -o ~/.gnupg/secring.gpg
-          cat << EOF > ~/.gradle/gradle.properties
-          org.gradle.daemon=true
-          signing.keyId=${GPG_KEYID}
-          signing.password=${GPG_PASSPHRASE}
-          signing.secretKeyRingFile=${HOME}/.gnupg/secring.gpg
-          sonatypeUsername=${SONATYPE_USERNAME}
-          sonatypePassword=${SONATYPE_PASSWORD}
-          nexusUsername=${SONATYPE_USERNAME}
-          nexusPassword=${SONATYPE_PASSWORD}
-          EOF
-        env:
-          GPG_KEYID: ${{ secrets.GPG_KEYID }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          PGP_PRIVATE_KEY: ${{ secrets.PGP_PRIVATE_KEY }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-      - name: publish
-        run: |
-          ./gradlew clean
-          ./gradlew build
-          ./gradlew uploadArchives -Prelease
-          sleep 120
-          ./gradlew closeAndReleaseRepository

@@ -1,19 +1,6 @@
 package org.vdaas.vald.api.v1.vald;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
@@ -172,42 +159,42 @@ public final class ObjectGrpc {
      */
     public void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> responseObserver) {
-      asyncUnimplementedUnaryCall(getExistsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExistsMethod(), responseObserver);
     }
 
     /**
      */
     public void getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
     }
 
     /**
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.VectorRequest> streamGetObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamVector> responseObserver) {
-      return asyncUnimplementedStreamingCall(getStreamGetObjectMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamGetObjectMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getExistsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.ID,
                 org.vdaas.vald.api.v1.payload.Object.ID>(
                   this, METHODID_EXISTS)))
           .addMethod(
             getGetObjectMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.VectorRequest,
                 org.vdaas.vald.api.v1.payload.Object.Vector>(
                   this, METHODID_GET_OBJECT)))
           .addMethod(
             getStreamGetObjectMethod(),
-            asyncBidiStreamingCall(
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
                 org.vdaas.vald.api.v1.payload.Object.VectorRequest,
                 org.vdaas.vald.api.v1.payload.Object.StreamVector>(
@@ -234,7 +221,7 @@ public final class ObjectGrpc {
      */
     public void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExistsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -242,7 +229,7 @@ public final class ObjectGrpc {
      */
     public void getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetObjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -250,7 +237,7 @@ public final class ObjectGrpc {
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.VectorRequest> streamGetObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamVector> responseObserver) {
-      return asyncBidiStreamingCall(
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamGetObjectMethod(), getCallOptions()), responseObserver);
     }
   }
@@ -272,14 +259,14 @@ public final class ObjectGrpc {
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.ID exists(org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExistsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public org.vdaas.vald.api.v1.payload.Object.Vector getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectMethod(), getCallOptions(), request);
     }
   }
@@ -302,7 +289,7 @@ public final class ObjectGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.ID> exists(
         org.vdaas.vald.api.v1.payload.Object.ID request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExistsMethod(), getCallOptions()), request);
     }
 
@@ -310,7 +297,7 @@ public final class ObjectGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Vector> getObject(
         org.vdaas.vald.api.v1.payload.Object.VectorRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetObjectMethod(), getCallOptions()), request);
     }
   }
