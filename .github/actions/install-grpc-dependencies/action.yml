@@ -33,4 +33,4 @@ runs:
         cp protoc-gen-grpc-java $HOME/grpc-java
       env:
         PROTOBUF_VERSION: v3.17.3
-        GRPC_JAVA_VERSION: v1.39.0
+        GRPC_JAVA_VERSION: v1.40.0
