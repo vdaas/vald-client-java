@@ -116,7 +116,7 @@ jobs:
       - name: publish
         run: |
           ./gradlew clean
-          ./gradlew build
+          ./gradlew build -x test
           ./gradlew uploadArchives -Prelease
           sleep 120
           ./gradlew closeAndReleaseRepository
