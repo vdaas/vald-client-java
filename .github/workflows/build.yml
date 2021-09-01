@@ -7,11 +7,11 @@ jobs:
     name: build and publish
     runs-on: ubuntu-latest
     steps:
-      - name: Install gRPC dependencies
-        uses: ./.github/actions/install-grpc-dependencies
       - uses: actions/checkout@v1
         with:
           fetch-depth: 10
+      - name: Install gRPC dependencies
+        uses: ./.github/actions/install-grpc-dependencies
       - name: checkout master
         run: |
           git checkout master
