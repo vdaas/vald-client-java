@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Remove related messages.
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Remove}
  */
 public final class Remove extends
@@ -85,36 +89,64 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The object ID to be removed.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1;</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
     /**
+     * <pre>
+     * The object ID to be removed.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1;</code>
      * @return The id.
      */
     org.vdaas.vald.api.v1.payload.Object.ID getId();
     /**
+     * <pre>
+     * The object ID to be removed.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder();
 
     /**
+     * <pre>
+     * The configuration of the remove request.
+     * </pre>
+     *
      * <code>.payload.v1.Remove.Config config = 2;</code>
      * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
+     * <pre>
+     * The configuration of the remove request.
+     * </pre>
+     *
      * <code>.payload.v1.Remove.Config config = 2;</code>
      * @return The config.
      */
     org.vdaas.vald.api.v1.payload.Remove.Config getConfig();
     /**
+     * <pre>
+     * The configuration of the remove request.
+     * </pre>
+     *
      * <code>.payload.v1.Remove.Config config = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Remove.ConfigOrBuilder getConfigOrBuilder();
   }
   /**
+   * <pre>
+   * Represent the remove request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Remove.Request}
    */
   public static final class Request extends
@@ -220,6 +252,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 1;
     private org.vdaas.vald.api.v1.payload.Object.ID id_;
     /**
+     * <pre>
+     * The object ID to be removed.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1;</code>
      * @return Whether the id field is set.
      */
@@ -228,6 +264,10 @@ private static final long serialVersionUID = 0L;
       return id_ != null;
     }
     /**
+     * <pre>
+     * The object ID to be removed.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1;</code>
      * @return The id.
      */
@@ -236,6 +276,10 @@ private static final long serialVersionUID = 0L;
       return id_ == null ? org.vdaas.vald.api.v1.payload.Object.ID.getDefaultInstance() : id_;
     }
     /**
+     * <pre>
+     * The object ID to be removed.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1;</code>
      */
     @java.lang.Override
@@ -246,6 +290,10 @@ private static final long serialVersionUID = 0L;
     public static final int CONFIG_FIELD_NUMBER = 2;
     private org.vdaas.vald.api.v1.payload.Remove.Config config_;
     /**
+     * <pre>
+     * The configuration of the remove request.
+     * </pre>
+     *
      * <code>.payload.v1.Remove.Config config = 2;</code>
      * @return Whether the config field is set.
      */
@@ -254,6 +302,10 @@ private static final long serialVersionUID = 0L;
       return config_ != null;
     }
     /**
+     * <pre>
+     * The configuration of the remove request.
+     * </pre>
+     *
      * <code>.payload.v1.Remove.Config config = 2;</code>
      * @return The config.
      */
@@ -262,6 +314,10 @@ private static final long serialVersionUID = 0L;
       return config_ == null ? org.vdaas.vald.api.v1.payload.Remove.Config.getDefaultInstance() : config_;
     }
     /**
+     * <pre>
+     * The configuration of the remove request.
+     * </pre>
+     *
      * <code>.payload.v1.Remove.Config config = 2;</code>
      */
     @java.lang.Override
@@ -446,6 +502,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the remove request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Remove.Request}
      */
     public static final class Builder extends
@@ -618,6 +678,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Object.ID, org.vdaas.vald.api.v1.payload.Object.ID.Builder, org.vdaas.vald.api.v1.payload.Object.IDOrBuilder> idBuilder_;
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        * @return Whether the id field is set.
        */
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
         return idBuilder_ != null || id_ != null;
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        * @return The id.
        */
@@ -636,6 +704,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public Builder setId(org.vdaas.vald.api.v1.payload.Object.ID value) {
@@ -652,6 +724,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public Builder setId(
@@ -666,6 +742,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public Builder mergeId(org.vdaas.vald.api.v1.payload.Object.ID value) {
@@ -684,6 +764,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public Builder clearId() {
@@ -698,6 +782,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.ID.Builder getIdBuilder() {
@@ -706,6 +794,10 @@ private static final long serialVersionUID = 0L;
         return getIdFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder() {
@@ -717,6 +809,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The object ID to be removed.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -737,6 +833,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Remove.Config, org.vdaas.vald.api.v1.payload.Remove.Config.Builder, org.vdaas.vald.api.v1.payload.Remove.ConfigOrBuilder> configBuilder_;
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        * @return Whether the config field is set.
        */
@@ -744,6 +844,10 @@ private static final long serialVersionUID = 0L;
         return configBuilder_ != null || config_ != null;
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        * @return The config.
        */
@@ -755,6 +859,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public Builder setConfig(org.vdaas.vald.api.v1.payload.Remove.Config value) {
@@ -771,6 +879,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public Builder setConfig(
@@ -785,6 +897,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public Builder mergeConfig(org.vdaas.vald.api.v1.payload.Remove.Config value) {
@@ -803,6 +919,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public Builder clearConfig() {
@@ -817,6 +937,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.Config.Builder getConfigBuilder() {
@@ -825,6 +949,10 @@ private static final long serialVersionUID = 0L;
         return getConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.ConfigOrBuilder getConfigOrBuilder() {
@@ -836,6 +964,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the remove request.
+       * </pre>
+       *
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -909,30 +1041,54 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     java.util.List<org.vdaas.vald.api.v1.payload.Remove.Request> 
         getRequestsList();
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Remove.Request getRequests(int index);
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     int getRequestsCount();
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     java.util.List<? extends org.vdaas.vald.api.v1.payload.Remove.RequestOrBuilder> 
         getRequestsOrBuilderList();
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Remove.RequestOrBuilder getRequestsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Represent the multiple remove request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Remove.MultiRequest}
    */
   public static final class MultiRequest extends
@@ -1026,6 +1182,10 @@ private static final long serialVersionUID = 0L;
     public static final int REQUESTS_FIELD_NUMBER = 1;
     private java.util.List<org.vdaas.vald.api.v1.payload.Remove.Request> requests_;
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1033,6 +1193,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1041,6 +1205,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1048,6 +1216,10 @@ private static final long serialVersionUID = 0L;
       return requests_.size();
     }
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1055,6 +1227,10 @@ private static final long serialVersionUID = 0L;
       return requests_.get(index);
     }
     /**
+     * <pre>
+     * Represent the multiple remove request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1221,6 +1397,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the multiple remove request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Remove.MultiRequest}
      */
     public static final class Builder extends
@@ -1418,6 +1598,10 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Remove.Request, org.vdaas.vald.api.v1.payload.Remove.Request.Builder, org.vdaas.vald.api.v1.payload.Remove.RequestOrBuilder> requestsBuilder_;
 
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Remove.Request> getRequestsList() {
@@ -1428,6 +1612,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public int getRequestsCount() {
@@ -1438,6 +1626,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.Request getRequests(int index) {
@@ -1448,6 +1640,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder setRequests(
@@ -1465,6 +1661,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder setRequests(
@@ -1479,6 +1679,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder addRequests(org.vdaas.vald.api.v1.payload.Remove.Request value) {
@@ -1495,6 +1699,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder addRequests(
@@ -1512,6 +1720,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder addRequests(
@@ -1526,6 +1738,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder addRequests(
@@ -1540,6 +1756,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder addAllRequests(
@@ -1555,6 +1775,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder clearRequests() {
@@ -1568,6 +1792,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public Builder removeRequests(int index) {
@@ -1581,6 +1809,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.Request.Builder getRequestsBuilder(
@@ -1588,6 +1820,10 @@ private static final long serialVersionUID = 0L;
         return getRequestsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.RequestOrBuilder getRequestsOrBuilder(
@@ -1598,6 +1834,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public java.util.List<? extends org.vdaas.vald.api.v1.payload.Remove.RequestOrBuilder> 
@@ -1609,6 +1849,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.Request.Builder addRequestsBuilder() {
@@ -1616,6 +1860,10 @@ private static final long serialVersionUID = 0L;
             org.vdaas.vald.api.v1.payload.Remove.Request.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.Request.Builder addRequestsBuilder(
@@ -1624,6 +1872,10 @@ private static final long serialVersionUID = 0L;
             index, org.vdaas.vald.api.v1.payload.Remove.Request.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple remove request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Remove.Request requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Remove.Request.Builder> 
@@ -1702,18 +1954,30 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A flag to skip exist check during upsert operation.
+     * </pre>
+     *
      * <code>bool skip_strict_exist_check = 1;</code>
      * @return The skipStrictExistCheck.
      */
     boolean getSkipStrictExistCheck();
 
     /**
+     * <pre>
+     * Remove timestamp.
+     * </pre>
+     *
      * <code>int64 timestamp = 3;</code>
      * @return The timestamp.
      */
     long getTimestamp();
   }
   /**
+   * <pre>
+   * Represent the remove configuration.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Remove.Config}
    */
   public static final class Config extends
@@ -1803,6 +2067,10 @@ private static final long serialVersionUID = 0L;
     public static final int SKIP_STRICT_EXIST_CHECK_FIELD_NUMBER = 1;
     private boolean skipStrictExistCheck_;
     /**
+     * <pre>
+     * A flag to skip exist check during upsert operation.
+     * </pre>
+     *
      * <code>bool skip_strict_exist_check = 1;</code>
      * @return The skipStrictExistCheck.
      */
@@ -1814,6 +2082,10 @@ private static final long serialVersionUID = 0L;
     public static final int TIMESTAMP_FIELD_NUMBER = 3;
     private long timestamp_;
     /**
+     * <pre>
+     * Remove timestamp.
+     * </pre>
+     *
      * <code>int64 timestamp = 3;</code>
      * @return The timestamp.
      */
@@ -1991,6 +2263,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the remove configuration.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Remove.Config}
      */
     public static final class Builder extends
@@ -2145,6 +2421,10 @@ private static final long serialVersionUID = 0L;
 
       private boolean skipStrictExistCheck_ ;
       /**
+       * <pre>
+       * A flag to skip exist check during upsert operation.
+       * </pre>
+       *
        * <code>bool skip_strict_exist_check = 1;</code>
        * @return The skipStrictExistCheck.
        */
@@ -2153,6 +2433,10 @@ private static final long serialVersionUID = 0L;
         return skipStrictExistCheck_;
       }
       /**
+       * <pre>
+       * A flag to skip exist check during upsert operation.
+       * </pre>
+       *
        * <code>bool skip_strict_exist_check = 1;</code>
        * @param value The skipStrictExistCheck to set.
        * @return This builder for chaining.
@@ -2164,6 +2448,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * A flag to skip exist check during upsert operation.
+       * </pre>
+       *
        * <code>bool skip_strict_exist_check = 1;</code>
        * @return This builder for chaining.
        */
@@ -2176,6 +2464,10 @@ private static final long serialVersionUID = 0L;
 
       private long timestamp_ ;
       /**
+       * <pre>
+       * Remove timestamp.
+       * </pre>
+       *
        * <code>int64 timestamp = 3;</code>
        * @return The timestamp.
        */
@@ -2184,6 +2476,10 @@ private static final long serialVersionUID = 0L;
         return timestamp_;
       }
       /**
+       * <pre>
+       * Remove timestamp.
+       * </pre>
+       *
        * <code>int64 timestamp = 3;</code>
        * @param value The timestamp to set.
        * @return This builder for chaining.
@@ -2195,6 +2491,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Remove timestamp.
+       * </pre>
+       *
        * <code>int64 timestamp = 3;</code>
        * @return This builder for chaining.
        */
@@ -2402,6 +2702,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Remove related messages.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Remove}
    */
   public static final class Builder extends

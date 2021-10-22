@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Represent an empty message.
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Empty}
  */
 public final class Empty extends
@@ -225,6 +229,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Represent an empty message.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Empty}
    */
   public static final class Builder extends

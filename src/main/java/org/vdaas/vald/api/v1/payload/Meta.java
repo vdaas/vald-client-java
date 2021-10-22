@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Meta related messages. (Not used)
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Meta}
  */
 public final class Meta extends
@@ -4148,6 +4152,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Meta related messages. (Not used)
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Meta}
    */
   public static final class Builder extends

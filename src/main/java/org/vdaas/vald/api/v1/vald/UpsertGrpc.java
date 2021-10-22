@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.vald;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Upsert service provides ways to insert/update vectors.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -153,10 +156,16 @@ public final class UpsertGrpc {
   }
 
   /**
+   * <pre>
+   * Upsert service provides ways to insert/update vectors.
+   * </pre>
    */
   public static abstract class UpsertImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * A method to insert/update a vector.
+     * </pre>
      */
     public void upsert(org.vdaas.vald.api.v1.payload.Upsert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -164,6 +173,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update multiple vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.Request> streamUpsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -171,6 +183,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update multiple vectors in a single request.
+     * </pre>
      */
     public void multiUpsert(org.vdaas.vald.api.v1.payload.Upsert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -205,6 +220,9 @@ public final class UpsertGrpc {
   }
 
   /**
+   * <pre>
+   * Upsert service provides ways to insert/update vectors.
+   * </pre>
    */
   public static final class UpsertStub extends io.grpc.stub.AbstractAsyncStub<UpsertStub> {
     private UpsertStub(
@@ -219,6 +237,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update a vector.
+     * </pre>
      */
     public void upsert(org.vdaas.vald.api.v1.payload.Upsert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -227,6 +248,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update multiple vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.Request> streamUpsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -235,6 +259,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update multiple vectors in a single request.
+     * </pre>
      */
     public void multiUpsert(org.vdaas.vald.api.v1.payload.Upsert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -244,6 +271,9 @@ public final class UpsertGrpc {
   }
 
   /**
+   * <pre>
+   * Upsert service provides ways to insert/update vectors.
+   * </pre>
    */
   public static final class UpsertBlockingStub extends io.grpc.stub.AbstractBlockingStub<UpsertBlockingStub> {
     private UpsertBlockingStub(
@@ -258,6 +288,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update a vector.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Location upsert(org.vdaas.vald.api.v1.payload.Upsert.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -265,6 +298,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update multiple vectors in a single request.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpsert(org.vdaas.vald.api.v1.payload.Upsert.MultiRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -273,6 +309,9 @@ public final class UpsertGrpc {
   }
 
   /**
+   * <pre>
+   * Upsert service provides ways to insert/update vectors.
+   * </pre>
    */
   public static final class UpsertFutureStub extends io.grpc.stub.AbstractFutureStub<UpsertFutureStub> {
     private UpsertFutureStub(
@@ -287,6 +326,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update a vector.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> upsert(
         org.vdaas.vald.api.v1.payload.Upsert.Request request) {
@@ -295,6 +337,9 @@ public final class UpsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert/update multiple vectors in a single request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpsert(
         org.vdaas.vald.api.v1.payload.Upsert.MultiRequest request) {

@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.vald;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Object service provides ways to fetch indexed vectors.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -153,10 +156,16 @@ public final class ObjectGrpc {
   }
 
   /**
+   * <pre>
+   * Object service provides ways to fetch indexed vectors.
+   * </pre>
    */
   public static abstract class ObjectImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * A method to check whether a specified ID is indexed or not.
+     * </pre>
      */
     public void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> responseObserver) {
@@ -164,6 +173,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to fetch a vector.
+     * </pre>
      */
     public void getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
@@ -171,6 +183,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to fetch vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.VectorRequest> streamGetObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamVector> responseObserver) {
@@ -205,6 +220,9 @@ public final class ObjectGrpc {
   }
 
   /**
+   * <pre>
+   * Object service provides ways to fetch indexed vectors.
+   * </pre>
    */
   public static final class ObjectStub extends io.grpc.stub.AbstractAsyncStub<ObjectStub> {
     private ObjectStub(
@@ -219,6 +237,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to check whether a specified ID is indexed or not.
+     * </pre>
      */
     public void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> responseObserver) {
@@ -227,6 +248,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to fetch a vector.
+     * </pre>
      */
     public void getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
@@ -235,6 +259,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to fetch vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.VectorRequest> streamGetObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamVector> responseObserver) {
@@ -244,6 +271,9 @@ public final class ObjectGrpc {
   }
 
   /**
+   * <pre>
+   * Object service provides ways to fetch indexed vectors.
+   * </pre>
    */
   public static final class ObjectBlockingStub extends io.grpc.stub.AbstractBlockingStub<ObjectBlockingStub> {
     private ObjectBlockingStub(
@@ -258,6 +288,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to check whether a specified ID is indexed or not.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.ID exists(org.vdaas.vald.api.v1.payload.Object.ID request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -265,6 +298,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to fetch a vector.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Vector getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -273,6 +309,9 @@ public final class ObjectGrpc {
   }
 
   /**
+   * <pre>
+   * Object service provides ways to fetch indexed vectors.
+   * </pre>
    */
   public static final class ObjectFutureStub extends io.grpc.stub.AbstractFutureStub<ObjectFutureStub> {
     private ObjectFutureStub(
@@ -287,6 +326,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to check whether a specified ID is indexed or not.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.ID> exists(
         org.vdaas.vald.api.v1.payload.Object.ID request) {
@@ -295,6 +337,9 @@ public final class ObjectGrpc {
     }
 
     /**
+     * <pre>
+     * A method to fetch a vector.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Vector> getObject(
         org.vdaas.vald.api.v1.payload.Object.VectorRequest request) {

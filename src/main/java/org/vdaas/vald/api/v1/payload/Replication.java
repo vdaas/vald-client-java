@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Replication related messages. (Not used)
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Replication}
  */
 public final class Replication extends
@@ -2790,6 +2794,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Replication related messages. (Not used)
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Replication}
    */
   public static final class Builder extends

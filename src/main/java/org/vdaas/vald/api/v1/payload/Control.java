@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Control related messages.
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Control}
  */
 public final class Control extends
@@ -85,12 +89,20 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The pool size of the create index operation.
+     * </pre>
+     *
      * <code>uint32 pool_size = 1 [(.validate.rules) = { ... }</code>
      * @return The poolSize.
      */
     int getPoolSize();
   }
   /**
+   * <pre>
+   * Represent the create index request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Control.CreateIndexRequest}
    */
   public static final class CreateIndexRequest extends
@@ -175,6 +187,10 @@ private static final long serialVersionUID = 0L;
     public static final int POOL_SIZE_FIELD_NUMBER = 1;
     private int poolSize_;
     /**
+     * <pre>
+     * The pool size of the create index operation.
+     * </pre>
+     *
      * <code>uint32 pool_size = 1 [(.validate.rules) = { ... }</code>
      * @return The poolSize.
      */
@@ -339,6 +355,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the create index request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Control.CreateIndexRequest}
      */
     public static final class Builder extends
@@ -487,6 +507,10 @@ private static final long serialVersionUID = 0L;
 
       private int poolSize_ ;
       /**
+       * <pre>
+       * The pool size of the create index operation.
+       * </pre>
+       *
        * <code>uint32 pool_size = 1 [(.validate.rules) = { ... }</code>
        * @return The poolSize.
        */
@@ -495,6 +519,10 @@ private static final long serialVersionUID = 0L;
         return poolSize_;
       }
       /**
+       * <pre>
+       * The pool size of the create index operation.
+       * </pre>
+       *
        * <code>uint32 pool_size = 1 [(.validate.rules) = { ... }</code>
        * @param value The poolSize to set.
        * @return This builder for chaining.
@@ -506,6 +534,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The pool size of the create index operation.
+       * </pre>
+       *
        * <code>uint32 pool_size = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -713,6 +745,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Control related messages.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Control}
    */
   public static final class Builder extends

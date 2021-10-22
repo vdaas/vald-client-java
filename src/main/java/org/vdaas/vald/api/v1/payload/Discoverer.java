@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Discoverer related messages.
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Discoverer}
  */
 public final class Discoverer extends
@@ -85,11 +89,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The agent name to be discover.
+     * </pre>
+     *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * The agent name to be discover.
+     * </pre>
+     *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
@@ -97,11 +109,19 @@ private static final long serialVersionUID = 0L;
         getNameBytes();
 
     /**
+     * <pre>
+     * The namespace to be discover.
+     * </pre>
+     *
      * <code>string namespace = 2;</code>
      * @return The namespace.
      */
     java.lang.String getNamespace();
     /**
+     * <pre>
+     * The namespace to be discover.
+     * </pre>
+     *
      * <code>string namespace = 2;</code>
      * @return The bytes for namespace.
      */
@@ -109,11 +129,19 @@ private static final long serialVersionUID = 0L;
         getNamespaceBytes();
 
     /**
+     * <pre>
+     * The node to be discover.
+     * </pre>
+     *
      * <code>string node = 3;</code>
      * @return The node.
      */
     java.lang.String getNode();
     /**
+     * <pre>
+     * The node to be discover.
+     * </pre>
+     *
      * <code>string node = 3;</code>
      * @return The bytes for node.
      */
@@ -121,6 +149,10 @@ private static final long serialVersionUID = 0L;
         getNodeBytes();
   }
   /**
+   * <pre>
+   * Represent the dicoverer request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Discoverer.Request}
    */
   public static final class Request extends
@@ -221,6 +253,10 @@ private static final long serialVersionUID = 0L;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * The agent name to be discover.
+     * </pre>
+     *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
@@ -238,6 +274,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The agent name to be discover.
+     * </pre>
+     *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
@@ -259,6 +299,10 @@ private static final long serialVersionUID = 0L;
     public static final int NAMESPACE_FIELD_NUMBER = 2;
     private volatile java.lang.Object namespace_;
     /**
+     * <pre>
+     * The namespace to be discover.
+     * </pre>
+     *
      * <code>string namespace = 2;</code>
      * @return The namespace.
      */
@@ -276,6 +320,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The namespace to be discover.
+     * </pre>
+     *
      * <code>string namespace = 2;</code>
      * @return The bytes for namespace.
      */
@@ -297,6 +345,10 @@ private static final long serialVersionUID = 0L;
     public static final int NODE_FIELD_NUMBER = 3;
     private volatile java.lang.Object node_;
     /**
+     * <pre>
+     * The node to be discover.
+     * </pre>
+     *
      * <code>string node = 3;</code>
      * @return The node.
      */
@@ -314,6 +366,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The node to be discover.
+     * </pre>
+     *
      * <code>string node = 3;</code>
      * @return The bytes for node.
      */
@@ -507,6 +563,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the dicoverer request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Discoverer.Request}
      */
     public static final class Builder extends
@@ -670,6 +730,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * The agent name to be discover.
+       * </pre>
+       *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
@@ -686,6 +750,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The agent name to be discover.
+       * </pre>
+       *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
@@ -703,6 +771,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The agent name to be discover.
+       * </pre>
+       *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -718,6 +790,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The agent name to be discover.
+       * </pre>
+       *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -728,6 +804,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The agent name to be discover.
+       * </pre>
+       *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -746,6 +826,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object namespace_ = "";
       /**
+       * <pre>
+       * The namespace to be discover.
+       * </pre>
+       *
        * <code>string namespace = 2;</code>
        * @return The namespace.
        */
@@ -762,6 +846,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The namespace to be discover.
+       * </pre>
+       *
        * <code>string namespace = 2;</code>
        * @return The bytes for namespace.
        */
@@ -779,6 +867,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The namespace to be discover.
+       * </pre>
+       *
        * <code>string namespace = 2;</code>
        * @param value The namespace to set.
        * @return This builder for chaining.
@@ -794,6 +886,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The namespace to be discover.
+       * </pre>
+       *
        * <code>string namespace = 2;</code>
        * @return This builder for chaining.
        */
@@ -804,6 +900,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The namespace to be discover.
+       * </pre>
+       *
        * <code>string namespace = 2;</code>
        * @param value The bytes for namespace to set.
        * @return This builder for chaining.
@@ -822,6 +922,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object node_ = "";
       /**
+       * <pre>
+       * The node to be discover.
+       * </pre>
+       *
        * <code>string node = 3;</code>
        * @return The node.
        */
@@ -838,6 +942,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The node to be discover.
+       * </pre>
+       *
        * <code>string node = 3;</code>
        * @return The bytes for node.
        */
@@ -855,6 +963,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The node to be discover.
+       * </pre>
+       *
        * <code>string node = 3;</code>
        * @param value The node to set.
        * @return This builder for chaining.
@@ -870,6 +982,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The node to be discover.
+       * </pre>
+       *
        * <code>string node = 3;</code>
        * @return This builder for chaining.
        */
@@ -880,6 +996,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The node to be discover.
+       * </pre>
+       *
        * <code>string node = 3;</code>
        * @param value The bytes for node to set.
        * @return This builder for chaining.
@@ -1093,6 +1213,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Discoverer related messages.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Discoverer}
    */
   public static final class Builder extends

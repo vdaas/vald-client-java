@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.vald;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Remove service provides ways to remove indexed vectors.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -153,10 +156,16 @@ public final class RemoveGrpc {
   }
 
   /**
+   * <pre>
+   * Remove service provides ways to remove indexed vectors.
+   * </pre>
    */
   public static abstract class RemoveImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * A method to remove an indexed vector.
+     * </pre>
      */
     public void remove(org.vdaas.vald.api.v1.payload.Remove.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -164,6 +173,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove multiple indexed vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -171,6 +183,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove multiple indexed vectors in a single request.
+     * </pre>
      */
     public void multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -205,6 +220,9 @@ public final class RemoveGrpc {
   }
 
   /**
+   * <pre>
+   * Remove service provides ways to remove indexed vectors.
+   * </pre>
    */
   public static final class RemoveStub extends io.grpc.stub.AbstractAsyncStub<RemoveStub> {
     private RemoveStub(
@@ -219,6 +237,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove an indexed vector.
+     * </pre>
      */
     public void remove(org.vdaas.vald.api.v1.payload.Remove.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -227,6 +248,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove multiple indexed vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -235,6 +259,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove multiple indexed vectors in a single request.
+     * </pre>
      */
     public void multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -244,6 +271,9 @@ public final class RemoveGrpc {
   }
 
   /**
+   * <pre>
+   * Remove service provides ways to remove indexed vectors.
+   * </pre>
    */
   public static final class RemoveBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemoveBlockingStub> {
     private RemoveBlockingStub(
@@ -258,6 +288,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove an indexed vector.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Location remove(org.vdaas.vald.api.v1.payload.Remove.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -265,6 +298,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove multiple indexed vectors in a single request.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -273,6 +309,9 @@ public final class RemoveGrpc {
   }
 
   /**
+   * <pre>
+   * Remove service provides ways to remove indexed vectors.
+   * </pre>
    */
   public static final class RemoveFutureStub extends io.grpc.stub.AbstractFutureStub<RemoveFutureStub> {
     private RemoveFutureStub(
@@ -287,6 +326,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove an indexed vector.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> remove(
         org.vdaas.vald.api.v1.payload.Remove.Request request) {
@@ -295,6 +337,9 @@ public final class RemoveGrpc {
     }
 
     /**
+     * <pre>
+     * A method to remove multiple indexed vectors in a single request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiRemove(
         org.vdaas.vald.api.v1.payload.Remove.MultiRequest request) {

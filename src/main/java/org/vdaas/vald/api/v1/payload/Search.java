@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Search related messages.
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Search}
  */
 public final class Search extends
@@ -85,16 +89,28 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The vector to be searched.
+     * </pre>
+     *
      * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
      * @return A list containing the vector.
      */
     java.util.List<java.lang.Float> getVectorList();
     /**
+     * <pre>
+     * The vector to be searched.
+     * </pre>
+     *
      * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
      * @return The count of vector.
      */
     int getVectorCount();
     /**
+     * <pre>
+     * The vector to be searched.
+     * </pre>
+     *
      * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The vector at the given index.
@@ -102,21 +118,37 @@ private static final long serialVersionUID = 0L;
     float getVector(int index);
 
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return The config.
      */
     org.vdaas.vald.api.v1.payload.Search.Config getConfig();
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder getConfigOrBuilder();
   }
   /**
+   * <pre>
+   * Represent a search request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.Request}
    */
   public static final class Request extends
@@ -235,6 +267,10 @@ private static final long serialVersionUID = 0L;
     public static final int VECTOR_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.FloatList vector_;
     /**
+     * <pre>
+     * The vector to be searched.
+     * </pre>
+     *
      * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
      * @return A list containing the vector.
      */
@@ -244,6 +280,10 @@ private static final long serialVersionUID = 0L;
       return vector_;
     }
     /**
+     * <pre>
+     * The vector to be searched.
+     * </pre>
+     *
      * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
      * @return The count of vector.
      */
@@ -251,6 +291,10 @@ private static final long serialVersionUID = 0L;
       return vector_.size();
     }
     /**
+     * <pre>
+     * The vector to be searched.
+     * </pre>
+     *
      * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The vector at the given index.
@@ -263,6 +307,10 @@ private static final long serialVersionUID = 0L;
     public static final int CONFIG_FIELD_NUMBER = 2;
     private org.vdaas.vald.api.v1.payload.Search.Config config_;
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return Whether the config field is set.
      */
@@ -271,6 +319,10 @@ private static final long serialVersionUID = 0L;
       return config_ != null;
     }
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return The config.
      */
@@ -279,6 +331,10 @@ private static final long serialVersionUID = 0L;
       return config_ == null ? org.vdaas.vald.api.v1.payload.Search.Config.getDefaultInstance() : config_;
     }
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      */
     @java.lang.Override
@@ -472,6 +528,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent a search request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.Request}
      */
     public static final class Builder extends
@@ -653,6 +713,10 @@ private static final long serialVersionUID = 0L;
          }
       }
       /**
+       * <pre>
+       * The vector to be searched.
+       * </pre>
+       *
        * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
        * @return A list containing the vector.
        */
@@ -662,6 +726,10 @@ private static final long serialVersionUID = 0L;
                  java.util.Collections.unmodifiableList(vector_) : vector_;
       }
       /**
+       * <pre>
+       * The vector to be searched.
+       * </pre>
+       *
        * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
        * @return The count of vector.
        */
@@ -669,6 +737,10 @@ private static final long serialVersionUID = 0L;
         return vector_.size();
       }
       /**
+       * <pre>
+       * The vector to be searched.
+       * </pre>
+       *
        * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
        * @return The vector at the given index.
@@ -677,6 +749,10 @@ private static final long serialVersionUID = 0L;
         return vector_.getFloat(index);
       }
       /**
+       * <pre>
+       * The vector to be searched.
+       * </pre>
+       *
        * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The vector to set.
@@ -690,6 +766,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector to be searched.
+       * </pre>
+       *
        * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
        * @param value The vector to add.
        * @return This builder for chaining.
@@ -701,6 +781,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector to be searched.
+       * </pre>
+       *
        * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
        * @param values The vector to add.
        * @return This builder for chaining.
@@ -714,6 +798,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector to be searched.
+       * </pre>
+       *
        * <code>repeated float vector = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -728,6 +816,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Search.Config, org.vdaas.vald.api.v1.payload.Search.Config.Builder, org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder> configBuilder_;
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        * @return Whether the config field is set.
        */
@@ -735,6 +827,10 @@ private static final long serialVersionUID = 0L;
         return configBuilder_ != null || config_ != null;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        * @return The config.
        */
@@ -746,6 +842,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder setConfig(org.vdaas.vald.api.v1.payload.Search.Config value) {
@@ -762,6 +862,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder setConfig(
@@ -776,6 +880,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder mergeConfig(org.vdaas.vald.api.v1.payload.Search.Config value) {
@@ -794,6 +902,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder clearConfig() {
@@ -808,6 +920,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Config.Builder getConfigBuilder() {
@@ -816,6 +932,10 @@ private static final long serialVersionUID = 0L;
         return getConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder getConfigOrBuilder() {
@@ -827,6 +947,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -900,30 +1024,54 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     java.util.List<org.vdaas.vald.api.v1.payload.Search.Request> 
         getRequestsList();
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.Request getRequests(int index);
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     int getRequestsCount();
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.RequestOrBuilder> 
         getRequestsOrBuilderList();
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.RequestOrBuilder getRequestsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Represent the multiple search request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.MultiRequest}
    */
   public static final class MultiRequest extends
@@ -1017,6 +1165,10 @@ private static final long serialVersionUID = 0L;
     public static final int REQUESTS_FIELD_NUMBER = 1;
     private java.util.List<org.vdaas.vald.api.v1.payload.Search.Request> requests_;
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1024,6 +1176,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1032,6 +1188,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1039,6 +1199,10 @@ private static final long serialVersionUID = 0L;
       return requests_.size();
     }
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1046,6 +1210,10 @@ private static final long serialVersionUID = 0L;
       return requests_.get(index);
     }
     /**
+     * <pre>
+     * Represent the multiple search request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Request requests = 1;</code>
      */
     @java.lang.Override
@@ -1212,6 +1380,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the multiple search request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.MultiRequest}
      */
     public static final class Builder extends
@@ -1409,6 +1581,10 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Search.Request, org.vdaas.vald.api.v1.payload.Search.Request.Builder, org.vdaas.vald.api.v1.payload.Search.RequestOrBuilder> requestsBuilder_;
 
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.Request> getRequestsList() {
@@ -1419,6 +1595,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public int getRequestsCount() {
@@ -1429,6 +1609,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Request getRequests(int index) {
@@ -1439,6 +1623,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder setRequests(
@@ -1456,6 +1644,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder setRequests(
@@ -1470,6 +1662,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder addRequests(org.vdaas.vald.api.v1.payload.Search.Request value) {
@@ -1486,6 +1682,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder addRequests(
@@ -1503,6 +1703,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder addRequests(
@@ -1517,6 +1721,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder addRequests(
@@ -1531,6 +1739,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder addAllRequests(
@@ -1546,6 +1758,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder clearRequests() {
@@ -1559,6 +1775,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public Builder removeRequests(int index) {
@@ -1572,6 +1792,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Request.Builder getRequestsBuilder(
@@ -1579,6 +1803,10 @@ private static final long serialVersionUID = 0L;
         return getRequestsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.RequestOrBuilder getRequestsOrBuilder(
@@ -1589,6 +1817,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.RequestOrBuilder> 
@@ -1600,6 +1832,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Request.Builder addRequestsBuilder() {
@@ -1607,6 +1843,10 @@ private static final long serialVersionUID = 0L;
             org.vdaas.vald.api.v1.payload.Search.Request.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Request.Builder addRequestsBuilder(
@@ -1615,6 +1855,10 @@ private static final long serialVersionUID = 0L;
             index, org.vdaas.vald.api.v1.payload.Search.Request.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Request requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.Request.Builder> 
@@ -1693,11 +1937,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The vector ID to be searched.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The vector ID to be searched.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -1705,21 +1957,37 @@ private static final long serialVersionUID = 0L;
         getIdBytes();
 
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return The config.
      */
     org.vdaas.vald.api.v1.payload.Search.Config getConfig();
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder getConfigOrBuilder();
   }
   /**
+   * <pre>
+   * Represent a search by ID request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.IDRequest}
    */
   public static final class IDRequest extends
@@ -1819,6 +2087,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The vector ID to be searched.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -1836,6 +2108,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The vector ID to be searched.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -1857,6 +2133,10 @@ private static final long serialVersionUID = 0L;
     public static final int CONFIG_FIELD_NUMBER = 2;
     private org.vdaas.vald.api.v1.payload.Search.Config config_;
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return Whether the config field is set.
      */
@@ -1865,6 +2145,10 @@ private static final long serialVersionUID = 0L;
       return config_ != null;
     }
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return The config.
      */
@@ -1873,6 +2157,10 @@ private static final long serialVersionUID = 0L;
       return config_ == null ? org.vdaas.vald.api.v1.payload.Search.Config.getDefaultInstance() : config_;
     }
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      */
     @java.lang.Override
@@ -2051,6 +2339,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent a search by ID request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.IDRequest}
      */
     public static final class Builder extends
@@ -2214,6 +2506,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The vector ID to be searched.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -2230,6 +2526,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID to be searched.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -2247,6 +2547,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID to be searched.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -2262,6 +2566,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID to be searched.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2272,6 +2580,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID to be searched.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -2292,6 +2604,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Search.Config, org.vdaas.vald.api.v1.payload.Search.Config.Builder, org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder> configBuilder_;
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        * @return Whether the config field is set.
        */
@@ -2299,6 +2615,10 @@ private static final long serialVersionUID = 0L;
         return configBuilder_ != null || config_ != null;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        * @return The config.
        */
@@ -2310,6 +2630,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder setConfig(org.vdaas.vald.api.v1.payload.Search.Config value) {
@@ -2326,6 +2650,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder setConfig(
@@ -2340,6 +2668,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder mergeConfig(org.vdaas.vald.api.v1.payload.Search.Config value) {
@@ -2358,6 +2690,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder clearConfig() {
@@ -2372,6 +2708,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Config.Builder getConfigBuilder() {
@@ -2380,6 +2720,10 @@ private static final long serialVersionUID = 0L;
         return getConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder getConfigOrBuilder() {
@@ -2391,6 +2735,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2464,30 +2812,54 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     java.util.List<org.vdaas.vald.api.v1.payload.Search.IDRequest> 
         getRequestsList();
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.IDRequest getRequests(int index);
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     int getRequestsCount();
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.IDRequestOrBuilder> 
         getRequestsOrBuilderList();
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.IDRequestOrBuilder getRequestsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Represent the multiple search by ID request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.MultiIDRequest}
    */
   public static final class MultiIDRequest extends
@@ -2581,6 +2953,10 @@ private static final long serialVersionUID = 0L;
     public static final int REQUESTS_FIELD_NUMBER = 1;
     private java.util.List<org.vdaas.vald.api.v1.payload.Search.IDRequest> requests_;
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -2588,6 +2964,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -2596,6 +2976,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -2603,6 +2987,10 @@ private static final long serialVersionUID = 0L;
       return requests_.size();
     }
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -2610,6 +2998,10 @@ private static final long serialVersionUID = 0L;
       return requests_.get(index);
     }
     /**
+     * <pre>
+     * Represent the multiple search by ID request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -2776,6 +3168,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the multiple search by ID request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.MultiIDRequest}
      */
     public static final class Builder extends
@@ -2973,6 +3369,10 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Search.IDRequest, org.vdaas.vald.api.v1.payload.Search.IDRequest.Builder, org.vdaas.vald.api.v1.payload.Search.IDRequestOrBuilder> requestsBuilder_;
 
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.IDRequest> getRequestsList() {
@@ -2983,6 +3383,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public int getRequestsCount() {
@@ -2993,6 +3397,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.IDRequest getRequests(int index) {
@@ -3003,6 +3411,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder setRequests(
@@ -3020,6 +3432,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder setRequests(
@@ -3034,6 +3450,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder addRequests(org.vdaas.vald.api.v1.payload.Search.IDRequest value) {
@@ -3050,6 +3470,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder addRequests(
@@ -3067,6 +3491,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder addRequests(
@@ -3081,6 +3509,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder addRequests(
@@ -3095,6 +3527,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder addAllRequests(
@@ -3110,6 +3546,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder clearRequests() {
@@ -3123,6 +3563,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public Builder removeRequests(int index) {
@@ -3136,6 +3580,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.IDRequest.Builder getRequestsBuilder(
@@ -3143,6 +3591,10 @@ private static final long serialVersionUID = 0L;
         return getRequestsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.IDRequestOrBuilder getRequestsOrBuilder(
@@ -3153,6 +3605,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.IDRequestOrBuilder> 
@@ -3164,6 +3620,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.IDRequest.Builder addRequestsBuilder() {
@@ -3171,6 +3631,10 @@ private static final long serialVersionUID = 0L;
             org.vdaas.vald.api.v1.payload.Search.IDRequest.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.IDRequest.Builder addRequestsBuilder(
@@ -3179,6 +3643,10 @@ private static final long serialVersionUID = 0L;
             index, org.vdaas.vald.api.v1.payload.Search.IDRequest.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search by ID request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.IDRequest requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.IDRequest.Builder> 
@@ -3257,42 +3725,74 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The binary object to be searched.
+     * </pre>
+     *
      * <code>bytes object = 1;</code>
      * @return The object.
      */
     com.google.protobuf.ByteString getObject();
 
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return Whether the config field is set.
      */
     boolean hasConfig();
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return The config.
      */
     org.vdaas.vald.api.v1.payload.Search.Config getConfig();
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder getConfigOrBuilder();
 
     /**
+     * <pre>
+     * Filter configuration.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
      * @return Whether the vectorizer field is set.
      */
     boolean hasVectorizer();
     /**
+     * <pre>
+     * Filter configuration.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
      * @return The vectorizer.
      */
     org.vdaas.vald.api.v1.payload.Filter.Target getVectorizer();
     /**
+     * <pre>
+     * Filter configuration.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
      */
     org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getVectorizerOrBuilder();
   }
   /**
+   * <pre>
+   * Represent a search by binary object request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.ObjectRequest}
    */
   public static final class ObjectRequest extends
@@ -3404,6 +3904,10 @@ private static final long serialVersionUID = 0L;
     public static final int OBJECT_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString object_;
     /**
+     * <pre>
+     * The binary object to be searched.
+     * </pre>
+     *
      * <code>bytes object = 1;</code>
      * @return The object.
      */
@@ -3415,6 +3919,10 @@ private static final long serialVersionUID = 0L;
     public static final int CONFIG_FIELD_NUMBER = 2;
     private org.vdaas.vald.api.v1.payload.Search.Config config_;
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return Whether the config field is set.
      */
@@ -3423,6 +3931,10 @@ private static final long serialVersionUID = 0L;
       return config_ != null;
     }
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      * @return The config.
      */
@@ -3431,6 +3943,10 @@ private static final long serialVersionUID = 0L;
       return config_ == null ? org.vdaas.vald.api.v1.payload.Search.Config.getDefaultInstance() : config_;
     }
     /**
+     * <pre>
+     * The configuration of the search request.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Config config = 2;</code>
      */
     @java.lang.Override
@@ -3441,6 +3957,10 @@ private static final long serialVersionUID = 0L;
     public static final int VECTORIZER_FIELD_NUMBER = 3;
     private org.vdaas.vald.api.v1.payload.Filter.Target vectorizer_;
     /**
+     * <pre>
+     * Filter configuration.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
      * @return Whether the vectorizer field is set.
      */
@@ -3449,6 +3969,10 @@ private static final long serialVersionUID = 0L;
       return vectorizer_ != null;
     }
     /**
+     * <pre>
+     * Filter configuration.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
      * @return The vectorizer.
      */
@@ -3457,6 +3981,10 @@ private static final long serialVersionUID = 0L;
       return vectorizer_ == null ? org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance() : vectorizer_;
     }
     /**
+     * <pre>
+     * Filter configuration.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
      */
     @java.lang.Override
@@ -3652,6 +4180,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent a search by binary object request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.ObjectRequest}
      */
     public static final class Builder extends
@@ -3828,6 +4360,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.ByteString object_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * The binary object to be searched.
+       * </pre>
+       *
        * <code>bytes object = 1;</code>
        * @return The object.
        */
@@ -3836,6 +4372,10 @@ private static final long serialVersionUID = 0L;
         return object_;
       }
       /**
+       * <pre>
+       * The binary object to be searched.
+       * </pre>
+       *
        * <code>bytes object = 1;</code>
        * @param value The object to set.
        * @return This builder for chaining.
@@ -3850,6 +4390,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The binary object to be searched.
+       * </pre>
+       *
        * <code>bytes object = 1;</code>
        * @return This builder for chaining.
        */
@@ -3864,6 +4408,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Search.Config, org.vdaas.vald.api.v1.payload.Search.Config.Builder, org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder> configBuilder_;
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        * @return Whether the config field is set.
        */
@@ -3871,6 +4419,10 @@ private static final long serialVersionUID = 0L;
         return configBuilder_ != null || config_ != null;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        * @return The config.
        */
@@ -3882,6 +4434,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder setConfig(org.vdaas.vald.api.v1.payload.Search.Config value) {
@@ -3898,6 +4454,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder setConfig(
@@ -3912,6 +4472,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder mergeConfig(org.vdaas.vald.api.v1.payload.Search.Config value) {
@@ -3930,6 +4494,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public Builder clearConfig() {
@@ -3944,6 +4512,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Config.Builder getConfigBuilder() {
@@ -3952,6 +4524,10 @@ private static final long serialVersionUID = 0L;
         return getConfigFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ConfigOrBuilder getConfigOrBuilder() {
@@ -3963,6 +4539,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The configuration of the search request.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Config config = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3983,6 +4563,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Filter.Target, org.vdaas.vald.api.v1.payload.Filter.Target.Builder, org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> vectorizerBuilder_;
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        * @return Whether the vectorizer field is set.
        */
@@ -3990,6 +4574,10 @@ private static final long serialVersionUID = 0L;
         return vectorizerBuilder_ != null || vectorizer_ != null;
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        * @return The vectorizer.
        */
@@ -4001,6 +4589,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        */
       public Builder setVectorizer(org.vdaas.vald.api.v1.payload.Filter.Target value) {
@@ -4017,6 +4609,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        */
       public Builder setVectorizer(
@@ -4031,6 +4627,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        */
       public Builder mergeVectorizer(org.vdaas.vald.api.v1.payload.Filter.Target value) {
@@ -4049,6 +4649,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        */
       public Builder clearVectorizer() {
@@ -4063,6 +4667,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.Target.Builder getVectorizerBuilder() {
@@ -4071,6 +4679,10 @@ private static final long serialVersionUID = 0L;
         return getVectorizerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getVectorizerOrBuilder() {
@@ -4082,6 +4694,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Filter configuration.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Target vectorizer = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4155,30 +4771,54 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     java.util.List<org.vdaas.vald.api.v1.payload.Search.ObjectRequest> 
         getRequestsList();
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.ObjectRequest getRequests(int index);
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     int getRequestsCount();
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.ObjectRequestOrBuilder> 
         getRequestsOrBuilderList();
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.ObjectRequestOrBuilder getRequestsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Represent the multiple search by binary object request.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.MultiObjectRequest}
    */
   public static final class MultiObjectRequest extends
@@ -4272,6 +4912,10 @@ private static final long serialVersionUID = 0L;
     public static final int REQUESTS_FIELD_NUMBER = 1;
     private java.util.List<org.vdaas.vald.api.v1.payload.Search.ObjectRequest> requests_;
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -4279,6 +4923,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -4287,6 +4935,10 @@ private static final long serialVersionUID = 0L;
       return requests_;
     }
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -4294,6 +4946,10 @@ private static final long serialVersionUID = 0L;
       return requests_.size();
     }
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -4301,6 +4957,10 @@ private static final long serialVersionUID = 0L;
       return requests_.get(index);
     }
     /**
+     * <pre>
+     * Represent the multiple search by binary object request content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
      */
     @java.lang.Override
@@ -4467,6 +5127,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the multiple search by binary object request.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.MultiObjectRequest}
      */
     public static final class Builder extends
@@ -4664,6 +5328,10 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Search.ObjectRequest, org.vdaas.vald.api.v1.payload.Search.ObjectRequest.Builder, org.vdaas.vald.api.v1.payload.Search.ObjectRequestOrBuilder> requestsBuilder_;
 
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.ObjectRequest> getRequestsList() {
@@ -4674,6 +5342,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public int getRequestsCount() {
@@ -4684,6 +5356,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ObjectRequest getRequests(int index) {
@@ -4694,6 +5370,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder setRequests(
@@ -4711,6 +5391,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder setRequests(
@@ -4725,6 +5409,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder addRequests(org.vdaas.vald.api.v1.payload.Search.ObjectRequest value) {
@@ -4741,6 +5429,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder addRequests(
@@ -4758,6 +5450,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder addRequests(
@@ -4772,6 +5468,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder addRequests(
@@ -4786,6 +5486,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder addAllRequests(
@@ -4801,6 +5505,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder clearRequests() {
@@ -4814,6 +5522,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public Builder removeRequests(int index) {
@@ -4827,6 +5539,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ObjectRequest.Builder getRequestsBuilder(
@@ -4834,6 +5550,10 @@ private static final long serialVersionUID = 0L;
         return getRequestsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ObjectRequestOrBuilder getRequestsOrBuilder(
@@ -4844,6 +5564,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.ObjectRequestOrBuilder> 
@@ -4855,6 +5579,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ObjectRequest.Builder addRequestsBuilder() {
@@ -4862,6 +5590,10 @@ private static final long serialVersionUID = 0L;
             org.vdaas.vald.api.v1.payload.Search.ObjectRequest.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ObjectRequest.Builder addRequestsBuilder(
@@ -4870,6 +5602,10 @@ private static final long serialVersionUID = 0L;
             index, org.vdaas.vald.api.v1.payload.Search.ObjectRequest.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search by binary object request content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.ObjectRequest requests = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.ObjectRequest.Builder> 
@@ -4948,11 +5684,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The requestId.
      */
     java.lang.String getRequestId();
     /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The bytes for requestId.
      */
@@ -4960,60 +5704,104 @@ private static final long serialVersionUID = 0L;
         getRequestIdBytes();
 
     /**
+     * <pre>
+     * Maximum number of result to be returned.
+     * </pre>
+     *
      * <code>uint32 num = 2 [(.validate.rules) = { ... }</code>
      * @return The num.
      */
     int getNum();
 
     /**
+     * <pre>
+     * Search radius.
+     * </pre>
+     *
      * <code>float radius = 3;</code>
      * @return The radius.
      */
     float getRadius();
 
     /**
+     * <pre>
+     * Search coefficient.
+     * </pre>
+     *
      * <code>float epsilon = 4;</code>
      * @return The epsilon.
      */
     float getEpsilon();
 
     /**
+     * <pre>
+     * Search timeout in nanoseconds.
+     * </pre>
+     *
      * <code>int64 timeout = 5;</code>
      * @return The timeout.
      */
     long getTimeout();
 
     /**
+     * <pre>
+     * Ingress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
      * @return Whether the ingressFilters field is set.
      */
     boolean hasIngressFilters();
     /**
+     * <pre>
+     * Ingress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
      * @return The ingressFilters.
      */
     org.vdaas.vald.api.v1.payload.Filter.Config getIngressFilters();
     /**
+     * <pre>
+     * Ingress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
      */
     org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getIngressFiltersOrBuilder();
 
     /**
+     * <pre>
+     * Egress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
      * @return Whether the egressFilters field is set.
      */
     boolean hasEgressFilters();
     /**
+     * <pre>
+     * Egress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
      * @return The egressFilters.
      */
     org.vdaas.vald.api.v1.payload.Filter.Config getEgressFilters();
     /**
+     * <pre>
+     * Egress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
      */
     org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getEgressFiltersOrBuilder();
   }
   /**
+   * <pre>
+   * Represent search configuration.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.Config}
    */
   public static final class Config extends
@@ -5146,6 +5934,10 @@ private static final long serialVersionUID = 0L;
     public static final int REQUEST_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object requestId_;
     /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The requestId.
      */
@@ -5163,6 +5955,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The bytes for requestId.
      */
@@ -5184,6 +5980,10 @@ private static final long serialVersionUID = 0L;
     public static final int NUM_FIELD_NUMBER = 2;
     private int num_;
     /**
+     * <pre>
+     * Maximum number of result to be returned.
+     * </pre>
+     *
      * <code>uint32 num = 2 [(.validate.rules) = { ... }</code>
      * @return The num.
      */
@@ -5195,6 +5995,10 @@ private static final long serialVersionUID = 0L;
     public static final int RADIUS_FIELD_NUMBER = 3;
     private float radius_;
     /**
+     * <pre>
+     * Search radius.
+     * </pre>
+     *
      * <code>float radius = 3;</code>
      * @return The radius.
      */
@@ -5206,6 +6010,10 @@ private static final long serialVersionUID = 0L;
     public static final int EPSILON_FIELD_NUMBER = 4;
     private float epsilon_;
     /**
+     * <pre>
+     * Search coefficient.
+     * </pre>
+     *
      * <code>float epsilon = 4;</code>
      * @return The epsilon.
      */
@@ -5217,6 +6025,10 @@ private static final long serialVersionUID = 0L;
     public static final int TIMEOUT_FIELD_NUMBER = 5;
     private long timeout_;
     /**
+     * <pre>
+     * Search timeout in nanoseconds.
+     * </pre>
+     *
      * <code>int64 timeout = 5;</code>
      * @return The timeout.
      */
@@ -5228,6 +6040,10 @@ private static final long serialVersionUID = 0L;
     public static final int INGRESS_FILTERS_FIELD_NUMBER = 6;
     private org.vdaas.vald.api.v1.payload.Filter.Config ingressFilters_;
     /**
+     * <pre>
+     * Ingress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
      * @return Whether the ingressFilters field is set.
      */
@@ -5236,6 +6052,10 @@ private static final long serialVersionUID = 0L;
       return ingressFilters_ != null;
     }
     /**
+     * <pre>
+     * Ingress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
      * @return The ingressFilters.
      */
@@ -5244,6 +6064,10 @@ private static final long serialVersionUID = 0L;
       return ingressFilters_ == null ? org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance() : ingressFilters_;
     }
     /**
+     * <pre>
+     * Ingress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
      */
     @java.lang.Override
@@ -5254,6 +6078,10 @@ private static final long serialVersionUID = 0L;
     public static final int EGRESS_FILTERS_FIELD_NUMBER = 7;
     private org.vdaas.vald.api.v1.payload.Filter.Config egressFilters_;
     /**
+     * <pre>
+     * Egress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
      * @return Whether the egressFilters field is set.
      */
@@ -5262,6 +6090,10 @@ private static final long serialVersionUID = 0L;
       return egressFilters_ != null;
     }
     /**
+     * <pre>
+     * Egress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
      * @return The egressFilters.
      */
@@ -5270,6 +6102,10 @@ private static final long serialVersionUID = 0L;
       return egressFilters_ == null ? org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance() : egressFilters_;
     }
     /**
+     * <pre>
+     * Egress filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
      */
     @java.lang.Override
@@ -5513,6 +6349,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent search configuration.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.Config}
      */
     public static final class Builder extends
@@ -5714,6 +6554,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object requestId_ = "";
       /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @return The requestId.
        */
@@ -5730,6 +6574,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @return The bytes for requestId.
        */
@@ -5747,6 +6595,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @param value The requestId to set.
        * @return This builder for chaining.
@@ -5762,6 +6614,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5772,6 +6628,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @param value The bytes for requestId to set.
        * @return This builder for chaining.
@@ -5790,6 +6650,10 @@ private static final long serialVersionUID = 0L;
 
       private int num_ ;
       /**
+       * <pre>
+       * Maximum number of result to be returned.
+       * </pre>
+       *
        * <code>uint32 num = 2 [(.validate.rules) = { ... }</code>
        * @return The num.
        */
@@ -5798,6 +6662,10 @@ private static final long serialVersionUID = 0L;
         return num_;
       }
       /**
+       * <pre>
+       * Maximum number of result to be returned.
+       * </pre>
+       *
        * <code>uint32 num = 2 [(.validate.rules) = { ... }</code>
        * @param value The num to set.
        * @return This builder for chaining.
@@ -5809,6 +6677,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of result to be returned.
+       * </pre>
+       *
        * <code>uint32 num = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -5821,6 +6693,10 @@ private static final long serialVersionUID = 0L;
 
       private float radius_ ;
       /**
+       * <pre>
+       * Search radius.
+       * </pre>
+       *
        * <code>float radius = 3;</code>
        * @return The radius.
        */
@@ -5829,6 +6705,10 @@ private static final long serialVersionUID = 0L;
         return radius_;
       }
       /**
+       * <pre>
+       * Search radius.
+       * </pre>
+       *
        * <code>float radius = 3;</code>
        * @param value The radius to set.
        * @return This builder for chaining.
@@ -5840,6 +6720,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search radius.
+       * </pre>
+       *
        * <code>float radius = 3;</code>
        * @return This builder for chaining.
        */
@@ -5852,6 +6736,10 @@ private static final long serialVersionUID = 0L;
 
       private float epsilon_ ;
       /**
+       * <pre>
+       * Search coefficient.
+       * </pre>
+       *
        * <code>float epsilon = 4;</code>
        * @return The epsilon.
        */
@@ -5860,6 +6748,10 @@ private static final long serialVersionUID = 0L;
         return epsilon_;
       }
       /**
+       * <pre>
+       * Search coefficient.
+       * </pre>
+       *
        * <code>float epsilon = 4;</code>
        * @param value The epsilon to set.
        * @return This builder for chaining.
@@ -5871,6 +6763,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search coefficient.
+       * </pre>
+       *
        * <code>float epsilon = 4;</code>
        * @return This builder for chaining.
        */
@@ -5883,6 +6779,10 @@ private static final long serialVersionUID = 0L;
 
       private long timeout_ ;
       /**
+       * <pre>
+       * Search timeout in nanoseconds.
+       * </pre>
+       *
        * <code>int64 timeout = 5;</code>
        * @return The timeout.
        */
@@ -5891,6 +6791,10 @@ private static final long serialVersionUID = 0L;
         return timeout_;
       }
       /**
+       * <pre>
+       * Search timeout in nanoseconds.
+       * </pre>
+       *
        * <code>int64 timeout = 5;</code>
        * @param value The timeout to set.
        * @return This builder for chaining.
@@ -5902,6 +6806,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search timeout in nanoseconds.
+       * </pre>
+       *
        * <code>int64 timeout = 5;</code>
        * @return This builder for chaining.
        */
@@ -5916,6 +6824,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Filter.Config, org.vdaas.vald.api.v1.payload.Filter.Config.Builder, org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder> ingressFiltersBuilder_;
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        * @return Whether the ingressFilters field is set.
        */
@@ -5923,6 +6835,10 @@ private static final long serialVersionUID = 0L;
         return ingressFiltersBuilder_ != null || ingressFilters_ != null;
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        * @return The ingressFilters.
        */
@@ -5934,6 +6850,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        */
       public Builder setIngressFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
@@ -5950,6 +6870,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        */
       public Builder setIngressFilters(
@@ -5964,6 +6888,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        */
       public Builder mergeIngressFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
@@ -5982,6 +6910,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        */
       public Builder clearIngressFilters() {
@@ -5996,6 +6928,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.Config.Builder getIngressFiltersBuilder() {
@@ -6004,6 +6940,10 @@ private static final long serialVersionUID = 0L;
         return getIngressFiltersFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getIngressFiltersOrBuilder() {
@@ -6015,6 +6955,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Ingress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config ingress_filters = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6035,6 +6979,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Filter.Config, org.vdaas.vald.api.v1.payload.Filter.Config.Builder, org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder> egressFiltersBuilder_;
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        * @return Whether the egressFilters field is set.
        */
@@ -6042,6 +6990,10 @@ private static final long serialVersionUID = 0L;
         return egressFiltersBuilder_ != null || egressFilters_ != null;
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        * @return The egressFilters.
        */
@@ -6053,6 +7005,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        */
       public Builder setEgressFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
@@ -6069,6 +7025,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        */
       public Builder setEgressFilters(
@@ -6083,6 +7043,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        */
       public Builder mergeEgressFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
@@ -6101,6 +7065,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        */
       public Builder clearEgressFilters() {
@@ -6115,6 +7083,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.Config.Builder getEgressFiltersBuilder() {
@@ -6123,6 +7095,10 @@ private static final long serialVersionUID = 0L;
         return getEgressFiltersFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getEgressFiltersOrBuilder() {
@@ -6134,6 +7110,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Egress filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6207,11 +7187,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The requestId.
      */
     java.lang.String getRequestId();
     /**
+     * <pre>
+     * The unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The bytes for requestId.
      */
@@ -6219,30 +7207,54 @@ private static final long serialVersionUID = 0L;
         getRequestIdBytes();
 
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     java.util.List<org.vdaas.vald.api.v1.payload.Object.Distance> 
         getResultsList();
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Object.Distance getResults(int index);
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     int getResultsCount();
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     java.util.List<? extends org.vdaas.vald.api.v1.payload.Object.DistanceOrBuilder> 
         getResultsOrBuilderList();
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Object.DistanceOrBuilder getResultsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Represent a search response.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.Response}
    */
   public static final class Response extends
@@ -6343,6 +7355,10 @@ private static final long serialVersionUID = 0L;
     public static final int REQUEST_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object requestId_;
     /**
+     * <pre>
+     * The unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The requestId.
      */
@@ -6360,6 +7376,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique request ID.
+     * </pre>
+     *
      * <code>string request_id = 1;</code>
      * @return The bytes for requestId.
      */
@@ -6381,6 +7401,10 @@ private static final long serialVersionUID = 0L;
     public static final int RESULTS_FIELD_NUMBER = 2;
     private java.util.List<org.vdaas.vald.api.v1.payload.Object.Distance> results_;
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     @java.lang.Override
@@ -6388,6 +7412,10 @@ private static final long serialVersionUID = 0L;
       return results_;
     }
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     @java.lang.Override
@@ -6396,6 +7424,10 @@ private static final long serialVersionUID = 0L;
       return results_;
     }
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     @java.lang.Override
@@ -6403,6 +7435,10 @@ private static final long serialVersionUID = 0L;
       return results_.size();
     }
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     @java.lang.Override
@@ -6410,6 +7446,10 @@ private static final long serialVersionUID = 0L;
       return results_.get(index);
     }
     /**
+     * <pre>
+     * Search results.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Object.Distance results = 2;</code>
      */
     @java.lang.Override
@@ -6586,6 +7626,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent a search response.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.Response}
      */
     public static final class Builder extends
@@ -6779,6 +7823,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object requestId_ = "";
       /**
+       * <pre>
+       * The unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @return The requestId.
        */
@@ -6795,6 +7843,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @return The bytes for requestId.
        */
@@ -6812,6 +7864,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @param value The requestId to set.
        * @return This builder for chaining.
@@ -6827,6 +7883,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6837,6 +7897,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The unique request ID.
+       * </pre>
+       *
        * <code>string request_id = 1;</code>
        * @param value The bytes for requestId to set.
        * @return This builder for chaining.
@@ -6866,6 +7930,10 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Object.Distance, org.vdaas.vald.api.v1.payload.Object.Distance.Builder, org.vdaas.vald.api.v1.payload.Object.DistanceOrBuilder> resultsBuilder_;
 
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Object.Distance> getResultsList() {
@@ -6876,6 +7944,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public int getResultsCount() {
@@ -6886,6 +7958,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Distance getResults(int index) {
@@ -6896,6 +7972,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder setResults(
@@ -6913,6 +7993,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder setResults(
@@ -6927,6 +8011,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder addResults(org.vdaas.vald.api.v1.payload.Object.Distance value) {
@@ -6943,6 +8031,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder addResults(
@@ -6960,6 +8052,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder addResults(
@@ -6974,6 +8070,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder addResults(
@@ -6988,6 +8088,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder addAllResults(
@@ -7003,6 +8107,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder clearResults() {
@@ -7016,6 +8124,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public Builder removeResults(int index) {
@@ -7029,6 +8141,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Distance.Builder getResultsBuilder(
@@ -7036,6 +8152,10 @@ private static final long serialVersionUID = 0L;
         return getResultsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.DistanceOrBuilder getResultsOrBuilder(
@@ -7046,6 +8166,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public java.util.List<? extends org.vdaas.vald.api.v1.payload.Object.DistanceOrBuilder> 
@@ -7057,6 +8181,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Distance.Builder addResultsBuilder() {
@@ -7064,6 +8192,10 @@ private static final long serialVersionUID = 0L;
             org.vdaas.vald.api.v1.payload.Object.Distance.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Distance.Builder addResultsBuilder(
@@ -7072,6 +8204,10 @@ private static final long serialVersionUID = 0L;
             index, org.vdaas.vald.api.v1.payload.Object.Distance.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Search results.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Object.Distance results = 2;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Object.Distance.Builder> 
@@ -7150,30 +8286,54 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     java.util.List<org.vdaas.vald.api.v1.payload.Search.Response> 
         getResponsesList();
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.Response getResponses(int index);
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     int getResponsesCount();
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder> 
         getResponsesOrBuilderList();
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder getResponsesOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * Represent multiple search responses.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.Responses}
    */
   public static final class Responses extends
@@ -7267,6 +8427,10 @@ private static final long serialVersionUID = 0L;
     public static final int RESPONSES_FIELD_NUMBER = 1;
     private java.util.List<org.vdaas.vald.api.v1.payload.Search.Response> responses_;
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     @java.lang.Override
@@ -7274,6 +8438,10 @@ private static final long serialVersionUID = 0L;
       return responses_;
     }
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     @java.lang.Override
@@ -7282,6 +8450,10 @@ private static final long serialVersionUID = 0L;
       return responses_;
     }
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     @java.lang.Override
@@ -7289,6 +8461,10 @@ private static final long serialVersionUID = 0L;
       return responses_.size();
     }
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     @java.lang.Override
@@ -7296,6 +8472,10 @@ private static final long serialVersionUID = 0L;
       return responses_.get(index);
     }
     /**
+     * <pre>
+     * Represent the multiple search response content.
+     * </pre>
+     *
      * <code>repeated .payload.v1.Search.Response responses = 1;</code>
      */
     @java.lang.Override
@@ -7462,6 +8642,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent multiple search responses.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.Responses}
      */
     public static final class Builder extends
@@ -7659,6 +8843,10 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Search.Response, org.vdaas.vald.api.v1.payload.Search.Response.Builder, org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder> responsesBuilder_;
 
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.Response> getResponsesList() {
@@ -7669,6 +8857,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public int getResponsesCount() {
@@ -7679,6 +8871,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Response getResponses(int index) {
@@ -7689,6 +8885,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder setResponses(
@@ -7706,6 +8906,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder setResponses(
@@ -7720,6 +8924,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder addResponses(org.vdaas.vald.api.v1.payload.Search.Response value) {
@@ -7736,6 +8944,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder addResponses(
@@ -7753,6 +8965,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder addResponses(
@@ -7767,6 +8983,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder addResponses(
@@ -7781,6 +9001,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder addAllResponses(
@@ -7796,6 +9020,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder clearResponses() {
@@ -7809,6 +9037,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public Builder removeResponses(int index) {
@@ -7822,6 +9054,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Response.Builder getResponsesBuilder(
@@ -7829,6 +9065,10 @@ private static final long serialVersionUID = 0L;
         return getResponsesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder getResponsesOrBuilder(
@@ -7839,6 +9079,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public java.util.List<? extends org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder> 
@@ -7850,6 +9094,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Response.Builder addResponsesBuilder() {
@@ -7857,6 +9105,10 @@ private static final long serialVersionUID = 0L;
             org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Response.Builder addResponsesBuilder(
@@ -7865,6 +9117,10 @@ private static final long serialVersionUID = 0L;
             index, org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Represent the multiple search response content.
+       * </pre>
+       *
        * <code>repeated .payload.v1.Search.Response responses = 1;</code>
        */
       public java.util.List<org.vdaas.vald.api.v1.payload.Search.Response.Builder> 
@@ -7943,31 +9199,55 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Represent the search response.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Response response = 1;</code>
      * @return Whether the response field is set.
      */
     boolean hasResponse();
     /**
+     * <pre>
+     * Represent the search response.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Response response = 1;</code>
      * @return The response.
      */
     org.vdaas.vald.api.v1.payload.Search.Response getResponse();
     /**
+     * <pre>
+     * Represent the search response.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Response response = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder getResponseOrBuilder();
 
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
     boolean hasStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
     com.google.rpc.Status getStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     com.google.rpc.StatusOrBuilder getStatusOrBuilder();
@@ -7975,6 +9255,10 @@ private static final long serialVersionUID = 0L;
     public org.vdaas.vald.api.v1.payload.Search.StreamResponse.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   * Represent stream search response.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search.StreamResponse}
    */
   public static final class StreamResponse extends
@@ -8122,6 +9406,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int RESPONSE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Represent the search response.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Response response = 1;</code>
      * @return Whether the response field is set.
      */
@@ -8130,6 +9418,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 1;
     }
     /**
+     * <pre>
+     * Represent the search response.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Response response = 1;</code>
      * @return The response.
      */
@@ -8141,6 +9433,10 @@ private static final long serialVersionUID = 0L;
       return org.vdaas.vald.api.v1.payload.Search.Response.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Represent the search response.
+     * </pre>
+     *
      * <code>.payload.v1.Search.Response response = 1;</code>
      */
     @java.lang.Override
@@ -8153,6 +9449,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int STATUS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
@@ -8161,6 +9461,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 2;
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
@@ -8172,6 +9476,10 @@ private static final long serialVersionUID = 0L;
       return com.google.rpc.Status.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     @java.lang.Override
@@ -8366,6 +9674,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent stream search response.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Search.StreamResponse}
      */
     public static final class Builder extends
@@ -8554,6 +9866,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Search.Response, org.vdaas.vald.api.v1.payload.Search.Response.Builder, org.vdaas.vald.api.v1.payload.Search.ResponseOrBuilder> responseBuilder_;
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        * @return Whether the response field is set.
        */
@@ -8562,6 +9878,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 1;
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        * @return The response.
        */
@@ -8580,6 +9900,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        */
       public Builder setResponse(org.vdaas.vald.api.v1.payload.Search.Response value) {
@@ -8596,6 +9920,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        */
       public Builder setResponse(
@@ -8610,6 +9938,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        */
       public Builder mergeResponse(org.vdaas.vald.api.v1.payload.Search.Response value) {
@@ -8632,6 +9964,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        */
       public Builder clearResponse() {
@@ -8651,12 +9987,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Search.Response.Builder getResponseBuilder() {
         return getResponseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        */
       @java.lang.Override
@@ -8671,6 +10015,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Represent the search response.
+       * </pre>
+       *
        * <code>.payload.v1.Search.Response response = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8695,6 +10043,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return Whether the status field is set.
        */
@@ -8703,6 +10055,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 2;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return The status.
        */
@@ -8721,6 +10077,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(com.google.rpc.Status value) {
@@ -8737,6 +10097,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(
@@ -8751,6 +10115,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder mergeStatus(com.google.rpc.Status value) {
@@ -8773,6 +10141,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder clearStatus() {
@@ -8792,12 +10164,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public com.google.rpc.Status.Builder getStatusBuilder() {
         return getStatusFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       @java.lang.Override
@@ -8812,6 +10192,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9030,6 +10414,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Search related messages.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Search}
    */
   public static final class Builder extends

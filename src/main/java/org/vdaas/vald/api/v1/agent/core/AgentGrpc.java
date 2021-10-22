@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.agent.core;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Represent the agent service.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -184,10 +187,16 @@ public final class AgentGrpc {
   }
 
   /**
+   * <pre>
+   * Represent the agent service.
+   * </pre>
    */
   public static abstract class AgentImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Represent the create index RPC.
+     * </pre>
      */
     public void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
@@ -195,6 +204,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the save index RPC.
+     * </pre>
      */
     public void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
@@ -202,6 +214,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the create and save index RPC.
+     * </pre>
      */
     public void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
@@ -209,6 +224,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the RPC to get the agent index information.
+     * </pre>
      */
     public void indexInfo(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Count> responseObserver) {
@@ -250,6 +268,9 @@ public final class AgentGrpc {
   }
 
   /**
+   * <pre>
+   * Represent the agent service.
+   * </pre>
    */
   public static final class AgentStub extends io.grpc.stub.AbstractAsyncStub<AgentStub> {
     private AgentStub(
@@ -264,6 +285,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the create index RPC.
+     * </pre>
      */
     public void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
@@ -272,6 +296,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the save index RPC.
+     * </pre>
      */
     public void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
@@ -280,6 +307,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the create and save index RPC.
+     * </pre>
      */
     public void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
@@ -288,6 +318,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the RPC to get the agent index information.
+     * </pre>
      */
     public void indexInfo(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Count> responseObserver) {
@@ -297,6 +330,9 @@ public final class AgentGrpc {
   }
 
   /**
+   * <pre>
+   * Represent the agent service.
+   * </pre>
    */
   public static final class AgentBlockingStub extends io.grpc.stub.AbstractBlockingStub<AgentBlockingStub> {
     private AgentBlockingStub(
@@ -311,6 +347,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the create index RPC.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Empty createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -318,6 +357,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the save index RPC.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Empty saveIndex(org.vdaas.vald.api.v1.payload.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -325,6 +367,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the create and save index RPC.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Empty createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -332,6 +377,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the RPC to get the agent index information.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Info.Index.Count indexInfo(org.vdaas.vald.api.v1.payload.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -340,6 +388,9 @@ public final class AgentGrpc {
   }
 
   /**
+   * <pre>
+   * Represent the agent service.
+   * </pre>
    */
   public static final class AgentFutureStub extends io.grpc.stub.AbstractFutureStub<AgentFutureStub> {
     private AgentFutureStub(
@@ -354,6 +405,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the create index RPC.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> createIndex(
         org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
@@ -362,6 +416,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the save index RPC.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> saveIndex(
         org.vdaas.vald.api.v1.payload.Empty request) {
@@ -370,6 +427,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the create and save index RPC.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> createAndSaveIndex(
         org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
@@ -378,6 +438,9 @@ public final class AgentGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the RPC to get the agent index information.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Info.Index.Count> indexInfo(
         org.vdaas.vald.api.v1.payload.Empty request) {

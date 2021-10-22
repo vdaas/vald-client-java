@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.vald;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Filter service provides ways to connect to Vald through filter.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -432,10 +435,16 @@ public final class FilterGrpc {
   }
 
   /**
+   * <pre>
+   * Filter service provides ways to connect to Vald through filter.
+   * </pre>
    */
   public static abstract class FilterImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * A method to search object.
+     * </pre>
      */
     public void searchObject(org.vdaas.vald.api.v1.payload.Search.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
@@ -443,6 +452,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search multiple objects.
+     * </pre>
      */
     public void multiSearchObject(org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
@@ -450,6 +462,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.ObjectRequest> streamSearchObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
@@ -457,6 +472,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method insert object.
+     * </pre>
      */
     public void insertObject(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -464,6 +482,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the streaming RPC to insert object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.ObjectRequest> streamInsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -471,6 +492,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert multiple objects.
+     * </pre>
      */
     public void multiInsertObject(org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -478,6 +502,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update object.
+     * </pre>
      */
     public void updateObject(org.vdaas.vald.api.v1.payload.Update.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -485,6 +512,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.ObjectRequest> streamUpdateObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -492,6 +522,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple objects.
+     * </pre>
      */
     public void multiUpdateObject(org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -499,6 +532,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert object.
+     * </pre>
      */
     public void upsertObject(org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -506,6 +542,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest> streamUpsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -513,6 +552,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert multiple objects.
+     * </pre>
      */
     public void multiUpsertObject(org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -610,6 +652,9 @@ public final class FilterGrpc {
   }
 
   /**
+   * <pre>
+   * Filter service provides ways to connect to Vald through filter.
+   * </pre>
    */
   public static final class FilterStub extends io.grpc.stub.AbstractAsyncStub<FilterStub> {
     private FilterStub(
@@ -624,6 +669,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search object.
+     * </pre>
      */
     public void searchObject(org.vdaas.vald.api.v1.payload.Search.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
@@ -632,6 +680,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search multiple objects.
+     * </pre>
      */
     public void multiSearchObject(org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
@@ -640,6 +691,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.ObjectRequest> streamSearchObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
@@ -648,6 +702,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method insert object.
+     * </pre>
      */
     public void insertObject(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -656,6 +713,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * Represent the streaming RPC to insert object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.ObjectRequest> streamInsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -664,6 +724,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert multiple objects.
+     * </pre>
      */
     public void multiInsertObject(org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -672,6 +735,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update object.
+     * </pre>
      */
     public void updateObject(org.vdaas.vald.api.v1.payload.Update.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -680,6 +746,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.ObjectRequest> streamUpdateObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -688,6 +757,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple objects.
+     * </pre>
      */
     public void multiUpdateObject(org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -696,6 +768,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert object.
+     * </pre>
      */
     public void upsertObject(org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -704,6 +779,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert object by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest> streamUpsertObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -712,6 +790,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert multiple objects.
+     * </pre>
      */
     public void multiUpsertObject(org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -721,6 +802,9 @@ public final class FilterGrpc {
   }
 
   /**
+   * <pre>
+   * Filter service provides ways to connect to Vald through filter.
+   * </pre>
    */
   public static final class FilterBlockingStub extends io.grpc.stub.AbstractBlockingStub<FilterBlockingStub> {
     private FilterBlockingStub(
@@ -735,6 +819,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search object.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Response searchObject(org.vdaas.vald.api.v1.payload.Search.ObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -742,6 +829,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search multiple objects.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Responses multiSearchObject(org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -749,6 +839,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method insert object.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Location insertObject(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -756,6 +849,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert multiple objects.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiInsertObject(org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -763,6 +859,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update object.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Location updateObject(org.vdaas.vald.api.v1.payload.Update.ObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -770,6 +869,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple objects.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpdateObject(org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -777,6 +879,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert object.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Location upsertObject(org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -784,6 +889,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert multiple objects.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpsertObject(org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -792,6 +900,9 @@ public final class FilterGrpc {
   }
 
   /**
+   * <pre>
+   * Filter service provides ways to connect to Vald through filter.
+   * </pre>
    */
   public static final class FilterFutureStub extends io.grpc.stub.AbstractFutureStub<FilterFutureStub> {
     private FilterFutureStub(
@@ -806,6 +917,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search object.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Response> searchObject(
         org.vdaas.vald.api.v1.payload.Search.ObjectRequest request) {
@@ -814,6 +928,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search multiple objects.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Responses> multiSearchObject(
         org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request) {
@@ -822,6 +939,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method insert object.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> insertObject(
         org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request) {
@@ -830,6 +950,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to insert multiple objects.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiInsertObject(
         org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request) {
@@ -838,6 +961,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update object.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> updateObject(
         org.vdaas.vald.api.v1.payload.Update.ObjectRequest request) {
@@ -846,6 +972,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple objects.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpdateObject(
         org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request) {
@@ -854,6 +983,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert object.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> upsertObject(
         org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request) {
@@ -862,6 +994,9 @@ public final class FilterGrpc {
     }
 
     /**
+     * <pre>
+     * A method to upsert multiple objects.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpsertObject(
         org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request) {

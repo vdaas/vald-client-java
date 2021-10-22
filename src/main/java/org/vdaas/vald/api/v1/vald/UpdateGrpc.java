@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.vald;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Update service provides ways to update indexed vectors.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -153,10 +156,16 @@ public final class UpdateGrpc {
   }
 
   /**
+   * <pre>
+   * Update service provides ways to update indexed vectors.
+   * </pre>
    */
   public static abstract class UpdateImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * A method to update an indexed vector.
+     * </pre>
      */
     public void update(org.vdaas.vald.api.v1.payload.Update.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -164,6 +173,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple indexed vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -171,6 +183,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple indexed vectors in a single request.
+     * </pre>
      */
     public void multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -205,6 +220,9 @@ public final class UpdateGrpc {
   }
 
   /**
+   * <pre>
+   * Update service provides ways to update indexed vectors.
+   * </pre>
    */
   public static final class UpdateStub extends io.grpc.stub.AbstractAsyncStub<UpdateStub> {
     private UpdateStub(
@@ -219,6 +237,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update an indexed vector.
+     * </pre>
      */
     public void update(org.vdaas.vald.api.v1.payload.Update.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -227,6 +248,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple indexed vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -235,6 +259,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple indexed vectors in a single request.
+     * </pre>
      */
     public void multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -244,6 +271,9 @@ public final class UpdateGrpc {
   }
 
   /**
+   * <pre>
+   * Update service provides ways to update indexed vectors.
+   * </pre>
    */
   public static final class UpdateBlockingStub extends io.grpc.stub.AbstractBlockingStub<UpdateBlockingStub> {
     private UpdateBlockingStub(
@@ -258,6 +288,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update an indexed vector.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Location update(org.vdaas.vald.api.v1.payload.Update.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -265,6 +298,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple indexed vectors in a single request.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -273,6 +309,9 @@ public final class UpdateGrpc {
   }
 
   /**
+   * <pre>
+   * Update service provides ways to update indexed vectors.
+   * </pre>
    */
   public static final class UpdateFutureStub extends io.grpc.stub.AbstractFutureStub<UpdateFutureStub> {
     private UpdateFutureStub(
@@ -287,6 +326,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update an indexed vector.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> update(
         org.vdaas.vald.api.v1.payload.Update.Request request) {
@@ -295,6 +337,9 @@ public final class UpdateGrpc {
     }
 
     /**
+     * <pre>
+     * A method to update multiple indexed vectors in a single request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiUpdate(
         org.vdaas.vald.api.v1.payload.Update.MultiRequest request) {

@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.vald;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Insert service provides ways to add new vectors.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -153,10 +156,16 @@ public final class InsertGrpc {
   }
 
   /**
+   * <pre>
+   * Insert service provides ways to add new vectors.
+   * </pre>
    */
   public static abstract class InsertImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * A method to add a new single vector.
+     * </pre>
      */
     public void insert(org.vdaas.vald.api.v1.payload.Insert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -164,6 +173,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add new multiple vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -171,6 +183,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add new multiple vectors in a single request.
+     * </pre>
      */
     public void multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -205,6 +220,9 @@ public final class InsertGrpc {
   }
 
   /**
+   * <pre>
+   * Insert service provides ways to add new vectors.
+   * </pre>
    */
   public static final class InsertStub extends io.grpc.stub.AbstractAsyncStub<InsertStub> {
     private InsertStub(
@@ -219,6 +237,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add a new single vector.
+     * </pre>
      */
     public void insert(org.vdaas.vald.api.v1.payload.Insert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
@@ -227,6 +248,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add new multiple vectors by bidirectional streaming.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
@@ -235,6 +259,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add new multiple vectors in a single request.
+     * </pre>
      */
     public void multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
@@ -244,6 +271,9 @@ public final class InsertGrpc {
   }
 
   /**
+   * <pre>
+   * Insert service provides ways to add new vectors.
+   * </pre>
    */
   public static final class InsertBlockingStub extends io.grpc.stub.AbstractBlockingStub<InsertBlockingStub> {
     private InsertBlockingStub(
@@ -258,6 +288,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add a new single vector.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Location insert(org.vdaas.vald.api.v1.payload.Insert.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -265,6 +298,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add new multiple vectors in a single request.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Object.Locations multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -273,6 +309,9 @@ public final class InsertGrpc {
   }
 
   /**
+   * <pre>
+   * Insert service provides ways to add new vectors.
+   * </pre>
    */
   public static final class InsertFutureStub extends io.grpc.stub.AbstractFutureStub<InsertFutureStub> {
     private InsertFutureStub(
@@ -287,6 +326,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add a new single vector.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> insert(
         org.vdaas.vald.api.v1.payload.Insert.Request request) {
@@ -295,6 +337,9 @@ public final class InsertGrpc {
     }
 
     /**
+     * <pre>
+     * A method to add new multiple vectors in a single request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> multiInsert(
         org.vdaas.vald.api.v1.payload.Insert.MultiRequest request) {

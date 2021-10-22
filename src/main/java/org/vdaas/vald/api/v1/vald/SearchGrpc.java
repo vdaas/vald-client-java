@@ -3,6 +3,9 @@ package org.vdaas.vald.api.v1.vald;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Search service provides ways to search indexed vectors.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
@@ -246,10 +249,16 @@ public final class SearchGrpc {
   }
 
   /**
+   * <pre>
+   * Search service provides ways to search indexed vectors.
+   * </pre>
    */
   public static abstract class SearchImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * A method to search indexed vectors by a raw vector.
+     * </pre>
      */
     public void search(org.vdaas.vald.api.v1.payload.Search.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
@@ -257,6 +266,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by ID.
+     * </pre>
      */
     public void searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
@@ -264,6 +276,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple vectors.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
@@ -271,6 +286,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple IDs.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
@@ -278,6 +296,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple vectors in a single request.
+     * </pre>
      */
     public void multiSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
@@ -285,6 +306,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple IDs in a single request.
+     * </pre>
      */
     public void multiSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
@@ -340,6 +364,9 @@ public final class SearchGrpc {
   }
 
   /**
+   * <pre>
+   * Search service provides ways to search indexed vectors.
+   * </pre>
    */
   public static final class SearchStub extends io.grpc.stub.AbstractAsyncStub<SearchStub> {
     private SearchStub(
@@ -354,6 +381,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by a raw vector.
+     * </pre>
      */
     public void search(org.vdaas.vald.api.v1.payload.Search.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
@@ -362,6 +392,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by ID.
+     * </pre>
      */
     public void searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
@@ -370,6 +403,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple vectors.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
@@ -378,6 +414,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple IDs.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
@@ -386,6 +425,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple vectors in a single request.
+     * </pre>
      */
     public void multiSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
@@ -394,6 +436,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple IDs in a single request.
+     * </pre>
      */
     public void multiSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
@@ -403,6 +448,9 @@ public final class SearchGrpc {
   }
 
   /**
+   * <pre>
+   * Search service provides ways to search indexed vectors.
+   * </pre>
    */
   public static final class SearchBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchBlockingStub> {
     private SearchBlockingStub(
@@ -417,6 +465,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by a raw vector.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Response search(org.vdaas.vald.api.v1.payload.Search.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -424,6 +475,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by ID.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Response searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -431,6 +485,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple vectors in a single request.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Responses multiSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -438,6 +495,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple IDs in a single request.
+     * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Responses multiSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -446,6 +506,9 @@ public final class SearchGrpc {
   }
 
   /**
+   * <pre>
+   * Search service provides ways to search indexed vectors.
+   * </pre>
    */
   public static final class SearchFutureStub extends io.grpc.stub.AbstractFutureStub<SearchFutureStub> {
     private SearchFutureStub(
@@ -460,6 +523,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by a raw vector.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Response> search(
         org.vdaas.vald.api.v1.payload.Search.Request request) {
@@ -468,6 +534,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by ID.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Response> searchByID(
         org.vdaas.vald.api.v1.payload.Search.IDRequest request) {
@@ -476,6 +545,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple vectors in a single request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Responses> multiSearch(
         org.vdaas.vald.api.v1.payload.Search.MultiRequest request) {
@@ -484,6 +556,9 @@ public final class SearchGrpc {
     }
 
     /**
+     * <pre>
+     * A method to search indexed vectors by multiple IDs in a single request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Responses> multiSearchByID(
         org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request) {

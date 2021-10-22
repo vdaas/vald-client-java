@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Backup related messages. (Not used)
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Backup}
  */
 public final class Backup extends
@@ -10914,6 +10918,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Backup related messages. (Not used)
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Backup}
    */
   public static final class Builder extends

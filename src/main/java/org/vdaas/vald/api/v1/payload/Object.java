@@ -4,6 +4,10 @@
 package org.vdaas.vald.api.v1.payload;
 
 /**
+ * <pre>
+ * Common messages.
+ * </pre>
+ *
  * Protobuf type {@code payload.v1.Object}
  */
 public final class Object extends
@@ -85,36 +89,64 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The vector ID to be fetch.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
      * @return Whether the id field is set.
      */
     boolean hasId();
     /**
+     * <pre>
+     * The vector ID to be fetch.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     org.vdaas.vald.api.v1.payload.Object.ID getId();
     /**
+     * <pre>
+     * The vector ID to be fetch.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
      */
     org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder();
 
     /**
+     * <pre>
+     * Filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config filters = 2;</code>
      * @return Whether the filters field is set.
      */
     boolean hasFilters();
     /**
+     * <pre>
+     * Filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config filters = 2;</code>
      * @return The filters.
      */
     org.vdaas.vald.api.v1.payload.Filter.Config getFilters();
     /**
+     * <pre>
+     * Filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config filters = 2;</code>
      */
     org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getFiltersOrBuilder();
   }
   /**
+   * <pre>
+   * Represent a request to fetch raw vector.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.VectorRequest}
    */
   public static final class VectorRequest extends
@@ -220,6 +252,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 1;
     private org.vdaas.vald.api.v1.payload.Object.ID id_;
     /**
+     * <pre>
+     * The vector ID to be fetch.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
      * @return Whether the id field is set.
      */
@@ -228,6 +264,10 @@ private static final long serialVersionUID = 0L;
       return id_ != null;
     }
     /**
+     * <pre>
+     * The vector ID to be fetch.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
@@ -236,6 +276,10 @@ private static final long serialVersionUID = 0L;
       return id_ == null ? org.vdaas.vald.api.v1.payload.Object.ID.getDefaultInstance() : id_;
     }
     /**
+     * <pre>
+     * The vector ID to be fetch.
+     * </pre>
+     *
      * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
      */
     @java.lang.Override
@@ -246,6 +290,10 @@ private static final long serialVersionUID = 0L;
     public static final int FILTERS_FIELD_NUMBER = 2;
     private org.vdaas.vald.api.v1.payload.Filter.Config filters_;
     /**
+     * <pre>
+     * Filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config filters = 2;</code>
      * @return Whether the filters field is set.
      */
@@ -254,6 +302,10 @@ private static final long serialVersionUID = 0L;
       return filters_ != null;
     }
     /**
+     * <pre>
+     * Filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config filters = 2;</code>
      * @return The filters.
      */
@@ -262,6 +314,10 @@ private static final long serialVersionUID = 0L;
       return filters_ == null ? org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance() : filters_;
     }
     /**
+     * <pre>
+     * Filter configurations.
+     * </pre>
+     *
      * <code>.payload.v1.Filter.Config filters = 2;</code>
      */
     @java.lang.Override
@@ -446,6 +502,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent a request to fetch raw vector.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.VectorRequest}
      */
     public static final class Builder extends
@@ -618,6 +678,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Object.ID, org.vdaas.vald.api.v1.payload.Object.ID.Builder, org.vdaas.vald.api.v1.payload.Object.IDOrBuilder> idBuilder_;
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        * @return Whether the id field is set.
        */
@@ -625,6 +689,10 @@ private static final long serialVersionUID = 0L;
         return idBuilder_ != null || id_ != null;
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        * @return The id.
        */
@@ -636,6 +704,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setId(org.vdaas.vald.api.v1.payload.Object.ID value) {
@@ -652,6 +724,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setId(
@@ -666,6 +742,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder mergeId(org.vdaas.vald.api.v1.payload.Object.ID value) {
@@ -684,6 +764,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder clearId() {
@@ -698,6 +782,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.ID.Builder getIdBuilder() {
@@ -706,6 +794,10 @@ private static final long serialVersionUID = 0L;
         return getIdFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder() {
@@ -717,6 +809,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID to be fetch.
+       * </pre>
+       *
        * <code>.payload.v1.Object.ID id = 1 [(.validate.rules) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -737,6 +833,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Filter.Config, org.vdaas.vald.api.v1.payload.Filter.Config.Builder, org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder> filtersBuilder_;
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        * @return Whether the filters field is set.
        */
@@ -744,6 +844,10 @@ private static final long serialVersionUID = 0L;
         return filtersBuilder_ != null || filters_ != null;
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        * @return The filters.
        */
@@ -755,6 +859,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        */
       public Builder setFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
@@ -771,6 +879,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        */
       public Builder setFilters(
@@ -785,6 +897,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        */
       public Builder mergeFilters(org.vdaas.vald.api.v1.payload.Filter.Config value) {
@@ -803,6 +919,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        */
       public Builder clearFilters() {
@@ -817,6 +937,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.Config.Builder getFiltersBuilder() {
@@ -825,6 +949,10 @@ private static final long serialVersionUID = 0L;
         return getFiltersFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getFiltersOrBuilder() {
@@ -836,6 +964,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Filter configurations.
+       * </pre>
+       *
        * <code>.payload.v1.Filter.Config filters = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -909,11 +1041,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -921,12 +1061,20 @@ private static final long serialVersionUID = 0L;
         getIdBytes();
 
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>float distance = 2;</code>
      * @return The distance.
      */
     float getDistance();
   }
   /**
+   * <pre>
+   * Represent the ID and distance pair.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.Distance}
    */
   public static final class Distance extends
@@ -1018,6 +1166,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -1035,6 +1187,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -1056,6 +1212,10 @@ private static final long serialVersionUID = 0L;
     public static final int DISTANCE_FIELD_NUMBER = 2;
     private float distance_;
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>float distance = 2;</code>
      * @return The distance.
      */
@@ -1232,6 +1392,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the ID and distance pair.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.Distance}
      */
     public static final class Builder extends
@@ -1387,6 +1551,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1403,6 +1571,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1420,6 +1592,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1435,6 +1611,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1445,6 +1625,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1463,6 +1647,10 @@ private static final long serialVersionUID = 0L;
 
       private float distance_ ;
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>float distance = 2;</code>
        * @return The distance.
        */
@@ -1471,6 +1659,10 @@ private static final long serialVersionUID = 0L;
         return distance_;
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>float distance = 2;</code>
        * @param value The distance to set.
        * @return This builder for chaining.
@@ -1482,6 +1674,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>float distance = 2;</code>
        * @return This builder for chaining.
        */
@@ -1549,31 +1745,55 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Distance distance = 1;</code>
      * @return Whether the distance field is set.
      */
     boolean hasDistance();
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Distance distance = 1;</code>
      * @return The distance.
      */
     org.vdaas.vald.api.v1.payload.Object.Distance getDistance();
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Distance distance = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Object.DistanceOrBuilder getDistanceOrBuilder();
 
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
     boolean hasStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
     com.google.rpc.Status getStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     com.google.rpc.StatusOrBuilder getStatusOrBuilder();
@@ -1581,6 +1801,10 @@ private static final long serialVersionUID = 0L;
     public org.vdaas.vald.api.v1.payload.Object.StreamDistance.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   * Represent stream response of distances.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.StreamDistance}
    */
   public static final class StreamDistance extends
@@ -1728,6 +1952,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int DISTANCE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Distance distance = 1;</code>
      * @return Whether the distance field is set.
      */
@@ -1736,6 +1964,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 1;
     }
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Distance distance = 1;</code>
      * @return The distance.
      */
@@ -1747,6 +1979,10 @@ private static final long serialVersionUID = 0L;
       return org.vdaas.vald.api.v1.payload.Object.Distance.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The distance.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Distance distance = 1;</code>
      */
     @java.lang.Override
@@ -1759,6 +1995,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int STATUS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
@@ -1767,6 +2007,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 2;
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
@@ -1778,6 +2022,10 @@ private static final long serialVersionUID = 0L;
       return com.google.rpc.Status.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     @java.lang.Override
@@ -1972,6 +2220,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent stream response of distances.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.StreamDistance}
      */
     public static final class Builder extends
@@ -2160,6 +2412,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Object.Distance, org.vdaas.vald.api.v1.payload.Object.Distance.Builder, org.vdaas.vald.api.v1.payload.Object.DistanceOrBuilder> distanceBuilder_;
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        * @return Whether the distance field is set.
        */
@@ -2168,6 +2424,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 1;
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        * @return The distance.
        */
@@ -2186,6 +2446,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        */
       public Builder setDistance(org.vdaas.vald.api.v1.payload.Object.Distance value) {
@@ -2202,6 +2466,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        */
       public Builder setDistance(
@@ -2216,6 +2484,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        */
       public Builder mergeDistance(org.vdaas.vald.api.v1.payload.Object.Distance value) {
@@ -2238,6 +2510,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        */
       public Builder clearDistance() {
@@ -2257,12 +2533,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Distance.Builder getDistanceBuilder() {
         return getDistanceFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        */
       @java.lang.Override
@@ -2277,6 +2561,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The distance.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Distance distance = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2301,6 +2589,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return Whether the status field is set.
        */
@@ -2309,6 +2601,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 2;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return The status.
        */
@@ -2327,6 +2623,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(com.google.rpc.Status value) {
@@ -2343,6 +2643,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(
@@ -2357,6 +2661,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder mergeStatus(com.google.rpc.Status value) {
@@ -2379,6 +2687,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder clearStatus() {
@@ -2398,12 +2710,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public com.google.rpc.Status.Builder getStatusBuilder() {
         return getStatusFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       @java.lang.Override
@@ -2418,6 +2738,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2508,6 +2832,10 @@ private static final long serialVersionUID = 0L;
         getIdBytes();
   }
   /**
+   * <pre>
+   * Represent the vector ID.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.ID}
    */
   public static final class ID extends
@@ -2784,6 +3112,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the vector ID.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.ID}
      */
     public static final class Builder extends
@@ -3089,6 +3421,10 @@ private static final long serialVersionUID = 0L;
         getIdsBytes(int index);
   }
   /**
+   * <pre>
+   * Represent multiple vector IDs.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.IDs}
    */
   public static final class IDs extends
@@ -3376,6 +3712,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent multiple vector IDs.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.IDs}
      */
     public static final class Builder extends
@@ -3702,11 +4042,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
@@ -3714,16 +4062,28 @@ private static final long serialVersionUID = 0L;
         getIdBytes();
 
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
      * @return A list containing the vector.
      */
     java.util.List<java.lang.Float> getVectorList();
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
      * @return The count of vector.
      */
     int getVectorCount();
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The vector at the given index.
@@ -3731,6 +4091,10 @@ private static final long serialVersionUID = 0L;
     float getVector(int index);
   }
   /**
+   * <pre>
+   * Represent a vector.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.Vector}
    */
   public static final class Vector extends
@@ -3843,6 +4207,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
@@ -3860,6 +4228,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The vector ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
@@ -3881,6 +4253,10 @@ private static final long serialVersionUID = 0L;
     public static final int VECTOR_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.FloatList vector_;
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
      * @return A list containing the vector.
      */
@@ -3890,6 +4266,10 @@ private static final long serialVersionUID = 0L;
       return vector_;
     }
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
      * @return The count of vector.
      */
@@ -3897,6 +4277,10 @@ private static final long serialVersionUID = 0L;
       return vector_.size();
     }
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The vector at the given index.
@@ -4086,6 +4470,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent a vector.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.Vector}
      */
     public static final class Builder extends
@@ -4254,6 +4642,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The id.
        */
@@ -4270,6 +4662,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for id.
        */
@@ -4287,6 +4683,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -4302,6 +4702,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -4312,6 +4716,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -4336,6 +4744,10 @@ private static final long serialVersionUID = 0L;
          }
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
        * @return A list containing the vector.
        */
@@ -4345,6 +4757,10 @@ private static final long serialVersionUID = 0L;
                  java.util.Collections.unmodifiableList(vector_) : vector_;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
        * @return The count of vector.
        */
@@ -4352,6 +4768,10 @@ private static final long serialVersionUID = 0L;
         return vector_.size();
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
        * @return The vector at the given index.
@@ -4360,6 +4780,10 @@ private static final long serialVersionUID = 0L;
         return vector_.getFloat(index);
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The vector to set.
@@ -4373,6 +4797,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
        * @param value The vector to add.
        * @return This builder for chaining.
@@ -4384,6 +4812,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
        * @param values The vector to add.
        * @return This builder for chaining.
@@ -4397,6 +4829,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>repeated float vector = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -4488,6 +4924,10 @@ private static final long serialVersionUID = 0L;
         int index);
   }
   /**
+   * <pre>
+   * Represent multiple vectors.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.Vectors}
    */
   public static final class Vectors extends
@@ -4776,6 +5216,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent multiple vectors.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.Vectors}
      */
     public static final class Builder extends
@@ -5257,31 +5701,55 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Vector vector = 1;</code>
      * @return Whether the vector field is set.
      */
     boolean hasVector();
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Vector vector = 1;</code>
      * @return The vector.
      */
     org.vdaas.vald.api.v1.payload.Object.Vector getVector();
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Vector vector = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder getVectorOrBuilder();
 
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
     boolean hasStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
     com.google.rpc.Status getStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     com.google.rpc.StatusOrBuilder getStatusOrBuilder();
@@ -5289,6 +5757,10 @@ private static final long serialVersionUID = 0L;
     public org.vdaas.vald.api.v1.payload.Object.StreamVector.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   * Represent stream response of the vector.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.StreamVector}
    */
   public static final class StreamVector extends
@@ -5436,6 +5908,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int VECTOR_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Vector vector = 1;</code>
      * @return Whether the vector field is set.
      */
@@ -5444,6 +5920,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 1;
     }
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Vector vector = 1;</code>
      * @return The vector.
      */
@@ -5455,6 +5935,10 @@ private static final long serialVersionUID = 0L;
       return org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The vector.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Vector vector = 1;</code>
      */
     @java.lang.Override
@@ -5467,6 +5951,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int STATUS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
@@ -5475,6 +5963,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 2;
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
@@ -5486,6 +5978,10 @@ private static final long serialVersionUID = 0L;
       return com.google.rpc.Status.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     @java.lang.Override
@@ -5680,6 +6176,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent stream response of the vector.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.StreamVector}
      */
     public static final class Builder extends
@@ -5868,6 +6368,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Object.Vector, org.vdaas.vald.api.v1.payload.Object.Vector.Builder, org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder> vectorBuilder_;
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        * @return Whether the vector field is set.
        */
@@ -5876,6 +6380,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 1;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        * @return The vector.
        */
@@ -5894,6 +6402,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        */
       public Builder setVector(org.vdaas.vald.api.v1.payload.Object.Vector value) {
@@ -5910,6 +6422,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        */
       public Builder setVector(
@@ -5924,6 +6440,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        */
       public Builder mergeVector(org.vdaas.vald.api.v1.payload.Object.Vector value) {
@@ -5946,6 +6466,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        */
       public Builder clearVector() {
@@ -5965,12 +6489,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Vector.Builder getVectorBuilder() {
         return getVectorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        */
       @java.lang.Override
@@ -5985,6 +6517,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Vector vector = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6009,6 +6545,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return Whether the status field is set.
        */
@@ -6017,6 +6557,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 2;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return The status.
        */
@@ -6035,6 +6579,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(com.google.rpc.Status value) {
@@ -6051,6 +6599,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(
@@ -6065,6 +6617,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder mergeStatus(com.google.rpc.Status value) {
@@ -6087,6 +6643,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder clearStatus() {
@@ -6106,12 +6666,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public com.google.rpc.Status.Builder getStatusBuilder() {
         return getStatusFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       @java.lang.Override
@@ -6126,6 +6694,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6204,11 +6776,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The object ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The object ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
@@ -6216,12 +6796,20 @@ private static final long serialVersionUID = 0L;
         getIdBytes();
 
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>bytes object = 2;</code>
      * @return The object.
      */
     com.google.protobuf.ByteString getObject();
   }
   /**
+   * <pre>
+   * Represent the binary object.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.Blob}
    */
   public static final class Blob extends
@@ -6314,6 +6902,10 @@ private static final long serialVersionUID = 0L;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The object ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
@@ -6331,6 +6923,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The object ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
@@ -6352,6 +6948,10 @@ private static final long serialVersionUID = 0L;
     public static final int OBJECT_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString object_;
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>bytes object = 2;</code>
      * @return The object.
      */
@@ -6526,6 +7126,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the binary object.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.Blob}
      */
     public static final class Builder extends
@@ -6681,6 +7285,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The object ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The id.
        */
@@ -6697,6 +7305,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The object ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for id.
        */
@@ -6714,6 +7326,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The object ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -6729,6 +7345,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The object ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -6739,6 +7359,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The object ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -6757,6 +7381,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.ByteString object_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>bytes object = 2;</code>
        * @return The object.
        */
@@ -6765,6 +7393,10 @@ private static final long serialVersionUID = 0L;
         return object_;
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>bytes object = 2;</code>
        * @param value The object to set.
        * @return This builder for chaining.
@@ -6779,6 +7411,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>bytes object = 2;</code>
        * @return This builder for chaining.
        */
@@ -6846,31 +7482,55 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Blob blob = 1;</code>
      * @return Whether the blob field is set.
      */
     boolean hasBlob();
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Blob blob = 1;</code>
      * @return The blob.
      */
     org.vdaas.vald.api.v1.payload.Object.Blob getBlob();
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Blob blob = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Object.BlobOrBuilder getBlobOrBuilder();
 
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
     boolean hasStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
     com.google.rpc.Status getStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     com.google.rpc.StatusOrBuilder getStatusOrBuilder();
@@ -6878,6 +7538,10 @@ private static final long serialVersionUID = 0L;
     public org.vdaas.vald.api.v1.payload.Object.StreamBlob.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   * Represent stream response of binary objects.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.StreamBlob}
    */
   public static final class StreamBlob extends
@@ -7025,6 +7689,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int BLOB_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Blob blob = 1;</code>
      * @return Whether the blob field is set.
      */
@@ -7033,6 +7701,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 1;
     }
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Blob blob = 1;</code>
      * @return The blob.
      */
@@ -7044,6 +7716,10 @@ private static final long serialVersionUID = 0L;
       return org.vdaas.vald.api.v1.payload.Object.Blob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Blob blob = 1;</code>
      */
     @java.lang.Override
@@ -7056,6 +7732,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int STATUS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
@@ -7064,6 +7744,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 2;
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
@@ -7075,6 +7759,10 @@ private static final long serialVersionUID = 0L;
       return com.google.rpc.Status.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     @java.lang.Override
@@ -7269,6 +7957,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent stream response of binary objects.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.StreamBlob}
      */
     public static final class Builder extends
@@ -7457,6 +8149,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Object.Blob, org.vdaas.vald.api.v1.payload.Object.Blob.Builder, org.vdaas.vald.api.v1.payload.Object.BlobOrBuilder> blobBuilder_;
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        * @return Whether the blob field is set.
        */
@@ -7465,6 +8161,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 1;
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        * @return The blob.
        */
@@ -7483,6 +8183,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        */
       public Builder setBlob(org.vdaas.vald.api.v1.payload.Object.Blob value) {
@@ -7499,6 +8203,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        */
       public Builder setBlob(
@@ -7513,6 +8221,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        */
       public Builder mergeBlob(org.vdaas.vald.api.v1.payload.Object.Blob value) {
@@ -7535,6 +8247,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        */
       public Builder clearBlob() {
@@ -7554,12 +8270,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Blob.Builder getBlobBuilder() {
         return getBlobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        */
       @java.lang.Override
@@ -7574,6 +8298,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Blob blob = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7598,6 +8326,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return Whether the status field is set.
        */
@@ -7606,6 +8338,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 2;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return The status.
        */
@@ -7624,6 +8360,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(com.google.rpc.Status value) {
@@ -7640,6 +8380,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(
@@ -7654,6 +8398,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder mergeStatus(com.google.rpc.Status value) {
@@ -7676,6 +8424,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder clearStatus() {
@@ -7695,12 +8447,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public com.google.rpc.Status.Builder getStatusBuilder() {
         return getStatusFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       @java.lang.Override
@@ -7715,6 +8475,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7793,11 +8557,19 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The name of the location.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * The name of the location.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
@@ -7805,11 +8577,19 @@ private static final long serialVersionUID = 0L;
         getNameBytes();
 
     /**
+     * <pre>
+     * The UUID of the vector.
+     * </pre>
+     *
      * <code>string uuid = 2;</code>
      * @return The uuid.
      */
     java.lang.String getUuid();
     /**
+     * <pre>
+     * The UUID of the vector.
+     * </pre>
+     *
      * <code>string uuid = 2;</code>
      * @return The bytes for uuid.
      */
@@ -7817,23 +8597,39 @@ private static final long serialVersionUID = 0L;
         getUuidBytes();
 
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @return A list containing the ips.
      */
     java.util.List<java.lang.String>
         getIpsList();
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @return The count of ips.
      */
     int getIpsCount();
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @param index The index of the element to return.
      * @return The ips at the given index.
      */
     java.lang.String getIps(int index);
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the ips at the given index.
@@ -7842,6 +8638,10 @@ private static final long serialVersionUID = 0L;
         getIpsBytes(int index);
   }
   /**
+   * <pre>
+   * Represent the vector location.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.Location}
    */
   public static final class Location extends
@@ -7949,6 +8749,10 @@ private static final long serialVersionUID = 0L;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * The name of the location.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The name.
      */
@@ -7966,6 +8770,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the location.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
@@ -7987,6 +8795,10 @@ private static final long serialVersionUID = 0L;
     public static final int UUID_FIELD_NUMBER = 2;
     private volatile java.lang.Object uuid_;
     /**
+     * <pre>
+     * The UUID of the vector.
+     * </pre>
+     *
      * <code>string uuid = 2;</code>
      * @return The uuid.
      */
@@ -8004,6 +8816,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The UUID of the vector.
+     * </pre>
+     *
      * <code>string uuid = 2;</code>
      * @return The bytes for uuid.
      */
@@ -8025,6 +8841,10 @@ private static final long serialVersionUID = 0L;
     public static final int IPS_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList ips_;
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @return A list containing the ips.
      */
@@ -8033,6 +8853,10 @@ private static final long serialVersionUID = 0L;
       return ips_;
     }
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @return The count of ips.
      */
@@ -8040,6 +8864,10 @@ private static final long serialVersionUID = 0L;
       return ips_.size();
     }
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @param index The index of the element to return.
      * @return The ips at the given index.
@@ -8048,6 +8876,10 @@ private static final long serialVersionUID = 0L;
       return ips_.get(index);
     }
     /**
+     * <pre>
+     * The IP list.
+     * </pre>
+     *
      * <code>repeated string ips = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the ips at the given index.
@@ -8239,6 +9071,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the vector location.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.Location}
      */
     public static final class Builder extends
@@ -8414,6 +9250,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * The name of the location.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The name.
        */
@@ -8430,6 +9270,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The name of the location.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The bytes for name.
        */
@@ -8447,6 +9291,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The name of the location.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -8462,6 +9310,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The name of the location.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return This builder for chaining.
        */
@@ -8472,6 +9324,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The name of the location.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -8490,6 +9346,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object uuid_ = "";
       /**
+       * <pre>
+       * The UUID of the vector.
+       * </pre>
+       *
        * <code>string uuid = 2;</code>
        * @return The uuid.
        */
@@ -8506,6 +9366,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The UUID of the vector.
+       * </pre>
+       *
        * <code>string uuid = 2;</code>
        * @return The bytes for uuid.
        */
@@ -8523,6 +9387,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The UUID of the vector.
+       * </pre>
+       *
        * <code>string uuid = 2;</code>
        * @param value The uuid to set.
        * @return This builder for chaining.
@@ -8538,6 +9406,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The UUID of the vector.
+       * </pre>
+       *
        * <code>string uuid = 2;</code>
        * @return This builder for chaining.
        */
@@ -8548,6 +9420,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The UUID of the vector.
+       * </pre>
+       *
        * <code>string uuid = 2;</code>
        * @param value The bytes for uuid to set.
        * @return This builder for chaining.
@@ -8572,6 +9448,10 @@ private static final long serialVersionUID = 0L;
          }
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @return A list containing the ips.
        */
@@ -8580,6 +9460,10 @@ private static final long serialVersionUID = 0L;
         return ips_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @return The count of ips.
        */
@@ -8587,6 +9471,10 @@ private static final long serialVersionUID = 0L;
         return ips_.size();
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @param index The index of the element to return.
        * @return The ips at the given index.
@@ -8595,6 +9483,10 @@ private static final long serialVersionUID = 0L;
         return ips_.get(index);
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @param index The index of the value to return.
        * @return The bytes of the ips at the given index.
@@ -8604,6 +9496,10 @@ private static final long serialVersionUID = 0L;
         return ips_.getByteString(index);
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @param index The index to set the value at.
        * @param value The ips to set.
@@ -8620,6 +9516,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @param value The ips to add.
        * @return This builder for chaining.
@@ -8635,6 +9535,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @param values The ips to add.
        * @return This builder for chaining.
@@ -8648,6 +9552,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @return This builder for chaining.
        */
@@ -8658,6 +9566,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The IP list.
+       * </pre>
+       *
        * <code>repeated string ips = 3;</code>
        * @param value The bytes of the ips to add.
        * @return This builder for chaining.
@@ -8731,31 +9643,55 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The vector location.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Location location = 1;</code>
      * @return Whether the location field is set.
      */
     boolean hasLocation();
     /**
+     * <pre>
+     * The vector location.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Location location = 1;</code>
      * @return The location.
      */
     org.vdaas.vald.api.v1.payload.Object.Location getLocation();
     /**
+     * <pre>
+     * The vector location.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Location location = 1;</code>
      */
     org.vdaas.vald.api.v1.payload.Object.LocationOrBuilder getLocationOrBuilder();
 
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
     boolean hasStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
     com.google.rpc.Status getStatus();
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     com.google.rpc.StatusOrBuilder getStatusOrBuilder();
@@ -8763,6 +9699,10 @@ private static final long serialVersionUID = 0L;
     public org.vdaas.vald.api.v1.payload.Object.StreamLocation.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   * Represent the stream response of the vector location.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.StreamLocation}
    */
   public static final class StreamLocation extends
@@ -8910,6 +9850,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int LOCATION_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * The vector location.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Location location = 1;</code>
      * @return Whether the location field is set.
      */
@@ -8918,6 +9862,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 1;
     }
     /**
+     * <pre>
+     * The vector location.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Location location = 1;</code>
      * @return The location.
      */
@@ -8929,6 +9877,10 @@ private static final long serialVersionUID = 0L;
       return org.vdaas.vald.api.v1.payload.Object.Location.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The vector location.
+     * </pre>
+     *
      * <code>.payload.v1.Object.Location location = 1;</code>
      */
     @java.lang.Override
@@ -8941,6 +9893,10 @@ private static final long serialVersionUID = 0L;
 
     public static final int STATUS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return Whether the status field is set.
      */
@@ -8949,6 +9905,10 @@ private static final long serialVersionUID = 0L;
       return payloadCase_ == 2;
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      * @return The status.
      */
@@ -8960,6 +9920,10 @@ private static final long serialVersionUID = 0L;
       return com.google.rpc.Status.getDefaultInstance();
     }
     /**
+     * <pre>
+     * The RPC error status.
+     * </pre>
+     *
      * <code>.google.rpc.Status status = 2;</code>
      */
     @java.lang.Override
@@ -9154,6 +10118,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the stream response of the vector location.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.StreamLocation}
      */
     public static final class Builder extends
@@ -9342,6 +10310,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           org.vdaas.vald.api.v1.payload.Object.Location, org.vdaas.vald.api.v1.payload.Object.Location.Builder, org.vdaas.vald.api.v1.payload.Object.LocationOrBuilder> locationBuilder_;
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        * @return Whether the location field is set.
        */
@@ -9350,6 +10322,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 1;
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        * @return The location.
        */
@@ -9368,6 +10344,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        */
       public Builder setLocation(org.vdaas.vald.api.v1.payload.Object.Location value) {
@@ -9384,6 +10364,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        */
       public Builder setLocation(
@@ -9398,6 +10382,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        */
       public Builder mergeLocation(org.vdaas.vald.api.v1.payload.Object.Location value) {
@@ -9420,6 +10408,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        */
       public Builder clearLocation() {
@@ -9439,12 +10431,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.Location.Builder getLocationBuilder() {
         return getLocationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        */
       @java.lang.Override
@@ -9459,6 +10459,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The vector location.
+       * </pre>
+       *
        * <code>.payload.v1.Object.Location location = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9483,6 +10487,10 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return Whether the status field is set.
        */
@@ -9491,6 +10499,10 @@ private static final long serialVersionUID = 0L;
         return payloadCase_ == 2;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        * @return The status.
        */
@@ -9509,6 +10521,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(com.google.rpc.Status value) {
@@ -9525,6 +10541,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder setStatus(
@@ -9539,6 +10559,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder mergeStatus(com.google.rpc.Status value) {
@@ -9561,6 +10585,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public Builder clearStatus() {
@@ -9580,12 +10608,20 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       public com.google.rpc.Status.Builder getStatusBuilder() {
         return getStatusFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       @java.lang.Override
@@ -9600,6 +10636,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
        * <code>.google.rpc.Status status = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9702,6 +10742,10 @@ private static final long serialVersionUID = 0L;
         int index);
   }
   /**
+   * <pre>
+   * Represent multiple vector locations.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object.Locations}
    */
   public static final class Locations extends
@@ -9990,6 +11034,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent multiple vector locations.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Object.Locations}
      */
     public static final class Builder extends
@@ -10611,6 +11659,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Common messages.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Object}
    */
   public static final class Builder extends
