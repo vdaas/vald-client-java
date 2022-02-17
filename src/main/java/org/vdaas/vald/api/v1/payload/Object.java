@@ -6771,6 +6771,775 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ReshapeVectorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Object.ReshapeVector)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
+     * <code>bytes object = 1;</code>
+     * @return The object.
+     */
+    com.google.protobuf.ByteString getObject();
+
+    /**
+     * <pre>
+     * The new shape.
+     * </pre>
+     *
+     * <code>repeated int32 shape = 2;</code>
+     * @return A list containing the shape.
+     */
+    java.util.List<java.lang.Integer> getShapeList();
+    /**
+     * <pre>
+     * The new shape.
+     * </pre>
+     *
+     * <code>repeated int32 shape = 2;</code>
+     * @return The count of shape.
+     */
+    int getShapeCount();
+    /**
+     * <pre>
+     * The new shape.
+     * </pre>
+     *
+     * <code>repeated int32 shape = 2;</code>
+     * @param index The index of the element to return.
+     * @return The shape at the given index.
+     */
+    int getShape(int index);
+  }
+  /**
+   * <pre>
+   * Represent reshape vector.
+   * </pre>
+   *
+   * Protobuf type {@code payload.v1.Object.ReshapeVector}
+   */
+  public static final class ReshapeVector extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Object.ReshapeVector)
+      ReshapeVectorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReshapeVector.newBuilder() to construct.
+    private ReshapeVector(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReshapeVector() {
+      object_ = com.google.protobuf.ByteString.EMPTY;
+      shape_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReshapeVector();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReshapeVector(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              object_ = input.readBytes();
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                shape_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              shape_.addInt(input.readInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                shape_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                shape_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          shape_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_ReshapeVector_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_ReshapeVector_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Object.ReshapeVector.class, org.vdaas.vald.api.v1.payload.Object.ReshapeVector.Builder.class);
+    }
+
+    public static final int OBJECT_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString object_;
+    /**
+     * <pre>
+     * The binary object.
+     * </pre>
+     *
+     * <code>bytes object = 1;</code>
+     * @return The object.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getObject() {
+      return object_;
+    }
+
+    public static final int SHAPE_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.IntList shape_;
+    /**
+     * <pre>
+     * The new shape.
+     * </pre>
+     *
+     * <code>repeated int32 shape = 2;</code>
+     * @return A list containing the shape.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getShapeList() {
+      return shape_;
+    }
+    /**
+     * <pre>
+     * The new shape.
+     * </pre>
+     *
+     * <code>repeated int32 shape = 2;</code>
+     * @return The count of shape.
+     */
+    public int getShapeCount() {
+      return shape_.size();
+    }
+    /**
+     * <pre>
+     * The new shape.
+     * </pre>
+     *
+     * <code>repeated int32 shape = 2;</code>
+     * @param index The index of the element to return.
+     * @return The shape at the given index.
+     */
+    public int getShape(int index) {
+      return shape_.getInt(index);
+    }
+    private int shapeMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!object_.isEmpty()) {
+        output.writeBytes(1, object_);
+      }
+      if (getShapeList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(shapeMemoizedSerializedSize);
+      }
+      for (int i = 0; i < shape_.size(); i++) {
+        output.writeInt32NoTag(shape_.getInt(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!object_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, object_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < shape_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(shape_.getInt(i));
+        }
+        size += dataSize;
+        if (!getShapeList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        shapeMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Object.ReshapeVector)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Object.ReshapeVector other = (org.vdaas.vald.api.v1.payload.Object.ReshapeVector) obj;
+
+      if (!getObject()
+          .equals(other.getObject())) return false;
+      if (!getShapeList()
+          .equals(other.getShapeList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getObject().hashCode();
+      if (getShapeCount() > 0) {
+        hash = (37 * hash) + SHAPE_FIELD_NUMBER;
+        hash = (53 * hash) + getShapeList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Object.ReshapeVector prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represent reshape vector.
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Object.ReshapeVector}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Object.ReshapeVector)
+        org.vdaas.vald.api.v1.payload.Object.ReshapeVectorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_ReshapeVector_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_ReshapeVector_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Object.ReshapeVector.class, org.vdaas.vald.api.v1.payload.Object.ReshapeVector.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Object.ReshapeVector.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        object_ = com.google.protobuf.ByteString.EMPTY;
+
+        shape_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_ReshapeVector_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.ReshapeVector getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Object.ReshapeVector.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.ReshapeVector build() {
+        org.vdaas.vald.api.v1.payload.Object.ReshapeVector result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.ReshapeVector buildPartial() {
+        org.vdaas.vald.api.v1.payload.Object.ReshapeVector result = new org.vdaas.vald.api.v1.payload.Object.ReshapeVector(this);
+        int from_bitField0_ = bitField0_;
+        result.object_ = object_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          shape_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.shape_ = shape_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Object.ReshapeVector) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Object.ReshapeVector)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Object.ReshapeVector other) {
+        if (other == org.vdaas.vald.api.v1.payload.Object.ReshapeVector.getDefaultInstance()) return this;
+        if (other.getObject() != com.google.protobuf.ByteString.EMPTY) {
+          setObject(other.getObject());
+        }
+        if (!other.shape_.isEmpty()) {
+          if (shape_.isEmpty()) {
+            shape_ = other.shape_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureShapeIsMutable();
+            shape_.addAll(other.shape_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.vdaas.vald.api.v1.payload.Object.ReshapeVector parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.vdaas.vald.api.v1.payload.Object.ReshapeVector) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString object_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
+       * <code>bytes object = 1;</code>
+       * @return The object.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getObject() {
+        return object_;
+      }
+      /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
+       * <code>bytes object = 1;</code>
+       * @param value The object to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObject(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        object_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The binary object.
+       * </pre>
+       *
+       * <code>bytes object = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearObject() {
+        
+        object_ = getDefaultInstance().getObject();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.IntList shape_ = emptyIntList();
+      private void ensureShapeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          shape_ = mutableCopy(shape_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * The new shape.
+       * </pre>
+       *
+       * <code>repeated int32 shape = 2;</code>
+       * @return A list containing the shape.
+       */
+      public java.util.List<java.lang.Integer>
+          getShapeList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(shape_) : shape_;
+      }
+      /**
+       * <pre>
+       * The new shape.
+       * </pre>
+       *
+       * <code>repeated int32 shape = 2;</code>
+       * @return The count of shape.
+       */
+      public int getShapeCount() {
+        return shape_.size();
+      }
+      /**
+       * <pre>
+       * The new shape.
+       * </pre>
+       *
+       * <code>repeated int32 shape = 2;</code>
+       * @param index The index of the element to return.
+       * @return The shape at the given index.
+       */
+      public int getShape(int index) {
+        return shape_.getInt(index);
+      }
+      /**
+       * <pre>
+       * The new shape.
+       * </pre>
+       *
+       * <code>repeated int32 shape = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The shape to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShape(
+          int index, int value) {
+        ensureShapeIsMutable();
+        shape_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The new shape.
+       * </pre>
+       *
+       * <code>repeated int32 shape = 2;</code>
+       * @param value The shape to add.
+       * @return This builder for chaining.
+       */
+      public Builder addShape(int value) {
+        ensureShapeIsMutable();
+        shape_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The new shape.
+       * </pre>
+       *
+       * <code>repeated int32 shape = 2;</code>
+       * @param values The shape to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllShape(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureShapeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, shape_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The new shape.
+       * </pre>
+       *
+       * <code>repeated int32 shape = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShape() {
+        shape_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Object.ReshapeVector)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Object.ReshapeVector)
+    private static final org.vdaas.vald.api.v1.payload.Object.ReshapeVector DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Object.ReshapeVector();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.ReshapeVector getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReshapeVector>
+        PARSER = new com.google.protobuf.AbstractParser<ReshapeVector>() {
+      @java.lang.Override
+      public ReshapeVector parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReshapeVector(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReshapeVector> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReshapeVector> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Object.ReshapeVector getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BlobOrBuilder extends
       // @@protoc_insertion_point(interface_extends:payload.v1.Object.Blob)
       com.google.protobuf.MessageOrBuilder {

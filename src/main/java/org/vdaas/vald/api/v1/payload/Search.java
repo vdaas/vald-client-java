@@ -5796,6 +5796,16 @@ private static final long serialVersionUID = 0L;
      * <code>.payload.v1.Filter.Config egress_filters = 7;</code>
      */
     org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder getEgressFiltersOrBuilder();
+
+    /**
+     * <pre>
+     * Minimum number of result to be returned.
+     * </pre>
+     *
+     * <code>uint32 min_num = 8 [(.validate.rules) = { ... }</code>
+     * @return The minNum.
+     */
+    int getMinNum();
   }
   /**
    * <pre>
@@ -5897,6 +5907,11 @@ private static final long serialVersionUID = 0L;
                 egressFilters_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+
+              minNum_ = input.readUInt32();
               break;
             }
             default: {
@@ -6113,6 +6128,21 @@ private static final long serialVersionUID = 0L;
       return getEgressFilters();
     }
 
+    public static final int MIN_NUM_FIELD_NUMBER = 8;
+    private int minNum_;
+    /**
+     * <pre>
+     * Minimum number of result to be returned.
+     * </pre>
+     *
+     * <code>uint32 min_num = 8 [(.validate.rules) = { ... }</code>
+     * @return The minNum.
+     */
+    @java.lang.Override
+    public int getMinNum() {
+      return minNum_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6147,6 +6177,9 @@ private static final long serialVersionUID = 0L;
       }
       if (egressFilters_ != null) {
         output.writeMessage(7, getEgressFilters());
+      }
+      if (minNum_ != 0) {
+        output.writeUInt32(8, minNum_);
       }
       unknownFields.writeTo(output);
     }
@@ -6183,6 +6216,10 @@ private static final long serialVersionUID = 0L;
       if (egressFilters_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getEgressFilters());
+      }
+      if (minNum_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, minNum_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6221,6 +6258,8 @@ private static final long serialVersionUID = 0L;
         if (!getEgressFilters()
             .equals(other.getEgressFilters())) return false;
       }
+      if (getMinNum()
+          != other.getMinNum()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6253,6 +6292,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EGRESS_FILTERS_FIELD_NUMBER;
         hash = (53 * hash) + getEgressFilters().hashCode();
       }
+      hash = (37 * hash) + MIN_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getMinNum();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6412,6 +6453,8 @@ private static final long serialVersionUID = 0L;
           egressFilters_ = null;
           egressFiltersBuilder_ = null;
         }
+        minNum_ = 0;
+
         return this;
       }
 
@@ -6453,6 +6496,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.egressFilters_ = egressFiltersBuilder_.build();
         }
+        result.minNum_ = minNum_;
         onBuilt();
         return result;
       }
@@ -6522,6 +6566,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasEgressFilters()) {
           mergeEgressFilters(other.getEgressFilters());
+        }
+        if (other.getMinNum() != 0) {
+          setMinNum(other.getMinNum());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7128,6 +7175,49 @@ private static final long serialVersionUID = 0L;
           egressFilters_ = null;
         }
         return egressFiltersBuilder_;
+      }
+
+      private int minNum_ ;
+      /**
+       * <pre>
+       * Minimum number of result to be returned.
+       * </pre>
+       *
+       * <code>uint32 min_num = 8 [(.validate.rules) = { ... }</code>
+       * @return The minNum.
+       */
+      @java.lang.Override
+      public int getMinNum() {
+        return minNum_;
+      }
+      /**
+       * <pre>
+       * Minimum number of result to be returned.
+       * </pre>
+       *
+       * <code>uint32 min_num = 8 [(.validate.rules) = { ... }</code>
+       * @param value The minNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinNum(int value) {
+        
+        minNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum number of result to be returned.
+       * </pre>
+       *
+       * <code>uint32 min_num = 8 [(.validate.rules) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinNum() {
+        
+        minNum_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
