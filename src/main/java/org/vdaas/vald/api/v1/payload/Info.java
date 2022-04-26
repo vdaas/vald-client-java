@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -148,6 +150,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -293,6 +297,8 @@ private static final long serialVersionUID = 0L;
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -1021,6 +1027,8 @@ private static final long serialVersionUID = 0L;
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -1125,6 +1133,8 @@ private static final long serialVersionUID = 0L;
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -1198,7 +1208,7 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getUuidBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
           }
           unknownFields.writeTo(output);
@@ -1210,7 +1220,7 @@ private static final long serialVersionUID = 0L;
           if (size != -1) return size;
 
           size = 0;
-          if (!getUuidBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
           }
           size += unknownFields.getSerializedSize();
@@ -1701,6 +1711,8 @@ private static final long serialVersionUID = 0L;
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -1774,7 +1786,7 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getUuidBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
           }
           unknownFields.writeTo(output);
@@ -1786,7 +1798,7 @@ private static final long serialVersionUID = 0L;
           if (size != -1) return size;
 
           size = 0;
-          if (!getUuidBytes().isEmpty()) {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
           }
           size += unknownFields.getSerializedSize();
@@ -3168,6 +3180,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3501,16 +3515,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAppNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, appName_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getNamespaceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, namespace_);
       }
-      if (!getIpBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ip_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ip_);
       }
       if (cpu_ != null) {
@@ -3531,16 +3545,16 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getAppNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, appName_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getNamespaceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespace_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, namespace_);
       }
-      if (!getIpBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ip_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ip_);
       }
       if (cpu_ != null) {
@@ -5100,6 +5114,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5387,13 +5403,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getInternalAddrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, internalAddr_);
       }
-      if (!getExternalAddrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalAddr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalAddr_);
       }
       if (cpu_ != null) {
@@ -5414,13 +5430,13 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getInternalAddrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(internalAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, internalAddr_);
       }
-      if (!getExternalAddrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalAddr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalAddr_);
       }
       if (cpu_ != null) {
@@ -6717,6 +6733,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6797,13 +6815,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (limit_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(limit_) != 0) {
         output.writeDouble(1, limit_);
       }
-      if (request_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(request_) != 0) {
         output.writeDouble(2, request_);
       }
-      if (usage_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
         output.writeDouble(3, usage_);
       }
       unknownFields.writeTo(output);
@@ -6815,15 +6833,15 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (limit_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(limit_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(1, limit_);
       }
-      if (request_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(request_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, request_);
       }
-      if (usage_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, usage_);
       }
@@ -7419,6 +7437,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7499,13 +7519,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (limit_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(limit_) != 0) {
         output.writeDouble(1, limit_);
       }
-      if (request_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(request_) != 0) {
         output.writeDouble(2, request_);
       }
-      if (usage_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
         output.writeDouble(3, usage_);
       }
       unknownFields.writeTo(output);
@@ -7517,15 +7537,15 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (limit_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(limit_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(1, limit_);
       }
-      if (request_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(request_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, request_);
       }
-      if (usage_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(usage_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, usage_);
       }
@@ -8131,6 +8151,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9044,6 +9066,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9938,6 +9962,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
