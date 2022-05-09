@@ -49,7 +49,7 @@ nexusStaging {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
