@@ -23,9 +23,7 @@ PKGREPO     = github.com/$(REPO)/$(PKGNAME)
 
 VALD_DIR    = vald
 VALD_SHA    = VALD_SHA
-VALD_CLIENT_JAVA_VERSION = version/VALD_CLIENT_JAVA_VERSION
-PROTOBUF_VERSION = version/PROTOBUF_VERSION
-GRPC_JAVA_VERSION = version/GRPC_JAVA_VERSION
+VALD_CLIENT_JAVA_VERSION = VALD_CLIENT_JAVA_VERSION
 
 PWD    := $(eval PWD := $(shell pwd))$(PWD)
 GOPATH := $(eval GOPATH := $(shell go env GOPATH))$(GOPATH)
@@ -136,16 +134,6 @@ vald/sha/update: vald
 vald/client/java/version/print:
 	@cat $(VALD_CLIENT_JAVA_VERSION)
 
-.PHONY: vald/protobuf/version/print
-## print PROTOBUF_VERSION value
-vald/protobuf/version/print:
-	@cat $(PROTOBUF_VERSION)
-
-.PHONY: vald/grpc/java/version/print
-## print GRPC_JAVA_VERSION value
-vald/grpc/java/version/print:
-	@cat $(GRPC_JAVA_VERSION)
-
 .PHONY: vald/client/java/version/update
 ## update VALD_CLIENT_JAVA_VERSION value
 vald/client/java/version/update: vald
@@ -166,8 +154,8 @@ vald/client/java/version/update: vald
 	        new_version="$${vald_version}"; \
 	    fi; \
 	    echo "VALD_VERSION: $${vald_version}, NEW_CLIENT_VERSION: $${new_version}"; \
-	    echo "$${new_version}" > version/VALD_CLIENT_JAVA_VERSION)
-	sed -i -e "s/^version = ".*"\$$/version = \"`cat version/VALD_CLIENT_JAVA_VERSION`\"/" build.gradle
+	    echo "$${new_version}" > VALD_CLIENT_JAVA_VERSION)
+	sed -i -e "s/^version = ".*"\$$/version = \"`cat VALD_CLIENT_JAVA_VERSION`\"/" build.gradle
 
 .PHONY: proto/deps
 ## install proto deps

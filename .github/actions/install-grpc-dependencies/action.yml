@@ -15,8 +15,6 @@ runs:
       shell: bash
       id: install-grpc-java
       run: |
-        PROTOBUF_VERSION=$(make vald/protobuf/version/print)
-        GRPC_JAVA_VERSION=$(make vald/grpc/java/version/print)
         mkdir -p $HOME/protobuf
         curl -L https://github.com/protocolbuffers/protobuf/archive/${PROTOBUF_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/protobuf
         cd $HOME/protobuf
@@ -33,3 +31,6 @@ runs:
         -lprotoc -lprotobuf -lpthread --std=c++0x -s \
         -o protoc-gen-grpc-java
         cp protoc-gen-grpc-java $HOME/grpc-java
+      env:
+        PROTOBUF_VERSION: v3.20.0
+        GRPC_JAVA_VERSION: v1.45.1
