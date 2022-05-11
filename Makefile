@@ -198,4 +198,3 @@ $(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate:
 		--depth 1 \
 		https://github.com/envoyproxy/protoc-gen-validate \
 		$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
-

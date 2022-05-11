@@ -22,6 +22,8 @@ jobs:
           make all
           make vald/sha/update
           make vald/client/java/version/update
+          make vald/protobuf/version/update
+          make vald/grpc/java/version/update
           rm -rf vald
       - name: commit and push
         run: |
