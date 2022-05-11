@@ -169,6 +169,18 @@ vald/client/java/version/update: vald
 	    echo "$${new_version}" > version/VALD_CLIENT_JAVA_VERSION)
 	sed -i -e "s/^version = ".*"\$$/version = \"`cat version/VALD_CLIENT_JAVA_VERSION`\"/" build.gradle
 
+.PHONY: vald/protobuf/version/update
+## update PROTOBUF_VERSION value
+vald/protobuf/version/update: vald
+	rm version/PROTOBUF_VERSION
+	curl --silent "https://api.github.com/repos/protocolbuffers/protobuf/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' > version/PROTOBUF_VERSION
+
+.PHONY: vald/grpc/java/version/update
+## update GRPC_JAVA_VERSION value
+vald/grpc/java/version/update: vald
+	rm version/GRPC_JAVA_VERSION
+	curl --silent "https://api.github.com/repos/grpc/grpc-java/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' > version/GRPC_JAVA_VERSION
+
 .PHONY: proto/deps
 ## install proto deps
 proto/deps: \
@@ -186,3 +198,4 @@ $(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate:
 		--depth 1 \
 		https://github.com/envoyproxy/protoc-gen-validate \
 		$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
+
