@@ -49,6 +49,7 @@ nexusStaging {
 }
 
 repositories {
+    jcenter()
     if (isDevBuild) {
         mavenLocal()
     } else {
