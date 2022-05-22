@@ -49,7 +49,11 @@ nexusStaging {
 }
 
 repositories {
-    mavenCentral()
+    if (isDevBuild) {
+        mavenLocal()
+    } else {
+        mavenCentral()
+    }
 }
 
 dependencies {
@@ -64,7 +68,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     testImplementation 'io.grpc:grpc-okhttp:1.46.0'
 }
-
 
 test {
     useJUnitPlatform()
@@ -89,58 +92,52 @@ artifacts {
     archives sourcesJar, javadocJar
 }
 
-signing {
-    required { isReleaseBuild }
-    sign publishing.publications.mavenJava
-}
-
 publishing {
     publications {
-        if (isDevBuild) {
-            mavenLocal()
-        }
-        else {
-            mavenJava(MavenPublication) {
-                repository(url: sonatypeRepositoryUrl) {
-                    authentication(userName: sonatypeUsername, password: sonatypePassword)
+        mavenJava(MavenPublication) {
+            pom {
+                name = 'vald-client-java'
+                packaging = 'jar'
+                description = "a client library for Vald (https://github.com/vdaas/vald)."
+                url = 'https://github.com/vdaas/vald-client-java'
+
+                scm {
+                    url = "scm:git@github.com:vdaas/vald-client-java.git"
+                    connection = "scm:git@github.com:vdaas/vald-client-java.git"
+                    developerConnection = "scm:git@github.com:vdaas/vald-client-java.git"
                 }
-
-                pom.project {
-                    name 'vald-client-java'
-                    packaging 'jar'
-                    description "a client library for Vald (https://github.com/vdaas/vald)."
-                    url 'https://github.com/vdaas/vald-client-java'
-
-                    scm {
-                        url "scm:git@github.com:vdaas/vald-client-java.git"
-                        connection "scm:git@github.com:vdaas/vald-client-java.git"
-                        developerConnection "scm:git@github.com:vdaas/vald-client-java.git"
+                licenses {
+                    license {
+                        name = 'Apache 2.0'
+                        url = 'https://www.apache.org/licenses/LICENSE-2.0'
                     }
-                    licenses {
-                        license {
-                            name 'Apache 2.0'
-                            url 'https://www.apache.org/licenses/LICENSE-2.0'
-                        }
+                }
+                developers {
+                    developer {
+                        id = 'kpango'
+                        name = 'Yusuke Kato'
+                        email = 'i.can.feel.gravity@gmail.com'
                     }
-                    developers {
-                        developer {
-                            id 'kpango'
-                            name 'Yusuke Kato'
-                            email 'i.can.feel.gravity@gmail.com'
-                        }
-                        developer {
-                            id 'kmrmt'
-                            name 'Kosuke Morimoto'
-                            email 'kou.morimoto@gmail.com'
-                        }
-                        developer {
-                            id 'rinx'
-                            name 'Rintaro Okamura'
-                            email 'rintaro.okamura@gmail.com'
-                        }
+                    developer {
+                        id = 'kmrmt'
+                        name = 'Kosuke Morimoto'
+                        email = 'kou.morimoto@gmail.com'
+                    }
+                    developer {
+                        id = 'rinx'
+                        name = 'Rintaro Okamura'
+                        email = 'rintaro.okamura@gmail.com'
                     }
                 }
             }
+            from(components.java)
         }
+    }
+}
+
+signing {
+    required { isReleaseBuild }
+    if(isReleaseBuild) {
+        sign publishing.publications.mavenJava
     }
 }
