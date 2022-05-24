@@ -127,7 +127,7 @@ publishing {
                     developer {
                         id = 'kevindiu'
                         name = 'Kevin Diu'
-                        email = 'kevindiujp@gmail.com'
+                        email = 'kevindiu@vdaas.org'
                     }
                 }
             }
