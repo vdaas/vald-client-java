@@ -117,7 +117,7 @@ publishing {
                     developer {
                         id = 'kpango'
                         name = 'Yusuke Kato'
-                        email = 'i.can.feel.gravity@gmail.com'
+                        email = 'kpango@vdaas.org'
                     }
                     developer {
                         id = 'kmrmt'
