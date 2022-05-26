@@ -28,6 +28,8 @@ def isDevBuild
 def isSnapshotBuild
 def isReleaseBuild
 def sonatypeRepositoryUrl
+def sonatypeUsername = System.getenv('SONATYPE_USERNAME')
+def sonatypePassword = System.getenv('SONATYPE_PASSWORD')
 
 if (hasProperty("release")) {
     isReleaseBuild = true

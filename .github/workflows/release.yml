@@ -92,6 +92,7 @@ jobs:
           fetch-depth: 1
       - name: prepare for publish
         run: |
+          export USER_HOME=$HOME
           ./gradlew clean
           echo "${PGP_PRIVATE_KEY}" > private_key.txt
           gpg --import --batch private_key.txt
