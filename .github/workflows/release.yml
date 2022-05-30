@@ -116,10 +116,11 @@ jobs:
       - name: publish
         run: |
           ./gradlew clean
-          ./gradlew build -x test
-          ./gradlew publish -Prelease
+          ./gradlew build -x test --info
+          ./gradlew javadoc --info
+          ./gradlew publish -Prelease --info
           sleep 120
-          ./gradlew closeAndReleaseRepository
+          ./gradlew closeAndReleaseRepository --info
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
