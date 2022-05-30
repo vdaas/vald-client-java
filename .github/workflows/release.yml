@@ -120,3 +120,6 @@ jobs:
           ./gradlew publish -Prelease
           sleep 120
           ./gradlew closeAndReleaseRepository
+        env:
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
