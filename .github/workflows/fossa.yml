@@ -19,6 +19,9 @@ jobs:
       - name: 'Install fossa-cli'
         run: |
           curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+      - name: 'Install java'
+        run: |
+          apt-get install -y openjdk-8-jdk
       - name: 'Run for master branch'
         if: github.ref == 'refs/heads/master'
         run: |
