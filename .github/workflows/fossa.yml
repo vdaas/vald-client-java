@@ -16,12 +16,13 @@ jobs:
     if: github.ref == 'refs/heads/master' || github.event.action == 'labeled' && github.event.label.name == 'actions/fossa'
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
       - name: 'Install fossa-cli'
         run: |
           curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
-      - name: 'Install java'
-        run: |
-          apt install -y openjdk-8-jdk
       - name: 'Run for master branch'
         if: github.ref == 'refs/heads/master'
         run: |
