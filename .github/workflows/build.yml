@@ -13,9 +13,9 @@ jobs:
           fetch-depth: 10
       - name: Install gRPC dependencies
         uses: ./.github/actions/install-grpc-dependencies
-      - name: checkout master
+      - name: checkout main branch
         run: |
-          git checkout master
+          git checkout main
       - name: build
         run: |
           export GOPATH=$HOME/go
