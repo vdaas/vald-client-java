@@ -57,6 +57,7 @@ jobs:
           curl -OL https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json
       - name: run tests
         run: |
+          java -version
           kubectl port-forward statefulset/vald-agent-ngt 8081:8081 &
           pid=$!
 
