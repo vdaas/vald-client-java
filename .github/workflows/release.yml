@@ -57,7 +57,7 @@ jobs:
           curl -OL https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json
       - name: Update java version
         run: |
-          apt install openjdk-17-jdk openjdk-17-jre
+          sudo apt install openjdk-17-jdk openjdk-17-jre
           java -version
       - name: run tests
         run: |
