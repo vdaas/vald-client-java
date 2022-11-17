@@ -60,7 +60,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.grpc:grpc-stub:1.49.2'
+    implementation 'io.grpc:grpc-stub:1.51.0'
     implementation 'io.grpc:grpc-protobuf:1.49.2'
     implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.21.7'
     implementation 'io.envoyproxy.protoc-gen-validate:pgv-java-stub:0.6.13'
