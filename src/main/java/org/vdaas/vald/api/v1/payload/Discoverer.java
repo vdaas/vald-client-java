@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The agent name to be discover.
+     * The agent name to be discovered.
      * </pre>
      *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getName();
     /**
      * <pre>
-     * The agent name to be discover.
+     * The agent name to be discovered.
      * </pre>
      *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -73,7 +73,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The namespace to be discover.
+     * The namespace to be discovered.
      * </pre>
      *
      * <code>string namespace = 2;</code>
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getNamespace();
     /**
      * <pre>
-     * The namespace to be discover.
+     * The namespace to be discovered.
      * </pre>
      *
      * <code>string namespace = 2;</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The node to be discover.
+     * The node to be discovered.
      * </pre>
      *
      * <code>string node = 3;</code>
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getNode();
     /**
      * <pre>
-     * The node to be discover.
+     * The node to be discovered.
      * </pre>
      *
      * <code>string node = 3;</code>
@@ -159,10 +159,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
-     * The agent name to be discover.
+     * The agent name to be discovered.
      * </pre>
      *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -183,7 +184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The agent name to be discover.
+     * The agent name to be discovered.
      * </pre>
      *
      * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -205,10 +206,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NAMESPACE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object namespace_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object namespace_ = "";
     /**
      * <pre>
-     * The namespace to be discover.
+     * The namespace to be discovered.
      * </pre>
      *
      * <code>string namespace = 2;</code>
@@ -229,7 +231,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The namespace to be discover.
+     * The namespace to be discovered.
      * </pre>
      *
      * <code>string namespace = 2;</code>
@@ -251,10 +253,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NODE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object node_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object node_ = "";
     /**
      * <pre>
-     * The node to be discover.
+     * The node to be discovered.
      * </pre>
      *
      * <code>string node = 3;</code>
@@ -275,7 +278,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The node to be discover.
+     * The node to be discovered.
      * </pre>
      *
      * <code>string node = 3;</code>
@@ -507,12 +510,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         namespace_ = "";
-
         node_ = "";
-
         return this;
       }
 
@@ -539,11 +540,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Discoverer.Request buildPartial() {
         org.vdaas.vald.api.v1.payload.Discoverer.Request result = new org.vdaas.vald.api.v1.payload.Discoverer.Request(this);
-        result.name_ = name_;
-        result.namespace_ = namespace_;
-        result.node_ = node_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Discoverer.Request result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.namespace_ = namespace_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.node_ = node_;
+        }
       }
 
       @java.lang.Override
@@ -592,14 +604,17 @@ private static final long serialVersionUID = 0L;
         if (other == org.vdaas.vald.api.v1.payload.Discoverer.Request.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getNamespace().isEmpty()) {
           namespace_ = other.namespace_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getNode().isEmpty()) {
           node_ = other.node_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -630,17 +645,17 @@ private static final long serialVersionUID = 0L;
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 namespace_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 node_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -658,11 +673,12 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * The agent name to be discover.
+       * The agent name to be discovered.
        * </pre>
        *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -682,7 +698,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The agent name to be discover.
+       * The agent name to be discovered.
        * </pre>
        *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -703,7 +719,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The agent name to be discover.
+       * The agent name to be discovered.
        * </pre>
        *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -712,31 +728,29 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The agent name to be discover.
+       * The agent name to be discovered.
        * </pre>
        *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The agent name to be discover.
+       * The agent name to be discovered.
        * </pre>
        *
        * <code>string name = 1 [(.validate.rules) = { ... }</code>
@@ -745,12 +759,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -758,7 +770,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object namespace_ = "";
       /**
        * <pre>
-       * The namespace to be discover.
+       * The namespace to be discovered.
        * </pre>
        *
        * <code>string namespace = 2;</code>
@@ -778,7 +790,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The namespace to be discover.
+       * The namespace to be discovered.
        * </pre>
        *
        * <code>string namespace = 2;</code>
@@ -799,7 +811,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The namespace to be discover.
+       * The namespace to be discovered.
        * </pre>
        *
        * <code>string namespace = 2;</code>
@@ -808,31 +820,29 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNamespace(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         namespace_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The namespace to be discover.
+       * The namespace to be discovered.
        * </pre>
        *
        * <code>string namespace = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearNamespace() {
-        
         namespace_ = getDefaultInstance().getNamespace();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The namespace to be discover.
+       * The namespace to be discovered.
        * </pre>
        *
        * <code>string namespace = 2;</code>
@@ -841,12 +851,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNamespaceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         namespace_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -854,7 +862,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object node_ = "";
       /**
        * <pre>
-       * The node to be discover.
+       * The node to be discovered.
        * </pre>
        *
        * <code>string node = 3;</code>
@@ -874,7 +882,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The node to be discover.
+       * The node to be discovered.
        * </pre>
        *
        * <code>string node = 3;</code>
@@ -895,7 +903,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The node to be discover.
+       * The node to be discovered.
        * </pre>
        *
        * <code>string node = 3;</code>
@@ -904,31 +912,29 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         node_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The node to be discover.
+       * The node to be discovered.
        * </pre>
        *
        * <code>string node = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearNode() {
-        
         node_ = getDefaultInstance().getNode();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The node to be discover.
+       * The node to be discovered.
        * </pre>
        *
        * <code>string node = 3;</code>
@@ -937,12 +943,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         node_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

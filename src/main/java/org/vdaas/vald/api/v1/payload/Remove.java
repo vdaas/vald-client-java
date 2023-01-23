@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public org.vdaas.vald.api.v1.payload.Object.IDOrBuilder getIdOrBuilder() {
-      return getId();
+      return id_ == null ? org.vdaas.vald.api.v1.payload.Object.ID.getDefaultInstance() : id_;
     }
 
     public static final int CONFIG_FIELD_NUMBER = 2;
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public org.vdaas.vald.api.v1.payload.Remove.ConfigOrBuilder getConfigOrBuilder() {
-      return getConfig();
+      return config_ == null ? org.vdaas.vald.api.v1.payload.Remove.Config.getDefaultInstance() : config_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -438,16 +438,15 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (idBuilder_ == null) {
-          id_ = null;
-        } else {
-          id_ = null;
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
           idBuilder_ = null;
         }
-        if (configBuilder_ == null) {
-          config_ = null;
-        } else {
-          config_ = null;
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
           configBuilder_ = null;
         }
         return this;
@@ -476,18 +475,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Remove.Request buildPartial() {
         org.vdaas.vald.api.v1.payload.Remove.Request result = new org.vdaas.vald.api.v1.payload.Remove.Request(this);
-        if (idBuilder_ == null) {
-          result.id_ = id_;
-        } else {
-          result.id_ = idBuilder_.build();
-        }
-        if (configBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = configBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Remove.Request result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.config_ = configBuilder_ == null
+              ? config_
+              : configBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -570,14 +574,14 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getConfigFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -595,6 +599,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private org.vdaas.vald.api.v1.payload.Object.ID id_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -608,7 +613,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the id field is set.
        */
       public boolean hasId() {
-        return idBuilder_ != null || id_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -638,11 +643,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           id_ = value;
-          onChanged();
         } else {
           idBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -656,11 +661,11 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Object.ID.Builder builderForValue) {
         if (idBuilder_ == null) {
           id_ = builderForValue.build();
-          onChanged();
         } else {
           idBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -672,17 +677,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeId(org.vdaas.vald.api.v1.payload.Object.ID value) {
         if (idBuilder_ == null) {
-          if (id_ != null) {
-            id_ =
-              org.vdaas.vald.api.v1.payload.Object.ID.newBuilder(id_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != org.vdaas.vald.api.v1.payload.Object.ID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
           } else {
             id_ = value;
           }
-          onChanged();
         } else {
           idBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -693,14 +699,13 @@ private static final long serialVersionUID = 0L;
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public Builder clearId() {
-        if (idBuilder_ == null) {
-          id_ = null;
-          onChanged();
-        } else {
-          id_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
           idBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -711,7 +716,7 @@ private static final long serialVersionUID = 0L;
        * <code>.payload.v1.Object.ID id = 1;</code>
        */
       public org.vdaas.vald.api.v1.payload.Object.ID.Builder getIdBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getIdFieldBuilder().getBuilder();
       }
@@ -763,7 +768,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the config field is set.
        */
       public boolean hasConfig() {
-        return configBuilder_ != null || config_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -793,11 +798,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           config_ = value;
-          onChanged();
         } else {
           configBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -811,11 +816,11 @@ private static final long serialVersionUID = 0L;
           org.vdaas.vald.api.v1.payload.Remove.Config.Builder builderForValue) {
         if (configBuilder_ == null) {
           config_ = builderForValue.build();
-          onChanged();
         } else {
           configBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -827,17 +832,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeConfig(org.vdaas.vald.api.v1.payload.Remove.Config value) {
         if (configBuilder_ == null) {
-          if (config_ != null) {
-            config_ =
-              org.vdaas.vald.api.v1.payload.Remove.Config.newBuilder(config_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            config_ != null &&
+            config_ != org.vdaas.vald.api.v1.payload.Remove.Config.getDefaultInstance()) {
+            getConfigBuilder().mergeFrom(value);
           } else {
             config_ = value;
           }
-          onChanged();
         } else {
           configBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -848,14 +854,13 @@ private static final long serialVersionUID = 0L;
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public Builder clearConfig() {
-        if (configBuilder_ == null) {
-          config_ = null;
-          onChanged();
-        } else {
-          config_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
           configBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -866,7 +871,7 @@ private static final long serialVersionUID = 0L;
        * <code>.payload.v1.Remove.Config config = 2;</code>
        */
       public org.vdaas.vald.api.v1.payload.Remove.Config.Builder getConfigBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getConfigFieldBuilder().getBuilder();
       }
@@ -1063,6 +1068,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int REQUESTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<org.vdaas.vald.api.v1.payload.Remove.Request> requests_;
     /**
      * <pre>
@@ -1316,6 +1322,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (requestsBuilder_ == null) {
           requests_ = java.util.Collections.emptyList();
         } else {
@@ -1349,7 +1356,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Remove.MultiRequest buildPartial() {
         org.vdaas.vald.api.v1.payload.Remove.MultiRequest result = new org.vdaas.vald.api.v1.payload.Remove.MultiRequest(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(org.vdaas.vald.api.v1.payload.Remove.MultiRequest result) {
         if (requestsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             requests_ = java.util.Collections.unmodifiableList(requests_);
@@ -1359,8 +1372,10 @@ private static final long serialVersionUID = 0L;
         } else {
           result.requests_ = requestsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Remove.MultiRequest result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -1933,7 +1948,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SKIP_STRICT_EXIST_CHECK_FIELD_NUMBER = 1;
-    private boolean skipStrictExistCheck_;
+    private boolean skipStrictExistCheck_ = false;
     /**
      * <pre>
      * A flag to skip exist check during upsert operation.
@@ -1948,7 +1963,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TIMESTAMP_FIELD_NUMBER = 3;
-    private long timestamp_;
+    private long timestamp_ = 0L;
     /**
      * <pre>
      * Remove timestamp.
@@ -2167,10 +2182,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         skipStrictExistCheck_ = false;
-
         timestamp_ = 0L;
-
         return this;
       }
 
@@ -2197,10 +2211,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Remove.Config buildPartial() {
         org.vdaas.vald.api.v1.payload.Remove.Config result = new org.vdaas.vald.api.v1.payload.Remove.Config(this);
-        result.skipStrictExistCheck_ = skipStrictExistCheck_;
-        result.timestamp_ = timestamp_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Remove.Config result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.skipStrictExistCheck_ = skipStrictExistCheck_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
       }
 
       @java.lang.Override
@@ -2281,12 +2304,12 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 skipStrictExistCheck_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 24: {
                 timestamp_ = input.readInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 24
               default: {
@@ -2304,6 +2327,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean skipStrictExistCheck_ ;
       /**
@@ -2330,6 +2354,7 @@ private static final long serialVersionUID = 0L;
       public Builder setSkipStrictExistCheck(boolean value) {
         
         skipStrictExistCheck_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2342,7 +2367,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearSkipStrictExistCheck() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         skipStrictExistCheck_ = false;
         onChanged();
         return this;
@@ -2373,6 +2398,7 @@ private static final long serialVersionUID = 0L;
       public Builder setTimestamp(long value) {
         
         timestamp_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2385,7 +2411,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTimestamp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         timestamp_ = 0L;
         onChanged();
         return this;
