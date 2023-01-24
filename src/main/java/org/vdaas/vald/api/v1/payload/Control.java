@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int POOL_SIZE_FIELD_NUMBER = 1;
-    private int poolSize_ = 0;
+    private int poolSize_;
     /**
      * <pre>
      * The pool size of the create index operation.
@@ -312,8 +312,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         poolSize_ = 0;
+
         return this;
       }
 
@@ -340,16 +340,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest buildPartial() {
         org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest result = new org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.poolSize_ = poolSize_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.poolSize_ = poolSize_;
-        }
       }
 
       @java.lang.Override
@@ -427,7 +420,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 poolSize_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
+
                 break;
               } // case 8
               default: {
@@ -445,7 +438,6 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
-      private int bitField0_;
 
       private int poolSize_ ;
       /**
@@ -472,7 +464,6 @@ private static final long serialVersionUID = 0L;
       public Builder setPoolSize(int value) {
         
         poolSize_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -485,7 +476,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPoolSize() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         poolSize_ = 0;
         onChanged();
         return this;

@@ -127,8 +127,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int HOST_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object host_ = "";
+    private volatile java.lang.Object host_;
     /**
      * <pre>
      * The target hostname.
@@ -174,7 +173,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PORT_FIELD_NUMBER = 2;
-    private int port_ = 0;
+    private int port_;
     /**
      * <pre>
      * The target port.
@@ -390,9 +389,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         host_ = "";
+
         port_ = 0;
+
         return this;
       }
 
@@ -419,19 +419,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Filter.Target buildPartial() {
         org.vdaas.vald.api.v1.payload.Filter.Target result = new org.vdaas.vald.api.v1.payload.Filter.Target(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.host_ = host_;
+        result.port_ = port_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(org.vdaas.vald.api.v1.payload.Filter.Target result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.host_ = host_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.port_ = port_;
-        }
       }
 
       @java.lang.Override
@@ -480,7 +471,6 @@ private static final long serialVersionUID = 0L;
         if (other == org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance()) return this;
         if (!other.getHost().isEmpty()) {
           host_ = other.host_;
-          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getPort() != 0) {
@@ -514,12 +504,12 @@ private static final long serialVersionUID = 0L;
                 break;
               case 10: {
                 host_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
+
                 break;
               } // case 10
               case 16: {
                 port_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
+
                 break;
               } // case 16
               default: {
@@ -537,7 +527,6 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
-      private int bitField0_;
 
       private java.lang.Object host_ = "";
       /**
@@ -592,9 +581,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setHost(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         host_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -607,8 +598,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearHost() {
+        
         host_ = getDefaultInstance().getHost();
-        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -623,10 +614,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setHostBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         host_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -656,7 +649,6 @@ private static final long serialVersionUID = 0L;
       public Builder setPort(int value) {
         
         port_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -669,7 +661,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPort() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         port_ = 0;
         onChanged();
         return this;
@@ -832,7 +824,6 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TARGETS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
     private java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> targets_;
     /**
      * <pre>
@@ -1086,7 +1077,6 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (targetsBuilder_ == null) {
           targets_ = java.util.Collections.emptyList();
         } else {
@@ -1120,13 +1110,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Filter.Config buildPartial() {
         org.vdaas.vald.api.v1.payload.Filter.Config result = new org.vdaas.vald.api.v1.payload.Filter.Config(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(org.vdaas.vald.api.v1.payload.Filter.Config result) {
+        int from_bitField0_ = bitField0_;
         if (targetsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             targets_ = java.util.Collections.unmodifiableList(targets_);
@@ -1136,10 +1120,8 @@ private static final long serialVersionUID = 0L;
         } else {
           result.targets_ = targetsBuilder_.build();
         }
-      }
-
-      private void buildPartial0(org.vdaas.vald.api.v1.payload.Filter.Config result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override

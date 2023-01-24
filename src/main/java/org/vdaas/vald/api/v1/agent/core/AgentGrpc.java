@@ -195,7 +195,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating index RPC.
+     * Represent the create index RPC.
      * </pre>
      */
     public void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
@@ -205,7 +205,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the saving index RPC.
+     * Represent the save index RPC.
      * </pre>
      */
     public void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
@@ -215,7 +215,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating and saving index RPC.
+     * Represent the create and save index RPC.
      * </pre>
      */
     public void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
@@ -286,7 +286,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating index RPC.
+     * Represent the create index RPC.
      * </pre>
      */
     public void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
@@ -297,7 +297,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the saving index RPC.
+     * Represent the save index RPC.
      * </pre>
      */
     public void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
@@ -308,7 +308,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating and saving index RPC.
+     * Represent the create and save index RPC.
      * </pre>
      */
     public void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
@@ -348,7 +348,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating index RPC.
+     * Represent the create index RPC.
      * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Empty createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
@@ -358,7 +358,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the saving index RPC.
+     * Represent the save index RPC.
      * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Empty saveIndex(org.vdaas.vald.api.v1.payload.Empty request) {
@@ -368,7 +368,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating and saving index RPC.
+     * Represent the create and save index RPC.
      * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Empty createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
@@ -406,7 +406,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating index RPC.
+     * Represent the create index RPC.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> createIndex(
@@ -417,7 +417,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the saving index RPC.
+     * Represent the save index RPC.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> saveIndex(
@@ -428,7 +428,7 @@ public final class AgentGrpc {
 
     /**
      * <pre>
-     * Represent the creating and saving index RPC.
+     * Represent the create and save index RPC.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Empty> createAndSaveIndex(
