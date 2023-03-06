@@ -15,7 +15,7 @@ runs:
         echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 
         sudo apt-get update
-        sudo apt-get install -y g++ git bazel
+        sudo apt-get install -y g++ git bazel libprotobuf-dev libprotoc-dev protobuf-compiler libtool
     - name: Install grpc-java
       shell: bash
       id: install-grpc-java
