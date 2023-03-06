@@ -29,10 +29,5 @@ runs:
         cp bazel-bin/protoc /usr/local/bin
         mkdir -p $HOME/grpc-java
         curl -L https://github.com/grpc/grpc-java/archive/${GRPC_JAVA_VERSION}.tar.gz | tar xvz --strip-components=1 -C $HOME/grpc-java
-        cd $HOME/grpc-java/compiler/src/java_plugin/cpp
-        g++ -I. -I$HOME/protobuf/src \
-        *.cpp \
-        -L$HOME/protobuf/src/.libs \
-        -lprotoc -lprotobuf -lpthread --std=c++0x -s \
-        -o protoc-gen-grpc-java
-        cp protoc-gen-grpc-java $HOME/grpc-java
+        cd $HOME/grpc-java/compiler
+        ../gradlew java_pluginExecutable
