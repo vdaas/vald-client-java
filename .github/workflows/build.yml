@@ -11,8 +11,8 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 10
-      - name: Install gRPC dependencies
-        uses: ./.github/actions/install-grpc-dependencies
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v1
       - name: checkout main branch
         run: |
           git checkout main
