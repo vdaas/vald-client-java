@@ -18,6 +18,7 @@ apply plugin: "kotlinx-serialization"
 apply plugin: "maven-publish"
 apply plugin: "signing"
 apply plugin: 'io.codearte.nexus-staging'
+apply plugin: 'com.google.protobuf'
 
 group = "org.vdaas.vald"
 archivesBaseName = "vald-client-java"
@@ -81,6 +82,22 @@ test {
     }
 }
 
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.21.12"
+    }
+    plugins {
+        grpc {
+        artifact = 'io.grpc:protoc-gen-grpc-java:1.51.1'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+        grpc {}
+        }
+    }
+}
+
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'
         from sourceSets.main.allSource
@@ -103,7 +120,7 @@ publishing {
 	    artifact javadocJar
             pom {
                 name = 'vald-client-java'
-                packaging = 'jar'
+                packaging = 'jar'plugin
                 description = "a client library for Vald (https://github.com/vdaas/vald)."
                 url = 'https://github.com/vdaas/vald-client-java'
 
