@@ -19,7 +19,7 @@ apply plugin: "kotlinx-serialization"
 apply plugin: "maven-publish"
 apply plugin: "signing"
 apply plugin: 'io.codearte.nexus-staging'
-apply plugin: 'com.google.protobuf' version: '0.9.2'
+apply plugin: "com.google.protobuf"
 
 group = "org.vdaas.vald"
 archivesBaseName = "vald-client-java"
