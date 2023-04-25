@@ -21,15 +21,15 @@ apply plugin: 'io.codearte.nexus-staging'
 
 group = "org.vdaas.vald"
 archivesBaseName = "vald-client-java"
-version = "1.7.4"
+version = "1.7.5"
 description = "a client library for Vald (https://github.com/vdaas/vald)."
 
 def isDevBuild
 def isSnapshotBuild
 def isReleaseBuild
 def sonatypeRepositoryUrl
-def sonatypeUsername = System.getenv('SONATYPE_USERNAME')
-def sonatypePassword = System.getenv('SONATYPE_PASSWORD')
+def sonatypeUsername = "vdaas"
+def sonatypePassword = "#0120Rokamura"
 
 if (hasProperty("release")) {
     isReleaseBuild = true
