@@ -11,8 +11,6 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 10
-      - name: Install gRPC dependencies
-        uses: ./.github/actions/install-grpc-dependencies
       - name: checkout main branch
         run: |
           git checkout main
@@ -20,12 +18,12 @@ jobs:
         run: |
           export GOPATH=$HOME/go
           export PATH=$HOME/grpc-java:$PATH
-          make all
+
           make vald/sha/update
           make vald/client/java/version/update
           make vald/protobuf/version/update
           make vald/grpc/java/version/update
-          rm -rf vald
+          make all
       - name: commit and push
         run: |
           sha=`make vald/sha/print`
