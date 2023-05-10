@@ -59,9 +59,16 @@ sourceSets {
 
             exclude '**/googleapis/googleapis/**/*.proto'
             exclude '**/google/**/*.proto'
-            exclude '**/vdaas/vald/**/*.proto'
+
             exclude '**/envoyproxy/protoc-gen-validate/**/*.proto'
             exclude '**/example-workspace/**/*.proto'
+
+            // exclude unnecessary protos
+            exclude '**/vdaas/vald/**/*.proto'
+            exclude '**/v1/agent/sidecar/*.proto'
+            exclude '**/v1/discoverer/*.proto'
+            exclude '**/v1/filter/*.proto'
+            exclude '**/v1/manager/*.proto'
         }
     }
     test {
@@ -120,7 +127,7 @@ protobuf {
     }
     plugins {
         grpc {
-            artifact = 'io.grpc:protoc-gen-grpc-java:1.51.1'
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.54.1'
         }
     }
     generateProtoTasks {

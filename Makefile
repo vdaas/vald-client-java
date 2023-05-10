@@ -108,8 +108,8 @@ proto: vald proto/deps $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
 	./gradlew generateProto
 	cp -r build/generated/source/proto/main src
-    rm -rf vald
-    rm -rf build
+	rm -rf vald
+	rm -rf build
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
