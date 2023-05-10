@@ -67,8 +67,8 @@ sourceSets {
             exclude '**/vdaas/vald/**/*.proto'
             exclude '**/v1/agent/sidecar/*.proto'
             exclude '**/v1/discoverer/*.proto'
-            exclude '**/v1/filter/*.proto'
-            exclude '**/v1/manager/*.proto'
+            exclude '**/v1/filter/**/*.proto'
+            exclude '**/v1/manager/**/*.proto'
         }
     }
     test {
