@@ -18,12 +18,12 @@ jobs:
         run: |
           export GOPATH=$HOME/go
           export PATH=$HOME/grpc-java:$PATH
-
+          make all
           make vald/sha/update
           make vald/client/java/version/update
           make vald/protobuf/version/update
           make vald/grpc/java/version/update
-          make all
+          rm -rf vald
       - name: commit and push
         run: |
           sha=`make vald/sha/print`
