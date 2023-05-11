@@ -100,23 +100,19 @@ help:
 clean:
 	rm -rf $(JAVA_ROOT)
 	rm -rf $(VALD_DIR)
+	./gradlew clean
 
 .PHONY: proto
 ## build proto
-proto: $(JAVASOURCES)
+proto: vald proto/deps $(JAVA_ROOT)
+	@$(call green, "generating .java files...")
+	./gradlew generateProto
+	cp -r build/generated/source/proto/main src
+	rm -rf build
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
 	$(call rm, -rf, $@/*)
-
-$(JAVASOURCES): vald proto/deps $(JAVA_ROOT)
-	@$(call green, "generating .java files...")
-	protoc \
-		$(PROTO_PATHS:%=-I %) \
-		--plugin=protoc-gen-grpc-java=`which protoc-gen-grpc-java` \
-		--java_out=$(JAVA_ROOT) \
-		--grpc-java_out=$(JAVA_ROOT) \
-		$(patsubst $(JAVA_ROOT)/$(API_ROOT)/%.java,$(PROTO_ROOT)/%.proto,$@)
 
 $(VALD_DIR):
 	git clone --depth 1 https://$(VALDREPO) $(VALD_DIR)

@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.8.20'
+    ext.kotlin_version = '1.8.21'
     repositories {
         mavenCentral()
         //Needed only for SNAPSHOT versions
@@ -9,6 +9,7 @@ buildscript {
         classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.30.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.9.3'
     }
 }
 
@@ -18,10 +19,11 @@ apply plugin: "kotlinx-serialization"
 apply plugin: "maven-publish"
 apply plugin: "signing"
 apply plugin: 'io.codearte.nexus-staging'
+apply plugin: "com.google.protobuf"
 
 group = "org.vdaas.vald"
 archivesBaseName = "vald-client-java"
-version = "1.7.4"
+version = "1.7.5"
 description = "a client library for Vald (https://github.com/vdaas/vald)."
 
 def isDevBuild
@@ -43,6 +45,45 @@ if (hasProperty("release")) {
     version += "-SNAPSHOT"
 }
 
+sourceSets {
+    main {
+        proto {
+            srcDir 'vald/'
+            srcDir '/root/go/src'
+
+            // exclude test and dependencies protos
+            exclude '**/tests/**/*.proto'
+            exclude '**/test/**/*.proto'
+            exclude '**/testprotos/**/*.proto'
+            exclude '**/testdata/**/*.proto'
+
+            exclude '**/googleapis/googleapis/**/*.proto'
+            exclude '**/google/**/*.proto'
+
+            exclude '**/envoyproxy/protoc-gen-validate/**/*.proto'
+            exclude '**/example-workspace/**/*.proto'
+
+            // exclude unnecessary protos
+            exclude '**/vdaas/vald/**/*.proto'
+            exclude '**/v1/agent/sidecar/*.proto'
+            exclude '**/v1/discoverer/*.proto'
+            exclude '**/v1/filter/**/*.proto'
+            exclude '**/v1/manager/**/*.proto'
+        }
+    }
+    test {
+        proto {
+            srcDir 'vald/'
+            srcDir '/root/go/src'
+
+            include '**/tests/**/*.proto'
+            include '**/test/**/*.proto'
+            include '**/testprotos/**/*.proto'
+            include '**/testdata/**/*.proto'
+        }
+    }
+}
+
 nexusStaging {
     packageGroup = "org.vdaas.vald"
     stagingProfileId = "24fc47a63d38e2"
@@ -60,16 +101,15 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.grpc:grpc-stub:1.54.0'
-    implementation 'io.grpc:grpc-protobuf:1.54.0'
-    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.22.2'
-    implementation 'io.envoyproxy.protoc-gen-validate:pgv-java-stub:0.6.13'
+    implementation 'io.grpc:grpc-stub:1.55.1'
+    implementation 'io.grpc:grpc-protobuf:1.55.1'
+    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.23.0'
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
 
-    testImplementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+    testImplementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.21'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
-    testImplementation 'io.grpc:grpc-okhttp:1.54.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testImplementation 'io.grpc:grpc-okhttp:1.55.1'
 }
 
 test {
@@ -78,6 +118,24 @@ test {
         showStandardStreams true
         events 'started', 'skipped', 'passed', 'failed'
         exceptionFormat 'full'
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.23.0"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.55.1'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {
+                outputSubDir = 'java'
+            }
+        }
     }
 }
 

@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install gRPC dependencies
-        uses: ./.github/actions/install-grpc-dependencies
       - name: build protobuf
         run: |
           export GOPATH=$HOME/go
