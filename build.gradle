@@ -32,6 +32,7 @@ def isReleaseBuild
 def sonatypeRepositoryUrl
 def sonatypeUsername = System.getenv('SONATYPE_USERNAME')
 def sonatypePassword = System.getenv('SONATYPE_PASSWORD')
+def goSrc = "go env GOPATH".execute().text.trim() + "/src"
 
 if (hasProperty("release")) {
     isReleaseBuild = true
@@ -49,7 +50,7 @@ sourceSets {
     main {
         proto {
             srcDir 'vald/'
-            srcDir '/root/go/src'
+            srcDir goSrc
 
             // exclude test and dependencies protos
             exclude '**/tests/**/*.proto'
@@ -74,7 +75,7 @@ sourceSets {
     test {
         proto {
             srcDir 'vald/'
-            srcDir '/root/go/src'
+            srcDir goSrc
 
             include '**/tests/**/*.proto'
             include '**/test/**/*.proto'
