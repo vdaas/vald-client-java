@@ -57,7 +57,7 @@ endef
 
 .PHONY: all
 ## execute clean and proto
-all: clean proto
+all: clear proto clean
 
 .PHONY: help
 ## print all available commands
@@ -75,10 +75,17 @@ help:
 	{ lastLine = $$0 }' $(MAKELISTS) | sort -u
 	@printf "\n"
 
-.PHONY: clean
-## clean
-clean:
+.PHONY: clear
+## clear all dependency files
+clear:
 	rm -rf $(JAVA_ROOT)
+	rm -rf $(VALD_DIR)
+	rm -rf $(PROTO_DEPS_PATH)
+	./gradlew clean
+
+.PHONY: clean
+## clean temp files
+clean:
 	rm -rf $(VALD_DIR)
 	rm -rf $(PROTO_DEPS_PATH)
 	./gradlew clean
