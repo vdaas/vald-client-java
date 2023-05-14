@@ -11,10 +11,12 @@ import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.ClassOrderer;
 import org.junit.jupiter.api.MethodOrderer
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Order
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestClassOrder;
 import org.junit.jupiter.api.TestMethodOrder
 import org.vdaas.vald.api.v1.agent.core.AgentGrpc
 import org.vdaas.vald.api.v1.payload.Control
@@ -38,6 +40,7 @@ const val port = 8081
 
 @Serializable data class Datum(val id: String, val vector: List<Float>)
 
+@TestClassOrder(ClassOrderer.OrderAnnotation.class)
 class E2ETests {
 
     private lateinit var channel: ManagedChannel
@@ -67,6 +70,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(1)
     inner class InsertTests {
 
         private lateinit var stub: InsertGrpc.InsertBlockingStub
@@ -175,6 +179,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(2)
     inner class AgentTests {
 
         private lateinit var stub: AgentGrpc.AgentBlockingStub
@@ -218,6 +223,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(3)
     inner class ObjectTests {
 
         private lateinit var stub: ObjectGrpc.ObjectBlockingStub
@@ -302,6 +308,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(4)
     inner class SearchTests {
 
         private lateinit var stub: SearchGrpc.SearchBlockingStub
@@ -496,6 +503,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(5)
     inner class UpdateTests {
 
         private lateinit var stub: UpdateGrpc.UpdateBlockingStub
@@ -604,6 +612,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(6)
     inner class UpsertTests {
 
         private lateinit var stub: UpsertGrpc.UpsertBlockingStub
@@ -712,6 +721,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(7)
     inner class RemoveTests {
 
         private lateinit var stub: RemoveGrpc.RemoveBlockingStub
@@ -804,4 +814,3 @@ class E2ETests {
         }
     }
 }
-
