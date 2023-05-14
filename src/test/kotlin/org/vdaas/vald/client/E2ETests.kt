@@ -40,7 +40,7 @@ const val port = 8081
 
 @Serializable data class Datum(val id: String, val vector: List<Float>)
 
-@TestClassOrder(ClassOrderer.OrderAnnotation.class)
+@TestClassOrder(ClassOrderer.OrderAnnotation::class)
 class E2ETests {
 
     private lateinit var channel: ManagedChannel
