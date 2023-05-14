@@ -11,12 +11,12 @@ import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.ClassOrderer;
+import org.junit.jupiter.api.ClassOrderer
 import org.junit.jupiter.api.MethodOrderer
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Order
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestClassOrder;
+import org.junit.jupiter.api.TestClassOrder
 import org.junit.jupiter.api.TestMethodOrder
 import org.vdaas.vald.api.v1.agent.core.AgentGrpc
 import org.vdaas.vald.api.v1.payload.Control
