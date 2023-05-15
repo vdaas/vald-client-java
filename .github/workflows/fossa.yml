@@ -22,11 +22,11 @@ jobs:
           java-version: '17'
       - name: 'Install fossa-cli'
         run: |
-          curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+          curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash
       - name: 'Run for main branch'
         if: github.ref == 'refs/heads/main'
         run: |
-          fossa analyze --branch main --revision ${GITHUB_SHA}
+          fossa analyze --online=true --branch main --revision ${GITHUB_SHA}
         env:
           FOSSA_API_KEY: ${{ secrets.FOSSA_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -40,11 +40,11 @@ jobs:
           if [ -z "$HEAD_BRANCH" ]; then
             echo "Cannot get head branch information for PR #${PR_NUM}!"
             echo "API response: $PR_RESP"
-            fossa analyze --revision ${GITHUB_SHA}
+            fossa analyze --online=true --revision ${GITHUB_SHA}
           else
             echo "Head branch for PR #${PR_NUM} is ${HEAD_BRANCH}"
 
-            fossa analyze --branch ${HEAD_BRANCH} --revision ${GITHUB_SHA}
+            fossa analyze --online=true --branch ${HEAD_BRANCH} --revision ${GITHUB_SHA}
 
             ESCAPED=`echo -n "${HEAD_BRANCH}" | python3 -c 'import urllib.parse; import sys; print(urllib.parse.quote(sys.stdin.read(), safe=""))'`
 
