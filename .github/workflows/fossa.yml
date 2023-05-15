@@ -22,7 +22,7 @@ jobs:
           java-version: '17'
       - name: 'Install fossa-cli'
         run: |
-          curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+          curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash
       - name: 'Run for main branch'
         if: github.ref == 'refs/heads/main'
         run: |
