@@ -26,33 +26,13 @@ VALD_SHA    = VALD_SHA
 VALD_CLIENT_JAVA_VERSION = version/VALD_CLIENT_JAVA_VERSION
 PROTOBUF_VERSION = version/PROTOBUF_VERSION
 GRPC_JAVA_VERSION = version/GRPC_JAVA_VERSION
+PROTO_DEPS_PATH = proto_deps
 
 PWD    := $(eval PWD := $(shell pwd))$(PWD)
-GOPATH := $(eval GOPATH := $(shell go env GOPATH))$(GOPATH)
 
 PROTO_ROOT  = vald/apis/proto
 JAVA_ROOT   = src/main/java
 API_ROOT    = org/vdaas/vald/api
-
-PROTOS = \
-	v1/agent/core/agent.proto \
-	v1/vald/filter.proto \
-	v1/vald/insert.proto \
-	v1/vald/object.proto \
-	v1/vald/remove.proto \
-	v1/vald/search.proto \
-	v1/vald/update.proto \
-	v1/vald/upsert.proto \
-	v1/payload/payload.proto
-
-PROTOS     := $(PROTOS:%=$(PROTO_ROOT)/%)
-JAVASOURCES = $(PROTOS:$(PROTO_ROOT)/%.proto=$(JAVA_ROOT)/$(API_ROOT)/%.java)
-
-PROTO_PATHS = \
-	$(PWD) \
-	$(PWD)/$(VALD_DIR) \
-	$(GOPATH)/src \
-	$(GOPATH)/src/github.com/googleapis/googleapis
 
 MAKELISTS   = Makefile
 
@@ -77,7 +57,7 @@ endef
 
 .PHONY: all
 ## execute clean and proto
-all: clean proto
+all: clear vald/update proto clean
 
 .PHONY: help
 ## print all available commands
@@ -95,11 +75,21 @@ help:
 	{ lastLine = $$0 }' $(MAKELISTS) | sort -u
 	@printf "\n"
 
-.PHONY: clean
-## clean
-clean:
+.PHONY: clear
+## clear all dependency files
+clear:
 	rm -rf $(JAVA_ROOT)
 	rm -rf $(VALD_DIR)
+	rm -rf $(PROTO_DEPS_PATH)
+	rm -rf build
+	./gradlew clean
+
+.PHONY: clean
+## clean temp files
+clean:
+	rm -rf $(VALD_DIR)
+	rm -rf $(PROTO_DEPS_PATH)
+	rm -rf build
 	./gradlew clean
 
 .PHONY: proto
@@ -108,7 +98,6 @@ proto: vald proto/deps $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
 	./gradlew generateProto
 	cp -r build/generated/source/proto/main src
-	rm -rf build
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
@@ -177,20 +166,28 @@ vald/grpc/java/version/update: vald
 	rm version/GRPC_JAVA_VERSION
 	curl --silent "https://api.github.com/repos/grpc/grpc-java/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' > version/GRPC_JAVA_VERSION
 
+.PHONY: vald/update
+## update vald versions and sha
+vald/update: \
+	vald/sha/update \
+	vald/client/java/version/update \
+	vald/protobuf/version/update \
+	vald/grpc/java/version/update
+
 .PHONY: proto/deps
 ## install proto deps
 proto/deps: \
-	$(GOPATH)/src/github.com/googleapis/googleapis \
-	$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
+	$(PROTO_DEPS_PATH)/github.com/googleapis/googleapis \
+	$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate
 
-$(GOPATH)/src/github.com/googleapis/googleapis:
+$(PROTO_DEPS_PATH)/github.com/googleapis/googleapis:
 	git clone \
 		--depth 1 \
 		https://github.com/googleapis/googleapis \
-		$(GOPATH)/src/github.com/googleapis/googleapis
+		$(PROTO_DEPS_PATH)/github.com/googleapis/googleapis
 
-$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate:
+$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate:
 	git clone \
 		--depth 1 \
 		https://github.com/envoyproxy/protoc-gen-validate \
-		$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
+		$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate
