@@ -57,7 +57,7 @@ endef
 
 .PHONY: all
 ## execute clean and proto
-all: clear proto clean
+all: clear vald/update proto clean
 
 .PHONY: help
 ## print all available commands
@@ -77,17 +77,15 @@ help:
 
 .PHONY: clear
 ## clear all dependency files
-clear:
+clear: clean
 	rm -rf $(JAVA_ROOT)
-	rm -rf $(VALD_DIR)
-	rm -rf $(PROTO_DEPS_PATH)
-	./gradlew clean
 
 .PHONY: clean
 ## clean temp files
 clean:
 	rm -rf $(VALD_DIR)
 	rm -rf $(PROTO_DEPS_PATH)
+	rm -rf build
 	./gradlew clean
 
 .PHONY: proto
@@ -96,7 +94,6 @@ proto: vald proto/deps $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
 	./gradlew generateProto
 	cp -r build/generated/source/proto/main src
-	rm -rf build
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
@@ -164,6 +161,14 @@ vald/protobuf/version/update: vald
 vald/grpc/java/version/update: vald
 	rm version/GRPC_JAVA_VERSION
 	curl --silent "https://api.github.com/repos/grpc/grpc-java/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' > version/GRPC_JAVA_VERSION
+
+.PHONY: vald/update
+## update vald versions and sha
+vald/update: \
+	vald/sha/update \
+	vald/client/java/version/update \
+	vald/protobuf/version/update \
+	vald/grpc/java/version/update
 
 .PHONY: proto/deps
 ## install proto deps
