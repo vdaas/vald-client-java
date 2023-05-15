@@ -77,8 +77,12 @@ help:
 
 .PHONY: clear
 ## clear all dependency files
-clear: clean
+clear:
 	rm -rf $(JAVA_ROOT)
+	rm -rf $(VALD_DIR)
+	rm -rf $(PROTO_DEPS_PATH)
+	rm -rf build
+	./gradlew clean
 
 .PHONY: clean
 ## clean temp files
