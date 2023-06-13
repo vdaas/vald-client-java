@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
-    comments = "Source: vald/apis/proto/v1/vald/update.proto")
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: apis/proto/v1/vald/update.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UpdateGrpc {
 
@@ -160,14 +160,14 @@ public final class UpdateGrpc {
    * Update service provides ways to update indexed vectors.
    * </pre>
    */
-  public static abstract class UpdateImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * A method to update an indexed vector.
      * </pre>
      */
-    public void update(org.vdaas.vald.api.v1.payload.Update.Request request,
+    default void update(org.vdaas.vald.api.v1.payload.Update.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
@@ -177,7 +177,7 @@ public final class UpdateGrpc {
      * A method to update multiple indexed vectors by bidirectional streaming.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Update.Request> streamUpdate(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamUpdateMethod(), responseObserver);
     }
@@ -187,44 +187,34 @@ public final class UpdateGrpc {
      * A method to update multiple indexed vectors in a single request.
      * </pre>
      */
-    public void multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request,
+    default void multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpdateMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Update.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
-                  this, METHODID_UPDATE)))
-          .addMethod(
-            getStreamUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Update.Request,
-                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
-                  this, METHODID_STREAM_UPDATE)))
-          .addMethod(
-            getMultiUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Update.MultiRequest,
-                org.vdaas.vald.api.v1.payload.Object.Locations>(
-                  this, METHODID_MULTI_UPDATE)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Update.
    * <pre>
    * Update service provides ways to update indexed vectors.
    * </pre>
    */
-  public static final class UpdateStub extends io.grpc.stub.AbstractAsyncStub<UpdateStub> {
+  public static abstract class UpdateImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return UpdateGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Update.
+   * <pre>
+   * Update service provides ways to update indexed vectors.
+   * </pre>
+   */
+  public static final class UpdateStub
+      extends io.grpc.stub.AbstractAsyncStub<UpdateStub> {
     private UpdateStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,11 +261,13 @@ public final class UpdateGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Update.
    * <pre>
    * Update service provides ways to update indexed vectors.
    * </pre>
    */
-  public static final class UpdateBlockingStub extends io.grpc.stub.AbstractBlockingStub<UpdateBlockingStub> {
+  public static final class UpdateBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<UpdateBlockingStub> {
     private UpdateBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -309,11 +301,13 @@ public final class UpdateGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Update.
    * <pre>
    * Update service provides ways to update indexed vectors.
    * </pre>
    */
-  public static final class UpdateFutureStub extends io.grpc.stub.AbstractFutureStub<UpdateFutureStub> {
+  public static final class UpdateFutureStub
+      extends io.grpc.stub.AbstractFutureStub<UpdateFutureStub> {
     private UpdateFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -357,10 +351,10 @@ public final class UpdateGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final UpdateImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(UpdateImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -394,6 +388,32 @@ public final class UpdateGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUpdateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Update.Request,
+              org.vdaas.vald.api.v1.payload.Object.Location>(
+                service, METHODID_UPDATE)))
+        .addMethod(
+          getStreamUpdateMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Update.Request,
+              org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
+                service, METHODID_STREAM_UPDATE)))
+        .addMethod(
+          getMultiUpdateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Update.MultiRequest,
+              org.vdaas.vald.api.v1.payload.Object.Locations>(
+                service, METHODID_MULTI_UPDATE)))
+        .build();
   }
 
   private static abstract class UpdateBaseDescriptorSupplier

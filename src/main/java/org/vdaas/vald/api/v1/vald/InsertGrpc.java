@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
-    comments = "Source: vald/apis/proto/v1/vald/insert.proto")
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: apis/proto/v1/vald/insert.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class InsertGrpc {
 
@@ -160,14 +160,14 @@ public final class InsertGrpc {
    * Insert service provides ways to add new vectors.
    * </pre>
    */
-  public static abstract class InsertImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * A method to add a new single vector.
      * </pre>
      */
-    public void insert(org.vdaas.vald.api.v1.payload.Insert.Request request,
+    default void insert(org.vdaas.vald.api.v1.payload.Insert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInsertMethod(), responseObserver);
     }
@@ -177,7 +177,7 @@ public final class InsertGrpc {
      * A method to add new multiple vectors by bidirectional streaming.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Insert.Request> streamInsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamInsertMethod(), responseObserver);
     }
@@ -187,44 +187,34 @@ public final class InsertGrpc {
      * A method to add new multiple vectors in a single request.
      * </pre>
      */
-    public void multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request,
+    default void multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiInsertMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getInsertMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Insert.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
-                  this, METHODID_INSERT)))
-          .addMethod(
-            getStreamInsertMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Insert.Request,
-                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
-                  this, METHODID_STREAM_INSERT)))
-          .addMethod(
-            getMultiInsertMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Insert.MultiRequest,
-                org.vdaas.vald.api.v1.payload.Object.Locations>(
-                  this, METHODID_MULTI_INSERT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Insert.
    * <pre>
    * Insert service provides ways to add new vectors.
    * </pre>
    */
-  public static final class InsertStub extends io.grpc.stub.AbstractAsyncStub<InsertStub> {
+  public static abstract class InsertImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return InsertGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Insert.
+   * <pre>
+   * Insert service provides ways to add new vectors.
+   * </pre>
+   */
+  public static final class InsertStub
+      extends io.grpc.stub.AbstractAsyncStub<InsertStub> {
     private InsertStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,11 +261,13 @@ public final class InsertGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Insert.
    * <pre>
    * Insert service provides ways to add new vectors.
    * </pre>
    */
-  public static final class InsertBlockingStub extends io.grpc.stub.AbstractBlockingStub<InsertBlockingStub> {
+  public static final class InsertBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<InsertBlockingStub> {
     private InsertBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -309,11 +301,13 @@ public final class InsertGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Insert.
    * <pre>
    * Insert service provides ways to add new vectors.
    * </pre>
    */
-  public static final class InsertFutureStub extends io.grpc.stub.AbstractFutureStub<InsertFutureStub> {
+  public static final class InsertFutureStub
+      extends io.grpc.stub.AbstractFutureStub<InsertFutureStub> {
     private InsertFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -357,10 +351,10 @@ public final class InsertGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final InsertImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(InsertImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -394,6 +388,32 @@ public final class InsertGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getInsertMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Insert.Request,
+              org.vdaas.vald.api.v1.payload.Object.Location>(
+                service, METHODID_INSERT)))
+        .addMethod(
+          getStreamInsertMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Insert.Request,
+              org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
+                service, METHODID_STREAM_INSERT)))
+        .addMethod(
+          getMultiInsertMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Insert.MultiRequest,
+              org.vdaas.vald.api.v1.payload.Object.Locations>(
+                service, METHODID_MULTI_INSERT)))
+        .build();
   }
 
   private static abstract class InsertBaseDescriptorSupplier

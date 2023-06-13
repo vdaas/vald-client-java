@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
-    comments = "Source: vald/apis/proto/v1/vald/object.proto")
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: apis/proto/v1/vald/object.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ObjectGrpc {
 
@@ -160,14 +160,14 @@ public final class ObjectGrpc {
    * Object service provides ways to fetch indexed vectors.
    * </pre>
    */
-  public static abstract class ObjectImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * A method to check whether a specified ID is indexed or not.
      * </pre>
      */
-    public void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
+    default void exists(org.vdaas.vald.api.v1.payload.Object.ID request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.ID> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExistsMethod(), responseObserver);
     }
@@ -177,7 +177,7 @@ public final class ObjectGrpc {
      * A method to fetch a vector.
      * </pre>
      */
-    public void getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request,
+    default void getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectMethod(), responseObserver);
     }
@@ -187,44 +187,34 @@ public final class ObjectGrpc {
      * A method to fetch vectors by bidirectional streaming.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.VectorRequest> streamGetObject(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.VectorRequest> streamGetObject(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamVector> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamGetObjectMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getExistsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Object.ID,
-                org.vdaas.vald.api.v1.payload.Object.ID>(
-                  this, METHODID_EXISTS)))
-          .addMethod(
-            getGetObjectMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Object.VectorRequest,
-                org.vdaas.vald.api.v1.payload.Object.Vector>(
-                  this, METHODID_GET_OBJECT)))
-          .addMethod(
-            getStreamGetObjectMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Object.VectorRequest,
-                org.vdaas.vald.api.v1.payload.Object.StreamVector>(
-                  this, METHODID_STREAM_GET_OBJECT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Object.
    * <pre>
    * Object service provides ways to fetch indexed vectors.
    * </pre>
    */
-  public static final class ObjectStub extends io.grpc.stub.AbstractAsyncStub<ObjectStub> {
+  public static abstract class ObjectImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ObjectGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Object.
+   * <pre>
+   * Object service provides ways to fetch indexed vectors.
+   * </pre>
+   */
+  public static final class ObjectStub
+      extends io.grpc.stub.AbstractAsyncStub<ObjectStub> {
     private ObjectStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,11 +261,13 @@ public final class ObjectGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Object.
    * <pre>
    * Object service provides ways to fetch indexed vectors.
    * </pre>
    */
-  public static final class ObjectBlockingStub extends io.grpc.stub.AbstractBlockingStub<ObjectBlockingStub> {
+  public static final class ObjectBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ObjectBlockingStub> {
     private ObjectBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -309,11 +301,13 @@ public final class ObjectGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Object.
    * <pre>
    * Object service provides ways to fetch indexed vectors.
    * </pre>
    */
-  public static final class ObjectFutureStub extends io.grpc.stub.AbstractFutureStub<ObjectFutureStub> {
+  public static final class ObjectFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ObjectFutureStub> {
     private ObjectFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -357,10 +351,10 @@ public final class ObjectGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ObjectImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ObjectImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -394,6 +388,32 @@ public final class ObjectGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getExistsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Object.ID,
+              org.vdaas.vald.api.v1.payload.Object.ID>(
+                service, METHODID_EXISTS)))
+        .addMethod(
+          getGetObjectMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Object.VectorRequest,
+              org.vdaas.vald.api.v1.payload.Object.Vector>(
+                service, METHODID_GET_OBJECT)))
+        .addMethod(
+          getStreamGetObjectMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Object.VectorRequest,
+              org.vdaas.vald.api.v1.payload.Object.StreamVector>(
+                service, METHODID_STREAM_GET_OBJECT)))
+        .build();
   }
 
   private static abstract class ObjectBaseDescriptorSupplier

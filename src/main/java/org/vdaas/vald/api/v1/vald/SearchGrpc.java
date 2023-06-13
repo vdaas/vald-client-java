@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
-    comments = "Source: vald/apis/proto/v1/vald/search.proto")
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: apis/proto/v1/vald/search.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SearchGrpc {
 
@@ -439,14 +439,14 @@ public final class SearchGrpc {
    * Search service provides ways to search indexed vectors.
    * </pre>
    */
-  public static abstract class SearchImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * A method to search indexed vectors by a raw vector.
      * </pre>
      */
-    public void search(org.vdaas.vald.api.v1.payload.Search.Request request,
+    default void search(org.vdaas.vald.api.v1.payload.Search.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
     }
@@ -456,7 +456,7 @@ public final class SearchGrpc {
      * A method to search indexed vectors by ID.
      * </pre>
      */
-    public void searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
+    default void searchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchByIDMethod(), responseObserver);
     }
@@ -466,7 +466,7 @@ public final class SearchGrpc {
      * A method to search indexed vectors by multiple vectors.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamSearch(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamSearchMethod(), responseObserver);
     }
@@ -476,7 +476,7 @@ public final class SearchGrpc {
      * A method to search indexed vectors by multiple IDs.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamSearchByID(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamSearchByIDMethod(), responseObserver);
     }
@@ -486,7 +486,7 @@ public final class SearchGrpc {
      * A method to search indexed vectors by multiple vectors in a single request.
      * </pre>
      */
-    public void multiSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
+    default void multiSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiSearchMethod(), responseObserver);
     }
@@ -496,7 +496,7 @@ public final class SearchGrpc {
      * A method to search indexed vectors by multiple IDs in a single request.
      * </pre>
      */
-    public void multiSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
+    default void multiSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiSearchByIDMethod(), responseObserver);
     }
@@ -506,7 +506,7 @@ public final class SearchGrpc {
      * A method to linear search indexed vectors by a raw vector.
      * </pre>
      */
-    public void linearSearch(org.vdaas.vald.api.v1.payload.Search.Request request,
+    default void linearSearch(org.vdaas.vald.api.v1.payload.Search.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLinearSearchMethod(), responseObserver);
     }
@@ -516,7 +516,7 @@ public final class SearchGrpc {
      * A method to linear search indexed vectors by ID.
      * </pre>
      */
-    public void linearSearchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
+    default void linearSearchByID(org.vdaas.vald.api.v1.payload.Search.IDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLinearSearchByIDMethod(), responseObserver);
     }
@@ -526,7 +526,7 @@ public final class SearchGrpc {
      * A method to linear search indexed vectors by multiple vectors.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamLinearSearch(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Request> streamLinearSearch(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamLinearSearchMethod(), responseObserver);
     }
@@ -536,7 +536,7 @@ public final class SearchGrpc {
      * A method to linear search indexed vectors by multiple IDs.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamLinearSearchByID(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.IDRequest> streamLinearSearchByID(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.StreamResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamLinearSearchByIDMethod(), responseObserver);
     }
@@ -546,7 +546,7 @@ public final class SearchGrpc {
      * A method to linear search indexed vectors by multiple vectors in a single request.
      * </pre>
      */
-    public void multiLinearSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
+    default void multiLinearSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiLinearSearchMethod(), responseObserver);
     }
@@ -556,107 +556,34 @@ public final class SearchGrpc {
      * A method to linear search indexed vectors by multiple IDs in a single request.
      * </pre>
      */
-    public void multiLinearSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
+    default void multiLinearSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Search.Responses> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiLinearSearchByIDMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.Request,
-                org.vdaas.vald.api.v1.payload.Search.Response>(
-                  this, METHODID_SEARCH)))
-          .addMethod(
-            getSearchByIDMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.IDRequest,
-                org.vdaas.vald.api.v1.payload.Search.Response>(
-                  this, METHODID_SEARCH_BY_ID)))
-          .addMethod(
-            getStreamSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.Request,
-                org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
-                  this, METHODID_STREAM_SEARCH)))
-          .addMethod(
-            getStreamSearchByIDMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.IDRequest,
-                org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
-                  this, METHODID_STREAM_SEARCH_BY_ID)))
-          .addMethod(
-            getMultiSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.MultiRequest,
-                org.vdaas.vald.api.v1.payload.Search.Responses>(
-                  this, METHODID_MULTI_SEARCH)))
-          .addMethod(
-            getMultiSearchByIDMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.MultiIDRequest,
-                org.vdaas.vald.api.v1.payload.Search.Responses>(
-                  this, METHODID_MULTI_SEARCH_BY_ID)))
-          .addMethod(
-            getLinearSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.Request,
-                org.vdaas.vald.api.v1.payload.Search.Response>(
-                  this, METHODID_LINEAR_SEARCH)))
-          .addMethod(
-            getLinearSearchByIDMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.IDRequest,
-                org.vdaas.vald.api.v1.payload.Search.Response>(
-                  this, METHODID_LINEAR_SEARCH_BY_ID)))
-          .addMethod(
-            getStreamLinearSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.Request,
-                org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
-                  this, METHODID_STREAM_LINEAR_SEARCH)))
-          .addMethod(
-            getStreamLinearSearchByIDMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.IDRequest,
-                org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
-                  this, METHODID_STREAM_LINEAR_SEARCH_BY_ID)))
-          .addMethod(
-            getMultiLinearSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.MultiRequest,
-                org.vdaas.vald.api.v1.payload.Search.Responses>(
-                  this, METHODID_MULTI_LINEAR_SEARCH)))
-          .addMethod(
-            getMultiLinearSearchByIDMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Search.MultiIDRequest,
-                org.vdaas.vald.api.v1.payload.Search.Responses>(
-                  this, METHODID_MULTI_LINEAR_SEARCH_BY_ID)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Search.
    * <pre>
    * Search service provides ways to search indexed vectors.
    * </pre>
    */
-  public static final class SearchStub extends io.grpc.stub.AbstractAsyncStub<SearchStub> {
+  public static abstract class SearchImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SearchGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Search.
+   * <pre>
+   * Search service provides ways to search indexed vectors.
+   * </pre>
+   */
+  public static final class SearchStub
+      extends io.grpc.stub.AbstractAsyncStub<SearchStub> {
     private SearchStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -802,11 +729,13 @@ public final class SearchGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Search.
    * <pre>
    * Search service provides ways to search indexed vectors.
    * </pre>
    */
-  public static final class SearchBlockingStub extends io.grpc.stub.AbstractBlockingStub<SearchBlockingStub> {
+  public static final class SearchBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SearchBlockingStub> {
     private SearchBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -900,11 +829,13 @@ public final class SearchGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Search.
    * <pre>
    * Search service provides ways to search indexed vectors.
    * </pre>
    */
-  public static final class SearchFutureStub extends io.grpc.stub.AbstractFutureStub<SearchFutureStub> {
+  public static final class SearchFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SearchFutureStub> {
     private SearchFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1023,10 +954,10 @@ public final class SearchGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SearchImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SearchImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1093,6 +1024,95 @@ public final class SearchGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.Request,
+              org.vdaas.vald.api.v1.payload.Search.Response>(
+                service, METHODID_SEARCH)))
+        .addMethod(
+          getSearchByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.IDRequest,
+              org.vdaas.vald.api.v1.payload.Search.Response>(
+                service, METHODID_SEARCH_BY_ID)))
+        .addMethod(
+          getStreamSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.Request,
+              org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
+                service, METHODID_STREAM_SEARCH)))
+        .addMethod(
+          getStreamSearchByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.IDRequest,
+              org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
+                service, METHODID_STREAM_SEARCH_BY_ID)))
+        .addMethod(
+          getMultiSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.MultiRequest,
+              org.vdaas.vald.api.v1.payload.Search.Responses>(
+                service, METHODID_MULTI_SEARCH)))
+        .addMethod(
+          getMultiSearchByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.MultiIDRequest,
+              org.vdaas.vald.api.v1.payload.Search.Responses>(
+                service, METHODID_MULTI_SEARCH_BY_ID)))
+        .addMethod(
+          getLinearSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.Request,
+              org.vdaas.vald.api.v1.payload.Search.Response>(
+                service, METHODID_LINEAR_SEARCH)))
+        .addMethod(
+          getLinearSearchByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.IDRequest,
+              org.vdaas.vald.api.v1.payload.Search.Response>(
+                service, METHODID_LINEAR_SEARCH_BY_ID)))
+        .addMethod(
+          getStreamLinearSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.Request,
+              org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
+                service, METHODID_STREAM_LINEAR_SEARCH)))
+        .addMethod(
+          getStreamLinearSearchByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.IDRequest,
+              org.vdaas.vald.api.v1.payload.Search.StreamResponse>(
+                service, METHODID_STREAM_LINEAR_SEARCH_BY_ID)))
+        .addMethod(
+          getMultiLinearSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.MultiRequest,
+              org.vdaas.vald.api.v1.payload.Search.Responses>(
+                service, METHODID_MULTI_LINEAR_SEARCH)))
+        .addMethod(
+          getMultiLinearSearchByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Search.MultiIDRequest,
+              org.vdaas.vald.api.v1.payload.Search.Responses>(
+                service, METHODID_MULTI_LINEAR_SEARCH_BY_ID)))
+        .build();
   }
 
   private static abstract class SearchBaseDescriptorSupplier

@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
-    comments = "Source: vald/apis/proto/v1/vald/upsert.proto")
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: apis/proto/v1/vald/upsert.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UpsertGrpc {
 
@@ -160,14 +160,14 @@ public final class UpsertGrpc {
    * Upsert service provides ways to insert/update vectors.
    * </pre>
    */
-  public static abstract class UpsertImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * A method to insert/update a vector.
      * </pre>
      */
-    public void upsert(org.vdaas.vald.api.v1.payload.Upsert.Request request,
+    default void upsert(org.vdaas.vald.api.v1.payload.Upsert.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
     }
@@ -177,7 +177,7 @@ public final class UpsertGrpc {
      * A method to insert/update multiple vectors by bidirectional streaming.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.Request> streamUpsert(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Upsert.Request> streamUpsert(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamUpsertMethod(), responseObserver);
     }
@@ -187,44 +187,34 @@ public final class UpsertGrpc {
      * A method to insert/update multiple vectors in a single request.
      * </pre>
      */
-    public void multiUpsert(org.vdaas.vald.api.v1.payload.Upsert.MultiRequest request,
+    default void multiUpsert(org.vdaas.vald.api.v1.payload.Upsert.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpsertMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUpsertMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Upsert.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
-                  this, METHODID_UPSERT)))
-          .addMethod(
-            getStreamUpsertMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Upsert.Request,
-                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
-                  this, METHODID_STREAM_UPSERT)))
-          .addMethod(
-            getMultiUpsertMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Upsert.MultiRequest,
-                org.vdaas.vald.api.v1.payload.Object.Locations>(
-                  this, METHODID_MULTI_UPSERT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Upsert.
    * <pre>
    * Upsert service provides ways to insert/update vectors.
    * </pre>
    */
-  public static final class UpsertStub extends io.grpc.stub.AbstractAsyncStub<UpsertStub> {
+  public static abstract class UpsertImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return UpsertGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Upsert.
+   * <pre>
+   * Upsert service provides ways to insert/update vectors.
+   * </pre>
+   */
+  public static final class UpsertStub
+      extends io.grpc.stub.AbstractAsyncStub<UpsertStub> {
     private UpsertStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,11 +261,13 @@ public final class UpsertGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Upsert.
    * <pre>
    * Upsert service provides ways to insert/update vectors.
    * </pre>
    */
-  public static final class UpsertBlockingStub extends io.grpc.stub.AbstractBlockingStub<UpsertBlockingStub> {
+  public static final class UpsertBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<UpsertBlockingStub> {
     private UpsertBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -309,11 +301,13 @@ public final class UpsertGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Upsert.
    * <pre>
    * Upsert service provides ways to insert/update vectors.
    * </pre>
    */
-  public static final class UpsertFutureStub extends io.grpc.stub.AbstractFutureStub<UpsertFutureStub> {
+  public static final class UpsertFutureStub
+      extends io.grpc.stub.AbstractFutureStub<UpsertFutureStub> {
     private UpsertFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -357,10 +351,10 @@ public final class UpsertGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final UpsertImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(UpsertImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -394,6 +388,32 @@ public final class UpsertGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUpsertMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Upsert.Request,
+              org.vdaas.vald.api.v1.payload.Object.Location>(
+                service, METHODID_UPSERT)))
+        .addMethod(
+          getStreamUpsertMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Upsert.Request,
+              org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
+                service, METHODID_STREAM_UPSERT)))
+        .addMethod(
+          getMultiUpsertMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Upsert.MultiRequest,
+              org.vdaas.vald.api.v1.payload.Object.Locations>(
+                service, METHODID_MULTI_UPSERT)))
+        .build();
   }
 
   private static abstract class UpsertBaseDescriptorSupplier

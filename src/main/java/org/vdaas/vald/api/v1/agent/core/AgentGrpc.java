@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
-    comments = "Source: vald/apis/proto/v1/agent/core/agent.proto")
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: apis/proto/v1/agent/core/agent.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AgentGrpc {
 
@@ -191,14 +191,14 @@ public final class AgentGrpc {
    * Represent the agent service.
    * </pre>
    */
-  public static abstract class AgentImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Represent the creating index RPC.
      * </pre>
      */
-    public void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
+    default void createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateIndexMethod(), responseObserver);
     }
@@ -208,7 +208,7 @@ public final class AgentGrpc {
      * Represent the saving index RPC.
      * </pre>
      */
-    public void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
+    default void saveIndex(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSaveIndexMethod(), responseObserver);
     }
@@ -218,7 +218,7 @@ public final class AgentGrpc {
      * Represent the creating and saving index RPC.
      * </pre>
      */
-    public void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
+    default void createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAndSaveIndexMethod(), responseObserver);
     }
@@ -228,51 +228,34 @@ public final class AgentGrpc {
      * Represent the RPC to get the agent index information.
      * </pre>
      */
-    public void indexInfo(org.vdaas.vald.api.v1.payload.Empty request,
+    default void indexInfo(org.vdaas.vald.api.v1.payload.Empty request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Count> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIndexInfoMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateIndexMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest,
-                org.vdaas.vald.api.v1.payload.Empty>(
-                  this, METHODID_CREATE_INDEX)))
-          .addMethod(
-            getSaveIndexMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Empty,
-                org.vdaas.vald.api.v1.payload.Empty>(
-                  this, METHODID_SAVE_INDEX)))
-          .addMethod(
-            getCreateAndSaveIndexMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest,
-                org.vdaas.vald.api.v1.payload.Empty>(
-                  this, METHODID_CREATE_AND_SAVE_INDEX)))
-          .addMethod(
-            getIndexInfoMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Empty,
-                org.vdaas.vald.api.v1.payload.Info.Index.Count>(
-                  this, METHODID_INDEX_INFO)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Agent.
    * <pre>
    * Represent the agent service.
    * </pre>
    */
-  public static final class AgentStub extends io.grpc.stub.AbstractAsyncStub<AgentStub> {
+  public static abstract class AgentImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AgentGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Agent.
+   * <pre>
+   * Represent the agent service.
+   * </pre>
+   */
+  public static final class AgentStub
+      extends io.grpc.stub.AbstractAsyncStub<AgentStub> {
     private AgentStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -330,11 +313,13 @@ public final class AgentGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Agent.
    * <pre>
    * Represent the agent service.
    * </pre>
    */
-  public static final class AgentBlockingStub extends io.grpc.stub.AbstractBlockingStub<AgentBlockingStub> {
+  public static final class AgentBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AgentBlockingStub> {
     private AgentBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -388,11 +373,13 @@ public final class AgentGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Agent.
    * <pre>
    * Represent the agent service.
    * </pre>
    */
-  public static final class AgentFutureStub extends io.grpc.stub.AbstractFutureStub<AgentFutureStub> {
+  public static final class AgentFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AgentFutureStub> {
     private AgentFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -459,10 +446,10 @@ public final class AgentGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AgentImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AgentImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -501,6 +488,39 @@ public final class AgentGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateIndexMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest,
+              org.vdaas.vald.api.v1.payload.Empty>(
+                service, METHODID_CREATE_INDEX)))
+        .addMethod(
+          getSaveIndexMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Empty,
+              org.vdaas.vald.api.v1.payload.Empty>(
+                service, METHODID_SAVE_INDEX)))
+        .addMethod(
+          getCreateAndSaveIndexMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest,
+              org.vdaas.vald.api.v1.payload.Empty>(
+                service, METHODID_CREATE_AND_SAVE_INDEX)))
+        .addMethod(
+          getIndexInfoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Empty,
+              org.vdaas.vald.api.v1.payload.Info.Index.Count>(
+                service, METHODID_INDEX_INFO)))
+        .build();
   }
 
   private static abstract class AgentBaseDescriptorSupplier

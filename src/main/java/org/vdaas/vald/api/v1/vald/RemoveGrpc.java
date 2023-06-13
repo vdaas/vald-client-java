@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.53.0)",
-    comments = "Source: vald/apis/proto/v1/vald/remove.proto")
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: apis/proto/v1/vald/remove.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RemoveGrpc {
 
@@ -160,14 +160,14 @@ public final class RemoveGrpc {
    * Remove service provides ways to remove indexed vectors.
    * </pre>
    */
-  public static abstract class RemoveImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * A method to remove an indexed vector.
      * </pre>
      */
-    public void remove(org.vdaas.vald.api.v1.payload.Remove.Request request,
+    default void remove(org.vdaas.vald.api.v1.payload.Remove.Request request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
     }
@@ -177,7 +177,7 @@ public final class RemoveGrpc {
      * A method to remove multiple indexed vectors by bidirectional streaming.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
+    default io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Remove.Request> streamRemove(
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamLocation> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamRemoveMethod(), responseObserver);
     }
@@ -187,44 +187,34 @@ public final class RemoveGrpc {
      * A method to remove multiple indexed vectors in a single request.
      * </pre>
      */
-    public void multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request,
+    default void multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request,
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiRemoveMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getRemoveMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Remove.Request,
-                org.vdaas.vald.api.v1.payload.Object.Location>(
-                  this, METHODID_REMOVE)))
-          .addMethod(
-            getStreamRemoveMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Remove.Request,
-                org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
-                  this, METHODID_STREAM_REMOVE)))
-          .addMethod(
-            getMultiRemoveMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                org.vdaas.vald.api.v1.payload.Remove.MultiRequest,
-                org.vdaas.vald.api.v1.payload.Object.Locations>(
-                  this, METHODID_MULTI_REMOVE)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Remove.
    * <pre>
    * Remove service provides ways to remove indexed vectors.
    * </pre>
    */
-  public static final class RemoveStub extends io.grpc.stub.AbstractAsyncStub<RemoveStub> {
+  public static abstract class RemoveImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return RemoveGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Remove.
+   * <pre>
+   * Remove service provides ways to remove indexed vectors.
+   * </pre>
+   */
+  public static final class RemoveStub
+      extends io.grpc.stub.AbstractAsyncStub<RemoveStub> {
     private RemoveStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,11 +261,13 @@ public final class RemoveGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Remove.
    * <pre>
    * Remove service provides ways to remove indexed vectors.
    * </pre>
    */
-  public static final class RemoveBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemoveBlockingStub> {
+  public static final class RemoveBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<RemoveBlockingStub> {
     private RemoveBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -309,11 +301,13 @@ public final class RemoveGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Remove.
    * <pre>
    * Remove service provides ways to remove indexed vectors.
    * </pre>
    */
-  public static final class RemoveFutureStub extends io.grpc.stub.AbstractFutureStub<RemoveFutureStub> {
+  public static final class RemoveFutureStub
+      extends io.grpc.stub.AbstractFutureStub<RemoveFutureStub> {
     private RemoveFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -357,10 +351,10 @@ public final class RemoveGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final RemoveImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(RemoveImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -394,6 +388,32 @@ public final class RemoveGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getRemoveMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Remove.Request,
+              org.vdaas.vald.api.v1.payload.Object.Location>(
+                service, METHODID_REMOVE)))
+        .addMethod(
+          getStreamRemoveMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Remove.Request,
+              org.vdaas.vald.api.v1.payload.Object.StreamLocation>(
+                service, METHODID_STREAM_REMOVE)))
+        .addMethod(
+          getMultiRemoveMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Remove.MultiRequest,
+              org.vdaas.vald.api.v1.payload.Object.Locations>(
+                service, METHODID_MULTI_REMOVE)))
+        .build();
   }
 
   private static abstract class RemoveBaseDescriptorSupplier
