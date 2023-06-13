@@ -178,7 +178,8 @@ vald/update: \
 ## install proto deps
 proto/deps: \
 	$(PROTO_DEPS_PATH)/github.com/googleapis/googleapis \
-	$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate
+	$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate \
+	$(PROTO_DEPS_PATH)/github.com/planetscale/vtprotobuf
 
 $(PROTO_DEPS_PATH)/github.com/googleapis/googleapis:
 	git clone \
@@ -191,3 +192,9 @@ $(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate:
 		--depth 1 \
 		https://github.com/envoyproxy/protoc-gen-validate \
 		$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate
+
+$(PROTO_DEPS_PATH)/github.com/planetscale/vtprotobuf:
+	git clone \
+		--depth 1 \
+		https://github.com/planetscale/vtprotobuf \
+		$(PROTO_DEPS_PATH)/github.com/planetscale/vtprotobuf

@@ -56,6 +56,7 @@ sourceSets {
             exclude '**/tests/**/*.proto'
             exclude '**/test/**/*.proto'
             exclude '**/testprotos/**/*.proto'
+            exclude '**/testproto/**/*.proto'
             exclude '**/testdata/**/*.proto'
 
             exclude '**/googleapis/googleapis/**/*.proto'
@@ -80,6 +81,7 @@ sourceSets {
             include '**/tests/**/*.proto'
             include '**/test/**/*.proto'
             include '**/testprotos/**/*.proto'
+            include '**/testproto/**/*.proto'
             include '**/testdata/**/*.proto'
         }
     }
