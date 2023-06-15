@@ -4003,7 +4003,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A flag to disable balanced update (split remove -&gt; insert operation) during update operation.
+     * A flag to disable balanced update (split remove -&gt; insert operation)
+     * during update operation.
      * </pre>
      *
      * <code>bool disable_balanced_update = 4;</code>
@@ -4122,7 +4123,8 @@ private static final long serialVersionUID = 0L;
     private boolean disableBalancedUpdate_ = false;
     /**
      * <pre>
-     * A flag to disable balanced update (split remove -&gt; insert operation) during update operation.
+     * A flag to disable balanced update (split remove -&gt; insert operation)
+     * during update operation.
      * </pre>
      *
      * <code>bool disable_balanced_update = 4;</code>
@@ -4793,7 +4795,8 @@ private static final long serialVersionUID = 0L;
       private boolean disableBalancedUpdate_ ;
       /**
        * <pre>
-       * A flag to disable balanced update (split remove -&gt; insert operation) during update operation.
+       * A flag to disable balanced update (split remove -&gt; insert operation)
+       * during update operation.
        * </pre>
        *
        * <code>bool disable_balanced_update = 4;</code>
@@ -4805,7 +4808,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A flag to disable balanced update (split remove -&gt; insert operation) during update operation.
+       * A flag to disable balanced update (split remove -&gt; insert operation)
+       * during update operation.
        * </pre>
        *
        * <code>bool disable_balanced_update = 4;</code>
@@ -4821,7 +4825,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A flag to disable balanced update (split remove -&gt; insert operation) during update operation.
+       * A flag to disable balanced update (split remove -&gt; insert operation)
+       * during update operation.
        * </pre>
        *
        * <code>bool disable_balanced_update = 4;</code>

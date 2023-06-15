@@ -543,7 +543,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple vectors in a single request.
+     * A method to linear search indexed vectors by multiple vectors in a single
+     * request.
      * </pre>
      */
     default void multiLinearSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
@@ -553,7 +554,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple IDs in a single request.
+     * A method to linear search indexed vectors by multiple IDs in a single
+     * request.
      * </pre>
      */
     default void multiLinearSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
@@ -707,7 +709,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple vectors in a single request.
+     * A method to linear search indexed vectors by multiple vectors in a single
+     * request.
      * </pre>
      */
     public void multiLinearSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request,
@@ -718,7 +721,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple IDs in a single request.
+     * A method to linear search indexed vectors by multiple IDs in a single
+     * request.
      * </pre>
      */
     public void multiLinearSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request,
@@ -809,7 +813,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple vectors in a single request.
+     * A method to linear search indexed vectors by multiple vectors in a single
+     * request.
      * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Responses multiLinearSearch(org.vdaas.vald.api.v1.payload.Search.MultiRequest request) {
@@ -819,7 +824,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple IDs in a single request.
+     * A method to linear search indexed vectors by multiple IDs in a single
+     * request.
      * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Search.Responses multiLinearSearchByID(org.vdaas.vald.api.v1.payload.Search.MultiIDRequest request) {
@@ -915,7 +921,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple vectors in a single request.
+     * A method to linear search indexed vectors by multiple vectors in a single
+     * request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Responses> multiLinearSearch(
@@ -926,7 +933,8 @@ public final class SearchGrpc {
 
     /**
      * <pre>
-     * A method to linear search indexed vectors by multiple IDs in a single request.
+     * A method to linear search indexed vectors by multiple IDs in a single
+     * request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Search.Responses> multiLinearSearchByID(
