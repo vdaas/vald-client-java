@@ -20,11 +20,11 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: '../build/libs', include: '*.jar')
-    implementation 'io.grpc:grpc-api:1.56.0'
-    implementation 'io.grpc:grpc-core:1.56.0'
-    implementation 'io.grpc:grpc-stub:1.56.0'
-    implementation 'io.grpc:grpc-protobuf:1.56.0'
-    implementation 'io.grpc:grpc-netty-shaded:1.56.0'
+    implementation 'io.grpc:grpc-api:1.56.1'
+    implementation 'io.grpc:grpc-core:1.56.1'
+    implementation 'io.grpc:grpc-stub:1.56.1'
+    implementation 'io.grpc:grpc-protobuf:1.56.1'
+    implementation 'io.grpc:grpc-netty-shaded:1.56.1'
     implementation 'io.envoyproxy.protoc-gen-validate:pgv-java-stub:0.6.13'
 }
 
