@@ -540,7 +540,7 @@ class E2ETests {
         fun `Test for MultiUpdate operation`() {
             val cfg = Update.Config.newBuilder().setSkipStrictExistCheck(true).build()
             val requests =
-                    (1..11).toList().map {
+                    (1..10).toList().map {
                         Update.Request.newBuilder()
                                 .setVector(
                                         Object.Vector.newBuilder()
@@ -587,7 +587,7 @@ class E2ETests {
                     )
 
             try {
-                (11..21).toList().map {
+                (11..20).toList().map {
                     requestObserver.onNext(
                             Update.Request.newBuilder()
                                     .setVector(
