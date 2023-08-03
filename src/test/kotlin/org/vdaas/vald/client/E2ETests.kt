@@ -154,7 +154,7 @@ class E2ETests {
                     )
 
             try {
-                data.subList(11, 100).map {
+                data.subList(11, 101).map {
                     requestObserver.onNext(
                             Insert.Request.newBuilder()
                                     .setVector(
@@ -289,7 +289,7 @@ class E2ETests {
                     )
 
             try {
-                data.subList(0, 10).map {
+                data.subList(0, 11).map {
                     requestObserver.onNext(
                             Object.VectorRequest.newBuilder()
                                     .setId(Object.ID.newBuilder().setId(it.id).build())
@@ -353,7 +353,7 @@ class E2ETests {
                             .setTimeout(3000000000L)
                             .build()
             val requests =
-                    data.subList(1, 10).map {
+                    data.subList(1, 11).map {
                         Search.Request.newBuilder().addAllVector(it.vector).setConfig(cfg).build()
                     }
             val req = Search.MultiRequest.newBuilder().addAllRequests(requests).build()
@@ -398,7 +398,7 @@ class E2ETests {
                     )
 
             try {
-                data.subList(11, 20).map {
+                data.subList(11, 21).map {
                     requestObserver.onNext(
                             Search.Request.newBuilder()
                                     .addAllVector(it.vector)
@@ -441,7 +441,7 @@ class E2ETests {
                             .setTimeout(3000000000L)
                             .build()
             val requests =
-                    data.subList(1, 10).map {
+                    data.subList(1, 11).map {
                         Search.IDRequest.newBuilder().setId(it.id).setConfig(cfg).build()
                     }
             val req = Search.MultiIDRequest.newBuilder().addAllRequests(requests).build()
@@ -486,7 +486,7 @@ class E2ETests {
                     )
 
             try {
-                data.subList(11, 20).map {
+                data.subList(11, 21).map {
                     requestObserver.onNext(
                             Search.IDRequest.newBuilder().setId(it.id).setConfig(cfg).build()
                     )
@@ -649,7 +649,7 @@ class E2ETests {
         fun `Test for MultiUpsert operation`() {
             val cfg = Upsert.Config.newBuilder().setSkipStrictExistCheck(true).build()
             val requests =
-                    data.subList(1, 10).map {
+                    data.subList(1, 11).map {
                         Upsert.Request.newBuilder()
                                 .setVector(
                                         Object.Vector.newBuilder()
@@ -696,7 +696,7 @@ class E2ETests {
                     )
 
             try {
-                data.subList(11, 20).map {
+                data.subList(11, 21).map {
                     requestObserver.onNext(
                             Upsert.Request.newBuilder()
                                     .setVector(
@@ -754,7 +754,7 @@ class E2ETests {
         fun `Test for MultiRemove operation`() {
             val cfg = Remove.Config.newBuilder().setSkipStrictExistCheck(true).build()
             val requests =
-                    data.subList(1, 10).map {
+                    data.subList(1, 11).map {
                         Remove.Request.newBuilder()
                                 .setId(Object.ID.newBuilder().setId(it.id).build())
                                 .setConfig(cfg)
@@ -796,7 +796,7 @@ class E2ETests {
                     )
 
             try {
-                data.subList(11, 20).map {
+                data.subList(11, 21).map {
                     requestObserver.onNext(
                             Remove.Request.newBuilder()
                                     .setId(Object.ID.newBuilder().setId(it.id).build())
