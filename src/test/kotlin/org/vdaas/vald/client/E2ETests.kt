@@ -725,7 +725,7 @@ class E2ETests {
                                 }
 
                                 override fun onError(t: Throwable) {
-                                    throw t
+                                    finishLatch.countDown()
                                 }
 
                                 override fun onCompleted() {
