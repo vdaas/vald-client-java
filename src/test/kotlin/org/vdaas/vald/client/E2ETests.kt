@@ -105,9 +105,11 @@ class E2ETests {
         @Test
         @Order(2)
         fun `Test for MultiInsert operation`() {
+            val insertStartIndex = 1
+            val insertCount = 9
             val cfg = Insert.Config.newBuilder().setSkipStrictExistCheck(true).build()
             val requests =
-                    data.subList(1, 11).map {
+                    data.subList(insertStartIndex, insertStartIndex + insertCount).map {
                         Insert.Request.newBuilder()
                                 .setVector(
                                         Object.Vector.newBuilder()
@@ -126,25 +128,20 @@ class E2ETests {
         @Test
         @Order(3)
         fun `Test for StreamInsert operation`() {
+            val insertStartIndex = 10
+            val insertCount = 90
             val cfg = Insert.Config.newBuilder().setSkipStrictExistCheck(true).build()
             val finishLatch = CountDownLatch(1)
+            val resultList = mutableListOf<Object.StreamLocation>()
             val requestObserver =
                     asyncStub.streamInsert(
                             object : StreamObserver<Object.StreamLocation> {
                                 override fun onNext(sloc: Object.StreamLocation) {
-                                    when (sloc.payloadCase) {
-                                        Object.StreamLocation.PayloadCase.LOCATION -> {
-                                            assertEquals(1, sloc.location.ipsCount)
-                                        }
-                                        Object.StreamLocation.PayloadCase.STATUS -> {
-                                            assertEquals(0, sloc.status.code)
-                                        }
-                                        else -> throw Exception("unknown payload type")
-                                    }
+                                    resultList.add(sloc)
                                 }
 
                                 override fun onError(t: Throwable) {
-                                    throw t
+                                    finishLatch.countDown()
                                 }
 
                                 override fun onCompleted() {
@@ -152,28 +149,36 @@ class E2ETests {
                                 }
                             }
                     )
-
-            try {
-                data.subList(11, 100).map {
-                    requestObserver.onNext(
-                            Insert.Request.newBuilder()
-                                    .setVector(
-                                            Object.Vector.newBuilder()
-                                                    .setId(it.id)
-                                                    .addAllVector(it.vector)
-                                                    .build()
-                                    )
-                                    .setConfig(cfg)
-                                    .build()
-                    )
-                }
-            } catch (t: Throwable) {
-                requestObserver.onError(t)
-                throw t
+            
+            data.subList(insertStartIndex, insertStartIndex + insertCount).map {
+                requestObserver.onNext(
+                        Insert.Request.newBuilder()
+                                .setVector(
+                                        Object.Vector.newBuilder()
+                                                .setId(it.id)
+                                                .addAllVector(it.vector)
+                                                .build()
+                                )
+                                .setConfig(cfg)
+                                .build()
+                )
             }
 
             requestObserver.onCompleted()
             finishLatch.await(1, TimeUnit.MINUTES)
+
+            assertEquals(insertCount, resultList.size)
+            resultList.forEach {sloc -> 
+                when (sloc.payloadCase) {
+                    Object.StreamLocation.PayloadCase.LOCATION -> {
+                        assertEquals(1, sloc.location.ipsCount)
+                    }
+                    Object.StreamLocation.PayloadCase.STATUS -> {
+                        assertEquals(0, sloc.status.code)
+                    }
+                    else -> throw Exception("unknown payload type")
+                }
+            }
         }
     }
 
@@ -298,7 +303,6 @@ class E2ETests {
                 }
             } catch (t: Throwable) {
                 requestObserver.onError(t)
-                throw t
             }
 
             requestObserver.onCompleted()
@@ -408,7 +412,6 @@ class E2ETests {
                 }
             } catch (t: Throwable) {
                 requestObserver.onError(t)
-                throw t
             }
 
             requestObserver.onCompleted()
@@ -493,7 +496,6 @@ class E2ETests {
                 }
             } catch (t: Throwable) {
                 requestObserver.onError(t)
-                throw t
             }
 
             requestObserver.onCompleted()
@@ -602,7 +604,6 @@ class E2ETests {
                 }
             } catch (t: Throwable) {
                 requestObserver.onError(t)
-                throw t
             }
 
             requestObserver.onCompleted()
@@ -711,7 +712,6 @@ class E2ETests {
                 }
             } catch (t: Throwable) {
                 requestObserver.onError(t)
-                throw t
             }
 
             requestObserver.onCompleted()
@@ -806,7 +806,6 @@ class E2ETests {
                 }
             } catch (t: Throwable) {
                 requestObserver.onError(t)
-                throw t
             }
 
             requestObserver.onCompleted()
