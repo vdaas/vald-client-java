@@ -128,7 +128,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     needs:
       - e2e
-    if: ${{ always() && github.event_name == 'pull_request' && contains(join(needs.*.result, ','), 'success') && contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
+    if: ${{ always() && github.event_name == 'pull_request' && needs.e2e.result == 'success' && contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
     steps:
       - name: Merge PR
         run: |
@@ -136,8 +136,9 @@ jobs:
   notify_slack_when_e2e_failed:
     name: Notify Slack when E2E failed
     runs-on: ubuntu-latest
-    needs: [e2e]
-    if: ${{ always() && github.event_name == 'pull_request' && contains(join(needs.*.result, ','), 'failure') && contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
+    needs:
+      - e2e
+    if: ${{ always() && github.event_name == 'pull_request' && needs.e2e.result == 'failure' && contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
     steps:
       - uses: abinoda/slack-action@master
         env:
@@ -148,8 +149,10 @@ jobs:
   notify_slack_when_release_succeed:
     name: Notify Slack when release succeed
     runs-on: ubuntu-latest
-    needs: [release, publish]
-    if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
+    needs:
+      - publish
+      - release
+    if: ${{ always() && github.event_name != 'pull_request' && needs.publish.result == 'success' && needs.release.result == 'success' }}
     steps:
       - uses: abinoda/slack-action@master
         env:
@@ -160,8 +163,10 @@ jobs:
   notify_slack_when_release_failed:
     name: Notify Slack when release failed
     runs-on: ubuntu-latest
-    needs: [release, publish]
-    if: ${{ always() && contains(join(needs.*.result, ','), 'failure') }}
+    needs:
+      - publish
+      - release
+    if: ${{ always() && github.event_name != 'pull_request' && contains(join(needs.*.result, ','), 'failure') }}
     steps:
       - uses: abinoda/slack-action@master
         env:
