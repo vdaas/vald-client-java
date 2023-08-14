@@ -121,3 +121,15 @@ jobs:
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+  merge_pr_when_e2e_success:
+    name: Merge PR when E2E success
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    needs:
+      - e2e
+    if: ${{ always() && github.event_name == 'pull_request' && contains(join(needs.*.result, ','), 'success') && contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
+    steps:
+      - name: Merge PR
+        run: |
+          gh pr merge --merge --auto "${{github.event.pull_request.html_url}}"
