@@ -12,6 +12,7 @@ on:
 jobs:
   e2e:
     uses: ./.github/workflows/_e2e.yaml
+
   release:
     if: startsWith( github.ref, 'refs/tags/')
     needs:
@@ -30,6 +31,7 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+
   publish:
     if: startsWith( github.ref, 'refs/tags/')
     needs:
@@ -79,18 +81,10 @@ jobs:
     needs:
       - publish
       - release
+    if: ${{ always() }}
     steps:
-      - name: Notify success status
-        uses: abinoda/slack-action@master
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/notify-slack
         with:
-          args: '{\"channel\":\"${{ secrets.SLACK_CHANNEL_ID }}\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"Java client release successed!\"}}]}' 
-        if: ${{ needs.publish.result == 'success' && needs.release.result == 'success' }}
-      - name: Notify failed status
-        uses: abinoda/slack-action@master
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        with:
-          args: '{\"channel\":\"${{ secrets.SLACK_CHANNEL_ID }}\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Java client release FAILED!*\"}}]}' 
-        if: ${{ contains(join(needs.*.result, ','), 'failure') }}
+          author_name: Release vald-java-client
+          slack_notify_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}

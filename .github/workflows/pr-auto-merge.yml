@@ -4,6 +4,7 @@ on:
 jobs:
   e2e:
     uses: ./.github/workflows/_e2e.yaml
+
   merge_pr_when_e2e_success:
     name: Merge PR when E2E success
     runs-on: ubuntu-latest
@@ -16,6 +17,7 @@ jobs:
       - name: Merge PR
         run: |
           gh pr merge --merge --auto "${{github.event.pull_request.html_url}}"
+
   notify_slack_when_e2e_failed:
     name: Notify Slack when E2E failed
     runs-on: ubuntu-latest
@@ -23,9 +25,9 @@ jobs:
       - e2e
     if: ${{ always() && needs.e2e.result == 'failure' && contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
     steps:
-      - uses: abinoda/slack-action@master
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/notify-slack
         with:
-          args: '{\"channel\":\"${{ secrets.SLACK_CHANNEL_ID }}\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Java client E2E FAILED!*\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Pull Request:* ${{ github.event.pull_request.title }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"<${{ github.event.pull_request.html_url }}|View Pull Request>\"}}]}' 
-        if: success()
+          author_name: E2E failed on PR
+          slack_notify_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          status: failure
