@@ -2,25 +2,28 @@ on:
   pull_request:
 
 jobs:
-  e2e:
-    uses: ./.github/workflows/_e2e.yaml
-    if: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
-    with:
-      notify_slack_if_failed: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
 
-  merge_pr_when_e2e_success:
-    name: Merge PR when E2E success
+  rebase:
+    name: Rebase and get commit hash
+    if: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    needs:
-      - e2e
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - name: Rebase
         uses: cirrus-actions/rebase@1.8
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Merge PR
-        run: |
-          gh pr merge -s --auto -d "${{github.event.pull_request.html_url}}"
+
+  e2e:
+    uses: ./.github/workflows/_e2e.yml
+    needs:
+      - rebase
+    with:
+      notify_slack_if_failed: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
+
+  merge_pr:
+    name: Merge PR
+    needs:
+      - e2e
+    uses: ./.github/workflows/_merge_pr.yml
