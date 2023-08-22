@@ -3,7 +3,7 @@ on:
 
 jobs:
   e2e:
-    uses: "./.github/workflows/_e2e.yaml"
+    uses: "./.github/workflows/_e2e.yml"
     if: ${{ !contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
     with:
       notify_slack_if_failed: false

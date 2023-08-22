@@ -11,7 +11,7 @@ on:
 
 jobs:
   e2e:
-    uses: ./.github/workflows/_e2e.yaml
+    uses: ./.github/workflows/_e2e.yml
 
   release:
     if: startsWith( github.ref, 'refs/tags/')
