@@ -2,7 +2,6 @@ on:
   pull_request:
 
 jobs:
-
   rebase:
     name: Rebase and get commit hash
     if: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
@@ -26,4 +25,9 @@ jobs:
     name: Merge PR
     needs:
       - e2e
-    uses: ./.github/workflows/_merge_pr.yml
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - run: |
+          gh pr merge -s --auto -d "${{github.event.pull_request.html_url}}"
