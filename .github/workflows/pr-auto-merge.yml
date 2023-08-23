@@ -20,7 +20,7 @@ jobs:
     needs:
       - rebase
     with:
-      notify_slack_if_failed: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
+      notify_slack_if_failed: true
 
   merge_pr:
     name: Merge PR
