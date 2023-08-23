@@ -1,0 +1,33 @@
+on:
+  pull_request:
+
+jobs:
+  rebase:
+    name: Rebase and get commit hash
+    if: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Rebase
+        uses: cirrus-actions/rebase@1.8
+
+  e2e:
+    uses: ./.github/workflows/_e2e.yml
+    needs:
+      - rebase
+    with:
+      notify_slack_if_failed: true
+
+  merge_pr:
+    name: Merge PR
+    needs:
+      - e2e
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - run: |
+          gh pr merge -s --auto -d "${{github.event.pull_request.html_url}}"
