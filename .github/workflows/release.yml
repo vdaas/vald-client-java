@@ -81,7 +81,7 @@ jobs:
     needs:
       - publish
       - release
-    if: ${{ !cancelled() }}
+    if: ${{ success() || failure()  }}
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/notify-slack
