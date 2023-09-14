@@ -3,8 +3,8 @@ on:
 
 jobs:
   rebase:
-    name: Rebase and get commit hash
-    if: ${{ contains('["dependabot","github-actions"]', github.event.pull_request.user.login) }}
+    name: Rebase and merge
+    if: ${{ github.event.pull_request.user.login == 'github-actions' || github.event.pull_request.user.login == 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

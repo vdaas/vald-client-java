@@ -5,7 +5,7 @@ buildscript {
 }
 
 plugins {
-    id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'java'
 }
 
@@ -20,21 +20,21 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: '../build/libs', include: '*.jar')
-    implementation 'io.grpc:grpc-api:1.57.2'
-    implementation 'io.grpc:grpc-core:1.57.2'
-    implementation 'io.grpc:grpc-stub:1.57.2'
-    implementation 'io.grpc:grpc-protobuf:1.57.2'
-    implementation 'io.grpc:grpc-netty-shaded:1.57.2'
+    implementation 'io.grpc:grpc-api:1.58.0'
+    implementation 'io.grpc:grpc-core:1.58.0'
+    implementation 'io.grpc:grpc-stub:1.58.0'
+    implementation 'io.grpc:grpc-protobuf:1.58.0'
+    implementation 'io.grpc:grpc-netty-shaded:1.58.0'
     implementation 'io.envoyproxy.protoc-gen-validate:pgv-java-stub:0.6.13'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
+    archiveClassifier = 'sources'
         from sourceSets.main.allSource
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier = 'javadoc'
         from javadoc.destinationDir
 }
 
