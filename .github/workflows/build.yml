@@ -11,6 +11,11 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 10
+      - uses: crazy-max/ghaction-import-gpg@v4
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
       - name: checkout main branch
         run: |
           git checkout main
