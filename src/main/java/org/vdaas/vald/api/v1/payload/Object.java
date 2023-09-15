@@ -139,6 +139,7 @@ private static final long serialVersionUID = 0L;
               org.vdaas.vald.api.v1.payload.Object.VectorRequest.class, org.vdaas.vald.api.v1.payload.Object.VectorRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private org.vdaas.vald.api.v1.payload.Object.ID id_;
     /**
@@ -151,7 +152,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return id_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -189,7 +190,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFilters() {
-      return filters_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -229,10 +230,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getId());
       }
-      if (filters_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getFilters());
       }
       getUnknownFields().writeTo(output);
@@ -244,11 +245,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
-      if (filters_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFilters());
       }
@@ -419,13 +420,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using org.vdaas.vald.api.v1.payload.Object.VectorRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIdFieldBuilder();
+          getFiltersFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -474,16 +482,20 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(org.vdaas.vald.api.v1.payload.Object.VectorRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.filters_ = filtersBuilder_ == null
               ? filters_
               : filtersBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -679,8 +691,10 @@ private static final long serialVersionUID = 0L;
         } else {
           idBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (id_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -834,8 +848,10 @@ private static final long serialVersionUID = 0L;
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (filters_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3949,6 +3965,16 @@ private static final long serialVersionUID = 0L;
      * @return The vector at the given index.
      */
     float getVector(int index);
+
+    /**
+     * <pre>
+     * timestamp represents when this vector inserted.
+     * </pre>
+     *
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
   }
   /**
    * <pre>
@@ -4040,7 +4066,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int VECTOR_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.FloatList vector_;
+    private com.google.protobuf.Internal.FloatList vector_ =
+        emptyFloatList();
     /**
      * <pre>
      * The vector.
@@ -4079,6 +4106,21 @@ private static final long serialVersionUID = 0L;
     }
     private int vectorMemoizedSerializedSize = -1;
 
+    public static final int TIMESTAMP_FIELD_NUMBER = 3;
+    private long timestamp_ = 0L;
+    /**
+     * <pre>
+     * timestamp represents when this vector inserted.
+     * </pre>
+     *
+     * <code>int64 timestamp = 3;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4104,6 +4146,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < vector_.size(); i++) {
         output.writeFloatNoTag(vector_.getFloat(i));
       }
+      if (timestamp_ != 0L) {
+        output.writeInt64(3, timestamp_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4127,6 +4172,10 @@ private static final long serialVersionUID = 0L;
         }
         vectorMemoizedSerializedSize = dataSize;
       }
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, timestamp_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4146,6 +4195,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getId())) return false;
       if (!getVectorList()
           .equals(other.getVectorList())) return false;
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4163,6 +4214,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + VECTOR_FIELD_NUMBER;
         hash = (53 * hash) + getVectorList().hashCode();
       }
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4300,6 +4354,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         id_ = "";
         vector_ = emptyFloatList();
+        timestamp_ = 0L;
         return this;
       }
 
@@ -4326,24 +4381,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Object.Vector buildPartial() {
         org.vdaas.vald.api.v1.payload.Object.Vector result = new org.vdaas.vald.api.v1.payload.Object.Vector(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(org.vdaas.vald.api.v1.payload.Object.Vector result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          vector_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.vector_ = vector_;
       }
 
       private void buildPartial0(org.vdaas.vald.api.v1.payload.Object.Vector result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          vector_.makeImmutable();
+          result.vector_ = vector_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.timestamp_ = timestamp_;
         }
       }
 
@@ -4399,12 +4452,16 @@ private static final long serialVersionUID = 0L;
         if (!other.vector_.isEmpty()) {
           if (vector_.isEmpty()) {
             vector_ = other.vector_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            vector_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureVectorIsMutable();
             vector_.addAll(other.vector_);
           }
           onChanged();
+        }
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4446,13 +4503,19 @@ private static final long serialVersionUID = 0L;
               case 18: {
                 int length = input.readRawVarint32();
                 int limit = input.pushLimit(length);
-                ensureVectorIsMutable();
+                int alloc = length > 4096 ? 4096 : length;
+                ensureVectorIsMutable(alloc / 4);
                 while (input.getBytesUntilLimit() > 0) {
                   vector_.addFloat(input.readFloat());
                 }
                 input.popLimit(limit);
                 break;
               } // case 18
+              case 24: {
+                timestamp_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4564,10 +4627,16 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.FloatList vector_ = emptyFloatList();
       private void ensureVectorIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          vector_ = mutableCopy(vector_);
-          bitField0_ |= 0x00000002;
+        if (!vector_.isModifiable()) {
+          vector_ = makeMutableCopy(vector_);
         }
+        bitField0_ |= 0x00000002;
+      }
+      private void ensureVectorIsMutable(int capacity) {
+        if (!vector_.isModifiable()) {
+          vector_ = makeMutableCopy(vector_, capacity);
+        }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -4579,8 +4648,8 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Float>
           getVectorList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(vector_) : vector_;
+        vector_.makeImmutable();
+        return vector_;
       }
       /**
        * <pre>
@@ -4620,6 +4689,7 @@ private static final long serialVersionUID = 0L;
 
         ensureVectorIsMutable();
         vector_.setFloat(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4636,6 +4706,7 @@ private static final long serialVersionUID = 0L;
 
         ensureVectorIsMutable();
         vector_.addFloat(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4653,6 +4724,7 @@ private static final long serialVersionUID = 0L;
         ensureVectorIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, vector_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4667,6 +4739,50 @@ private static final long serialVersionUID = 0L;
       public Builder clearVector() {
         vector_ = emptyFloatList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private long timestamp_ ;
+      /**
+       * <pre>
+       * timestamp represents when this vector inserted.
+       * </pre>
+       *
+       * <code>int64 timestamp = 3;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <pre>
+       * timestamp represents when this vector inserted.
+       * </pre>
+       *
+       * <code>int64 timestamp = 3;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+
+        timestamp_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp represents when this vector inserted.
+       * </pre>
+       *
+       * <code>int64 timestamp = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        timestamp_ = 0L;
         onChanged();
         return this;
       }
@@ -6680,7 +6796,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int SHAPE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList shape_;
+    private com.google.protobuf.Internal.IntList shape_ =
+        emptyIntList();
     /**
      * <pre>
      * The new shape.
@@ -6970,24 +7087,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public org.vdaas.vald.api.v1.payload.Object.ReshapeVector buildPartial() {
         org.vdaas.vald.api.v1.payload.Object.ReshapeVector result = new org.vdaas.vald.api.v1.payload.Object.ReshapeVector(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(org.vdaas.vald.api.v1.payload.Object.ReshapeVector result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
-          shape_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.shape_ = shape_;
       }
 
       private void buildPartial0(org.vdaas.vald.api.v1.payload.Object.ReshapeVector result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.object_ = object_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          shape_.makeImmutable();
+          result.shape_ = shape_;
         }
       }
 
@@ -7041,7 +7153,8 @@ private static final long serialVersionUID = 0L;
         if (!other.shape_.isEmpty()) {
           if (shape_.isEmpty()) {
             shape_ = other.shape_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            shape_.makeImmutable();
+            bitField0_ |= 0x00000002;
           } else {
             ensureShapeIsMutable();
             shape_.addAll(other.shape_);
@@ -7158,10 +7271,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.IntList shape_ = emptyIntList();
       private void ensureShapeIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          shape_ = mutableCopy(shape_);
-          bitField0_ |= 0x00000002;
+        if (!shape_.isModifiable()) {
+          shape_ = makeMutableCopy(shape_);
         }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -7173,8 +7286,8 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Integer>
           getShapeList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
-                 java.util.Collections.unmodifiableList(shape_) : shape_;
+        shape_.makeImmutable();
+        return shape_;
       }
       /**
        * <pre>
@@ -7214,6 +7327,7 @@ private static final long serialVersionUID = 0L;
 
         ensureShapeIsMutable();
         shape_.setInt(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7230,6 +7344,7 @@ private static final long serialVersionUID = 0L;
 
         ensureShapeIsMutable();
         shape_.addInt(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7247,6 +7362,7 @@ private static final long serialVersionUID = 0L;
         ensureShapeIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, shape_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -11974,6 +12090,1855 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public org.vdaas.vald.api.v1.payload.Object.Locations getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Object.List)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * Represent the list object vector stream request and response.
+   * </pre>
+   *
+   * Protobuf type {@code payload.v1.Object.List}
+   */
+  public static final class List extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Object.List)
+      ListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use List.newBuilder() to construct.
+    private List(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private List() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new List();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Object.List.class, org.vdaas.vald.api.v1.payload.Object.List.Builder.class);
+    }
+
+    public interface RequestOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.v1.Object.List.Request)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code payload.v1.Object.List.Request}
+     */
+    public static final class Request extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.v1.Object.List.Request)
+        RequestOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Request.newBuilder() to construct.
+      private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Request() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Request();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Object.List.Request.class, org.vdaas.vald.api.v1.payload.Object.List.Request.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.api.v1.payload.Object.List.Request)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.api.v1.payload.Object.List.Request other = (org.vdaas.vald.api.v1.payload.Object.List.Request) obj;
+
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Object.List.Request prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code payload.v1.Object.List.Request}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.v1.Object.List.Request)
+          org.vdaas.vald.api.v1.payload.Object.List.RequestOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Request_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Request_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.api.v1.payload.Object.List.Request.class, org.vdaas.vald.api.v1.payload.Object.List.Request.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.api.v1.payload.Object.List.Request.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Request_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.List.Request getDefaultInstanceForType() {
+          return org.vdaas.vald.api.v1.payload.Object.List.Request.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.List.Request build() {
+          org.vdaas.vald.api.v1.payload.Object.List.Request result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.List.Request buildPartial() {
+          org.vdaas.vald.api.v1.payload.Object.List.Request result = new org.vdaas.vald.api.v1.payload.Object.List.Request(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.api.v1.payload.Object.List.Request) {
+            return mergeFrom((org.vdaas.vald.api.v1.payload.Object.List.Request)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Object.List.Request other) {
+          if (other == org.vdaas.vald.api.v1.payload.Object.List.Request.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.v1.Object.List.Request)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.v1.Object.List.Request)
+      private static final org.vdaas.vald.api.v1.payload.Object.List.Request DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Object.List.Request();
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Request getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Request>
+          PARSER = new com.google.protobuf.AbstractParser<Request>() {
+        @java.lang.Override
+        public Request parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Request> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Request> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.List.Request getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.v1.Object.List.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The vector
+       * </pre>
+       *
+       * <code>.payload.v1.Object.Vector vector = 1;</code>
+       * @return Whether the vector field is set.
+       */
+      boolean hasVector();
+      /**
+       * <pre>
+       * The vector
+       * </pre>
+       *
+       * <code>.payload.v1.Object.Vector vector = 1;</code>
+       * @return The vector.
+       */
+      org.vdaas.vald.api.v1.payload.Object.Vector getVector();
+      /**
+       * <pre>
+       * The vector
+       * </pre>
+       *
+       * <code>.payload.v1.Object.Vector vector = 1;</code>
+       */
+      org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder getVectorOrBuilder();
+
+      /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
+       * <code>.google.rpc.Status status = 2;</code>
+       * @return Whether the status field is set.
+       */
+      boolean hasStatus();
+      /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
+       * <code>.google.rpc.Status status = 2;</code>
+       * @return The status.
+       */
+      com.google.rpc.Status getStatus();
+      /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
+       * <code>.google.rpc.Status status = 2;</code>
+       */
+      com.google.rpc.StatusOrBuilder getStatusOrBuilder();
+
+      org.vdaas.vald.api.v1.payload.Object.List.Response.PayloadCase getPayloadCase();
+    }
+    /**
+     * Protobuf type {@code payload.v1.Object.List.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.v1.Object.List.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Object.List.Response.class, org.vdaas.vald.api.v1.payload.Object.List.Response.Builder.class);
+      }
+
+      private int payloadCase_ = 0;
+      @SuppressWarnings("serial")
+      private java.lang.Object payload_;
+      public enum PayloadCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        VECTOR(1),
+        STATUS(2),
+        PAYLOAD_NOT_SET(0);
+        private final int value;
+        private PayloadCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static PayloadCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static PayloadCase forNumber(int value) {
+          switch (value) {
+            case 1: return VECTOR;
+            case 2: return STATUS;
+            case 0: return PAYLOAD_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public PayloadCase
+      getPayloadCase() {
+        return PayloadCase.forNumber(
+            payloadCase_);
+      }
+
+      public static final int VECTOR_FIELD_NUMBER = 1;
+      /**
+       * <pre>
+       * The vector
+       * </pre>
+       *
+       * <code>.payload.v1.Object.Vector vector = 1;</code>
+       * @return Whether the vector field is set.
+       */
+      @java.lang.Override
+      public boolean hasVector() {
+        return payloadCase_ == 1;
+      }
+      /**
+       * <pre>
+       * The vector
+       * </pre>
+       *
+       * <code>.payload.v1.Object.Vector vector = 1;</code>
+       * @return The vector.
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.Vector getVector() {
+        if (payloadCase_ == 1) {
+           return (org.vdaas.vald.api.v1.payload.Object.Vector) payload_;
+        }
+        return org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * The vector
+       * </pre>
+       *
+       * <code>.payload.v1.Object.Vector vector = 1;</code>
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder getVectorOrBuilder() {
+        if (payloadCase_ == 1) {
+           return (org.vdaas.vald.api.v1.payload.Object.Vector) payload_;
+        }
+        return org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance();
+      }
+
+      public static final int STATUS_FIELD_NUMBER = 2;
+      /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
+       * <code>.google.rpc.Status status = 2;</code>
+       * @return Whether the status field is set.
+       */
+      @java.lang.Override
+      public boolean hasStatus() {
+        return payloadCase_ == 2;
+      }
+      /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
+       * <code>.google.rpc.Status status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.google.rpc.Status getStatus() {
+        if (payloadCase_ == 2) {
+           return (com.google.rpc.Status) payload_;
+        }
+        return com.google.rpc.Status.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * The RPC error status.
+       * </pre>
+       *
+       * <code>.google.rpc.Status status = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
+        if (payloadCase_ == 2) {
+           return (com.google.rpc.Status) payload_;
+        }
+        return com.google.rpc.Status.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (payloadCase_ == 1) {
+          output.writeMessage(1, (org.vdaas.vald.api.v1.payload.Object.Vector) payload_);
+        }
+        if (payloadCase_ == 2) {
+          output.writeMessage(2, (com.google.rpc.Status) payload_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (payloadCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (org.vdaas.vald.api.v1.payload.Object.Vector) payload_);
+        }
+        if (payloadCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (com.google.rpc.Status) payload_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.api.v1.payload.Object.List.Response)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.api.v1.payload.Object.List.Response other = (org.vdaas.vald.api.v1.payload.Object.List.Response) obj;
+
+        if (!getPayloadCase().equals(other.getPayloadCase())) return false;
+        switch (payloadCase_) {
+          case 1:
+            if (!getVector()
+                .equals(other.getVector())) return false;
+            break;
+          case 2:
+            if (!getStatus()
+                .equals(other.getStatus())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (payloadCase_) {
+          case 1:
+            hash = (37 * hash) + VECTOR_FIELD_NUMBER;
+            hash = (53 * hash) + getVector().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + STATUS_FIELD_NUMBER;
+            hash = (53 * hash) + getStatus().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Object.List.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code payload.v1.Object.List.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.v1.Object.List.Response)
+          org.vdaas.vald.api.v1.payload.Object.List.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.api.v1.payload.Object.List.Response.class, org.vdaas.vald.api.v1.payload.Object.List.Response.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.api.v1.payload.Object.List.Response.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          if (vectorBuilder_ != null) {
+            vectorBuilder_.clear();
+          }
+          if (statusBuilder_ != null) {
+            statusBuilder_.clear();
+          }
+          payloadCase_ = 0;
+          payload_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.List.Response getDefaultInstanceForType() {
+          return org.vdaas.vald.api.v1.payload.Object.List.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.List.Response build() {
+          org.vdaas.vald.api.v1.payload.Object.List.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.List.Response buildPartial() {
+          org.vdaas.vald.api.v1.payload.Object.List.Response result = new org.vdaas.vald.api.v1.payload.Object.List.Response(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(org.vdaas.vald.api.v1.payload.Object.List.Response result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        private void buildPartialOneofs(org.vdaas.vald.api.v1.payload.Object.List.Response result) {
+          result.payloadCase_ = payloadCase_;
+          result.payload_ = this.payload_;
+          if (payloadCase_ == 1 &&
+              vectorBuilder_ != null) {
+            result.payload_ = vectorBuilder_.build();
+          }
+          if (payloadCase_ == 2 &&
+              statusBuilder_ != null) {
+            result.payload_ = statusBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.api.v1.payload.Object.List.Response) {
+            return mergeFrom((org.vdaas.vald.api.v1.payload.Object.List.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Object.List.Response other) {
+          if (other == org.vdaas.vald.api.v1.payload.Object.List.Response.getDefaultInstance()) return this;
+          switch (other.getPayloadCase()) {
+            case VECTOR: {
+              mergeVector(other.getVector());
+              break;
+            }
+            case STATUS: {
+              mergeStatus(other.getStatus());
+              break;
+            }
+            case PAYLOAD_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getVectorFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  payloadCase_ = 1;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getStatusFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  payloadCase_ = 2;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int payloadCase_ = 0;
+        private java.lang.Object payload_;
+        public PayloadCase
+            getPayloadCase() {
+          return PayloadCase.forNumber(
+              payloadCase_);
+        }
+
+        public Builder clearPayload() {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int bitField0_;
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.vdaas.vald.api.v1.payload.Object.Vector, org.vdaas.vald.api.v1.payload.Object.Vector.Builder, org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder> vectorBuilder_;
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         * @return Whether the vector field is set.
+         */
+        @java.lang.Override
+        public boolean hasVector() {
+          return payloadCase_ == 1;
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         * @return The vector.
+         */
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.Vector getVector() {
+          if (vectorBuilder_ == null) {
+            if (payloadCase_ == 1) {
+              return (org.vdaas.vald.api.v1.payload.Object.Vector) payload_;
+            }
+            return org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance();
+          } else {
+            if (payloadCase_ == 1) {
+              return vectorBuilder_.getMessage();
+            }
+            return org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         */
+        public Builder setVector(org.vdaas.vald.api.v1.payload.Object.Vector value) {
+          if (vectorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            payload_ = value;
+            onChanged();
+          } else {
+            vectorBuilder_.setMessage(value);
+          }
+          payloadCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         */
+        public Builder setVector(
+            org.vdaas.vald.api.v1.payload.Object.Vector.Builder builderForValue) {
+          if (vectorBuilder_ == null) {
+            payload_ = builderForValue.build();
+            onChanged();
+          } else {
+            vectorBuilder_.setMessage(builderForValue.build());
+          }
+          payloadCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         */
+        public Builder mergeVector(org.vdaas.vald.api.v1.payload.Object.Vector value) {
+          if (vectorBuilder_ == null) {
+            if (payloadCase_ == 1 &&
+                payload_ != org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance()) {
+              payload_ = org.vdaas.vald.api.v1.payload.Object.Vector.newBuilder((org.vdaas.vald.api.v1.payload.Object.Vector) payload_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              payload_ = value;
+            }
+            onChanged();
+          } else {
+            if (payloadCase_ == 1) {
+              vectorBuilder_.mergeFrom(value);
+            } else {
+              vectorBuilder_.setMessage(value);
+            }
+          }
+          payloadCase_ = 1;
+          return this;
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         */
+        public Builder clearVector() {
+          if (vectorBuilder_ == null) {
+            if (payloadCase_ == 1) {
+              payloadCase_ = 0;
+              payload_ = null;
+              onChanged();
+            }
+          } else {
+            if (payloadCase_ == 1) {
+              payloadCase_ = 0;
+              payload_ = null;
+            }
+            vectorBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         */
+        public org.vdaas.vald.api.v1.payload.Object.Vector.Builder getVectorBuilder() {
+          return getVectorFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         */
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder getVectorOrBuilder() {
+          if ((payloadCase_ == 1) && (vectorBuilder_ != null)) {
+            return vectorBuilder_.getMessageOrBuilder();
+          } else {
+            if (payloadCase_ == 1) {
+              return (org.vdaas.vald.api.v1.payload.Object.Vector) payload_;
+            }
+            return org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * The vector
+         * </pre>
+         *
+         * <code>.payload.v1.Object.Vector vector = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.vdaas.vald.api.v1.payload.Object.Vector, org.vdaas.vald.api.v1.payload.Object.Vector.Builder, org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder> 
+            getVectorFieldBuilder() {
+          if (vectorBuilder_ == null) {
+            if (!(payloadCase_ == 1)) {
+              payload_ = org.vdaas.vald.api.v1.payload.Object.Vector.getDefaultInstance();
+            }
+            vectorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                org.vdaas.vald.api.v1.payload.Object.Vector, org.vdaas.vald.api.v1.payload.Object.Vector.Builder, org.vdaas.vald.api.v1.payload.Object.VectorOrBuilder>(
+                    (org.vdaas.vald.api.v1.payload.Object.Vector) payload_,
+                    getParentForChildren(),
+                    isClean());
+            payload_ = null;
+          }
+          payloadCase_ = 1;
+          onChanged();
+          return vectorBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         * @return Whether the status field is set.
+         */
+        @java.lang.Override
+        public boolean hasStatus() {
+          return payloadCase_ == 2;
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         * @return The status.
+         */
+        @java.lang.Override
+        public com.google.rpc.Status getStatus() {
+          if (statusBuilder_ == null) {
+            if (payloadCase_ == 2) {
+              return (com.google.rpc.Status) payload_;
+            }
+            return com.google.rpc.Status.getDefaultInstance();
+          } else {
+            if (payloadCase_ == 2) {
+              return statusBuilder_.getMessage();
+            }
+            return com.google.rpc.Status.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         */
+        public Builder setStatus(com.google.rpc.Status value) {
+          if (statusBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            payload_ = value;
+            onChanged();
+          } else {
+            statusBuilder_.setMessage(value);
+          }
+          payloadCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         */
+        public Builder setStatus(
+            com.google.rpc.Status.Builder builderForValue) {
+          if (statusBuilder_ == null) {
+            payload_ = builderForValue.build();
+            onChanged();
+          } else {
+            statusBuilder_.setMessage(builderForValue.build());
+          }
+          payloadCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         */
+        public Builder mergeStatus(com.google.rpc.Status value) {
+          if (statusBuilder_ == null) {
+            if (payloadCase_ == 2 &&
+                payload_ != com.google.rpc.Status.getDefaultInstance()) {
+              payload_ = com.google.rpc.Status.newBuilder((com.google.rpc.Status) payload_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              payload_ = value;
+            }
+            onChanged();
+          } else {
+            if (payloadCase_ == 2) {
+              statusBuilder_.mergeFrom(value);
+            } else {
+              statusBuilder_.setMessage(value);
+            }
+          }
+          payloadCase_ = 2;
+          return this;
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         */
+        public Builder clearStatus() {
+          if (statusBuilder_ == null) {
+            if (payloadCase_ == 2) {
+              payloadCase_ = 0;
+              payload_ = null;
+              onChanged();
+            }
+          } else {
+            if (payloadCase_ == 2) {
+              payloadCase_ = 0;
+              payload_ = null;
+            }
+            statusBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         */
+        public com.google.rpc.Status.Builder getStatusBuilder() {
+          return getStatusFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         */
+        @java.lang.Override
+        public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
+          if ((payloadCase_ == 2) && (statusBuilder_ != null)) {
+            return statusBuilder_.getMessageOrBuilder();
+          } else {
+            if (payloadCase_ == 2) {
+              return (com.google.rpc.Status) payload_;
+            }
+            return com.google.rpc.Status.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * The RPC error status.
+         * </pre>
+         *
+         * <code>.google.rpc.Status status = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
+            getStatusFieldBuilder() {
+          if (statusBuilder_ == null) {
+            if (!(payloadCase_ == 2)) {
+              payload_ = com.google.rpc.Status.getDefaultInstance();
+            }
+            statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
+                    (com.google.rpc.Status) payload_,
+                    getParentForChildren(),
+                    isClean());
+            payload_ = null;
+          }
+          payloadCase_ = 2;
+          onChanged();
+          return statusBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.v1.Object.List.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.v1.Object.List.Response)
+      private static final org.vdaas.vald.api.v1.payload.Object.List.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Object.List.Response();
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Object.List.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.List.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Object.List)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Object.List other = (org.vdaas.vald.api.v1.payload.Object.List) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.List parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.List parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Object.List parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Object.List prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represent the list object vector stream request and response.
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Object.List}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Object.List)
+        org.vdaas.vald.api.v1.payload.Object.ListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Object.List.class, org.vdaas.vald.api.v1.payload.Object.List.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Object.List.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_List_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.List getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Object.List.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.List build() {
+        org.vdaas.vald.api.v1.payload.Object.List result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Object.List buildPartial() {
+        org.vdaas.vald.api.v1.payload.Object.List result = new org.vdaas.vald.api.v1.payload.Object.List(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Object.List) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Object.List)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Object.List other) {
+        if (other == org.vdaas.vald.api.v1.payload.Object.List.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Object.List)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Object.List)
+    private static final org.vdaas.vald.api.v1.payload.Object.List DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Object.List();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Object.List getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<List>
+        PARSER = new com.google.protobuf.AbstractParser<List>() {
+      @java.lang.Override
+      public List parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<List> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<List> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Object.List getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

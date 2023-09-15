@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.58.0)",
     comments = "Source: apis/proto/v1/vald/update.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UpdateGrpc {
 
   private UpdateGrpc() {}
 
-  public static final String SERVICE_NAME = "vald.v1.Update";
+  public static final java.lang.String SERVICE_NAME = "vald.v1.Update";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.Request,
@@ -439,9 +439,9 @@ public final class UpdateGrpc {
   private static final class UpdateMethodDescriptorSupplier
       extends UpdateBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    UpdateMethodDescriptorSupplier(String methodName) {
+    UpdateMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

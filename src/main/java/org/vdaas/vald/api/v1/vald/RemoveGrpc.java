@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.58.0)",
     comments = "Source: apis/proto/v1/vald/remove.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RemoveGrpc {
 
   private RemoveGrpc() {}
 
-  public static final String SERVICE_NAME = "vald.v1.Remove";
+  public static final java.lang.String SERVICE_NAME = "vald.v1.Remove";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.Request,
@@ -47,6 +47,37 @@ public final class RemoveGrpc {
       }
     }
     return getRemoveMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.TimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Locations> getRemoveByTimestampMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveByTimestamp",
+      requestType = org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.Locations.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.TimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Locations> getRemoveByTimestampMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.TimestampRequest, org.vdaas.vald.api.v1.payload.Object.Locations> getRemoveByTimestampMethod;
+    if ((getRemoveByTimestampMethod = RemoveGrpc.getRemoveByTimestampMethod) == null) {
+      synchronized (RemoveGrpc.class) {
+        if ((getRemoveByTimestampMethod = RemoveGrpc.getRemoveByTimestampMethod) == null) {
+          RemoveGrpc.getRemoveByTimestampMethod = getRemoveByTimestampMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Remove.TimestampRequest, org.vdaas.vald.api.v1.payload.Object.Locations>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveByTimestamp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.Locations.getDefaultInstance()))
+              .setSchemaDescriptor(new RemoveMethodDescriptorSupplier("RemoveByTimestamp"))
+              .build();
+        }
+      }
+    }
+    return getRemoveByTimestampMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Remove.Request,
@@ -174,6 +205,16 @@ public final class RemoveGrpc {
 
     /**
      * <pre>
+     * A method to remove an indexed vector based on timestamp.
+     * </pre>
+     */
+    default void removeByTimestamp(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveByTimestampMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * A method to remove multiple indexed vectors by bidirectional streaming.
      * </pre>
      */
@@ -239,6 +280,17 @@ public final class RemoveGrpc {
 
     /**
      * <pre>
+     * A method to remove an indexed vector based on timestamp.
+     * </pre>
+     */
+    public void removeByTimestamp(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveByTimestampMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * A method to remove multiple indexed vectors by bidirectional streaming.
      * </pre>
      */
@@ -291,6 +343,16 @@ public final class RemoveGrpc {
 
     /**
      * <pre>
+     * A method to remove an indexed vector based on timestamp.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Locations removeByTimestamp(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveByTimestampMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * A method to remove multiple indexed vectors in a single request.
      * </pre>
      */
@@ -332,6 +394,17 @@ public final class RemoveGrpc {
 
     /**
      * <pre>
+     * A method to remove an indexed vector based on timestamp.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Locations> removeByTimestamp(
+        org.vdaas.vald.api.v1.payload.Remove.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveByTimestampMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * A method to remove multiple indexed vectors in a single request.
      * </pre>
      */
@@ -343,8 +416,9 @@ public final class RemoveGrpc {
   }
 
   private static final int METHODID_REMOVE = 0;
-  private static final int METHODID_MULTI_REMOVE = 1;
-  private static final int METHODID_STREAM_REMOVE = 2;
+  private static final int METHODID_REMOVE_BY_TIMESTAMP = 1;
+  private static final int METHODID_MULTI_REMOVE = 2;
+  private static final int METHODID_STREAM_REMOVE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -366,6 +440,10 @@ public final class RemoveGrpc {
         case METHODID_REMOVE:
           serviceImpl.remove((org.vdaas.vald.api.v1.payload.Remove.Request) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location>) responseObserver);
+          break;
+        case METHODID_REMOVE_BY_TIMESTAMP:
+          serviceImpl.removeByTimestamp((org.vdaas.vald.api.v1.payload.Remove.TimestampRequest) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations>) responseObserver);
           break;
         case METHODID_MULTI_REMOVE:
           serviceImpl.multiRemove((org.vdaas.vald.api.v1.payload.Remove.MultiRequest) request,
@@ -399,6 +477,13 @@ public final class RemoveGrpc {
               org.vdaas.vald.api.v1.payload.Remove.Request,
               org.vdaas.vald.api.v1.payload.Object.Location>(
                 service, METHODID_REMOVE)))
+        .addMethod(
+          getRemoveByTimestampMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Remove.TimestampRequest,
+              org.vdaas.vald.api.v1.payload.Object.Locations>(
+                service, METHODID_REMOVE_BY_TIMESTAMP)))
         .addMethod(
           getStreamRemoveMethod(),
           io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
@@ -439,9 +524,9 @@ public final class RemoveGrpc {
   private static final class RemoveMethodDescriptorSupplier
       extends RemoveBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    RemoveMethodDescriptorSupplier(String methodName) {
+    RemoveMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -462,6 +547,7 @@ public final class RemoveGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new RemoveFileDescriptorSupplier())
               .addMethod(getRemoveMethod())
+              .addMethod(getRemoveByTimestampMethod())
               .addMethod(getStreamRemoveMethod())
               .addMethod(getMultiRemoveMethod())
               .build();

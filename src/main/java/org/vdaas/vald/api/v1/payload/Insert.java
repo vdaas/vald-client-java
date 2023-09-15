@@ -139,6 +139,7 @@ private static final long serialVersionUID = 0L;
               org.vdaas.vald.api.v1.payload.Insert.Request.class, org.vdaas.vald.api.v1.payload.Insert.Request.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VECTOR_FIELD_NUMBER = 1;
     private org.vdaas.vald.api.v1.payload.Object.Vector vector_;
     /**
@@ -151,7 +152,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVector() {
-      return vector_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -189,7 +190,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return config_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -229,10 +230,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (vector_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getVector());
       }
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getConfig());
       }
       getUnknownFields().writeTo(output);
@@ -244,11 +245,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (vector_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getVector());
       }
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getConfig());
       }
@@ -419,13 +420,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using org.vdaas.vald.api.v1.payload.Insert.Request.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getVectorFieldBuilder();
+          getConfigFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -474,16 +482,20 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(org.vdaas.vald.api.v1.payload.Insert.Request result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.vector_ = vectorBuilder_ == null
               ? vector_
               : vectorBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -679,8 +691,10 @@ private static final long serialVersionUID = 0L;
         } else {
           vectorBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (vector_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -834,8 +848,10 @@ private static final long serialVersionUID = 0L;
         } else {
           configBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (config_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1992,6 +2008,7 @@ private static final long serialVersionUID = 0L;
               org.vdaas.vald.api.v1.payload.Insert.ObjectRequest.class, org.vdaas.vald.api.v1.payload.Insert.ObjectRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int OBJECT_FIELD_NUMBER = 1;
     private org.vdaas.vald.api.v1.payload.Object.Blob object_;
     /**
@@ -2004,7 +2021,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasObject() {
-      return object_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -2042,7 +2059,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return config_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2080,7 +2097,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVectorizer() {
-      return vectorizer_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -2120,13 +2137,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (object_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getObject());
       }
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getConfig());
       }
-      if (vectorizer_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getVectorizer());
       }
       getUnknownFields().writeTo(output);
@@ -2138,15 +2155,15 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (object_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getObject());
       }
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getConfig());
       }
-      if (vectorizer_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getVectorizer());
       }
@@ -2326,13 +2343,21 @@ private static final long serialVersionUID = 0L;
 
       // Construct using org.vdaas.vald.api.v1.payload.Insert.ObjectRequest.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getObjectFieldBuilder();
+          getConfigFieldBuilder();
+          getVectorizerFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2386,21 +2411,26 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.object_ = objectBuilder_ == null
               ? object_
               : objectBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.vectorizer_ = vectorizerBuilder_ == null
               ? vectorizer_
               : vectorizerBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2606,8 +2636,10 @@ private static final long serialVersionUID = 0L;
         } else {
           objectBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (object_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2761,8 +2793,10 @@ private static final long serialVersionUID = 0L;
         } else {
           configBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (config_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2916,8 +2950,10 @@ private static final long serialVersionUID = 0L;
         } else {
           vectorizerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (vectorizer_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -4040,6 +4076,7 @@ private static final long serialVersionUID = 0L;
               org.vdaas.vald.api.v1.payload.Insert.Config.class, org.vdaas.vald.api.v1.payload.Insert.Config.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SKIP_STRICT_EXIST_CHECK_FIELD_NUMBER = 1;
     private boolean skipStrictExistCheck_ = false;
     /**
@@ -4067,7 +4104,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFilters() {
-      return filters_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -4125,7 +4162,7 @@ private static final long serialVersionUID = 0L;
       if (skipStrictExistCheck_ != false) {
         output.writeBool(1, skipStrictExistCheck_);
       }
-      if (filters_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getFilters());
       }
       if (timestamp_ != 0L) {
@@ -4144,7 +4181,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, skipStrictExistCheck_);
       }
-      if (filters_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFilters());
       }
@@ -4320,13 +4357,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using org.vdaas.vald.api.v1.payload.Insert.Config.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFiltersFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -4375,14 +4418,17 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.skipStrictExistCheck_ = skipStrictExistCheck_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.filters_ = filtersBuilder_ == null
               ? filters_
               : filtersBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.timestamp_ = timestamp_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4628,8 +4674,10 @@ private static final long serialVersionUID = 0L;
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (filters_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

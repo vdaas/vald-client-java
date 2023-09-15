@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.58.0)",
     comments = "Source: apis/proto/v1/vald/object.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ObjectGrpc {
 
   private ObjectGrpc() {}
 
-  public static final String SERVICE_NAME = "vald.v1.Object";
+  public static final java.lang.String SERVICE_NAME = "vald.v1.Object";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.ID,
@@ -111,6 +111,37 @@ public final class ObjectGrpc {
     return getStreamGetObjectMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.List.Request,
+      org.vdaas.vald.api.v1.payload.Object.List.Response> getStreamListObjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamListObject",
+      requestType = org.vdaas.vald.api.v1.payload.Object.List.Request.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.List.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.List.Request,
+      org.vdaas.vald.api.v1.payload.Object.List.Response> getStreamListObjectMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.List.Request, org.vdaas.vald.api.v1.payload.Object.List.Response> getStreamListObjectMethod;
+    if ((getStreamListObjectMethod = ObjectGrpc.getStreamListObjectMethod) == null) {
+      synchronized (ObjectGrpc.class) {
+        if ((getStreamListObjectMethod = ObjectGrpc.getStreamListObjectMethod) == null) {
+          ObjectGrpc.getStreamListObjectMethod = getStreamListObjectMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Object.List.Request, org.vdaas.vald.api.v1.payload.Object.List.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamListObject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.List.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.List.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new ObjectMethodDescriptorSupplier("StreamListObject"))
+              .build();
+        }
+      }
+    }
+    return getStreamListObjectMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -191,6 +222,16 @@ public final class ObjectGrpc {
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.StreamVector> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamGetObjectMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * A method to get all the vectors with server streaming
+     * </pre>
+     */
+    default void streamListObject(org.vdaas.vald.api.v1.payload.Object.List.Request request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.List.Response> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamListObjectMethod(), responseObserver);
+    }
   }
 
   /**
@@ -258,6 +299,17 @@ public final class ObjectGrpc {
       return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getStreamGetObjectMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     * <pre>
+     * A method to get all the vectors with server streaming
+     * </pre>
+     */
+    public void streamListObject(org.vdaas.vald.api.v1.payload.Object.List.Request request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.List.Response> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getStreamListObjectMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -297,6 +349,17 @@ public final class ObjectGrpc {
     public org.vdaas.vald.api.v1.payload.Object.Vector getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * A method to get all the vectors with server streaming
+     * </pre>
+     */
+    public java.util.Iterator<org.vdaas.vald.api.v1.payload.Object.List.Response> streamListObject(
+        org.vdaas.vald.api.v1.payload.Object.List.Request request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getStreamListObjectMethod(), getCallOptions(), request);
     }
   }
 
@@ -344,7 +407,8 @@ public final class ObjectGrpc {
 
   private static final int METHODID_EXISTS = 0;
   private static final int METHODID_GET_OBJECT = 1;
-  private static final int METHODID_STREAM_GET_OBJECT = 2;
+  private static final int METHODID_STREAM_LIST_OBJECT = 2;
+  private static final int METHODID_STREAM_GET_OBJECT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -370,6 +434,10 @@ public final class ObjectGrpc {
         case METHODID_GET_OBJECT:
           serviceImpl.getObject((org.vdaas.vald.api.v1.payload.Object.VectorRequest) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Vector>) responseObserver);
+          break;
+        case METHODID_STREAM_LIST_OBJECT:
+          serviceImpl.streamListObject((org.vdaas.vald.api.v1.payload.Object.List.Request) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.List.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -413,6 +481,13 @@ public final class ObjectGrpc {
               org.vdaas.vald.api.v1.payload.Object.VectorRequest,
               org.vdaas.vald.api.v1.payload.Object.StreamVector>(
                 service, METHODID_STREAM_GET_OBJECT)))
+        .addMethod(
+          getStreamListObjectMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Object.List.Request,
+              org.vdaas.vald.api.v1.payload.Object.List.Response>(
+                service, METHODID_STREAM_LIST_OBJECT)))
         .build();
   }
 
@@ -439,9 +514,9 @@ public final class ObjectGrpc {
   private static final class ObjectMethodDescriptorSupplier
       extends ObjectBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ObjectMethodDescriptorSupplier(String methodName) {
+    ObjectMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -464,6 +539,7 @@ public final class ObjectGrpc {
               .addMethod(getExistsMethod())
               .addMethod(getGetObjectMethod())
               .addMethod(getStreamGetObjectMethod())
+              .addMethod(getStreamListObjectMethod())
               .build();
         }
       }

@@ -139,6 +139,7 @@ private static final long serialVersionUID = 0L;
               org.vdaas.vald.api.v1.payload.Remove.Request.class, org.vdaas.vald.api.v1.payload.Remove.Request.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private org.vdaas.vald.api.v1.payload.Object.ID id_;
     /**
@@ -151,7 +152,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return id_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -189,7 +190,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConfig() {
-      return config_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -229,10 +230,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getId());
       }
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getConfig());
       }
       getUnknownFields().writeTo(output);
@@ -244,11 +245,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getId());
       }
-      if (config_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getConfig());
       }
@@ -419,13 +420,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using org.vdaas.vald.api.v1.payload.Remove.Request.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIdFieldBuilder();
+          getConfigFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -474,16 +482,20 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(org.vdaas.vald.api.v1.payload.Remove.Request result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = idBuilder_ == null
               ? id_
               : idBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.config_ = configBuilder_ == null
               ? config_
               : configBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -679,8 +691,10 @@ private static final long serialVersionUID = 0L;
         } else {
           idBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (id_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -834,8 +848,10 @@ private static final long serialVersionUID = 0L;
         } else {
           configBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (config_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1863,6 +1879,1694 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public org.vdaas.vald.api.v1.payload.Remove.MultiRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TimestampRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Remove.TimestampRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    java.util.List<org.vdaas.vald.api.v1.payload.Remove.Timestamp> 
+        getTimestampsList();
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    org.vdaas.vald.api.v1.payload.Remove.Timestamp getTimestamps(int index);
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    int getTimestampsCount();
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    java.util.List<? extends org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder> 
+        getTimestampsOrBuilderList();
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder getTimestampsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Represent the remove request based on timestamp.
+   * </pre>
+   *
+   * Protobuf type {@code payload.v1.Remove.TimestampRequest}
+   */
+  public static final class TimestampRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Remove.TimestampRequest)
+      TimestampRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TimestampRequest.newBuilder() to construct.
+    private TimestampRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TimestampRequest() {
+      timestamps_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TimestampRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_TimestampRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_TimestampRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.class, org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.Builder.class);
+    }
+
+    public static final int TIMESTAMPS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<org.vdaas.vald.api.v1.payload.Remove.Timestamp> timestamps_;
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<org.vdaas.vald.api.v1.payload.Remove.Timestamp> getTimestampsList() {
+      return timestamps_;
+    }
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder> 
+        getTimestampsOrBuilderList() {
+      return timestamps_;
+    }
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    @java.lang.Override
+    public int getTimestampsCount() {
+      return timestamps_.size();
+    }
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Remove.Timestamp getTimestamps(int index) {
+      return timestamps_.get(index);
+    }
+    /**
+     * <pre>
+     * Represent the multiple remove request contents based on timestamp.
+     * </pre>
+     *
+     * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder getTimestampsOrBuilder(
+        int index) {
+      return timestamps_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < timestamps_.size(); i++) {
+        output.writeMessage(1, timestamps_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < timestamps_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, timestamps_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Remove.TimestampRequest)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Remove.TimestampRequest other = (org.vdaas.vald.api.v1.payload.Remove.TimestampRequest) obj;
+
+      if (!getTimestampsList()
+          .equals(other.getTimestampsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTimestampsCount() > 0) {
+        hash = (37 * hash) + TIMESTAMPS_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestampsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represent the remove request based on timestamp.
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Remove.TimestampRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Remove.TimestampRequest)
+        org.vdaas.vald.api.v1.payload.Remove.TimestampRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_TimestampRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_TimestampRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.class, org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (timestampsBuilder_ == null) {
+          timestamps_ = java.util.Collections.emptyList();
+        } else {
+          timestamps_ = null;
+          timestampsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_TimestampRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Remove.TimestampRequest getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Remove.TimestampRequest build() {
+        org.vdaas.vald.api.v1.payload.Remove.TimestampRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Remove.TimestampRequest buildPartial() {
+        org.vdaas.vald.api.v1.payload.Remove.TimestampRequest result = new org.vdaas.vald.api.v1.payload.Remove.TimestampRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest result) {
+        if (timestampsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            timestamps_ = java.util.Collections.unmodifiableList(timestamps_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.timestamps_ = timestamps_;
+        } else {
+          result.timestamps_ = timestampsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Remove.TimestampRequest) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Remove.TimestampRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest other) {
+        if (other == org.vdaas.vald.api.v1.payload.Remove.TimestampRequest.getDefaultInstance()) return this;
+        if (timestampsBuilder_ == null) {
+          if (!other.timestamps_.isEmpty()) {
+            if (timestamps_.isEmpty()) {
+              timestamps_ = other.timestamps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTimestampsIsMutable();
+              timestamps_.addAll(other.timestamps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.timestamps_.isEmpty()) {
+            if (timestampsBuilder_.isEmpty()) {
+              timestampsBuilder_.dispose();
+              timestampsBuilder_ = null;
+              timestamps_ = other.timestamps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              timestampsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTimestampsFieldBuilder() : null;
+            } else {
+              timestampsBuilder_.addAllMessages(other.timestamps_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                org.vdaas.vald.api.v1.payload.Remove.Timestamp m =
+                    input.readMessage(
+                        org.vdaas.vald.api.v1.payload.Remove.Timestamp.parser(),
+                        extensionRegistry);
+                if (timestampsBuilder_ == null) {
+                  ensureTimestampsIsMutable();
+                  timestamps_.add(m);
+                } else {
+                  timestampsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<org.vdaas.vald.api.v1.payload.Remove.Timestamp> timestamps_ =
+        java.util.Collections.emptyList();
+      private void ensureTimestampsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          timestamps_ = new java.util.ArrayList<org.vdaas.vald.api.v1.payload.Remove.Timestamp>(timestamps_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Remove.Timestamp, org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder, org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder> timestampsBuilder_;
+
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public java.util.List<org.vdaas.vald.api.v1.payload.Remove.Timestamp> getTimestampsList() {
+        if (timestampsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(timestamps_);
+        } else {
+          return timestampsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public int getTimestampsCount() {
+        if (timestampsBuilder_ == null) {
+          return timestamps_.size();
+        } else {
+          return timestampsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp getTimestamps(int index) {
+        if (timestampsBuilder_ == null) {
+          return timestamps_.get(index);
+        } else {
+          return timestampsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder setTimestamps(
+          int index, org.vdaas.vald.api.v1.payload.Remove.Timestamp value) {
+        if (timestampsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTimestampsIsMutable();
+          timestamps_.set(index, value);
+          onChanged();
+        } else {
+          timestampsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder setTimestamps(
+          int index, org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder builderForValue) {
+        if (timestampsBuilder_ == null) {
+          ensureTimestampsIsMutable();
+          timestamps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          timestampsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder addTimestamps(org.vdaas.vald.api.v1.payload.Remove.Timestamp value) {
+        if (timestampsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTimestampsIsMutable();
+          timestamps_.add(value);
+          onChanged();
+        } else {
+          timestampsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder addTimestamps(
+          int index, org.vdaas.vald.api.v1.payload.Remove.Timestamp value) {
+        if (timestampsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTimestampsIsMutable();
+          timestamps_.add(index, value);
+          onChanged();
+        } else {
+          timestampsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder addTimestamps(
+          org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder builderForValue) {
+        if (timestampsBuilder_ == null) {
+          ensureTimestampsIsMutable();
+          timestamps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          timestampsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder addTimestamps(
+          int index, org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder builderForValue) {
+        if (timestampsBuilder_ == null) {
+          ensureTimestampsIsMutable();
+          timestamps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          timestampsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder addAllTimestamps(
+          java.lang.Iterable<? extends org.vdaas.vald.api.v1.payload.Remove.Timestamp> values) {
+        if (timestampsBuilder_ == null) {
+          ensureTimestampsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, timestamps_);
+          onChanged();
+        } else {
+          timestampsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder clearTimestamps() {
+        if (timestampsBuilder_ == null) {
+          timestamps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          timestampsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public Builder removeTimestamps(int index) {
+        if (timestampsBuilder_ == null) {
+          ensureTimestampsIsMutable();
+          timestamps_.remove(index);
+          onChanged();
+        } else {
+          timestampsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder getTimestampsBuilder(
+          int index) {
+        return getTimestampsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder getTimestampsOrBuilder(
+          int index) {
+        if (timestampsBuilder_ == null) {
+          return timestamps_.get(index);  } else {
+          return timestampsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public java.util.List<? extends org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder> 
+           getTimestampsOrBuilderList() {
+        if (timestampsBuilder_ != null) {
+          return timestampsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(timestamps_);
+        }
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder addTimestampsBuilder() {
+        return getTimestampsFieldBuilder().addBuilder(
+            org.vdaas.vald.api.v1.payload.Remove.Timestamp.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder addTimestampsBuilder(
+          int index) {
+        return getTimestampsFieldBuilder().addBuilder(
+            index, org.vdaas.vald.api.v1.payload.Remove.Timestamp.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Represent the multiple remove request contents based on timestamp.
+       * </pre>
+       *
+       * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
+       */
+      public java.util.List<org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder> 
+           getTimestampsBuilderList() {
+        return getTimestampsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Remove.Timestamp, org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder, org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder> 
+          getTimestampsFieldBuilder() {
+        if (timestampsBuilder_ == null) {
+          timestampsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.vdaas.vald.api.v1.payload.Remove.Timestamp, org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder, org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder>(
+                  timestamps_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          timestamps_ = null;
+        }
+        return timestampsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Remove.TimestampRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Remove.TimestampRequest)
+    private static final org.vdaas.vald.api.v1.payload.Remove.TimestampRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Remove.TimestampRequest();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.TimestampRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TimestampRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TimestampRequest>() {
+      @java.lang.Override
+      public TimestampRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TimestampRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TimestampRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Remove.TimestampRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TimestampOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Remove.Timestamp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The timestamp.
+     * </pre>
+     *
+     * <code>int64 timestamp = 1;</code>
+     * @return The timestamp.
+     */
+    long getTimestamp();
+
+    /**
+     * <pre>
+     * The conditional operator.
+     * </pre>
+     *
+     * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+     * @return The enum numeric value on the wire for operator.
+     */
+    int getOperatorValue();
+    /**
+     * <pre>
+     * The conditional operator.
+     * </pre>
+     *
+     * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+     * @return The operator.
+     */
+    org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator getOperator();
+  }
+  /**
+   * Protobuf type {@code payload.v1.Remove.Timestamp}
+   */
+  public static final class Timestamp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Remove.Timestamp)
+      TimestampOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Timestamp.newBuilder() to construct.
+    private Timestamp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Timestamp() {
+      operator_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Timestamp();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_Timestamp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_Timestamp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Remove.Timestamp.class, org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Operator is enum of each conditional operator.
+     * </pre>
+     *
+     * Protobuf enum {@code payload.v1.Remove.Timestamp.Operator}
+     */
+    public enum Operator
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>Eq = 0;</code>
+       */
+      Eq(0),
+      /**
+       * <code>Ne = 1;</code>
+       */
+      Ne(1),
+      /**
+       * <code>Ge = 2;</code>
+       */
+      Ge(2),
+      /**
+       * <code>Gt = 3;</code>
+       */
+      Gt(3),
+      /**
+       * <code>Le = 4;</code>
+       */
+      Le(4),
+      /**
+       * <code>Lt = 5;</code>
+       */
+      Lt(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>Eq = 0;</code>
+       */
+      public static final int Eq_VALUE = 0;
+      /**
+       * <code>Ne = 1;</code>
+       */
+      public static final int Ne_VALUE = 1;
+      /**
+       * <code>Ge = 2;</code>
+       */
+      public static final int Ge_VALUE = 2;
+      /**
+       * <code>Gt = 3;</code>
+       */
+      public static final int Gt_VALUE = 3;
+      /**
+       * <code>Le = 4;</code>
+       */
+      public static final int Le_VALUE = 4;
+      /**
+       * <code>Lt = 5;</code>
+       */
+      public static final int Lt_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Operator valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Operator forNumber(int value) {
+        switch (value) {
+          case 0: return Eq;
+          case 1: return Ne;
+          case 2: return Ge;
+          case 3: return Gt;
+          case 4: return Le;
+          case 5: return Lt;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Operator>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Operator> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Operator>() {
+              public Operator findValueByNumber(int number) {
+                return Operator.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.Remove.Timestamp.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Operator[] VALUES = values();
+
+      public static Operator valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Operator(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:payload.v1.Remove.Timestamp.Operator)
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 1;
+    private long timestamp_ = 0L;
+    /**
+     * <pre>
+     * The timestamp.
+     * </pre>
+     *
+     * <code>int64 timestamp = 1;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public long getTimestamp() {
+      return timestamp_;
+    }
+
+    public static final int OPERATOR_FIELD_NUMBER = 2;
+    private int operator_ = 0;
+    /**
+     * <pre>
+     * The conditional operator.
+     * </pre>
+     *
+     * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+     * @return The enum numeric value on the wire for operator.
+     */
+    @java.lang.Override public int getOperatorValue() {
+      return operator_;
+    }
+    /**
+     * <pre>
+     * The conditional operator.
+     * </pre>
+     *
+     * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+     * @return The operator.
+     */
+    @java.lang.Override public org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator getOperator() {
+      org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator result = org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.forNumber(operator_);
+      return result == null ? org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (timestamp_ != 0L) {
+        output.writeInt64(1, timestamp_);
+      }
+      if (operator_ != org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.Eq.getNumber()) {
+        output.writeEnum(2, operator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (timestamp_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, timestamp_);
+      }
+      if (operator_ != org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.Eq.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, operator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Remove.Timestamp)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Remove.Timestamp other = (org.vdaas.vald.api.v1.payload.Remove.Timestamp) obj;
+
+      if (getTimestamp()
+          != other.getTimestamp()) return false;
+      if (operator_ != other.operator_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimestamp());
+      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+      hash = (53 * hash) + operator_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Remove.Timestamp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.v1.Remove.Timestamp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Remove.Timestamp)
+        org.vdaas.vald.api.v1.payload.Remove.TimestampOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_Timestamp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_Timestamp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Remove.Timestamp.class, org.vdaas.vald.api.v1.payload.Remove.Timestamp.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Remove.Timestamp.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        timestamp_ = 0L;
+        operator_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Remove_Timestamp_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Remove.Timestamp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp build() {
+        org.vdaas.vald.api.v1.payload.Remove.Timestamp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp buildPartial() {
+        org.vdaas.vald.api.v1.payload.Remove.Timestamp result = new org.vdaas.vald.api.v1.payload.Remove.Timestamp(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Remove.Timestamp result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.operator_ = operator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Remove.Timestamp) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Remove.Timestamp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Remove.Timestamp other) {
+        if (other == org.vdaas.vald.api.v1.payload.Remove.Timestamp.getDefaultInstance()) return this;
+        if (other.getTimestamp() != 0L) {
+          setTimestamp(other.getTimestamp());
+        }
+        if (other.operator_ != 0) {
+          setOperatorValue(other.getOperatorValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                timestamp_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                operator_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long timestamp_ ;
+      /**
+       * <pre>
+       * The timestamp.
+       * </pre>
+       *
+       * <code>int64 timestamp = 1;</code>
+       * @return The timestamp.
+       */
+      @java.lang.Override
+      public long getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <pre>
+       * The timestamp.
+       * </pre>
+       *
+       * <code>int64 timestamp = 1;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(long value) {
+
+        timestamp_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp.
+       * </pre>
+       *
+       * <code>int64 timestamp = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        timestamp_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int operator_ = 0;
+      /**
+       * <pre>
+       * The conditional operator.
+       * </pre>
+       *
+       * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+       * @return The enum numeric value on the wire for operator.
+       */
+      @java.lang.Override public int getOperatorValue() {
+        return operator_;
+      }
+      /**
+       * <pre>
+       * The conditional operator.
+       * </pre>
+       *
+       * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+       * @param value The enum numeric value on the wire for operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorValue(int value) {
+        operator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The conditional operator.
+       * </pre>
+       *
+       * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+       * @return The operator.
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator getOperator() {
+        org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator result = org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.forNumber(operator_);
+        return result == null ? org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The conditional operator.
+       * </pre>
+       *
+       * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+       * @param value The operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperator(org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        operator_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The conditional operator.
+       * </pre>
+       *
+       * <code>.payload.v1.Remove.Timestamp.Operator operator = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperator() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        operator_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Remove.Timestamp)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Remove.Timestamp)
+    private static final org.vdaas.vald.api.v1.payload.Remove.Timestamp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Remove.Timestamp();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Remove.Timestamp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Timestamp>
+        PARSER = new com.google.protobuf.AbstractParser<Timestamp>() {
+      @java.lang.Override
+      public Timestamp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Timestamp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Timestamp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Remove.Timestamp getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

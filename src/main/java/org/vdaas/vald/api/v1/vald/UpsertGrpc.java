@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.58.0)",
     comments = "Source: apis/proto/v1/vald/upsert.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UpsertGrpc {
 
   private UpsertGrpc() {}
 
-  public static final String SERVICE_NAME = "vald.v1.Upsert";
+  public static final java.lang.String SERVICE_NAME = "vald.v1.Upsert";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Upsert.Request,
@@ -439,9 +439,9 @@ public final class UpsertGrpc {
   private static final class UpsertMethodDescriptorSupplier
       extends UpsertBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    UpsertMethodDescriptorSupplier(String methodName) {
+    UpsertMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
