@@ -2,7 +2,7 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/org.vdaas.vald/vald-client-java?style=flat-square)](https://search.maven.org/search?q=g:%22org.vdaas.vald%22%20AND%20a:%22vald-client-java%22)
 [![Vald version](https://img.shields.io/github/release/vdaas/vald.svg?style=flat-square)](https://github.com/vdaas/vald/releases/latest)
-[![java](https://oss.aoapps.com/ao-badges/java-17.svg)](https://docs.oracle.com/en/java/javase/17/)
+[![java](https://oss.aoapps.com/ao-badges/java-8.svg)](https://docs.oracle.com/en/java/javase/8/)
 
 A Java gRPC client library for [Vald](https://github.com/vdaas/vald).
 
