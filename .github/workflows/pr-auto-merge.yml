@@ -16,10 +16,11 @@ jobs:
 
   e2e:
     name: e2e
-    needs: rebase
+    needs:
+      - rebase
     uses: ./.github/workflows/_e2e_multi.yml
     with:
-      notify_slack_if_failed: false
+      notify_slack_if_failed: true
 
   merge_pr:
     name: Merge PR
