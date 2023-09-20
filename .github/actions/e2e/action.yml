@@ -1,6 +1,11 @@
 name: e2e
 description: e2e
 
+inputs:
+  java_version:
+    description: Java version to exeucte e2e
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -57,8 +62,7 @@ runs:
       run: |
         java -version
         kubectl port-forward statefulset/vald-agent-ngt 8081:8081 &
+        
         pid=$!
-
         ./gradlew test
-
         kill $pid
