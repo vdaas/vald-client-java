@@ -15,7 +15,6 @@ jobs:
         uses: cirrus-actions/rebase@1.8
 
   e2e:
-    name: e2e
     needs:
       - rebase
     uses: ./.github/workflows/_e2e_multi.yml
