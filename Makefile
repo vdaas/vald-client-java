@@ -26,6 +26,8 @@ VALD_SHA    = VALD_SHA
 VALD_CLIENT_JAVA_VERSION = version/VALD_CLIENT_JAVA_VERSION
 PROTOBUF_VERSION = version/PROTOBUF_VERSION
 GRPC_JAVA_VERSION = version/GRPC_JAVA_VERSION
+JAVA_LTS_LATEST_VERSTION = version/JAVA_VERSION_LTS_LATEST
+JAVA_LTS_STABLE_VERSTION = version/JAVA_VERSION_LTS_STABLE
 PROTO_DEPS_PATH = proto_deps
 
 PWD    := $(eval PWD := $(shell pwd))$(PWD)
@@ -130,6 +132,16 @@ vald/protobuf/version/print:
 ## print GRPC_JAVA_VERSION value
 vald/grpc/java/version/print:
 	@cat $(GRPC_JAVA_VERSION)
+
+.PHONY: vald/java/version/latest
+## print JAVA_LTS_LATEST_VERSTION value
+vald/java/version/latest:
+	@cat $(JAVA_LTS_LATEST_VERSTION)
+
+.PHONY: vald/java/version/stable
+## print JAVA_LTS_STABLE_VERSTION value
+vald/java/version/stable:
+	@cat $(JAVA_LTS_STABLE_VERSTION)
 
 .PHONY: vald/client/java/version/update
 ## update VALD_CLIENT_JAVA_VERSION value

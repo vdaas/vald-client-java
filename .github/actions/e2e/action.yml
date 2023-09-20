@@ -1,0 +1,68 @@
+name: e2e
+description: e2e
+
+inputs:
+  java_version:
+    description: Java version to exeucte e2e
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '${{ inputs.java_version }}'
+    - name: Build protobuf
+      shell: bash
+      run: |
+        export GOPATH=$HOME/go
+        export PATH=$HOME/grpc-java:$PATH
+        make all
+    - uses: rinx/setup-k3d@v0.0.4
+      with:
+        version: latest
+        name: vald
+        agents: 1
+    - name: Check k3d
+      shell: bash
+      run: |
+        kubectl cluster-info
+    - uses: azure/setup-helm@v3
+    - name: Helm version
+      shell: bash
+      run: |
+        helm version
+    - name: Deploy Vald
+      shell: bash
+      run: |
+        helm repo add vald https://vald.vdaas.org/charts
+        helm install \
+          --values ${VALUES} \
+          --set defaults.image.tag=nightly \
+          --set agent.ngt.dimension=300 \
+          --set agent.ngt.auto_index_length=2 \
+          --set agent.minReplicas=1 \
+          --set gateway.lb.enabled=false \
+          --set discoverer.enabled=false \
+          --set manager.index.enabled=false \
+          --generate-name vald/vald
+        sleep 3
+        kubectl wait --for=condition=ready pod -l app=vald-agent-ngt --timeout=3m
+        kubectl get pods
+      env:
+        VALUES: https://raw.githubusercontent.com/vdaas/vald/main/.github/helm/values/values-lb.yaml
+    - name: Download data
+      shell: bash
+      run: |
+        curl -OL https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json
+    - name: Run tests
+      shell: bash
+      run: |
+        java -version
+        kubectl port-forward statefulset/vald-agent-ngt 8081:8081 &
+        
+        pid=$!
+        ./gradlew test
+        kill $pid
