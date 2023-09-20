@@ -10,8 +10,8 @@ jobs:
       - name: Print java version
         id: java_version
         run: |
-          latest_java_version = `make vald/java/version/latest`
-          stable_java_version = `make vald/java/version/stable`
+          latest_java_version=`make vald/java/version/latest`
+          stable_java_version=`make vald/java/version/stable`
           echo "LATEST_JAVA_VERSION=${latest_java_version}" >> $GITHUB_OUTPUT
           echo "STABLE_JAVA_VERSION=${stable_java_version}" >> $GITHUB_OUTPUT
       - name: e2e_latest
