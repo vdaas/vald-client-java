@@ -11,7 +11,25 @@ on:
 
 jobs:
   e2e:
-    uses: ./.github/workflows/_e2e.yml
+    runs-on: ubuntu
+    steps:
+      - name: Print java version
+        id: java_version
+        run: |
+          latest_java_version = `make vald/java/version/latest`
+          stable_java_version = `make vald/java/version/stable`
+          echo "LATEST_JAVA_VERSION=${latest_java_version}" >> $GITHUB_OUTPUT
+          echo "STABLE_JAVA_VERSION=${stable_java_version}" >> $GITHUB_OUTPUT
+      - name: e2e_latest
+        uses: ./.github/workflows/_e2e.yml
+        with:
+          notify_slack_if_failed: false
+          java_version: ${{ steps.java_version.outputs.LATEST_JAVA_VERSION }}
+      - name: e2e_stable
+        uses: ./.github/workflows/_e2e.yml
+        with:
+          notify_slack_if_failed: false
+          java_version: ${{ steps.java_version.outputs.STABLE_JAVA_VERSION }}
 
   release:
     if: startsWith( github.ref, 'refs/tags/')
