@@ -28,7 +28,6 @@ PROTOBUF_VERSION = version/PROTOBUF_VERSION
 GRPC_JAVA_VERSION = version/GRPC_JAVA_VERSION
 JAVA_LTS_LATEST_VERSTION = version/JAVA_VERSION_LTS_LATEST
 JAVA_LTS_STABLE_VERSTION = version/JAVA_VERSION_LTS_STABLE
-KOTLIN_VERSTION = version/KOTLIN_VERSION
 PROTO_DEPS_PATH = proto_deps
 
 PWD    := $(eval PWD := $(shell pwd))$(PWD)
@@ -143,11 +142,6 @@ vald/java/version/latest:
 ## print JAVA_LTS_STABLE_VERSTION value
 vald/java/version/stable:
 	@cat $(JAVA_LTS_STABLE_VERSTION)
-
-.PHONY: vald/kotlin/version
-## print KOTLIN_VERSTION value
-vald/kotlin/version:
-	@cat $(KOTLIN_VERSTION)
 
 .PHONY: vald/client/java/version/update
 ## update VALD_CLIENT_JAVA_VERSION value
