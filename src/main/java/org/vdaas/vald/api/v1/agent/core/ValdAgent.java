@@ -26,7 +26,7 @@ public final class ValdAgent {
       "\n$apis/proto/v1/agent/core/agent.proto\022\007" +
       "core.v1\032#apis/proto/v1/payload/payload.p" +
       "roto\032=github.com/googleapis/googleapis/g" +
-      "oogle/api/annotations.proto2\362\002\n\005Agent\022_\n" +
+      "oogle/api/annotations.proto2\336\003\n\005Agent\022_\n" +
       "\013CreateIndex\022&.payload.v1.Control.Create" +
       "IndexRequest\032\021.payload.v1.Empty\"\025\202\323\344\223\002\017\022" +
       "\r/index/create\022F\n\tSaveIndex\022\021.payload.v1" +
@@ -36,9 +36,12 @@ public final class ValdAgent {
       "1.Empty\"\034\202\323\344\223\002\026\022\024/index/createandsave\022Q\n" +
       "\tIndexInfo\022\021.payload.v1.Empty\032\034.payload." +
       "v1.Info.Index.Count\"\023\202\323\344\223\002\r\022\013/index/info" +
-      "B^\n org.vdaas.vald.api.v1.agent.coreB\tVa" +
-      "ldAgentP\001Z-github.com/vdaas/vald/apis/gr" +
-      "pc/v1/agent/coreb\006proto3"
+      "\022j\n\014GetTimestamp\022&.payload.v1.Object.Get" +
+      "TimestampRequest\032\034.payload.v1.Object.Tim" +
+      "estamp\"\024\202\323\344\223\002\016\022\014/object/metaB^\n org.vdaa" +
+      "s.vald.api.v1.agent.coreB\tValdAgentP\001Z-g" +
+      "ithub.com/vdaas/vald/apis/grpc/v1/agent/" +
+      "coreb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

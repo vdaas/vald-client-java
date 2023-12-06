@@ -1890,7 +1890,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -1899,7 +1899,7 @@ private static final long serialVersionUID = 0L;
         getTimestampsList();
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -1907,7 +1907,7 @@ private static final long serialVersionUID = 0L;
     org.vdaas.vald.api.v1.payload.Remove.Timestamp getTimestamps(int index);
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -1915,7 +1915,7 @@ private static final long serialVersionUID = 0L;
     int getTimestampsCount();
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -1924,7 +1924,7 @@ private static final long serialVersionUID = 0L;
         getTimestampsOrBuilderList();
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -1977,7 +1977,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<org.vdaas.vald.api.v1.payload.Remove.Timestamp> timestamps_;
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -1988,7 +1988,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2000,7 +2000,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2011,7 +2011,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2022,7 +2022,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent the multiple remove request contents based on timestamp.
+     * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
      * </pre>
      *
      * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2425,7 +2425,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2439,7 +2439,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2453,7 +2453,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2467,7 +2467,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2488,7 +2488,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2506,7 +2506,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2526,7 +2526,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2547,7 +2547,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2565,7 +2565,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2583,7 +2583,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2602,7 +2602,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2619,7 +2619,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2636,7 +2636,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2647,7 +2647,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2661,7 +2661,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2676,7 +2676,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2687,7 +2687,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2699,7 +2699,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the multiple remove request contents based on timestamp.
+       * The timestamp comparison list. If more than one is specified, the `AND` search is applied.
        * </pre>
        *
        * <code>repeated .payload.v1.Remove.Timestamp timestamps = 1;</code>
@@ -2820,6 +2820,10 @@ private static final long serialVersionUID = 0L;
     org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator getOperator();
   }
   /**
+   * <pre>
+   * Represent the timestamp comparison.
+   * </pre>
+   *
    * Protobuf type {@code payload.v1.Remove.Timestamp}
    */
   public static final class Timestamp extends
@@ -2865,26 +2869,50 @@ private static final long serialVersionUID = 0L;
     public enum Operator
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * The timestamp is equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Eq = 0;</code>
        */
       Eq(0),
       /**
+       * <pre>
+       * The timestamp is not equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Ne = 1;</code>
        */
       Ne(1),
       /**
+       * <pre>
+       * The timestamp is greater than or equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Ge = 2;</code>
        */
       Ge(2),
       /**
+       * <pre>
+       * The timestamp is greater than the specified value in the request.
+       * </pre>
+       *
        * <code>Gt = 3;</code>
        */
       Gt(3),
       /**
+       * <pre>
+       * The timestamp is less than or equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Le = 4;</code>
        */
       Le(4),
       /**
+       * <pre>
+       * The timestamp is less than the specified value in the request.
+       * </pre>
+       *
        * <code>Lt = 5;</code>
        */
       Lt(5),
@@ -2892,26 +2920,50 @@ private static final long serialVersionUID = 0L;
       ;
 
       /**
+       * <pre>
+       * The timestamp is equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Eq = 0;</code>
        */
       public static final int Eq_VALUE = 0;
       /**
+       * <pre>
+       * The timestamp is not equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Ne = 1;</code>
        */
       public static final int Ne_VALUE = 1;
       /**
+       * <pre>
+       * The timestamp is greater than or equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Ge = 2;</code>
        */
       public static final int Ge_VALUE = 2;
       /**
+       * <pre>
+       * The timestamp is greater than the specified value in the request.
+       * </pre>
+       *
        * <code>Gt = 3;</code>
        */
       public static final int Gt_VALUE = 3;
       /**
+       * <pre>
+       * The timestamp is less than or equal to the specified value in the request.
+       * </pre>
+       *
        * <code>Le = 4;</code>
        */
       public static final int Le_VALUE = 4;
       /**
+       * <pre>
+       * The timestamp is less than the specified value in the request.
+       * </pre>
+       *
        * <code>Lt = 5;</code>
        */
       public static final int Lt_VALUE = 5;
@@ -3213,6 +3265,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Represent the timestamp comparison.
+     * </pre>
+     *
      * Protobuf type {@code payload.v1.Remove.Timestamp}
      */
     public static final class Builder extends

@@ -142,6 +142,37 @@ public final class AgentGrpc {
     return getIndexInfoMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Timestamp> getGetTimestampMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTimestamp",
+      requestType = org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.Timestamp.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Timestamp> getGetTimestampMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest, org.vdaas.vald.api.v1.payload.Object.Timestamp> getGetTimestampMethod;
+    if ((getGetTimestampMethod = AgentGrpc.getGetTimestampMethod) == null) {
+      synchronized (AgentGrpc.class) {
+        if ((getGetTimestampMethod = AgentGrpc.getGetTimestampMethod) == null) {
+          AgentGrpc.getGetTimestampMethod = getGetTimestampMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest, org.vdaas.vald.api.v1.payload.Object.Timestamp>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTimestamp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.Timestamp.getDefaultInstance()))
+              .setSchemaDescriptor(new AgentMethodDescriptorSupplier("GetTimestamp"))
+              .build();
+        }
+      }
+    }
+    return getGetTimestampMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -232,6 +263,16 @@ public final class AgentGrpc {
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Count> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIndexInfoMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    default void getTimestamp(org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Timestamp> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTimestampMethod(), responseObserver);
+    }
   }
 
   /**
@@ -310,6 +351,17 @@ public final class AgentGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    public void getTimestamp(org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Timestamp> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTimestampMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -369,6 +421,16 @@ public final class AgentGrpc {
     public org.vdaas.vald.api.v1.payload.Info.Index.Count indexInfo(org.vdaas.vald.api.v1.payload.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIndexInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Timestamp getTimestamp(org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTimestampMethod(), getCallOptions(), request);
     }
   }
 
@@ -434,12 +496,24 @@ public final class AgentGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIndexInfoMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Timestamp> getTimestamp(
+        org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTimestampMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_INDEX = 0;
   private static final int METHODID_SAVE_INDEX = 1;
   private static final int METHODID_CREATE_AND_SAVE_INDEX = 2;
   private static final int METHODID_INDEX_INFO = 3;
+  private static final int METHODID_GET_TIMESTAMP = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -473,6 +547,10 @@ public final class AgentGrpc {
         case METHODID_INDEX_INFO:
           serviceImpl.indexInfo((org.vdaas.vald.api.v1.payload.Empty) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Count>) responseObserver);
+          break;
+        case METHODID_GET_TIMESTAMP:
+          serviceImpl.getTimestamp((org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Timestamp>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -520,6 +598,13 @@ public final class AgentGrpc {
               org.vdaas.vald.api.v1.payload.Empty,
               org.vdaas.vald.api.v1.payload.Info.Index.Count>(
                 service, METHODID_INDEX_INFO)))
+        .addMethod(
+          getGetTimestampMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest,
+              org.vdaas.vald.api.v1.payload.Object.Timestamp>(
+                service, METHODID_GET_TIMESTAMP)))
         .build();
   }
 
@@ -572,6 +657,7 @@ public final class AgentGrpc {
               .addMethod(getSaveIndexMethod())
               .addMethod(getCreateAndSaveIndexMethod())
               .addMethod(getIndexInfoMethod())
+              .addMethod(getGetTimestampMethod())
               .build();
         }
       }
