@@ -1,0 +1,6 @@
+version: v1
+plugins:
+  - plugin: buf.build/grpc/java
+    out: main/java
+  - plugin: buf.build/protocolbuffers/java
+    out: main/java
