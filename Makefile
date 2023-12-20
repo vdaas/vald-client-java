@@ -28,7 +28,6 @@ PROTOBUF_VERSION = version/PROTOBUF_VERSION
 GRPC_JAVA_VERSION = version/GRPC_JAVA_VERSION
 JAVA_LTS_LATEST_VERSTION = version/JAVA_VERSION_LTS_LATEST
 JAVA_LTS_STABLE_VERSTION = version/JAVA_VERSION_LTS_STABLE
-PROTO_DEPS_PATH = proto_deps
 
 PWD    := $(eval PWD := $(shell pwd))$(PWD)
 
@@ -79,27 +78,23 @@ help:
 
 .PHONY: clear
 ## clear all dependency files
-clear:
+clear: clean
 	rm -rf $(JAVA_ROOT)
-	rm -rf $(VALD_DIR)
-	rm -rf $(PROTO_DEPS_PATH)
-	rm -rf build
-	./gradlew clean
 
 .PHONY: clean
 ## clean temp files
 clean:
 	rm -rf $(VALD_DIR)
-	rm -rf $(PROTO_DEPS_PATH)
 	rm -rf build
 	./gradlew clean
 
 .PHONY: proto
 ## build proto
-proto: vald proto/deps $(JAVA_ROOT)
+proto: vald $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
-	./gradlew generateProto
-	cp -r build/generated/source/proto/main src
+	echo 'build:\n  excludes: [v1/agent/sidecar, v1/discoverer, v1/manager]' >> $(PROTO_ROOT)/buf.yaml
+	./gradlew bufGenerate
+	cp -r build/bufbuild/generated/main src
 
 $(JAVA_ROOT):
 	$(call mkdir, $@)
@@ -185,28 +180,3 @@ vald/update: \
 	vald/client/java/version/update \
 	vald/protobuf/version/update \
 	vald/grpc/java/version/update
-
-.PHONY: proto/deps
-## install proto deps
-proto/deps: \
-	$(PROTO_DEPS_PATH)/github.com/googleapis/googleapis \
-	$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate \
-	$(PROTO_DEPS_PATH)/github.com/planetscale/vtprotobuf
-
-$(PROTO_DEPS_PATH)/github.com/googleapis/googleapis:
-	git clone \
-		--depth 1 \
-		https://github.com/googleapis/googleapis \
-		$(PROTO_DEPS_PATH)/github.com/googleapis/googleapis
-
-$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate:
-	git clone \
-		--depth 1 \
-		https://github.com/envoyproxy/protoc-gen-validate \
-		$(PROTO_DEPS_PATH)/github.com/envoyproxy/protoc-gen-validate
-
-$(PROTO_DEPS_PATH)/github.com/planetscale/vtprotobuf:
-	git clone \
-		--depth 1 \
-		https://github.com/planetscale/vtprotobuf \
-		$(PROTO_DEPS_PATH)/github.com/planetscale/vtprotobuf
