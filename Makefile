@@ -92,8 +92,6 @@ clean:
 ## build proto
 proto: vald $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
-	sed -i '/lint:/a \  ignore:\n    - v1' $(PROTO_ROOT)/buf.yaml
-	echo 'build:\n  excludes: [v1/agent/sidecar, v1/discoverer, v1/manager]' >> $(PROTO_ROOT)/buf.yaml
 	./gradlew bufGenerate
 	cp -r build/bufbuild/generated/main src
 
@@ -103,6 +101,8 @@ $(JAVA_ROOT):
 
 $(VALD_DIR):
 	git clone --depth 1 https://$(VALDREPO) $(VALD_DIR)
+	sed -i '/lint:/a \  ignore: [v1]' $(PROTO_ROOT)/buf.yaml
+	echo 'build:\n  excludes: [v1/agent/sidecar, v1/discoverer, v1/manager]' >> $(PROTO_ROOT)/buf.yaml
 
 .PHONY: vald/sha/print
 ## print VALD_SHA value
