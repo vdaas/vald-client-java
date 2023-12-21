@@ -4,10 +4,10 @@ on:
     branches:
       - main
     tags:
-      - '*.*.*'
-      - 'v*.*.*'
-      - '*.*.*-*'
-      - 'v*.*.*-*'
+      - "*.*.*"
+      - "v*.*.*"
+      - "*.*.*-*"
+      - "v*.*.*-*"
 
 jobs:
   e2e:
@@ -69,6 +69,7 @@ jobs:
       - name: Publish
         run: |
           ./gradlew clean
+          make vald
           ./gradlew build -x test --stacktrace
           ./gradlew publish -Prelease --stacktrace
           sleep 120
