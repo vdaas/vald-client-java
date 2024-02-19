@@ -6,45 +6,45 @@ package org.vdaas.vald.api.v1.payload;
 
 /**
  * <pre>
- * Filter related messages.
+ * Mirror related messages.
  * </pre>
  *
- * Protobuf type {@code payload.v1.Filter}
+ * Protobuf type {@code payload.v1.Mirror}
  */
-public final class Filter extends
+public final class Mirror extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:payload.v1.Filter)
-    FilterOrBuilder {
+    // @@protoc_insertion_point(message_implements:payload.v1.Mirror)
+    MirrorOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Filter.newBuilder() to construct.
-  private Filter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use Mirror.newBuilder() to construct.
+  private Mirror(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Filter() {
+  private Mirror() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Filter();
+    return new Mirror();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_descriptor;
+    return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_fieldAccessorTable
+    return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.vdaas.vald.api.v1.payload.Filter.class, org.vdaas.vald.api.v1.payload.Filter.Builder.class);
+            org.vdaas.vald.api.v1.payload.Mirror.class, org.vdaas.vald.api.v1.payload.Mirror.Builder.class);
   }
 
   public interface TargetOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:payload.v1.Filter.Target)
+      // @@protoc_insertion_point(interface_extends:payload.v1.Mirror.Target)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -79,14 +79,14 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represent the target filter server.
+   * Represent server information.
    * </pre>
    *
-   * Protobuf type {@code payload.v1.Filter.Target}
+   * Protobuf type {@code payload.v1.Mirror.Target}
    */
   public static final class Target extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:payload.v1.Filter.Target)
+      // @@protoc_insertion_point(message_implements:payload.v1.Mirror.Target)
       TargetOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Target.newBuilder() to construct.
@@ -106,15 +106,15 @@ private static final long serialVersionUID = 0L;
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Target_descriptor;
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Target_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Target_fieldAccessorTable
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Target_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.vdaas.vald.api.v1.payload.Filter.Target.class, org.vdaas.vald.api.v1.payload.Filter.Target.Builder.class);
+              org.vdaas.vald.api.v1.payload.Mirror.Target.class, org.vdaas.vald.api.v1.payload.Mirror.Target.Builder.class);
     }
 
     public static final int HOST_FIELD_NUMBER = 1;
@@ -225,10 +225,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Filter.Target)) {
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Mirror.Target)) {
         return super.equals(obj);
       }
-      org.vdaas.vald.api.v1.payload.Filter.Target other = (org.vdaas.vald.api.v1.payload.Filter.Target) obj;
+      org.vdaas.vald.api.v1.payload.Mirror.Target other = (org.vdaas.vald.api.v1.payload.Mirror.Target) obj;
 
       if (!getHost()
           .equals(other.getHost())) return false;
@@ -254,44 +254,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(byte[] data)
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(java.io.InputStream input)
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -299,26 +299,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseDelimitedFrom(java.io.InputStream input)
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseDelimitedFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Target parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Filter.Target prototype) {
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Mirror.Target prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -348,29 +348,29 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent the target filter server.
+     * Represent server information.
      * </pre>
      *
-     * Protobuf type {@code payload.v1.Filter.Target}
+     * Protobuf type {@code payload.v1.Mirror.Target}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:payload.v1.Filter.Target)
-        org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder {
+        // @@protoc_insertion_point(builder_implements:payload.v1.Mirror.Target)
+        org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Target_descriptor;
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Target_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Target_fieldAccessorTable
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Target_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.vdaas.vald.api.v1.payload.Filter.Target.class, org.vdaas.vald.api.v1.payload.Filter.Target.Builder.class);
+                org.vdaas.vald.api.v1.payload.Mirror.Target.class, org.vdaas.vald.api.v1.payload.Mirror.Target.Builder.class);
       }
 
-      // Construct using org.vdaas.vald.api.v1.payload.Filter.Target.newBuilder()
+      // Construct using org.vdaas.vald.api.v1.payload.Mirror.Target.newBuilder()
       private Builder() {
 
       }
@@ -392,17 +392,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Target_descriptor;
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Target_descriptor;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Filter.Target getDefaultInstanceForType() {
-        return org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance();
+      public org.vdaas.vald.api.v1.payload.Mirror.Target getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Mirror.Target.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Filter.Target build() {
-        org.vdaas.vald.api.v1.payload.Filter.Target result = buildPartial();
+      public org.vdaas.vald.api.v1.payload.Mirror.Target build() {
+        org.vdaas.vald.api.v1.payload.Mirror.Target result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -410,14 +410,14 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Filter.Target buildPartial() {
-        org.vdaas.vald.api.v1.payload.Filter.Target result = new org.vdaas.vald.api.v1.payload.Filter.Target(this);
+      public org.vdaas.vald.api.v1.payload.Mirror.Target buildPartial() {
+        org.vdaas.vald.api.v1.payload.Mirror.Target result = new org.vdaas.vald.api.v1.payload.Mirror.Target(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.vdaas.vald.api.v1.payload.Filter.Target result) {
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Mirror.Target result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.host_ = host_;
@@ -461,16 +461,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.vdaas.vald.api.v1.payload.Filter.Target) {
-          return mergeFrom((org.vdaas.vald.api.v1.payload.Filter.Target)other);
+        if (other instanceof org.vdaas.vald.api.v1.payload.Mirror.Target) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Mirror.Target)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Filter.Target other) {
-        if (other == org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Mirror.Target other) {
+        if (other == org.vdaas.vald.api.v1.payload.Mirror.Target.getDefaultInstance()) return this;
         if (!other.getHost().isEmpty()) {
           host_ = other.host_;
           bitField0_ |= 0x00000001;
@@ -680,16 +680,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:payload.v1.Filter.Target)
+      // @@protoc_insertion_point(builder_scope:payload.v1.Mirror.Target)
     }
 
-    // @@protoc_insertion_point(class_scope:payload.v1.Filter.Target)
-    private static final org.vdaas.vald.api.v1.payload.Filter.Target DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:payload.v1.Mirror.Target)
+    private static final org.vdaas.vald.api.v1.payload.Mirror.Target DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Filter.Target();
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Mirror.Target();
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Target getDefaultInstance() {
+    public static org.vdaas.vald.api.v1.payload.Mirror.Target getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -725,77 +725,77 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Filter.Target getDefaultInstanceForType() {
+    public org.vdaas.vald.api.v1.payload.Mirror.Target getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ConfigOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:payload.v1.Filter.Config)
+  public interface TargetsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Mirror.Targets)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
-    java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> 
+    java.util.List<org.vdaas.vald.api.v1.payload.Mirror.Target> 
         getTargetsList();
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
-    org.vdaas.vald.api.v1.payload.Filter.Target getTargets(int index);
+    org.vdaas.vald.api.v1.payload.Mirror.Target getTargets(int index);
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
     int getTargetsCount();
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
-    java.util.List<? extends org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+    java.util.List<? extends org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder> 
         getTargetsOrBuilderList();
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
-    org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getTargetsOrBuilder(
+    org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder getTargetsOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * Represent filter configuration.
+   * Represent the multiple Target message.
    * </pre>
    *
-   * Protobuf type {@code payload.v1.Filter.Config}
+   * Protobuf type {@code payload.v1.Mirror.Targets}
    */
-  public static final class Config extends
+  public static final class Targets extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:payload.v1.Filter.Config)
-      ConfigOrBuilder {
+      // @@protoc_insertion_point(message_implements:payload.v1.Mirror.Targets)
+      TargetsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Config.newBuilder() to construct.
-    private Config(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Targets.newBuilder() to construct.
+    private Targets(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Config() {
+    private Targets() {
       targets_ = java.util.Collections.emptyList();
     }
 
@@ -803,54 +803,54 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new Config();
+      return new Targets();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Config_descriptor;
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Targets_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Config_fieldAccessorTable
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Targets_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.vdaas.vald.api.v1.payload.Filter.Config.class, org.vdaas.vald.api.v1.payload.Filter.Config.Builder.class);
+              org.vdaas.vald.api.v1.payload.Mirror.Targets.class, org.vdaas.vald.api.v1.payload.Mirror.Targets.Builder.class);
     }
 
     public static final int TARGETS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> targets_;
+    private java.util.List<org.vdaas.vald.api.v1.payload.Mirror.Target> targets_;
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
-    public java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> getTargetsList() {
+    public java.util.List<org.vdaas.vald.api.v1.payload.Mirror.Target> getTargetsList() {
       return targets_;
     }
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+    public java.util.List<? extends org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder> 
         getTargetsOrBuilderList() {
       return targets_;
     }
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
     public int getTargetsCount() {
@@ -858,24 +858,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Filter.Target getTargets(int index) {
+    public org.vdaas.vald.api.v1.payload.Mirror.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
      * <pre>
-     * Represent the filter target configuration.
+     * The multiple target information.
      * </pre>
      *
-     * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+     * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
      */
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getTargetsOrBuilder(
+    public org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder getTargetsOrBuilder(
         int index) {
       return targets_.get(index);
     }
@@ -920,10 +920,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Filter.Config)) {
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Mirror.Targets)) {
         return super.equals(obj);
       }
-      org.vdaas.vald.api.v1.payload.Filter.Config other = (org.vdaas.vald.api.v1.payload.Filter.Config) obj;
+      org.vdaas.vald.api.v1.payload.Mirror.Targets other = (org.vdaas.vald.api.v1.payload.Mirror.Targets) obj;
 
       if (!getTargetsList()
           .equals(other.getTargetsList())) return false;
@@ -947,44 +947,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(byte[] data)
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(java.io.InputStream input)
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -992,26 +992,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseDelimitedFrom(java.io.InputStream input)
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseDelimitedFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.api.v1.payload.Filter.Config parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Filter.Config prototype) {
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Mirror.Targets prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1041,29 +1041,29 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent filter configuration.
+     * Represent the multiple Target message.
      * </pre>
      *
-     * Protobuf type {@code payload.v1.Filter.Config}
+     * Protobuf type {@code payload.v1.Mirror.Targets}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:payload.v1.Filter.Config)
-        org.vdaas.vald.api.v1.payload.Filter.ConfigOrBuilder {
+        // @@protoc_insertion_point(builder_implements:payload.v1.Mirror.Targets)
+        org.vdaas.vald.api.v1.payload.Mirror.TargetsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Config_descriptor;
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Targets_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Config_fieldAccessorTable
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Targets_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.vdaas.vald.api.v1.payload.Filter.Config.class, org.vdaas.vald.api.v1.payload.Filter.Config.Builder.class);
+                org.vdaas.vald.api.v1.payload.Mirror.Targets.class, org.vdaas.vald.api.v1.payload.Mirror.Targets.Builder.class);
       }
 
-      // Construct using org.vdaas.vald.api.v1.payload.Filter.Config.newBuilder()
+      // Construct using org.vdaas.vald.api.v1.payload.Mirror.Targets.newBuilder()
       private Builder() {
 
       }
@@ -1090,17 +1090,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_Config_descriptor;
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_Targets_descriptor;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Filter.Config getDefaultInstanceForType() {
-        return org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance();
+      public org.vdaas.vald.api.v1.payload.Mirror.Targets getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Mirror.Targets.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Filter.Config build() {
-        org.vdaas.vald.api.v1.payload.Filter.Config result = buildPartial();
+      public org.vdaas.vald.api.v1.payload.Mirror.Targets build() {
+        org.vdaas.vald.api.v1.payload.Mirror.Targets result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1108,15 +1108,15 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Filter.Config buildPartial() {
-        org.vdaas.vald.api.v1.payload.Filter.Config result = new org.vdaas.vald.api.v1.payload.Filter.Config(this);
+      public org.vdaas.vald.api.v1.payload.Mirror.Targets buildPartial() {
+        org.vdaas.vald.api.v1.payload.Mirror.Targets result = new org.vdaas.vald.api.v1.payload.Mirror.Targets(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(org.vdaas.vald.api.v1.payload.Filter.Config result) {
+      private void buildPartialRepeatedFields(org.vdaas.vald.api.v1.payload.Mirror.Targets result) {
         if (targetsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             targets_ = java.util.Collections.unmodifiableList(targets_);
@@ -1128,7 +1128,7 @@ private static final long serialVersionUID = 0L;
         }
       }
 
-      private void buildPartial0(org.vdaas.vald.api.v1.payload.Filter.Config result) {
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Mirror.Targets result) {
         int from_bitField0_ = bitField0_;
       }
 
@@ -1166,16 +1166,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.vdaas.vald.api.v1.payload.Filter.Config) {
-          return mergeFrom((org.vdaas.vald.api.v1.payload.Filter.Config)other);
+        if (other instanceof org.vdaas.vald.api.v1.payload.Mirror.Targets) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Mirror.Targets)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Filter.Config other) {
-        if (other == org.vdaas.vald.api.v1.payload.Filter.Config.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Mirror.Targets other) {
+        if (other == org.vdaas.vald.api.v1.payload.Mirror.Targets.getDefaultInstance()) return this;
         if (targetsBuilder_ == null) {
           if (!other.targets_.isEmpty()) {
             if (targets_.isEmpty()) {
@@ -1229,9 +1229,9 @@ private static final long serialVersionUID = 0L;
                 done = true;
                 break;
               case 10: {
-                org.vdaas.vald.api.v1.payload.Filter.Target m =
+                org.vdaas.vald.api.v1.payload.Mirror.Target m =
                     input.readMessage(
-                        org.vdaas.vald.api.v1.payload.Filter.Target.parser(),
+                        org.vdaas.vald.api.v1.payload.Mirror.Target.parser(),
                         extensionRegistry);
                 if (targetsBuilder_ == null) {
                   ensureTargetsIsMutable();
@@ -1258,26 +1258,26 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> targets_ =
+      private java.util.List<org.vdaas.vald.api.v1.payload.Mirror.Target> targets_ =
         java.util.Collections.emptyList();
       private void ensureTargetsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          targets_ = new java.util.ArrayList<org.vdaas.vald.api.v1.payload.Filter.Target>(targets_);
+          targets_ = new java.util.ArrayList<org.vdaas.vald.api.v1.payload.Mirror.Target>(targets_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.vdaas.vald.api.v1.payload.Filter.Target, org.vdaas.vald.api.v1.payload.Filter.Target.Builder, org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> targetsBuilder_;
+          org.vdaas.vald.api.v1.payload.Mirror.Target, org.vdaas.vald.api.v1.payload.Mirror.Target.Builder, org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder> targetsBuilder_;
 
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target> getTargetsList() {
+      public java.util.List<org.vdaas.vald.api.v1.payload.Mirror.Target> getTargetsList() {
         if (targetsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(targets_);
         } else {
@@ -1286,10 +1286,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public int getTargetsCount() {
         if (targetsBuilder_ == null) {
@@ -1300,12 +1300,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public org.vdaas.vald.api.v1.payload.Filter.Target getTargets(int index) {
+      public org.vdaas.vald.api.v1.payload.Mirror.Target getTargets(int index) {
         if (targetsBuilder_ == null) {
           return targets_.get(index);
         } else {
@@ -1314,13 +1314,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder setTargets(
-          int index, org.vdaas.vald.api.v1.payload.Filter.Target value) {
+          int index, org.vdaas.vald.api.v1.payload.Mirror.Target value) {
         if (targetsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1335,13 +1335,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder setTargets(
-          int index, org.vdaas.vald.api.v1.payload.Filter.Target.Builder builderForValue) {
+          int index, org.vdaas.vald.api.v1.payload.Mirror.Target.Builder builderForValue) {
         if (targetsBuilder_ == null) {
           ensureTargetsIsMutable();
           targets_.set(index, builderForValue.build());
@@ -1353,12 +1353,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public Builder addTargets(org.vdaas.vald.api.v1.payload.Filter.Target value) {
+      public Builder addTargets(org.vdaas.vald.api.v1.payload.Mirror.Target value) {
         if (targetsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1373,13 +1373,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
-          int index, org.vdaas.vald.api.v1.payload.Filter.Target value) {
+          int index, org.vdaas.vald.api.v1.payload.Mirror.Target value) {
         if (targetsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1394,13 +1394,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
-          org.vdaas.vald.api.v1.payload.Filter.Target.Builder builderForValue) {
+          org.vdaas.vald.api.v1.payload.Mirror.Target.Builder builderForValue) {
         if (targetsBuilder_ == null) {
           ensureTargetsIsMutable();
           targets_.add(builderForValue.build());
@@ -1412,13 +1412,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addTargets(
-          int index, org.vdaas.vald.api.v1.payload.Filter.Target.Builder builderForValue) {
+          int index, org.vdaas.vald.api.v1.payload.Mirror.Target.Builder builderForValue) {
         if (targetsBuilder_ == null) {
           ensureTargetsIsMutable();
           targets_.add(index, builderForValue.build());
@@ -1430,13 +1430,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder addAllTargets(
-          java.lang.Iterable<? extends org.vdaas.vald.api.v1.payload.Filter.Target> values) {
+          java.lang.Iterable<? extends org.vdaas.vald.api.v1.payload.Mirror.Target> values) {
         if (targetsBuilder_ == null) {
           ensureTargetsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1449,10 +1449,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder clearTargets() {
         if (targetsBuilder_ == null) {
@@ -1466,10 +1466,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
       public Builder removeTargets(int index) {
         if (targetsBuilder_ == null) {
@@ -1483,23 +1483,23 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public org.vdaas.vald.api.v1.payload.Filter.Target.Builder getTargetsBuilder(
+      public org.vdaas.vald.api.v1.payload.Mirror.Target.Builder getTargetsBuilder(
           int index) {
         return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder getTargetsOrBuilder(
+      public org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder getTargetsOrBuilder(
           int index) {
         if (targetsBuilder_ == null) {
           return targets_.get(index);  } else {
@@ -1508,12 +1508,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public java.util.List<? extends org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+      public java.util.List<? extends org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder> 
            getTargetsOrBuilderList() {
         if (targetsBuilder_ != null) {
           return targetsBuilder_.getMessageOrBuilderList();
@@ -1523,44 +1523,44 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public org.vdaas.vald.api.v1.payload.Filter.Target.Builder addTargetsBuilder() {
+      public org.vdaas.vald.api.v1.payload.Mirror.Target.Builder addTargetsBuilder() {
         return getTargetsFieldBuilder().addBuilder(
-            org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance());
+            org.vdaas.vald.api.v1.payload.Mirror.Target.getDefaultInstance());
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public org.vdaas.vald.api.v1.payload.Filter.Target.Builder addTargetsBuilder(
+      public org.vdaas.vald.api.v1.payload.Mirror.Target.Builder addTargetsBuilder(
           int index) {
         return getTargetsFieldBuilder().addBuilder(
-            index, org.vdaas.vald.api.v1.payload.Filter.Target.getDefaultInstance());
+            index, org.vdaas.vald.api.v1.payload.Mirror.Target.getDefaultInstance());
       }
       /**
        * <pre>
-       * Represent the filter target configuration.
+       * The multiple target information.
        * </pre>
        *
-       * <code>repeated .payload.v1.Filter.Target targets = 1 [json_name = "targets"];</code>
+       * <code>repeated .payload.v1.Mirror.Target targets = 1 [json_name = "targets"];</code>
        */
-      public java.util.List<org.vdaas.vald.api.v1.payload.Filter.Target.Builder> 
+      public java.util.List<org.vdaas.vald.api.v1.payload.Mirror.Target.Builder> 
            getTargetsBuilderList() {
         return getTargetsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          org.vdaas.vald.api.v1.payload.Filter.Target, org.vdaas.vald.api.v1.payload.Filter.Target.Builder, org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder> 
+          org.vdaas.vald.api.v1.payload.Mirror.Target, org.vdaas.vald.api.v1.payload.Mirror.Target.Builder, org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder> 
           getTargetsFieldBuilder() {
         if (targetsBuilder_ == null) {
           targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              org.vdaas.vald.api.v1.payload.Filter.Target, org.vdaas.vald.api.v1.payload.Filter.Target.Builder, org.vdaas.vald.api.v1.payload.Filter.TargetOrBuilder>(
+              org.vdaas.vald.api.v1.payload.Mirror.Target, org.vdaas.vald.api.v1.payload.Mirror.Target.Builder, org.vdaas.vald.api.v1.payload.Mirror.TargetOrBuilder>(
                   targets_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -1582,23 +1582,23 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:payload.v1.Filter.Config)
+      // @@protoc_insertion_point(builder_scope:payload.v1.Mirror.Targets)
     }
 
-    // @@protoc_insertion_point(class_scope:payload.v1.Filter.Config)
-    private static final org.vdaas.vald.api.v1.payload.Filter.Config DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:payload.v1.Mirror.Targets)
+    private static final org.vdaas.vald.api.v1.payload.Mirror.Targets DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Filter.Config();
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Mirror.Targets();
     }
 
-    public static org.vdaas.vald.api.v1.payload.Filter.Config getDefaultInstance() {
+    public static org.vdaas.vald.api.v1.payload.Mirror.Targets getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Config>
-        PARSER = new com.google.protobuf.AbstractParser<Config>() {
+    private static final com.google.protobuf.Parser<Targets>
+        PARSER = new com.google.protobuf.AbstractParser<Targets>() {
       @java.lang.Override
-      public Config parsePartialFrom(
+      public Targets parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1617,17 +1617,17 @@ private static final long serialVersionUID = 0L;
       }
     };
 
-    public static com.google.protobuf.Parser<Config> parser() {
+    public static com.google.protobuf.Parser<Targets> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Config> getParserForType() {
+    public com.google.protobuf.Parser<Targets> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Filter.Config getDefaultInstanceForType() {
+    public org.vdaas.vald.api.v1.payload.Mirror.Targets getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1666,10 +1666,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.vdaas.vald.api.v1.payload.Filter)) {
+    if (!(obj instanceof org.vdaas.vald.api.v1.payload.Mirror)) {
       return super.equals(obj);
     }
-    org.vdaas.vald.api.v1.payload.Filter other = (org.vdaas.vald.api.v1.payload.Filter) obj;
+    org.vdaas.vald.api.v1.payload.Mirror other = (org.vdaas.vald.api.v1.payload.Mirror) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -1687,44 +1687,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(byte[] data)
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(java.io.InputStream input)
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -1732,26 +1732,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static org.vdaas.vald.api.v1.payload.Filter parseDelimitedFrom(java.io.InputStream input)
+  public static org.vdaas.vald.api.v1.payload.Mirror parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static org.vdaas.vald.api.v1.payload.Filter parseDelimitedFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.vdaas.vald.api.v1.payload.Filter parseFrom(
+  public static org.vdaas.vald.api.v1.payload.Mirror parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -1764,7 +1764,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Filter prototype) {
+  public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Mirror prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -1781,29 +1781,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Filter related messages.
+   * Mirror related messages.
    * </pre>
    *
-   * Protobuf type {@code payload.v1.Filter}
+   * Protobuf type {@code payload.v1.Mirror}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:payload.v1.Filter)
-      org.vdaas.vald.api.v1.payload.FilterOrBuilder {
+      // @@protoc_insertion_point(builder_implements:payload.v1.Mirror)
+      org.vdaas.vald.api.v1.payload.MirrorOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_descriptor;
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_fieldAccessorTable
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.vdaas.vald.api.v1.payload.Filter.class, org.vdaas.vald.api.v1.payload.Filter.Builder.class);
+              org.vdaas.vald.api.v1.payload.Mirror.class, org.vdaas.vald.api.v1.payload.Mirror.Builder.class);
     }
 
-    // Construct using org.vdaas.vald.api.v1.payload.Filter.newBuilder()
+    // Construct using org.vdaas.vald.api.v1.payload.Mirror.newBuilder()
     private Builder() {
 
     }
@@ -1822,17 +1822,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Filter_descriptor;
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Mirror_descriptor;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Filter getDefaultInstanceForType() {
-      return org.vdaas.vald.api.v1.payload.Filter.getDefaultInstance();
+    public org.vdaas.vald.api.v1.payload.Mirror getDefaultInstanceForType() {
+      return org.vdaas.vald.api.v1.payload.Mirror.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Filter build() {
-      org.vdaas.vald.api.v1.payload.Filter result = buildPartial();
+    public org.vdaas.vald.api.v1.payload.Mirror build() {
+      org.vdaas.vald.api.v1.payload.Mirror result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -1840,8 +1840,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Filter buildPartial() {
-      org.vdaas.vald.api.v1.payload.Filter result = new org.vdaas.vald.api.v1.payload.Filter(this);
+    public org.vdaas.vald.api.v1.payload.Mirror buildPartial() {
+      org.vdaas.vald.api.v1.payload.Mirror result = new org.vdaas.vald.api.v1.payload.Mirror(this);
       onBuilt();
       return result;
     }
@@ -1880,16 +1880,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.vdaas.vald.api.v1.payload.Filter) {
-        return mergeFrom((org.vdaas.vald.api.v1.payload.Filter)other);
+      if (other instanceof org.vdaas.vald.api.v1.payload.Mirror) {
+        return mergeFrom((org.vdaas.vald.api.v1.payload.Mirror)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Filter other) {
-      if (other == org.vdaas.vald.api.v1.payload.Filter.getDefaultInstance()) return this;
+    public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Mirror other) {
+      if (other == org.vdaas.vald.api.v1.payload.Mirror.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1944,23 +1944,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:payload.v1.Filter)
+    // @@protoc_insertion_point(builder_scope:payload.v1.Mirror)
   }
 
-  // @@protoc_insertion_point(class_scope:payload.v1.Filter)
-  private static final org.vdaas.vald.api.v1.payload.Filter DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:payload.v1.Mirror)
+  private static final org.vdaas.vald.api.v1.payload.Mirror DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Filter();
+    DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Mirror();
   }
 
-  public static org.vdaas.vald.api.v1.payload.Filter getDefaultInstance() {
+  public static org.vdaas.vald.api.v1.payload.Mirror getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Filter>
-      PARSER = new com.google.protobuf.AbstractParser<Filter>() {
+  private static final com.google.protobuf.Parser<Mirror>
+      PARSER = new com.google.protobuf.AbstractParser<Mirror>() {
     @java.lang.Override
-    public Filter parsePartialFrom(
+    public Mirror parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1979,17 +1979,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Filter> parser() {
+  public static com.google.protobuf.Parser<Mirror> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Filter> getParserForType() {
+  public com.google.protobuf.Parser<Mirror> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public org.vdaas.vald.api.v1.payload.Filter getDefaultInstanceForType() {
+  public org.vdaas.vald.api.v1.payload.Mirror getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

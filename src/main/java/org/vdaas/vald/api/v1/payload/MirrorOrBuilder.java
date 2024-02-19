@@ -4,7 +4,7 @@
 // Protobuf Java Version: 3.25.3
 package org.vdaas.vald.api.v1.payload;
 
-public interface InsertOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:payload.v1.Insert)
+public interface MirrorOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:payload.v1.Mirror)
     com.google.protobuf.MessageOrBuilder {
 }
