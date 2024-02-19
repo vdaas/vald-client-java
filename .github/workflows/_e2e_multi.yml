@@ -6,7 +6,7 @@ on:
         description: "Notify Slack if e2e failed"
         required: false
         default: true
-  
+
 jobs:
   java_version:
     runs-on: ubuntu-latest
