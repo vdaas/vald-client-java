@@ -72,7 +72,7 @@ dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.21'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
-    testImplementation 'io.grpc:grpc-okhttp:1.60.0'
+    testImplementation 'io.grpc:grpc-okhttp:1.62.2'
 }
 
 test {
