@@ -41,6 +41,8 @@ MAKELISTS   = Makefile
 JAVA_VERSION := $(eval JAVA_VERSION := $(shell cat ./version/JAVA_VERSION))$(JAVA_VERSION)
 TEST_DATASET_PATH = wordvecs1000.json
 
+GRADLE_PROPERTIES_FILE = ~/.gradle/gradle.properties
+
 red    = /bin/echo -e "\x1b[31m\#\# $1\x1b[0m"
 green  = /bin/echo -e "\x1b[32m\#\# $1\x1b[0m"
 yellow = /bin/echo -e "\x1b[33m\#\# $1\x1b[0m"
@@ -172,16 +174,14 @@ ci/package/prepare:
 	gpg --import --batch private_key.txt
 	rm -f private_key.txt
 	gpg --pinentry-mode loopback --passphrase "${GPG_PASSPHRASE}" --export-secret-keys -o ~/.gnupg/secring.gpg
-	cat << EOF > ~/.gradle/gradle.properties
-	org.gradle.daemon=true
-	signing.keyId=${GPG_KEYID}
-	signing.password=${GPG_PASSPHRASE}
-	signing.secretKeyRingFile=${HOME}/.gnupg/secring.gpg
-	sonatypeUsername=${SONATYPE_USERNAME}
-	sonatypePassword=${SONATYPE_PASSWORD}
-	nexusUsername=${SONATYPE_USERNAME}
-	nexusPassword=${SONATYPE_PASSWORD}
-	EOF
+	echo "org.gradle.daemon=true"                               >  ${GRADLE_PROPERTIES_FILE}
+	echo "signing.keyId=${GPG_KEYID}"                           >> ${GRADLE_PROPERTIES_FILE}
+	echo "signing.password=${GPG_PASSPHRASE}"                   >> ${GRADLE_PROPERTIES_FILE}
+	echo "signing.secretKeyRingFile=${HOME}/.gnupg/secring.gpg" >> ${GRADLE_PROPERTIES_FILE}
+	echo "sonatypeUsername=${SONATYPE_USERNAME}"                >> ${GRADLE_PROPERTIES_FILE}
+	echo "sonatypePassword=${SONATYPE_PASSWORD}"                >> ${GRADLE_PROPERTIES_FILE}
+	echo "nexusUsername=${SONATYPE_USERNAME}"                   >> ${GRADLE_PROPERTIES_FILE}
+	echo "nexusPassword=${SONATYPE_PASSWORD}"                   >> ${GRADLE_PROPERTIES_FILE}
 
 .PHONY: ci/package/publish
 ## publich packages
