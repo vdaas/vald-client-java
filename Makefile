@@ -24,6 +24,7 @@ PKGREPO     = github.com/$(REPO)/$(PKGNAME)
 VALD_DIR    = vald
 VALD_SHA    = VALD_SHA
 VALD_CLIENT_JAVA_VERSION = version/VALD_CLIENT_JAVA_VERSION
+VALD_CHECKOUT_REF ?= main
 PROTOBUF_VERSION = version/PROTOBUF_VERSION
 GRPC_JAVA_VERSION = version/GRPC_JAVA_VERSION
 JAVA_LTS_LATEST_VERSTION = version/JAVA_VERSION_LTS_LATEST
@@ -31,11 +32,14 @@ JAVA_LTS_STABLE_VERSTION = version/JAVA_VERSION_LTS_STABLE
 
 PWD    := $(eval PWD := $(shell pwd))$(PWD)
 
-PROTO_ROOT  = vald/apis/proto
+PROTO_ROOT  = $(VALD_DIR)/apis/proto
 JAVA_ROOT   = src/main/java
 API_ROOT    = org/vdaas/vald/api
 
 MAKELISTS   = Makefile
+
+JAVA_VERSION := $(eval JAVA_VERSION := $(shell cat ./version/JAVA_VERSION))$(JAVA_VERSION)
+TEST_DATASET_PATH = wordvecs1000.json
 
 red    = /bin/echo -e "\x1b[31m\#\# $1\x1b[0m"
 green  = /bin/echo -e "\x1b[32m\#\# $1\x1b[0m"
@@ -58,7 +62,7 @@ endef
 
 .PHONY: all
 ## execute clean and proto
-all: clear vald/update proto clean
+all: clear proto clean
 
 .PHONY: help
 ## print all available commands
@@ -90,9 +94,16 @@ clean:
 
 .PHONY: proto
 ## build proto
-proto: vald $(JAVA_ROOT)
+proto: $(VALD_DIR) $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
-	./gradlew bufGenerate
+	sed -i '/lint:/a \  ignore: [v1]' $(PROTO_ROOT)/buf.yaml
+	echo 'build:\n  excludes: [v1/agent/sidecar, v1/discoverer, v1/manager]' >> $(PROTO_ROOT)/buf.yaml
+	./gradlew bufGenerate \
+				bufFormatApply \
+				bufFormatCheck \
+				bufLint \
+				check \
+				-x test
 	cp -r build/bufbuild/generated/main src
 
 $(JAVA_ROOT):
@@ -100,9 +111,17 @@ $(JAVA_ROOT):
 	$(call rm, -rf, $@/*)
 
 $(VALD_DIR):
-	git clone --depth 1 https://$(VALDREPO) $(VALD_DIR)
-	sed -i '/lint:/a \  ignore: [v1]' $(PROTO_ROOT)/buf.yaml
-	echo 'build:\n  excludes: [v1/agent/sidecar, v1/discoverer, v1/manager]' >> $(PROTO_ROOT)/buf.yaml
+	git clone https://$(VALDREPO) $(VALD_DIR)
+
+.PHONY: vald/checkout
+## checkout vald repository
+vald/checkout: $(VALD_DIR)
+	cd $(VALD_DIR) && git checkout $(VALD_CHECKOUT_REF)
+
+.PHONY: vald/origin/sha/print
+## print origin VALD_SHA value
+vald/origin/sha/print: $(VALD_DIR)
+	@cd $(VALD_DIR) && git rev-parse HEAD | tr -d '\n'
 
 .PHONY: vald/sha/print
 ## print VALD_SHA value
@@ -111,73 +130,76 @@ vald/sha/print:
 
 .PHONY: vald/sha/update
 ## update VALD_SHA value
-vald/sha/update: vald
-	(cd vald; git rev-parse HEAD > ../$(VALD_SHA))
+vald/sha/update: $(VALD_DIR)
+	(cd $(VALD_DIR); git rev-parse HEAD | tr -d '\n' > ../$(VALD_SHA))
 
-.PHONY: vald/client/java/version/print
+.PHONY: vald/client/version/print
 ## print VALD_CLIENT_JAVA_VERSION value
-vald/client/java/version/print:
+vald/client/version/print:
 	@cat $(VALD_CLIENT_JAVA_VERSION)
 
-.PHONY: vald/protobuf/version/print
-## print PROTOBUF_VERSION value
-vald/protobuf/version/print:
-	@cat $(PROTOBUF_VERSION)
-
-.PHONY: vald/grpc/java/version/print
-## print GRPC_JAVA_VERSION value
-vald/grpc/java/version/print:
-	@cat $(GRPC_JAVA_VERSION)
-
-.PHONY: vald/java/version/latest
-## print JAVA_LTS_LATEST_VERSTION value
-vald/java/version/latest:
-	@cat $(JAVA_LTS_LATEST_VERSTION)
-
-.PHONY: vald/java/version/stable
-## print JAVA_LTS_STABLE_VERSTION value
-vald/java/version/stable:
-	@cat $(JAVA_LTS_STABLE_VERSTION)
-
-.PHONY: vald/client/java/version/update
+.PHONY: vald/client/version/update
 ## update VALD_CLIENT_JAVA_VERSION value
-vald/client/java/version/update: vald
-	(vald_version=`cat vald/versions/VALD_VERSION | sed -e 's/^v//'`; \
-	    client_version=`cat $(VALD_CLIENT_JAVA_VERSION)`; \
-	    major=$${client_version%%.*}; client_version="$${client_version#*.}"; \
-	    minor=$${client_version%%.*}; client_version="$${client_version#*.}"; \
-	    patch=$${client_version%%.*}; client_version="$${client_version#*.}"; \
-	    if [ "$${vald_version}" = "$${major}.$${minor}.$${patch}" ]; then \
-	        if [ "$${patch}" = "$${client_version}" ]; then \
-	            new_version="$${major}.$${minor}.$${patch}.Rev1"; \
-	        else \
-	            rev="$${client_version#Rev}"; \
-	            rev=$$((rev+1)); \
-	            new_version="$${major}.$${minor}.$${patch}.Rev$${rev}"; \
-	        fi; \
-	    else \
-	        new_version="$${vald_version}"; \
-	    fi; \
-	    echo "VALD_VERSION: $${vald_version}, NEW_CLIENT_VERSION: $${new_version}"; \
-	    echo "$${new_version}" > version/VALD_CLIENT_JAVA_VERSION)
+vald/client/version/update: $(VALD_DIR)
+	(vald_version=`cat $(VALD_DIR)/versions/VALD_VERSION | sed -e 's/^v//'`; \
+		echo "VALD_VERSION: $${vald_version}"; \
+		echo "$${vald_version}" > version/VALD_CLIENT_JAVA_VERSION)
 	sed -i -e "s/^version = ".*"\$$/version = \"`cat version/VALD_CLIENT_JAVA_VERSION`\"/" build.gradle
 
-.PHONY: vald/protobuf/version/update
-## update PROTOBUF_VERSION value
-vald/protobuf/version/update: vald
-	rm version/PROTOBUF_VERSION
-	curl --silent "https://api.github.com/repos/protocolbuffers/protobuf/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' > version/PROTOBUF_VERSION
+.PHONY: test
+## Execute test
+test: $(TEST_DATASET_PATH)
+	./gradlew test
 
-.PHONY: vald/grpc/java/version/update
-## update GRPC_JAVA_VERSION value
-vald/grpc/java/version/update: vald
-	rm version/GRPC_JAVA_VERSION
-	curl --silent "https://api.github.com/repos/grpc/grpc-java/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' > version/GRPC_JAVA_VERSION
+.PHONY: ci/deps/install
+## install deps for CI environment
+ci/deps/install:
+	@echo "Nothing do be done"
 
-.PHONY: vald/update
-## update vald versions and sha
-vald/update: \
-	vald/sha/update \
-	vald/client/java/version/update \
-	vald/protobuf/version/update \
-	vald/grpc/java/version/update
+.PHONY: ci/deps/update
+## update deps for CI environment
+ci/deps/update:
+	@echo "Nothing do be done"
+
+$(TEST_DATASET_PATH):
+	curl -L https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json -o $(TEST_DATASET_PATH)
+
+.PHONY: ci/package/prepare
+## prepare for publich
+ci/package/prepare:
+	./gradlew clean
+	echo "${PGP_PRIVATE_KEY}" > private_key.txt
+	gpg --import --batch private_key.txt
+	rm -f private_key.txt
+	gpg --pinentry-mode loopback --passphrase "${GPG_PASSPHRASE}" --export-secret-keys -o ~/.gnupg/secring.gpg
+	cat << EOF > ~/.gradle/gradle.properties
+	org.gradle.daemon=true
+	signing.keyId=${GPG_KEYID}
+	signing.password=${GPG_PASSPHRASE}
+	signing.secretKeyRingFile=${HOME}/.gnupg/secring.gpg
+	sonatypeUsername=${SONATYPE_USERNAME}
+	sonatypePassword=${SONATYPE_PASSWORD}
+	nexusUsername=${SONATYPE_USERNAME}
+	nexusPassword=${SONATYPE_PASSWORD}
+	EOF
+
+.PHONY: ci/package/publish
+## publich packages
+ci/package/publish:
+	./gradlew clean
+	./gradlew build -x bufFormatApply \
+					-x bufFormatCheck \
+					-x bufLint \
+					-x check \
+					-x checkKotlinGradlePluginConfigurationErrors \
+					-x checkKotlinGradlePluginConfigurationErrors \
+					-x test \
+					--stacktrace
+	./gradlew publish -Prelease --stacktrace
+	sleep 120
+	./gradlew closeAndReleaseRepository --stacktrace
+
+.PHONY: version/java
+## Print Java version
+version/java:
+	@echo $(JAVA_VERSION)

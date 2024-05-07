@@ -1,17 +1,18 @@
+/vald
+/vald-origin
+
+# gogoproto
+src/main/java/com/google/protobuf/GoGoProtos.java
+
+wordvecs1000.json
+
 # Ignore Gradle project-specific cache directory
 .gradle
 
 # Ignore Gradle build output directory
 build
 
-/vald
-
 .classpath
 .project
 .settings
 bin
-
-# gogoproto
-src/main/java/com/google/protobuf/GoGoProtos.java
-
-wordvecs1000.json
