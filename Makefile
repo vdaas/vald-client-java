@@ -153,6 +153,9 @@ vald/client/version/update: $(VALD_DIR)
 test: $(TEST_DATASET_PATH)
 	./gradlew test
 
+$(TEST_DATASET_PATH):
+	curl -L https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json -o $(TEST_DATASET_PATH)
+
 .PHONY: ci/deps/install
 ## install deps for CI environment
 ci/deps/install:
@@ -162,9 +165,6 @@ ci/deps/install:
 ## update deps for CI environment
 ci/deps/update:
 	@echo "Nothing do be done"
-
-$(TEST_DATASET_PATH):
-	curl -L https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json -o $(TEST_DATASET_PATH)
 
 .PHONY: ci/package/prepare
 ## prepare for publich
