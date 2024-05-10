@@ -29,3 +29,45 @@ jobs:
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
           client_type: java
+  build-debug:
+    runs-on: ubuntu-latest
+    env:
+      GPG_KEYID: ${{ secrets.GPG_KEYID }}
+      GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      PGP_PRIVATE_KEY: ${{ secrets.PGP_PRIVATE_KEY }}
+      SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+      SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          make ci/deps/install
+      - name: Build proto
+        run: |
+          export GOPATH=$HOME/go
+          export PATH=$HOME/grpc-java:$PATH
+          make proto
+      - name: Update SHA and client version
+        run: |
+          make vald/sha/update
+          make vald/client/version/update
+      - name: Update dependencies
+        run: |
+          make ci/deps/update
+      - name: Prepare for publish
+        run: |
+          make ci/package/prepare
+      - name: Build
+        run: |
+          ./gradlew clean
+          ./gradlew build -x bufFormatApply \
+            -x bufFormatCheck \
+            -x bufLint \
+            -x check \
+            -x checkKotlinGradlePluginConfigurationErrors \
+            -x checkKotlinGradlePluginConfigurationErrors \
+            -x test \
+            --stacktrace
+      - uses: vdaas/vald-client-ci/.github/actions/e2e@main
+        with:
+          client_type: java
