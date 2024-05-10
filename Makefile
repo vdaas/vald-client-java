@@ -170,18 +170,7 @@ ci/deps/update:
 ## prepare for publich
 ci/package/prepare:
 	./gradlew clean
-	echo "${PGP_PRIVATE_KEY}" > private_key.txt
-	gpg --import --batch private_key.txt
-	rm -f private_key.txt
-	gpg --pinentry-mode loopback --passphrase "${GPG_PASSPHRASE}" --export-secret-keys -o ~/.gnupg/secring.gpg
-	echo "org.gradle.daemon=true"                               >  ${GRADLE_PROPERTIES_FILE}
-	echo "signing.keyId=${GPG_KEYID}"                           >> ${GRADLE_PROPERTIES_FILE}
-	echo "signing.password=${GPG_PASSPHRASE}"                   >> ${GRADLE_PROPERTIES_FILE}
-	echo "signing.secretKeyRingFile=${HOME}/.gnupg/secring.gpg" >> ${GRADLE_PROPERTIES_FILE}
-	echo "sonatypeUsername=${SONATYPE_USERNAME}"                >> ${GRADLE_PROPERTIES_FILE}
-	echo "sonatypePassword=${SONATYPE_PASSWORD}"                >> ${GRADLE_PROPERTIES_FILE}
-	echo "nexusUsername=${SONATYPE_USERNAME}"                   >> ${GRADLE_PROPERTIES_FILE}
-	echo "nexusPassword=${SONATYPE_PASSWORD}"                   >> ${GRADLE_PROPERTIES_FILE}
+	./script/prepare_gradle_properties.sh ${GRADLE_PROPERTIES_FILE}
 
 .PHONY: ci/package/publish
 ## publich packages
