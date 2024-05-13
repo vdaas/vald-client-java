@@ -5859,6 +5859,33 @@ private static final long serialVersionUID = 0L;
      * @return The aggregationAlgorithm.
      */
     org.vdaas.vald.api.v1.payload.Search.AggregationAlgorithm getAggregationAlgorithm();
+
+    /**
+     * <pre>
+     * Search ratio for agent return result number.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+     * @return Whether the ratio field is set.
+     */
+    boolean hasRatio();
+    /**
+     * <pre>
+     * Search ratio for agent return result number.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+     * @return The ratio.
+     */
+    com.google.protobuf.FloatValue getRatio();
+    /**
+     * <pre>
+     * Search ratio for agent return result number.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getRatioOrBuilder();
   }
   /**
    * <pre>
@@ -6126,6 +6153,44 @@ private static final long serialVersionUID = 0L;
       return result == null ? org.vdaas.vald.api.v1.payload.Search.AggregationAlgorithm.UNRECOGNIZED : result;
     }
 
+    public static final int RATIO_FIELD_NUMBER = 10;
+    private com.google.protobuf.FloatValue ratio_;
+    /**
+     * <pre>
+     * Search ratio for agent return result number.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+     * @return Whether the ratio field is set.
+     */
+    @java.lang.Override
+    public boolean hasRatio() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Search ratio for agent return result number.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+     * @return The ratio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getRatio() {
+      return ratio_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : ratio_;
+    }
+    /**
+     * <pre>
+     * Search ratio for agent return result number.
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getRatioOrBuilder() {
+      return ratio_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : ratio_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6166,6 +6231,9 @@ private static final long serialVersionUID = 0L;
       }
       if (aggregationAlgorithm_ != org.vdaas.vald.api.v1.payload.Search.AggregationAlgorithm.Unknown.getNumber()) {
         output.writeEnum(9, aggregationAlgorithm_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(10, getRatio());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6211,6 +6279,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, aggregationAlgorithm_);
       }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getRatio());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6251,6 +6323,11 @@ private static final long serialVersionUID = 0L;
       if (getMinNum()
           != other.getMinNum()) return false;
       if (aggregationAlgorithm_ != other.aggregationAlgorithm_) return false;
+      if (hasRatio() != other.hasRatio()) return false;
+      if (hasRatio()) {
+        if (!getRatio()
+            .equals(other.getRatio())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6287,6 +6364,10 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getMinNum();
       hash = (37 * hash) + AGGREGATION_ALGORITHM_FIELD_NUMBER;
       hash = (53 * hash) + aggregationAlgorithm_;
+      if (hasRatio()) {
+        hash = (37 * hash) + RATIO_FIELD_NUMBER;
+        hash = (53 * hash) + getRatio().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6423,6 +6504,7 @@ private static final long serialVersionUID = 0L;
                 .alwaysUseFieldBuilders) {
           getIngressFiltersFieldBuilder();
           getEgressFiltersFieldBuilder();
+          getRatioFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6446,6 +6528,11 @@ private static final long serialVersionUID = 0L;
         }
         minNum_ = 0;
         aggregationAlgorithm_ = 0;
+        ratio_ = null;
+        if (ratioBuilder_ != null) {
+          ratioBuilder_.dispose();
+          ratioBuilder_ = null;
+        }
         return this;
       }
 
@@ -6512,6 +6599,12 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
           result.aggregationAlgorithm_ = aggregationAlgorithm_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.ratio_ = ratioBuilder_ == null
+              ? ratio_
+              : ratioBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -6589,6 +6682,9 @@ private static final long serialVersionUID = 0L;
         if (other.aggregationAlgorithm_ != 0) {
           setAggregationAlgorithmValue(other.getAggregationAlgorithmValue());
         }
+        if (other.hasRatio()) {
+          mergeRatio(other.getRatio());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -6664,6 +6760,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000100;
                 break;
               } // case 72
+              case 82: {
+                input.readMessage(
+                    getRatioFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7378,6 +7481,163 @@ private static final long serialVersionUID = 0L;
         aggregationAlgorithm_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.FloatValue ratio_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ratioBuilder_;
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       * @return Whether the ratio field is set.
+       */
+      public boolean hasRatio() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       * @return The ratio.
+       */
+      public com.google.protobuf.FloatValue getRatio() {
+        if (ratioBuilder_ == null) {
+          return ratio_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : ratio_;
+        } else {
+          return ratioBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       */
+      public Builder setRatio(com.google.protobuf.FloatValue value) {
+        if (ratioBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ratio_ = value;
+        } else {
+          ratioBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       */
+      public Builder setRatio(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (ratioBuilder_ == null) {
+          ratio_ = builderForValue.build();
+        } else {
+          ratioBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       */
+      public Builder mergeRatio(com.google.protobuf.FloatValue value) {
+        if (ratioBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            ratio_ != null &&
+            ratio_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+            getRatioBuilder().mergeFrom(value);
+          } else {
+            ratio_ = value;
+          }
+        } else {
+          ratioBuilder_.mergeFrom(value);
+        }
+        if (ratio_ != null) {
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       */
+      public Builder clearRatio() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        ratio_ = null;
+        if (ratioBuilder_ != null) {
+          ratioBuilder_.dispose();
+          ratioBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getRatioBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getRatioFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getRatioOrBuilder() {
+        if (ratioBuilder_ != null) {
+          return ratioBuilder_.getMessageOrBuilder();
+        } else {
+          return ratio_ == null ?
+              com.google.protobuf.FloatValue.getDefaultInstance() : ratio_;
+        }
+      }
+      /**
+       * <pre>
+       * Search ratio for agent return result number.
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue ratio = 10 [json_name = "ratio"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getRatioFieldBuilder() {
+        if (ratioBuilder_ == null) {
+          ratioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  getRatio(),
+                  getParentForChildren(),
+                  isClean());
+          ratio_ = null;
+        }
+        return ratioBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
