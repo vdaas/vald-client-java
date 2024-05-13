@@ -42,6 +42,6 @@ jobs:
         run: |
           ./gradlew clean
           ./gradlew build -x test
-          # ./gradlew publish -Prelease --stacktrace
-          # sleep 120
-          # ./gradlew closeAndReleaseRepository --stacktrace
+          ./gradlew uploadArchives -Prelease
+          sleep 120
+          ./gradlew closeAndReleaseRepository
