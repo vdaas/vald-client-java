@@ -174,3 +174,13 @@ $(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate:
 		--depth 1 \
 		https://github.com/envoyproxy/protoc-gen-validate \
 		$(GOPATH)/src/github.com/envoyproxy/protoc-gen-validate
+
+TEST_DATASET_PATH = wordvecs1000.json
+
+.PHONY: test
+## Execute test
+test: $(TEST_DATASET_PATH)
+	./gradlew test
+
+$(TEST_DATASET_PATH):
+	curl -L https://raw.githubusercontent.com/rinx/word2vecjson/master/data/wordvecs1000.json -o $(TEST_DATASET_PATH)
