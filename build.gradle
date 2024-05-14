@@ -70,7 +70,7 @@ dependencies {
     implementation 'build.buf:protovalidate:0.2.1'
 
     testImplementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testImplementation 'io.grpc:grpc-okhttp:1.62.2'
 }
