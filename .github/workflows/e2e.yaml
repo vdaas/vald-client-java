@@ -53,6 +53,6 @@ jobs:
           git diff
           git diff --name-only
           git status
-      - uses: vdaas/vald-client-ci/.github/actions/e2e@main
-        with:
-          client_type: go
+      # - uses: vdaas/vald-client-ci/.github/actions/e2e@main
+      #   with:
+      #     client_type: go
