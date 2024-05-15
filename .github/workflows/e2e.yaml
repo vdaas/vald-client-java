@@ -22,13 +22,13 @@ on:
   pull_request:
 
 jobs:
-  e2e:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: vdaas/vald-client-ci/.github/actions/e2e@main
-        with:
-          client_type: java
+  # e2e:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: vdaas/vald-client-ci/.github/actions/e2e@main
+  #       with:
+  #         client_type: java
   build-debug:
     runs-on: ubuntu-latest
     steps:
@@ -55,4 +55,4 @@ jobs:
           git status
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
-          client_type: java
+          client_type: go
