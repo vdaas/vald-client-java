@@ -55,4 +55,4 @@ jobs:
           git status
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
-          client_type: go
+          client_type: java
