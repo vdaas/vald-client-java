@@ -84,5 +84,5 @@ jobs:
           signoff: true
           delete-branch: true
           base: main
-          title: "Update Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
+          title: "Bump Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
           body: "Automated pull request to update Gradle Wrapper."
