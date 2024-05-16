@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+SHELL       = bash
 REPO       ?= vdaas
 NAME        = vald
 VALDREPO    = github.com/$(REPO)/$(NAME)
@@ -38,7 +38,8 @@ API_ROOT    = org/vdaas/vald/api
 
 MAKELISTS   = Makefile
 
-JAVA_VERSION := $(eval JAVA_VERSION := $(shell cat ./version/JAVA_VERSION))$(JAVA_VERSION)
+JAVA_VERSION   := $(eval JAVA_VERSION := $(shell cat ./version/JAVA_VERSION))$(JAVA_VERSION)
+GRADLE_VERSION := $(eval GRADLE_VERSION := $(shell cat ./version/GRADLE_VERSION))$(GRADLE_VERSION)
 TEST_DATASET_PATH = wordvecs1000.json
 
 GRADLE_PROPERTIES_FILE = ~/.gradle/gradle.properties
@@ -197,3 +198,8 @@ ci/package/publish: build
 ## Print Java version
 version/java:
 	@echo $(JAVA_VERSION)
+
+.PHONY: version/gradle
+## Print Gradle version
+version/gradle:
+	@echo $(GRADLE_VERSION)
