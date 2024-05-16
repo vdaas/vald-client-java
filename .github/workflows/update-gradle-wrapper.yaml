@@ -54,11 +54,9 @@ jobs:
           echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
       - name: Update Gradle Wrapper
         run: |
-          ./gradlew wrapper --gradle-version 8.7 --distribution-type bin --gradle-distribution-sha256-sum 544c35d6bd849ae8a5ed0bcea39ba677dc40f49df7d1835561582da2009b961d
-          ./examples/gradlew wrapper --gradle-version 8.7 --distribution-type bin --gradle-distribution-sha256-sum 544c35d6bd849ae8a5ed0bcea39ba677dc40f49df7d1835561582da2009b961d
-          # WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
-          # ./gradlew wrapper ${WRAPPER_ARGS}
-          # ./examples/gradlew wrapper ${WRAPPER_ARGS}
+          WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
+          ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper
+          ./examples/gradlew wrapper ${WRAPPER_ARGS} && ./examples/gradlew wrapper
         env:
           LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
           CHECKSUM: ${{ steps.gradle_info.outputs.CHECKSUM }}
