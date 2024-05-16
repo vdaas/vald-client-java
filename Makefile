@@ -96,7 +96,7 @@ clean:
 
 .PHONY: proto
 ## build proto
-proto: $(VALD_DIR) $(JAVA_ROOT) build
+proto: $(VALD_DIR) $(JAVA_ROOT)
 	@$(call green, "generating .java files...")
 	sed -i '/lint:/a \  ignore: [v1]' $(PROTO_ROOT)/buf.yaml
 	echo 'build:\n  excludes: [v1/agent/sidecar, v1/discoverer, v1/manager]' >> $(PROTO_ROOT)/buf.yaml
@@ -107,6 +107,7 @@ proto: $(VALD_DIR) $(JAVA_ROOT) build
 				check \
 				-x test
 	cp -r build/bufbuild/generated/main src
+	$(MAKE) -s build
 
 .PHONY: build
 ## build source
