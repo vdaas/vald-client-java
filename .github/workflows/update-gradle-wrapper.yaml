@@ -52,11 +52,24 @@ jobs:
 
           echo "LATEST_VERSION=${LATEST_VERSION}" | tee -a $GITHUB_OUTPUT
           echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
-      - name: Update Gradle Wrapper
+      - name: Update root Gradle Wrapper for root directory
         run: |
           WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
-          ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper
-          ./examples/gradlew wrapper ${WRAPPER_ARGS} && ./examples/gradlew wrapper
+          ./gradlew wrapper ${WRAPPER_ARGS}
+          echo "SECOND_PHAZE"
+          ./gradlew wrapper ${WRAPPER_ARGS}
+          echo "FINISHED"
+        env:
+          LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
+          CHECKSUM: ${{ steps.gradle_info.outputs.CHECKSUM }}
+      - name: Update Gradle Wrapper for examples directory
+        working-directory: examples
+        run: |
+          WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
+          ./gradlew wrapper ${WRAPPER_ARGS}
+          echo "SECOND_PHAZE"
+          ./gradlew wrapper ${WRAPPER_ARGS}
+          echo "FINISHED"
         env:
           LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
           CHECKSUM: ${{ steps.gradle_info.outputs.CHECKSUM }}
