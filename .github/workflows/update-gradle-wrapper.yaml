@@ -60,7 +60,7 @@ jobs:
       - name: Update root Gradle Wrapper
         if: ${{ steps.gradle_info.outputs.NEED_UPDATE == 'true' }}
         run: |
-          # The first run changes the properfies settings and the second run updates the jar.
+          # The first run changes the properfies setting and the second run updates the jar ..etc.
           ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
           echo "${LATEST_VERSION}" > ./version/GRADLE_VERSION
         env:
@@ -84,6 +84,7 @@ jobs:
           committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
           signoff: true
           delete-branch: true
+          branch-suffix: gradle-version
           base: verify/upgrade-gradle-wrapper # TODO
           title: "Update Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
           body: "Automated pull request to update Gradle Wrapper."
