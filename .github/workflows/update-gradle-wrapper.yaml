@@ -49,30 +49,24 @@ jobs:
         run: |
           LATEST_VERSION=$(curl -fsSL "${GRADLE_VERSION_URL}" | jq -r '.version')
           CHECKSUM=$(curl -fsSL "${GRADLE_CHECKSUM_URL_PREFIX}-${LATEST_VERSION}-${GRADLE_CHECKSUM_URL_SUFFIX}" | awk '{print $1}')
+          WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
 
           echo "LATEST_VERSION=${LATEST_VERSION}" | tee -a $GITHUB_OUTPUT
           echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
+          echo "WRAPPER_ARGS=${WRAPPER_ARGS}"     | tee -a $GITHUB_OUTPUT
       - name: Update root Gradle Wrapper for root directory
         run: |
-          WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
-          ./gradlew wrapper ${WRAPPER_ARGS}
-          echo "SECOND_PHAZE"
-          ./gradlew wrapper ${WRAPPER_ARGS}
-          echo "FINISHED"
+          # The first run changes the properfies settings and the second run updates the jar.
+          ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
         env:
-          LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
-          CHECKSUM: ${{ steps.gradle_info.outputs.CHECKSUM }}
+          WRAPPER_ARGS: ${{ steps.gradle_info.outputs.WRAPPER_ARGS }}
       - name: Update Gradle Wrapper for examples directory
         working-directory: examples
         run: |
-          WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
-          ./gradlew wrapper ${WRAPPER_ARGS}
-          echo "SECOND_PHAZE"
-          ./gradlew wrapper ${WRAPPER_ARGS}
-          echo "FINISHED"
+          # The first run changes the properfies settings and the second run updates the jar.
+          ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
         env:
-          LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
-          CHECKSUM: ${{ steps.gradle_info.outputs.CHECKSUM }}
+          WRAPPER_ARGS: ${{ steps.gradle_info.outputs.WRAPPER_ARGS }}
       - name: Check difference
         id: check_diff
         run: |
@@ -82,15 +76,15 @@ jobs:
             git diff && git status
             echo "HAS_GIT_DIFF=true" >> $GITHUB_OUTPUT
           fi
-      # - name: Create PR
-      #   if: ${{ steps.check_diff.outputs.HAS_GIT_DIFF == 'true' }}
-      #   uses: peter-evans/create-pull-request@v6
-      #   with:
-      #     author: "${{ secrets.CI_USER }} <vald@vdaas.org>"
-      #     token: ${{ secrets.CI_TOKEN }}
-      #     committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
-      #     signoff: true
-      #     delete-branch: true
-      #     base: verify/upgrade-gradle-wrapper # TODO
-      #     title: "Update Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
-      #     body: "Automated pull request to update Gradle Wrapper."
+      - name: Create PR
+        if: ${{ steps.check_diff.outputs.HAS_GIT_DIFF == 'true' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          author: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          token: ${{ secrets.CI_TOKEN }}
+          committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          signoff: true
+          delete-branch: true
+          base: verify/upgrade-gradle-wrapper # TODO
+          title: "Update Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
+          body: "Automated pull request to update Gradle Wrapper."
