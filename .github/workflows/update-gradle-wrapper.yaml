@@ -60,7 +60,7 @@ jobs:
       - name: Update root Gradle Wrapper
         if: ${{ steps.gradle_info.outputs.NEED_UPDATE == 'true' }}
         run: |
-          # The first run changes the properfies setting and the second run updates the jar ..etc.
+          # The first run changes the properfies setting and the second run updates the jar, ..etc.
           ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
           echo "${LATEST_VERSION}" > ./version/GRADLE_VERSION
         env:
