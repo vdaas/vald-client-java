@@ -54,14 +54,7 @@ jobs:
           echo "LATEST_VERSION=${LATEST_VERSION}" | tee -a $GITHUB_OUTPUT
           echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
           echo "WRAPPER_ARGS=${WRAPPER_ARGS}"     | tee -a $GITHUB_OUTPUT
-      - name: Update root Gradle Wrapper for root directory
-        run: |
-          # The first run changes the properfies settings and the second run updates the jar.
-          ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
-        env:
-          WRAPPER_ARGS: ${{ steps.gradle_info.outputs.WRAPPER_ARGS }}
-      - name: Update Gradle Wrapper for examples directory
-        working-directory: examples
+      - name: Update root Gradle Wrapper
         run: |
           # The first run changes the properfies settings and the second run updates the jar.
           ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
