@@ -50,9 +50,7 @@ jobs:
           make ci/deps/update
       - name: Check
         run: |
-          git diff
-          git diff --name-only
-          git status
+          git diff && git status
       - name: Build
         run: |
           make build
