@@ -22,8 +22,12 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
-  check:
+  update:
     runs-on: ubuntu-latest
+    env:
+      GRADLE_VERSION_URL: "https://services.gradle.org/versions/current"
+      GRADLE_CHECKSUM_URL_PREFIX: "https://services.gradle.org/distributions/gradle"
+      GRADLE_CHECKSUM_URL_SUFFIX: "bin.zip.sha256"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,27 +44,38 @@ jobs:
       - uses: vdaas/vald-client-ci/.github/actions/setup-language@main
         with:
           client_type: java
-      - name: Update Gradle Wrapper
+      - name: Get latest Gradle version and checksum
+        id: gradle_info
         run: |
-          ./gradlew wrapper --gradle-version latest
-          git diff && git status
+          LATEST_VERSION=$(curl -fsSL "${GRADLE_VERSION_URL}" | jq -r '.version')
+          CHECKSUM=$(curl -fsSL "${GRADLE_CHECKSUM_URL_PREFIX}-${LATEST_VERSION}-${GRADLE_CHECKSUM_URL_SUFFIX}" | awk '{print $1}')
 
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.CI_TOKEN }}
-      - name: Set Git config
-        run: |
-          git config --global --add safe.directory ${GITHUB_WORKSPACE}
-      - uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
+          echo "LATEST_VERSION=${LATEST_VERSION}" | tee -a $GITHUB_OUTPUT
+          echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
       - name: Update Gradle Wrapper
-        uses: gradle-update/update-gradle-wrapper-action@v1
-        with:
-          repo-token: ${{ secrets.CI_TOKEN }}
+        run: |
+          ./gradlew wrapper --gradle-version ${LATEST_VERSION} --distribution-type all --gradle-distribution-sha256-sum ${CHECKSUM}
+          git diff && git status
+        env:
+          LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
+          CHECKSUM: ${{ steps.gradle_info.outputs.CHECKSUM }}
+
+  # update:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
+  #         token: ${{ secrets.CI_TOKEN }}
+  #     - name: Set Git config
+  #       run: |
+  #         git config --global --add safe.directory ${GITHUB_WORKSPACE}
+  #     - uses: crazy-max/ghaction-import-gpg@v6
+  #       with:
+  #         gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+  #         git_user_signingkey: true
+  #         git_commit_gpgsign: true
+  #     - name: Update Gradle Wrapper
+  #       uses: gradle-update/update-gradle-wrapper-action@v1
+  #       with:
+  #         repo-token: ${{ secrets.CI_TOKEN }}
