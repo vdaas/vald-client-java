@@ -78,7 +78,6 @@ jobs:
           committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
           signoff: true
           delete-branch: true
-          branch-suffix: gradle-version
           base: verify/upgrade-gradle-wrapper # TODO
           title: "Update Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
           body: "Automated pull request to update Gradle Wrapper."
