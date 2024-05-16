@@ -51,20 +51,14 @@ jobs:
           CHECKSUM=$(curl -fsSL "${GRADLE_CHECKSUM_URL_PREFIX}-${LATEST_VERSION}-${GRADLE_CHECKSUM_URL_SUFFIX}" | awk '{print $1}')
           WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
 
-          VERSION=$(make version/gradle)
-          echo "NEED_UPDATE=$([ "${VERSION}" = "${LATEST_VERSION}" ] && echo false || echo true)" | tee -a $GITHUB_OUTPUT
-
           echo "LATEST_VERSION=${LATEST_VERSION}" | tee -a $GITHUB_OUTPUT
           echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
           echo "WRAPPER_ARGS=${WRAPPER_ARGS}"     | tee -a $GITHUB_OUTPUT
       - name: Update root Gradle Wrapper
-        if: ${{ steps.gradle_info.outputs.NEED_UPDATE == 'true' }}
         run: |
           # The first run changes the properfies setting and the second run updates the jar ..etc.
           ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
-          echo "${LATEST_VERSION}" > ./version/GRADLE_VERSION
         env:
-          LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
           WRAPPER_ARGS: ${{ steps.gradle_info.outputs.WRAPPER_ARGS }}
       - name: Check difference
         id: check_diff
