@@ -65,7 +65,7 @@ repositories {
 dependencies {
     implementation 'io.grpc:grpc-stub:1.64.0'
     implementation 'io.grpc:grpc-protobuf:1.64.0'
-    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '4.26.1'
+    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.25.1'
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
     implementation 'build.buf:protovalidate:0.2.1'
 
