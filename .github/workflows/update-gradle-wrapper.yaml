@@ -56,7 +56,7 @@ jobs:
           echo "LATEST_VERSION=${LATEST_VERSION}" | tee -a $GITHUB_OUTPUT
           echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
           echo "WRAPPER_ARGS=${WRAPPER_ARGS}"     | tee -a $GITHUB_OUTPUT
-      - name: Update root Gradle Wrapper
+      - name: Update Gradle Wrapper
         if: ${{ steps.gradle_info.outputs.NEED_UPDATE == 'true' }}
         run: |
           # The first run changes the properfies settings and the second run updates the jar, ..etc.
