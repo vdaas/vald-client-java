@@ -16,7 +16,6 @@
 name: Update Gradle Wrapper
 
 on:
-  pull_request:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
@@ -84,6 +83,6 @@ jobs:
           committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
           signoff: true
           delete-branch: true
-          base: verify/upgrade-gradle-wrapper # TODO
+          base: main
           title: "Update Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
           body: "Automated pull request to update Gradle Wrapper."
