@@ -59,3 +59,24 @@ jobs:
         env:
           LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
           CHECKSUM: ${{ steps.gradle_info.outputs.CHECKSUM }}
+      - name: Check difference
+        id: check_diff
+        run: |
+          if git diff --quiet --exit-code; then
+            echo "Nothing updated"
+          else
+            git diff && git status
+            echo "HAS_GIT_DIFF=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Create PR
+        if: ${{ steps.check_diff.outputs.HAS_GIT_DIFF == 'true' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          author: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          token: ${{ secrets.CI_TOKEN }}
+          committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          signoff: true
+          delete-branch: true
+          base: verify/upgrade-gradle-wrapper # TODO
+          title: "Update Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
+          body: "Automated pull request to update Gradle Wrapper."
