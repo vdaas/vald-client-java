@@ -51,9 +51,6 @@ jobs:
       - name: Check
         run: |
           git diff && git status
-      - name: Build
-        run: |
-          make build
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
           client_type: java
