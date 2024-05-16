@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+SHELL       = bash
 REPO       ?= vdaas
 NAME        = vald
 VALDREPO    = github.com/$(REPO)/$(NAME)
