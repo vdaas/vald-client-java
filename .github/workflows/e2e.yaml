@@ -29,7 +29,7 @@ jobs:
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
           client_type: java
-  build-debug:
+  build-and-e2e:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -55,15 +55,7 @@ jobs:
           git status
       - name: Build
         run: |
-          ./gradlew clean
-          ./gradlew build -x bufFormatApply \
-                          -x bufFormatCheck \
-                          -x bufLint \
-                          -x check \
-                          -x checkKotlinGradlePluginConfigurationErrors \
-                          -x checkKotlinGradlePluginConfigurationErrors \
-                          -x test \
-                          --stacktrace
+          make build
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
           client_type: java

@@ -108,6 +108,19 @@ proto: $(VALD_DIR) $(JAVA_ROOT)
 				-x test
 	cp -r build/bufbuild/generated/main src
 
+.PHONY: build
+## build source
+build:
+	./gradlew clean
+	./gradlew build -x bufFormatApply \
+					-x bufFormatCheck \
+					-x bufLint \
+					-x check \
+					-x checkKotlinGradlePluginConfigurationErrors \
+					-x checkKotlinGradlePluginConfigurationErrors \
+					-x test \
+					--stacktrace
+
 $(JAVA_ROOT):
 	$(call mkdir, $@)
 	$(call rm, -rf, $@/*)
@@ -174,16 +187,7 @@ ci/package/prepare:
 
 .PHONY: ci/package/publish
 ## publich packages
-ci/package/publish:
-	./gradlew clean
-	./gradlew build -x bufFormatApply \
-					-x bufFormatCheck \
-					-x bufLint \
-					-x check \
-					-x checkKotlinGradlePluginConfigurationErrors \
-					-x checkKotlinGradlePluginConfigurationErrors \
-					-x test \
-					--stacktrace
+ci/package/publish: build
 	./gradlew publish -Prelease --stacktrace
 	sleep 120
 	./gradlew closeAndReleaseRepository --stacktrace
