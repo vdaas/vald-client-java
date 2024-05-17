@@ -49,7 +49,7 @@ jobs:
           git config --global --add safe.directory ${GITHUB_WORKSPACE}
       - name: Run auto-merge
         run: |
-          gh pr merge
+          gh pr merge \
               --auto \
               --squash "$PR_URL"
         env:
