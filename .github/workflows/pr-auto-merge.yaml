@@ -39,7 +39,7 @@ jobs:
       - e2e
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.CI_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
