@@ -20,7 +20,7 @@ on:
 jobs:
   e2e:
     runs-on: ubuntu-latest
-    # if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' || ( github.event.pull_request.user.login == 'vdaas-ci' && startsWith(github.event.pull_request.title, 'Bump') ) }}
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' || ( github.event.pull_request.user.login == 'vdaas-ci' && startsWith(github.event.pull_request.title, 'Bump') ) }}
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
@@ -45,10 +45,10 @@ jobs:
       - name: Set Git config
         run: |
           git config --global --add safe.directory ${GITHUB_WORKSPACE}
-      # - name: Run auto-merge
-      #   run: |
-      #     gh pr merge
-      #         --auto \
-      #         --squash "$PR_URL"
-      #   env:
-      #     PR_URL: ${{github.event.pull_request.html_url}}
+      - name: Run auto-merge
+        run: |
+          gh pr merge
+              --auto \
+              --squash "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
