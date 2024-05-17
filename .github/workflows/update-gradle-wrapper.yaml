@@ -1,0 +1,89 @@
+#
+# Copyright (C) 2019-2024 vdaas.org vald team <vald@vdaas.org>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# You may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+name: Update Gradle Wrapper
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      GRADLE_VERSION_URL: "https://services.gradle.org/versions/current"
+      GRADLE_CHECKSUM_URL_PREFIX: "https://services.gradle.org/distributions/gradle"
+      GRADLE_CHECKSUM_URL_SUFFIX: "bin.zip.sha256"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.CI_TOKEN }}
+      - name: Set Git config
+        run: |
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
+      - uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+      - uses: vdaas/vald-client-ci/.github/actions/setup-language@main
+        with:
+          client_type: java
+      - name: Get latest Gradle version and checksum
+        id: gradle_info
+        run: |
+          LATEST_VERSION=$(curl -fsSL "${GRADLE_VERSION_URL}" | jq -r '.version')
+          CHECKSUM=$(curl -fsSL "${GRADLE_CHECKSUM_URL_PREFIX}-${LATEST_VERSION}-${GRADLE_CHECKSUM_URL_SUFFIX}" | awk '{print $1}')
+          WRAPPER_ARGS="--gradle-version ${LATEST_VERSION} --distribution-type bin --gradle-distribution-sha256-sum ${CHECKSUM}"
+
+          VERSION=$(make version/gradle)
+          echo "NEED_UPDATE=$([ "${VERSION}" = "${LATEST_VERSION}" ] && echo false || echo true)" | tee -a $GITHUB_OUTPUT
+
+          echo "LATEST_VERSION=${LATEST_VERSION}" | tee -a $GITHUB_OUTPUT
+          echo "CHECKSUM=${CHECKSUM}"             | tee -a $GITHUB_OUTPUT
+          echo "WRAPPER_ARGS=${WRAPPER_ARGS}"     | tee -a $GITHUB_OUTPUT
+      - name: Update Gradle Wrapper
+        if: ${{ steps.gradle_info.outputs.NEED_UPDATE == 'true' }}
+        run: |
+          # The first run changes the properfies settings and the second run updates the jar, ..etc.
+          ./gradlew wrapper ${WRAPPER_ARGS} && ./gradlew wrapper ${WRAPPER_ARGS}
+          echo "${LATEST_VERSION}" > ./version/GRADLE_VERSION
+        env:
+          LATEST_VERSION: ${{ steps.gradle_info.outputs.LATEST_VERSION }}
+          WRAPPER_ARGS: ${{ steps.gradle_info.outputs.WRAPPER_ARGS }}
+      - uses: gradle/wrapper-validation-action@v3
+      - name: Check difference
+        id: check_diff
+        run: |
+          if git diff --quiet --exit-code; then
+            echo "Nothing updated"
+          else
+            git diff && git status
+            echo "HAS_GIT_DIFF=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Create PR
+        if: ${{ steps.check_diff.outputs.HAS_GIT_DIFF == 'true' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          author: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          token: ${{ secrets.CI_TOKEN }}
+          committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          signoff: true
+          delete-branch: true
+          base: main
+          title: "Bump Gradle Wrapper to ${{ steps.gradle_info.outputs.LATEST_VERSION }}"
+          body: "Automated pull request to update Gradle Wrapper."
