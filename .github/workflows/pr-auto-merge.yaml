@@ -18,39 +18,9 @@ on:
   pull_request:
 
 jobs:
-  e2e:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' || ( github.event.pull_request.user.login == 'vdaas-ci' && startsWith(github.event.pull_request.title, 'Bump') ) }}
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install dependencies
-        run: |
-          make ci/deps/install
-      - name: Build proto
-        run: |
-          export GOPATH=$HOME/go
-          export PATH=$HOME/grpc-java:$PATH
-          make proto
-      - uses: vdaas/vald-client-ci/.github/actions/e2e@main
-        with:
-          client_type: java
-  merge:
-    needs:
-      - e2e
-    runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.CI_TOKEN }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Set Git config
-        run: |
-          git config --global --add safe.directory ${GITHUB_WORKSPACE}
-      - name: Run auto-merge
-        run: |
-          gh pr merge \
-              --auto \
-              --squash "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
+  auto-merge:
+    uses: vdaas/vald-client-ci/.github/workflows/_pr-auto-merge.yaml@main
+    with:
+      client_type: java
+    secrets:
+      CI_TOKEN: ${{ secrets.CI_TOKEN }}
