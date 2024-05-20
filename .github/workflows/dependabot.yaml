@@ -46,12 +46,20 @@ jobs:
           DEPENDABOT_TAR_FILE_NAME: dependabot.tar.gz
       - name: Update Gradle dependencies
         run: |
-          dependabot update \
-                        --file .github/dependabot-cli.yaml \
-                        --local . \
-                        --output dependabot-result.yaml
-          RESULT=$(cat dependabot-result.yaml | yq -e '.output.[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files.[].content' 2>/dev/null) \
-              && [ -n "${RESULT}" ] && echo "${RESULT}" > ./build.gradle || true
+          dependabot update --file .github/dependabot-cli.yaml \
+                            --local . \
+                            --output dependabot-result.yaml
+
+          CHANGED_LIST=$(yq e '.output[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files' dependabot-result.yaml)
+          CHANGED_LIST_NUM=$(echo "${CHANGED_LIST}" | yq '. | length')
+
+          for i in $(seq 0 $((${CHANGED_LIST_NUM}-1))); do
+            NAME=$(echo "${CHANGED_LIST}" | yq ".[${i}].name")
+            CONTENT=$(echo "${CHANGED_LIST}" | yq ".[${i}].content")
+            echo "CONTENT=${CONTENT}"
+            echo "NAME=${NAME}"
+            echo "${CONTENT}" > "${NAME}"
+          done
       - name: Check difference
         id: check_diff
         run: |
