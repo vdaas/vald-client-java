@@ -49,4 +49,24 @@ jobs:
                         --output dependabot-result.yaml
           RESULT=$(cat dependabot-result.yaml | yq -e '.output.[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files.[].content' 2>/dev/null) \
               && [ -n "${RESULT}" ] && echo "${RESULT}" > ./build.gradle
-          git diff && git diff --name-only && git status
+      - name: Check difference
+        id: check_diff
+        run: |
+          if git diff --quiet --exit-code; then
+            echo "Nothing updated"
+          else
+            git diff && git status
+            echo "HAS_GIT_DIFF=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Create PR
+        if: ${{ steps.check_diff.outputs.HAS_GIT_DIFF == 'true' }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          author: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          token: ${{ secrets.CI_TOKEN }}
+          committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
+          signoff: true
+          delete-branch: true
+          base: main
+          title: "Bump Gradle dependencies updates"
+          body: "Automated pull request to update Gradle dependencies."
