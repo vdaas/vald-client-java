@@ -47,5 +47,5 @@ jobs:
                         --file .github/dependabot-cli.yaml \
                         --local . \
                         --output dependabot-result.yaml
-          cat ./dependabot.yaml | yq -e '.output.[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files.[].content' > ./build.gradle
+          cat dependabot-result.yaml | yq -e '.output.[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files.[].content' > ./build.gradle
           git diff && git diff --name-only && git status
