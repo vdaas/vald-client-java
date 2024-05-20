@@ -21,10 +21,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
-
-env:
-  DEPENDABOT_DOWNLOAD_URL: https://api.github.com/repos/dependabot/cli/releases/latest
-
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -41,12 +37,13 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           git_user_signingkey: true
           git_commit_gpgsign: true
-      - uses: actions/setup-go@v5
       - name: Install dependabot CLI
         run: |
-          TAR_NAME="dependabot.tar.gz"
           curl -fsSL -o ${TAR_NAME} $(curl -fsSL ${DEPENDABOT_DOWNLOAD_URL} | grep "browser_download_url.*linux-amd64.tar.gz" | cut -d '"' -f 4)
           tar -xvf ${TAR_NAME} && sudo mv ./dependabot /usr/local/bin/ && rm -rf ${TAR_NAME}
+        env:
+          DEPENDABOT_DOWNLOAD_URL: https://api.github.com/repos/dependabot/cli/releases/latest
+          DEPENDABOT_TAR_FILE_NAME: dependabot.tar.gz
       - name: Update Gradle dependencies
         run: |
           dependabot update \
