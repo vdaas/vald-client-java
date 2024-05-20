@@ -42,6 +42,7 @@ jobs:
           export GOPATH=$HOME/go
           export PATH=$HOME/grpc-java:$PATH
           make proto
+          git diff && git diff --name-only && git status
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
           client_type: java
