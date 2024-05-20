@@ -47,8 +47,8 @@ jobs:
                         --file .github/dependabot-cli.yaml \
                         --local . \
                         --output dependabot-result.yaml
-          RESULT=$(cat dependabot-result.yaml | yq -r '.output.[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files.[].content' 2>/dev/null) \
-              && [ -n "${RESULT}" ] && echo "${RESULT}" > ./build.gradle
+          RESULT=$(cat dependabot-result.yaml | yq -e '.output.[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files.[].content' 2>/dev/null) \
+              && [ -n "${RESULT}" ] && echo "${RESULT}" > ./build.gradle || true
       - name: Check difference
         id: check_diff
         run: |
