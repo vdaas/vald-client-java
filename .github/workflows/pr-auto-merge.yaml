@@ -13,19 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# DO NOT EDIT
-name: "Run E2E test"
+name: "Run automatically merge bot PR"
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 jobs:
-  e2e:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: vdaas/vald-client-ci/.github/actions/e2e@main
-        with:
-          client_type: java
+  auto-merge:
+    uses: vdaas/vald-client-ci/.github/workflows/_pr-auto-merge.yaml@main
+    with:
+      client_type: java
+    secrets:
+      CI_TOKEN: ${{ secrets.CI_TOKEN }}
