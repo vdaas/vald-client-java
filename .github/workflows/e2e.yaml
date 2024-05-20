@@ -29,3 +29,19 @@ jobs:
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
           client_type: java
+
+  build-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          make ci/deps/install
+      - name: Build proto
+        run: |
+          export GOPATH=$HOME/go
+          export PATH=$HOME/grpc-java:$PATH
+          make proto
+      - uses: vdaas/vald-client-ci/.github/actions/e2e@main
+        with:
+          client_type: java
