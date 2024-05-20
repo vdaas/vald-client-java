@@ -4,8 +4,7 @@ job:
     - update-type: all
   ignore-conditions:
     - dependency-name: com.google.protobuf:protobuf-java
-      source: dependabot-result.yaml
-      version-requirement: 3.25.1
+      version-requirement: ">=3.25.1"
   dependency-groups:
     - name: gradle
       rules:
