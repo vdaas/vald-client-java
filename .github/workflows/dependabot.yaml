@@ -38,7 +38,7 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           git_user_signingkey: true
           git_commit_gpgsign: true
-      - uses: actions/setup-go
+      - uses: actions/setup-go@v5
       - name: Install dependabot CLI
         run: go install github.com/dependabot/cli/cmd/dependabot@latest
       - name: Update Gradle dependencies
