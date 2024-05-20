@@ -40,10 +40,7 @@ jobs:
           git_commit_gpgsign: true
       - name: Install dependabot CLI
         run: |
-          # NOTE: https://github.com/dependabot/cli?tab=readme-ov-file#installation
           gh gist view --raw e09e1ecd76d5573e0517a7622009f06f | bash
-        env:
-           GH_TOKEN: ${{ github.token }}
       - name: Update Gradle dependencies
         run: |
           dependabot update \
