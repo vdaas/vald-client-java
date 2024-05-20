@@ -1,0 +1,50 @@
+#
+# Copyright (C) 2019-2024 vdaas.org vald team <vald@vdaas.org>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# You may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+name: Update Gradle dependencies
+
+on:
+  # NOTE: for debug
+  pull_request:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "0 0 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.CI_TOKEN }}
+      - name: Set Git config
+        run: |
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
+      - uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+      - name: Install dependabot CLI
+        run: go install github.com/dependabot/cli/cmd/dependabot@latest
+      - name: Update Gradle dependencies
+        run: |
+          dependabot update \
+                        --file .github/dependabot-cli.yaml \
+                        --local . \
+                        --output dependabot-result.yaml
+          cat ./dependabot.yaml | yq -e '.output.[] | select(.type == "create_pull_request") | .expect.data.updated-dependency-files.[].content' > ./build.gradle
+          git diff && git diff --name-only && git status
