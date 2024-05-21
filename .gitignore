@@ -6,8 +6,6 @@ src/main/java/com/google/protobuf/GoGoProtos.java
 
 wordvecs1000.json
 
-dependabot-result.yaml
-
 # Ignore Gradle project-specific cache directory
 .gradle
 
