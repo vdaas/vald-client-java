@@ -16,8 +16,6 @@
 name: Update Gradle dependencies
 
 on:
-  # NOTE: for debug
-  pull_request:
   workflow_dispatch:
   schedule:
     - cron: "0 12 * * *"
