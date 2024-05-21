@@ -20,10 +20,10 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 12 * * *"
 jobs:
   update:
-    uses: vdaas/vald-client-ci/.github/workflows/_update-deps.yaml@feat/ci/dependabot
+    uses: vdaas/vald-client-ci/.github/workflows/_update-deps.yaml@main
     with:
       config_file_path: .github/dependabot-cli.yaml
     secrets:
