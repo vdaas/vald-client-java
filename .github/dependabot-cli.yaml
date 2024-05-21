@@ -1,0 +1,16 @@
+job:
+  package-manager: gradle
+  allowed-updates:
+    - update-type: all
+  ignore-conditions:
+    - dependency-name: com.google.protobuf:protobuf-java
+      version-requirement: ">=3.25.1"
+  dependency-groups:
+    - name: gradle
+      rules:
+        patterns:
+          - "*"
+  source:
+    directory: /
+    provider: github
+    repo: vdaas/vald-client-java
