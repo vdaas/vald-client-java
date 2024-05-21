@@ -23,41 +23,10 @@ on:
     - cron: "0 0 * * *"
 jobs:
   update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.CI_TOKEN }}
-      - name: Set Git config
-        run: |
-          git config --global --add safe.directory ${GITHUB_WORKSPACE}
-      - uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
-      - uses: vdaas/vald-client-ci/.github/actions/dependabot@feat/ci/dependabot
-        with:
-          config_file_path: ".github/dependabot-cli.yaml"
-      - name: Check difference
-        id: check_diff
-        run: |
-          if git diff --quiet --exit-code; then
-            echo "Nothing updated"
-          else
-            git diff && git status
-            echo "HAS_GIT_DIFF=true" >> $GITHUB_OUTPUT
-          fi
-      - name: Create PR
-        if: ${{ steps.check_diff.outputs.HAS_GIT_DIFF == 'true' }}
-        uses: peter-evans/create-pull-request@v6
-        with:
-          author: "${{ secrets.CI_USER }} <vald@vdaas.org>"
-          token: ${{ secrets.CI_TOKEN }}
-          committer: "${{ secrets.CI_USER }} <vald@vdaas.org>"
-          signoff: true
-          delete-branch: true
-          base: main
-          title: "Bump Gradle dependencies updates"
-          body: "Automated pull request to update Gradle dependencies."
+    uses: vdaas/vald-client-ci/.github/workflows/_update-deps.yaml@feat/ci/dependabot
+    with:
+      config_file_path: .github/dependabot-cli.yaml
+    secrets:
+      CI_USER: ${{ secrets.CI_USER }}
+      CI_TOKEN: ${{ secrets.CI_TOKEN }}
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
