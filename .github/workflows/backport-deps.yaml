@@ -13,19 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-name: Update Gradle dependencies
-
+name: "Run backport deps update PR"
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 12 * * *"
+  push:
+    branches:
+      - main
 jobs:
-  update:
-    uses: vdaas/vald-client-ci/.github/workflows/_update-deps.yaml@main
-    with:
-      config_file_path: .github/dependabot-cli.yaml
-      pr_branch_name: chore/update-gradle
+  backport:
+    uses: vdaas/vald-client-ci/.github/workflows/_backport-deps.yaml@main
     secrets:
-      CI_USER: ${{ secrets.CI_USER }}
       CI_TOKEN: ${{ secrets.CI_TOKEN }}
       GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
