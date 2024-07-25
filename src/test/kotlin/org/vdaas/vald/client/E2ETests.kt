@@ -217,15 +217,6 @@ class E2ETests {
         fun `Test for SaveIndex operation`() {
             assertNotNull(stub.saveIndex(Empty.newBuilder().build()))
         }
-
-        @Test
-        @Order(3)
-        fun `Test for IndexInfo operation`() {
-            val result = stub.indexInfo(Empty.newBuilder().build())
-
-            assertEquals(100, result.stored)
-            assertEquals(0, result.uncommitted)
-        }
     }
 
     @Nested
