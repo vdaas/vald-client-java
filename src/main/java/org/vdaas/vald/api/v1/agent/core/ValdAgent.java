@@ -26,22 +26,17 @@ public final class ValdAgent {
     java.lang.String[] descriptorData = {
       "\n\031v1/agent/core/agent.proto\022\007core.v1\032\034go" +
       "ogle/api/annotations.proto\032\030v1/payload/p" +
-      "ayload.proto2\336\003\n\005Agent\022_\n\013CreateIndex\022&." +
+      "ayload.proto2\267\002\n\005Agent\022k\n\013CreateIndex\022&." +
       "payload.v1.Control.CreateIndexRequest\032\021." +
-      "payload.v1.Empty\"\025\202\323\344\223\002\017\022\r/index/create\022" +
-      "F\n\tSaveIndex\022\021.payload.v1.Empty\032\021.payloa" +
-      "d.v1.Empty\"\023\202\323\344\223\002\r\022\013/index/save\022m\n\022Creat" +
-      "eAndSaveIndex\022&.payload.v1.Control.Creat" +
-      "eIndexRequest\032\021.payload.v1.Empty\"\034\202\323\344\223\002\026" +
-      "\022\024/index/createandsave\022Q\n\tIndexInfo\022\021.pa" +
-      "yload.v1.Empty\032\034.payload.v1.Info.Index.C" +
-      "ount\"\023\202\323\344\223\002\r\022\013/index/info\022j\n\014GetTimestam" +
-      "p\022&.payload.v1.Object.GetTimestampReques" +
-      "t\032\034.payload.v1.Object.Timestamp\"\024\202\323\344\223\002\016\022" +
-      "\014/object/metaBc\n org.vdaas.vald.api.v1.a" +
-      "gent.coreB\tValdAgentP\001Z2github.com/vdaas" +
-      "/vald/apis/grpc/v1/agent/core;coreb\006prot" +
-      "o3"
+      "payload.v1.Empty\"!\202\323\344\223\002\033\022\031/index/create/" +
+      "{pool_size}\022F\n\tSaveIndex\022\021.payload.v1.Em" +
+      "pty\032\021.payload.v1.Empty\"\023\202\323\344\223\002\r\022\013/index/s" +
+      "ave\022y\n\022CreateAndSaveIndex\022&.payload.v1.C" +
+      "ontrol.CreateIndexRequest\032\021.payload.v1.E" +
+      "mpty\"(\202\323\344\223\002\"\022 /index/createandsave/{pool" +
+      "_size}Bc\n org.vdaas.vald.api.v1.agent.co" +
+      "reB\tValdAgentP\001Z2github.com/vdaas/vald/a" +
+      "pis/grpc/v1/agent/core;coreb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -4851,8 +4851,8 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public interface GetTimestampRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:payload.v1.Object.GetTimestampRequest)
+  public interface TimestampRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Object.TimestampRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4887,38 +4887,38 @@ private static final long serialVersionUID = 0L;
    * Represent a request to fetch vector meta data.
    * </pre>
    *
-   * Protobuf type {@code payload.v1.Object.GetTimestampRequest}
+   * Protobuf type {@code payload.v1.Object.TimestampRequest}
    */
-  public static final class GetTimestampRequest extends
+  public static final class TimestampRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:payload.v1.Object.GetTimestampRequest)
-      GetTimestampRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:payload.v1.Object.TimestampRequest)
+      TimestampRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GetTimestampRequest.newBuilder() to construct.
-    private GetTimestampRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use TimestampRequest.newBuilder() to construct.
+    private TimestampRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GetTimestampRequest() {
+    private TimestampRequest() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GetTimestampRequest();
+      return new TimestampRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_GetTimestampRequest_descriptor;
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_TimestampRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_GetTimestampRequest_fieldAccessorTable
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_TimestampRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.class, org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.Builder.class);
+              org.vdaas.vald.api.v1.payload.Object.TimestampRequest.class, org.vdaas.vald.api.v1.payload.Object.TimestampRequest.Builder.class);
     }
 
     private int bitField0_;
@@ -5000,10 +5000,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest)) {
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Object.TimestampRequest)) {
         return super.equals(obj);
       }
-      org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest other = (org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest) obj;
+      org.vdaas.vald.api.v1.payload.Object.TimestampRequest other = (org.vdaas.vald.api.v1.payload.Object.TimestampRequest) obj;
 
       if (hasId() != other.hasId()) return false;
       if (hasId()) {
@@ -5030,44 +5030,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(byte[] data)
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(java.io.InputStream input)
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5075,26 +5075,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseDelimitedFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest parseFrom(
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5107,7 +5107,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest prototype) {
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Object.TimestampRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5127,26 +5127,26 @@ private static final long serialVersionUID = 0L;
      * Represent a request to fetch vector meta data.
      * </pre>
      *
-     * Protobuf type {@code payload.v1.Object.GetTimestampRequest}
+     * Protobuf type {@code payload.v1.Object.TimestampRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:payload.v1.Object.GetTimestampRequest)
-        org.vdaas.vald.api.v1.payload.Object.GetTimestampRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:payload.v1.Object.TimestampRequest)
+        org.vdaas.vald.api.v1.payload.Object.TimestampRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_GetTimestampRequest_descriptor;
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_TimestampRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_GetTimestampRequest_fieldAccessorTable
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_TimestampRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.class, org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.Builder.class);
+                org.vdaas.vald.api.v1.payload.Object.TimestampRequest.class, org.vdaas.vald.api.v1.payload.Object.TimestampRequest.Builder.class);
       }
 
-      // Construct using org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.newBuilder()
+      // Construct using org.vdaas.vald.api.v1.payload.Object.TimestampRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5177,17 +5177,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_GetTimestampRequest_descriptor;
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Object_TimestampRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest getDefaultInstanceForType() {
-        return org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.getDefaultInstance();
+      public org.vdaas.vald.api.v1.payload.Object.TimestampRequest getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Object.TimestampRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest build() {
-        org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest result = buildPartial();
+      public org.vdaas.vald.api.v1.payload.Object.TimestampRequest build() {
+        org.vdaas.vald.api.v1.payload.Object.TimestampRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5195,14 +5195,14 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest buildPartial() {
-        org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest result = new org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest(this);
+      public org.vdaas.vald.api.v1.payload.Object.TimestampRequest buildPartial() {
+        org.vdaas.vald.api.v1.payload.Object.TimestampRequest result = new org.vdaas.vald.api.v1.payload.Object.TimestampRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest result) {
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Object.TimestampRequest result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -5248,16 +5248,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest) {
-          return mergeFrom((org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest)other);
+        if (other instanceof org.vdaas.vald.api.v1.payload.Object.TimestampRequest) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Object.TimestampRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest other) {
-        if (other == org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Object.TimestampRequest other) {
+        if (other == org.vdaas.vald.api.v1.payload.Object.TimestampRequest.getDefaultInstance()) return this;
         if (other.hasId()) {
           mergeId(other.getId());
         }
@@ -5480,23 +5480,23 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:payload.v1.Object.GetTimestampRequest)
+      // @@protoc_insertion_point(builder_scope:payload.v1.Object.TimestampRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:payload.v1.Object.GetTimestampRequest)
-    private static final org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:payload.v1.Object.TimestampRequest)
+    private static final org.vdaas.vald.api.v1.payload.Object.TimestampRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest();
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Object.TimestampRequest();
     }
 
-    public static org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest getDefaultInstance() {
+    public static org.vdaas.vald.api.v1.payload.Object.TimestampRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetTimestampRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetTimestampRequest>() {
+    private static final com.google.protobuf.Parser<TimestampRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TimestampRequest>() {
       @java.lang.Override
-      public GetTimestampRequest parsePartialFrom(
+      public TimestampRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5515,17 +5515,17 @@ private static final long serialVersionUID = 0L;
       }
     };
 
-    public static com.google.protobuf.Parser<GetTimestampRequest> parser() {
+    public static com.google.protobuf.Parser<TimestampRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GetTimestampRequest> getParserForType() {
+    public com.google.protobuf.Parser<TimestampRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.vdaas.vald.api.v1.payload.Object.GetTimestampRequest getDefaultInstanceForType() {
+    public org.vdaas.vald.api.v1.payload.Object.TimestampRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
