@@ -30,6 +30,7 @@ import org.vdaas.vald.api.v1.payload.Update
 import org.vdaas.vald.api.v1.payload.Upsert
 import org.vdaas.vald.api.v1.vald.InsertGrpc
 import org.vdaas.vald.api.v1.vald.ObjectGrpc
+import org.vdaas.vald.api.v1.vald.IndexGrpc
 import org.vdaas.vald.api.v1.vald.RemoveGrpc
 import org.vdaas.vald.api.v1.vald.SearchGrpc
 import org.vdaas.vald.api.v1.vald.UpdateGrpc
@@ -151,7 +152,7 @@ class E2ETests {
                                 }
                             }
                     )
-            
+
             data.subList(insertStartIndex, insertStartIndex + insertCount).map {
                 requestObserver.onNext(
                         Insert.Request.newBuilder()
@@ -170,7 +171,7 @@ class E2ETests {
             finishLatch.await(1, TimeUnit.MINUTES)
 
             assertEquals(insertCount, resultList.size)
-            resultList.forEach {sloc -> 
+            resultList.forEach {sloc ->
                 when (sloc.payloadCase) {
                     Object.StreamLocation.PayloadCase.LOCATION -> {
                         assertEquals(1, sloc.location.ipsCount)
@@ -216,9 +217,30 @@ class E2ETests {
         fun `Test for SaveIndex operation`() {
             assertNotNull(stub.saveIndex(Empty.newBuilder().build()))
         }
+    }
+
+    @Nested
+    @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
+    @Order(3)
+    inner class IndexTests {
+
+        private lateinit var stub: IndexGrpc.IndexBlockingStub
+        private lateinit var asyncStub: IndexGrpc.IndexStub
+
+        @BeforeEach
+        fun setUp() {
+            createChannel()
+            stub = IndexGrpc.newBlockingStub(channel)
+            asyncStub = IndexGrpc.newStub(channel)
+        }
+
+        @AfterEach
+        fun tearDown() {
+            destroyChannel()
+        }
 
         @Test
-        @Order(3)
+        @Order(1)
         fun `Test for IndexInfo operation`() {
             val result = stub.indexInfo(Empty.newBuilder().build())
 
@@ -229,7 +251,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
-    @Order(3)
+    @Order(4)
     inner class ObjectTests {
 
         private lateinit var stub: ObjectGrpc.ObjectBlockingStub
@@ -303,7 +325,7 @@ class E2ETests {
             finishLatch.await(1, TimeUnit.MINUTES)
 
             assertEquals(resultList.size, getCount)
-            resultList.forEach {svec -> 
+            resultList.forEach {svec ->
                 when (svec.payloadCase) {
                     Object.StreamVector.PayloadCase.VECTOR -> {}
                     Object.StreamVector.PayloadCase.STATUS -> {
@@ -317,7 +339,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
-    @Order(4)
+    @Order(5)
     inner class SearchTests {
 
         private lateinit var stub: SearchGrpc.SearchBlockingStub
@@ -445,7 +467,7 @@ class E2ETests {
                             .build()
             val req = Search.IDRequest.newBuilder().setId(data[0].id).setConfig(cfg).build()
             val result = stub.searchByID(req)
-            
+
             assertEquals(3, result.resultsCount)
         }
 
@@ -531,7 +553,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
-    @Order(5)
+    @Order(6)
     inner class UpdateTests {
 
         private lateinit var stub: UpdateGrpc.UpdateBlockingStub
@@ -650,7 +672,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
-    @Order(6)
+    @Order(7)
     inner class UpsertTests {
 
         private lateinit var stub: UpsertGrpc.UpsertBlockingStub
@@ -768,7 +790,7 @@ class E2ETests {
 
     @Nested
     @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
-    @Order(7)
+    @Order(8)
     inner class RemoveTests {
 
         private lateinit var stub: RemoveGrpc.RemoveBlockingStub

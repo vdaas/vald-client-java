@@ -251,10 +251,10 @@ public final class ValdPayload {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_v1_Object_Vector_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_payload_v1_Object_GetTimestampRequest_descriptor;
+    internal_static_payload_v1_Object_TimestampRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_payload_v1_Object_GetTimestampRequest_fieldAccessorTable;
+      internal_static_payload_v1_Object_TimestampRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_v1_Object_Timestamp_descriptor;
   static final 
@@ -350,6 +350,16 @@ public final class ValdPayload {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_v1_Info_Index_Count_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_v1_Info_Index_Detail_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_v1_Info_Index_Detail_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_v1_Info_Index_Detail_CountsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_v1_Info_Index_Detail_CountsEntry_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_v1_Info_Index_UUID_descriptor;
   static final 
@@ -569,7 +579,7 @@ public final class ValdPayload {
       "\006\n\002Lt\020\005\032]\n\006Config\0225\n\027skip_strict_exist_c" +
       "heck\030\001 \001(\010R\024skipStrictExistCheck\022\034\n\ttime" +
       "stamp\030\003 \001(\003R\ttimestamp\"\022\n\005Flush\032\t\n\007Reque" +
-      "st\"\264\013\n\006Object\032u\n\rVectorRequest\022/\n\002id\030\001 \001" +
+      "st\"\261\013\n\006Object\032u\n\rVectorRequest\022/\n\002id\030\001 \001" +
       "(\0132\025.payload.v1.Object.IDB\010\272H\005\222\001\002\010\002R\002id\022" +
       "3\n\007filters\030\002 \001(\0132\031.payload.v1.Filter.Con" +
       "figR\007filters\0326\n\010Distance\022\016\n\002id\030\001 \001(\tR\002id" +
@@ -580,85 +590,90 @@ public final class ValdPayload {
       "oad\032\035\n\002ID\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\032\027\n\003ID" +
       "s\022\020\n\003ids\030\001 \003(\tR\003ids\032a\n\006Vector\022\027\n\002id\030\001 \001(" +
       "\tB\007\272H\004r\002\020\001R\002id\022 \n\006vector\030\002 \003(\002B\010\272H\005\222\001\002\010\002" +
-      "R\006vector\022\034\n\ttimestamp\030\003 \001(\003R\ttimestamp\032F" +
-      "\n\023GetTimestampRequest\022/\n\002id\030\001 \001(\0132\025.payl" +
-      "oad.v1.Object.IDB\010\272H\005\222\001\002\010\002R\002id\032B\n\tTimest" +
-      "amp\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\022\034\n\ttimestam" +
-      "p\030\002 \001(\003R\ttimestamp\032>\n\007Vectors\0223\n\007vectors" +
-      "\030\001 \003(\0132\031.payload.v1.Object.VectorR\007vecto" +
-      "rs\032|\n\014StreamVector\0223\n\006vector\030\001 \001(\0132\031.pay" +
-      "load.v1.Object.VectorH\000R\006vector\022,\n\006statu" +
+      "R\006vector\022\034\n\ttimestamp\030\003 \001(\003R\ttimestamp\032C" +
+      "\n\020TimestampRequest\022/\n\002id\030\001 \001(\0132\025.payload" +
+      ".v1.Object.IDB\010\272H\005\222\001\002\010\002R\002id\032B\n\tTimestamp" +
+      "\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\022\034\n\ttimestamp\030\002" +
+      " \001(\003R\ttimestamp\032>\n\007Vectors\0223\n\007vectors\030\001 " +
+      "\003(\0132\031.payload.v1.Object.VectorR\007vectors\032" +
+      "|\n\014StreamVector\0223\n\006vector\030\001 \001(\0132\031.payloa" +
+      "d.v1.Object.VectorH\000R\006vector\022,\n\006status\030\002" +
+      " \001(\0132\022.google.rpc.StatusH\000R\006statusB\t\n\007pa" +
+      "yload\032=\n\rReshapeVector\022\026\n\006object\030\001 \001(\014R\006" +
+      "object\022\024\n\005shape\030\002 \003(\005R\005shape\0327\n\004Blob\022\027\n\002" +
+      "id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\022\026\n\006object\030\002 \001(\014R\006o" +
+      "bject\032t\n\nStreamBlob\022-\n\004blob\030\001 \001(\0132\027.payl" +
+      "oad.v1.Object.BlobH\000R\004blob\022,\n\006status\030\002 \001" +
+      "(\0132\022.google.rpc.StatusH\000R\006statusB\t\n\007payl" +
+      "oad\032D\n\010Location\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004u" +
+      "uid\030\002 \001(\tR\004uuid\022\020\n\003ips\030\003 \003(\tR\003ips\032\204\001\n\016St" +
+      "reamLocation\0229\n\010location\030\001 \001(\0132\033.payload" +
+      ".v1.Object.LocationH\000R\010location\022,\n\006statu" +
       "s\030\002 \001(\0132\022.google.rpc.StatusH\000R\006statusB\t\n" +
-      "\007payload\032=\n\rReshapeVector\022\026\n\006object\030\001 \001(" +
-      "\014R\006object\022\024\n\005shape\030\002 \003(\005R\005shape\0327\n\004Blob\022" +
-      "\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\022\026\n\006object\030\002 \001(\014" +
-      "R\006object\032t\n\nStreamBlob\022-\n\004blob\030\001 \001(\0132\027.p" +
-      "ayload.v1.Object.BlobH\000R\004blob\022,\n\006status\030" +
-      "\002 \001(\0132\022.google.rpc.StatusH\000R\006statusB\t\n\007p" +
-      "ayload\032D\n\010Location\022\022\n\004name\030\001 \001(\tR\004name\022\022" +
-      "\n\004uuid\030\002 \001(\tR\004uuid\022\020\n\003ips\030\003 \003(\tR\003ips\032\204\001\n" +
-      "\016StreamLocation\0229\n\010location\030\001 \001(\0132\033.payl" +
-      "oad.v1.Object.LocationH\000R\010location\022,\n\006st" +
-      "atus\030\002 \001(\0132\022.google.rpc.StatusH\000R\006status" +
-      "B\t\n\007payload\032F\n\tLocations\0229\n\tlocations\030\001 " +
-      "\003(\0132\033.payload.v1.Object.LocationR\tlocati" +
-      "ons\032\213\001\n\004List\032\t\n\007Request\032x\n\010Response\0223\n\006v" +
-      "ector\030\001 \001(\0132\031.payload.v1.Object.VectorH\000" +
-      "R\006vector\022,\n\006status\030\002 \001(\0132\022.google.rpc.St" +
-      "atusH\000R\006statusB\t\n\007payload\"E\n\007Control\032:\n\022" +
-      "CreateIndexRequest\022$\n\tpool_size\030\001 \001(\rB\007\272" +
-      "H\004*\002(\000R\010poolSize\"f\n\nDiscoverer\032X\n\007Reques" +
-      "t\022\033\n\004name\030\001 \001(\tB\007\272H\004r\002\020\001R\004name\022\034\n\tnamesp" +
-      "ace\030\002 \001(\tR\tnamespace\022\022\n\004node\030\003 \001(\tR\004node" +
-      "\"\214\r\n\004Info\032\312\001\n\005Index\032u\n\005Count\022\026\n\006stored\030\001" +
-      " \001(\rR\006stored\022 \n\013uncommitted\030\002 \001(\rR\013uncom" +
-      "mitted\022\032\n\010indexing\030\003 \001(\010R\010indexing\022\026\n\006sa" +
-      "ving\030\004 \001(\010R\006saving\032J\n\004UUID\032\037\n\tCommitted\022" +
-      "\022\n\004uuid\030\001 \001(\tR\004uuid\032!\n\013Uncommitted\022\022\n\004uu" +
-      "id\030\001 \001(\tR\004uuid\032\357\001\n\003Pod\022\031\n\010app_name\030\001 \001(\t" +
-      "R\007appName\022\022\n\004name\030\002 \001(\tR\004name\022\034\n\tnamespa" +
-      "ce\030\003 \001(\tR\tnamespace\022\027\n\002ip\030\004 \001(\tB\007\272H\004r\002x\001" +
-      "R\002ip\022&\n\003cpu\030\005 \001(\0132\024.payload.v1.Info.CPUR" +
-      "\003cpu\022/\n\006memory\030\006 \001(\0132\027.payload.v1.Info.M" +
-      "emoryR\006memory\022)\n\004node\030\007 \001(\0132\025.payload.v1" +
-      ".Info.NodeR\004node\032\350\001\n\004Node\022\022\n\004name\030\001 \001(\tR" +
-      "\004name\022#\n\rinternal_addr\030\002 \001(\tR\014internalAd" +
-      "dr\022#\n\rexternal_addr\030\003 \001(\tR\014externalAddr\022" +
-      "&\n\003cpu\030\004 \001(\0132\024.payload.v1.Info.CPUR\003cpu\022" +
-      "/\n\006memory\030\005 \001(\0132\027.payload.v1.Info.Memory" +
-      "R\006memory\022)\n\004Pods\030\006 \001(\0132\025.payload.v1.Info" +
-      ".PodsR\004Pods\032\202\002\n\007Service\022\022\n\004name\030\001 \001(\tR\004n" +
-      "ame\022\035\n\ncluster_ip\030\002 \001(\tR\tclusterIp\022\037\n\013cl" +
-      "uster_ips\030\003 \003(\tR\nclusterIps\0222\n\005ports\030\004 \003" +
-      "(\0132\034.payload.v1.Info.ServicePortR\005ports\022" +
-      "/\n\006labels\030\005 \001(\0132\027.payload.v1.Info.Labels" +
-      "R\006labels\022>\n\013annotations\030\006 \001(\0132\034.payload." +
-      "v1.Info.AnnotationsR\013annotations\0325\n\013Serv" +
-      "icePort\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004port\030\002 \001(" +
-      "\005R\004port\032\200\001\n\006Labels\022;\n\006labels\030\001 \003(\0132#.pay" +
-      "load.v1.Info.Labels.LabelsEntryR\006labels\032" +
-      "9\n\013LabelsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005valu" +
-      "e\030\002 \001(\tR\005value:\0028\001\032\236\001\n\013Annotations\022O\n\013an" +
-      "notations\030\001 \003(\0132-.payload.v1.Info.Annota" +
-      "tions.AnnotationsEntryR\013annotations\032>\n\020A" +
-      "nnotationsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005val" +
-      "ue\030\002 \001(\tR\005value:\0028\001\032K\n\003CPU\022\024\n\005limit\030\001 \001(" +
-      "\001R\005limit\022\030\n\007request\030\002 \001(\001R\007request\022\024\n\005us" +
-      "age\030\003 \001(\001R\005usage\032N\n\006Memory\022\024\n\005limit\030\001 \001(" +
-      "\001R\005limit\022\030\n\007request\030\002 \001(\001R\007request\022\024\n\005us" +
-      "age\030\003 \001(\001R\005usage\032:\n\004Pods\0222\n\004pods\030\001 \003(\0132\024" +
-      ".payload.v1.Info.PodB\010\272H\005\222\001\002\010\001R\004pods\032>\n\005" +
-      "Nodes\0225\n\005nodes\030\001 \003(\0132\025.payload.v1.Info.N" +
-      "odeB\010\272H\005\222\001\002\010\001R\005nodes\032J\n\010Services\022>\n\010serv" +
-      "ices\030\001 \003(\0132\030.payload.v1.Info.ServiceB\010\272H" +
-      "\005\222\001\002\010\001R\010services\032\025\n\003IPs\022\016\n\002ip\030\001 \003(\tR\002ip\"" +
-      "z\n\006Mirror\0320\n\006Target\022\022\n\004host\030\001 \001(\tR\004host\022" +
-      "\022\n\004port\030\002 \001(\rR\004port\032>\n\007Targets\0223\n\007target" +
-      "s\030\001 \003(\0132\031.payload.v1.Mirror.TargetR\007targ" +
-      "ets\"\007\n\005EmptyBd\n\035org.vdaas.vald.api.v1.pa" +
-      "yloadB\013ValdPayloadP\001Z*github.com/vdaas/v" +
-      "ald/apis/grpc/v1/payload\242\002\007Payloadb\006prot" +
-      "o3"
+      "\007payload\032F\n\tLocations\0229\n\tlocations\030\001 \003(\013" +
+      "2\033.payload.v1.Object.LocationR\tlocations" +
+      "\032\213\001\n\004List\032\t\n\007Request\032x\n\010Response\0223\n\006vect" +
+      "or\030\001 \001(\0132\031.payload.v1.Object.VectorH\000R\006v" +
+      "ector\022,\n\006status\030\002 \001(\0132\022.google.rpc.Statu" +
+      "sH\000R\006statusB\t\n\007payload\"E\n\007Control\032:\n\022Cre" +
+      "ateIndexRequest\022$\n\tpool_size\030\001 \001(\rB\007\272H\004*" +
+      "\002(\000R\010poolSize\"f\n\nDiscoverer\032X\n\007Request\022\033" +
+      "\n\004name\030\001 \001(\tB\007\272H\004r\002\020\001R\004name\022\034\n\tnamespace" +
+      "\030\002 \001(\tR\tnamespace\022\022\n\004node\030\003 \001(\tR\004node\"\356\016" +
+      "\n\004Info\032\254\003\n\005Index\032u\n\005Count\022\026\n\006stored\030\001 \001(" +
+      "\rR\006stored\022 \n\013uncommitted\030\002 \001(\rR\013uncommit" +
+      "ted\022\032\n\010indexing\030\003 \001(\010R\010indexing\022\026\n\006savin" +
+      "g\030\004 \001(\010R\006saving\032\337\001\n\006Detail\022A\n\006counts\030\001 \003" +
+      "(\0132).payload.v1.Info.Index.Detail.Counts" +
+      "EntryR\006counts\022\030\n\007replica\030\002 \001(\rR\007replica\022" +
+      "\037\n\013live_agents\030\003 \001(\rR\nliveAgents\032W\n\013Coun" +
+      "tsEntry\022\020\n\003key\030\001 \001(\tR\003key\0222\n\005value\030\002 \001(\013" +
+      "2\034.payload.v1.Info.Index.CountR\005value:\0028" +
+      "\001\032J\n\004UUID\032\037\n\tCommitted\022\022\n\004uuid\030\001 \001(\tR\004uu" +
+      "id\032!\n\013Uncommitted\022\022\n\004uuid\030\001 \001(\tR\004uuid\032\357\001" +
+      "\n\003Pod\022\031\n\010app_name\030\001 \001(\tR\007appName\022\022\n\004name" +
+      "\030\002 \001(\tR\004name\022\034\n\tnamespace\030\003 \001(\tR\tnamespa" +
+      "ce\022\027\n\002ip\030\004 \001(\tB\007\272H\004r\002x\001R\002ip\022&\n\003cpu\030\005 \001(\013" +
+      "2\024.payload.v1.Info.CPUR\003cpu\022/\n\006memory\030\006 " +
+      "\001(\0132\027.payload.v1.Info.MemoryR\006memory\022)\n\004" +
+      "node\030\007 \001(\0132\025.payload.v1.Info.NodeR\004node\032" +
+      "\350\001\n\004Node\022\022\n\004name\030\001 \001(\tR\004name\022#\n\rinternal" +
+      "_addr\030\002 \001(\tR\014internalAddr\022#\n\rexternal_ad" +
+      "dr\030\003 \001(\tR\014externalAddr\022&\n\003cpu\030\004 \001(\0132\024.pa" +
+      "yload.v1.Info.CPUR\003cpu\022/\n\006memory\030\005 \001(\0132\027" +
+      ".payload.v1.Info.MemoryR\006memory\022)\n\004Pods\030" +
+      "\006 \001(\0132\025.payload.v1.Info.PodsR\004Pods\032\202\002\n\007S" +
+      "ervice\022\022\n\004name\030\001 \001(\tR\004name\022\035\n\ncluster_ip" +
+      "\030\002 \001(\tR\tclusterIp\022\037\n\013cluster_ips\030\003 \003(\tR\n" +
+      "clusterIps\0222\n\005ports\030\004 \003(\0132\034.payload.v1.I" +
+      "nfo.ServicePortR\005ports\022/\n\006labels\030\005 \001(\0132\027" +
+      ".payload.v1.Info.LabelsR\006labels\022>\n\013annot" +
+      "ations\030\006 \001(\0132\034.payload.v1.Info.Annotatio" +
+      "nsR\013annotations\0325\n\013ServicePort\022\022\n\004name\030\001" +
+      " \001(\tR\004name\022\022\n\004port\030\002 \001(\005R\004port\032\200\001\n\006Label" +
+      "s\022;\n\006labels\030\001 \003(\0132#.payload.v1.Info.Labe" +
+      "ls.LabelsEntryR\006labels\0329\n\013LabelsEntry\022\020\n" +
+      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028" +
+      "\001\032\236\001\n\013Annotations\022O\n\013annotations\030\001 \003(\0132-" +
+      ".payload.v1.Info.Annotations.Annotations" +
+      "EntryR\013annotations\032>\n\020AnnotationsEntry\022\020" +
+      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\002" +
+      "8\001\032K\n\003CPU\022\024\n\005limit\030\001 \001(\001R\005limit\022\030\n\007reque" +
+      "st\030\002 \001(\001R\007request\022\024\n\005usage\030\003 \001(\001R\005usage\032" +
+      "N\n\006Memory\022\024\n\005limit\030\001 \001(\001R\005limit\022\030\n\007reque" +
+      "st\030\002 \001(\001R\007request\022\024\n\005usage\030\003 \001(\001R\005usage\032" +
+      ":\n\004Pods\0222\n\004pods\030\001 \003(\0132\024.payload.v1.Info." +
+      "PodB\010\272H\005\222\001\002\010\001R\004pods\032>\n\005Nodes\0225\n\005nodes\030\001 " +
+      "\003(\0132\025.payload.v1.Info.NodeB\010\272H\005\222\001\002\010\001R\005no" +
+      "des\032J\n\010Services\022>\n\010services\030\001 \003(\0132\030.payl" +
+      "oad.v1.Info.ServiceB\010\272H\005\222\001\002\010\001R\010services\032" +
+      "\025\n\003IPs\022\016\n\002ip\030\001 \003(\tR\002ip\"z\n\006Mirror\0320\n\006Targ" +
+      "et\022\022\n\004host\030\001 \001(\tR\004host\022\022\n\004port\030\002 \001(\rR\004po" +
+      "rt\032>\n\007Targets\0223\n\007targets\030\001 \003(\0132\031.payload" +
+      ".v1.Mirror.TargetR\007targets\"\007\n\005EmptyBd\n\035o" +
+      "rg.vdaas.vald.api.v1.payloadB\013ValdPayloa" +
+      "dP\001Z*github.com/vdaas/vald/apis/grpc/v1/" +
+      "payload\242\002\007Payloadb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -949,11 +964,11 @@ public final class ValdPayload {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_v1_Object_Vector_descriptor,
         new java.lang.String[] { "Id", "Vector", "Timestamp", });
-    internal_static_payload_v1_Object_GetTimestampRequest_descriptor =
+    internal_static_payload_v1_Object_TimestampRequest_descriptor =
       internal_static_payload_v1_Object_descriptor.getNestedTypes().get(6);
-    internal_static_payload_v1_Object_GetTimestampRequest_fieldAccessorTable = new
+    internal_static_payload_v1_Object_TimestampRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_payload_v1_Object_GetTimestampRequest_descriptor,
+        internal_static_payload_v1_Object_TimestampRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_payload_v1_Object_Timestamp_descriptor =
       internal_static_payload_v1_Object_descriptor.getNestedTypes().get(7);
@@ -1069,8 +1084,20 @@ public final class ValdPayload {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_v1_Info_Index_Count_descriptor,
         new java.lang.String[] { "Stored", "Uncommitted", "Indexing", "Saving", });
-    internal_static_payload_v1_Info_Index_UUID_descriptor =
+    internal_static_payload_v1_Info_Index_Detail_descriptor =
       internal_static_payload_v1_Info_Index_descriptor.getNestedTypes().get(1);
+    internal_static_payload_v1_Info_Index_Detail_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_v1_Info_Index_Detail_descriptor,
+        new java.lang.String[] { "Counts", "Replica", "LiveAgents", });
+    internal_static_payload_v1_Info_Index_Detail_CountsEntry_descriptor =
+      internal_static_payload_v1_Info_Index_Detail_descriptor.getNestedTypes().get(0);
+    internal_static_payload_v1_Info_Index_Detail_CountsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_v1_Info_Index_Detail_CountsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_payload_v1_Info_Index_UUID_descriptor =
+      internal_static_payload_v1_Info_Index_descriptor.getNestedTypes().get(2);
     internal_static_payload_v1_Info_Index_UUID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_v1_Info_Index_UUID_descriptor,

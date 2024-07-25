@@ -142,6 +142,37 @@ public final class ObjectGrpc {
     return getStreamListObjectMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.TimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Timestamp> getGetTimestampMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTimestamp",
+      requestType = org.vdaas.vald.api.v1.payload.Object.TimestampRequest.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.Timestamp.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.TimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Timestamp> getGetTimestampMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Object.TimestampRequest, org.vdaas.vald.api.v1.payload.Object.Timestamp> getGetTimestampMethod;
+    if ((getGetTimestampMethod = ObjectGrpc.getGetTimestampMethod) == null) {
+      synchronized (ObjectGrpc.class) {
+        if ((getGetTimestampMethod = ObjectGrpc.getGetTimestampMethod) == null) {
+          ObjectGrpc.getGetTimestampMethod = getGetTimestampMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Object.TimestampRequest, org.vdaas.vald.api.v1.payload.Object.Timestamp>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTimestamp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.TimestampRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.Timestamp.getDefaultInstance()))
+              .setSchemaDescriptor(new ObjectMethodDescriptorSupplier("GetTimestamp"))
+              .build();
+        }
+      }
+    }
+    return getGetTimestampMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -232,6 +263,16 @@ public final class ObjectGrpc {
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.List.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamListObjectMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    default void getTimestamp(org.vdaas.vald.api.v1.payload.Object.TimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Timestamp> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTimestampMethod(), responseObserver);
+    }
   }
 
   /**
@@ -310,6 +351,17 @@ public final class ObjectGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getStreamListObjectMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    public void getTimestamp(org.vdaas.vald.api.v1.payload.Object.TimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Timestamp> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTimestampMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -361,6 +413,16 @@ public final class ObjectGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getStreamListObjectMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Timestamp getTimestamp(org.vdaas.vald.api.v1.payload.Object.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTimestampMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -403,12 +465,24 @@ public final class ObjectGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetObjectMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Timestamp> getTimestamp(
+        org.vdaas.vald.api.v1.payload.Object.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTimestampMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXISTS = 0;
   private static final int METHODID_GET_OBJECT = 1;
   private static final int METHODID_STREAM_LIST_OBJECT = 2;
-  private static final int METHODID_STREAM_GET_OBJECT = 3;
+  private static final int METHODID_GET_TIMESTAMP = 3;
+  private static final int METHODID_STREAM_GET_OBJECT = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -438,6 +512,10 @@ public final class ObjectGrpc {
         case METHODID_STREAM_LIST_OBJECT:
           serviceImpl.streamListObject((org.vdaas.vald.api.v1.payload.Object.List.Request) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.List.Response>) responseObserver);
+          break;
+        case METHODID_GET_TIMESTAMP:
+          serviceImpl.getTimestamp((org.vdaas.vald.api.v1.payload.Object.TimestampRequest) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Timestamp>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -488,6 +566,13 @@ public final class ObjectGrpc {
               org.vdaas.vald.api.v1.payload.Object.List.Request,
               org.vdaas.vald.api.v1.payload.Object.List.Response>(
                 service, METHODID_STREAM_LIST_OBJECT)))
+        .addMethod(
+          getGetTimestampMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Object.TimestampRequest,
+              org.vdaas.vald.api.v1.payload.Object.Timestamp>(
+                service, METHODID_GET_TIMESTAMP)))
         .build();
   }
 
@@ -540,6 +625,7 @@ public final class ObjectGrpc {
               .addMethod(getGetObjectMethod())
               .addMethod(getStreamGetObjectMethod())
               .addMethod(getStreamListObjectMethod())
+              .addMethod(getGetTimestampMethod())
               .build();
         }
       }
