@@ -376,6 +376,21 @@ public final class ValdPayload {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_v1_Info_Index_UUID_Uncommitted_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_v1_Info_Index_Statistics_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_v1_Info_Index_Statistics_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_v1_Info_Index_StatisticsDetail_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_v1_Info_Index_StatisticsDetail_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_v1_Info_Index_StatisticsDetail_DetailsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_v1_Info_Index_StatisticsDetail_DetailsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_v1_Info_Pod_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -619,8 +634,8 @@ public final class ValdPayload {
       "ateIndexRequest\022$\n\tpool_size\030\001 \001(\rB\007\272H\004*" +
       "\002(\000R\010poolSize\"f\n\nDiscoverer\032X\n\007Request\022\033" +
       "\n\004name\030\001 \001(\tB\007\272H\004r\002\020\001R\004name\022\034\n\tnamespace" +
-      "\030\002 \001(\tR\tnamespace\022\022\n\004node\030\003 \001(\tR\004node\"\356\016" +
-      "\n\004Info\032\254\003\n\005Index\032u\n\005Count\022\026\n\006stored\030\001 \001(" +
+      "\030\002 \001(\tR\tnamespace\022\022\n\004node\030\003 \001(\tR\004node\"\322\035" +
+      "\n\004Info\032\220\022\n\005Index\032u\n\005Count\022\026\n\006stored\030\001 \001(" +
       "\rR\006stored\022 \n\013uncommitted\030\002 \001(\rR\013uncommit" +
       "ted\022\032\n\010indexing\030\003 \001(\010R\010indexing\022\026\n\006savin" +
       "g\030\004 \001(\010R\006saving\032\337\001\n\006Detail\022A\n\006counts\030\001 \003" +
@@ -630,50 +645,97 @@ public final class ValdPayload {
       "tsEntry\022\020\n\003key\030\001 \001(\tR\003key\0222\n\005value\030\002 \001(\013" +
       "2\034.payload.v1.Info.Index.CountR\005value:\0028" +
       "\001\032J\n\004UUID\032\037\n\tCommitted\022\022\n\004uuid\030\001 \001(\tR\004uu" +
-      "id\032!\n\013Uncommitted\022\022\n\004uuid\030\001 \001(\tR\004uuid\032\357\001" +
-      "\n\003Pod\022\031\n\010app_name\030\001 \001(\tR\007appName\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022\034\n\tnamespace\030\003 \001(\tR\tnamespa" +
-      "ce\022\027\n\002ip\030\004 \001(\tB\007\272H\004r\002x\001R\002ip\022&\n\003cpu\030\005 \001(\013" +
-      "2\024.payload.v1.Info.CPUR\003cpu\022/\n\006memory\030\006 " +
-      "\001(\0132\027.payload.v1.Info.MemoryR\006memory\022)\n\004" +
-      "node\030\007 \001(\0132\025.payload.v1.Info.NodeR\004node\032" +
-      "\350\001\n\004Node\022\022\n\004name\030\001 \001(\tR\004name\022#\n\rinternal" +
-      "_addr\030\002 \001(\tR\014internalAddr\022#\n\rexternal_ad" +
-      "dr\030\003 \001(\tR\014externalAddr\022&\n\003cpu\030\004 \001(\0132\024.pa" +
-      "yload.v1.Info.CPUR\003cpu\022/\n\006memory\030\005 \001(\0132\027" +
-      ".payload.v1.Info.MemoryR\006memory\022)\n\004Pods\030" +
-      "\006 \001(\0132\025.payload.v1.Info.PodsR\004Pods\032\202\002\n\007S" +
-      "ervice\022\022\n\004name\030\001 \001(\tR\004name\022\035\n\ncluster_ip" +
-      "\030\002 \001(\tR\tclusterIp\022\037\n\013cluster_ips\030\003 \003(\tR\n" +
-      "clusterIps\0222\n\005ports\030\004 \003(\0132\034.payload.v1.I" +
-      "nfo.ServicePortR\005ports\022/\n\006labels\030\005 \001(\0132\027" +
-      ".payload.v1.Info.LabelsR\006labels\022>\n\013annot" +
-      "ations\030\006 \001(\0132\034.payload.v1.Info.Annotatio" +
-      "nsR\013annotations\0325\n\013ServicePort\022\022\n\004name\030\001" +
-      " \001(\tR\004name\022\022\n\004port\030\002 \001(\005R\004port\032\200\001\n\006Label" +
-      "s\022;\n\006labels\030\001 \003(\0132#.payload.v1.Info.Labe" +
-      "ls.LabelsEntryR\006labels\0329\n\013LabelsEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028" +
-      "\001\032\236\001\n\013Annotations\022O\n\013annotations\030\001 \003(\0132-" +
-      ".payload.v1.Info.Annotations.Annotations" +
-      "EntryR\013annotations\032>\n\020AnnotationsEntry\022\020" +
-      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\002" +
-      "8\001\032K\n\003CPU\022\024\n\005limit\030\001 \001(\001R\005limit\022\030\n\007reque" +
-      "st\030\002 \001(\001R\007request\022\024\n\005usage\030\003 \001(\001R\005usage\032" +
-      "N\n\006Memory\022\024\n\005limit\030\001 \001(\001R\005limit\022\030\n\007reque" +
-      "st\030\002 \001(\001R\007request\022\024\n\005usage\030\003 \001(\001R\005usage\032" +
-      ":\n\004Pods\0222\n\004pods\030\001 \003(\0132\024.payload.v1.Info." +
-      "PodB\010\272H\005\222\001\002\010\001R\004pods\032>\n\005Nodes\0225\n\005nodes\030\001 " +
-      "\003(\0132\025.payload.v1.Info.NodeB\010\272H\005\222\001\002\010\001R\005no" +
-      "des\032J\n\010Services\022>\n\010services\030\001 \003(\0132\030.payl" +
-      "oad.v1.Info.ServiceB\010\272H\005\222\001\002\010\001R\010services\032" +
-      "\025\n\003IPs\022\016\n\002ip\030\001 \003(\tR\002ip\"z\n\006Mirror\0320\n\006Targ" +
-      "et\022\022\n\004host\030\001 \001(\tR\004host\022\022\n\004port\030\002 \001(\rR\004po" +
-      "rt\032>\n\007Targets\0223\n\007targets\030\001 \003(\0132\031.payload" +
-      ".v1.Mirror.TargetR\007targets\"\007\n\005EmptyBd\n\035o" +
-      "rg.vdaas.vald.api.v1.payloadB\013ValdPayloa" +
-      "dP\001Z*github.com/vdaas/vald/apis/grpc/v1/" +
-      "payload\242\002\007Payloadb\006proto3"
+      "id\032!\n\013Uncommitted\022\022\n\004uuid\030\001 \001(\tR\004uuid\032\235\r" +
+      "\n\nStatistics\022\024\n\005valid\030\001 \001(\010R\005valid\022\'\n\017me" +
+      "dian_indegree\030\002 \001(\005R\016medianIndegree\022)\n\020m" +
+      "edian_outdegree\030\003 \001(\005R\017medianOutdegree\0223" +
+      "\n\026max_number_of_indegree\030\004 \001(\004R\023maxNumbe" +
+      "rOfIndegree\0225\n\027max_number_of_outdegree\030\005" +
+      " \001(\004R\024maxNumberOfOutdegree\0223\n\026min_number" +
+      "_of_indegree\030\006 \001(\004R\023minNumberOfIndegree\022" +
+      "5\n\027min_number_of_outdegree\030\007 \001(\004R\024minNum" +
+      "berOfOutdegree\022#\n\rmode_indegree\030\010 \001(\004R\014m" +
+      "odeIndegree\022%\n\016mode_outdegree\030\t \001(\004R\rmod" +
+      "eOutdegree\022:\n\032nodes_skipped_for_10_edges" +
+      "\030\n \001(\004R\026nodesSkippedFor10Edges\022L\n#nodes_" +
+      "skipped_for_indegree_distance\030\013 \001(\004R\037nod" +
+      "esSkippedForIndegreeDistance\022&\n\017number_o" +
+      "f_edges\030\014 \001(\004R\rnumberOfEdges\0229\n\031number_o" +
+      "f_indexed_objects\030\r \001(\004R\026numberOfIndexed" +
+      "Objects\022&\n\017number_of_nodes\030\016 \001(\004R\rnumber" +
+      "OfNodes\022@\n\035number_of_nodes_without_edges" +
+      "\030\017 \001(\004R\031numberOfNodesWithoutEdges\022F\n num" +
+      "ber_of_nodes_without_indegree\030\020 \001(\004R\034num" +
+      "berOfNodesWithoutIndegree\022*\n\021number_of_o" +
+      "bjects\030\021 \001(\004R\017numberOfObjects\0229\n\031number_" +
+      "of_removed_objects\030\022 \001(\004R\026numberOfRemove" +
+      "dObjects\0229\n\031size_of_object_repository\030\023 " +
+      "\001(\004R\026sizeOfObjectRepository\022N\n$size_of_r" +
+      "efinement_object_repository\030\024 \001(\004R sizeO" +
+      "fRefinementObjectRepository\0220\n\024variance_" +
+      "of_indegree\030\025 \001(\001R\022varianceOfIndegree\0222\n" +
+      "\025variance_of_outdegree\030\026 \001(\001R\023varianceOf" +
+      "Outdegree\022(\n\020mean_edge_length\030\027 \001(\001R\016mea" +
+      "nEdgeLength\022?\n\035mean_edge_length_for_10_e" +
+      "dges\030\030 \001(\001R\030meanEdgeLengthFor10Edges\022K\n#" +
+      "mean_indegree_distance_for_10_edges\030\031 \001(" +
+      "\001R\036meanIndegreeDistanceFor10Edges\022?\n\035mea" +
+      "n_number_of_edges_per_node\030\032 \001(\001R\030meanNu" +
+      "mberOfEdgesPerNode\022\037\n\013c1_indegree\030\033 \001(\001R" +
+      "\nc1Indegree\022\037\n\013c5_indegree\030\034 \001(\001R\nc5Inde" +
+      "gree\022#\n\rc95_outdegree\030\035 \001(\001R\014c95Outdegre" +
+      "e\022#\n\rc99_outdegree\030\036 \001(\001R\014c99Outdegree\022%" +
+      "\n\016indegree_count\030\037 \003(\003R\rindegreeCount\022/\n" +
+      "\023outdegree_histogram\030  \003(\004R\022outdegreeHis" +
+      "togram\022-\n\022indegree_histogram\030! \003(\004R\021inde" +
+      "greeHistogram\032\301\001\n\020StatisticsDetail\022N\n\007de" +
+      "tails\030\001 \003(\01324.payload.v1.Info.Index.Stat" +
+      "isticsDetail.DetailsEntryR\007details\032]\n\014De" +
+      "tailsEntry\022\020\n\003key\030\001 \001(\tR\003key\0227\n\005value\030\002 " +
+      "\001(\0132!.payload.v1.Info.Index.StatisticsR\005" +
+      "value:\0028\001\032\357\001\n\003Pod\022\031\n\010app_name\030\001 \001(\tR\007app" +
+      "Name\022\022\n\004name\030\002 \001(\tR\004name\022\034\n\tnamespace\030\003 " +
+      "\001(\tR\tnamespace\022\027\n\002ip\030\004 \001(\tB\007\272H\004r\002x\001R\002ip\022" +
+      "&\n\003cpu\030\005 \001(\0132\024.payload.v1.Info.CPUR\003cpu\022" +
+      "/\n\006memory\030\006 \001(\0132\027.payload.v1.Info.Memory" +
+      "R\006memory\022)\n\004node\030\007 \001(\0132\025.payload.v1.Info" +
+      ".NodeR\004node\032\350\001\n\004Node\022\022\n\004name\030\001 \001(\tR\004name" +
+      "\022#\n\rinternal_addr\030\002 \001(\tR\014internalAddr\022#\n" +
+      "\rexternal_addr\030\003 \001(\tR\014externalAddr\022&\n\003cp" +
+      "u\030\004 \001(\0132\024.payload.v1.Info.CPUR\003cpu\022/\n\006me" +
+      "mory\030\005 \001(\0132\027.payload.v1.Info.MemoryR\006mem" +
+      "ory\022)\n\004Pods\030\006 \001(\0132\025.payload.v1.Info.Pods" +
+      "R\004Pods\032\202\002\n\007Service\022\022\n\004name\030\001 \001(\tR\004name\022\035" +
+      "\n\ncluster_ip\030\002 \001(\tR\tclusterIp\022\037\n\013cluster" +
+      "_ips\030\003 \003(\tR\nclusterIps\0222\n\005ports\030\004 \003(\0132\034." +
+      "payload.v1.Info.ServicePortR\005ports\022/\n\006la" +
+      "bels\030\005 \001(\0132\027.payload.v1.Info.LabelsR\006lab" +
+      "els\022>\n\013annotations\030\006 \001(\0132\034.payload.v1.In" +
+      "fo.AnnotationsR\013annotations\0325\n\013ServicePo" +
+      "rt\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004port\030\002 \001(\005R\004po" +
+      "rt\032\200\001\n\006Labels\022;\n\006labels\030\001 \003(\0132#.payload." +
+      "v1.Info.Labels.LabelsEntryR\006labels\0329\n\013La" +
+      "belsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
+      "(\tR\005value:\0028\001\032\236\001\n\013Annotations\022O\n\013annotat" +
+      "ions\030\001 \003(\0132-.payload.v1.Info.Annotations" +
+      ".AnnotationsEntryR\013annotations\032>\n\020Annota" +
+      "tionsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 " +
+      "\001(\tR\005value:\0028\001\032K\n\003CPU\022\024\n\005limit\030\001 \001(\001R\005li" +
+      "mit\022\030\n\007request\030\002 \001(\001R\007request\022\024\n\005usage\030\003" +
+      " \001(\001R\005usage\032N\n\006Memory\022\024\n\005limit\030\001 \001(\001R\005li" +
+      "mit\022\030\n\007request\030\002 \001(\001R\007request\022\024\n\005usage\030\003" +
+      " \001(\001R\005usage\032:\n\004Pods\0222\n\004pods\030\001 \003(\0132\024.payl" +
+      "oad.v1.Info.PodB\010\272H\005\222\001\002\010\001R\004pods\032>\n\005Nodes" +
+      "\0225\n\005nodes\030\001 \003(\0132\025.payload.v1.Info.NodeB\010" +
+      "\272H\005\222\001\002\010\001R\005nodes\032J\n\010Services\022>\n\010services\030" +
+      "\001 \003(\0132\030.payload.v1.Info.ServiceB\010\272H\005\222\001\002\010" +
+      "\001R\010services\032\025\n\003IPs\022\016\n\002ip\030\001 \003(\tR\002ip\"z\n\006Mi" +
+      "rror\0320\n\006Target\022\022\n\004host\030\001 \001(\tR\004host\022\022\n\004po" +
+      "rt\030\002 \001(\rR\004port\032>\n\007Targets\0223\n\007targets\030\001 \003" +
+      "(\0132\031.payload.v1.Mirror.TargetR\007targets\"\007" +
+      "\n\005EmptyBd\n\035org.vdaas.vald.api.v1.payload" +
+      "B\013ValdPayloadP\001Z*github.com/vdaas/vald/a" +
+      "pis/grpc/v1/payload\242\002\007Payloadb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1114,6 +1176,24 @@ public final class ValdPayload {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_v1_Info_Index_UUID_Uncommitted_descriptor,
         new java.lang.String[] { "Uuid", });
+    internal_static_payload_v1_Info_Index_Statistics_descriptor =
+      internal_static_payload_v1_Info_Index_descriptor.getNestedTypes().get(3);
+    internal_static_payload_v1_Info_Index_Statistics_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_v1_Info_Index_Statistics_descriptor,
+        new java.lang.String[] { "Valid", "MedianIndegree", "MedianOutdegree", "MaxNumberOfIndegree", "MaxNumberOfOutdegree", "MinNumberOfIndegree", "MinNumberOfOutdegree", "ModeIndegree", "ModeOutdegree", "NodesSkippedFor10Edges", "NodesSkippedForIndegreeDistance", "NumberOfEdges", "NumberOfIndexedObjects", "NumberOfNodes", "NumberOfNodesWithoutEdges", "NumberOfNodesWithoutIndegree", "NumberOfObjects", "NumberOfRemovedObjects", "SizeOfObjectRepository", "SizeOfRefinementObjectRepository", "VarianceOfIndegree", "VarianceOfOutdegree", "MeanEdgeLength", "MeanEdgeLengthFor10Edges", "MeanIndegreeDistanceFor10Edges", "MeanNumberOfEdgesPerNode", "C1Indegree", "C5Indegree", "C95Outdegree", "C99Outdegree", "IndegreeCount", "OutdegreeHistogram", "IndegreeHistogram", });
+    internal_static_payload_v1_Info_Index_StatisticsDetail_descriptor =
+      internal_static_payload_v1_Info_Index_descriptor.getNestedTypes().get(4);
+    internal_static_payload_v1_Info_Index_StatisticsDetail_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_v1_Info_Index_StatisticsDetail_descriptor,
+        new java.lang.String[] { "Details", });
+    internal_static_payload_v1_Info_Index_StatisticsDetail_DetailsEntry_descriptor =
+      internal_static_payload_v1_Info_Index_StatisticsDetail_descriptor.getNestedTypes().get(0);
+    internal_static_payload_v1_Info_Index_StatisticsDetail_DetailsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_v1_Info_Index_StatisticsDetail_DetailsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_payload_v1_Info_Pod_descriptor =
       internal_static_payload_v1_Info_descriptor.getNestedTypes().get(1);
     internal_static_payload_v1_Info_Pod_fieldAccessorTable = new

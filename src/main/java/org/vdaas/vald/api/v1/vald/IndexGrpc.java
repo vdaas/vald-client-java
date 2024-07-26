@@ -80,6 +80,68 @@ public final class IndexGrpc {
     return getIndexDetailMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Empty,
+      org.vdaas.vald.api.v1.payload.Info.Index.Statistics> getIndexStatisticsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "IndexStatistics",
+      requestType = org.vdaas.vald.api.v1.payload.Empty.class,
+      responseType = org.vdaas.vald.api.v1.payload.Info.Index.Statistics.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Empty,
+      org.vdaas.vald.api.v1.payload.Info.Index.Statistics> getIndexStatisticsMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Empty, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> getIndexStatisticsMethod;
+    if ((getIndexStatisticsMethod = IndexGrpc.getIndexStatisticsMethod) == null) {
+      synchronized (IndexGrpc.class) {
+        if ((getIndexStatisticsMethod = IndexGrpc.getIndexStatisticsMethod) == null) {
+          IndexGrpc.getIndexStatisticsMethod = getIndexStatisticsMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Empty, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IndexStatistics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Info.Index.Statistics.getDefaultInstance()))
+              .setSchemaDescriptor(new IndexMethodDescriptorSupplier("IndexStatistics"))
+              .build();
+        }
+      }
+    }
+    return getIndexStatisticsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Empty,
+      org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail> getIndexStatisticsDetailMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "IndexStatisticsDetail",
+      requestType = org.vdaas.vald.api.v1.payload.Empty.class,
+      responseType = org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Empty,
+      org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail> getIndexStatisticsDetailMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Empty, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail> getIndexStatisticsDetailMethod;
+    if ((getIndexStatisticsDetailMethod = IndexGrpc.getIndexStatisticsDetailMethod) == null) {
+      synchronized (IndexGrpc.class) {
+        if ((getIndexStatisticsDetailMethod = IndexGrpc.getIndexStatisticsDetailMethod) == null) {
+          IndexGrpc.getIndexStatisticsDetailMethod = getIndexStatisticsDetailMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Empty, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IndexStatisticsDetail"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.getDefaultInstance()))
+              .setSchemaDescriptor(new IndexMethodDescriptorSupplier("IndexStatisticsDetail"))
+              .build();
+        }
+      }
+    }
+    return getIndexStatisticsDetailMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -150,6 +212,26 @@ public final class IndexGrpc {
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Detail> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIndexDetailMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics.
+     * </pre>
+     */
+    default void indexStatistics(org.vdaas.vald.api.v1.payload.Empty request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Statistics> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIndexStatisticsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics for each agents.
+     * </pre>
+     */
+    default void indexStatisticsDetail(org.vdaas.vald.api.v1.payload.Empty request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIndexStatisticsDetailMethod(), responseObserver);
+    }
   }
 
   /**
@@ -206,6 +288,28 @@ public final class IndexGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIndexDetailMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics.
+     * </pre>
+     */
+    public void indexStatistics(org.vdaas.vald.api.v1.payload.Empty request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Statistics> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getIndexStatisticsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics for each agents.
+     * </pre>
+     */
+    public void indexStatisticsDetail(org.vdaas.vald.api.v1.payload.Empty request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getIndexStatisticsDetailMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -245,6 +349,26 @@ public final class IndexGrpc {
     public org.vdaas.vald.api.v1.payload.Info.Index.Detail indexDetail(org.vdaas.vald.api.v1.payload.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIndexDetailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.Statistics indexStatistics(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIndexStatisticsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics for each agents.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail indexStatisticsDetail(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIndexStatisticsDetailMethod(), getCallOptions(), request);
     }
   }
 
@@ -288,10 +412,34 @@ public final class IndexGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIndexDetailMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Info.Index.Statistics> indexStatistics(
+        org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getIndexStatisticsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to get the index statistics for each agents.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail> indexStatisticsDetail(
+        org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getIndexStatisticsDetailMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_INDEX_INFO = 0;
   private static final int METHODID_INDEX_DETAIL = 1;
+  private static final int METHODID_INDEX_STATISTICS = 2;
+  private static final int METHODID_INDEX_STATISTICS_DETAIL = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -317,6 +465,14 @@ public final class IndexGrpc {
         case METHODID_INDEX_DETAIL:
           serviceImpl.indexDetail((org.vdaas.vald.api.v1.payload.Empty) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Detail>) responseObserver);
+          break;
+        case METHODID_INDEX_STATISTICS:
+          serviceImpl.indexStatistics((org.vdaas.vald.api.v1.payload.Empty) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.Statistics>) responseObserver);
+          break;
+        case METHODID_INDEX_STATISTICS_DETAIL:
+          serviceImpl.indexStatisticsDetail((org.vdaas.vald.api.v1.payload.Empty) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -350,6 +506,20 @@ public final class IndexGrpc {
               org.vdaas.vald.api.v1.payload.Empty,
               org.vdaas.vald.api.v1.payload.Info.Index.Detail>(
                 service, METHODID_INDEX_DETAIL)))
+        .addMethod(
+          getIndexStatisticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Empty,
+              org.vdaas.vald.api.v1.payload.Info.Index.Statistics>(
+                service, METHODID_INDEX_STATISTICS)))
+        .addMethod(
+          getIndexStatisticsDetailMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Empty,
+              org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail>(
+                service, METHODID_INDEX_STATISTICS_DETAIL)))
         .build();
   }
 
@@ -400,6 +570,8 @@ public final class IndexGrpc {
               .setSchemaDescriptor(new IndexFileDescriptorSupplier())
               .addMethod(getIndexInfoMethod())
               .addMethod(getIndexDetailMethod())
+              .addMethod(getIndexStatisticsMethod())
+              .addMethod(getIndexStatisticsDetailMethod())
               .build();
         }
       }

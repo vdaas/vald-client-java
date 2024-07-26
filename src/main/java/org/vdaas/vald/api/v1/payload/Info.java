@@ -3397,6 +3397,4017 @@ org.vdaas.vald.api.v1.payload.Info.Index.Count defaultValue) {
 
     }
 
+    public interface StatisticsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.v1.Info.Index.Statistics)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bool valid = 1 [json_name = "valid"];</code>
+       * @return The valid.
+       */
+      boolean getValid();
+
+      /**
+       * <code>int32 median_indegree = 2 [json_name = "medianIndegree"];</code>
+       * @return The medianIndegree.
+       */
+      int getMedianIndegree();
+
+      /**
+       * <code>int32 median_outdegree = 3 [json_name = "medianOutdegree"];</code>
+       * @return The medianOutdegree.
+       */
+      int getMedianOutdegree();
+
+      /**
+       * <code>uint64 max_number_of_indegree = 4 [json_name = "maxNumberOfIndegree"];</code>
+       * @return The maxNumberOfIndegree.
+       */
+      long getMaxNumberOfIndegree();
+
+      /**
+       * <code>uint64 max_number_of_outdegree = 5 [json_name = "maxNumberOfOutdegree"];</code>
+       * @return The maxNumberOfOutdegree.
+       */
+      long getMaxNumberOfOutdegree();
+
+      /**
+       * <code>uint64 min_number_of_indegree = 6 [json_name = "minNumberOfIndegree"];</code>
+       * @return The minNumberOfIndegree.
+       */
+      long getMinNumberOfIndegree();
+
+      /**
+       * <code>uint64 min_number_of_outdegree = 7 [json_name = "minNumberOfOutdegree"];</code>
+       * @return The minNumberOfOutdegree.
+       */
+      long getMinNumberOfOutdegree();
+
+      /**
+       * <code>uint64 mode_indegree = 8 [json_name = "modeIndegree"];</code>
+       * @return The modeIndegree.
+       */
+      long getModeIndegree();
+
+      /**
+       * <code>uint64 mode_outdegree = 9 [json_name = "modeOutdegree"];</code>
+       * @return The modeOutdegree.
+       */
+      long getModeOutdegree();
+
+      /**
+       * <code>uint64 nodes_skipped_for_10_edges = 10 [json_name = "nodesSkippedFor10Edges"];</code>
+       * @return The nodesSkippedFor10Edges.
+       */
+      long getNodesSkippedFor10Edges();
+
+      /**
+       * <code>uint64 nodes_skipped_for_indegree_distance = 11 [json_name = "nodesSkippedForIndegreeDistance"];</code>
+       * @return The nodesSkippedForIndegreeDistance.
+       */
+      long getNodesSkippedForIndegreeDistance();
+
+      /**
+       * <code>uint64 number_of_edges = 12 [json_name = "numberOfEdges"];</code>
+       * @return The numberOfEdges.
+       */
+      long getNumberOfEdges();
+
+      /**
+       * <code>uint64 number_of_indexed_objects = 13 [json_name = "numberOfIndexedObjects"];</code>
+       * @return The numberOfIndexedObjects.
+       */
+      long getNumberOfIndexedObjects();
+
+      /**
+       * <code>uint64 number_of_nodes = 14 [json_name = "numberOfNodes"];</code>
+       * @return The numberOfNodes.
+       */
+      long getNumberOfNodes();
+
+      /**
+       * <code>uint64 number_of_nodes_without_edges = 15 [json_name = "numberOfNodesWithoutEdges"];</code>
+       * @return The numberOfNodesWithoutEdges.
+       */
+      long getNumberOfNodesWithoutEdges();
+
+      /**
+       * <code>uint64 number_of_nodes_without_indegree = 16 [json_name = "numberOfNodesWithoutIndegree"];</code>
+       * @return The numberOfNodesWithoutIndegree.
+       */
+      long getNumberOfNodesWithoutIndegree();
+
+      /**
+       * <code>uint64 number_of_objects = 17 [json_name = "numberOfObjects"];</code>
+       * @return The numberOfObjects.
+       */
+      long getNumberOfObjects();
+
+      /**
+       * <code>uint64 number_of_removed_objects = 18 [json_name = "numberOfRemovedObjects"];</code>
+       * @return The numberOfRemovedObjects.
+       */
+      long getNumberOfRemovedObjects();
+
+      /**
+       * <code>uint64 size_of_object_repository = 19 [json_name = "sizeOfObjectRepository"];</code>
+       * @return The sizeOfObjectRepository.
+       */
+      long getSizeOfObjectRepository();
+
+      /**
+       * <code>uint64 size_of_refinement_object_repository = 20 [json_name = "sizeOfRefinementObjectRepository"];</code>
+       * @return The sizeOfRefinementObjectRepository.
+       */
+      long getSizeOfRefinementObjectRepository();
+
+      /**
+       * <code>double variance_of_indegree = 21 [json_name = "varianceOfIndegree"];</code>
+       * @return The varianceOfIndegree.
+       */
+      double getVarianceOfIndegree();
+
+      /**
+       * <code>double variance_of_outdegree = 22 [json_name = "varianceOfOutdegree"];</code>
+       * @return The varianceOfOutdegree.
+       */
+      double getVarianceOfOutdegree();
+
+      /**
+       * <code>double mean_edge_length = 23 [json_name = "meanEdgeLength"];</code>
+       * @return The meanEdgeLength.
+       */
+      double getMeanEdgeLength();
+
+      /**
+       * <code>double mean_edge_length_for_10_edges = 24 [json_name = "meanEdgeLengthFor10Edges"];</code>
+       * @return The meanEdgeLengthFor10Edges.
+       */
+      double getMeanEdgeLengthFor10Edges();
+
+      /**
+       * <code>double mean_indegree_distance_for_10_edges = 25 [json_name = "meanIndegreeDistanceFor10Edges"];</code>
+       * @return The meanIndegreeDistanceFor10Edges.
+       */
+      double getMeanIndegreeDistanceFor10Edges();
+
+      /**
+       * <code>double mean_number_of_edges_per_node = 26 [json_name = "meanNumberOfEdgesPerNode"];</code>
+       * @return The meanNumberOfEdgesPerNode.
+       */
+      double getMeanNumberOfEdgesPerNode();
+
+      /**
+       * <code>double c1_indegree = 27 [json_name = "c1Indegree"];</code>
+       * @return The c1Indegree.
+       */
+      double getC1Indegree();
+
+      /**
+       * <code>double c5_indegree = 28 [json_name = "c5Indegree"];</code>
+       * @return The c5Indegree.
+       */
+      double getC5Indegree();
+
+      /**
+       * <code>double c95_outdegree = 29 [json_name = "c95Outdegree"];</code>
+       * @return The c95Outdegree.
+       */
+      double getC95Outdegree();
+
+      /**
+       * <code>double c99_outdegree = 30 [json_name = "c99Outdegree"];</code>
+       * @return The c99Outdegree.
+       */
+      double getC99Outdegree();
+
+      /**
+       * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+       * @return A list containing the indegreeCount.
+       */
+      java.util.List<java.lang.Long> getIndegreeCountList();
+      /**
+       * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+       * @return The count of indegreeCount.
+       */
+      int getIndegreeCountCount();
+      /**
+       * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+       * @param index The index of the element to return.
+       * @return The indegreeCount at the given index.
+       */
+      long getIndegreeCount(int index);
+
+      /**
+       * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+       * @return A list containing the outdegreeHistogram.
+       */
+      java.util.List<java.lang.Long> getOutdegreeHistogramList();
+      /**
+       * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+       * @return The count of outdegreeHistogram.
+       */
+      int getOutdegreeHistogramCount();
+      /**
+       * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+       * @param index The index of the element to return.
+       * @return The outdegreeHistogram at the given index.
+       */
+      long getOutdegreeHistogram(int index);
+
+      /**
+       * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+       * @return A list containing the indegreeHistogram.
+       */
+      java.util.List<java.lang.Long> getIndegreeHistogramList();
+      /**
+       * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+       * @return The count of indegreeHistogram.
+       */
+      int getIndegreeHistogramCount();
+      /**
+       * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+       * @param index The index of the element to return.
+       * @return The indegreeHistogram at the given index.
+       */
+      long getIndegreeHistogram(int index);
+    }
+    /**
+     * <pre>
+     * Represents index Statistics
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Info.Index.Statistics}
+     */
+    public static final class Statistics extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.v1.Info.Index.Statistics)
+        StatisticsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Statistics.newBuilder() to construct.
+      private Statistics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Statistics() {
+        indegreeCount_ = emptyLongList();
+        outdegreeHistogram_ = emptyLongList();
+        indegreeHistogram_ = emptyLongList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Statistics();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Statistics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Statistics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Info.Index.Statistics.class, org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder.class);
+      }
+
+      public static final int VALID_FIELD_NUMBER = 1;
+      private boolean valid_ = false;
+      /**
+       * <code>bool valid = 1 [json_name = "valid"];</code>
+       * @return The valid.
+       */
+      @java.lang.Override
+      public boolean getValid() {
+        return valid_;
+      }
+
+      public static final int MEDIAN_INDEGREE_FIELD_NUMBER = 2;
+      private int medianIndegree_ = 0;
+      /**
+       * <code>int32 median_indegree = 2 [json_name = "medianIndegree"];</code>
+       * @return The medianIndegree.
+       */
+      @java.lang.Override
+      public int getMedianIndegree() {
+        return medianIndegree_;
+      }
+
+      public static final int MEDIAN_OUTDEGREE_FIELD_NUMBER = 3;
+      private int medianOutdegree_ = 0;
+      /**
+       * <code>int32 median_outdegree = 3 [json_name = "medianOutdegree"];</code>
+       * @return The medianOutdegree.
+       */
+      @java.lang.Override
+      public int getMedianOutdegree() {
+        return medianOutdegree_;
+      }
+
+      public static final int MAX_NUMBER_OF_INDEGREE_FIELD_NUMBER = 4;
+      private long maxNumberOfIndegree_ = 0L;
+      /**
+       * <code>uint64 max_number_of_indegree = 4 [json_name = "maxNumberOfIndegree"];</code>
+       * @return The maxNumberOfIndegree.
+       */
+      @java.lang.Override
+      public long getMaxNumberOfIndegree() {
+        return maxNumberOfIndegree_;
+      }
+
+      public static final int MAX_NUMBER_OF_OUTDEGREE_FIELD_NUMBER = 5;
+      private long maxNumberOfOutdegree_ = 0L;
+      /**
+       * <code>uint64 max_number_of_outdegree = 5 [json_name = "maxNumberOfOutdegree"];</code>
+       * @return The maxNumberOfOutdegree.
+       */
+      @java.lang.Override
+      public long getMaxNumberOfOutdegree() {
+        return maxNumberOfOutdegree_;
+      }
+
+      public static final int MIN_NUMBER_OF_INDEGREE_FIELD_NUMBER = 6;
+      private long minNumberOfIndegree_ = 0L;
+      /**
+       * <code>uint64 min_number_of_indegree = 6 [json_name = "minNumberOfIndegree"];</code>
+       * @return The minNumberOfIndegree.
+       */
+      @java.lang.Override
+      public long getMinNumberOfIndegree() {
+        return minNumberOfIndegree_;
+      }
+
+      public static final int MIN_NUMBER_OF_OUTDEGREE_FIELD_NUMBER = 7;
+      private long minNumberOfOutdegree_ = 0L;
+      /**
+       * <code>uint64 min_number_of_outdegree = 7 [json_name = "minNumberOfOutdegree"];</code>
+       * @return The minNumberOfOutdegree.
+       */
+      @java.lang.Override
+      public long getMinNumberOfOutdegree() {
+        return minNumberOfOutdegree_;
+      }
+
+      public static final int MODE_INDEGREE_FIELD_NUMBER = 8;
+      private long modeIndegree_ = 0L;
+      /**
+       * <code>uint64 mode_indegree = 8 [json_name = "modeIndegree"];</code>
+       * @return The modeIndegree.
+       */
+      @java.lang.Override
+      public long getModeIndegree() {
+        return modeIndegree_;
+      }
+
+      public static final int MODE_OUTDEGREE_FIELD_NUMBER = 9;
+      private long modeOutdegree_ = 0L;
+      /**
+       * <code>uint64 mode_outdegree = 9 [json_name = "modeOutdegree"];</code>
+       * @return The modeOutdegree.
+       */
+      @java.lang.Override
+      public long getModeOutdegree() {
+        return modeOutdegree_;
+      }
+
+      public static final int NODES_SKIPPED_FOR_10_EDGES_FIELD_NUMBER = 10;
+      private long nodesSkippedFor10Edges_ = 0L;
+      /**
+       * <code>uint64 nodes_skipped_for_10_edges = 10 [json_name = "nodesSkippedFor10Edges"];</code>
+       * @return The nodesSkippedFor10Edges.
+       */
+      @java.lang.Override
+      public long getNodesSkippedFor10Edges() {
+        return nodesSkippedFor10Edges_;
+      }
+
+      public static final int NODES_SKIPPED_FOR_INDEGREE_DISTANCE_FIELD_NUMBER = 11;
+      private long nodesSkippedForIndegreeDistance_ = 0L;
+      /**
+       * <code>uint64 nodes_skipped_for_indegree_distance = 11 [json_name = "nodesSkippedForIndegreeDistance"];</code>
+       * @return The nodesSkippedForIndegreeDistance.
+       */
+      @java.lang.Override
+      public long getNodesSkippedForIndegreeDistance() {
+        return nodesSkippedForIndegreeDistance_;
+      }
+
+      public static final int NUMBER_OF_EDGES_FIELD_NUMBER = 12;
+      private long numberOfEdges_ = 0L;
+      /**
+       * <code>uint64 number_of_edges = 12 [json_name = "numberOfEdges"];</code>
+       * @return The numberOfEdges.
+       */
+      @java.lang.Override
+      public long getNumberOfEdges() {
+        return numberOfEdges_;
+      }
+
+      public static final int NUMBER_OF_INDEXED_OBJECTS_FIELD_NUMBER = 13;
+      private long numberOfIndexedObjects_ = 0L;
+      /**
+       * <code>uint64 number_of_indexed_objects = 13 [json_name = "numberOfIndexedObjects"];</code>
+       * @return The numberOfIndexedObjects.
+       */
+      @java.lang.Override
+      public long getNumberOfIndexedObjects() {
+        return numberOfIndexedObjects_;
+      }
+
+      public static final int NUMBER_OF_NODES_FIELD_NUMBER = 14;
+      private long numberOfNodes_ = 0L;
+      /**
+       * <code>uint64 number_of_nodes = 14 [json_name = "numberOfNodes"];</code>
+       * @return The numberOfNodes.
+       */
+      @java.lang.Override
+      public long getNumberOfNodes() {
+        return numberOfNodes_;
+      }
+
+      public static final int NUMBER_OF_NODES_WITHOUT_EDGES_FIELD_NUMBER = 15;
+      private long numberOfNodesWithoutEdges_ = 0L;
+      /**
+       * <code>uint64 number_of_nodes_without_edges = 15 [json_name = "numberOfNodesWithoutEdges"];</code>
+       * @return The numberOfNodesWithoutEdges.
+       */
+      @java.lang.Override
+      public long getNumberOfNodesWithoutEdges() {
+        return numberOfNodesWithoutEdges_;
+      }
+
+      public static final int NUMBER_OF_NODES_WITHOUT_INDEGREE_FIELD_NUMBER = 16;
+      private long numberOfNodesWithoutIndegree_ = 0L;
+      /**
+       * <code>uint64 number_of_nodes_without_indegree = 16 [json_name = "numberOfNodesWithoutIndegree"];</code>
+       * @return The numberOfNodesWithoutIndegree.
+       */
+      @java.lang.Override
+      public long getNumberOfNodesWithoutIndegree() {
+        return numberOfNodesWithoutIndegree_;
+      }
+
+      public static final int NUMBER_OF_OBJECTS_FIELD_NUMBER = 17;
+      private long numberOfObjects_ = 0L;
+      /**
+       * <code>uint64 number_of_objects = 17 [json_name = "numberOfObjects"];</code>
+       * @return The numberOfObjects.
+       */
+      @java.lang.Override
+      public long getNumberOfObjects() {
+        return numberOfObjects_;
+      }
+
+      public static final int NUMBER_OF_REMOVED_OBJECTS_FIELD_NUMBER = 18;
+      private long numberOfRemovedObjects_ = 0L;
+      /**
+       * <code>uint64 number_of_removed_objects = 18 [json_name = "numberOfRemovedObjects"];</code>
+       * @return The numberOfRemovedObjects.
+       */
+      @java.lang.Override
+      public long getNumberOfRemovedObjects() {
+        return numberOfRemovedObjects_;
+      }
+
+      public static final int SIZE_OF_OBJECT_REPOSITORY_FIELD_NUMBER = 19;
+      private long sizeOfObjectRepository_ = 0L;
+      /**
+       * <code>uint64 size_of_object_repository = 19 [json_name = "sizeOfObjectRepository"];</code>
+       * @return The sizeOfObjectRepository.
+       */
+      @java.lang.Override
+      public long getSizeOfObjectRepository() {
+        return sizeOfObjectRepository_;
+      }
+
+      public static final int SIZE_OF_REFINEMENT_OBJECT_REPOSITORY_FIELD_NUMBER = 20;
+      private long sizeOfRefinementObjectRepository_ = 0L;
+      /**
+       * <code>uint64 size_of_refinement_object_repository = 20 [json_name = "sizeOfRefinementObjectRepository"];</code>
+       * @return The sizeOfRefinementObjectRepository.
+       */
+      @java.lang.Override
+      public long getSizeOfRefinementObjectRepository() {
+        return sizeOfRefinementObjectRepository_;
+      }
+
+      public static final int VARIANCE_OF_INDEGREE_FIELD_NUMBER = 21;
+      private double varianceOfIndegree_ = 0D;
+      /**
+       * <code>double variance_of_indegree = 21 [json_name = "varianceOfIndegree"];</code>
+       * @return The varianceOfIndegree.
+       */
+      @java.lang.Override
+      public double getVarianceOfIndegree() {
+        return varianceOfIndegree_;
+      }
+
+      public static final int VARIANCE_OF_OUTDEGREE_FIELD_NUMBER = 22;
+      private double varianceOfOutdegree_ = 0D;
+      /**
+       * <code>double variance_of_outdegree = 22 [json_name = "varianceOfOutdegree"];</code>
+       * @return The varianceOfOutdegree.
+       */
+      @java.lang.Override
+      public double getVarianceOfOutdegree() {
+        return varianceOfOutdegree_;
+      }
+
+      public static final int MEAN_EDGE_LENGTH_FIELD_NUMBER = 23;
+      private double meanEdgeLength_ = 0D;
+      /**
+       * <code>double mean_edge_length = 23 [json_name = "meanEdgeLength"];</code>
+       * @return The meanEdgeLength.
+       */
+      @java.lang.Override
+      public double getMeanEdgeLength() {
+        return meanEdgeLength_;
+      }
+
+      public static final int MEAN_EDGE_LENGTH_FOR_10_EDGES_FIELD_NUMBER = 24;
+      private double meanEdgeLengthFor10Edges_ = 0D;
+      /**
+       * <code>double mean_edge_length_for_10_edges = 24 [json_name = "meanEdgeLengthFor10Edges"];</code>
+       * @return The meanEdgeLengthFor10Edges.
+       */
+      @java.lang.Override
+      public double getMeanEdgeLengthFor10Edges() {
+        return meanEdgeLengthFor10Edges_;
+      }
+
+      public static final int MEAN_INDEGREE_DISTANCE_FOR_10_EDGES_FIELD_NUMBER = 25;
+      private double meanIndegreeDistanceFor10Edges_ = 0D;
+      /**
+       * <code>double mean_indegree_distance_for_10_edges = 25 [json_name = "meanIndegreeDistanceFor10Edges"];</code>
+       * @return The meanIndegreeDistanceFor10Edges.
+       */
+      @java.lang.Override
+      public double getMeanIndegreeDistanceFor10Edges() {
+        return meanIndegreeDistanceFor10Edges_;
+      }
+
+      public static final int MEAN_NUMBER_OF_EDGES_PER_NODE_FIELD_NUMBER = 26;
+      private double meanNumberOfEdgesPerNode_ = 0D;
+      /**
+       * <code>double mean_number_of_edges_per_node = 26 [json_name = "meanNumberOfEdgesPerNode"];</code>
+       * @return The meanNumberOfEdgesPerNode.
+       */
+      @java.lang.Override
+      public double getMeanNumberOfEdgesPerNode() {
+        return meanNumberOfEdgesPerNode_;
+      }
+
+      public static final int C1_INDEGREE_FIELD_NUMBER = 27;
+      private double c1Indegree_ = 0D;
+      /**
+       * <code>double c1_indegree = 27 [json_name = "c1Indegree"];</code>
+       * @return The c1Indegree.
+       */
+      @java.lang.Override
+      public double getC1Indegree() {
+        return c1Indegree_;
+      }
+
+      public static final int C5_INDEGREE_FIELD_NUMBER = 28;
+      private double c5Indegree_ = 0D;
+      /**
+       * <code>double c5_indegree = 28 [json_name = "c5Indegree"];</code>
+       * @return The c5Indegree.
+       */
+      @java.lang.Override
+      public double getC5Indegree() {
+        return c5Indegree_;
+      }
+
+      public static final int C95_OUTDEGREE_FIELD_NUMBER = 29;
+      private double c95Outdegree_ = 0D;
+      /**
+       * <code>double c95_outdegree = 29 [json_name = "c95Outdegree"];</code>
+       * @return The c95Outdegree.
+       */
+      @java.lang.Override
+      public double getC95Outdegree() {
+        return c95Outdegree_;
+      }
+
+      public static final int C99_OUTDEGREE_FIELD_NUMBER = 30;
+      private double c99Outdegree_ = 0D;
+      /**
+       * <code>double c99_outdegree = 30 [json_name = "c99Outdegree"];</code>
+       * @return The c99Outdegree.
+       */
+      @java.lang.Override
+      public double getC99Outdegree() {
+        return c99Outdegree_;
+      }
+
+      public static final int INDEGREE_COUNT_FIELD_NUMBER = 31;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.LongList indegreeCount_ =
+          emptyLongList();
+      /**
+       * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+       * @return A list containing the indegreeCount.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getIndegreeCountList() {
+        return indegreeCount_;
+      }
+      /**
+       * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+       * @return The count of indegreeCount.
+       */
+      public int getIndegreeCountCount() {
+        return indegreeCount_.size();
+      }
+      /**
+       * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+       * @param index The index of the element to return.
+       * @return The indegreeCount at the given index.
+       */
+      public long getIndegreeCount(int index) {
+        return indegreeCount_.getLong(index);
+      }
+      private int indegreeCountMemoizedSerializedSize = -1;
+
+      public static final int OUTDEGREE_HISTOGRAM_FIELD_NUMBER = 32;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.LongList outdegreeHistogram_ =
+          emptyLongList();
+      /**
+       * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+       * @return A list containing the outdegreeHistogram.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getOutdegreeHistogramList() {
+        return outdegreeHistogram_;
+      }
+      /**
+       * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+       * @return The count of outdegreeHistogram.
+       */
+      public int getOutdegreeHistogramCount() {
+        return outdegreeHistogram_.size();
+      }
+      /**
+       * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+       * @param index The index of the element to return.
+       * @return The outdegreeHistogram at the given index.
+       */
+      public long getOutdegreeHistogram(int index) {
+        return outdegreeHistogram_.getLong(index);
+      }
+      private int outdegreeHistogramMemoizedSerializedSize = -1;
+
+      public static final int INDEGREE_HISTOGRAM_FIELD_NUMBER = 33;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.LongList indegreeHistogram_ =
+          emptyLongList();
+      /**
+       * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+       * @return A list containing the indegreeHistogram.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getIndegreeHistogramList() {
+        return indegreeHistogram_;
+      }
+      /**
+       * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+       * @return The count of indegreeHistogram.
+       */
+      public int getIndegreeHistogramCount() {
+        return indegreeHistogram_.size();
+      }
+      /**
+       * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+       * @param index The index of the element to return.
+       * @return The indegreeHistogram at the given index.
+       */
+      public long getIndegreeHistogram(int index) {
+        return indegreeHistogram_.getLong(index);
+      }
+      private int indegreeHistogramMemoizedSerializedSize = -1;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (valid_ != false) {
+          output.writeBool(1, valid_);
+        }
+        if (medianIndegree_ != 0) {
+          output.writeInt32(2, medianIndegree_);
+        }
+        if (medianOutdegree_ != 0) {
+          output.writeInt32(3, medianOutdegree_);
+        }
+        if (maxNumberOfIndegree_ != 0L) {
+          output.writeUInt64(4, maxNumberOfIndegree_);
+        }
+        if (maxNumberOfOutdegree_ != 0L) {
+          output.writeUInt64(5, maxNumberOfOutdegree_);
+        }
+        if (minNumberOfIndegree_ != 0L) {
+          output.writeUInt64(6, minNumberOfIndegree_);
+        }
+        if (minNumberOfOutdegree_ != 0L) {
+          output.writeUInt64(7, minNumberOfOutdegree_);
+        }
+        if (modeIndegree_ != 0L) {
+          output.writeUInt64(8, modeIndegree_);
+        }
+        if (modeOutdegree_ != 0L) {
+          output.writeUInt64(9, modeOutdegree_);
+        }
+        if (nodesSkippedFor10Edges_ != 0L) {
+          output.writeUInt64(10, nodesSkippedFor10Edges_);
+        }
+        if (nodesSkippedForIndegreeDistance_ != 0L) {
+          output.writeUInt64(11, nodesSkippedForIndegreeDistance_);
+        }
+        if (numberOfEdges_ != 0L) {
+          output.writeUInt64(12, numberOfEdges_);
+        }
+        if (numberOfIndexedObjects_ != 0L) {
+          output.writeUInt64(13, numberOfIndexedObjects_);
+        }
+        if (numberOfNodes_ != 0L) {
+          output.writeUInt64(14, numberOfNodes_);
+        }
+        if (numberOfNodesWithoutEdges_ != 0L) {
+          output.writeUInt64(15, numberOfNodesWithoutEdges_);
+        }
+        if (numberOfNodesWithoutIndegree_ != 0L) {
+          output.writeUInt64(16, numberOfNodesWithoutIndegree_);
+        }
+        if (numberOfObjects_ != 0L) {
+          output.writeUInt64(17, numberOfObjects_);
+        }
+        if (numberOfRemovedObjects_ != 0L) {
+          output.writeUInt64(18, numberOfRemovedObjects_);
+        }
+        if (sizeOfObjectRepository_ != 0L) {
+          output.writeUInt64(19, sizeOfObjectRepository_);
+        }
+        if (sizeOfRefinementObjectRepository_ != 0L) {
+          output.writeUInt64(20, sizeOfRefinementObjectRepository_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(varianceOfIndegree_) != 0) {
+          output.writeDouble(21, varianceOfIndegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(varianceOfOutdegree_) != 0) {
+          output.writeDouble(22, varianceOfOutdegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanEdgeLength_) != 0) {
+          output.writeDouble(23, meanEdgeLength_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanEdgeLengthFor10Edges_) != 0) {
+          output.writeDouble(24, meanEdgeLengthFor10Edges_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanIndegreeDistanceFor10Edges_) != 0) {
+          output.writeDouble(25, meanIndegreeDistanceFor10Edges_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanNumberOfEdgesPerNode_) != 0) {
+          output.writeDouble(26, meanNumberOfEdgesPerNode_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c1Indegree_) != 0) {
+          output.writeDouble(27, c1Indegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c5Indegree_) != 0) {
+          output.writeDouble(28, c5Indegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c95Outdegree_) != 0) {
+          output.writeDouble(29, c95Outdegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c99Outdegree_) != 0) {
+          output.writeDouble(30, c99Outdegree_);
+        }
+        if (getIndegreeCountList().size() > 0) {
+          output.writeUInt32NoTag(250);
+          output.writeUInt32NoTag(indegreeCountMemoizedSerializedSize);
+        }
+        for (int i = 0; i < indegreeCount_.size(); i++) {
+          output.writeInt64NoTag(indegreeCount_.getLong(i));
+        }
+        if (getOutdegreeHistogramList().size() > 0) {
+          output.writeUInt32NoTag(258);
+          output.writeUInt32NoTag(outdegreeHistogramMemoizedSerializedSize);
+        }
+        for (int i = 0; i < outdegreeHistogram_.size(); i++) {
+          output.writeUInt64NoTag(outdegreeHistogram_.getLong(i));
+        }
+        if (getIndegreeHistogramList().size() > 0) {
+          output.writeUInt32NoTag(266);
+          output.writeUInt32NoTag(indegreeHistogramMemoizedSerializedSize);
+        }
+        for (int i = 0; i < indegreeHistogram_.size(); i++) {
+          output.writeUInt64NoTag(indegreeHistogram_.getLong(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (valid_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, valid_);
+        }
+        if (medianIndegree_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, medianIndegree_);
+        }
+        if (medianOutdegree_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, medianOutdegree_);
+        }
+        if (maxNumberOfIndegree_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(4, maxNumberOfIndegree_);
+        }
+        if (maxNumberOfOutdegree_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(5, maxNumberOfOutdegree_);
+        }
+        if (minNumberOfIndegree_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(6, minNumberOfIndegree_);
+        }
+        if (minNumberOfOutdegree_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(7, minNumberOfOutdegree_);
+        }
+        if (modeIndegree_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(8, modeIndegree_);
+        }
+        if (modeOutdegree_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(9, modeOutdegree_);
+        }
+        if (nodesSkippedFor10Edges_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(10, nodesSkippedFor10Edges_);
+        }
+        if (nodesSkippedForIndegreeDistance_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(11, nodesSkippedForIndegreeDistance_);
+        }
+        if (numberOfEdges_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(12, numberOfEdges_);
+        }
+        if (numberOfIndexedObjects_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(13, numberOfIndexedObjects_);
+        }
+        if (numberOfNodes_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(14, numberOfNodes_);
+        }
+        if (numberOfNodesWithoutEdges_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(15, numberOfNodesWithoutEdges_);
+        }
+        if (numberOfNodesWithoutIndegree_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(16, numberOfNodesWithoutIndegree_);
+        }
+        if (numberOfObjects_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(17, numberOfObjects_);
+        }
+        if (numberOfRemovedObjects_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(18, numberOfRemovedObjects_);
+        }
+        if (sizeOfObjectRepository_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(19, sizeOfObjectRepository_);
+        }
+        if (sizeOfRefinementObjectRepository_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt64Size(20, sizeOfRefinementObjectRepository_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(varianceOfIndegree_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(21, varianceOfIndegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(varianceOfOutdegree_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(22, varianceOfOutdegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanEdgeLength_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(23, meanEdgeLength_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanEdgeLengthFor10Edges_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(24, meanEdgeLengthFor10Edges_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanIndegreeDistanceFor10Edges_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(25, meanIndegreeDistanceFor10Edges_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(meanNumberOfEdgesPerNode_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(26, meanNumberOfEdgesPerNode_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c1Indegree_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(27, c1Indegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c5Indegree_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(28, c5Indegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c95Outdegree_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(29, c95Outdegree_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(c99Outdegree_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(30, c99Outdegree_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < indegreeCount_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt64SizeNoTag(indegreeCount_.getLong(i));
+          }
+          size += dataSize;
+          if (!getIndegreeCountList().isEmpty()) {
+            size += 2;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          indegreeCountMemoizedSerializedSize = dataSize;
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < outdegreeHistogram_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeUInt64SizeNoTag(outdegreeHistogram_.getLong(i));
+          }
+          size += dataSize;
+          if (!getOutdegreeHistogramList().isEmpty()) {
+            size += 2;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          outdegreeHistogramMemoizedSerializedSize = dataSize;
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < indegreeHistogram_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeUInt64SizeNoTag(indegreeHistogram_.getLong(i));
+          }
+          size += dataSize;
+          if (!getIndegreeHistogramList().isEmpty()) {
+            size += 2;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          indegreeHistogramMemoizedSerializedSize = dataSize;
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.api.v1.payload.Info.Index.Statistics)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.api.v1.payload.Info.Index.Statistics other = (org.vdaas.vald.api.v1.payload.Info.Index.Statistics) obj;
+
+        if (getValid()
+            != other.getValid()) return false;
+        if (getMedianIndegree()
+            != other.getMedianIndegree()) return false;
+        if (getMedianOutdegree()
+            != other.getMedianOutdegree()) return false;
+        if (getMaxNumberOfIndegree()
+            != other.getMaxNumberOfIndegree()) return false;
+        if (getMaxNumberOfOutdegree()
+            != other.getMaxNumberOfOutdegree()) return false;
+        if (getMinNumberOfIndegree()
+            != other.getMinNumberOfIndegree()) return false;
+        if (getMinNumberOfOutdegree()
+            != other.getMinNumberOfOutdegree()) return false;
+        if (getModeIndegree()
+            != other.getModeIndegree()) return false;
+        if (getModeOutdegree()
+            != other.getModeOutdegree()) return false;
+        if (getNodesSkippedFor10Edges()
+            != other.getNodesSkippedFor10Edges()) return false;
+        if (getNodesSkippedForIndegreeDistance()
+            != other.getNodesSkippedForIndegreeDistance()) return false;
+        if (getNumberOfEdges()
+            != other.getNumberOfEdges()) return false;
+        if (getNumberOfIndexedObjects()
+            != other.getNumberOfIndexedObjects()) return false;
+        if (getNumberOfNodes()
+            != other.getNumberOfNodes()) return false;
+        if (getNumberOfNodesWithoutEdges()
+            != other.getNumberOfNodesWithoutEdges()) return false;
+        if (getNumberOfNodesWithoutIndegree()
+            != other.getNumberOfNodesWithoutIndegree()) return false;
+        if (getNumberOfObjects()
+            != other.getNumberOfObjects()) return false;
+        if (getNumberOfRemovedObjects()
+            != other.getNumberOfRemovedObjects()) return false;
+        if (getSizeOfObjectRepository()
+            != other.getSizeOfObjectRepository()) return false;
+        if (getSizeOfRefinementObjectRepository()
+            != other.getSizeOfRefinementObjectRepository()) return false;
+        if (java.lang.Double.doubleToLongBits(getVarianceOfIndegree())
+            != java.lang.Double.doubleToLongBits(
+                other.getVarianceOfIndegree())) return false;
+        if (java.lang.Double.doubleToLongBits(getVarianceOfOutdegree())
+            != java.lang.Double.doubleToLongBits(
+                other.getVarianceOfOutdegree())) return false;
+        if (java.lang.Double.doubleToLongBits(getMeanEdgeLength())
+            != java.lang.Double.doubleToLongBits(
+                other.getMeanEdgeLength())) return false;
+        if (java.lang.Double.doubleToLongBits(getMeanEdgeLengthFor10Edges())
+            != java.lang.Double.doubleToLongBits(
+                other.getMeanEdgeLengthFor10Edges())) return false;
+        if (java.lang.Double.doubleToLongBits(getMeanIndegreeDistanceFor10Edges())
+            != java.lang.Double.doubleToLongBits(
+                other.getMeanIndegreeDistanceFor10Edges())) return false;
+        if (java.lang.Double.doubleToLongBits(getMeanNumberOfEdgesPerNode())
+            != java.lang.Double.doubleToLongBits(
+                other.getMeanNumberOfEdgesPerNode())) return false;
+        if (java.lang.Double.doubleToLongBits(getC1Indegree())
+            != java.lang.Double.doubleToLongBits(
+                other.getC1Indegree())) return false;
+        if (java.lang.Double.doubleToLongBits(getC5Indegree())
+            != java.lang.Double.doubleToLongBits(
+                other.getC5Indegree())) return false;
+        if (java.lang.Double.doubleToLongBits(getC95Outdegree())
+            != java.lang.Double.doubleToLongBits(
+                other.getC95Outdegree())) return false;
+        if (java.lang.Double.doubleToLongBits(getC99Outdegree())
+            != java.lang.Double.doubleToLongBits(
+                other.getC99Outdegree())) return false;
+        if (!getIndegreeCountList()
+            .equals(other.getIndegreeCountList())) return false;
+        if (!getOutdegreeHistogramList()
+            .equals(other.getOutdegreeHistogramList())) return false;
+        if (!getIndegreeHistogramList()
+            .equals(other.getIndegreeHistogramList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + VALID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getValid());
+        hash = (37 * hash) + MEDIAN_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + getMedianIndegree();
+        hash = (37 * hash) + MEDIAN_OUTDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + getMedianOutdegree();
+        hash = (37 * hash) + MAX_NUMBER_OF_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMaxNumberOfIndegree());
+        hash = (37 * hash) + MAX_NUMBER_OF_OUTDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMaxNumberOfOutdegree());
+        hash = (37 * hash) + MIN_NUMBER_OF_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMinNumberOfIndegree());
+        hash = (37 * hash) + MIN_NUMBER_OF_OUTDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMinNumberOfOutdegree());
+        hash = (37 * hash) + MODE_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getModeIndegree());
+        hash = (37 * hash) + MODE_OUTDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getModeOutdegree());
+        hash = (37 * hash) + NODES_SKIPPED_FOR_10_EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNodesSkippedFor10Edges());
+        hash = (37 * hash) + NODES_SKIPPED_FOR_INDEGREE_DISTANCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNodesSkippedForIndegreeDistance());
+        hash = (37 * hash) + NUMBER_OF_EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumberOfEdges());
+        hash = (37 * hash) + NUMBER_OF_INDEXED_OBJECTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumberOfIndexedObjects());
+        hash = (37 * hash) + NUMBER_OF_NODES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumberOfNodes());
+        hash = (37 * hash) + NUMBER_OF_NODES_WITHOUT_EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumberOfNodesWithoutEdges());
+        hash = (37 * hash) + NUMBER_OF_NODES_WITHOUT_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumberOfNodesWithoutIndegree());
+        hash = (37 * hash) + NUMBER_OF_OBJECTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumberOfObjects());
+        hash = (37 * hash) + NUMBER_OF_REMOVED_OBJECTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getNumberOfRemovedObjects());
+        hash = (37 * hash) + SIZE_OF_OBJECT_REPOSITORY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSizeOfObjectRepository());
+        hash = (37 * hash) + SIZE_OF_REFINEMENT_OBJECT_REPOSITORY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSizeOfRefinementObjectRepository());
+        hash = (37 * hash) + VARIANCE_OF_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getVarianceOfIndegree()));
+        hash = (37 * hash) + VARIANCE_OF_OUTDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getVarianceOfOutdegree()));
+        hash = (37 * hash) + MEAN_EDGE_LENGTH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMeanEdgeLength()));
+        hash = (37 * hash) + MEAN_EDGE_LENGTH_FOR_10_EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMeanEdgeLengthFor10Edges()));
+        hash = (37 * hash) + MEAN_INDEGREE_DISTANCE_FOR_10_EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMeanIndegreeDistanceFor10Edges()));
+        hash = (37 * hash) + MEAN_NUMBER_OF_EDGES_PER_NODE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getMeanNumberOfEdgesPerNode()));
+        hash = (37 * hash) + C1_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getC1Indegree()));
+        hash = (37 * hash) + C5_INDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getC5Indegree()));
+        hash = (37 * hash) + C95_OUTDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getC95Outdegree()));
+        hash = (37 * hash) + C99_OUTDEGREE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getC99Outdegree()));
+        if (getIndegreeCountCount() > 0) {
+          hash = (37 * hash) + INDEGREE_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getIndegreeCountList().hashCode();
+        }
+        if (getOutdegreeHistogramCount() > 0) {
+          hash = (37 * hash) + OUTDEGREE_HISTOGRAM_FIELD_NUMBER;
+          hash = (53 * hash) + getOutdegreeHistogramList().hashCode();
+        }
+        if (getIndegreeHistogramCount() > 0) {
+          hash = (37 * hash) + INDEGREE_HISTOGRAM_FIELD_NUMBER;
+          hash = (53 * hash) + getIndegreeHistogramList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Info.Index.Statistics prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Represents index Statistics
+       * </pre>
+       *
+       * Protobuf type {@code payload.v1.Info.Index.Statistics}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.v1.Info.Index.Statistics)
+          org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Statistics_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Statistics_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.api.v1.payload.Info.Index.Statistics.class, org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.api.v1.payload.Info.Index.Statistics.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          bitField1_ = 0;
+          valid_ = false;
+          medianIndegree_ = 0;
+          medianOutdegree_ = 0;
+          maxNumberOfIndegree_ = 0L;
+          maxNumberOfOutdegree_ = 0L;
+          minNumberOfIndegree_ = 0L;
+          minNumberOfOutdegree_ = 0L;
+          modeIndegree_ = 0L;
+          modeOutdegree_ = 0L;
+          nodesSkippedFor10Edges_ = 0L;
+          nodesSkippedForIndegreeDistance_ = 0L;
+          numberOfEdges_ = 0L;
+          numberOfIndexedObjects_ = 0L;
+          numberOfNodes_ = 0L;
+          numberOfNodesWithoutEdges_ = 0L;
+          numberOfNodesWithoutIndegree_ = 0L;
+          numberOfObjects_ = 0L;
+          numberOfRemovedObjects_ = 0L;
+          sizeOfObjectRepository_ = 0L;
+          sizeOfRefinementObjectRepository_ = 0L;
+          varianceOfIndegree_ = 0D;
+          varianceOfOutdegree_ = 0D;
+          meanEdgeLength_ = 0D;
+          meanEdgeLengthFor10Edges_ = 0D;
+          meanIndegreeDistanceFor10Edges_ = 0D;
+          meanNumberOfEdgesPerNode_ = 0D;
+          c1Indegree_ = 0D;
+          c5Indegree_ = 0D;
+          c95Outdegree_ = 0D;
+          c99Outdegree_ = 0D;
+          indegreeCount_ = emptyLongList();
+          outdegreeHistogram_ = emptyLongList();
+          indegreeHistogram_ = emptyLongList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Statistics_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDefaultInstanceForType() {
+          return org.vdaas.vald.api.v1.payload.Info.Index.Statistics.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Statistics build() {
+          org.vdaas.vald.api.v1.payload.Info.Index.Statistics result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Statistics buildPartial() {
+          org.vdaas.vald.api.v1.payload.Info.Index.Statistics result = new org.vdaas.vald.api.v1.payload.Info.Index.Statistics(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          if (bitField1_ != 0) { buildPartial1(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(org.vdaas.vald.api.v1.payload.Info.Index.Statistics result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.valid_ = valid_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.medianIndegree_ = medianIndegree_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.medianOutdegree_ = medianOutdegree_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.maxNumberOfIndegree_ = maxNumberOfIndegree_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.maxNumberOfOutdegree_ = maxNumberOfOutdegree_;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.minNumberOfIndegree_ = minNumberOfIndegree_;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.minNumberOfOutdegree_ = minNumberOfOutdegree_;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.modeIndegree_ = modeIndegree_;
+          }
+          if (((from_bitField0_ & 0x00000100) != 0)) {
+            result.modeOutdegree_ = modeOutdegree_;
+          }
+          if (((from_bitField0_ & 0x00000200) != 0)) {
+            result.nodesSkippedFor10Edges_ = nodesSkippedFor10Edges_;
+          }
+          if (((from_bitField0_ & 0x00000400) != 0)) {
+            result.nodesSkippedForIndegreeDistance_ = nodesSkippedForIndegreeDistance_;
+          }
+          if (((from_bitField0_ & 0x00000800) != 0)) {
+            result.numberOfEdges_ = numberOfEdges_;
+          }
+          if (((from_bitField0_ & 0x00001000) != 0)) {
+            result.numberOfIndexedObjects_ = numberOfIndexedObjects_;
+          }
+          if (((from_bitField0_ & 0x00002000) != 0)) {
+            result.numberOfNodes_ = numberOfNodes_;
+          }
+          if (((from_bitField0_ & 0x00004000) != 0)) {
+            result.numberOfNodesWithoutEdges_ = numberOfNodesWithoutEdges_;
+          }
+          if (((from_bitField0_ & 0x00008000) != 0)) {
+            result.numberOfNodesWithoutIndegree_ = numberOfNodesWithoutIndegree_;
+          }
+          if (((from_bitField0_ & 0x00010000) != 0)) {
+            result.numberOfObjects_ = numberOfObjects_;
+          }
+          if (((from_bitField0_ & 0x00020000) != 0)) {
+            result.numberOfRemovedObjects_ = numberOfRemovedObjects_;
+          }
+          if (((from_bitField0_ & 0x00040000) != 0)) {
+            result.sizeOfObjectRepository_ = sizeOfObjectRepository_;
+          }
+          if (((from_bitField0_ & 0x00080000) != 0)) {
+            result.sizeOfRefinementObjectRepository_ = sizeOfRefinementObjectRepository_;
+          }
+          if (((from_bitField0_ & 0x00100000) != 0)) {
+            result.varianceOfIndegree_ = varianceOfIndegree_;
+          }
+          if (((from_bitField0_ & 0x00200000) != 0)) {
+            result.varianceOfOutdegree_ = varianceOfOutdegree_;
+          }
+          if (((from_bitField0_ & 0x00400000) != 0)) {
+            result.meanEdgeLength_ = meanEdgeLength_;
+          }
+          if (((from_bitField0_ & 0x00800000) != 0)) {
+            result.meanEdgeLengthFor10Edges_ = meanEdgeLengthFor10Edges_;
+          }
+          if (((from_bitField0_ & 0x01000000) != 0)) {
+            result.meanIndegreeDistanceFor10Edges_ = meanIndegreeDistanceFor10Edges_;
+          }
+          if (((from_bitField0_ & 0x02000000) != 0)) {
+            result.meanNumberOfEdgesPerNode_ = meanNumberOfEdgesPerNode_;
+          }
+          if (((from_bitField0_ & 0x04000000) != 0)) {
+            result.c1Indegree_ = c1Indegree_;
+          }
+          if (((from_bitField0_ & 0x08000000) != 0)) {
+            result.c5Indegree_ = c5Indegree_;
+          }
+          if (((from_bitField0_ & 0x10000000) != 0)) {
+            result.c95Outdegree_ = c95Outdegree_;
+          }
+          if (((from_bitField0_ & 0x20000000) != 0)) {
+            result.c99Outdegree_ = c99Outdegree_;
+          }
+          if (((from_bitField0_ & 0x40000000) != 0)) {
+            indegreeCount_.makeImmutable();
+            result.indegreeCount_ = indegreeCount_;
+          }
+          if (((from_bitField0_ & 0x80000000) != 0)) {
+            outdegreeHistogram_.makeImmutable();
+            result.outdegreeHistogram_ = outdegreeHistogram_;
+          }
+        }
+
+        private void buildPartial1(org.vdaas.vald.api.v1.payload.Info.Index.Statistics result) {
+          int from_bitField1_ = bitField1_;
+          if (((from_bitField1_ & 0x00000001) != 0)) {
+            indegreeHistogram_.makeImmutable();
+            result.indegreeHistogram_ = indegreeHistogram_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.api.v1.payload.Info.Index.Statistics) {
+            return mergeFrom((org.vdaas.vald.api.v1.payload.Info.Index.Statistics)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Info.Index.Statistics other) {
+          if (other == org.vdaas.vald.api.v1.payload.Info.Index.Statistics.getDefaultInstance()) return this;
+          if (other.getValid() != false) {
+            setValid(other.getValid());
+          }
+          if (other.getMedianIndegree() != 0) {
+            setMedianIndegree(other.getMedianIndegree());
+          }
+          if (other.getMedianOutdegree() != 0) {
+            setMedianOutdegree(other.getMedianOutdegree());
+          }
+          if (other.getMaxNumberOfIndegree() != 0L) {
+            setMaxNumberOfIndegree(other.getMaxNumberOfIndegree());
+          }
+          if (other.getMaxNumberOfOutdegree() != 0L) {
+            setMaxNumberOfOutdegree(other.getMaxNumberOfOutdegree());
+          }
+          if (other.getMinNumberOfIndegree() != 0L) {
+            setMinNumberOfIndegree(other.getMinNumberOfIndegree());
+          }
+          if (other.getMinNumberOfOutdegree() != 0L) {
+            setMinNumberOfOutdegree(other.getMinNumberOfOutdegree());
+          }
+          if (other.getModeIndegree() != 0L) {
+            setModeIndegree(other.getModeIndegree());
+          }
+          if (other.getModeOutdegree() != 0L) {
+            setModeOutdegree(other.getModeOutdegree());
+          }
+          if (other.getNodesSkippedFor10Edges() != 0L) {
+            setNodesSkippedFor10Edges(other.getNodesSkippedFor10Edges());
+          }
+          if (other.getNodesSkippedForIndegreeDistance() != 0L) {
+            setNodesSkippedForIndegreeDistance(other.getNodesSkippedForIndegreeDistance());
+          }
+          if (other.getNumberOfEdges() != 0L) {
+            setNumberOfEdges(other.getNumberOfEdges());
+          }
+          if (other.getNumberOfIndexedObjects() != 0L) {
+            setNumberOfIndexedObjects(other.getNumberOfIndexedObjects());
+          }
+          if (other.getNumberOfNodes() != 0L) {
+            setNumberOfNodes(other.getNumberOfNodes());
+          }
+          if (other.getNumberOfNodesWithoutEdges() != 0L) {
+            setNumberOfNodesWithoutEdges(other.getNumberOfNodesWithoutEdges());
+          }
+          if (other.getNumberOfNodesWithoutIndegree() != 0L) {
+            setNumberOfNodesWithoutIndegree(other.getNumberOfNodesWithoutIndegree());
+          }
+          if (other.getNumberOfObjects() != 0L) {
+            setNumberOfObjects(other.getNumberOfObjects());
+          }
+          if (other.getNumberOfRemovedObjects() != 0L) {
+            setNumberOfRemovedObjects(other.getNumberOfRemovedObjects());
+          }
+          if (other.getSizeOfObjectRepository() != 0L) {
+            setSizeOfObjectRepository(other.getSizeOfObjectRepository());
+          }
+          if (other.getSizeOfRefinementObjectRepository() != 0L) {
+            setSizeOfRefinementObjectRepository(other.getSizeOfRefinementObjectRepository());
+          }
+          if (other.getVarianceOfIndegree() != 0D) {
+            setVarianceOfIndegree(other.getVarianceOfIndegree());
+          }
+          if (other.getVarianceOfOutdegree() != 0D) {
+            setVarianceOfOutdegree(other.getVarianceOfOutdegree());
+          }
+          if (other.getMeanEdgeLength() != 0D) {
+            setMeanEdgeLength(other.getMeanEdgeLength());
+          }
+          if (other.getMeanEdgeLengthFor10Edges() != 0D) {
+            setMeanEdgeLengthFor10Edges(other.getMeanEdgeLengthFor10Edges());
+          }
+          if (other.getMeanIndegreeDistanceFor10Edges() != 0D) {
+            setMeanIndegreeDistanceFor10Edges(other.getMeanIndegreeDistanceFor10Edges());
+          }
+          if (other.getMeanNumberOfEdgesPerNode() != 0D) {
+            setMeanNumberOfEdgesPerNode(other.getMeanNumberOfEdgesPerNode());
+          }
+          if (other.getC1Indegree() != 0D) {
+            setC1Indegree(other.getC1Indegree());
+          }
+          if (other.getC5Indegree() != 0D) {
+            setC5Indegree(other.getC5Indegree());
+          }
+          if (other.getC95Outdegree() != 0D) {
+            setC95Outdegree(other.getC95Outdegree());
+          }
+          if (other.getC99Outdegree() != 0D) {
+            setC99Outdegree(other.getC99Outdegree());
+          }
+          if (!other.indegreeCount_.isEmpty()) {
+            if (indegreeCount_.isEmpty()) {
+              indegreeCount_ = other.indegreeCount_;
+              indegreeCount_.makeImmutable();
+              bitField0_ |= 0x40000000;
+            } else {
+              ensureIndegreeCountIsMutable();
+              indegreeCount_.addAll(other.indegreeCount_);
+            }
+            onChanged();
+          }
+          if (!other.outdegreeHistogram_.isEmpty()) {
+            if (outdegreeHistogram_.isEmpty()) {
+              outdegreeHistogram_ = other.outdegreeHistogram_;
+              outdegreeHistogram_.makeImmutable();
+              bitField0_ |= 0x80000000;
+            } else {
+              ensureOutdegreeHistogramIsMutable();
+              outdegreeHistogram_.addAll(other.outdegreeHistogram_);
+            }
+            onChanged();
+          }
+          if (!other.indegreeHistogram_.isEmpty()) {
+            if (indegreeHistogram_.isEmpty()) {
+              indegreeHistogram_ = other.indegreeHistogram_;
+              indegreeHistogram_.makeImmutable();
+              bitField1_ |= 0x00000001;
+            } else {
+              ensureIndegreeHistogramIsMutable();
+              indegreeHistogram_.addAll(other.indegreeHistogram_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  valid_ = input.readBool();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  medianIndegree_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  medianOutdegree_ = input.readInt32();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                case 32: {
+                  maxNumberOfIndegree_ = input.readUInt64();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                case 40: {
+                  maxNumberOfOutdegree_ = input.readUInt64();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
+                case 48: {
+                  minNumberOfIndegree_ = input.readUInt64();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 48
+                case 56: {
+                  minNumberOfOutdegree_ = input.readUInt64();
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 56
+                case 64: {
+                  modeIndegree_ = input.readUInt64();
+                  bitField0_ |= 0x00000080;
+                  break;
+                } // case 64
+                case 72: {
+                  modeOutdegree_ = input.readUInt64();
+                  bitField0_ |= 0x00000100;
+                  break;
+                } // case 72
+                case 80: {
+                  nodesSkippedFor10Edges_ = input.readUInt64();
+                  bitField0_ |= 0x00000200;
+                  break;
+                } // case 80
+                case 88: {
+                  nodesSkippedForIndegreeDistance_ = input.readUInt64();
+                  bitField0_ |= 0x00000400;
+                  break;
+                } // case 88
+                case 96: {
+                  numberOfEdges_ = input.readUInt64();
+                  bitField0_ |= 0x00000800;
+                  break;
+                } // case 96
+                case 104: {
+                  numberOfIndexedObjects_ = input.readUInt64();
+                  bitField0_ |= 0x00001000;
+                  break;
+                } // case 104
+                case 112: {
+                  numberOfNodes_ = input.readUInt64();
+                  bitField0_ |= 0x00002000;
+                  break;
+                } // case 112
+                case 120: {
+                  numberOfNodesWithoutEdges_ = input.readUInt64();
+                  bitField0_ |= 0x00004000;
+                  break;
+                } // case 120
+                case 128: {
+                  numberOfNodesWithoutIndegree_ = input.readUInt64();
+                  bitField0_ |= 0x00008000;
+                  break;
+                } // case 128
+                case 136: {
+                  numberOfObjects_ = input.readUInt64();
+                  bitField0_ |= 0x00010000;
+                  break;
+                } // case 136
+                case 144: {
+                  numberOfRemovedObjects_ = input.readUInt64();
+                  bitField0_ |= 0x00020000;
+                  break;
+                } // case 144
+                case 152: {
+                  sizeOfObjectRepository_ = input.readUInt64();
+                  bitField0_ |= 0x00040000;
+                  break;
+                } // case 152
+                case 160: {
+                  sizeOfRefinementObjectRepository_ = input.readUInt64();
+                  bitField0_ |= 0x00080000;
+                  break;
+                } // case 160
+                case 169: {
+                  varianceOfIndegree_ = input.readDouble();
+                  bitField0_ |= 0x00100000;
+                  break;
+                } // case 169
+                case 177: {
+                  varianceOfOutdegree_ = input.readDouble();
+                  bitField0_ |= 0x00200000;
+                  break;
+                } // case 177
+                case 185: {
+                  meanEdgeLength_ = input.readDouble();
+                  bitField0_ |= 0x00400000;
+                  break;
+                } // case 185
+                case 193: {
+                  meanEdgeLengthFor10Edges_ = input.readDouble();
+                  bitField0_ |= 0x00800000;
+                  break;
+                } // case 193
+                case 201: {
+                  meanIndegreeDistanceFor10Edges_ = input.readDouble();
+                  bitField0_ |= 0x01000000;
+                  break;
+                } // case 201
+                case 209: {
+                  meanNumberOfEdgesPerNode_ = input.readDouble();
+                  bitField0_ |= 0x02000000;
+                  break;
+                } // case 209
+                case 217: {
+                  c1Indegree_ = input.readDouble();
+                  bitField0_ |= 0x04000000;
+                  break;
+                } // case 217
+                case 225: {
+                  c5Indegree_ = input.readDouble();
+                  bitField0_ |= 0x08000000;
+                  break;
+                } // case 225
+                case 233: {
+                  c95Outdegree_ = input.readDouble();
+                  bitField0_ |= 0x10000000;
+                  break;
+                } // case 233
+                case 241: {
+                  c99Outdegree_ = input.readDouble();
+                  bitField0_ |= 0x20000000;
+                  break;
+                } // case 241
+                case 248: {
+                  long v = input.readInt64();
+                  ensureIndegreeCountIsMutable();
+                  indegreeCount_.addLong(v);
+                  break;
+                } // case 248
+                case 250: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureIndegreeCountIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    indegreeCount_.addLong(input.readInt64());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 250
+                case 256: {
+                  long v = input.readUInt64();
+                  ensureOutdegreeHistogramIsMutable();
+                  outdegreeHistogram_.addLong(v);
+                  break;
+                } // case 256
+                case 258: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureOutdegreeHistogramIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    outdegreeHistogram_.addLong(input.readUInt64());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 258
+                case 264: {
+                  long v = input.readUInt64();
+                  ensureIndegreeHistogramIsMutable();
+                  indegreeHistogram_.addLong(v);
+                  break;
+                } // case 264
+                case 266: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureIndegreeHistogramIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    indegreeHistogram_.addLong(input.readUInt64());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 266
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+        private int bitField1_;
+
+        private boolean valid_ ;
+        /**
+         * <code>bool valid = 1 [json_name = "valid"];</code>
+         * @return The valid.
+         */
+        @java.lang.Override
+        public boolean getValid() {
+          return valid_;
+        }
+        /**
+         * <code>bool valid = 1 [json_name = "valid"];</code>
+         * @param value The valid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValid(boolean value) {
+
+          valid_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool valid = 1 [json_name = "valid"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          valid_ = false;
+          onChanged();
+          return this;
+        }
+
+        private int medianIndegree_ ;
+        /**
+         * <code>int32 median_indegree = 2 [json_name = "medianIndegree"];</code>
+         * @return The medianIndegree.
+         */
+        @java.lang.Override
+        public int getMedianIndegree() {
+          return medianIndegree_;
+        }
+        /**
+         * <code>int32 median_indegree = 2 [json_name = "medianIndegree"];</code>
+         * @param value The medianIndegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMedianIndegree(int value) {
+
+          medianIndegree_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 median_indegree = 2 [json_name = "medianIndegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMedianIndegree() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          medianIndegree_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int medianOutdegree_ ;
+        /**
+         * <code>int32 median_outdegree = 3 [json_name = "medianOutdegree"];</code>
+         * @return The medianOutdegree.
+         */
+        @java.lang.Override
+        public int getMedianOutdegree() {
+          return medianOutdegree_;
+        }
+        /**
+         * <code>int32 median_outdegree = 3 [json_name = "medianOutdegree"];</code>
+         * @param value The medianOutdegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMedianOutdegree(int value) {
+
+          medianOutdegree_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 median_outdegree = 3 [json_name = "medianOutdegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMedianOutdegree() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          medianOutdegree_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private long maxNumberOfIndegree_ ;
+        /**
+         * <code>uint64 max_number_of_indegree = 4 [json_name = "maxNumberOfIndegree"];</code>
+         * @return The maxNumberOfIndegree.
+         */
+        @java.lang.Override
+        public long getMaxNumberOfIndegree() {
+          return maxNumberOfIndegree_;
+        }
+        /**
+         * <code>uint64 max_number_of_indegree = 4 [json_name = "maxNumberOfIndegree"];</code>
+         * @param value The maxNumberOfIndegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMaxNumberOfIndegree(long value) {
+
+          maxNumberOfIndegree_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 max_number_of_indegree = 4 [json_name = "maxNumberOfIndegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMaxNumberOfIndegree() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          maxNumberOfIndegree_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long maxNumberOfOutdegree_ ;
+        /**
+         * <code>uint64 max_number_of_outdegree = 5 [json_name = "maxNumberOfOutdegree"];</code>
+         * @return The maxNumberOfOutdegree.
+         */
+        @java.lang.Override
+        public long getMaxNumberOfOutdegree() {
+          return maxNumberOfOutdegree_;
+        }
+        /**
+         * <code>uint64 max_number_of_outdegree = 5 [json_name = "maxNumberOfOutdegree"];</code>
+         * @param value The maxNumberOfOutdegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMaxNumberOfOutdegree(long value) {
+
+          maxNumberOfOutdegree_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 max_number_of_outdegree = 5 [json_name = "maxNumberOfOutdegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMaxNumberOfOutdegree() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          maxNumberOfOutdegree_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long minNumberOfIndegree_ ;
+        /**
+         * <code>uint64 min_number_of_indegree = 6 [json_name = "minNumberOfIndegree"];</code>
+         * @return The minNumberOfIndegree.
+         */
+        @java.lang.Override
+        public long getMinNumberOfIndegree() {
+          return minNumberOfIndegree_;
+        }
+        /**
+         * <code>uint64 min_number_of_indegree = 6 [json_name = "minNumberOfIndegree"];</code>
+         * @param value The minNumberOfIndegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMinNumberOfIndegree(long value) {
+
+          minNumberOfIndegree_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 min_number_of_indegree = 6 [json_name = "minNumberOfIndegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMinNumberOfIndegree() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          minNumberOfIndegree_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long minNumberOfOutdegree_ ;
+        /**
+         * <code>uint64 min_number_of_outdegree = 7 [json_name = "minNumberOfOutdegree"];</code>
+         * @return The minNumberOfOutdegree.
+         */
+        @java.lang.Override
+        public long getMinNumberOfOutdegree() {
+          return minNumberOfOutdegree_;
+        }
+        /**
+         * <code>uint64 min_number_of_outdegree = 7 [json_name = "minNumberOfOutdegree"];</code>
+         * @param value The minNumberOfOutdegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMinNumberOfOutdegree(long value) {
+
+          minNumberOfOutdegree_ = value;
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 min_number_of_outdegree = 7 [json_name = "minNumberOfOutdegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMinNumberOfOutdegree() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          minNumberOfOutdegree_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long modeIndegree_ ;
+        /**
+         * <code>uint64 mode_indegree = 8 [json_name = "modeIndegree"];</code>
+         * @return The modeIndegree.
+         */
+        @java.lang.Override
+        public long getModeIndegree() {
+          return modeIndegree_;
+        }
+        /**
+         * <code>uint64 mode_indegree = 8 [json_name = "modeIndegree"];</code>
+         * @param value The modeIndegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModeIndegree(long value) {
+
+          modeIndegree_ = value;
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 mode_indegree = 8 [json_name = "modeIndegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearModeIndegree() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          modeIndegree_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long modeOutdegree_ ;
+        /**
+         * <code>uint64 mode_outdegree = 9 [json_name = "modeOutdegree"];</code>
+         * @return The modeOutdegree.
+         */
+        @java.lang.Override
+        public long getModeOutdegree() {
+          return modeOutdegree_;
+        }
+        /**
+         * <code>uint64 mode_outdegree = 9 [json_name = "modeOutdegree"];</code>
+         * @param value The modeOutdegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setModeOutdegree(long value) {
+
+          modeOutdegree_ = value;
+          bitField0_ |= 0x00000100;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 mode_outdegree = 9 [json_name = "modeOutdegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearModeOutdegree() {
+          bitField0_ = (bitField0_ & ~0x00000100);
+          modeOutdegree_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long nodesSkippedFor10Edges_ ;
+        /**
+         * <code>uint64 nodes_skipped_for_10_edges = 10 [json_name = "nodesSkippedFor10Edges"];</code>
+         * @return The nodesSkippedFor10Edges.
+         */
+        @java.lang.Override
+        public long getNodesSkippedFor10Edges() {
+          return nodesSkippedFor10Edges_;
+        }
+        /**
+         * <code>uint64 nodes_skipped_for_10_edges = 10 [json_name = "nodesSkippedFor10Edges"];</code>
+         * @param value The nodesSkippedFor10Edges to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNodesSkippedFor10Edges(long value) {
+
+          nodesSkippedFor10Edges_ = value;
+          bitField0_ |= 0x00000200;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 nodes_skipped_for_10_edges = 10 [json_name = "nodesSkippedFor10Edges"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNodesSkippedFor10Edges() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          nodesSkippedFor10Edges_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long nodesSkippedForIndegreeDistance_ ;
+        /**
+         * <code>uint64 nodes_skipped_for_indegree_distance = 11 [json_name = "nodesSkippedForIndegreeDistance"];</code>
+         * @return The nodesSkippedForIndegreeDistance.
+         */
+        @java.lang.Override
+        public long getNodesSkippedForIndegreeDistance() {
+          return nodesSkippedForIndegreeDistance_;
+        }
+        /**
+         * <code>uint64 nodes_skipped_for_indegree_distance = 11 [json_name = "nodesSkippedForIndegreeDistance"];</code>
+         * @param value The nodesSkippedForIndegreeDistance to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNodesSkippedForIndegreeDistance(long value) {
+
+          nodesSkippedForIndegreeDistance_ = value;
+          bitField0_ |= 0x00000400;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 nodes_skipped_for_indegree_distance = 11 [json_name = "nodesSkippedForIndegreeDistance"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNodesSkippedForIndegreeDistance() {
+          bitField0_ = (bitField0_ & ~0x00000400);
+          nodesSkippedForIndegreeDistance_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long numberOfEdges_ ;
+        /**
+         * <code>uint64 number_of_edges = 12 [json_name = "numberOfEdges"];</code>
+         * @return The numberOfEdges.
+         */
+        @java.lang.Override
+        public long getNumberOfEdges() {
+          return numberOfEdges_;
+        }
+        /**
+         * <code>uint64 number_of_edges = 12 [json_name = "numberOfEdges"];</code>
+         * @param value The numberOfEdges to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberOfEdges(long value) {
+
+          numberOfEdges_ = value;
+          bitField0_ |= 0x00000800;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 number_of_edges = 12 [json_name = "numberOfEdges"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumberOfEdges() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          numberOfEdges_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long numberOfIndexedObjects_ ;
+        /**
+         * <code>uint64 number_of_indexed_objects = 13 [json_name = "numberOfIndexedObjects"];</code>
+         * @return The numberOfIndexedObjects.
+         */
+        @java.lang.Override
+        public long getNumberOfIndexedObjects() {
+          return numberOfIndexedObjects_;
+        }
+        /**
+         * <code>uint64 number_of_indexed_objects = 13 [json_name = "numberOfIndexedObjects"];</code>
+         * @param value The numberOfIndexedObjects to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberOfIndexedObjects(long value) {
+
+          numberOfIndexedObjects_ = value;
+          bitField0_ |= 0x00001000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 number_of_indexed_objects = 13 [json_name = "numberOfIndexedObjects"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumberOfIndexedObjects() {
+          bitField0_ = (bitField0_ & ~0x00001000);
+          numberOfIndexedObjects_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long numberOfNodes_ ;
+        /**
+         * <code>uint64 number_of_nodes = 14 [json_name = "numberOfNodes"];</code>
+         * @return The numberOfNodes.
+         */
+        @java.lang.Override
+        public long getNumberOfNodes() {
+          return numberOfNodes_;
+        }
+        /**
+         * <code>uint64 number_of_nodes = 14 [json_name = "numberOfNodes"];</code>
+         * @param value The numberOfNodes to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberOfNodes(long value) {
+
+          numberOfNodes_ = value;
+          bitField0_ |= 0x00002000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 number_of_nodes = 14 [json_name = "numberOfNodes"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumberOfNodes() {
+          bitField0_ = (bitField0_ & ~0x00002000);
+          numberOfNodes_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long numberOfNodesWithoutEdges_ ;
+        /**
+         * <code>uint64 number_of_nodes_without_edges = 15 [json_name = "numberOfNodesWithoutEdges"];</code>
+         * @return The numberOfNodesWithoutEdges.
+         */
+        @java.lang.Override
+        public long getNumberOfNodesWithoutEdges() {
+          return numberOfNodesWithoutEdges_;
+        }
+        /**
+         * <code>uint64 number_of_nodes_without_edges = 15 [json_name = "numberOfNodesWithoutEdges"];</code>
+         * @param value The numberOfNodesWithoutEdges to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberOfNodesWithoutEdges(long value) {
+
+          numberOfNodesWithoutEdges_ = value;
+          bitField0_ |= 0x00004000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 number_of_nodes_without_edges = 15 [json_name = "numberOfNodesWithoutEdges"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumberOfNodesWithoutEdges() {
+          bitField0_ = (bitField0_ & ~0x00004000);
+          numberOfNodesWithoutEdges_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long numberOfNodesWithoutIndegree_ ;
+        /**
+         * <code>uint64 number_of_nodes_without_indegree = 16 [json_name = "numberOfNodesWithoutIndegree"];</code>
+         * @return The numberOfNodesWithoutIndegree.
+         */
+        @java.lang.Override
+        public long getNumberOfNodesWithoutIndegree() {
+          return numberOfNodesWithoutIndegree_;
+        }
+        /**
+         * <code>uint64 number_of_nodes_without_indegree = 16 [json_name = "numberOfNodesWithoutIndegree"];</code>
+         * @param value The numberOfNodesWithoutIndegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberOfNodesWithoutIndegree(long value) {
+
+          numberOfNodesWithoutIndegree_ = value;
+          bitField0_ |= 0x00008000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 number_of_nodes_without_indegree = 16 [json_name = "numberOfNodesWithoutIndegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumberOfNodesWithoutIndegree() {
+          bitField0_ = (bitField0_ & ~0x00008000);
+          numberOfNodesWithoutIndegree_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long numberOfObjects_ ;
+        /**
+         * <code>uint64 number_of_objects = 17 [json_name = "numberOfObjects"];</code>
+         * @return The numberOfObjects.
+         */
+        @java.lang.Override
+        public long getNumberOfObjects() {
+          return numberOfObjects_;
+        }
+        /**
+         * <code>uint64 number_of_objects = 17 [json_name = "numberOfObjects"];</code>
+         * @param value The numberOfObjects to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberOfObjects(long value) {
+
+          numberOfObjects_ = value;
+          bitField0_ |= 0x00010000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 number_of_objects = 17 [json_name = "numberOfObjects"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumberOfObjects() {
+          bitField0_ = (bitField0_ & ~0x00010000);
+          numberOfObjects_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long numberOfRemovedObjects_ ;
+        /**
+         * <code>uint64 number_of_removed_objects = 18 [json_name = "numberOfRemovedObjects"];</code>
+         * @return The numberOfRemovedObjects.
+         */
+        @java.lang.Override
+        public long getNumberOfRemovedObjects() {
+          return numberOfRemovedObjects_;
+        }
+        /**
+         * <code>uint64 number_of_removed_objects = 18 [json_name = "numberOfRemovedObjects"];</code>
+         * @param value The numberOfRemovedObjects to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberOfRemovedObjects(long value) {
+
+          numberOfRemovedObjects_ = value;
+          bitField0_ |= 0x00020000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 number_of_removed_objects = 18 [json_name = "numberOfRemovedObjects"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumberOfRemovedObjects() {
+          bitField0_ = (bitField0_ & ~0x00020000);
+          numberOfRemovedObjects_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long sizeOfObjectRepository_ ;
+        /**
+         * <code>uint64 size_of_object_repository = 19 [json_name = "sizeOfObjectRepository"];</code>
+         * @return The sizeOfObjectRepository.
+         */
+        @java.lang.Override
+        public long getSizeOfObjectRepository() {
+          return sizeOfObjectRepository_;
+        }
+        /**
+         * <code>uint64 size_of_object_repository = 19 [json_name = "sizeOfObjectRepository"];</code>
+         * @param value The sizeOfObjectRepository to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSizeOfObjectRepository(long value) {
+
+          sizeOfObjectRepository_ = value;
+          bitField0_ |= 0x00040000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 size_of_object_repository = 19 [json_name = "sizeOfObjectRepository"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSizeOfObjectRepository() {
+          bitField0_ = (bitField0_ & ~0x00040000);
+          sizeOfObjectRepository_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long sizeOfRefinementObjectRepository_ ;
+        /**
+         * <code>uint64 size_of_refinement_object_repository = 20 [json_name = "sizeOfRefinementObjectRepository"];</code>
+         * @return The sizeOfRefinementObjectRepository.
+         */
+        @java.lang.Override
+        public long getSizeOfRefinementObjectRepository() {
+          return sizeOfRefinementObjectRepository_;
+        }
+        /**
+         * <code>uint64 size_of_refinement_object_repository = 20 [json_name = "sizeOfRefinementObjectRepository"];</code>
+         * @param value The sizeOfRefinementObjectRepository to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSizeOfRefinementObjectRepository(long value) {
+
+          sizeOfRefinementObjectRepository_ = value;
+          bitField0_ |= 0x00080000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint64 size_of_refinement_object_repository = 20 [json_name = "sizeOfRefinementObjectRepository"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSizeOfRefinementObjectRepository() {
+          bitField0_ = (bitField0_ & ~0x00080000);
+          sizeOfRefinementObjectRepository_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private double varianceOfIndegree_ ;
+        /**
+         * <code>double variance_of_indegree = 21 [json_name = "varianceOfIndegree"];</code>
+         * @return The varianceOfIndegree.
+         */
+        @java.lang.Override
+        public double getVarianceOfIndegree() {
+          return varianceOfIndegree_;
+        }
+        /**
+         * <code>double variance_of_indegree = 21 [json_name = "varianceOfIndegree"];</code>
+         * @param value The varianceOfIndegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setVarianceOfIndegree(double value) {
+
+          varianceOfIndegree_ = value;
+          bitField0_ |= 0x00100000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double variance_of_indegree = 21 [json_name = "varianceOfIndegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearVarianceOfIndegree() {
+          bitField0_ = (bitField0_ & ~0x00100000);
+          varianceOfIndegree_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double varianceOfOutdegree_ ;
+        /**
+         * <code>double variance_of_outdegree = 22 [json_name = "varianceOfOutdegree"];</code>
+         * @return The varianceOfOutdegree.
+         */
+        @java.lang.Override
+        public double getVarianceOfOutdegree() {
+          return varianceOfOutdegree_;
+        }
+        /**
+         * <code>double variance_of_outdegree = 22 [json_name = "varianceOfOutdegree"];</code>
+         * @param value The varianceOfOutdegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setVarianceOfOutdegree(double value) {
+
+          varianceOfOutdegree_ = value;
+          bitField0_ |= 0x00200000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double variance_of_outdegree = 22 [json_name = "varianceOfOutdegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearVarianceOfOutdegree() {
+          bitField0_ = (bitField0_ & ~0x00200000);
+          varianceOfOutdegree_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double meanEdgeLength_ ;
+        /**
+         * <code>double mean_edge_length = 23 [json_name = "meanEdgeLength"];</code>
+         * @return The meanEdgeLength.
+         */
+        @java.lang.Override
+        public double getMeanEdgeLength() {
+          return meanEdgeLength_;
+        }
+        /**
+         * <code>double mean_edge_length = 23 [json_name = "meanEdgeLength"];</code>
+         * @param value The meanEdgeLength to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMeanEdgeLength(double value) {
+
+          meanEdgeLength_ = value;
+          bitField0_ |= 0x00400000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double mean_edge_length = 23 [json_name = "meanEdgeLength"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMeanEdgeLength() {
+          bitField0_ = (bitField0_ & ~0x00400000);
+          meanEdgeLength_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double meanEdgeLengthFor10Edges_ ;
+        /**
+         * <code>double mean_edge_length_for_10_edges = 24 [json_name = "meanEdgeLengthFor10Edges"];</code>
+         * @return The meanEdgeLengthFor10Edges.
+         */
+        @java.lang.Override
+        public double getMeanEdgeLengthFor10Edges() {
+          return meanEdgeLengthFor10Edges_;
+        }
+        /**
+         * <code>double mean_edge_length_for_10_edges = 24 [json_name = "meanEdgeLengthFor10Edges"];</code>
+         * @param value The meanEdgeLengthFor10Edges to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMeanEdgeLengthFor10Edges(double value) {
+
+          meanEdgeLengthFor10Edges_ = value;
+          bitField0_ |= 0x00800000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double mean_edge_length_for_10_edges = 24 [json_name = "meanEdgeLengthFor10Edges"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMeanEdgeLengthFor10Edges() {
+          bitField0_ = (bitField0_ & ~0x00800000);
+          meanEdgeLengthFor10Edges_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double meanIndegreeDistanceFor10Edges_ ;
+        /**
+         * <code>double mean_indegree_distance_for_10_edges = 25 [json_name = "meanIndegreeDistanceFor10Edges"];</code>
+         * @return The meanIndegreeDistanceFor10Edges.
+         */
+        @java.lang.Override
+        public double getMeanIndegreeDistanceFor10Edges() {
+          return meanIndegreeDistanceFor10Edges_;
+        }
+        /**
+         * <code>double mean_indegree_distance_for_10_edges = 25 [json_name = "meanIndegreeDistanceFor10Edges"];</code>
+         * @param value The meanIndegreeDistanceFor10Edges to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMeanIndegreeDistanceFor10Edges(double value) {
+
+          meanIndegreeDistanceFor10Edges_ = value;
+          bitField0_ |= 0x01000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double mean_indegree_distance_for_10_edges = 25 [json_name = "meanIndegreeDistanceFor10Edges"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMeanIndegreeDistanceFor10Edges() {
+          bitField0_ = (bitField0_ & ~0x01000000);
+          meanIndegreeDistanceFor10Edges_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double meanNumberOfEdgesPerNode_ ;
+        /**
+         * <code>double mean_number_of_edges_per_node = 26 [json_name = "meanNumberOfEdgesPerNode"];</code>
+         * @return The meanNumberOfEdgesPerNode.
+         */
+        @java.lang.Override
+        public double getMeanNumberOfEdgesPerNode() {
+          return meanNumberOfEdgesPerNode_;
+        }
+        /**
+         * <code>double mean_number_of_edges_per_node = 26 [json_name = "meanNumberOfEdgesPerNode"];</code>
+         * @param value The meanNumberOfEdgesPerNode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMeanNumberOfEdgesPerNode(double value) {
+
+          meanNumberOfEdgesPerNode_ = value;
+          bitField0_ |= 0x02000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double mean_number_of_edges_per_node = 26 [json_name = "meanNumberOfEdgesPerNode"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMeanNumberOfEdgesPerNode() {
+          bitField0_ = (bitField0_ & ~0x02000000);
+          meanNumberOfEdgesPerNode_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double c1Indegree_ ;
+        /**
+         * <code>double c1_indegree = 27 [json_name = "c1Indegree"];</code>
+         * @return The c1Indegree.
+         */
+        @java.lang.Override
+        public double getC1Indegree() {
+          return c1Indegree_;
+        }
+        /**
+         * <code>double c1_indegree = 27 [json_name = "c1Indegree"];</code>
+         * @param value The c1Indegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setC1Indegree(double value) {
+
+          c1Indegree_ = value;
+          bitField0_ |= 0x04000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double c1_indegree = 27 [json_name = "c1Indegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearC1Indegree() {
+          bitField0_ = (bitField0_ & ~0x04000000);
+          c1Indegree_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double c5Indegree_ ;
+        /**
+         * <code>double c5_indegree = 28 [json_name = "c5Indegree"];</code>
+         * @return The c5Indegree.
+         */
+        @java.lang.Override
+        public double getC5Indegree() {
+          return c5Indegree_;
+        }
+        /**
+         * <code>double c5_indegree = 28 [json_name = "c5Indegree"];</code>
+         * @param value The c5Indegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setC5Indegree(double value) {
+
+          c5Indegree_ = value;
+          bitField0_ |= 0x08000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double c5_indegree = 28 [json_name = "c5Indegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearC5Indegree() {
+          bitField0_ = (bitField0_ & ~0x08000000);
+          c5Indegree_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double c95Outdegree_ ;
+        /**
+         * <code>double c95_outdegree = 29 [json_name = "c95Outdegree"];</code>
+         * @return The c95Outdegree.
+         */
+        @java.lang.Override
+        public double getC95Outdegree() {
+          return c95Outdegree_;
+        }
+        /**
+         * <code>double c95_outdegree = 29 [json_name = "c95Outdegree"];</code>
+         * @param value The c95Outdegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setC95Outdegree(double value) {
+
+          c95Outdegree_ = value;
+          bitField0_ |= 0x10000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double c95_outdegree = 29 [json_name = "c95Outdegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearC95Outdegree() {
+          bitField0_ = (bitField0_ & ~0x10000000);
+          c95Outdegree_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double c99Outdegree_ ;
+        /**
+         * <code>double c99_outdegree = 30 [json_name = "c99Outdegree"];</code>
+         * @return The c99Outdegree.
+         */
+        @java.lang.Override
+        public double getC99Outdegree() {
+          return c99Outdegree_;
+        }
+        /**
+         * <code>double c99_outdegree = 30 [json_name = "c99Outdegree"];</code>
+         * @param value The c99Outdegree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setC99Outdegree(double value) {
+
+          c99Outdegree_ = value;
+          bitField0_ |= 0x20000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double c99_outdegree = 30 [json_name = "c99Outdegree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearC99Outdegree() {
+          bitField0_ = (bitField0_ & ~0x20000000);
+          c99Outdegree_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Internal.LongList indegreeCount_ = emptyLongList();
+        private void ensureIndegreeCountIsMutable() {
+          if (!indegreeCount_.isModifiable()) {
+            indegreeCount_ = makeMutableCopy(indegreeCount_);
+          }
+          bitField0_ |= 0x40000000;
+        }
+        /**
+         * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+         * @return A list containing the indegreeCount.
+         */
+        public java.util.List<java.lang.Long>
+            getIndegreeCountList() {
+          indegreeCount_.makeImmutable();
+          return indegreeCount_;
+        }
+        /**
+         * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+         * @return The count of indegreeCount.
+         */
+        public int getIndegreeCountCount() {
+          return indegreeCount_.size();
+        }
+        /**
+         * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+         * @param index The index of the element to return.
+         * @return The indegreeCount at the given index.
+         */
+        public long getIndegreeCount(int index) {
+          return indegreeCount_.getLong(index);
+        }
+        /**
+         * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+         * @param index The index to set the value at.
+         * @param value The indegreeCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIndegreeCount(
+            int index, long value) {
+
+          ensureIndegreeCountIsMutable();
+          indegreeCount_.setLong(index, value);
+          bitField0_ |= 0x40000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+         * @param value The indegreeCount to add.
+         * @return This builder for chaining.
+         */
+        public Builder addIndegreeCount(long value) {
+
+          ensureIndegreeCountIsMutable();
+          indegreeCount_.addLong(value);
+          bitField0_ |= 0x40000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+         * @param values The indegreeCount to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllIndegreeCount(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureIndegreeCountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, indegreeCount_);
+          bitField0_ |= 0x40000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int64 indegree_count = 31 [json_name = "indegreeCount"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIndegreeCount() {
+          indegreeCount_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x40000000);
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Internal.LongList outdegreeHistogram_ = emptyLongList();
+        private void ensureOutdegreeHistogramIsMutable() {
+          if (!outdegreeHistogram_.isModifiable()) {
+            outdegreeHistogram_ = makeMutableCopy(outdegreeHistogram_);
+          }
+          bitField0_ |= 0x80000000;
+        }
+        /**
+         * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+         * @return A list containing the outdegreeHistogram.
+         */
+        public java.util.List<java.lang.Long>
+            getOutdegreeHistogramList() {
+          outdegreeHistogram_.makeImmutable();
+          return outdegreeHistogram_;
+        }
+        /**
+         * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+         * @return The count of outdegreeHistogram.
+         */
+        public int getOutdegreeHistogramCount() {
+          return outdegreeHistogram_.size();
+        }
+        /**
+         * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+         * @param index The index of the element to return.
+         * @return The outdegreeHistogram at the given index.
+         */
+        public long getOutdegreeHistogram(int index) {
+          return outdegreeHistogram_.getLong(index);
+        }
+        /**
+         * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+         * @param index The index to set the value at.
+         * @param value The outdegreeHistogram to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOutdegreeHistogram(
+            int index, long value) {
+
+          ensureOutdegreeHistogramIsMutable();
+          outdegreeHistogram_.setLong(index, value);
+          bitField0_ |= 0x80000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+         * @param value The outdegreeHistogram to add.
+         * @return This builder for chaining.
+         */
+        public Builder addOutdegreeHistogram(long value) {
+
+          ensureOutdegreeHistogramIsMutable();
+          outdegreeHistogram_.addLong(value);
+          bitField0_ |= 0x80000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+         * @param values The outdegreeHistogram to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllOutdegreeHistogram(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureOutdegreeHistogramIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outdegreeHistogram_);
+          bitField0_ |= 0x80000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 outdegree_histogram = 32 [json_name = "outdegreeHistogram"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOutdegreeHistogram() {
+          outdegreeHistogram_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x80000000);
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Internal.LongList indegreeHistogram_ = emptyLongList();
+        private void ensureIndegreeHistogramIsMutable() {
+          if (!indegreeHistogram_.isModifiable()) {
+            indegreeHistogram_ = makeMutableCopy(indegreeHistogram_);
+          }
+          bitField1_ |= 0x00000001;
+        }
+        /**
+         * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+         * @return A list containing the indegreeHistogram.
+         */
+        public java.util.List<java.lang.Long>
+            getIndegreeHistogramList() {
+          indegreeHistogram_.makeImmutable();
+          return indegreeHistogram_;
+        }
+        /**
+         * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+         * @return The count of indegreeHistogram.
+         */
+        public int getIndegreeHistogramCount() {
+          return indegreeHistogram_.size();
+        }
+        /**
+         * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+         * @param index The index of the element to return.
+         * @return The indegreeHistogram at the given index.
+         */
+        public long getIndegreeHistogram(int index) {
+          return indegreeHistogram_.getLong(index);
+        }
+        /**
+         * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+         * @param index The index to set the value at.
+         * @param value The indegreeHistogram to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIndegreeHistogram(
+            int index, long value) {
+
+          ensureIndegreeHistogramIsMutable();
+          indegreeHistogram_.setLong(index, value);
+          bitField1_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+         * @param value The indegreeHistogram to add.
+         * @return This builder for chaining.
+         */
+        public Builder addIndegreeHistogram(long value) {
+
+          ensureIndegreeHistogramIsMutable();
+          indegreeHistogram_.addLong(value);
+          bitField1_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+         * @param values The indegreeHistogram to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllIndegreeHistogram(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureIndegreeHistogramIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, indegreeHistogram_);
+          bitField1_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated uint64 indegree_histogram = 33 [json_name = "indegreeHistogram"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIndegreeHistogram() {
+          indegreeHistogram_ = emptyLongList();
+          bitField1_ = (bitField1_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.v1.Info.Index.Statistics)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.v1.Info.Index.Statistics)
+      private static final org.vdaas.vald.api.v1.payload.Info.Index.Statistics DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Info.Index.Statistics();
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Statistics>
+          PARSER = new com.google.protobuf.AbstractParser<Statistics>() {
+        @java.lang.Override
+        public Statistics parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Statistics> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Statistics> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface StatisticsDetailOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.v1.Info.Index.StatisticsDetail)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      int getDetailsCount();
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      boolean containsDetails(
+          java.lang.String key);
+      /**
+       * Use {@link #getDetailsMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>
+      getDetails();
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>
+      getDetailsMap();
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDetailsOrDefault(
+          java.lang.String key,
+          /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue);
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDetailsOrThrow(
+          java.lang.String key);
+    }
+    /**
+     * <pre>
+     * Represents index Statistics for each Agents
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Info.Index.StatisticsDetail}
+     */
+    public static final class StatisticsDetail extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.v1.Info.Index.StatisticsDetail)
+        StatisticsDetailOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use StatisticsDetail.newBuilder() to construct.
+      private StatisticsDetail(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private StatisticsDetail() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new StatisticsDetail();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_StatisticsDetail_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetDetails();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_StatisticsDetail_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.class, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.Builder.class);
+      }
+
+      public static final int DETAILS_FIELD_NUMBER = 1;
+      private static final class DetailsDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>newDefaultInstance(
+                    org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_StatisticsDetail_DetailsEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                    org.vdaas.vald.api.v1.payload.Info.Index.Statistics.getDefaultInstance());
+      }
+      @SuppressWarnings("serial")
+      private com.google.protobuf.MapField<
+          java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> details_;
+      private com.google.protobuf.MapField<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>
+      internalGetDetails() {
+        if (details_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DetailsDefaultEntryHolder.defaultEntry);
+        }
+        return details_;
+      }
+      public int getDetailsCount() {
+        return internalGetDetails().getMap().size();
+      }
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public boolean containsDetails(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetDetails().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDetailsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> getDetails() {
+        return getDetailsMap();
+      }
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> getDetailsMap() {
+        return internalGetDetails().getMap();
+      }
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDetailsOrDefault(
+          java.lang.String key,
+          /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> map =
+            internalGetDetails().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * count infos for each agents
+       * </pre>
+       *
+       * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDetailsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> map =
+            internalGetDetails().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetDetails(),
+            DetailsDefaultEntryHolder.defaultEntry,
+            1);
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (java.util.Map.Entry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> entry
+             : internalGetDetails().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>
+          details__ = DetailsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, details__);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail other = (org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail) obj;
+
+        if (!internalGetDetails().equals(
+            other.internalGetDetails())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (!internalGetDetails().getMap().isEmpty()) {
+          hash = (37 * hash) + DETAILS_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetDetails().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Represents index Statistics for each Agents
+       * </pre>
+       *
+       * Protobuf type {@code payload.v1.Info.Index.StatisticsDetail}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.v1.Info.Index.StatisticsDetail)
+          org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetailOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_StatisticsDetail_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+            int number) {
+          switch (number) {
+            case 1:
+              return internalGetDetails();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
+            int number) {
+          switch (number) {
+            case 1:
+              return internalGetMutableDetails();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_StatisticsDetail_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.class, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          internalGetMutableDetails().clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_StatisticsDetail_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail getDefaultInstanceForType() {
+          return org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail build() {
+          org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail buildPartial() {
+          org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail result = new org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.details_ = internalGetDetails().build(DetailsDefaultEntryHolder.defaultEntry);
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail) {
+            return mergeFrom((org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail other) {
+          if (other == org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail.getDefaultInstance()) return this;
+          internalGetMutableDetails().mergeFrom(
+              other.internalGetDetails());
+          bitField0_ |= 0x00000001;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.MapEntry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>
+                  details__ = input.readMessage(
+                      DetailsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                  internalGetMutableDetails().ensureBuilderMap().put(
+                      details__.getKey(), details__.getValue());
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private static final class DetailsConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> {
+          @java.lang.Override
+          public org.vdaas.vald.api.v1.payload.Info.Index.Statistics build(org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder val) {
+            if (val instanceof org.vdaas.vald.api.v1.payload.Info.Index.Statistics) { return (org.vdaas.vald.api.v1.payload.Info.Index.Statistics) val; }
+            return ((org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder) val).build();
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.MapEntry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> defaultEntry() {
+            return DetailsDefaultEntryHolder.defaultEntry;
+          }
+        };
+        private static final DetailsConverter detailsConverter = new DetailsConverter();
+
+        private com.google.protobuf.MapFieldBuilder<
+            java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Statistics, org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder> details_;
+        private com.google.protobuf.MapFieldBuilder<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Statistics, org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder>
+            internalGetDetails() {
+          if (details_ == null) {
+            return new com.google.protobuf.MapFieldBuilder<>(detailsConverter);
+          }
+          return details_;
+        }
+        private com.google.protobuf.MapFieldBuilder<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Statistics, org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder>
+            internalGetMutableDetails() {
+          if (details_ == null) {
+            details_ = new com.google.protobuf.MapFieldBuilder<>(detailsConverter);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return details_;
+        }
+        public int getDetailsCount() {
+          return internalGetDetails().ensureBuilderMap().size();
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public boolean containsDetails(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          return internalGetDetails().ensureBuilderMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getDetailsMap()} instead.
+         */
+        @java.lang.Override
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> getDetails() {
+          return getDetailsMap();
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> getDetailsMap() {
+          return internalGetDetails().getImmutableMap();
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDetailsOrDefault(
+            java.lang.String key,
+            /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder> map = internalGetMutableDetails().ensureBuilderMap();
+          return map.containsKey(key) ? detailsConverter.build(map.get(key)) : defaultValue;
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Statistics getDetailsOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder> map = internalGetMutableDetails().ensureBuilderMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return detailsConverter.build(map.get(key));
+        }
+        public Builder clearDetails() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          internalGetMutableDetails().clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        public Builder removeDetails(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          internalGetMutableDetails().ensureBuilderMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics>
+            getMutableDetails() {
+          bitField0_ |= 0x00000001;
+          return internalGetMutableDetails().ensureMessageMap();
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        public Builder putDetails(
+            java.lang.String key,
+            org.vdaas.vald.api.v1.payload.Info.Index.Statistics value) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) { throw new NullPointerException("map value"); }
+          internalGetMutableDetails().ensureBuilderMap()
+              .put(key, value);
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        public Builder putAllDetails(
+            java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> values) {
+          for (java.util.Map.Entry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Statistics> e : values.entrySet()) {
+            if (e.getKey() == null || e.getValue() == null) {
+              throw new NullPointerException();
+            }
+          }
+          internalGetMutableDetails().ensureBuilderMap()
+              .putAll(values);
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * count infos for each agents
+         * </pre>
+         *
+         * <code>map&lt;string, .payload.v1.Info.Index.Statistics&gt; details = 1 [json_name = "details"];</code>
+         */
+        public org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder putDetailsBuilderIfAbsent(
+            java.lang.String key) {
+          java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder> builderMap = internalGetMutableDetails().ensureBuilderMap();
+          org.vdaas.vald.api.v1.payload.Info.Index.StatisticsOrBuilder entry = builderMap.get(key);
+          if (entry == null) {
+            entry = org.vdaas.vald.api.v1.payload.Info.Index.Statistics.newBuilder();
+            builderMap.put(key, entry);
+          }
+          if (entry instanceof org.vdaas.vald.api.v1.payload.Info.Index.Statistics) {
+            entry = ((org.vdaas.vald.api.v1.payload.Info.Index.Statistics) entry).toBuilder();
+            builderMap.put(key, entry);
+          }
+          return (org.vdaas.vald.api.v1.payload.Info.Index.Statistics.Builder) entry;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.v1.Info.Index.StatisticsDetail)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.v1.Info.Index.StatisticsDetail)
+      private static final org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail();
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<StatisticsDetail>
+          PARSER = new com.google.protobuf.AbstractParser<StatisticsDetail>() {
+        @java.lang.Override
+        public StatisticsDetail parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<StatisticsDetail> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<StatisticsDetail> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
