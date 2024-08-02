@@ -1,5 +1,6 @@
 /vald
 /vald-origin
+/Makefile.d/k3d.mk
 
 # gogoproto
 src/main/java/com/google/protobuf/GoGoProtos.java
