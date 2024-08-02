@@ -30,6 +30,9 @@ GRPC_JAVA_VERSION = version/GRPC_JAVA_VERSION
 JAVA_LTS_LATEST_VERSTION = version/JAVA_VERSION_LTS_LATEST
 JAVA_LTS_STABLE_VERSTION = version/JAVA_VERSION_LTS_STABLE
 
+K3D_MAKEFILE_URL=https://raw.githubusercontent.com/vdaas/vald/main/Makefile.d/k3d.mk
+K3D_MAKEFILE=Makefile.d/k3d.mk
+
 PWD    := $(eval PWD := $(shell pwd))$(PWD)
 
 PROTO_ROOT  = $(VALD_DIR)/apis/proto
@@ -179,8 +182,7 @@ ci/deps/install:
 
 .PHONY: ci/deps/update
 ## update deps for CI environment
-ci/deps/update:
-	@echo "Nothing to do"
+ci/deps/update: sync/k3d/mk
 
 .PHONY: ci/package/prepare
 ## prepare for publich
@@ -205,13 +207,11 @@ version/java:
 version/gradle:
 	@echo $(GRADLE_VERSION)
 
-K3D_MAKEFILE_URL=https://raw.githubusercontent.com/vdaas/vald/main/Makefile.d/k3d.mk
-K3D_MAKEFILE=Makefile.d/k3d.mk
-
 Makefile.d:
 	mkdir -p Makefile.d
 
-$(K3D_MAKEFILE): Makefile.d
-	@curl -fsSLo $(K3D_MAKEFILE) $(K3D_MAKEFILE_URL)
+sync/k3d/mk: Makefile.d
+	rm -rf $(K3D_MAKEFILE)
+	curl -fsSLo $(K3D_MAKEFILE) $(K3D_MAKEFILE_URL)
 
-include $(K3D_MAKEFILE)
+# include $(K3D_MAKEFILE)
