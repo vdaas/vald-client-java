@@ -8,6 +8,8 @@ rm -f private_key.txt
 # Exports secrets.
 gpg --pinentry-mode loopback --passphrase "${GPG_PASSPHRASE}" --export-secret-keys -o ~/.gnupg/secring.gpg
 
+mkdir -p ~/.gradle
+
 # Sets up gradle properties file.
 GRADLE_PROPERTIES_FILE="$1"
 cat << EOF > ~/.gradle/gradle.properties
