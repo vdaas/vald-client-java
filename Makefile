@@ -177,7 +177,7 @@ $(TEST_DATASET_PATH):
 
 .PHONY: ci/deps/install
 ## install deps for CI environment
-ci/deps/install: ci/package/prepare
+ci/deps/install:
 	@echo "Nothing to do"
 
 .PHONY: ci/deps/update

@@ -32,3 +32,26 @@ jobs:
       - uses: vdaas/vald-client-ci/.github/actions/e2e@main
         with:
           client_type: java
+
+  e2e-debug:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/vdaas/vald/vald-ci-container:nightly
+      options: "--add-host host.docker.internal:host-gateway"
+    env:
+      GPG_KEYID: ${{ secrets.GPG_KEYID }}
+      GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      PGP_PRIVATE_KEY: ${{ secrets.PGP_PRIVATE_KEY }}
+      SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+      SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: vdaas/vald-client-ci/.github/actions/setup-language@main
+        with:
+          client_type: java
+      - uses: vdaas/vald-client-ci/.github/actions/setup-language@main
+        with:
+          client_type: java
+      - name: Prepare for publish
+        run: |
+          make REPO=vdaas ci/package/prepare
