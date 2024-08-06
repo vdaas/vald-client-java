@@ -103,6 +103,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+      - uses: vdaas/vald-client-ci/.github/actions/setup-language@main
+        with:
+          client_type: java
       - name: Prepare for publish
         run: |
           make REPO=vdaas ci/package/prepare
