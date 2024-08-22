@@ -7408,6 +7408,4393 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
 
     }
 
+    public interface PropertyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.v1.Info.Index.Property)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>int32 dimension = 1 [json_name = "dimension"];</code>
+       * @return The dimension.
+       */
+      int getDimension();
+
+      /**
+       * <code>int32 thread_pool_size = 2 [json_name = "threadPoolSize"];</code>
+       * @return The threadPoolSize.
+       */
+      int getThreadPoolSize();
+
+      /**
+       * <code>string object_type = 3 [json_name = "objectType"];</code>
+       * @return The objectType.
+       */
+      java.lang.String getObjectType();
+      /**
+       * <code>string object_type = 3 [json_name = "objectType"];</code>
+       * @return The bytes for objectType.
+       */
+      com.google.protobuf.ByteString
+          getObjectTypeBytes();
+
+      /**
+       * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+       * @return The distanceType.
+       */
+      java.lang.String getDistanceType();
+      /**
+       * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+       * @return The bytes for distanceType.
+       */
+      com.google.protobuf.ByteString
+          getDistanceTypeBytes();
+
+      /**
+       * <code>string index_type = 5 [json_name = "indexType"];</code>
+       * @return The indexType.
+       */
+      java.lang.String getIndexType();
+      /**
+       * <code>string index_type = 5 [json_name = "indexType"];</code>
+       * @return The bytes for indexType.
+       */
+      com.google.protobuf.ByteString
+          getIndexTypeBytes();
+
+      /**
+       * <code>string database_type = 6 [json_name = "databaseType"];</code>
+       * @return The databaseType.
+       */
+      java.lang.String getDatabaseType();
+      /**
+       * <code>string database_type = 6 [json_name = "databaseType"];</code>
+       * @return The bytes for databaseType.
+       */
+      com.google.protobuf.ByteString
+          getDatabaseTypeBytes();
+
+      /**
+       * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+       * @return The objectAlignment.
+       */
+      java.lang.String getObjectAlignment();
+      /**
+       * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+       * @return The bytes for objectAlignment.
+       */
+      com.google.protobuf.ByteString
+          getObjectAlignmentBytes();
+
+      /**
+       * <code>int32 path_adjustment_interval = 8 [json_name = "pathAdjustmentInterval"];</code>
+       * @return The pathAdjustmentInterval.
+       */
+      int getPathAdjustmentInterval();
+
+      /**
+       * <code>int32 graph_shared_memory_size = 9 [json_name = "graphSharedMemorySize"];</code>
+       * @return The graphSharedMemorySize.
+       */
+      int getGraphSharedMemorySize();
+
+      /**
+       * <code>int32 tree_shared_memory_size = 10 [json_name = "treeSharedMemorySize"];</code>
+       * @return The treeSharedMemorySize.
+       */
+      int getTreeSharedMemorySize();
+
+      /**
+       * <code>int32 object_shared_memory_size = 11 [json_name = "objectSharedMemorySize"];</code>
+       * @return The objectSharedMemorySize.
+       */
+      int getObjectSharedMemorySize();
+
+      /**
+       * <code>int32 prefetch_offset = 12 [json_name = "prefetchOffset"];</code>
+       * @return The prefetchOffset.
+       */
+      int getPrefetchOffset();
+
+      /**
+       * <code>int32 prefetch_size = 13 [json_name = "prefetchSize"];</code>
+       * @return The prefetchSize.
+       */
+      int getPrefetchSize();
+
+      /**
+       * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+       * @return The accuracyTable.
+       */
+      java.lang.String getAccuracyTable();
+      /**
+       * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+       * @return The bytes for accuracyTable.
+       */
+      com.google.protobuf.ByteString
+          getAccuracyTableBytes();
+
+      /**
+       * <code>string search_type = 15 [json_name = "searchType"];</code>
+       * @return The searchType.
+       */
+      java.lang.String getSearchType();
+      /**
+       * <code>string search_type = 15 [json_name = "searchType"];</code>
+       * @return The bytes for searchType.
+       */
+      com.google.protobuf.ByteString
+          getSearchTypeBytes();
+
+      /**
+       * <code>float max_magnitude = 16 [json_name = "maxMagnitude"];</code>
+       * @return The maxMagnitude.
+       */
+      float getMaxMagnitude();
+
+      /**
+       * <code>int32 n_of_neighbors_for_insertion_order = 17 [json_name = "nOfNeighborsForInsertionOrder"];</code>
+       * @return The nOfNeighborsForInsertionOrder.
+       */
+      int getNOfNeighborsForInsertionOrder();
+
+      /**
+       * <code>float epsilon_for_insertion_order = 18 [json_name = "epsilonForInsertionOrder"];</code>
+       * @return The epsilonForInsertionOrder.
+       */
+      float getEpsilonForInsertionOrder();
+
+      /**
+       * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+       * @return The refinementObjectType.
+       */
+      java.lang.String getRefinementObjectType();
+      /**
+       * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+       * @return The bytes for refinementObjectType.
+       */
+      com.google.protobuf.ByteString
+          getRefinementObjectTypeBytes();
+
+      /**
+       * <code>int32 truncation_threshold = 20 [json_name = "truncationThreshold"];</code>
+       * @return The truncationThreshold.
+       */
+      int getTruncationThreshold();
+
+      /**
+       * <code>int32 edge_size_for_creation = 21 [json_name = "edgeSizeForCreation"];</code>
+       * @return The edgeSizeForCreation.
+       */
+      int getEdgeSizeForCreation();
+
+      /**
+       * <code>int32 edge_size_for_search = 22 [json_name = "edgeSizeForSearch"];</code>
+       * @return The edgeSizeForSearch.
+       */
+      int getEdgeSizeForSearch();
+
+      /**
+       * <code>int32 edge_size_limit_for_creation = 23 [json_name = "edgeSizeLimitForCreation"];</code>
+       * @return The edgeSizeLimitForCreation.
+       */
+      int getEdgeSizeLimitForCreation();
+
+      /**
+       * <code>double insertion_radius_coefficient = 24 [json_name = "insertionRadiusCoefficient"];</code>
+       * @return The insertionRadiusCoefficient.
+       */
+      double getInsertionRadiusCoefficient();
+
+      /**
+       * <code>int32 seed_size = 25 [json_name = "seedSize"];</code>
+       * @return The seedSize.
+       */
+      int getSeedSize();
+
+      /**
+       * <code>string seed_type = 26 [json_name = "seedType"];</code>
+       * @return The seedType.
+       */
+      java.lang.String getSeedType();
+      /**
+       * <code>string seed_type = 26 [json_name = "seedType"];</code>
+       * @return The bytes for seedType.
+       */
+      com.google.protobuf.ByteString
+          getSeedTypeBytes();
+
+      /**
+       * <code>int32 truncation_thread_pool_size = 27 [json_name = "truncationThreadPoolSize"];</code>
+       * @return The truncationThreadPoolSize.
+       */
+      int getTruncationThreadPoolSize();
+
+      /**
+       * <code>int32 batch_size_for_creation = 28 [json_name = "batchSizeForCreation"];</code>
+       * @return The batchSizeForCreation.
+       */
+      int getBatchSizeForCreation();
+
+      /**
+       * <code>string graph_type = 29 [json_name = "graphType"];</code>
+       * @return The graphType.
+       */
+      java.lang.String getGraphType();
+      /**
+       * <code>string graph_type = 29 [json_name = "graphType"];</code>
+       * @return The bytes for graphType.
+       */
+      com.google.protobuf.ByteString
+          getGraphTypeBytes();
+
+      /**
+       * <code>int32 dynamic_edge_size_base = 30 [json_name = "dynamicEdgeSizeBase"];</code>
+       * @return The dynamicEdgeSizeBase.
+       */
+      int getDynamicEdgeSizeBase();
+
+      /**
+       * <code>int32 dynamic_edge_size_rate = 31 [json_name = "dynamicEdgeSizeRate"];</code>
+       * @return The dynamicEdgeSizeRate.
+       */
+      int getDynamicEdgeSizeRate();
+
+      /**
+       * <code>float build_time_limit = 32 [json_name = "buildTimeLimit"];</code>
+       * @return The buildTimeLimit.
+       */
+      float getBuildTimeLimit();
+
+      /**
+       * <code>int32 outgoing_edge = 33 [json_name = "outgoingEdge"];</code>
+       * @return The outgoingEdge.
+       */
+      int getOutgoingEdge();
+
+      /**
+       * <code>int32 incoming_edge = 34 [json_name = "incomingEdge"];</code>
+       * @return The incomingEdge.
+       */
+      int getIncomingEdge();
+    }
+    /**
+     * <pre>
+     * Represents index Property
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Info.Index.Property}
+     */
+    public static final class Property extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.v1.Info.Index.Property)
+        PropertyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Property.newBuilder() to construct.
+      private Property(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Property() {
+        objectType_ = "";
+        distanceType_ = "";
+        indexType_ = "";
+        databaseType_ = "";
+        objectAlignment_ = "";
+        accuracyTable_ = "";
+        searchType_ = "";
+        refinementObjectType_ = "";
+        seedType_ = "";
+        graphType_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Property();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Property_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Property_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Info.Index.Property.class, org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder.class);
+      }
+
+      public static final int DIMENSION_FIELD_NUMBER = 1;
+      private int dimension_ = 0;
+      /**
+       * <code>int32 dimension = 1 [json_name = "dimension"];</code>
+       * @return The dimension.
+       */
+      @java.lang.Override
+      public int getDimension() {
+        return dimension_;
+      }
+
+      public static final int THREAD_POOL_SIZE_FIELD_NUMBER = 2;
+      private int threadPoolSize_ = 0;
+      /**
+       * <code>int32 thread_pool_size = 2 [json_name = "threadPoolSize"];</code>
+       * @return The threadPoolSize.
+       */
+      @java.lang.Override
+      public int getThreadPoolSize() {
+        return threadPoolSize_;
+      }
+
+      public static final int OBJECT_TYPE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object objectType_ = "";
+      /**
+       * <code>string object_type = 3 [json_name = "objectType"];</code>
+       * @return The objectType.
+       */
+      @java.lang.Override
+      public java.lang.String getObjectType() {
+        java.lang.Object ref = objectType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          objectType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string object_type = 3 [json_name = "objectType"];</code>
+       * @return The bytes for objectType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getObjectTypeBytes() {
+        java.lang.Object ref = objectType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DISTANCE_TYPE_FIELD_NUMBER = 4;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object distanceType_ = "";
+      /**
+       * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+       * @return The distanceType.
+       */
+      @java.lang.Override
+      public java.lang.String getDistanceType() {
+        java.lang.Object ref = distanceType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          distanceType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+       * @return The bytes for distanceType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDistanceTypeBytes() {
+        java.lang.Object ref = distanceType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          distanceType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int INDEX_TYPE_FIELD_NUMBER = 5;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object indexType_ = "";
+      /**
+       * <code>string index_type = 5 [json_name = "indexType"];</code>
+       * @return The indexType.
+       */
+      @java.lang.Override
+      public java.lang.String getIndexType() {
+        java.lang.Object ref = indexType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          indexType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string index_type = 5 [json_name = "indexType"];</code>
+       * @return The bytes for indexType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIndexTypeBytes() {
+        java.lang.Object ref = indexType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          indexType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DATABASE_TYPE_FIELD_NUMBER = 6;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object databaseType_ = "";
+      /**
+       * <code>string database_type = 6 [json_name = "databaseType"];</code>
+       * @return The databaseType.
+       */
+      @java.lang.Override
+      public java.lang.String getDatabaseType() {
+        java.lang.Object ref = databaseType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string database_type = 6 [json_name = "databaseType"];</code>
+       * @return The bytes for databaseType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatabaseTypeBytes() {
+        java.lang.Object ref = databaseType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int OBJECT_ALIGNMENT_FIELD_NUMBER = 7;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object objectAlignment_ = "";
+      /**
+       * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+       * @return The objectAlignment.
+       */
+      @java.lang.Override
+      public java.lang.String getObjectAlignment() {
+        java.lang.Object ref = objectAlignment_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          objectAlignment_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+       * @return The bytes for objectAlignment.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getObjectAlignmentBytes() {
+        java.lang.Object ref = objectAlignment_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectAlignment_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PATH_ADJUSTMENT_INTERVAL_FIELD_NUMBER = 8;
+      private int pathAdjustmentInterval_ = 0;
+      /**
+       * <code>int32 path_adjustment_interval = 8 [json_name = "pathAdjustmentInterval"];</code>
+       * @return The pathAdjustmentInterval.
+       */
+      @java.lang.Override
+      public int getPathAdjustmentInterval() {
+        return pathAdjustmentInterval_;
+      }
+
+      public static final int GRAPH_SHARED_MEMORY_SIZE_FIELD_NUMBER = 9;
+      private int graphSharedMemorySize_ = 0;
+      /**
+       * <code>int32 graph_shared_memory_size = 9 [json_name = "graphSharedMemorySize"];</code>
+       * @return The graphSharedMemorySize.
+       */
+      @java.lang.Override
+      public int getGraphSharedMemorySize() {
+        return graphSharedMemorySize_;
+      }
+
+      public static final int TREE_SHARED_MEMORY_SIZE_FIELD_NUMBER = 10;
+      private int treeSharedMemorySize_ = 0;
+      /**
+       * <code>int32 tree_shared_memory_size = 10 [json_name = "treeSharedMemorySize"];</code>
+       * @return The treeSharedMemorySize.
+       */
+      @java.lang.Override
+      public int getTreeSharedMemorySize() {
+        return treeSharedMemorySize_;
+      }
+
+      public static final int OBJECT_SHARED_MEMORY_SIZE_FIELD_NUMBER = 11;
+      private int objectSharedMemorySize_ = 0;
+      /**
+       * <code>int32 object_shared_memory_size = 11 [json_name = "objectSharedMemorySize"];</code>
+       * @return The objectSharedMemorySize.
+       */
+      @java.lang.Override
+      public int getObjectSharedMemorySize() {
+        return objectSharedMemorySize_;
+      }
+
+      public static final int PREFETCH_OFFSET_FIELD_NUMBER = 12;
+      private int prefetchOffset_ = 0;
+      /**
+       * <code>int32 prefetch_offset = 12 [json_name = "prefetchOffset"];</code>
+       * @return The prefetchOffset.
+       */
+      @java.lang.Override
+      public int getPrefetchOffset() {
+        return prefetchOffset_;
+      }
+
+      public static final int PREFETCH_SIZE_FIELD_NUMBER = 13;
+      private int prefetchSize_ = 0;
+      /**
+       * <code>int32 prefetch_size = 13 [json_name = "prefetchSize"];</code>
+       * @return The prefetchSize.
+       */
+      @java.lang.Override
+      public int getPrefetchSize() {
+        return prefetchSize_;
+      }
+
+      public static final int ACCURACY_TABLE_FIELD_NUMBER = 14;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object accuracyTable_ = "";
+      /**
+       * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+       * @return The accuracyTable.
+       */
+      @java.lang.Override
+      public java.lang.String getAccuracyTable() {
+        java.lang.Object ref = accuracyTable_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accuracyTable_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+       * @return The bytes for accuracyTable.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAccuracyTableBytes() {
+        java.lang.Object ref = accuracyTable_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accuracyTable_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SEARCH_TYPE_FIELD_NUMBER = 15;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object searchType_ = "";
+      /**
+       * <code>string search_type = 15 [json_name = "searchType"];</code>
+       * @return The searchType.
+       */
+      @java.lang.Override
+      public java.lang.String getSearchType() {
+        java.lang.Object ref = searchType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          searchType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string search_type = 15 [json_name = "searchType"];</code>
+       * @return The bytes for searchType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSearchTypeBytes() {
+        java.lang.Object ref = searchType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          searchType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int MAX_MAGNITUDE_FIELD_NUMBER = 16;
+      private float maxMagnitude_ = 0F;
+      /**
+       * <code>float max_magnitude = 16 [json_name = "maxMagnitude"];</code>
+       * @return The maxMagnitude.
+       */
+      @java.lang.Override
+      public float getMaxMagnitude() {
+        return maxMagnitude_;
+      }
+
+      public static final int N_OF_NEIGHBORS_FOR_INSERTION_ORDER_FIELD_NUMBER = 17;
+      private int nOfNeighborsForInsertionOrder_ = 0;
+      /**
+       * <code>int32 n_of_neighbors_for_insertion_order = 17 [json_name = "nOfNeighborsForInsertionOrder"];</code>
+       * @return The nOfNeighborsForInsertionOrder.
+       */
+      @java.lang.Override
+      public int getNOfNeighborsForInsertionOrder() {
+        return nOfNeighborsForInsertionOrder_;
+      }
+
+      public static final int EPSILON_FOR_INSERTION_ORDER_FIELD_NUMBER = 18;
+      private float epsilonForInsertionOrder_ = 0F;
+      /**
+       * <code>float epsilon_for_insertion_order = 18 [json_name = "epsilonForInsertionOrder"];</code>
+       * @return The epsilonForInsertionOrder.
+       */
+      @java.lang.Override
+      public float getEpsilonForInsertionOrder() {
+        return epsilonForInsertionOrder_;
+      }
+
+      public static final int REFINEMENT_OBJECT_TYPE_FIELD_NUMBER = 19;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object refinementObjectType_ = "";
+      /**
+       * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+       * @return The refinementObjectType.
+       */
+      @java.lang.Override
+      public java.lang.String getRefinementObjectType() {
+        java.lang.Object ref = refinementObjectType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          refinementObjectType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+       * @return The bytes for refinementObjectType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRefinementObjectTypeBytes() {
+        java.lang.Object ref = refinementObjectType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          refinementObjectType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TRUNCATION_THRESHOLD_FIELD_NUMBER = 20;
+      private int truncationThreshold_ = 0;
+      /**
+       * <code>int32 truncation_threshold = 20 [json_name = "truncationThreshold"];</code>
+       * @return The truncationThreshold.
+       */
+      @java.lang.Override
+      public int getTruncationThreshold() {
+        return truncationThreshold_;
+      }
+
+      public static final int EDGE_SIZE_FOR_CREATION_FIELD_NUMBER = 21;
+      private int edgeSizeForCreation_ = 0;
+      /**
+       * <code>int32 edge_size_for_creation = 21 [json_name = "edgeSizeForCreation"];</code>
+       * @return The edgeSizeForCreation.
+       */
+      @java.lang.Override
+      public int getEdgeSizeForCreation() {
+        return edgeSizeForCreation_;
+      }
+
+      public static final int EDGE_SIZE_FOR_SEARCH_FIELD_NUMBER = 22;
+      private int edgeSizeForSearch_ = 0;
+      /**
+       * <code>int32 edge_size_for_search = 22 [json_name = "edgeSizeForSearch"];</code>
+       * @return The edgeSizeForSearch.
+       */
+      @java.lang.Override
+      public int getEdgeSizeForSearch() {
+        return edgeSizeForSearch_;
+      }
+
+      public static final int EDGE_SIZE_LIMIT_FOR_CREATION_FIELD_NUMBER = 23;
+      private int edgeSizeLimitForCreation_ = 0;
+      /**
+       * <code>int32 edge_size_limit_for_creation = 23 [json_name = "edgeSizeLimitForCreation"];</code>
+       * @return The edgeSizeLimitForCreation.
+       */
+      @java.lang.Override
+      public int getEdgeSizeLimitForCreation() {
+        return edgeSizeLimitForCreation_;
+      }
+
+      public static final int INSERTION_RADIUS_COEFFICIENT_FIELD_NUMBER = 24;
+      private double insertionRadiusCoefficient_ = 0D;
+      /**
+       * <code>double insertion_radius_coefficient = 24 [json_name = "insertionRadiusCoefficient"];</code>
+       * @return The insertionRadiusCoefficient.
+       */
+      @java.lang.Override
+      public double getInsertionRadiusCoefficient() {
+        return insertionRadiusCoefficient_;
+      }
+
+      public static final int SEED_SIZE_FIELD_NUMBER = 25;
+      private int seedSize_ = 0;
+      /**
+       * <code>int32 seed_size = 25 [json_name = "seedSize"];</code>
+       * @return The seedSize.
+       */
+      @java.lang.Override
+      public int getSeedSize() {
+        return seedSize_;
+      }
+
+      public static final int SEED_TYPE_FIELD_NUMBER = 26;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object seedType_ = "";
+      /**
+       * <code>string seed_type = 26 [json_name = "seedType"];</code>
+       * @return The seedType.
+       */
+      @java.lang.Override
+      public java.lang.String getSeedType() {
+        java.lang.Object ref = seedType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seedType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string seed_type = 26 [json_name = "seedType"];</code>
+       * @return The bytes for seedType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSeedTypeBytes() {
+        java.lang.Object ref = seedType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seedType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TRUNCATION_THREAD_POOL_SIZE_FIELD_NUMBER = 27;
+      private int truncationThreadPoolSize_ = 0;
+      /**
+       * <code>int32 truncation_thread_pool_size = 27 [json_name = "truncationThreadPoolSize"];</code>
+       * @return The truncationThreadPoolSize.
+       */
+      @java.lang.Override
+      public int getTruncationThreadPoolSize() {
+        return truncationThreadPoolSize_;
+      }
+
+      public static final int BATCH_SIZE_FOR_CREATION_FIELD_NUMBER = 28;
+      private int batchSizeForCreation_ = 0;
+      /**
+       * <code>int32 batch_size_for_creation = 28 [json_name = "batchSizeForCreation"];</code>
+       * @return The batchSizeForCreation.
+       */
+      @java.lang.Override
+      public int getBatchSizeForCreation() {
+        return batchSizeForCreation_;
+      }
+
+      public static final int GRAPH_TYPE_FIELD_NUMBER = 29;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object graphType_ = "";
+      /**
+       * <code>string graph_type = 29 [json_name = "graphType"];</code>
+       * @return The graphType.
+       */
+      @java.lang.Override
+      public java.lang.String getGraphType() {
+        java.lang.Object ref = graphType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          graphType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string graph_type = 29 [json_name = "graphType"];</code>
+       * @return The bytes for graphType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getGraphTypeBytes() {
+        java.lang.Object ref = graphType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          graphType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DYNAMIC_EDGE_SIZE_BASE_FIELD_NUMBER = 30;
+      private int dynamicEdgeSizeBase_ = 0;
+      /**
+       * <code>int32 dynamic_edge_size_base = 30 [json_name = "dynamicEdgeSizeBase"];</code>
+       * @return The dynamicEdgeSizeBase.
+       */
+      @java.lang.Override
+      public int getDynamicEdgeSizeBase() {
+        return dynamicEdgeSizeBase_;
+      }
+
+      public static final int DYNAMIC_EDGE_SIZE_RATE_FIELD_NUMBER = 31;
+      private int dynamicEdgeSizeRate_ = 0;
+      /**
+       * <code>int32 dynamic_edge_size_rate = 31 [json_name = "dynamicEdgeSizeRate"];</code>
+       * @return The dynamicEdgeSizeRate.
+       */
+      @java.lang.Override
+      public int getDynamicEdgeSizeRate() {
+        return dynamicEdgeSizeRate_;
+      }
+
+      public static final int BUILD_TIME_LIMIT_FIELD_NUMBER = 32;
+      private float buildTimeLimit_ = 0F;
+      /**
+       * <code>float build_time_limit = 32 [json_name = "buildTimeLimit"];</code>
+       * @return The buildTimeLimit.
+       */
+      @java.lang.Override
+      public float getBuildTimeLimit() {
+        return buildTimeLimit_;
+      }
+
+      public static final int OUTGOING_EDGE_FIELD_NUMBER = 33;
+      private int outgoingEdge_ = 0;
+      /**
+       * <code>int32 outgoing_edge = 33 [json_name = "outgoingEdge"];</code>
+       * @return The outgoingEdge.
+       */
+      @java.lang.Override
+      public int getOutgoingEdge() {
+        return outgoingEdge_;
+      }
+
+      public static final int INCOMING_EDGE_FIELD_NUMBER = 34;
+      private int incomingEdge_ = 0;
+      /**
+       * <code>int32 incoming_edge = 34 [json_name = "incomingEdge"];</code>
+       * @return The incomingEdge.
+       */
+      @java.lang.Override
+      public int getIncomingEdge() {
+        return incomingEdge_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (dimension_ != 0) {
+          output.writeInt32(1, dimension_);
+        }
+        if (threadPoolSize_ != 0) {
+          output.writeInt32(2, threadPoolSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, objectType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distanceType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, distanceType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(indexType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, indexType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, databaseType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectAlignment_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 7, objectAlignment_);
+        }
+        if (pathAdjustmentInterval_ != 0) {
+          output.writeInt32(8, pathAdjustmentInterval_);
+        }
+        if (graphSharedMemorySize_ != 0) {
+          output.writeInt32(9, graphSharedMemorySize_);
+        }
+        if (treeSharedMemorySize_ != 0) {
+          output.writeInt32(10, treeSharedMemorySize_);
+        }
+        if (objectSharedMemorySize_ != 0) {
+          output.writeInt32(11, objectSharedMemorySize_);
+        }
+        if (prefetchOffset_ != 0) {
+          output.writeInt32(12, prefetchOffset_);
+        }
+        if (prefetchSize_ != 0) {
+          output.writeInt32(13, prefetchSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accuracyTable_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 14, accuracyTable_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 15, searchType_);
+        }
+        if (java.lang.Float.floatToRawIntBits(maxMagnitude_) != 0) {
+          output.writeFloat(16, maxMagnitude_);
+        }
+        if (nOfNeighborsForInsertionOrder_ != 0) {
+          output.writeInt32(17, nOfNeighborsForInsertionOrder_);
+        }
+        if (java.lang.Float.floatToRawIntBits(epsilonForInsertionOrder_) != 0) {
+          output.writeFloat(18, epsilonForInsertionOrder_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refinementObjectType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 19, refinementObjectType_);
+        }
+        if (truncationThreshold_ != 0) {
+          output.writeInt32(20, truncationThreshold_);
+        }
+        if (edgeSizeForCreation_ != 0) {
+          output.writeInt32(21, edgeSizeForCreation_);
+        }
+        if (edgeSizeForSearch_ != 0) {
+          output.writeInt32(22, edgeSizeForSearch_);
+        }
+        if (edgeSizeLimitForCreation_ != 0) {
+          output.writeInt32(23, edgeSizeLimitForCreation_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(insertionRadiusCoefficient_) != 0) {
+          output.writeDouble(24, insertionRadiusCoefficient_);
+        }
+        if (seedSize_ != 0) {
+          output.writeInt32(25, seedSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seedType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 26, seedType_);
+        }
+        if (truncationThreadPoolSize_ != 0) {
+          output.writeInt32(27, truncationThreadPoolSize_);
+        }
+        if (batchSizeForCreation_ != 0) {
+          output.writeInt32(28, batchSizeForCreation_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(graphType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 29, graphType_);
+        }
+        if (dynamicEdgeSizeBase_ != 0) {
+          output.writeInt32(30, dynamicEdgeSizeBase_);
+        }
+        if (dynamicEdgeSizeRate_ != 0) {
+          output.writeInt32(31, dynamicEdgeSizeRate_);
+        }
+        if (java.lang.Float.floatToRawIntBits(buildTimeLimit_) != 0) {
+          output.writeFloat(32, buildTimeLimit_);
+        }
+        if (outgoingEdge_ != 0) {
+          output.writeInt32(33, outgoingEdge_);
+        }
+        if (incomingEdge_ != 0) {
+          output.writeInt32(34, incomingEdge_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (dimension_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, dimension_);
+        }
+        if (threadPoolSize_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, threadPoolSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, objectType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distanceType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, distanceType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(indexType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, indexType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, databaseType_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectAlignment_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, objectAlignment_);
+        }
+        if (pathAdjustmentInterval_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(8, pathAdjustmentInterval_);
+        }
+        if (graphSharedMemorySize_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(9, graphSharedMemorySize_);
+        }
+        if (treeSharedMemorySize_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(10, treeSharedMemorySize_);
+        }
+        if (objectSharedMemorySize_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(11, objectSharedMemorySize_);
+        }
+        if (prefetchOffset_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(12, prefetchOffset_);
+        }
+        if (prefetchSize_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(13, prefetchSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accuracyTable_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, accuracyTable_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, searchType_);
+        }
+        if (java.lang.Float.floatToRawIntBits(maxMagnitude_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(16, maxMagnitude_);
+        }
+        if (nOfNeighborsForInsertionOrder_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(17, nOfNeighborsForInsertionOrder_);
+        }
+        if (java.lang.Float.floatToRawIntBits(epsilonForInsertionOrder_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(18, epsilonForInsertionOrder_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refinementObjectType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, refinementObjectType_);
+        }
+        if (truncationThreshold_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(20, truncationThreshold_);
+        }
+        if (edgeSizeForCreation_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(21, edgeSizeForCreation_);
+        }
+        if (edgeSizeForSearch_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(22, edgeSizeForSearch_);
+        }
+        if (edgeSizeLimitForCreation_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(23, edgeSizeLimitForCreation_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(insertionRadiusCoefficient_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(24, insertionRadiusCoefficient_);
+        }
+        if (seedSize_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(25, seedSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seedType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, seedType_);
+        }
+        if (truncationThreadPoolSize_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(27, truncationThreadPoolSize_);
+        }
+        if (batchSizeForCreation_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(28, batchSizeForCreation_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(graphType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, graphType_);
+        }
+        if (dynamicEdgeSizeBase_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(30, dynamicEdgeSizeBase_);
+        }
+        if (dynamicEdgeSizeRate_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(31, dynamicEdgeSizeRate_);
+        }
+        if (java.lang.Float.floatToRawIntBits(buildTimeLimit_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(32, buildTimeLimit_);
+        }
+        if (outgoingEdge_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(33, outgoingEdge_);
+        }
+        if (incomingEdge_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(34, incomingEdge_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.api.v1.payload.Info.Index.Property)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.api.v1.payload.Info.Index.Property other = (org.vdaas.vald.api.v1.payload.Info.Index.Property) obj;
+
+        if (getDimension()
+            != other.getDimension()) return false;
+        if (getThreadPoolSize()
+            != other.getThreadPoolSize()) return false;
+        if (!getObjectType()
+            .equals(other.getObjectType())) return false;
+        if (!getDistanceType()
+            .equals(other.getDistanceType())) return false;
+        if (!getIndexType()
+            .equals(other.getIndexType())) return false;
+        if (!getDatabaseType()
+            .equals(other.getDatabaseType())) return false;
+        if (!getObjectAlignment()
+            .equals(other.getObjectAlignment())) return false;
+        if (getPathAdjustmentInterval()
+            != other.getPathAdjustmentInterval()) return false;
+        if (getGraphSharedMemorySize()
+            != other.getGraphSharedMemorySize()) return false;
+        if (getTreeSharedMemorySize()
+            != other.getTreeSharedMemorySize()) return false;
+        if (getObjectSharedMemorySize()
+            != other.getObjectSharedMemorySize()) return false;
+        if (getPrefetchOffset()
+            != other.getPrefetchOffset()) return false;
+        if (getPrefetchSize()
+            != other.getPrefetchSize()) return false;
+        if (!getAccuracyTable()
+            .equals(other.getAccuracyTable())) return false;
+        if (!getSearchType()
+            .equals(other.getSearchType())) return false;
+        if (java.lang.Float.floatToIntBits(getMaxMagnitude())
+            != java.lang.Float.floatToIntBits(
+                other.getMaxMagnitude())) return false;
+        if (getNOfNeighborsForInsertionOrder()
+            != other.getNOfNeighborsForInsertionOrder()) return false;
+        if (java.lang.Float.floatToIntBits(getEpsilonForInsertionOrder())
+            != java.lang.Float.floatToIntBits(
+                other.getEpsilonForInsertionOrder())) return false;
+        if (!getRefinementObjectType()
+            .equals(other.getRefinementObjectType())) return false;
+        if (getTruncationThreshold()
+            != other.getTruncationThreshold()) return false;
+        if (getEdgeSizeForCreation()
+            != other.getEdgeSizeForCreation()) return false;
+        if (getEdgeSizeForSearch()
+            != other.getEdgeSizeForSearch()) return false;
+        if (getEdgeSizeLimitForCreation()
+            != other.getEdgeSizeLimitForCreation()) return false;
+        if (java.lang.Double.doubleToLongBits(getInsertionRadiusCoefficient())
+            != java.lang.Double.doubleToLongBits(
+                other.getInsertionRadiusCoefficient())) return false;
+        if (getSeedSize()
+            != other.getSeedSize()) return false;
+        if (!getSeedType()
+            .equals(other.getSeedType())) return false;
+        if (getTruncationThreadPoolSize()
+            != other.getTruncationThreadPoolSize()) return false;
+        if (getBatchSizeForCreation()
+            != other.getBatchSizeForCreation()) return false;
+        if (!getGraphType()
+            .equals(other.getGraphType())) return false;
+        if (getDynamicEdgeSizeBase()
+            != other.getDynamicEdgeSizeBase()) return false;
+        if (getDynamicEdgeSizeRate()
+            != other.getDynamicEdgeSizeRate()) return false;
+        if (java.lang.Float.floatToIntBits(getBuildTimeLimit())
+            != java.lang.Float.floatToIntBits(
+                other.getBuildTimeLimit())) return false;
+        if (getOutgoingEdge()
+            != other.getOutgoingEdge()) return false;
+        if (getIncomingEdge()
+            != other.getIncomingEdge()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + DIMENSION_FIELD_NUMBER;
+        hash = (53 * hash) + getDimension();
+        hash = (37 * hash) + THREAD_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getThreadPoolSize();
+        hash = (37 * hash) + OBJECT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectType().hashCode();
+        hash = (37 * hash) + DISTANCE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getDistanceType().hashCode();
+        hash = (37 * hash) + INDEX_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getIndexType().hashCode();
+        hash = (37 * hash) + DATABASE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getDatabaseType().hashCode();
+        hash = (37 * hash) + OBJECT_ALIGNMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectAlignment().hashCode();
+        hash = (37 * hash) + PATH_ADJUSTMENT_INTERVAL_FIELD_NUMBER;
+        hash = (53 * hash) + getPathAdjustmentInterval();
+        hash = (37 * hash) + GRAPH_SHARED_MEMORY_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getGraphSharedMemorySize();
+        hash = (37 * hash) + TREE_SHARED_MEMORY_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getTreeSharedMemorySize();
+        hash = (37 * hash) + OBJECT_SHARED_MEMORY_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectSharedMemorySize();
+        hash = (37 * hash) + PREFETCH_OFFSET_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefetchOffset();
+        hash = (37 * hash) + PREFETCH_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefetchSize();
+        hash = (37 * hash) + ACCURACY_TABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getAccuracyTable().hashCode();
+        hash = (37 * hash) + SEARCH_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getSearchType().hashCode();
+        hash = (37 * hash) + MAX_MAGNITUDE_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getMaxMagnitude());
+        hash = (37 * hash) + N_OF_NEIGHBORS_FOR_INSERTION_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getNOfNeighborsForInsertionOrder();
+        hash = (37 * hash) + EPSILON_FOR_INSERTION_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getEpsilonForInsertionOrder());
+        hash = (37 * hash) + REFINEMENT_OBJECT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getRefinementObjectType().hashCode();
+        hash = (37 * hash) + TRUNCATION_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getTruncationThreshold();
+        hash = (37 * hash) + EDGE_SIZE_FOR_CREATION_FIELD_NUMBER;
+        hash = (53 * hash) + getEdgeSizeForCreation();
+        hash = (37 * hash) + EDGE_SIZE_FOR_SEARCH_FIELD_NUMBER;
+        hash = (53 * hash) + getEdgeSizeForSearch();
+        hash = (37 * hash) + EDGE_SIZE_LIMIT_FOR_CREATION_FIELD_NUMBER;
+        hash = (53 * hash) + getEdgeSizeLimitForCreation();
+        hash = (37 * hash) + INSERTION_RADIUS_COEFFICIENT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getInsertionRadiusCoefficient()));
+        hash = (37 * hash) + SEED_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getSeedSize();
+        hash = (37 * hash) + SEED_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getSeedType().hashCode();
+        hash = (37 * hash) + TRUNCATION_THREAD_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getTruncationThreadPoolSize();
+        hash = (37 * hash) + BATCH_SIZE_FOR_CREATION_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchSizeForCreation();
+        hash = (37 * hash) + GRAPH_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getGraphType().hashCode();
+        hash = (37 * hash) + DYNAMIC_EDGE_SIZE_BASE_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicEdgeSizeBase();
+        hash = (37 * hash) + DYNAMIC_EDGE_SIZE_RATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicEdgeSizeRate();
+        hash = (37 * hash) + BUILD_TIME_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getBuildTimeLimit());
+        hash = (37 * hash) + OUTGOING_EDGE_FIELD_NUMBER;
+        hash = (53 * hash) + getOutgoingEdge();
+        hash = (37 * hash) + INCOMING_EDGE_FIELD_NUMBER;
+        hash = (53 * hash) + getIncomingEdge();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Info.Index.Property prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Represents index Property
+       * </pre>
+       *
+       * Protobuf type {@code payload.v1.Info.Index.Property}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.v1.Info.Index.Property)
+          org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Property_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Property_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.api.v1.payload.Info.Index.Property.class, org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.api.v1.payload.Info.Index.Property.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          bitField1_ = 0;
+          dimension_ = 0;
+          threadPoolSize_ = 0;
+          objectType_ = "";
+          distanceType_ = "";
+          indexType_ = "";
+          databaseType_ = "";
+          objectAlignment_ = "";
+          pathAdjustmentInterval_ = 0;
+          graphSharedMemorySize_ = 0;
+          treeSharedMemorySize_ = 0;
+          objectSharedMemorySize_ = 0;
+          prefetchOffset_ = 0;
+          prefetchSize_ = 0;
+          accuracyTable_ = "";
+          searchType_ = "";
+          maxMagnitude_ = 0F;
+          nOfNeighborsForInsertionOrder_ = 0;
+          epsilonForInsertionOrder_ = 0F;
+          refinementObjectType_ = "";
+          truncationThreshold_ = 0;
+          edgeSizeForCreation_ = 0;
+          edgeSizeForSearch_ = 0;
+          edgeSizeLimitForCreation_ = 0;
+          insertionRadiusCoefficient_ = 0D;
+          seedSize_ = 0;
+          seedType_ = "";
+          truncationThreadPoolSize_ = 0;
+          batchSizeForCreation_ = 0;
+          graphType_ = "";
+          dynamicEdgeSizeBase_ = 0;
+          dynamicEdgeSizeRate_ = 0;
+          buildTimeLimit_ = 0F;
+          outgoingEdge_ = 0;
+          incomingEdge_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_Property_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Property getDefaultInstanceForType() {
+          return org.vdaas.vald.api.v1.payload.Info.Index.Property.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Property build() {
+          org.vdaas.vald.api.v1.payload.Info.Index.Property result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Property buildPartial() {
+          org.vdaas.vald.api.v1.payload.Info.Index.Property result = new org.vdaas.vald.api.v1.payload.Info.Index.Property(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          if (bitField1_ != 0) { buildPartial1(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(org.vdaas.vald.api.v1.payload.Info.Index.Property result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.dimension_ = dimension_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.threadPoolSize_ = threadPoolSize_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.objectType_ = objectType_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.distanceType_ = distanceType_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.indexType_ = indexType_;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.databaseType_ = databaseType_;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.objectAlignment_ = objectAlignment_;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.pathAdjustmentInterval_ = pathAdjustmentInterval_;
+          }
+          if (((from_bitField0_ & 0x00000100) != 0)) {
+            result.graphSharedMemorySize_ = graphSharedMemorySize_;
+          }
+          if (((from_bitField0_ & 0x00000200) != 0)) {
+            result.treeSharedMemorySize_ = treeSharedMemorySize_;
+          }
+          if (((from_bitField0_ & 0x00000400) != 0)) {
+            result.objectSharedMemorySize_ = objectSharedMemorySize_;
+          }
+          if (((from_bitField0_ & 0x00000800) != 0)) {
+            result.prefetchOffset_ = prefetchOffset_;
+          }
+          if (((from_bitField0_ & 0x00001000) != 0)) {
+            result.prefetchSize_ = prefetchSize_;
+          }
+          if (((from_bitField0_ & 0x00002000) != 0)) {
+            result.accuracyTable_ = accuracyTable_;
+          }
+          if (((from_bitField0_ & 0x00004000) != 0)) {
+            result.searchType_ = searchType_;
+          }
+          if (((from_bitField0_ & 0x00008000) != 0)) {
+            result.maxMagnitude_ = maxMagnitude_;
+          }
+          if (((from_bitField0_ & 0x00010000) != 0)) {
+            result.nOfNeighborsForInsertionOrder_ = nOfNeighborsForInsertionOrder_;
+          }
+          if (((from_bitField0_ & 0x00020000) != 0)) {
+            result.epsilonForInsertionOrder_ = epsilonForInsertionOrder_;
+          }
+          if (((from_bitField0_ & 0x00040000) != 0)) {
+            result.refinementObjectType_ = refinementObjectType_;
+          }
+          if (((from_bitField0_ & 0x00080000) != 0)) {
+            result.truncationThreshold_ = truncationThreshold_;
+          }
+          if (((from_bitField0_ & 0x00100000) != 0)) {
+            result.edgeSizeForCreation_ = edgeSizeForCreation_;
+          }
+          if (((from_bitField0_ & 0x00200000) != 0)) {
+            result.edgeSizeForSearch_ = edgeSizeForSearch_;
+          }
+          if (((from_bitField0_ & 0x00400000) != 0)) {
+            result.edgeSizeLimitForCreation_ = edgeSizeLimitForCreation_;
+          }
+          if (((from_bitField0_ & 0x00800000) != 0)) {
+            result.insertionRadiusCoefficient_ = insertionRadiusCoefficient_;
+          }
+          if (((from_bitField0_ & 0x01000000) != 0)) {
+            result.seedSize_ = seedSize_;
+          }
+          if (((from_bitField0_ & 0x02000000) != 0)) {
+            result.seedType_ = seedType_;
+          }
+          if (((from_bitField0_ & 0x04000000) != 0)) {
+            result.truncationThreadPoolSize_ = truncationThreadPoolSize_;
+          }
+          if (((from_bitField0_ & 0x08000000) != 0)) {
+            result.batchSizeForCreation_ = batchSizeForCreation_;
+          }
+          if (((from_bitField0_ & 0x10000000) != 0)) {
+            result.graphType_ = graphType_;
+          }
+          if (((from_bitField0_ & 0x20000000) != 0)) {
+            result.dynamicEdgeSizeBase_ = dynamicEdgeSizeBase_;
+          }
+          if (((from_bitField0_ & 0x40000000) != 0)) {
+            result.dynamicEdgeSizeRate_ = dynamicEdgeSizeRate_;
+          }
+          if (((from_bitField0_ & 0x80000000) != 0)) {
+            result.buildTimeLimit_ = buildTimeLimit_;
+          }
+        }
+
+        private void buildPartial1(org.vdaas.vald.api.v1.payload.Info.Index.Property result) {
+          int from_bitField1_ = bitField1_;
+          if (((from_bitField1_ & 0x00000001) != 0)) {
+            result.outgoingEdge_ = outgoingEdge_;
+          }
+          if (((from_bitField1_ & 0x00000002) != 0)) {
+            result.incomingEdge_ = incomingEdge_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.api.v1.payload.Info.Index.Property) {
+            return mergeFrom((org.vdaas.vald.api.v1.payload.Info.Index.Property)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Info.Index.Property other) {
+          if (other == org.vdaas.vald.api.v1.payload.Info.Index.Property.getDefaultInstance()) return this;
+          if (other.getDimension() != 0) {
+            setDimension(other.getDimension());
+          }
+          if (other.getThreadPoolSize() != 0) {
+            setThreadPoolSize(other.getThreadPoolSize());
+          }
+          if (!other.getObjectType().isEmpty()) {
+            objectType_ = other.objectType_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          if (!other.getDistanceType().isEmpty()) {
+            distanceType_ = other.distanceType_;
+            bitField0_ |= 0x00000008;
+            onChanged();
+          }
+          if (!other.getIndexType().isEmpty()) {
+            indexType_ = other.indexType_;
+            bitField0_ |= 0x00000010;
+            onChanged();
+          }
+          if (!other.getDatabaseType().isEmpty()) {
+            databaseType_ = other.databaseType_;
+            bitField0_ |= 0x00000020;
+            onChanged();
+          }
+          if (!other.getObjectAlignment().isEmpty()) {
+            objectAlignment_ = other.objectAlignment_;
+            bitField0_ |= 0x00000040;
+            onChanged();
+          }
+          if (other.getPathAdjustmentInterval() != 0) {
+            setPathAdjustmentInterval(other.getPathAdjustmentInterval());
+          }
+          if (other.getGraphSharedMemorySize() != 0) {
+            setGraphSharedMemorySize(other.getGraphSharedMemorySize());
+          }
+          if (other.getTreeSharedMemorySize() != 0) {
+            setTreeSharedMemorySize(other.getTreeSharedMemorySize());
+          }
+          if (other.getObjectSharedMemorySize() != 0) {
+            setObjectSharedMemorySize(other.getObjectSharedMemorySize());
+          }
+          if (other.getPrefetchOffset() != 0) {
+            setPrefetchOffset(other.getPrefetchOffset());
+          }
+          if (other.getPrefetchSize() != 0) {
+            setPrefetchSize(other.getPrefetchSize());
+          }
+          if (!other.getAccuracyTable().isEmpty()) {
+            accuracyTable_ = other.accuracyTable_;
+            bitField0_ |= 0x00002000;
+            onChanged();
+          }
+          if (!other.getSearchType().isEmpty()) {
+            searchType_ = other.searchType_;
+            bitField0_ |= 0x00004000;
+            onChanged();
+          }
+          if (other.getMaxMagnitude() != 0F) {
+            setMaxMagnitude(other.getMaxMagnitude());
+          }
+          if (other.getNOfNeighborsForInsertionOrder() != 0) {
+            setNOfNeighborsForInsertionOrder(other.getNOfNeighborsForInsertionOrder());
+          }
+          if (other.getEpsilonForInsertionOrder() != 0F) {
+            setEpsilonForInsertionOrder(other.getEpsilonForInsertionOrder());
+          }
+          if (!other.getRefinementObjectType().isEmpty()) {
+            refinementObjectType_ = other.refinementObjectType_;
+            bitField0_ |= 0x00040000;
+            onChanged();
+          }
+          if (other.getTruncationThreshold() != 0) {
+            setTruncationThreshold(other.getTruncationThreshold());
+          }
+          if (other.getEdgeSizeForCreation() != 0) {
+            setEdgeSizeForCreation(other.getEdgeSizeForCreation());
+          }
+          if (other.getEdgeSizeForSearch() != 0) {
+            setEdgeSizeForSearch(other.getEdgeSizeForSearch());
+          }
+          if (other.getEdgeSizeLimitForCreation() != 0) {
+            setEdgeSizeLimitForCreation(other.getEdgeSizeLimitForCreation());
+          }
+          if (other.getInsertionRadiusCoefficient() != 0D) {
+            setInsertionRadiusCoefficient(other.getInsertionRadiusCoefficient());
+          }
+          if (other.getSeedSize() != 0) {
+            setSeedSize(other.getSeedSize());
+          }
+          if (!other.getSeedType().isEmpty()) {
+            seedType_ = other.seedType_;
+            bitField0_ |= 0x02000000;
+            onChanged();
+          }
+          if (other.getTruncationThreadPoolSize() != 0) {
+            setTruncationThreadPoolSize(other.getTruncationThreadPoolSize());
+          }
+          if (other.getBatchSizeForCreation() != 0) {
+            setBatchSizeForCreation(other.getBatchSizeForCreation());
+          }
+          if (!other.getGraphType().isEmpty()) {
+            graphType_ = other.graphType_;
+            bitField0_ |= 0x10000000;
+            onChanged();
+          }
+          if (other.getDynamicEdgeSizeBase() != 0) {
+            setDynamicEdgeSizeBase(other.getDynamicEdgeSizeBase());
+          }
+          if (other.getDynamicEdgeSizeRate() != 0) {
+            setDynamicEdgeSizeRate(other.getDynamicEdgeSizeRate());
+          }
+          if (other.getBuildTimeLimit() != 0F) {
+            setBuildTimeLimit(other.getBuildTimeLimit());
+          }
+          if (other.getOutgoingEdge() != 0) {
+            setOutgoingEdge(other.getOutgoingEdge());
+          }
+          if (other.getIncomingEdge() != 0) {
+            setIncomingEdge(other.getIncomingEdge());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  dimension_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  threadPoolSize_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 26: {
+                  objectType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 34: {
+                  distanceType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                case 42: {
+                  indexType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 42
+                case 50: {
+                  databaseType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 50
+                case 58: {
+                  objectAlignment_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 58
+                case 64: {
+                  pathAdjustmentInterval_ = input.readInt32();
+                  bitField0_ |= 0x00000080;
+                  break;
+                } // case 64
+                case 72: {
+                  graphSharedMemorySize_ = input.readInt32();
+                  bitField0_ |= 0x00000100;
+                  break;
+                } // case 72
+                case 80: {
+                  treeSharedMemorySize_ = input.readInt32();
+                  bitField0_ |= 0x00000200;
+                  break;
+                } // case 80
+                case 88: {
+                  objectSharedMemorySize_ = input.readInt32();
+                  bitField0_ |= 0x00000400;
+                  break;
+                } // case 88
+                case 96: {
+                  prefetchOffset_ = input.readInt32();
+                  bitField0_ |= 0x00000800;
+                  break;
+                } // case 96
+                case 104: {
+                  prefetchSize_ = input.readInt32();
+                  bitField0_ |= 0x00001000;
+                  break;
+                } // case 104
+                case 114: {
+                  accuracyTable_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00002000;
+                  break;
+                } // case 114
+                case 122: {
+                  searchType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00004000;
+                  break;
+                } // case 122
+                case 133: {
+                  maxMagnitude_ = input.readFloat();
+                  bitField0_ |= 0x00008000;
+                  break;
+                } // case 133
+                case 136: {
+                  nOfNeighborsForInsertionOrder_ = input.readInt32();
+                  bitField0_ |= 0x00010000;
+                  break;
+                } // case 136
+                case 149: {
+                  epsilonForInsertionOrder_ = input.readFloat();
+                  bitField0_ |= 0x00020000;
+                  break;
+                } // case 149
+                case 154: {
+                  refinementObjectType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00040000;
+                  break;
+                } // case 154
+                case 160: {
+                  truncationThreshold_ = input.readInt32();
+                  bitField0_ |= 0x00080000;
+                  break;
+                } // case 160
+                case 168: {
+                  edgeSizeForCreation_ = input.readInt32();
+                  bitField0_ |= 0x00100000;
+                  break;
+                } // case 168
+                case 176: {
+                  edgeSizeForSearch_ = input.readInt32();
+                  bitField0_ |= 0x00200000;
+                  break;
+                } // case 176
+                case 184: {
+                  edgeSizeLimitForCreation_ = input.readInt32();
+                  bitField0_ |= 0x00400000;
+                  break;
+                } // case 184
+                case 193: {
+                  insertionRadiusCoefficient_ = input.readDouble();
+                  bitField0_ |= 0x00800000;
+                  break;
+                } // case 193
+                case 200: {
+                  seedSize_ = input.readInt32();
+                  bitField0_ |= 0x01000000;
+                  break;
+                } // case 200
+                case 210: {
+                  seedType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x02000000;
+                  break;
+                } // case 210
+                case 216: {
+                  truncationThreadPoolSize_ = input.readInt32();
+                  bitField0_ |= 0x04000000;
+                  break;
+                } // case 216
+                case 224: {
+                  batchSizeForCreation_ = input.readInt32();
+                  bitField0_ |= 0x08000000;
+                  break;
+                } // case 224
+                case 234: {
+                  graphType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x10000000;
+                  break;
+                } // case 234
+                case 240: {
+                  dynamicEdgeSizeBase_ = input.readInt32();
+                  bitField0_ |= 0x20000000;
+                  break;
+                } // case 240
+                case 248: {
+                  dynamicEdgeSizeRate_ = input.readInt32();
+                  bitField0_ |= 0x40000000;
+                  break;
+                } // case 248
+                case 261: {
+                  buildTimeLimit_ = input.readFloat();
+                  bitField0_ |= 0x80000000;
+                  break;
+                } // case 261
+                case 264: {
+                  outgoingEdge_ = input.readInt32();
+                  bitField1_ |= 0x00000001;
+                  break;
+                } // case 264
+                case 272: {
+                  incomingEdge_ = input.readInt32();
+                  bitField1_ |= 0x00000002;
+                  break;
+                } // case 272
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+        private int bitField1_;
+
+        private int dimension_ ;
+        /**
+         * <code>int32 dimension = 1 [json_name = "dimension"];</code>
+         * @return The dimension.
+         */
+        @java.lang.Override
+        public int getDimension() {
+          return dimension_;
+        }
+        /**
+         * <code>int32 dimension = 1 [json_name = "dimension"];</code>
+         * @param value The dimension to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDimension(int value) {
+
+          dimension_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 dimension = 1 [json_name = "dimension"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDimension() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          dimension_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int threadPoolSize_ ;
+        /**
+         * <code>int32 thread_pool_size = 2 [json_name = "threadPoolSize"];</code>
+         * @return The threadPoolSize.
+         */
+        @java.lang.Override
+        public int getThreadPoolSize() {
+          return threadPoolSize_;
+        }
+        /**
+         * <code>int32 thread_pool_size = 2 [json_name = "threadPoolSize"];</code>
+         * @param value The threadPoolSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setThreadPoolSize(int value) {
+
+          threadPoolSize_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 thread_pool_size = 2 [json_name = "threadPoolSize"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearThreadPoolSize() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          threadPoolSize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object objectType_ = "";
+        /**
+         * <code>string object_type = 3 [json_name = "objectType"];</code>
+         * @return The objectType.
+         */
+        public java.lang.String getObjectType() {
+          java.lang.Object ref = objectType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            objectType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string object_type = 3 [json_name = "objectType"];</code>
+         * @return The bytes for objectType.
+         */
+        public com.google.protobuf.ByteString
+            getObjectTypeBytes() {
+          java.lang.Object ref = objectType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            objectType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string object_type = 3 [json_name = "objectType"];</code>
+         * @param value The objectType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setObjectType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          objectType_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string object_type = 3 [json_name = "objectType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearObjectType() {
+          objectType_ = getDefaultInstance().getObjectType();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string object_type = 3 [json_name = "objectType"];</code>
+         * @param value The bytes for objectType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setObjectTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          objectType_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object distanceType_ = "";
+        /**
+         * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+         * @return The distanceType.
+         */
+        public java.lang.String getDistanceType() {
+          java.lang.Object ref = distanceType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            distanceType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+         * @return The bytes for distanceType.
+         */
+        public com.google.protobuf.ByteString
+            getDistanceTypeBytes() {
+          java.lang.Object ref = distanceType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            distanceType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+         * @param value The distanceType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDistanceType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          distanceType_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDistanceType() {
+          distanceType_ = getDefaultInstance().getDistanceType();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string distance_type = 4 [json_name = "distanceType"];</code>
+         * @param value The bytes for distanceType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDistanceTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          distanceType_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object indexType_ = "";
+        /**
+         * <code>string index_type = 5 [json_name = "indexType"];</code>
+         * @return The indexType.
+         */
+        public java.lang.String getIndexType() {
+          java.lang.Object ref = indexType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            indexType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string index_type = 5 [json_name = "indexType"];</code>
+         * @return The bytes for indexType.
+         */
+        public com.google.protobuf.ByteString
+            getIndexTypeBytes() {
+          java.lang.Object ref = indexType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            indexType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string index_type = 5 [json_name = "indexType"];</code>
+         * @param value The indexType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIndexType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          indexType_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string index_type = 5 [json_name = "indexType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIndexType() {
+          indexType_ = getDefaultInstance().getIndexType();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string index_type = 5 [json_name = "indexType"];</code>
+         * @param value The bytes for indexType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIndexTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          indexType_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object databaseType_ = "";
+        /**
+         * <code>string database_type = 6 [json_name = "databaseType"];</code>
+         * @return The databaseType.
+         */
+        public java.lang.String getDatabaseType() {
+          java.lang.Object ref = databaseType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            databaseType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string database_type = 6 [json_name = "databaseType"];</code>
+         * @return The bytes for databaseType.
+         */
+        public com.google.protobuf.ByteString
+            getDatabaseTypeBytes() {
+          java.lang.Object ref = databaseType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            databaseType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string database_type = 6 [json_name = "databaseType"];</code>
+         * @param value The databaseType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDatabaseType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          databaseType_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string database_type = 6 [json_name = "databaseType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDatabaseType() {
+          databaseType_ = getDefaultInstance().getDatabaseType();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string database_type = 6 [json_name = "databaseType"];</code>
+         * @param value The bytes for databaseType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDatabaseTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          databaseType_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object objectAlignment_ = "";
+        /**
+         * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+         * @return The objectAlignment.
+         */
+        public java.lang.String getObjectAlignment() {
+          java.lang.Object ref = objectAlignment_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            objectAlignment_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+         * @return The bytes for objectAlignment.
+         */
+        public com.google.protobuf.ByteString
+            getObjectAlignmentBytes() {
+          java.lang.Object ref = objectAlignment_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            objectAlignment_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+         * @param value The objectAlignment to set.
+         * @return This builder for chaining.
+         */
+        public Builder setObjectAlignment(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          objectAlignment_ = value;
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearObjectAlignment() {
+          objectAlignment_ = getDefaultInstance().getObjectAlignment();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string object_alignment = 7 [json_name = "objectAlignment"];</code>
+         * @param value The bytes for objectAlignment to set.
+         * @return This builder for chaining.
+         */
+        public Builder setObjectAlignmentBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          objectAlignment_ = value;
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+
+        private int pathAdjustmentInterval_ ;
+        /**
+         * <code>int32 path_adjustment_interval = 8 [json_name = "pathAdjustmentInterval"];</code>
+         * @return The pathAdjustmentInterval.
+         */
+        @java.lang.Override
+        public int getPathAdjustmentInterval() {
+          return pathAdjustmentInterval_;
+        }
+        /**
+         * <code>int32 path_adjustment_interval = 8 [json_name = "pathAdjustmentInterval"];</code>
+         * @param value The pathAdjustmentInterval to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPathAdjustmentInterval(int value) {
+
+          pathAdjustmentInterval_ = value;
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 path_adjustment_interval = 8 [json_name = "pathAdjustmentInterval"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPathAdjustmentInterval() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          pathAdjustmentInterval_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int graphSharedMemorySize_ ;
+        /**
+         * <code>int32 graph_shared_memory_size = 9 [json_name = "graphSharedMemorySize"];</code>
+         * @return The graphSharedMemorySize.
+         */
+        @java.lang.Override
+        public int getGraphSharedMemorySize() {
+          return graphSharedMemorySize_;
+        }
+        /**
+         * <code>int32 graph_shared_memory_size = 9 [json_name = "graphSharedMemorySize"];</code>
+         * @param value The graphSharedMemorySize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setGraphSharedMemorySize(int value) {
+
+          graphSharedMemorySize_ = value;
+          bitField0_ |= 0x00000100;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 graph_shared_memory_size = 9 [json_name = "graphSharedMemorySize"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearGraphSharedMemorySize() {
+          bitField0_ = (bitField0_ & ~0x00000100);
+          graphSharedMemorySize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int treeSharedMemorySize_ ;
+        /**
+         * <code>int32 tree_shared_memory_size = 10 [json_name = "treeSharedMemorySize"];</code>
+         * @return The treeSharedMemorySize.
+         */
+        @java.lang.Override
+        public int getTreeSharedMemorySize() {
+          return treeSharedMemorySize_;
+        }
+        /**
+         * <code>int32 tree_shared_memory_size = 10 [json_name = "treeSharedMemorySize"];</code>
+         * @param value The treeSharedMemorySize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTreeSharedMemorySize(int value) {
+
+          treeSharedMemorySize_ = value;
+          bitField0_ |= 0x00000200;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 tree_shared_memory_size = 10 [json_name = "treeSharedMemorySize"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTreeSharedMemorySize() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          treeSharedMemorySize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int objectSharedMemorySize_ ;
+        /**
+         * <code>int32 object_shared_memory_size = 11 [json_name = "objectSharedMemorySize"];</code>
+         * @return The objectSharedMemorySize.
+         */
+        @java.lang.Override
+        public int getObjectSharedMemorySize() {
+          return objectSharedMemorySize_;
+        }
+        /**
+         * <code>int32 object_shared_memory_size = 11 [json_name = "objectSharedMemorySize"];</code>
+         * @param value The objectSharedMemorySize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setObjectSharedMemorySize(int value) {
+
+          objectSharedMemorySize_ = value;
+          bitField0_ |= 0x00000400;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 object_shared_memory_size = 11 [json_name = "objectSharedMemorySize"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearObjectSharedMemorySize() {
+          bitField0_ = (bitField0_ & ~0x00000400);
+          objectSharedMemorySize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int prefetchOffset_ ;
+        /**
+         * <code>int32 prefetch_offset = 12 [json_name = "prefetchOffset"];</code>
+         * @return The prefetchOffset.
+         */
+        @java.lang.Override
+        public int getPrefetchOffset() {
+          return prefetchOffset_;
+        }
+        /**
+         * <code>int32 prefetch_offset = 12 [json_name = "prefetchOffset"];</code>
+         * @param value The prefetchOffset to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrefetchOffset(int value) {
+
+          prefetchOffset_ = value;
+          bitField0_ |= 0x00000800;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 prefetch_offset = 12 [json_name = "prefetchOffset"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPrefetchOffset() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          prefetchOffset_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int prefetchSize_ ;
+        /**
+         * <code>int32 prefetch_size = 13 [json_name = "prefetchSize"];</code>
+         * @return The prefetchSize.
+         */
+        @java.lang.Override
+        public int getPrefetchSize() {
+          return prefetchSize_;
+        }
+        /**
+         * <code>int32 prefetch_size = 13 [json_name = "prefetchSize"];</code>
+         * @param value The prefetchSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrefetchSize(int value) {
+
+          prefetchSize_ = value;
+          bitField0_ |= 0x00001000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 prefetch_size = 13 [json_name = "prefetchSize"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPrefetchSize() {
+          bitField0_ = (bitField0_ & ~0x00001000);
+          prefetchSize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object accuracyTable_ = "";
+        /**
+         * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+         * @return The accuracyTable.
+         */
+        public java.lang.String getAccuracyTable() {
+          java.lang.Object ref = accuracyTable_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            accuracyTable_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+         * @return The bytes for accuracyTable.
+         */
+        public com.google.protobuf.ByteString
+            getAccuracyTableBytes() {
+          java.lang.Object ref = accuracyTable_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            accuracyTable_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+         * @param value The accuracyTable to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAccuracyTable(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          accuracyTable_ = value;
+          bitField0_ |= 0x00002000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAccuracyTable() {
+          accuracyTable_ = getDefaultInstance().getAccuracyTable();
+          bitField0_ = (bitField0_ & ~0x00002000);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string accuracy_table = 14 [json_name = "accuracyTable"];</code>
+         * @param value The bytes for accuracyTable to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAccuracyTableBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          accuracyTable_ = value;
+          bitField0_ |= 0x00002000;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object searchType_ = "";
+        /**
+         * <code>string search_type = 15 [json_name = "searchType"];</code>
+         * @return The searchType.
+         */
+        public java.lang.String getSearchType() {
+          java.lang.Object ref = searchType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            searchType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string search_type = 15 [json_name = "searchType"];</code>
+         * @return The bytes for searchType.
+         */
+        public com.google.protobuf.ByteString
+            getSearchTypeBytes() {
+          java.lang.Object ref = searchType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            searchType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string search_type = 15 [json_name = "searchType"];</code>
+         * @param value The searchType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSearchType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          searchType_ = value;
+          bitField0_ |= 0x00004000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string search_type = 15 [json_name = "searchType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSearchType() {
+          searchType_ = getDefaultInstance().getSearchType();
+          bitField0_ = (bitField0_ & ~0x00004000);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string search_type = 15 [json_name = "searchType"];</code>
+         * @param value The bytes for searchType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSearchTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          searchType_ = value;
+          bitField0_ |= 0x00004000;
+          onChanged();
+          return this;
+        }
+
+        private float maxMagnitude_ ;
+        /**
+         * <code>float max_magnitude = 16 [json_name = "maxMagnitude"];</code>
+         * @return The maxMagnitude.
+         */
+        @java.lang.Override
+        public float getMaxMagnitude() {
+          return maxMagnitude_;
+        }
+        /**
+         * <code>float max_magnitude = 16 [json_name = "maxMagnitude"];</code>
+         * @param value The maxMagnitude to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMaxMagnitude(float value) {
+
+          maxMagnitude_ = value;
+          bitField0_ |= 0x00008000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>float max_magnitude = 16 [json_name = "maxMagnitude"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMaxMagnitude() {
+          bitField0_ = (bitField0_ & ~0x00008000);
+          maxMagnitude_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private int nOfNeighborsForInsertionOrder_ ;
+        /**
+         * <code>int32 n_of_neighbors_for_insertion_order = 17 [json_name = "nOfNeighborsForInsertionOrder"];</code>
+         * @return The nOfNeighborsForInsertionOrder.
+         */
+        @java.lang.Override
+        public int getNOfNeighborsForInsertionOrder() {
+          return nOfNeighborsForInsertionOrder_;
+        }
+        /**
+         * <code>int32 n_of_neighbors_for_insertion_order = 17 [json_name = "nOfNeighborsForInsertionOrder"];</code>
+         * @param value The nOfNeighborsForInsertionOrder to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNOfNeighborsForInsertionOrder(int value) {
+
+          nOfNeighborsForInsertionOrder_ = value;
+          bitField0_ |= 0x00010000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 n_of_neighbors_for_insertion_order = 17 [json_name = "nOfNeighborsForInsertionOrder"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNOfNeighborsForInsertionOrder() {
+          bitField0_ = (bitField0_ & ~0x00010000);
+          nOfNeighborsForInsertionOrder_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private float epsilonForInsertionOrder_ ;
+        /**
+         * <code>float epsilon_for_insertion_order = 18 [json_name = "epsilonForInsertionOrder"];</code>
+         * @return The epsilonForInsertionOrder.
+         */
+        @java.lang.Override
+        public float getEpsilonForInsertionOrder() {
+          return epsilonForInsertionOrder_;
+        }
+        /**
+         * <code>float epsilon_for_insertion_order = 18 [json_name = "epsilonForInsertionOrder"];</code>
+         * @param value The epsilonForInsertionOrder to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEpsilonForInsertionOrder(float value) {
+
+          epsilonForInsertionOrder_ = value;
+          bitField0_ |= 0x00020000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>float epsilon_for_insertion_order = 18 [json_name = "epsilonForInsertionOrder"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEpsilonForInsertionOrder() {
+          bitField0_ = (bitField0_ & ~0x00020000);
+          epsilonForInsertionOrder_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object refinementObjectType_ = "";
+        /**
+         * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+         * @return The refinementObjectType.
+         */
+        public java.lang.String getRefinementObjectType() {
+          java.lang.Object ref = refinementObjectType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            refinementObjectType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+         * @return The bytes for refinementObjectType.
+         */
+        public com.google.protobuf.ByteString
+            getRefinementObjectTypeBytes() {
+          java.lang.Object ref = refinementObjectType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            refinementObjectType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+         * @param value The refinementObjectType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRefinementObjectType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          refinementObjectType_ = value;
+          bitField0_ |= 0x00040000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRefinementObjectType() {
+          refinementObjectType_ = getDefaultInstance().getRefinementObjectType();
+          bitField0_ = (bitField0_ & ~0x00040000);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string refinement_object_type = 19 [json_name = "refinementObjectType"];</code>
+         * @param value The bytes for refinementObjectType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRefinementObjectTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          refinementObjectType_ = value;
+          bitField0_ |= 0x00040000;
+          onChanged();
+          return this;
+        }
+
+        private int truncationThreshold_ ;
+        /**
+         * <code>int32 truncation_threshold = 20 [json_name = "truncationThreshold"];</code>
+         * @return The truncationThreshold.
+         */
+        @java.lang.Override
+        public int getTruncationThreshold() {
+          return truncationThreshold_;
+        }
+        /**
+         * <code>int32 truncation_threshold = 20 [json_name = "truncationThreshold"];</code>
+         * @param value The truncationThreshold to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTruncationThreshold(int value) {
+
+          truncationThreshold_ = value;
+          bitField0_ |= 0x00080000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 truncation_threshold = 20 [json_name = "truncationThreshold"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTruncationThreshold() {
+          bitField0_ = (bitField0_ & ~0x00080000);
+          truncationThreshold_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int edgeSizeForCreation_ ;
+        /**
+         * <code>int32 edge_size_for_creation = 21 [json_name = "edgeSizeForCreation"];</code>
+         * @return The edgeSizeForCreation.
+         */
+        @java.lang.Override
+        public int getEdgeSizeForCreation() {
+          return edgeSizeForCreation_;
+        }
+        /**
+         * <code>int32 edge_size_for_creation = 21 [json_name = "edgeSizeForCreation"];</code>
+         * @param value The edgeSizeForCreation to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEdgeSizeForCreation(int value) {
+
+          edgeSizeForCreation_ = value;
+          bitField0_ |= 0x00100000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 edge_size_for_creation = 21 [json_name = "edgeSizeForCreation"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEdgeSizeForCreation() {
+          bitField0_ = (bitField0_ & ~0x00100000);
+          edgeSizeForCreation_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int edgeSizeForSearch_ ;
+        /**
+         * <code>int32 edge_size_for_search = 22 [json_name = "edgeSizeForSearch"];</code>
+         * @return The edgeSizeForSearch.
+         */
+        @java.lang.Override
+        public int getEdgeSizeForSearch() {
+          return edgeSizeForSearch_;
+        }
+        /**
+         * <code>int32 edge_size_for_search = 22 [json_name = "edgeSizeForSearch"];</code>
+         * @param value The edgeSizeForSearch to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEdgeSizeForSearch(int value) {
+
+          edgeSizeForSearch_ = value;
+          bitField0_ |= 0x00200000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 edge_size_for_search = 22 [json_name = "edgeSizeForSearch"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEdgeSizeForSearch() {
+          bitField0_ = (bitField0_ & ~0x00200000);
+          edgeSizeForSearch_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int edgeSizeLimitForCreation_ ;
+        /**
+         * <code>int32 edge_size_limit_for_creation = 23 [json_name = "edgeSizeLimitForCreation"];</code>
+         * @return The edgeSizeLimitForCreation.
+         */
+        @java.lang.Override
+        public int getEdgeSizeLimitForCreation() {
+          return edgeSizeLimitForCreation_;
+        }
+        /**
+         * <code>int32 edge_size_limit_for_creation = 23 [json_name = "edgeSizeLimitForCreation"];</code>
+         * @param value The edgeSizeLimitForCreation to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEdgeSizeLimitForCreation(int value) {
+
+          edgeSizeLimitForCreation_ = value;
+          bitField0_ |= 0x00400000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 edge_size_limit_for_creation = 23 [json_name = "edgeSizeLimitForCreation"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEdgeSizeLimitForCreation() {
+          bitField0_ = (bitField0_ & ~0x00400000);
+          edgeSizeLimitForCreation_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private double insertionRadiusCoefficient_ ;
+        /**
+         * <code>double insertion_radius_coefficient = 24 [json_name = "insertionRadiusCoefficient"];</code>
+         * @return The insertionRadiusCoefficient.
+         */
+        @java.lang.Override
+        public double getInsertionRadiusCoefficient() {
+          return insertionRadiusCoefficient_;
+        }
+        /**
+         * <code>double insertion_radius_coefficient = 24 [json_name = "insertionRadiusCoefficient"];</code>
+         * @param value The insertionRadiusCoefficient to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInsertionRadiusCoefficient(double value) {
+
+          insertionRadiusCoefficient_ = value;
+          bitField0_ |= 0x00800000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double insertion_radius_coefficient = 24 [json_name = "insertionRadiusCoefficient"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInsertionRadiusCoefficient() {
+          bitField0_ = (bitField0_ & ~0x00800000);
+          insertionRadiusCoefficient_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private int seedSize_ ;
+        /**
+         * <code>int32 seed_size = 25 [json_name = "seedSize"];</code>
+         * @return The seedSize.
+         */
+        @java.lang.Override
+        public int getSeedSize() {
+          return seedSize_;
+        }
+        /**
+         * <code>int32 seed_size = 25 [json_name = "seedSize"];</code>
+         * @param value The seedSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSeedSize(int value) {
+
+          seedSize_ = value;
+          bitField0_ |= 0x01000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 seed_size = 25 [json_name = "seedSize"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSeedSize() {
+          bitField0_ = (bitField0_ & ~0x01000000);
+          seedSize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object seedType_ = "";
+        /**
+         * <code>string seed_type = 26 [json_name = "seedType"];</code>
+         * @return The seedType.
+         */
+        public java.lang.String getSeedType() {
+          java.lang.Object ref = seedType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            seedType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string seed_type = 26 [json_name = "seedType"];</code>
+         * @return The bytes for seedType.
+         */
+        public com.google.protobuf.ByteString
+            getSeedTypeBytes() {
+          java.lang.Object ref = seedType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            seedType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string seed_type = 26 [json_name = "seedType"];</code>
+         * @param value The seedType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSeedType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          seedType_ = value;
+          bitField0_ |= 0x02000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string seed_type = 26 [json_name = "seedType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSeedType() {
+          seedType_ = getDefaultInstance().getSeedType();
+          bitField0_ = (bitField0_ & ~0x02000000);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string seed_type = 26 [json_name = "seedType"];</code>
+         * @param value The bytes for seedType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSeedTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          seedType_ = value;
+          bitField0_ |= 0x02000000;
+          onChanged();
+          return this;
+        }
+
+        private int truncationThreadPoolSize_ ;
+        /**
+         * <code>int32 truncation_thread_pool_size = 27 [json_name = "truncationThreadPoolSize"];</code>
+         * @return The truncationThreadPoolSize.
+         */
+        @java.lang.Override
+        public int getTruncationThreadPoolSize() {
+          return truncationThreadPoolSize_;
+        }
+        /**
+         * <code>int32 truncation_thread_pool_size = 27 [json_name = "truncationThreadPoolSize"];</code>
+         * @param value The truncationThreadPoolSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTruncationThreadPoolSize(int value) {
+
+          truncationThreadPoolSize_ = value;
+          bitField0_ |= 0x04000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 truncation_thread_pool_size = 27 [json_name = "truncationThreadPoolSize"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTruncationThreadPoolSize() {
+          bitField0_ = (bitField0_ & ~0x04000000);
+          truncationThreadPoolSize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int batchSizeForCreation_ ;
+        /**
+         * <code>int32 batch_size_for_creation = 28 [json_name = "batchSizeForCreation"];</code>
+         * @return The batchSizeForCreation.
+         */
+        @java.lang.Override
+        public int getBatchSizeForCreation() {
+          return batchSizeForCreation_;
+        }
+        /**
+         * <code>int32 batch_size_for_creation = 28 [json_name = "batchSizeForCreation"];</code>
+         * @param value The batchSizeForCreation to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBatchSizeForCreation(int value) {
+
+          batchSizeForCreation_ = value;
+          bitField0_ |= 0x08000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 batch_size_for_creation = 28 [json_name = "batchSizeForCreation"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBatchSizeForCreation() {
+          bitField0_ = (bitField0_ & ~0x08000000);
+          batchSizeForCreation_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object graphType_ = "";
+        /**
+         * <code>string graph_type = 29 [json_name = "graphType"];</code>
+         * @return The graphType.
+         */
+        public java.lang.String getGraphType() {
+          java.lang.Object ref = graphType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            graphType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string graph_type = 29 [json_name = "graphType"];</code>
+         * @return The bytes for graphType.
+         */
+        public com.google.protobuf.ByteString
+            getGraphTypeBytes() {
+          java.lang.Object ref = graphType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            graphType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string graph_type = 29 [json_name = "graphType"];</code>
+         * @param value The graphType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setGraphType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          graphType_ = value;
+          bitField0_ |= 0x10000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string graph_type = 29 [json_name = "graphType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearGraphType() {
+          graphType_ = getDefaultInstance().getGraphType();
+          bitField0_ = (bitField0_ & ~0x10000000);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string graph_type = 29 [json_name = "graphType"];</code>
+         * @param value The bytes for graphType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setGraphTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          graphType_ = value;
+          bitField0_ |= 0x10000000;
+          onChanged();
+          return this;
+        }
+
+        private int dynamicEdgeSizeBase_ ;
+        /**
+         * <code>int32 dynamic_edge_size_base = 30 [json_name = "dynamicEdgeSizeBase"];</code>
+         * @return The dynamicEdgeSizeBase.
+         */
+        @java.lang.Override
+        public int getDynamicEdgeSizeBase() {
+          return dynamicEdgeSizeBase_;
+        }
+        /**
+         * <code>int32 dynamic_edge_size_base = 30 [json_name = "dynamicEdgeSizeBase"];</code>
+         * @param value The dynamicEdgeSizeBase to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDynamicEdgeSizeBase(int value) {
+
+          dynamicEdgeSizeBase_ = value;
+          bitField0_ |= 0x20000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 dynamic_edge_size_base = 30 [json_name = "dynamicEdgeSizeBase"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDynamicEdgeSizeBase() {
+          bitField0_ = (bitField0_ & ~0x20000000);
+          dynamicEdgeSizeBase_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int dynamicEdgeSizeRate_ ;
+        /**
+         * <code>int32 dynamic_edge_size_rate = 31 [json_name = "dynamicEdgeSizeRate"];</code>
+         * @return The dynamicEdgeSizeRate.
+         */
+        @java.lang.Override
+        public int getDynamicEdgeSizeRate() {
+          return dynamicEdgeSizeRate_;
+        }
+        /**
+         * <code>int32 dynamic_edge_size_rate = 31 [json_name = "dynamicEdgeSizeRate"];</code>
+         * @param value The dynamicEdgeSizeRate to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDynamicEdgeSizeRate(int value) {
+
+          dynamicEdgeSizeRate_ = value;
+          bitField0_ |= 0x40000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 dynamic_edge_size_rate = 31 [json_name = "dynamicEdgeSizeRate"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDynamicEdgeSizeRate() {
+          bitField0_ = (bitField0_ & ~0x40000000);
+          dynamicEdgeSizeRate_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private float buildTimeLimit_ ;
+        /**
+         * <code>float build_time_limit = 32 [json_name = "buildTimeLimit"];</code>
+         * @return The buildTimeLimit.
+         */
+        @java.lang.Override
+        public float getBuildTimeLimit() {
+          return buildTimeLimit_;
+        }
+        /**
+         * <code>float build_time_limit = 32 [json_name = "buildTimeLimit"];</code>
+         * @param value The buildTimeLimit to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBuildTimeLimit(float value) {
+
+          buildTimeLimit_ = value;
+          bitField0_ |= 0x80000000;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>float build_time_limit = 32 [json_name = "buildTimeLimit"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBuildTimeLimit() {
+          bitField0_ = (bitField0_ & ~0x80000000);
+          buildTimeLimit_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private int outgoingEdge_ ;
+        /**
+         * <code>int32 outgoing_edge = 33 [json_name = "outgoingEdge"];</code>
+         * @return The outgoingEdge.
+         */
+        @java.lang.Override
+        public int getOutgoingEdge() {
+          return outgoingEdge_;
+        }
+        /**
+         * <code>int32 outgoing_edge = 33 [json_name = "outgoingEdge"];</code>
+         * @param value The outgoingEdge to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOutgoingEdge(int value) {
+
+          outgoingEdge_ = value;
+          bitField1_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 outgoing_edge = 33 [json_name = "outgoingEdge"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOutgoingEdge() {
+          bitField1_ = (bitField1_ & ~0x00000001);
+          outgoingEdge_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int incomingEdge_ ;
+        /**
+         * <code>int32 incoming_edge = 34 [json_name = "incomingEdge"];</code>
+         * @return The incomingEdge.
+         */
+        @java.lang.Override
+        public int getIncomingEdge() {
+          return incomingEdge_;
+        }
+        /**
+         * <code>int32 incoming_edge = 34 [json_name = "incomingEdge"];</code>
+         * @param value The incomingEdge to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIncomingEdge(int value) {
+
+          incomingEdge_ = value;
+          bitField1_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 incoming_edge = 34 [json_name = "incomingEdge"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIncomingEdge() {
+          bitField1_ = (bitField1_ & ~0x00000002);
+          incomingEdge_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.v1.Info.Index.Property)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.v1.Info.Index.Property)
+      private static final org.vdaas.vald.api.v1.payload.Info.Index.Property DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Info.Index.Property();
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.Property getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Property>
+          PARSER = new com.google.protobuf.AbstractParser<Property>() {
+        @java.lang.Override
+        public Property parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Property> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Property> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.Index.Property getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface PropertyDetailOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:payload.v1.Info.Index.PropertyDetail)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      int getDetailsCount();
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      boolean containsDetails(
+          java.lang.String key);
+      /**
+       * Use {@link #getDetailsMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property>
+      getDetails();
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property>
+      getDetailsMap();
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Property getDetailsOrDefault(
+          java.lang.String key,
+          /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Property defaultValue);
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      org.vdaas.vald.api.v1.payload.Info.Index.Property getDetailsOrThrow(
+          java.lang.String key);
+    }
+    /**
+     * <pre>
+     * Represents index Properties for each Agents
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Info.Index.PropertyDetail}
+     */
+    public static final class PropertyDetail extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:payload.v1.Info.Index.PropertyDetail)
+        PropertyDetailOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PropertyDetail.newBuilder() to construct.
+      private PropertyDetail(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PropertyDetail() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PropertyDetail();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_PropertyDetail_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetDetails();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_PropertyDetail_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail.class, org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail.Builder.class);
+      }
+
+      public static final int DETAILS_FIELD_NUMBER = 1;
+      private static final class DetailsDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property>newDefaultInstance(
+                    org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_PropertyDetail_DetailsEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                    org.vdaas.vald.api.v1.payload.Info.Index.Property.getDefaultInstance());
+      }
+      @SuppressWarnings("serial")
+      private com.google.protobuf.MapField<
+          java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> details_;
+      private com.google.protobuf.MapField<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property>
+      internalGetDetails() {
+        if (details_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DetailsDefaultEntryHolder.defaultEntry);
+        }
+        return details_;
+      }
+      public int getDetailsCount() {
+        return internalGetDetails().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public boolean containsDetails(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetDetails().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDetailsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> getDetails() {
+        return getDetailsMap();
+      }
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> getDetailsMap() {
+        return internalGetDetails().getMap();
+      }
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Property getDetailsOrDefault(
+          java.lang.String key,
+          /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Property defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> map =
+            internalGetDetails().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+       */
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.Index.Property getDetailsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> map =
+            internalGetDetails().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetDetails(),
+            DetailsDefaultEntryHolder.defaultEntry,
+            1);
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (java.util.Map.Entry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> entry
+             : internalGetDetails().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property>
+          details__ = DetailsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, details__);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail)) {
+          return super.equals(obj);
+        }
+        org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail other = (org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail) obj;
+
+        if (!internalGetDetails().equals(
+            other.internalGetDetails())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (!internalGetDetails().getMap().isEmpty()) {
+          hash = (37 * hash) + DETAILS_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetDetails().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Represents index Properties for each Agents
+       * </pre>
+       *
+       * Protobuf type {@code payload.v1.Info.Index.PropertyDetail}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:payload.v1.Info.Index.PropertyDetail)
+          org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetailOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_PropertyDetail_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+            int number) {
+          switch (number) {
+            case 1:
+              return internalGetDetails();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
+            int number) {
+          switch (number) {
+            case 1:
+              return internalGetMutableDetails();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_PropertyDetail_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail.class, org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail.Builder.class);
+        }
+
+        // Construct using org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          internalGetMutableDetails().clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_Index_PropertyDetail_descriptor;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail getDefaultInstanceForType() {
+          return org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail build() {
+          org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail buildPartial() {
+          org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail result = new org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.details_ = internalGetDetails().build(DetailsDefaultEntryHolder.defaultEntry);
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail) {
+            return mergeFrom((org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail other) {
+          if (other == org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail.getDefaultInstance()) return this;
+          internalGetMutableDetails().mergeFrom(
+              other.internalGetDetails());
+          bitField0_ |= 0x00000001;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.MapEntry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property>
+                  details__ = input.readMessage(
+                      DetailsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                  internalGetMutableDetails().ensureBuilderMap().put(
+                      details__.getKey(), details__.getValue());
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private static final class DetailsConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Property> {
+          @java.lang.Override
+          public org.vdaas.vald.api.v1.payload.Info.Index.Property build(org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder val) {
+            if (val instanceof org.vdaas.vald.api.v1.payload.Info.Index.Property) { return (org.vdaas.vald.api.v1.payload.Info.Index.Property) val; }
+            return ((org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder) val).build();
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.MapEntry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> defaultEntry() {
+            return DetailsDefaultEntryHolder.defaultEntry;
+          }
+        };
+        private static final DetailsConverter detailsConverter = new DetailsConverter();
+
+        private com.google.protobuf.MapFieldBuilder<
+            java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Property, org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder> details_;
+        private com.google.protobuf.MapFieldBuilder<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Property, org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder>
+            internalGetDetails() {
+          if (details_ == null) {
+            return new com.google.protobuf.MapFieldBuilder<>(detailsConverter);
+          }
+          return details_;
+        }
+        private com.google.protobuf.MapFieldBuilder<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder, org.vdaas.vald.api.v1.payload.Info.Index.Property, org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder>
+            internalGetMutableDetails() {
+          if (details_ == null) {
+            details_ = new com.google.protobuf.MapFieldBuilder<>(detailsConverter);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return details_;
+        }
+        public int getDetailsCount() {
+          return internalGetDetails().ensureBuilderMap().size();
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public boolean containsDetails(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          return internalGetDetails().ensureBuilderMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getDetailsMap()} instead.
+         */
+        @java.lang.Override
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> getDetails() {
+          return getDetailsMap();
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> getDetailsMap() {
+          return internalGetDetails().getImmutableMap();
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Property getDetailsOrDefault(
+            java.lang.String key,
+            /* nullable */
+org.vdaas.vald.api.v1.payload.Info.Index.Property defaultValue) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder> map = internalGetMutableDetails().ensureBuilderMap();
+          return map.containsKey(key) ? detailsConverter.build(map.get(key)) : defaultValue;
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        @java.lang.Override
+        public org.vdaas.vald.api.v1.payload.Info.Index.Property getDetailsOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder> map = internalGetMutableDetails().ensureBuilderMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return detailsConverter.build(map.get(key));
+        }
+        public Builder clearDetails() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          internalGetMutableDetails().clear();
+          return this;
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        public Builder removeDetails(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          internalGetMutableDetails().ensureBuilderMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property>
+            getMutableDetails() {
+          bitField0_ |= 0x00000001;
+          return internalGetMutableDetails().ensureMessageMap();
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        public Builder putDetails(
+            java.lang.String key,
+            org.vdaas.vald.api.v1.payload.Info.Index.Property value) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) { throw new NullPointerException("map value"); }
+          internalGetMutableDetails().ensureBuilderMap()
+              .put(key, value);
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        public Builder putAllDetails(
+            java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> values) {
+          for (java.util.Map.Entry<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.Property> e : values.entrySet()) {
+            if (e.getKey() == null || e.getValue() == null) {
+              throw new NullPointerException();
+            }
+          }
+          internalGetMutableDetails().ensureBuilderMap()
+              .putAll(values);
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <code>map&lt;string, .payload.v1.Info.Index.Property&gt; details = 1 [json_name = "details"];</code>
+         */
+        public org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder putDetailsBuilderIfAbsent(
+            java.lang.String key) {
+          java.util.Map<java.lang.String, org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder> builderMap = internalGetMutableDetails().ensureBuilderMap();
+          org.vdaas.vald.api.v1.payload.Info.Index.PropertyOrBuilder entry = builderMap.get(key);
+          if (entry == null) {
+            entry = org.vdaas.vald.api.v1.payload.Info.Index.Property.newBuilder();
+            builderMap.put(key, entry);
+          }
+          if (entry instanceof org.vdaas.vald.api.v1.payload.Info.Index.Property) {
+            entry = ((org.vdaas.vald.api.v1.payload.Info.Index.Property) entry).toBuilder();
+            builderMap.put(key, entry);
+          }
+          return (org.vdaas.vald.api.v1.payload.Info.Index.Property.Builder) entry;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:payload.v1.Info.Index.PropertyDetail)
+      }
+
+      // @@protoc_insertion_point(class_scope:payload.v1.Info.Index.PropertyDetail)
+      private static final org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail();
+      }
+
+      public static org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<PropertyDetail>
+          PARSER = new com.google.protobuf.AbstractParser<PropertyDetail>() {
+        @java.lang.Override
+        public PropertyDetail parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<PropertyDetail> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PropertyDetail> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
