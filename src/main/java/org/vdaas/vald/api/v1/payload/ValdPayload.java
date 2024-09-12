@@ -141,6 +141,11 @@ public final class ValdPayload {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_payload_v1_Update_MultiObjectRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_payload_v1_Update_TimestampRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_payload_v1_Update_TimestampRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_payload_v1_Update_Config_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -562,7 +567,7 @@ public final class ValdPayload {
       "_strict_exist_check\030\001 \001(\010R\024skipStrictExi" +
       "stCheck\0223\n\007filters\030\002 \001(\0132\031.payload.v1.Fi" +
       "lter.ConfigR\007filters\022\034\n\ttimestamp\030\003 \001(\003R" +
-      "\ttimestamp\"\235\005\n\006Update\032y\n\007Request\022;\n\006vect" +
+      "\ttimestamp\"\376\005\n\006Update\032y\n\007Request\022;\n\006vect" +
       "or\030\001 \001(\0132\031.payload.v1.Object.VectorB\010\272H\005" +
       "\222\001\002\010\002R\006vector\0221\n\006config\030\002 \001(\0132\031.payload." +
       "v1.Update.ConfigR\006config\032F\n\014MultiRequest" +
@@ -573,229 +578,232 @@ public final class ValdPayload {
       "ConfigR\006config\0229\n\nvectorizer\030\003 \001(\0132\031.pay" +
       "load.v1.Filter.TargetR\nvectorizer\032R\n\022Mul" +
       "tiObjectRequest\022<\n\010requests\030\001 \003(\0132 .payl" +
-      "oad.v1.Update.ObjectRequestR\010requests\032\312\001" +
-      "\n\006Config\0225\n\027skip_strict_exist_check\030\001 \001(" +
-      "\010R\024skipStrictExistCheck\0223\n\007filters\030\002 \001(\013" +
-      "2\031.payload.v1.Filter.ConfigR\007filters\022\034\n\t" +
-      "timestamp\030\003 \001(\003R\ttimestamp\0226\n\027disable_ba" +
-      "lanced_update\030\004 \001(\010R\025disableBalancedUpda" +
-      "te\"\235\005\n\006Upsert\032y\n\007Request\022;\n\006vector\030\001 \001(\013" +
-      "2\031.payload.v1.Object.VectorB\010\272H\005\222\001\002\010\002R\006v" +
-      "ector\0221\n\006config\030\002 \001(\0132\031.payload.v1.Upser" +
-      "t.ConfigR\006config\032F\n\014MultiRequest\0226\n\010requ" +
-      "ests\030\001 \003(\0132\032.payload.v1.Upsert.RequestR\010" +
-      "requests\032\256\001\n\rObjectRequest\022/\n\006object\030\001 \001" +
-      "(\0132\027.payload.v1.Object.BlobR\006object\0221\n\006c" +
-      "onfig\030\002 \001(\0132\031.payload.v1.Upsert.ConfigR\006" +
-      "config\0229\n\nvectorizer\030\003 \001(\0132\031.payload.v1." +
-      "Filter.TargetR\nvectorizer\032R\n\022MultiObject" +
-      "Request\022<\n\010requests\030\001 \003(\0132 .payload.v1.U" +
-      "psert.ObjectRequestR\010requests\032\312\001\n\006Config" +
-      "\0225\n\027skip_strict_exist_check\030\001 \001(\010R\024skipS" +
-      "trictExistCheck\0223\n\007filters\030\002 \001(\0132\031.paylo" +
-      "ad.v1.Filter.ConfigR\007filters\022\034\n\ttimestam" +
-      "p\030\003 \001(\003R\ttimestamp\0226\n\027disable_balanced_u" +
-      "pdate\030\004 \001(\010R\025disableBalancedUpdate\"\221\004\n\006R" +
-      "emove\032c\n\007Request\022%\n\002id\030\001 \001(\0132\025.payload.v" +
-      "1.Object.IDR\002id\0221\n\006config\030\002 \001(\0132\031.payloa" +
-      "d.v1.Remove.ConfigR\006config\032F\n\014MultiReque" +
-      "st\0226\n\010requests\030\001 \003(\0132\032.payload.v1.Remove" +
-      ".RequestR\010requests\032P\n\020TimestampRequest\022<" +
-      "\n\ntimestamps\030\001 \003(\0132\034.payload.v1.Remove.T" +
-      "imestampR\ntimestamps\032\250\001\n\tTimestamp\022\034\n\tti" +
-      "mestamp\030\001 \001(\003R\ttimestamp\022A\n\010operator\030\002 \001" +
-      "(\0162%.payload.v1.Remove.Timestamp.Operato" +
-      "rR\010operator\":\n\010Operator\022\006\n\002Eq\020\000\022\006\n\002Ne\020\001\022" +
-      "\006\n\002Ge\020\002\022\006\n\002Gt\020\003\022\006\n\002Le\020\004\022\006\n\002Lt\020\005\032]\n\006Confi" +
-      "g\0225\n\027skip_strict_exist_check\030\001 \001(\010R\024skip" +
-      "StrictExistCheck\022\034\n\ttimestamp\030\003 \001(\003R\ttim" +
-      "estamp\"\022\n\005Flush\032\t\n\007Request\"\261\013\n\006Object\032u\n" +
-      "\rVectorRequest\022/\n\002id\030\001 \001(\0132\025.payload.v1." +
-      "Object.IDB\010\272H\005\222\001\002\010\002R\002id\0223\n\007filters\030\002 \001(\013" +
-      "2\031.payload.v1.Filter.ConfigR\007filters\0326\n\010" +
-      "Distance\022\016\n\002id\030\001 \001(\tR\002id\022\032\n\010distance\030\002 \001" +
-      "(\002R\010distance\032\204\001\n\016StreamDistance\0229\n\010dista" +
-      "nce\030\001 \001(\0132\033.payload.v1.Object.DistanceH\000" +
-      "R\010distance\022,\n\006status\030\002 \001(\0132\022.google.rpc." +
-      "StatusH\000R\006statusB\t\n\007payload\032\035\n\002ID\022\027\n\002id\030" +
-      "\001 \001(\tB\007\272H\004r\002\020\001R\002id\032\027\n\003IDs\022\020\n\003ids\030\001 \003(\tR\003" +
-      "ids\032a\n\006Vector\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\022 " +
-      "\n\006vector\030\002 \003(\002B\010\272H\005\222\001\002\010\002R\006vector\022\034\n\ttime" +
-      "stamp\030\003 \001(\003R\ttimestamp\032C\n\020TimestampReque" +
-      "st\022/\n\002id\030\001 \001(\0132\025.payload.v1.Object.IDB\010\272" +
-      "H\005\222\001\002\010\002R\002id\032B\n\tTimestamp\022\027\n\002id\030\001 \001(\tB\007\272H" +
-      "\004r\002\020\001R\002id\022\034\n\ttimestamp\030\002 \001(\003R\ttimestamp\032" +
-      ">\n\007Vectors\0223\n\007vectors\030\001 \003(\0132\031.payload.v1" +
-      ".Object.VectorR\007vectors\032|\n\014StreamVector\022" +
-      "3\n\006vector\030\001 \001(\0132\031.payload.v1.Object.Vect" +
-      "orH\000R\006vector\022,\n\006status\030\002 \001(\0132\022.google.rp" +
-      "c.StatusH\000R\006statusB\t\n\007payload\032=\n\rReshape" +
-      "Vector\022\026\n\006object\030\001 \001(\014R\006object\022\024\n\005shape\030" +
-      "\002 \003(\005R\005shape\0327\n\004Blob\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020" +
-      "\001R\002id\022\026\n\006object\030\002 \001(\014R\006object\032t\n\nStreamB" +
-      "lob\022-\n\004blob\030\001 \001(\0132\027.payload.v1.Object.Bl" +
-      "obH\000R\004blob\022,\n\006status\030\002 \001(\0132\022.google.rpc." +
-      "StatusH\000R\006statusB\t\n\007payload\032D\n\010Location\022" +
-      "\022\n\004name\030\001 \001(\tR\004name\022\022\n\004uuid\030\002 \001(\tR\004uuid\022" +
-      "\020\n\003ips\030\003 \003(\tR\003ips\032\204\001\n\016StreamLocation\0229\n\010" +
-      "location\030\001 \001(\0132\033.payload.v1.Object.Locat" +
-      "ionH\000R\010location\022,\n\006status\030\002 \001(\0132\022.google" +
-      ".rpc.StatusH\000R\006statusB\t\n\007payload\032F\n\tLoca" +
-      "tions\0229\n\tlocations\030\001 \003(\0132\033.payload.v1.Ob" +
-      "ject.LocationR\tlocations\032\213\001\n\004List\032\t\n\007Req" +
-      "uest\032x\n\010Response\0223\n\006vector\030\001 \001(\0132\031.paylo" +
+      "oad.v1.Update.ObjectRequestR\010requests\032_\n" +
+      "\020TimestampRequest\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002" +
+      "id\022\034\n\ttimestamp\030\002 \001(\003R\ttimestamp\022\024\n\005forc" +
+      "e\030\003 \001(\010R\005force\032\312\001\n\006Config\0225\n\027skip_strict" +
+      "_exist_check\030\001 \001(\010R\024skipStrictExistCheck" +
+      "\0223\n\007filters\030\002 \001(\0132\031.payload.v1.Filter.Co" +
+      "nfigR\007filters\022\034\n\ttimestamp\030\003 \001(\003R\ttimest" +
+      "amp\0226\n\027disable_balanced_update\030\004 \001(\010R\025di" +
+      "sableBalancedUpdate\"\235\005\n\006Upsert\032y\n\007Reques" +
+      "t\022;\n\006vector\030\001 \001(\0132\031.payload.v1.Object.Ve" +
+      "ctorB\010\272H\005\222\001\002\010\002R\006vector\0221\n\006config\030\002 \001(\0132\031" +
+      ".payload.v1.Upsert.ConfigR\006config\032F\n\014Mul" +
+      "tiRequest\0226\n\010requests\030\001 \003(\0132\032.payload.v1" +
+      ".Upsert.RequestR\010requests\032\256\001\n\rObjectRequ" +
+      "est\022/\n\006object\030\001 \001(\0132\027.payload.v1.Object." +
+      "BlobR\006object\0221\n\006config\030\002 \001(\0132\031.payload.v" +
+      "1.Upsert.ConfigR\006config\0229\n\nvectorizer\030\003 " +
+      "\001(\0132\031.payload.v1.Filter.TargetR\nvectoriz" +
+      "er\032R\n\022MultiObjectRequest\022<\n\010requests\030\001 \003" +
+      "(\0132 .payload.v1.Upsert.ObjectRequestR\010re" +
+      "quests\032\312\001\n\006Config\0225\n\027skip_strict_exist_c" +
+      "heck\030\001 \001(\010R\024skipStrictExistCheck\0223\n\007filt" +
+      "ers\030\002 \001(\0132\031.payload.v1.Filter.ConfigR\007fi" +
+      "lters\022\034\n\ttimestamp\030\003 \001(\003R\ttimestamp\0226\n\027d" +
+      "isable_balanced_update\030\004 \001(\010R\025disableBal" +
+      "ancedUpdate\"\221\004\n\006Remove\032c\n\007Request\022%\n\002id\030" +
+      "\001 \001(\0132\025.payload.v1.Object.IDR\002id\0221\n\006conf" +
+      "ig\030\002 \001(\0132\031.payload.v1.Remove.ConfigR\006con" +
+      "fig\032F\n\014MultiRequest\0226\n\010requests\030\001 \003(\0132\032." +
+      "payload.v1.Remove.RequestR\010requests\032P\n\020T" +
+      "imestampRequest\022<\n\ntimestamps\030\001 \003(\0132\034.pa" +
+      "yload.v1.Remove.TimestampR\ntimestamps\032\250\001" +
+      "\n\tTimestamp\022\034\n\ttimestamp\030\001 \001(\003R\ttimestam" +
+      "p\022A\n\010operator\030\002 \001(\0162%.payload.v1.Remove." +
+      "Timestamp.OperatorR\010operator\":\n\010Operator" +
+      "\022\006\n\002Eq\020\000\022\006\n\002Ne\020\001\022\006\n\002Ge\020\002\022\006\n\002Gt\020\003\022\006\n\002Le\020\004" +
+      "\022\006\n\002Lt\020\005\032]\n\006Config\0225\n\027skip_strict_exist_" +
+      "check\030\001 \001(\010R\024skipStrictExistCheck\022\034\n\ttim" +
+      "estamp\030\003 \001(\003R\ttimestamp\"\022\n\005Flush\032\t\n\007Requ" +
+      "est\"\261\013\n\006Object\032u\n\rVectorRequest\022/\n\002id\030\001 " +
+      "\001(\0132\025.payload.v1.Object.IDB\010\272H\005\222\001\002\010\002R\002id" +
+      "\0223\n\007filters\030\002 \001(\0132\031.payload.v1.Filter.Co" +
+      "nfigR\007filters\0326\n\010Distance\022\016\n\002id\030\001 \001(\tR\002i" +
+      "d\022\032\n\010distance\030\002 \001(\002R\010distance\032\204\001\n\016Stream" +
+      "Distance\0229\n\010distance\030\001 \001(\0132\033.payload.v1." +
+      "Object.DistanceH\000R\010distance\022,\n\006status\030\002 " +
+      "\001(\0132\022.google.rpc.StatusH\000R\006statusB\t\n\007pay" +
+      "load\032\035\n\002ID\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\032\027\n\003I" +
+      "Ds\022\020\n\003ids\030\001 \003(\tR\003ids\032a\n\006Vector\022\027\n\002id\030\001 \001" +
+      "(\tB\007\272H\004r\002\020\001R\002id\022 \n\006vector\030\002 \003(\002B\010\272H\005\222\001\002\010" +
+      "\002R\006vector\022\034\n\ttimestamp\030\003 \001(\003R\ttimestamp\032" +
+      "C\n\020TimestampRequest\022/\n\002id\030\001 \001(\0132\025.payloa" +
+      "d.v1.Object.IDB\010\272H\005\222\001\002\010\002R\002id\032B\n\tTimestam" +
+      "p\022\027\n\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\022\034\n\ttimestamp\030" +
+      "\002 \001(\003R\ttimestamp\032>\n\007Vectors\0223\n\007vectors\030\001" +
+      " \003(\0132\031.payload.v1.Object.VectorR\007vectors" +
+      "\032|\n\014StreamVector\0223\n\006vector\030\001 \001(\0132\031.paylo" +
       "ad.v1.Object.VectorH\000R\006vector\022,\n\006status\030" +
       "\002 \001(\0132\022.google.rpc.StatusH\000R\006statusB\t\n\007p" +
-      "ayload\"E\n\007Control\032:\n\022CreateIndexRequest\022" +
-      "$\n\tpool_size\030\001 \001(\rB\007\272H\004*\002(\000R\010poolSize\"f\n" +
-      "\nDiscoverer\032X\n\007Request\022\033\n\004name\030\001 \001(\tB\007\272H" +
-      "\004r\002\020\001R\004name\022\034\n\tnamespace\030\002 \001(\tR\tnamespac" +
-      "e\022\022\n\004node\030\003 \001(\tR\004node\"\302+\n\004Info\032\200 \n\005Index" +
-      "\032u\n\005Count\022\026\n\006stored\030\001 \001(\rR\006stored\022 \n\013unc" +
-      "ommitted\030\002 \001(\rR\013uncommitted\022\032\n\010indexing\030" +
-      "\003 \001(\010R\010indexing\022\026\n\006saving\030\004 \001(\010R\006saving\032" +
-      "\337\001\n\006Detail\022A\n\006counts\030\001 \003(\0132).payload.v1." +
-      "Info.Index.Detail.CountsEntryR\006counts\022\030\n" +
-      "\007replica\030\002 \001(\rR\007replica\022\037\n\013live_agents\030\003" +
-      " \001(\rR\nliveAgents\032W\n\013CountsEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\0222\n\005value\030\002 \001(\0132\034.payload.v1.In" +
-      "fo.Index.CountR\005value:\0028\001\032J\n\004UUID\032\037\n\tCom" +
-      "mitted\022\022\n\004uuid\030\001 \001(\tR\004uuid\032!\n\013Uncommitte" +
-      "d\022\022\n\004uuid\030\001 \001(\tR\004uuid\032\235\r\n\nStatistics\022\024\n\005" +
-      "valid\030\001 \001(\010R\005valid\022\'\n\017median_indegree\030\002 " +
-      "\001(\005R\016medianIndegree\022)\n\020median_outdegree\030" +
-      "\003 \001(\005R\017medianOutdegree\0223\n\026max_number_of_" +
-      "indegree\030\004 \001(\004R\023maxNumberOfIndegree\0225\n\027m" +
-      "ax_number_of_outdegree\030\005 \001(\004R\024maxNumberO" +
-      "fOutdegree\0223\n\026min_number_of_indegree\030\006 \001" +
-      "(\004R\023minNumberOfIndegree\0225\n\027min_number_of" +
-      "_outdegree\030\007 \001(\004R\024minNumberOfOutdegree\022#" +
-      "\n\rmode_indegree\030\010 \001(\004R\014modeIndegree\022%\n\016m" +
-      "ode_outdegree\030\t \001(\004R\rmodeOutdegree\022:\n\032no" +
-      "des_skipped_for_10_edges\030\n \001(\004R\026nodesSki" +
-      "ppedFor10Edges\022L\n#nodes_skipped_for_inde" +
-      "gree_distance\030\013 \001(\004R\037nodesSkippedForInde" +
-      "greeDistance\022&\n\017number_of_edges\030\014 \001(\004R\rn" +
-      "umberOfEdges\0229\n\031number_of_indexed_object" +
-      "s\030\r \001(\004R\026numberOfIndexedObjects\022&\n\017numbe" +
-      "r_of_nodes\030\016 \001(\004R\rnumberOfNodes\022@\n\035numbe" +
-      "r_of_nodes_without_edges\030\017 \001(\004R\031numberOf" +
-      "NodesWithoutEdges\022F\n number_of_nodes_wit" +
-      "hout_indegree\030\020 \001(\004R\034numberOfNodesWithou" +
-      "tIndegree\022*\n\021number_of_objects\030\021 \001(\004R\017nu" +
-      "mberOfObjects\0229\n\031number_of_removed_objec" +
-      "ts\030\022 \001(\004R\026numberOfRemovedObjects\0229\n\031size" +
-      "_of_object_repository\030\023 \001(\004R\026sizeOfObjec" +
-      "tRepository\022N\n$size_of_refinement_object" +
-      "_repository\030\024 \001(\004R sizeOfRefinementObjec" +
-      "tRepository\0220\n\024variance_of_indegree\030\025 \001(" +
-      "\001R\022varianceOfIndegree\0222\n\025variance_of_out" +
-      "degree\030\026 \001(\001R\023varianceOfOutdegree\022(\n\020mea" +
-      "n_edge_length\030\027 \001(\001R\016meanEdgeLength\022?\n\035m" +
-      "ean_edge_length_for_10_edges\030\030 \001(\001R\030mean" +
-      "EdgeLengthFor10Edges\022K\n#mean_indegree_di" +
-      "stance_for_10_edges\030\031 \001(\001R\036meanIndegreeD" +
-      "istanceFor10Edges\022?\n\035mean_number_of_edge" +
-      "s_per_node\030\032 \001(\001R\030meanNumberOfEdgesPerNo" +
-      "de\022\037\n\013c1_indegree\030\033 \001(\001R\nc1Indegree\022\037\n\013c" +
-      "5_indegree\030\034 \001(\001R\nc5Indegree\022#\n\rc95_outd" +
-      "egree\030\035 \001(\001R\014c95Outdegree\022#\n\rc99_outdegr" +
-      "ee\030\036 \001(\001R\014c99Outdegree\022%\n\016indegree_count" +
-      "\030\037 \003(\003R\rindegreeCount\022/\n\023outdegree_histo" +
-      "gram\030  \003(\004R\022outdegreeHistogram\022-\n\022indegr" +
-      "ee_histogram\030! \003(\004R\021indegreeHistogram\032\301\001" +
-      "\n\020StatisticsDetail\022N\n\007details\030\001 \003(\01324.pa" +
-      "yload.v1.Info.Index.StatisticsDetail.Det" +
-      "ailsEntryR\007details\032]\n\014DetailsEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\0227\n\005value\030\002 \001(\0132!.payload.v1" +
-      ".Info.Index.StatisticsR\005value:\0028\001\032\257\014\n\010Pr" +
-      "operty\022\034\n\tdimension\030\001 \001(\005R\tdimension\022(\n\020" +
-      "thread_pool_size\030\002 \001(\005R\016threadPoolSize\022\037" +
-      "\n\013object_type\030\003 \001(\tR\nobjectType\022#\n\rdista" +
-      "nce_type\030\004 \001(\tR\014distanceType\022\035\n\nindex_ty" +
-      "pe\030\005 \001(\tR\tindexType\022#\n\rdatabase_type\030\006 \001" +
-      "(\tR\014databaseType\022)\n\020object_alignment\030\007 \001" +
-      "(\tR\017objectAlignment\0228\n\030path_adjustment_i" +
-      "nterval\030\010 \001(\005R\026pathAdjustmentInterval\0227\n" +
-      "\030graph_shared_memory_size\030\t \001(\005R\025graphSh" +
-      "aredMemorySize\0225\n\027tree_shared_memory_siz" +
-      "e\030\n \001(\005R\024treeSharedMemorySize\0229\n\031object_" +
-      "shared_memory_size\030\013 \001(\005R\026objectSharedMe" +
-      "morySize\022\'\n\017prefetch_offset\030\014 \001(\005R\016prefe" +
-      "tchOffset\022#\n\rprefetch_size\030\r \001(\005R\014prefet" +
-      "chSize\022%\n\016accuracy_table\030\016 \001(\tR\raccuracy" +
-      "Table\022\037\n\013search_type\030\017 \001(\tR\nsearchType\022#" +
-      "\n\rmax_magnitude\030\020 \001(\002R\014maxMagnitude\022I\n\"n" +
-      "_of_neighbors_for_insertion_order\030\021 \001(\005R" +
-      "\035nOfNeighborsForInsertionOrder\022=\n\033epsilo" +
-      "n_for_insertion_order\030\022 \001(\002R\030epsilonForI" +
-      "nsertionOrder\0224\n\026refinement_object_type\030" +
-      "\023 \001(\tR\024refinementObjectType\0221\n\024truncatio" +
-      "n_threshold\030\024 \001(\005R\023truncationThreshold\0223" +
-      "\n\026edge_size_for_creation\030\025 \001(\005R\023edgeSize" +
-      "ForCreation\022/\n\024edge_size_for_search\030\026 \001(" +
-      "\005R\021edgeSizeForSearch\022>\n\034edge_size_limit_" +
-      "for_creation\030\027 \001(\005R\030edgeSizeLimitForCrea" +
-      "tion\022@\n\034insertion_radius_coefficient\030\030 \001" +
-      "(\001R\032insertionRadiusCoefficient\022\033\n\tseed_s" +
-      "ize\030\031 \001(\005R\010seedSize\022\033\n\tseed_type\030\032 \001(\tR\010" +
-      "seedType\022=\n\033truncation_thread_pool_size\030" +
-      "\033 \001(\005R\030truncationThreadPoolSize\0225\n\027batch" +
-      "_size_for_creation\030\034 \001(\005R\024batchSizeForCr" +
-      "eation\022\035\n\ngraph_type\030\035 \001(\tR\tgraphType\0223\n" +
-      "\026dynamic_edge_size_base\030\036 \001(\005R\023dynamicEd" +
-      "geSizeBase\0223\n\026dynamic_edge_size_rate\030\037 \001" +
-      "(\005R\023dynamicEdgeSizeRate\022(\n\020build_time_li" +
-      "mit\030  \001(\002R\016buildTimeLimit\022#\n\routgoing_ed" +
-      "ge\030! \001(\005R\014outgoingEdge\022#\n\rincoming_edge\030" +
-      "\" \001(\005R\014incomingEdge\032\273\001\n\016PropertyDetail\022L" +
-      "\n\007details\030\001 \003(\01322.payload.v1.Info.Index." +
-      "PropertyDetail.DetailsEntryR\007details\032[\n\014" +
-      "DetailsEntry\022\020\n\003key\030\001 \001(\tR\003key\0225\n\005value\030" +
-      "\002 \001(\0132\037.payload.v1.Info.Index.PropertyR\005" +
-      "value:\0028\001\032\357\001\n\003Pod\022\031\n\010app_name\030\001 \001(\tR\007app" +
-      "Name\022\022\n\004name\030\002 \001(\tR\004name\022\034\n\tnamespace\030\003 " +
-      "\001(\tR\tnamespace\022\027\n\002ip\030\004 \001(\tB\007\272H\004r\002x\001R\002ip\022" +
-      "&\n\003cpu\030\005 \001(\0132\024.payload.v1.Info.CPUR\003cpu\022" +
-      "/\n\006memory\030\006 \001(\0132\027.payload.v1.Info.Memory" +
-      "R\006memory\022)\n\004node\030\007 \001(\0132\025.payload.v1.Info" +
-      ".NodeR\004node\032\350\001\n\004Node\022\022\n\004name\030\001 \001(\tR\004name" +
-      "\022#\n\rinternal_addr\030\002 \001(\tR\014internalAddr\022#\n" +
-      "\rexternal_addr\030\003 \001(\tR\014externalAddr\022&\n\003cp" +
-      "u\030\004 \001(\0132\024.payload.v1.Info.CPUR\003cpu\022/\n\006me" +
-      "mory\030\005 \001(\0132\027.payload.v1.Info.MemoryR\006mem" +
-      "ory\022)\n\004Pods\030\006 \001(\0132\025.payload.v1.Info.Pods" +
-      "R\004Pods\032\202\002\n\007Service\022\022\n\004name\030\001 \001(\tR\004name\022\035" +
-      "\n\ncluster_ip\030\002 \001(\tR\tclusterIp\022\037\n\013cluster" +
-      "_ips\030\003 \003(\tR\nclusterIps\0222\n\005ports\030\004 \003(\0132\034." +
-      "payload.v1.Info.ServicePortR\005ports\022/\n\006la" +
-      "bels\030\005 \001(\0132\027.payload.v1.Info.LabelsR\006lab" +
-      "els\022>\n\013annotations\030\006 \001(\0132\034.payload.v1.In" +
-      "fo.AnnotationsR\013annotations\0325\n\013ServicePo" +
-      "rt\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004port\030\002 \001(\005R\004po" +
-      "rt\032\200\001\n\006Labels\022;\n\006labels\030\001 \003(\0132#.payload." +
-      "v1.Info.Labels.LabelsEntryR\006labels\0329\n\013La" +
-      "belsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
-      "(\tR\005value:\0028\001\032\236\001\n\013Annotations\022O\n\013annotat" +
-      "ions\030\001 \003(\0132-.payload.v1.Info.Annotations" +
-      ".AnnotationsEntryR\013annotations\032>\n\020Annota" +
-      "tionsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 " +
-      "\001(\tR\005value:\0028\001\032K\n\003CPU\022\024\n\005limit\030\001 \001(\001R\005li" +
-      "mit\022\030\n\007request\030\002 \001(\001R\007request\022\024\n\005usage\030\003" +
-      " \001(\001R\005usage\032N\n\006Memory\022\024\n\005limit\030\001 \001(\001R\005li" +
-      "mit\022\030\n\007request\030\002 \001(\001R\007request\022\024\n\005usage\030\003" +
-      " \001(\001R\005usage\032:\n\004Pods\0222\n\004pods\030\001 \003(\0132\024.payl" +
-      "oad.v1.Info.PodB\010\272H\005\222\001\002\010\001R\004pods\032>\n\005Nodes" +
-      "\0225\n\005nodes\030\001 \003(\0132\025.payload.v1.Info.NodeB\010" +
-      "\272H\005\222\001\002\010\001R\005nodes\032J\n\010Services\022>\n\010services\030" +
-      "\001 \003(\0132\030.payload.v1.Info.ServiceB\010\272H\005\222\001\002\010" +
-      "\001R\010services\032\025\n\003IPs\022\016\n\002ip\030\001 \003(\tR\002ip\"z\n\006Mi" +
-      "rror\0320\n\006Target\022\022\n\004host\030\001 \001(\tR\004host\022\022\n\004po" +
-      "rt\030\002 \001(\rR\004port\032>\n\007Targets\0223\n\007targets\030\001 \003" +
-      "(\0132\031.payload.v1.Mirror.TargetR\007targets\"\007" +
-      "\n\005EmptyBd\n\035org.vdaas.vald.api.v1.payload" +
-      "B\013ValdPayloadP\001Z*github.com/vdaas/vald/a" +
-      "pis/grpc/v1/payload\242\002\007Payloadb\006proto3"
+      "ayload\032=\n\rReshapeVector\022\026\n\006object\030\001 \001(\014R" +
+      "\006object\022\024\n\005shape\030\002 \003(\005R\005shape\0327\n\004Blob\022\027\n" +
+      "\002id\030\001 \001(\tB\007\272H\004r\002\020\001R\002id\022\026\n\006object\030\002 \001(\014R\006" +
+      "object\032t\n\nStreamBlob\022-\n\004blob\030\001 \001(\0132\027.pay" +
+      "load.v1.Object.BlobH\000R\004blob\022,\n\006status\030\002 " +
+      "\001(\0132\022.google.rpc.StatusH\000R\006statusB\t\n\007pay" +
+      "load\032D\n\010Location\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004" +
+      "uuid\030\002 \001(\tR\004uuid\022\020\n\003ips\030\003 \003(\tR\003ips\032\204\001\n\016S" +
+      "treamLocation\0229\n\010location\030\001 \001(\0132\033.payloa" +
+      "d.v1.Object.LocationH\000R\010location\022,\n\006stat" +
+      "us\030\002 \001(\0132\022.google.rpc.StatusH\000R\006statusB\t" +
+      "\n\007payload\032F\n\tLocations\0229\n\tlocations\030\001 \003(" +
+      "\0132\033.payload.v1.Object.LocationR\tlocation" +
+      "s\032\213\001\n\004List\032\t\n\007Request\032x\n\010Response\0223\n\006vec" +
+      "tor\030\001 \001(\0132\031.payload.v1.Object.VectorH\000R\006" +
+      "vector\022,\n\006status\030\002 \001(\0132\022.google.rpc.Stat" +
+      "usH\000R\006statusB\t\n\007payload\"E\n\007Control\032:\n\022Cr" +
+      "eateIndexRequest\022$\n\tpool_size\030\001 \001(\rB\007\272H\004" +
+      "*\002(\000R\010poolSize\"f\n\nDiscoverer\032X\n\007Request\022" +
+      "\033\n\004name\030\001 \001(\tB\007\272H\004r\002\020\001R\004name\022\034\n\tnamespac" +
+      "e\030\002 \001(\tR\tnamespace\022\022\n\004node\030\003 \001(\tR\004node\"\302" +
+      "+\n\004Info\032\200 \n\005Index\032u\n\005Count\022\026\n\006stored\030\001 \001" +
+      "(\rR\006stored\022 \n\013uncommitted\030\002 \001(\rR\013uncommi" +
+      "tted\022\032\n\010indexing\030\003 \001(\010R\010indexing\022\026\n\006savi" +
+      "ng\030\004 \001(\010R\006saving\032\337\001\n\006Detail\022A\n\006counts\030\001 " +
+      "\003(\0132).payload.v1.Info.Index.Detail.Count" +
+      "sEntryR\006counts\022\030\n\007replica\030\002 \001(\rR\007replica" +
+      "\022\037\n\013live_agents\030\003 \001(\rR\nliveAgents\032W\n\013Cou" +
+      "ntsEntry\022\020\n\003key\030\001 \001(\tR\003key\0222\n\005value\030\002 \001(" +
+      "\0132\034.payload.v1.Info.Index.CountR\005value:\002" +
+      "8\001\032J\n\004UUID\032\037\n\tCommitted\022\022\n\004uuid\030\001 \001(\tR\004u" +
+      "uid\032!\n\013Uncommitted\022\022\n\004uuid\030\001 \001(\tR\004uuid\032\235" +
+      "\r\n\nStatistics\022\024\n\005valid\030\001 \001(\010R\005valid\022\'\n\017m" +
+      "edian_indegree\030\002 \001(\005R\016medianIndegree\022)\n\020" +
+      "median_outdegree\030\003 \001(\005R\017medianOutdegree\022" +
+      "3\n\026max_number_of_indegree\030\004 \001(\004R\023maxNumb" +
+      "erOfIndegree\0225\n\027max_number_of_outdegree\030" +
+      "\005 \001(\004R\024maxNumberOfOutdegree\0223\n\026min_numbe" +
+      "r_of_indegree\030\006 \001(\004R\023minNumberOfIndegree" +
+      "\0225\n\027min_number_of_outdegree\030\007 \001(\004R\024minNu" +
+      "mberOfOutdegree\022#\n\rmode_indegree\030\010 \001(\004R\014" +
+      "modeIndegree\022%\n\016mode_outdegree\030\t \001(\004R\rmo" +
+      "deOutdegree\022:\n\032nodes_skipped_for_10_edge" +
+      "s\030\n \001(\004R\026nodesSkippedFor10Edges\022L\n#nodes" +
+      "_skipped_for_indegree_distance\030\013 \001(\004R\037no" +
+      "desSkippedForIndegreeDistance\022&\n\017number_" +
+      "of_edges\030\014 \001(\004R\rnumberOfEdges\0229\n\031number_" +
+      "of_indexed_objects\030\r \001(\004R\026numberOfIndexe" +
+      "dObjects\022&\n\017number_of_nodes\030\016 \001(\004R\rnumbe" +
+      "rOfNodes\022@\n\035number_of_nodes_without_edge" +
+      "s\030\017 \001(\004R\031numberOfNodesWithoutEdges\022F\n nu" +
+      "mber_of_nodes_without_indegree\030\020 \001(\004R\034nu" +
+      "mberOfNodesWithoutIndegree\022*\n\021number_of_" +
+      "objects\030\021 \001(\004R\017numberOfObjects\0229\n\031number" +
+      "_of_removed_objects\030\022 \001(\004R\026numberOfRemov" +
+      "edObjects\0229\n\031size_of_object_repository\030\023" +
+      " \001(\004R\026sizeOfObjectRepository\022N\n$size_of_" +
+      "refinement_object_repository\030\024 \001(\004R size" +
+      "OfRefinementObjectRepository\0220\n\024variance" +
+      "_of_indegree\030\025 \001(\001R\022varianceOfIndegree\0222" +
+      "\n\025variance_of_outdegree\030\026 \001(\001R\023varianceO" +
+      "fOutdegree\022(\n\020mean_edge_length\030\027 \001(\001R\016me" +
+      "anEdgeLength\022?\n\035mean_edge_length_for_10_" +
+      "edges\030\030 \001(\001R\030meanEdgeLengthFor10Edges\022K\n" +
+      "#mean_indegree_distance_for_10_edges\030\031 \001" +
+      "(\001R\036meanIndegreeDistanceFor10Edges\022?\n\035me" +
+      "an_number_of_edges_per_node\030\032 \001(\001R\030meanN" +
+      "umberOfEdgesPerNode\022\037\n\013c1_indegree\030\033 \001(\001" +
+      "R\nc1Indegree\022\037\n\013c5_indegree\030\034 \001(\001R\nc5Ind" +
+      "egree\022#\n\rc95_outdegree\030\035 \001(\001R\014c95Outdegr" +
+      "ee\022#\n\rc99_outdegree\030\036 \001(\001R\014c99Outdegree\022" +
+      "%\n\016indegree_count\030\037 \003(\003R\rindegreeCount\022/" +
+      "\n\023outdegree_histogram\030  \003(\004R\022outdegreeHi" +
+      "stogram\022-\n\022indegree_histogram\030! \003(\004R\021ind" +
+      "egreeHistogram\032\301\001\n\020StatisticsDetail\022N\n\007d" +
+      "etails\030\001 \003(\01324.payload.v1.Info.Index.Sta" +
+      "tisticsDetail.DetailsEntryR\007details\032]\n\014D" +
+      "etailsEntry\022\020\n\003key\030\001 \001(\tR\003key\0227\n\005value\030\002" +
+      " \001(\0132!.payload.v1.Info.Index.StatisticsR" +
+      "\005value:\0028\001\032\257\014\n\010Property\022\034\n\tdimension\030\001 \001" +
+      "(\005R\tdimension\022(\n\020thread_pool_size\030\002 \001(\005R" +
+      "\016threadPoolSize\022\037\n\013object_type\030\003 \001(\tR\nob" +
+      "jectType\022#\n\rdistance_type\030\004 \001(\tR\014distanc" +
+      "eType\022\035\n\nindex_type\030\005 \001(\tR\tindexType\022#\n\r" +
+      "database_type\030\006 \001(\tR\014databaseType\022)\n\020obj" +
+      "ect_alignment\030\007 \001(\tR\017objectAlignment\0228\n\030" +
+      "path_adjustment_interval\030\010 \001(\005R\026pathAdju" +
+      "stmentInterval\0227\n\030graph_shared_memory_si" +
+      "ze\030\t \001(\005R\025graphSharedMemorySize\0225\n\027tree_" +
+      "shared_memory_size\030\n \001(\005R\024treeSharedMemo" +
+      "rySize\0229\n\031object_shared_memory_size\030\013 \001(" +
+      "\005R\026objectSharedMemorySize\022\'\n\017prefetch_of" +
+      "fset\030\014 \001(\005R\016prefetchOffset\022#\n\rprefetch_s" +
+      "ize\030\r \001(\005R\014prefetchSize\022%\n\016accuracy_tabl" +
+      "e\030\016 \001(\tR\raccuracyTable\022\037\n\013search_type\030\017 " +
+      "\001(\tR\nsearchType\022#\n\rmax_magnitude\030\020 \001(\002R\014" +
+      "maxMagnitude\022I\n\"n_of_neighbors_for_inser" +
+      "tion_order\030\021 \001(\005R\035nOfNeighborsForInserti" +
+      "onOrder\022=\n\033epsilon_for_insertion_order\030\022" +
+      " \001(\002R\030epsilonForInsertionOrder\0224\n\026refine" +
+      "ment_object_type\030\023 \001(\tR\024refinementObject" +
+      "Type\0221\n\024truncation_threshold\030\024 \001(\005R\023trun" +
+      "cationThreshold\0223\n\026edge_size_for_creatio" +
+      "n\030\025 \001(\005R\023edgeSizeForCreation\022/\n\024edge_siz" +
+      "e_for_search\030\026 \001(\005R\021edgeSizeForSearch\022>\n" +
+      "\034edge_size_limit_for_creation\030\027 \001(\005R\030edg" +
+      "eSizeLimitForCreation\022@\n\034insertion_radiu" +
+      "s_coefficient\030\030 \001(\001R\032insertionRadiusCoef" +
+      "ficient\022\033\n\tseed_size\030\031 \001(\005R\010seedSize\022\033\n\t" +
+      "seed_type\030\032 \001(\tR\010seedType\022=\n\033truncation_" +
+      "thread_pool_size\030\033 \001(\005R\030truncationThread" +
+      "PoolSize\0225\n\027batch_size_for_creation\030\034 \001(" +
+      "\005R\024batchSizeForCreation\022\035\n\ngraph_type\030\035 " +
+      "\001(\tR\tgraphType\0223\n\026dynamic_edge_size_base" +
+      "\030\036 \001(\005R\023dynamicEdgeSizeBase\0223\n\026dynamic_e" +
+      "dge_size_rate\030\037 \001(\005R\023dynamicEdgeSizeRate" +
+      "\022(\n\020build_time_limit\030  \001(\002R\016buildTimeLim" +
+      "it\022#\n\routgoing_edge\030! \001(\005R\014outgoingEdge\022" +
+      "#\n\rincoming_edge\030\" \001(\005R\014incomingEdge\032\273\001\n" +
+      "\016PropertyDetail\022L\n\007details\030\001 \003(\01322.paylo" +
+      "ad.v1.Info.Index.PropertyDetail.DetailsE" +
+      "ntryR\007details\032[\n\014DetailsEntry\022\020\n\003key\030\001 \001" +
+      "(\tR\003key\0225\n\005value\030\002 \001(\0132\037.payload.v1.Info" +
+      ".Index.PropertyR\005value:\0028\001\032\357\001\n\003Pod\022\031\n\010ap" +
+      "p_name\030\001 \001(\tR\007appName\022\022\n\004name\030\002 \001(\tR\004nam" +
+      "e\022\034\n\tnamespace\030\003 \001(\tR\tnamespace\022\027\n\002ip\030\004 " +
+      "\001(\tB\007\272H\004r\002x\001R\002ip\022&\n\003cpu\030\005 \001(\0132\024.payload." +
+      "v1.Info.CPUR\003cpu\022/\n\006memory\030\006 \001(\0132\027.paylo" +
+      "ad.v1.Info.MemoryR\006memory\022)\n\004node\030\007 \001(\0132" +
+      "\025.payload.v1.Info.NodeR\004node\032\350\001\n\004Node\022\022\n" +
+      "\004name\030\001 \001(\tR\004name\022#\n\rinternal_addr\030\002 \001(\t" +
+      "R\014internalAddr\022#\n\rexternal_addr\030\003 \001(\tR\014e" +
+      "xternalAddr\022&\n\003cpu\030\004 \001(\0132\024.payload.v1.In" +
+      "fo.CPUR\003cpu\022/\n\006memory\030\005 \001(\0132\027.payload.v1" +
+      ".Info.MemoryR\006memory\022)\n\004Pods\030\006 \001(\0132\025.pay" +
+      "load.v1.Info.PodsR\004Pods\032\202\002\n\007Service\022\022\n\004n" +
+      "ame\030\001 \001(\tR\004name\022\035\n\ncluster_ip\030\002 \001(\tR\tclu" +
+      "sterIp\022\037\n\013cluster_ips\030\003 \003(\tR\nclusterIps\022" +
+      "2\n\005ports\030\004 \003(\0132\034.payload.v1.Info.Service" +
+      "PortR\005ports\022/\n\006labels\030\005 \001(\0132\027.payload.v1" +
+      ".Info.LabelsR\006labels\022>\n\013annotations\030\006 \001(" +
+      "\0132\034.payload.v1.Info.AnnotationsR\013annotat" +
+      "ions\0325\n\013ServicePort\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "\022\n\004port\030\002 \001(\005R\004port\032\200\001\n\006Labels\022;\n\006labels" +
+      "\030\001 \003(\0132#.payload.v1.Info.Labels.LabelsEn" +
+      "tryR\006labels\0329\n\013LabelsEntry\022\020\n\003key\030\001 \001(\tR" +
+      "\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032\236\001\n\013Annot" +
+      "ations\022O\n\013annotations\030\001 \003(\0132-.payload.v1" +
+      ".Info.Annotations.AnnotationsEntryR\013anno" +
+      "tations\032>\n\020AnnotationsEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032K\n\003CPU\022\024" +
+      "\n\005limit\030\001 \001(\001R\005limit\022\030\n\007request\030\002 \001(\001R\007r" +
+      "equest\022\024\n\005usage\030\003 \001(\001R\005usage\032N\n\006Memory\022\024" +
+      "\n\005limit\030\001 \001(\001R\005limit\022\030\n\007request\030\002 \001(\001R\007r" +
+      "equest\022\024\n\005usage\030\003 \001(\001R\005usage\032:\n\004Pods\0222\n\004" +
+      "pods\030\001 \003(\0132\024.payload.v1.Info.PodB\010\272H\005\222\001\002" +
+      "\010\001R\004pods\032>\n\005Nodes\0225\n\005nodes\030\001 \003(\0132\025.paylo" +
+      "ad.v1.Info.NodeB\010\272H\005\222\001\002\010\001R\005nodes\032J\n\010Serv" +
+      "ices\022>\n\010services\030\001 \003(\0132\030.payload.v1.Info" +
+      ".ServiceB\010\272H\005\222\001\002\010\001R\010services\032\025\n\003IPs\022\016\n\002i" +
+      "p\030\001 \003(\tR\002ip\"z\n\006Mirror\0320\n\006Target\022\022\n\004host\030" +
+      "\001 \001(\tR\004host\022\022\n\004port\030\002 \001(\rR\004port\032>\n\007Targe" +
+      "ts\0223\n\007targets\030\001 \003(\0132\031.payload.v1.Mirror." +
+      "TargetR\007targets\"\007\n\005EmptyBd\n\035org.vdaas.va" +
+      "ld.api.v1.payloadB\013ValdPayloadP\001Z*github" +
+      ".com/vdaas/vald/apis/grpc/v1/payload\242\002\007P" +
+      "ayloadb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -954,8 +962,14 @@ public final class ValdPayload {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_v1_Update_MultiObjectRequest_descriptor,
         new java.lang.String[] { "Requests", });
-    internal_static_payload_v1_Update_Config_descriptor =
+    internal_static_payload_v1_Update_TimestampRequest_descriptor =
       internal_static_payload_v1_Update_descriptor.getNestedTypes().get(4);
+    internal_static_payload_v1_Update_TimestampRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_payload_v1_Update_TimestampRequest_descriptor,
+        new java.lang.String[] { "Id", "Timestamp", "Force", });
+    internal_static_payload_v1_Update_Config_descriptor =
+      internal_static_payload_v1_Update_descriptor.getNestedTypes().get(5);
     internal_static_payload_v1_Update_Config_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_payload_v1_Update_Config_descriptor,

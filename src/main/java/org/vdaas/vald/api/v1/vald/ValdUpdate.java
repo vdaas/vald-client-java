@@ -26,16 +26,19 @@ public final class ValdUpdate {
     java.lang.String[] descriptorData = {
       "\n\024v1/vald/update.proto\022\007vald.v1\032\034google/" +
       "api/annotations.proto\032\030v1/payload/payloa" +
-      "d.proto2\237\002\n\006Update\022U\n\006Update\022\032.payload.v" +
+      "d.proto2\222\003\n\006Update\022U\n\006Update\022\032.payload.v" +
       "1.Update.Request\032\033.payload.v1.Object.Loc" +
       "ation\"\022\202\323\344\223\002\014\"\007/update:\001*\022S\n\014StreamUpdat" +
       "e\022\032.payload.v1.Update.Request\032!.payload." +
       "v1.Object.StreamLocation\"\000(\0010\001\022i\n\013MultiU" +
       "pdate\022\037.payload.v1.Update.MultiRequest\032\034" +
       ".payload.v1.Object.Locations\"\033\202\323\344\223\002\025\"\020/u" +
-      "pdate/multiple:\001*BS\n\032org.vdaas.vald.api." +
-      "v1.valdB\nValdUpdateP\001Z\'github.com/vdaas/" +
-      "vald/apis/grpc/v1/valdb\006proto3"
+      "pdate/multiple:\001*\022q\n\017UpdateTimestamp\022#.p" +
+      "ayload.v1.Update.TimestampRequest\032\033.payl" +
+      "oad.v1.Object.Location\"\034\202\323\344\223\002\026\"\021/update/" +
+      "timestamp:\001*BS\n\032org.vdaas.vald.api.v1.va" +
+      "ldB\nValdUpdateP\001Z\'github.com/vdaas/vald/" +
+      "apis/grpc/v1/valdb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
