@@ -21,6 +21,12 @@ apply plugin: "signing"
 apply plugin: 'io.codearte.nexus-staging'
 apply plugin: 'build.buf'
 
+tasks.named("bufFormatApply").configure {
+    dependsOn("bufGenerate")
+    dependsOn("bufFormatCheck")
+    dependsOn("bufLint")
+}
+
 group = "org.vdaas.vald"
 archivesBaseName = "vald-client-java"
 version = "1.7.13"
