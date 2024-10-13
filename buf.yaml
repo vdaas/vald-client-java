@@ -1,0 +1,25 @@
+version: v2
+modules:
+  - path: vald/apis/proto
+    excludes:
+      - vald/apis/proto/v1/agent/sidecar
+      - vald/apis/proto/v1/discoverer
+      - vald/apis/proto/v1/manager
+deps:
+  - buf.build/bufbuild/protovalidate
+  - buf.build/googleapis/googleapis
+lint:
+  use:
+    - DEFAULT
+  except:
+    - FIELD_NOT_REQUIRED
+    - PACKAGE_NO_IMPORT_CYCLE
+  ignore:
+    - vald/apis/proto/v1
+  disallow_comment_ignores: true
+breaking:
+  use:
+    - FILE
+  except:
+    - EXTENSION_NO_DELETE
+    - FIELD_SAME_DEFAULT
