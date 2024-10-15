@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.65.1)",
+    value = "by gRPC proto compiler (version 1.67.1)",
     comments = "Source: v1/vald/update.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UpdateGrpc {
@@ -111,6 +111,37 @@ public final class UpdateGrpc {
     return getMultiUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.TimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Location> getUpdateTimestampMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateTimestamp",
+      requestType = org.vdaas.vald.api.v1.payload.Update.TimestampRequest.class,
+      responseType = org.vdaas.vald.api.v1.payload.Object.Location.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.TimestampRequest,
+      org.vdaas.vald.api.v1.payload.Object.Location> getUpdateTimestampMethod() {
+    io.grpc.MethodDescriptor<org.vdaas.vald.api.v1.payload.Update.TimestampRequest, org.vdaas.vald.api.v1.payload.Object.Location> getUpdateTimestampMethod;
+    if ((getUpdateTimestampMethod = UpdateGrpc.getUpdateTimestampMethod) == null) {
+      synchronized (UpdateGrpc.class) {
+        if ((getUpdateTimestampMethod = UpdateGrpc.getUpdateTimestampMethod) == null) {
+          UpdateGrpc.getUpdateTimestampMethod = getUpdateTimestampMethod =
+              io.grpc.MethodDescriptor.<org.vdaas.vald.api.v1.payload.Update.TimestampRequest, org.vdaas.vald.api.v1.payload.Object.Location>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateTimestamp"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Update.TimestampRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  org.vdaas.vald.api.v1.payload.Object.Location.getDefaultInstance()))
+              .setSchemaDescriptor(new UpdateMethodDescriptorSupplier("UpdateTimestamp"))
+              .build();
+        }
+      }
+    }
+    return getUpdateTimestampMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -191,6 +222,16 @@ public final class UpdateGrpc {
         io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiUpdateMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * A method to update timestamp an indexed vector.
+     * </pre>
+     */
+    default void updateTimestamp(org.vdaas.vald.api.v1.payload.Update.TimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTimestampMethod(), responseObserver);
+    }
   }
 
   /**
@@ -258,6 +299,17 @@ public final class UpdateGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiUpdateMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * A method to update timestamp an indexed vector.
+     * </pre>
+     */
+    public void updateTimestamp(org.vdaas.vald.api.v1.payload.Update.TimestampRequest request,
+        io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateTimestampMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -297,6 +349,16 @@ public final class UpdateGrpc {
     public org.vdaas.vald.api.v1.payload.Object.Locations multiUpdate(org.vdaas.vald.api.v1.payload.Update.MultiRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * A method to update timestamp an indexed vector.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Location updateTimestamp(org.vdaas.vald.api.v1.payload.Update.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateTimestampMethod(), getCallOptions(), request);
     }
   }
 
@@ -340,11 +402,23 @@ public final class UpdateGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiUpdateMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * A method to update timestamp an indexed vector.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Object.Location> updateTimestamp(
+        org.vdaas.vald.api.v1.payload.Update.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateTimestampMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_UPDATE = 0;
   private static final int METHODID_MULTI_UPDATE = 1;
-  private static final int METHODID_STREAM_UPDATE = 2;
+  private static final int METHODID_UPDATE_TIMESTAMP = 2;
+  private static final int METHODID_STREAM_UPDATE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -370,6 +444,10 @@ public final class UpdateGrpc {
         case METHODID_MULTI_UPDATE:
           serviceImpl.multiUpdate((org.vdaas.vald.api.v1.payload.Update.MultiRequest) request,
               (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Locations>) responseObserver);
+          break;
+        case METHODID_UPDATE_TIMESTAMP:
+          serviceImpl.updateTimestamp((org.vdaas.vald.api.v1.payload.Update.TimestampRequest) request,
+              (io.grpc.stub.StreamObserver<org.vdaas.vald.api.v1.payload.Object.Location>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -413,6 +491,13 @@ public final class UpdateGrpc {
               org.vdaas.vald.api.v1.payload.Update.MultiRequest,
               org.vdaas.vald.api.v1.payload.Object.Locations>(
                 service, METHODID_MULTI_UPDATE)))
+        .addMethod(
+          getUpdateTimestampMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              org.vdaas.vald.api.v1.payload.Update.TimestampRequest,
+              org.vdaas.vald.api.v1.payload.Object.Location>(
+                service, METHODID_UPDATE_TIMESTAMP)))
         .build();
   }
 
@@ -464,6 +549,7 @@ public final class UpdateGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getStreamUpdateMethod())
               .addMethod(getMultiUpdateMethod())
+              .addMethod(getUpdateTimestampMethod())
               .build();
         }
       }

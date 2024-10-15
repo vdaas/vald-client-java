@@ -26,7 +26,7 @@ public final class ValdIndex {
     java.lang.String[] descriptorData = {
       "\n\023v1/vald/index.proto\022\007vald.v1\032\034google/a" +
       "pi/annotations.proto\032\030v1/payload/payload" +
-      ".proto2\215\003\n\005Index\022Q\n\tIndexInfo\022\021.payload." +
+      ".proto2\361\003\n\005Index\022Q\n\tIndexInfo\022\021.payload." +
       "v1.Empty\032\034.payload.v1.Info.Index.Count\"\023" +
       "\202\323\344\223\002\r\022\013/index/info\022V\n\013IndexDetail\022\021.pay" +
       "load.v1.Empty\032\035.payload.v1.Info.Index.De" +
@@ -36,9 +36,11 @@ public final class ValdIndex {
       "tistics\022u\n\025IndexStatisticsDetail\022\021.paylo" +
       "ad.v1.Empty\032\'.payload.v1.Info.Index.Stat" +
       "isticsDetail\" \202\323\344\223\002\032\022\030/index/statistics/" +
-      "detailBR\n\032org.vdaas.vald.api.v1.valdB\tVa" +
-      "ldIndexP\001Z\'github.com/vdaas/vald/apis/gr" +
-      "pc/v1/valdb\006proto3"
+      "detail\022b\n\rIndexProperty\022\021.payload.v1.Emp" +
+      "ty\032%.payload.v1.Info.Index.PropertyDetai" +
+      "l\"\027\202\323\344\223\002\021\022\017/index/propertyBR\n\032org.vdaas." +
+      "vald.api.v1.valdB\tValdIndexP\001Z\'github.co" +
+      "m/vdaas/vald/apis/grpc/v1/valdb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
