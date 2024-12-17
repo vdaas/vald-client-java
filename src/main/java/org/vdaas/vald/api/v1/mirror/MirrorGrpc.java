@@ -4,11 +4,12 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Represent the mirror service.
+ * Overview
+ * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.2)",
+    value = "by gRPC proto compiler (version 1.69.0)",
     comments = "Source: v1/mirror/mirror.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MirrorGrpc {
@@ -95,14 +96,23 @@ public final class MirrorGrpc {
 
   /**
    * <pre>
-   * Represent the mirror service.
+   * Overview
+   * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.
    * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Register is the RPC to register other mirror servers.
+     * Overview
+     * Register RPC is the method to register other Vald Mirror Gateway targets.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     default void register(org.vdaas.vald.api.v1.payload.Mirror.Targets request,
@@ -114,7 +124,8 @@ public final class MirrorGrpc {
   /**
    * Base class for the server implementation of the service Mirror.
    * <pre>
-   * Represent the mirror service.
+   * Overview
+   * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.
    * </pre>
    */
   public static abstract class MirrorImplBase
@@ -128,7 +139,8 @@ public final class MirrorGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Mirror.
    * <pre>
-   * Represent the mirror service.
+   * Overview
+   * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.
    * </pre>
    */
   public static final class MirrorStub
@@ -146,7 +158,15 @@ public final class MirrorGrpc {
 
     /**
      * <pre>
-     * Register is the RPC to register other mirror servers.
+     * Overview
+     * Register RPC is the method to register other Vald Mirror Gateway targets.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     public void register(org.vdaas.vald.api.v1.payload.Mirror.Targets request,
@@ -159,7 +179,8 @@ public final class MirrorGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Mirror.
    * <pre>
-   * Represent the mirror service.
+   * Overview
+   * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.
    * </pre>
    */
   public static final class MirrorBlockingStub
@@ -177,7 +198,15 @@ public final class MirrorGrpc {
 
     /**
      * <pre>
-     * Register is the RPC to register other mirror servers.
+     * Overview
+     * Register RPC is the method to register other Vald Mirror Gateway targets.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Mirror.Targets register(org.vdaas.vald.api.v1.payload.Mirror.Targets request) {
@@ -189,7 +218,8 @@ public final class MirrorGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Mirror.
    * <pre>
-   * Represent the mirror service.
+   * Overview
+   * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.
    * </pre>
    */
   public static final class MirrorFutureStub
@@ -207,7 +237,15 @@ public final class MirrorGrpc {
 
     /**
      * <pre>
-     * Register is the RPC to register other mirror servers.
+     * Overview
+     * Register RPC is the method to register other Vald Mirror Gateway targets.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Mirror.Targets> register(
