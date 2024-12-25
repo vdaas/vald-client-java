@@ -4,11 +4,12 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
+ * Overview
  * Represent the index manager service.
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.2)",
+    value = "by gRPC proto compiler (version 1.69.0)",
     comments = "Source: v1/vald/index.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class IndexGrpc {
@@ -219,6 +220,7 @@ public final class IndexGrpc {
 
   /**
    * <pre>
+   * Overview
    * Represent the index manager service.
    * </pre>
    */
@@ -226,6 +228,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information.
      * </pre>
      */
@@ -236,6 +239,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information for each agents.
      * </pre>
      */
@@ -246,6 +250,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics.
      * </pre>
      */
@@ -256,6 +261,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics for each agents.
      * </pre>
      */
@@ -266,6 +272,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index property.
      * </pre>
      */
@@ -278,6 +285,7 @@ public final class IndexGrpc {
   /**
    * Base class for the server implementation of the service Index.
    * <pre>
+   * Overview
    * Represent the index manager service.
    * </pre>
    */
@@ -292,6 +300,7 @@ public final class IndexGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Index.
    * <pre>
+   * Overview
    * Represent the index manager service.
    * </pre>
    */
@@ -310,6 +319,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information.
      * </pre>
      */
@@ -321,6 +331,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information for each agents.
      * </pre>
      */
@@ -332,6 +343,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics.
      * </pre>
      */
@@ -343,6 +355,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics for each agents.
      * </pre>
      */
@@ -354,6 +367,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index property.
      * </pre>
      */
@@ -367,6 +381,7 @@ public final class IndexGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Index.
    * <pre>
+   * Overview
    * Represent the index manager service.
    * </pre>
    */
@@ -385,6 +400,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information.
      * </pre>
      */
@@ -395,6 +411,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information for each agents.
      * </pre>
      */
@@ -405,6 +422,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics.
      * </pre>
      */
@@ -415,6 +433,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics for each agents.
      * </pre>
      */
@@ -425,6 +444,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index property.
      * </pre>
      */
@@ -437,6 +457,7 @@ public final class IndexGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Index.
    * <pre>
+   * Overview
    * Represent the index manager service.
    * </pre>
    */
@@ -455,6 +476,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information.
      * </pre>
      */
@@ -466,6 +488,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index information for each agents.
      * </pre>
      */
@@ -477,6 +500,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics.
      * </pre>
      */
@@ -488,6 +512,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index statistics for each agents.
      * </pre>
      */
@@ -499,6 +524,7 @@ public final class IndexGrpc {
 
     /**
      * <pre>
+     * Overview
      * Represent the RPC to get the index property.
      * </pre>
      */

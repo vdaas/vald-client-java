@@ -4,11 +4,12 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Flush service provides ways to flush all indexed vectors.
+ * Overview
+ * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.2)",
+    value = "by gRPC proto compiler (version 1.69.0)",
     comments = "Source: v1/vald/flush.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FlushGrpc {
@@ -95,14 +96,24 @@ public final class FlushGrpc {
 
   /**
    * <pre>
-   * Flush service provides ways to flush all indexed vectors.
+   * Overview
+   * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
    * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * A method to flush all indexed vector.
+     * Overview
+     * Flush RPC is the method to remove all vectors.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     default void flush(org.vdaas.vald.api.v1.payload.Flush.Request request,
@@ -114,7 +125,8 @@ public final class FlushGrpc {
   /**
    * Base class for the server implementation of the service Flush.
    * <pre>
-   * Flush service provides ways to flush all indexed vectors.
+   * Overview
+   * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
    * </pre>
    */
   public static abstract class FlushImplBase
@@ -128,7 +140,8 @@ public final class FlushGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Flush.
    * <pre>
-   * Flush service provides ways to flush all indexed vectors.
+   * Overview
+   * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
    * </pre>
    */
   public static final class FlushStub
@@ -146,7 +159,16 @@ public final class FlushGrpc {
 
     /**
      * <pre>
-     * A method to flush all indexed vector.
+     * Overview
+     * Flush RPC is the method to remove all vectors.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     public void flush(org.vdaas.vald.api.v1.payload.Flush.Request request,
@@ -159,7 +181,8 @@ public final class FlushGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Flush.
    * <pre>
-   * Flush service provides ways to flush all indexed vectors.
+   * Overview
+   * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
    * </pre>
    */
   public static final class FlushBlockingStub
@@ -177,7 +200,16 @@ public final class FlushGrpc {
 
     /**
      * <pre>
-     * A method to flush all indexed vector.
+     * Overview
+     * Flush RPC is the method to remove all vectors.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     public org.vdaas.vald.api.v1.payload.Info.Index.Count flush(org.vdaas.vald.api.v1.payload.Flush.Request request) {
@@ -189,7 +221,8 @@ public final class FlushGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Flush.
    * <pre>
-   * Flush service provides ways to flush all indexed vectors.
+   * Overview
+   * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
    * </pre>
    */
   public static final class FlushFutureStub
@@ -207,7 +240,16 @@ public final class FlushGrpc {
 
     /**
      * <pre>
-     * A method to flush all indexed vector.
+     * Overview
+     * Flush RPC is the method to remove all vectors.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<org.vdaas.vald.api.v1.payload.Info.Index.Count> flush(
