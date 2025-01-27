@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: v1/vald/object.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ObjectGrpc {
@@ -186,6 +186,21 @@ public final class ObjectGrpc {
         }
       };
     return ObjectStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ObjectBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ObjectBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ObjectBlockingV2Stub>() {
+        @java.lang.Override
+        public ObjectBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ObjectBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ObjectBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -522,6 +537,157 @@ public final class ObjectGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Object.
+   * <pre>
+   * Overview
+   * Object Service is responsible for getting inserted vectors and checking whether vectors are inserted into the `vald-agent`.
+   * </pre>
+   */
+  public static final class ObjectBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ObjectBlockingV2Stub> {
+    private ObjectBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ObjectBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ObjectBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Exists RPC is the method to check that a vector exists in the `vald-agent`.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                   | how to resolve                                                                           |
+     * | :---------------- | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server. | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Requested vector's ID is empty, or some request payload is invalid.                         | Check request payload and fix request payload.                                           |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                 | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | NOT_FOUND         | Requested ID is NOT inserted.                                                                   | Send a request with an ID that is already inserted.                                      |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                   | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.ID exists(org.vdaas.vald.api.v1.payload.Object.ID request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExistsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * GetObject RPC is the method to get the metadata of a vector inserted into the `vald-agent`.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                   | how to resolve                                                                           |
+     * | :---------------- | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server. | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Requested vector's ID is empty, or some request payload is invalid.                         | Check request payload and fix request payload.                                           |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                 | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | NOT_FOUND         | Requested ID is NOT inserted.                                                                   | Send a request with an ID that is already inserted.                                      |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                   | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Vector getObject(org.vdaas.vald.api.v1.payload.Object.VectorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * StreamGetObject RPC is the method to get the metadata of multiple existing vectors using the [bidirectional streaming RPC](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc).&lt;br&gt;
+     * Using the bidirectional streaming RPC, the GetObject request can be communicated in any order between client and server.
+     * Each Upsert request and response are independent.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                   | how to resolve                                                                           |
+     * | :---------------- | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server. | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Requested vector's ID is empty, or some request payload is invalid.                         | Check request payload and fix request payload.                                           |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                 | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | NOT_FOUND         | Requested ID is NOT inserted.                                                                   | Send a request with an ID that is already inserted.                                      |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                   | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<org.vdaas.vald.api.v1.payload.Object.VectorRequest, org.vdaas.vald.api.v1.payload.Object.StreamVector>
+        streamGetObject() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getStreamGetObjectMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * A method to get all the vectors with server streaming
+     * ---
+     * Status Code
+     * TODO
+     * ---
+     * Troubleshooting
+     * TODO
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, org.vdaas.vald.api.v1.payload.Object.List.Response>
+        streamListObject(org.vdaas.vald.api.v1.payload.Object.List.Request request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getStreamListObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Represent the RPC to get the vector metadata. This RPC is mainly used for index correction process
+     * ---
+     * Status Code
+     * TODO
+     * ---
+     * Troubleshooting
+     * TODO
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Timestamp getTimestamp(org.vdaas.vald.api.v1.payload.Object.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTimestampMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Object.
    * <pre>
    * Overview
    * Object Service is responsible for getting inserted vectors and checking whether vectors are inserted into the `vald-agent`.

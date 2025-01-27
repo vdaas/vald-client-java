@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: v1/mirror/mirror.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MirrorGrpc {
@@ -62,6 +62,21 @@ public final class MirrorGrpc {
         }
       };
     return MirrorStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MirrorBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MirrorBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MirrorBlockingV2Stub>() {
+        @java.lang.Override
+        public MirrorBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MirrorBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MirrorBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -178,6 +193,45 @@ public final class MirrorGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Mirror.
+   * <pre>
+   * Overview
+   * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.
+   * </pre>
+   */
+  public static final class MirrorBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MirrorBlockingV2Stub> {
+    private MirrorBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MirrorBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MirrorBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Register RPC is the method to register other Vald Mirror Gateway targets.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Mirror.Targets register(org.vdaas.vald.api.v1.payload.Mirror.Targets request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRegisterMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Mirror.
    * <pre>
    * Overview
    * Mirror Service is responsible for providing the `Register` interface for the Vald Mirror Gateway.

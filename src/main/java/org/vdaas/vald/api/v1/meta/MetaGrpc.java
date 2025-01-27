@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: v1/meta/meta.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MetaGrpc {
@@ -123,6 +123,21 @@ public final class MetaGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MetaBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MetaBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MetaBlockingV2Stub>() {
+        @java.lang.Override
+        public MetaBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MetaBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MetaBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static MetaBlockingStub newBlockingStub(
@@ -232,6 +247,44 @@ public final class MetaGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Meta.
+   */
+  public static final class MetaBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MetaBlockingV2Stub> {
+    private MetaBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MetaBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MetaBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public org.vdaas.vald.api.v1.payload.Meta.Value get(org.vdaas.vald.api.v1.payload.Meta.Key request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.vdaas.vald.api.v1.payload.Empty set(org.vdaas.vald.api.v1.payload.Meta.KeyValue request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public org.vdaas.vald.api.v1.payload.Empty delete(org.vdaas.vald.api.v1.payload.Meta.Key request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Meta.
    */
   public static final class MetaBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<MetaBlockingStub> {

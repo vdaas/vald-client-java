@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: v1/filter/ingress/ingress_filter.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FilterGrpc {
@@ -92,6 +92,21 @@ public final class FilterGrpc {
         }
       };
     return FilterStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static FilterBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<FilterBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FilterBlockingV2Stub>() {
+        @java.lang.Override
+        public FilterBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FilterBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return FilterBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -210,6 +225,46 @@ public final class FilterGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Filter.
+   * <pre>
+   * Represent the ingress filter service.
+   * </pre>
+   */
+  public static final class FilterBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<FilterBlockingV2Stub> {
+    private FilterBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected FilterBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new FilterBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to generate the vector.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Vector genVector(org.vdaas.vald.api.v1.payload.Object.Blob request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenVectorMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Represent the RPC to filter the vector.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Vector filterVector(org.vdaas.vald.api.v1.payload.Object.Vector request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFilterVectorMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Filter.
    * <pre>
    * Represent the ingress filter service.
    * </pre>

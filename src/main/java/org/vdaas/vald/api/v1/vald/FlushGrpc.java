@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: v1/vald/flush.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FlushGrpc {
@@ -62,6 +62,21 @@ public final class FlushGrpc {
         }
       };
     return FlushStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static FlushBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<FlushBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FlushBlockingV2Stub>() {
+        @java.lang.Override
+        public FlushBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FlushBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return FlushBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -180,6 +195,46 @@ public final class FlushGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Flush.
+   * <pre>
+   * Overview
+   * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
+   * </pre>
+   */
+  public static final class FlushBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<FlushBlockingV2Stub> {
+    private FlushBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected FlushBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new FlushBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Flush RPC is the method to remove all vectors.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.Count flush(org.vdaas.vald.api.v1.payload.Flush.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFlushMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Flush.
    * <pre>
    * Overview
    * Flush Service is responsible for removing all vectors that are indexed and uncommitted in the `vald-agent`.
