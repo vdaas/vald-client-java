@@ -75,19 +75,12 @@ dependencies {
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
     implementation 'build.buf:protovalidate:0.4.2'
 
-<<<<<<< HEAD
-    testImplementation 'org.jetbrains.kotlin:kotlin-stdlib:2.0.21'
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.3'
-    testImplementation 'io.grpc:grpc-okhttp:1.68.1'
-=======
     testImplementation 'org.jetbrains.kotlin:kotlin-stdlib:2.1.10'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.12.0'
     testImplementation 'io.grpc:grpc-okhttp:1.70.0'
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
->>>>>>> bf1330d (chore(deps): bump dependency updates (#352))
 }
 
 test {
