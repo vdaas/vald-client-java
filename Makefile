@@ -21,6 +21,9 @@ LANGUAGE    = java
 PKGNAME     = $(NAME)-client-$(LANGUAGE)
 PKGREPO     = github.com/$(REPO)/$(PKGNAME)
 
+USR_LOCAL = /usr/local
+BINDIR = $(USR_LOCAL)/bin
+
 VALD_DIR    = vald
 VALD_SHA    = VALD_SHA
 VALD_CLIENT_JAVA_VERSION = version/VALD_CLIENT_JAVA_VERSION
