@@ -182,7 +182,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
@@ -317,7 +317,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
@@ -440,7 +440,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
@@ -562,7 +562,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
@@ -648,7 +648,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
