@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.0)",
+    value = "by gRPC proto compiler (version 1.73.0)",
     comments = "Source: v1/agent/core/agent.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AgentGrpc {
@@ -123,6 +123,21 @@ public final class AgentGrpc {
         }
       };
     return AgentStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AgentBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AgentBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AgentBlockingV2Stub>() {
+        @java.lang.Override
+        public AgentBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AgentBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AgentBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -262,6 +277,56 @@ public final class AgentGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Agent.
+   * <pre>
+   * Represent the agent service.
+   * </pre>
+   */
+  public static final class AgentBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AgentBlockingV2Stub> {
+    private AgentBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AgentBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AgentBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Represent the creating index RPC.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Empty createIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateIndexMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Represent the saving index RPC.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Empty saveIndex(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSaveIndexMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Represent the creating and saving index RPC.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Empty createAndSaveIndex(org.vdaas.vald.api.v1.payload.Control.CreateIndexRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAndSaveIndexMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Agent.
    * <pre>
    * Represent the agent service.
    * </pre>

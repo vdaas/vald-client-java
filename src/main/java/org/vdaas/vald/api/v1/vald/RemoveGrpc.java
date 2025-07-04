@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.0)",
+    value = "by gRPC proto compiler (version 1.73.0)",
     comments = "Source: v1/vald/remove.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RemoveGrpc {
@@ -155,6 +155,21 @@ public final class RemoveGrpc {
         }
       };
     return RemoveStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static RemoveBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RemoveBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RemoveBlockingV2Stub>() {
+        @java.lang.Override
+        public RemoveBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RemoveBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return RemoveBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -506,6 +521,163 @@ public final class RemoveGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Remove.
+   * <pre>
+   * Overview
+   * Remove Service is responsible for removing vectors indexed in the `vald-agent`.
+   * </pre>
+   */
+  public static final class RemoveBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<RemoveBlockingV2Stub> {
+    private RemoveBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RemoveBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new RemoveBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Remove RPC is the method to remove a single vector.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  10  | ABORTED           |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                   | how to resolve                                                                           |
+     * | :---------------- | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server. | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Requested vector's ID is empty, or some request payload is invalid.                         | Check request payload and fix request payload.                                           |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                 | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | NOT_FOUND         | Requested ID is NOT inserted.                                                                   | Send a request with an ID that is already inserted.                                      |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                   | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Location remove(org.vdaas.vald.api.v1.payload.Remove.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * RemoveByTimestamp RPC is the method to remove vectors based on timestamp.
+     * &lt;div class="notice"&gt;
+     * In the TimestampRequest message, the 'timestamps' field is repeated, allowing the inclusion of multiple Timestamp.&lt;br&gt;
+     * When multiple Timestamps are provided, it results in an `AND` condition, enabling the realization of deletions with specified ranges.&lt;br&gt;
+     * This design allows for versatile deletion operations, facilitating tasks such as removing data within a specific time range.
+     * &lt;/div&gt;
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                   | how to resolve                                                                                                       |
+     * | :---------------- | :---------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server. | Check the code, especially around timeout and connection management, and fix if needed.                              |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                 | Check the gRPC timeout setting on both the client and server sides and fix it if needed.                             |
+     * | NOT_FOUND         | No vectors in the system match the specified timestamp conditions.                              | Check whether vectors matching the specified timestamp conditions exist in the system, and fix conditions if needed. |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                   | Check target Vald cluster first and check network route including ingress as second.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Locations removeByTimestamp(org.vdaas.vald.api.v1.payload.Remove.TimestampRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveByTimestampMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * A method to remove multiple indexed vectors by bidirectional streaming.
+     * StreamRemove RPC is the method to remove multiple vectors using the [bidirectional streaming RPC](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc).&lt;br&gt;
+     * Using the bidirectional streaming RPC, the remove request can be communicated in any order between client and server.
+     * Each Remove request and response are independent.
+     * It's the recommended method to remove a large number of vectors.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  10  | ABORTED           |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     *   The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                   | how to resolve                                                                           |
+     * | :---------------- | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server. | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Requested vector's ID is empty, or some request payload is invalid.                         | Check request payload and fix request payload.                                           |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                 | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | NOT_FOUND         | Requested ID is NOT inserted.                                                                   | Send a request with an ID that is already inserted.                                      |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                   | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<org.vdaas.vald.api.v1.payload.Remove.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation>
+        streamRemove() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getStreamRemoveMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * MultiRemove is the method to remove multiple vectors in **1** request.
+     * &lt;div class="notice"&gt;
+     * gRPC has a message size limitation.&lt;br&gt;
+     * Please be careful that the size of the request exceeds the limit.
+     * &lt;/div&gt;
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  5   | NOT_FOUND         |
+     * |  10  | ABORTED           |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                   | how to resolve                                                                           |
+     * | :---------------- | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server. | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Requested vector's ID is empty, or some request payload is invalid.                         | Check request payload and fix request payload.                                           |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                 | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | NOT_FOUND         | Requested ID is NOT inserted.                                                                   | Send a request with an ID that is already inserted.                                      |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                   | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Locations multiRemove(org.vdaas.vald.api.v1.payload.Remove.MultiRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMultiRemoveMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Remove.
    * <pre>
    * Overview
    * Remove Service is responsible for removing vectors indexed in the `vald-agent`.

@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.0)",
+    value = "by gRPC proto compiler (version 1.73.0)",
     comments = "Source: v1/vald/insert.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class InsertGrpc {
@@ -127,6 +127,21 @@ public final class InsertGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static InsertBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<InsertBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<InsertBlockingV2Stub>() {
+        @java.lang.Override
+        public InsertBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new InsertBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return InsertBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static InsertBlockingStub newBlockingStub(
@@ -167,7 +182,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
@@ -302,7 +317,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
@@ -409,6 +424,128 @@ public final class InsertGrpc {
    * Insert Service is responsible for inserting new vectors into the `vald-agent`.
    * </pre>
    */
+  public static final class InsertBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<InsertBlockingV2Stub> {
+    private InsertBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected InsertBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new InsertBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Insert RPC is the method to add a new single vector.
+     * ---
+     * Status Code
+     * | 0    | OK                |
+     * | 1    | CANCELLED         |
+     * | 3    | INVALID_ARGUMENT  |
+     * | 4    | DEADLINE_EXCEEDED |
+     * | 5    | NOT_FOUND         |
+     * | 13   | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                                                                       | how to resolve                                                                           |
+     * | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server.                                                     | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Dimension of the request vector is NOT the same as Vald Agent's config, the requested vector's ID is empty, or some request payload is invalid. | Check Agent config, request payload, and fix request payload or Agent config.            |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                                                                     | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | ALREADY_EXISTS    | Request ID is already inserted.                                                                                                                     | Change request ID.                                                                       |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                                                                       | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Location insert(org.vdaas.vald.api.v1.payload.Insert.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInsertMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * StreamInsert RPC is the method to add new multiple vectors using the [bidirectional streaming RPC](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc).&lt;br&gt;
+     * Using the bidirectional streaming RPC, the insert request can be communicated in any order between client and server.
+     * Each Insert request and response are independent.
+     * It's the recommended method to insert a large number of vectors.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  10  | ABORTED           |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                                                                       | how to resolve                                                                           |
+     * | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server.                                                     | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Dimension of the request vector is NOT the same as Vald Agent's config, the requested vector's ID is empty, or some request payload is invalid. | Check Agent config, request payload, and fix request payload or Agent config.            |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                                                                     | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | ALREADY_EXISTS    | Request ID is already inserted.                                                                                                                     | Change request ID.                                                                       |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                                                                       | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<org.vdaas.vald.api.v1.payload.Insert.Request, org.vdaas.vald.api.v1.payload.Object.StreamLocation>
+        streamInsert() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getStreamInsertMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * MultiInsert RPC is the method to add multiple new vectors in **1** request.
+     * &lt;div class="notice"&gt;
+     * gRPC has a message size limitation.&lt;br&gt;
+     * Please be careful that the size of the request exceeds the limit.
+     * &lt;/div&gt;
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  10  | ABORTED           |
+     * |  13  | INTERNAL          |
+     * ---
+     * Troubleshooting
+     * The request process may not be completed when the response code is NOT `0 (OK)`.
+     * Here are some common reasons and how to resolve each error.
+     * | name              | common reason                                                                                                                                       | how to resolve                                                                           |
+     * | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+     * | CANCELLED         | Executed cancel() of rpc from client/server-side or network problems between client and server.                                                     | Check the code, especially around timeout and connection management, and fix if needed.  |
+     * | INVALID_ARGUMENT  | The Dimension of the request vector is NOT the same as Vald Agent's config, the requested vector's ID is empty, or some request payload is invalid. | Check Agent config, request payload, and fix request payload or Agent config.            |
+     * | DEADLINE_EXCEEDED | The RPC timeout setting is too short on the client/server side.                                                                                     | Check the gRPC timeout setting on both the client and server sides and fix it if needed. |
+     * | ALREADY_EXISTS    | Request ID is already inserted.                                                                                                                     | Change request ID.                                                                       |
+     * | INTERNAL          | Target Vald cluster or network route has some critical error.                                                                                       | Check target Vald cluster first and check network route including ingress as second.     |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Locations multiInsert(org.vdaas.vald.api.v1.payload.Insert.MultiRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMultiInsertMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Insert.
+   * <pre>
+   * Overview
+   * Insert Service is responsible for inserting new vectors into the `vald-agent`.
+   * </pre>
+   */
   public static final class InsertBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<InsertBlockingStub> {
     private InsertBlockingStub(
@@ -425,7 +562,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |
@@ -511,7 +648,7 @@ public final class InsertGrpc {
     /**
      * <pre>
      * Overview
-     * Inset RPC is the method to add a new single vector.
+     * Insert RPC is the method to add a new single vector.
      * ---
      * Status Code
      * | 0    | OK                |

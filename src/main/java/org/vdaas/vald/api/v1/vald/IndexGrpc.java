@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.0)",
+    value = "by gRPC proto compiler (version 1.73.0)",
     comments = "Source: v1/vald/index.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class IndexGrpc {
@@ -186,6 +186,21 @@ public final class IndexGrpc {
         }
       };
     return IndexStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static IndexBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<IndexBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IndexBlockingV2Stub>() {
+        @java.lang.Override
+        public IndexBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IndexBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return IndexBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -380,6 +395,82 @@ public final class IndexGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Index.
+   * <pre>
+   * Overview
+   * Represent the index manager service.
+   * </pre>
+   */
+  public static final class IndexBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<IndexBlockingV2Stub> {
+    private IndexBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected IndexBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new IndexBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Represent the RPC to get the index information.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.Count indexInfo(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIndexInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Represent the RPC to get the index information for each agents.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.Detail indexDetail(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIndexDetailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Represent the RPC to get the index statistics.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.Statistics indexStatistics(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIndexStatisticsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Represent the RPC to get the index statistics for each agents.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.StatisticsDetail indexStatisticsDetail(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIndexStatisticsDetailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * Represent the RPC to get the index property.
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Info.Index.PropertyDetail indexProperty(org.vdaas.vald.api.v1.payload.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIndexPropertyMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Index.
    * <pre>
    * Overview
    * Represent the index manager service.

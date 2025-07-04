@@ -10,7 +10,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.0)",
+    value = "by gRPC proto compiler (version 1.73.0)",
     comments = "Source: v1/vald/filter.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FilterGrpc {
@@ -404,6 +404,21 @@ public final class FilterGrpc {
         }
       };
     return FilterStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static FilterBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<FilterBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FilterBlockingV2Stub>() {
+        @java.lang.Override
+        public FilterBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FilterBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return FilterBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -994,6 +1009,284 @@ public final class FilterGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Filter.
+   * <pre>
+   * Overview
+   * Filter Server is responsible for providing insert, update, upsert and search interface for `Vald Filter Gateway`.
+   * Vald Filter Gateway forward user request to user-defined ingress/egress filter components allowing user to run custom logic.
+   * </pre>
+   */
+  public static final class FilterBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<FilterBlockingV2Stub> {
+    private FilterBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected FilterBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new FilterBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * SearchObject RPC is the method to search object(s) similar to request object.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Search.Response searchObject(org.vdaas.vald.api.v1.payload.Search.ObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSearchObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * StreamSearchObject RPC is the method to search vectors with multi queries(objects) using the [bidirectional streaming RPC](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc).&lt;br&gt;
+     * By using the bidirectional streaming RPC, the search request can be communicated in any order between client and server.
+     * Each Search request and response are independent.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Search.Responses multiSearchObject(org.vdaas.vald.api.v1.payload.Search.MultiObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMultiSearchObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * MultiSearchObject RPC is the method to search objects with multiple objects in **1** request.
+     * &lt;div class="notice"&gt;
+     * gRPC has a message size limitation.&lt;br&gt;
+     * Please be careful that the size of the request exceeds the limit.
+     * &lt;/div&gt;
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<org.vdaas.vald.api.v1.payload.Search.ObjectRequest, org.vdaas.vald.api.v1.payload.Search.StreamResponse>
+        streamSearchObject() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getStreamSearchObjectMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * InsertObject RPC is the method to insert object through Vald Filter Gateway.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Location insertObject(org.vdaas.vald.api.v1.payload.Insert.ObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInsertObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * StreamInsertObject RPC is the method to add new multiple object using the [bidirectional streaming RPC](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc).
+     * By using the bidirectional streaming RPC, the insert request can be communicated in any order between client and server.
+     * Each Insert request and response are independent.
+     * It's the recommended method to insert a large number of objects.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<org.vdaas.vald.api.v1.payload.Insert.ObjectRequest, org.vdaas.vald.api.v1.payload.Object.StreamLocation>
+        streamInsertObject() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getStreamInsertObjectMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * MultiInsertObject RPC is the method to add multiple new objects in **1** request.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Locations multiInsertObject(org.vdaas.vald.api.v1.payload.Insert.MultiObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMultiInsertObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * UpdateObject RPC is the method to update a single vector.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Location updateObject(org.vdaas.vald.api.v1.payload.Update.ObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * StreamUpdateObject RPC is the method to update multiple objects using the [bidirectional streaming RPC](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc).&lt;br&gt;
+     * By using the bidirectional streaming RPC, the update request can be communicated in any order between client and server.
+     * Each Update request and response are independent.
+     * It's the recommended method to update the large amount of objects.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<org.vdaas.vald.api.v1.payload.Update.ObjectRequest, org.vdaas.vald.api.v1.payload.Object.StreamLocation>
+        streamUpdateObject() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getStreamUpdateObjectMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * MultiUpdateObject is the method to update multiple objects in **1** request.
+     * &lt;div class="notice"&gt;
+     * gRPC has the message size limitation.&lt;br&gt;
+     * Please be careful that the size of the request exceed the limit.
+     * &lt;/div&gt;
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Locations multiUpdateObject(org.vdaas.vald.api.v1.payload.Update.MultiObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMultiUpdateObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * UpsertObject RPC is the method to update a single object and add a new single object.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Location upsertObject(org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpsertObjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * UpsertObject RPC is the method to update a single object and add a new single object.
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<org.vdaas.vald.api.v1.payload.Upsert.ObjectRequest, org.vdaas.vald.api.v1.payload.Object.StreamLocation>
+        streamUpsertObject() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getStreamUpsertObjectMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Overview
+     * MultiUpsertObject is the method to update existing multiple objects and add new multiple objects in **1** request.
+     * &lt;div class="notice"&gt;
+     * gRPC has a message size limitation.&lt;br&gt;
+     * Please be careful that the size of the request exceeds the limit.
+     * &lt;/div&gt;
+     * ---
+     * Status Code
+     * |  0   | OK                |
+     * |  1   | CANCELLED         |
+     * |  3   | INVALID_ARGUMENT  |
+     * |  4   | DEADLINE_EXCEEDED |
+     * |  6   | ALREADY_EXISTS    |
+     * |  13  | INTERNAL          |
+     * </pre>
+     */
+    public org.vdaas.vald.api.v1.payload.Object.Locations multiUpsertObject(org.vdaas.vald.api.v1.payload.Upsert.MultiObjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMultiUpsertObjectMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Filter.
    * <pre>
    * Overview
    * Filter Server is responsible for providing insert, update, upsert and search interface for `Vald Filter Gateway`.
