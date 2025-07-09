@@ -36,8 +36,8 @@ def isDevBuild
 def isSnapshotBuild
 def isReleaseBuild
 def sonatypeRepositoryUrl
-def mavenCentralUsername = System.getenv('MAVEN_CENTRAL_USERNAME')
-def mavenCentralPassword = System.getenv('MAVEN_CENTRAL_PASSWORD')
+def sonatypeUsername = System.getenv('SONATYPE_USERNAME')
+def sonatypePassword = System.getenv('SONATYPE_PASSWORD')
 def protoDepsPath = "proto_deps"
 
 if (hasProperty("release")) {
@@ -154,8 +154,8 @@ publishing {
         maven {
             url = sonatypeRepositoryUrl
             credentials {
-                username = mavenCentralUsername
-                password = mavenCentralPassword
+                username = sonatypeUsername
+                password = sonatypePassword
             }
         }
     }

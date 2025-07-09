@@ -22,6 +22,6 @@ sonatypeUsername=${SONATYPE_USERNAME}
 sonatypePassword=${SONATYPE_PASSWORD}
 nexusUsername=${SONATYPE_USERNAME}
 nexusPassword=${SONATYPE_PASSWORD}
-mavenCentralUsername=${MAVEN_CENTRAL_USERNAME}
-mavenCentralPassword=${MAVEN_CENTRAL_PASSWORD}
+mavenCentralUsername=${SONATYPE_USERNAME}
+mavenCentralPassword=${SONATYPE_PASSWORD}
 EOF
