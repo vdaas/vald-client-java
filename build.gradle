@@ -150,8 +150,8 @@ publishing {
             name = "GitHubPackages"
             url = "https://maven.pkg.github.com/vdaas/vald-client-java"
             credentials {
-                username = System.getenv("CI_USER")
-                password = System.getenv("CI_TOKEN")
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
