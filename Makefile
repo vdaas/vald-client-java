@@ -194,9 +194,7 @@ ci/package/prepare:
 .PHONY: ci/package/publish
 ## publich packages
 ci/package/publish: build
-	./gradlew publishToSonatype --stacktrace
-	sleep 120
-	./gradlew closeAndReleaseSonatypeStagingRepository --stacktrace
+	./gradlew -Prelease --stacktrace publishToSonatype closeAndReleaseSonatypeStagingRepository
 
 .PHONY: version/java
 ## Print Java version
