@@ -5896,6 +5896,16 @@ private static final long serialVersionUID = 0L;
      * @return The nprobe.
      */
     int getNprobe();
+
+    /**
+     * <pre>
+     * Search edge size
+     * </pre>
+     *
+     * <code>int32 edge_size = 12 [json_name = "edgeSize"];</code>
+     * @return The edgeSize.
+     */
+    int getEdgeSize();
   }
   /**
    * <pre>
@@ -6216,6 +6226,21 @@ private static final long serialVersionUID = 0L;
       return nprobe_;
     }
 
+    public static final int EDGE_SIZE_FIELD_NUMBER = 12;
+    private int edgeSize_ = 0;
+    /**
+     * <pre>
+     * Search edge size
+     * </pre>
+     *
+     * <code>int32 edge_size = 12 [json_name = "edgeSize"];</code>
+     * @return The edgeSize.
+     */
+    @java.lang.Override
+    public int getEdgeSize() {
+      return edgeSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6262,6 +6287,9 @@ private static final long serialVersionUID = 0L;
       }
       if (nprobe_ != 0) {
         output.writeUInt32(11, nprobe_);
+      }
+      if (edgeSize_ != 0) {
+        output.writeInt32(12, edgeSize_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -6315,6 +6343,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, nprobe_);
       }
+      if (edgeSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(12, edgeSize_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6362,6 +6394,8 @@ private static final long serialVersionUID = 0L;
       }
       if (getNprobe()
           != other.getNprobe()) return false;
+      if (getEdgeSize()
+          != other.getEdgeSize()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6404,6 +6438,8 @@ private static final long serialVersionUID = 0L;
       }
       hash = (37 * hash) + NPROBE_FIELD_NUMBER;
       hash = (53 * hash) + getNprobe();
+      hash = (37 * hash) + EDGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getEdgeSize();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6570,6 +6606,7 @@ private static final long serialVersionUID = 0L;
           ratioBuilder_ = null;
         }
         nprobe_ = 0;
+        edgeSize_ = 0;
         return this;
       }
 
@@ -6645,6 +6682,9 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.nprobe_ = nprobe_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.edgeSize_ = edgeSize_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -6727,6 +6767,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getNprobe() != 0) {
           setNprobe(other.getNprobe());
+        }
+        if (other.getEdgeSize() != 0) {
+          setEdgeSize(other.getEdgeSize());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -6815,6 +6858,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000400;
                 break;
               } // case 88
+              case 96: {
+                edgeSize_ = input.readInt32();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7728,6 +7776,50 @@ private static final long serialVersionUID = 0L;
       public Builder clearNprobe() {
         bitField0_ = (bitField0_ & ~0x00000400);
         nprobe_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int edgeSize_ ;
+      /**
+       * <pre>
+       * Search edge size
+       * </pre>
+       *
+       * <code>int32 edge_size = 12 [json_name = "edgeSize"];</code>
+       * @return The edgeSize.
+       */
+      @java.lang.Override
+      public int getEdgeSize() {
+        return edgeSize_;
+      }
+      /**
+       * <pre>
+       * Search edge size
+       * </pre>
+       *
+       * <code>int32 edge_size = 12 [json_name = "edgeSize"];</code>
+       * @param value The edgeSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEdgeSize(int value) {
+
+        edgeSize_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Search edge size
+       * </pre>
+       *
+       * <code>int32 edge_size = 12 [json_name = "edgeSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEdgeSize() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        edgeSize_ = 0;
         onChanged();
         return this;
       }

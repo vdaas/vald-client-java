@@ -2902,51 +2902,51 @@ private static final long serialVersionUID = 0L;
        * The timestamp is equal to the specified value in the request.
        * </pre>
        *
-       * <code>Eq = 0;</code>
+       * <code>EQ = 0;</code>
        */
-      Eq(0),
+      EQ(0),
       /**
        * <pre>
        * The timestamp is not equal to the specified value in the request.
        * </pre>
        *
-       * <code>Ne = 1;</code>
+       * <code>NE = 1;</code>
        */
-      Ne(1),
+      NE(1),
       /**
        * <pre>
        * The timestamp is greater than or equal to the specified value in the
        * request.
        * </pre>
        *
-       * <code>Ge = 2;</code>
+       * <code>GE = 2;</code>
        */
-      Ge(2),
+      GE(2),
       /**
        * <pre>
        * The timestamp is greater than the specified value in the request.
        * </pre>
        *
-       * <code>Gt = 3;</code>
+       * <code>GT = 3;</code>
        */
-      Gt(3),
+      GT(3),
       /**
        * <pre>
        * The timestamp is less than or equal to the specified value in the
        * request.
        * </pre>
        *
-       * <code>Le = 4;</code>
+       * <code>LE = 4;</code>
        */
-      Le(4),
+      LE(4),
       /**
        * <pre>
        * The timestamp is less than the specified value in the request.
        * </pre>
        *
-       * <code>Lt = 5;</code>
+       * <code>LT = 5;</code>
        */
-      Lt(5),
+      LT(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -2955,51 +2955,51 @@ private static final long serialVersionUID = 0L;
        * The timestamp is equal to the specified value in the request.
        * </pre>
        *
-       * <code>Eq = 0;</code>
+       * <code>EQ = 0;</code>
        */
-      public static final int Eq_VALUE = 0;
+      public static final int EQ_VALUE = 0;
       /**
        * <pre>
        * The timestamp is not equal to the specified value in the request.
        * </pre>
        *
-       * <code>Ne = 1;</code>
+       * <code>NE = 1;</code>
        */
-      public static final int Ne_VALUE = 1;
+      public static final int NE_VALUE = 1;
       /**
        * <pre>
        * The timestamp is greater than or equal to the specified value in the
        * request.
        * </pre>
        *
-       * <code>Ge = 2;</code>
+       * <code>GE = 2;</code>
        */
-      public static final int Ge_VALUE = 2;
+      public static final int GE_VALUE = 2;
       /**
        * <pre>
        * The timestamp is greater than the specified value in the request.
        * </pre>
        *
-       * <code>Gt = 3;</code>
+       * <code>GT = 3;</code>
        */
-      public static final int Gt_VALUE = 3;
+      public static final int GT_VALUE = 3;
       /**
        * <pre>
        * The timestamp is less than or equal to the specified value in the
        * request.
        * </pre>
        *
-       * <code>Le = 4;</code>
+       * <code>LE = 4;</code>
        */
-      public static final int Le_VALUE = 4;
+      public static final int LE_VALUE = 4;
       /**
        * <pre>
        * The timestamp is less than the specified value in the request.
        * </pre>
        *
-       * <code>Lt = 5;</code>
+       * <code>LT = 5;</code>
        */
-      public static final int Lt_VALUE = 5;
+      public static final int LT_VALUE = 5;
 
 
       public final int getNumber() {
@@ -3026,12 +3026,12 @@ private static final long serialVersionUID = 0L;
        */
       public static Operator forNumber(int value) {
         switch (value) {
-          case 0: return Eq;
-          case 1: return Ne;
-          case 2: return Ge;
-          case 3: return Gt;
-          case 4: return Le;
-          case 5: return Lt;
+          case 0: return EQ;
+          case 1: return NE;
+          case 2: return GE;
+          case 3: return GT;
+          case 4: return LE;
+          case 5: return LT;
           default: return null;
         }
       }
@@ -3146,7 +3146,7 @@ private static final long serialVersionUID = 0L;
       if (timestamp_ != 0L) {
         output.writeInt64(1, timestamp_);
       }
-      if (operator_ != org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.Eq.getNumber()) {
+      if (operator_ != org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.EQ.getNumber()) {
         output.writeEnum(2, operator_);
       }
       getUnknownFields().writeTo(output);
@@ -3162,7 +3162,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, timestamp_);
       }
-      if (operator_ != org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.Eq.getNumber()) {
+      if (operator_ != org.vdaas.vald.api.v1.payload.Remove.Timestamp.Operator.EQ.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, operator_);
       }

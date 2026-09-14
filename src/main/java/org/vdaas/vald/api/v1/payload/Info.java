@@ -7675,6 +7675,12 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
        * @return The incomingEdge.
        */
       int getIncomingEdge();
+
+      /**
+       * <code>float epsilon_for_creation = 35 [json_name = "epsilonForCreation"];</code>
+       * @return The epsilonForCreation.
+       */
+      float getEpsilonForCreation();
     }
     /**
      * <pre>
@@ -8379,6 +8385,17 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
         return incomingEdge_;
       }
 
+      public static final int EPSILON_FOR_CREATION_FIELD_NUMBER = 35;
+      private float epsilonForCreation_ = 0F;
+      /**
+       * <code>float epsilon_for_creation = 35 [json_name = "epsilonForCreation"];</code>
+       * @return The epsilonForCreation.
+       */
+      @java.lang.Override
+      public float getEpsilonForCreation() {
+        return epsilonForCreation_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -8494,6 +8511,9 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
         }
         if (incomingEdge_ != 0) {
           output.writeInt32(34, incomingEdge_);
+        }
+        if (java.lang.Float.floatToRawIntBits(epsilonForCreation_) != 0) {
+          output.writeFloat(35, epsilonForCreation_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -8630,6 +8650,10 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(34, incomingEdge_);
         }
+        if (java.lang.Float.floatToRawIntBits(epsilonForCreation_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(35, epsilonForCreation_);
+        }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
@@ -8717,6 +8741,9 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
             != other.getOutgoingEdge()) return false;
         if (getIncomingEdge()
             != other.getIncomingEdge()) return false;
+        if (java.lang.Float.floatToIntBits(getEpsilonForCreation())
+            != java.lang.Float.floatToIntBits(
+                other.getEpsilonForCreation())) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -8800,6 +8827,9 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
         hash = (53 * hash) + getOutgoingEdge();
         hash = (37 * hash) + INCOMING_EDGE_FIELD_NUMBER;
         hash = (53 * hash) + getIncomingEdge();
+        hash = (37 * hash) + EPSILON_FOR_CREATION_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getEpsilonForCreation());
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -8970,6 +9000,7 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
           buildTimeLimit_ = 0F;
           outgoingEdge_ = 0;
           incomingEdge_ = 0;
+          epsilonForCreation_ = 0F;
           return this;
         }
 
@@ -9109,6 +9140,9 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
           }
           if (((from_bitField1_ & 0x00000002) != 0)) {
             result.incomingEdge_ = incomingEdge_;
+          }
+          if (((from_bitField1_ & 0x00000004) != 0)) {
+            result.epsilonForCreation_ = epsilonForCreation_;
           }
         }
 
@@ -9277,6 +9311,9 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
           }
           if (other.getIncomingEdge() != 0) {
             setIncomingEdge(other.getIncomingEdge());
+          }
+          if (other.getEpsilonForCreation() != 0F) {
+            setEpsilonForCreation(other.getEpsilonForCreation());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -9474,6 +9511,11 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
                   bitField1_ |= 0x00000002;
                   break;
                 } // case 272
+                case 285: {
+                  epsilonForCreation_ = input.readFloat();
+                  bitField1_ |= 0x00000004;
+                  break;
+                } // case 285
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -10979,6 +11021,38 @@ org.vdaas.vald.api.v1.payload.Info.Index.Statistics defaultValue) {
           onChanged();
           return this;
         }
+
+        private float epsilonForCreation_ ;
+        /**
+         * <code>float epsilon_for_creation = 35 [json_name = "epsilonForCreation"];</code>
+         * @return The epsilonForCreation.
+         */
+        @java.lang.Override
+        public float getEpsilonForCreation() {
+          return epsilonForCreation_;
+        }
+        /**
+         * <code>float epsilon_for_creation = 35 [json_name = "epsilonForCreation"];</code>
+         * @param value The epsilonForCreation to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEpsilonForCreation(float value) {
+
+          epsilonForCreation_ = value;
+          bitField1_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>float epsilon_for_creation = 35 [json_name = "epsilonForCreation"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEpsilonForCreation() {
+          bitField1_ = (bitField1_ & ~0x00000004);
+          epsilonForCreation_ = 0F;
+          onChanged();
+          return this;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12152,6 +12226,1760 @@ org.vdaas.vald.api.v1.payload.Info.Index.Property defaultValue) {
 
     @java.lang.Override
     public org.vdaas.vald.api.v1.payload.Info.Index getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResourceStatsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Info.ResourceStats)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+     * @return The ip.
+     */
+    java.lang.String getIp();
+    /**
+     * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for ip.
+     */
+    com.google.protobuf.ByteString
+        getIpBytes();
+
+    /**
+     * <pre>
+     * Container resource usage statistics
+     * </pre>
+     *
+     * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+     * @return Whether the cgroupStats field is set.
+     */
+    boolean hasCgroupStats();
+    /**
+     * <pre>
+     * Container resource usage statistics
+     * </pre>
+     *
+     * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+     * @return The cgroupStats.
+     */
+    org.vdaas.vald.api.v1.payload.Info.CgroupStats getCgroupStats();
+    /**
+     * <pre>
+     * Container resource usage statistics
+     * </pre>
+     *
+     * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+     */
+    org.vdaas.vald.api.v1.payload.Info.CgroupStatsOrBuilder getCgroupStatsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Represent the resource stats
+   * </pre>
+   *
+   * Protobuf type {@code payload.v1.Info.ResourceStats}
+   */
+  public static final class ResourceStats extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Info.ResourceStats)
+      ResourceStatsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceStats.newBuilder() to construct.
+    private ResourceStats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceStats() {
+      name_ = "";
+      ip_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceStats();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_ResourceStats_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_ResourceStats_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Info.ResourceStats.class, org.vdaas.vald.api.v1.payload.Info.ResourceStats.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ip_ = "";
+    /**
+     * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+     * @return The ip.
+     */
+    @java.lang.Override
+    public java.lang.String getIp() {
+      java.lang.Object ref = ip_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ip_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for ip.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIpBytes() {
+      java.lang.Object ref = ip_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ip_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CGROUP_STATS_FIELD_NUMBER = 3;
+    private org.vdaas.vald.api.v1.payload.Info.CgroupStats cgroupStats_;
+    /**
+     * <pre>
+     * Container resource usage statistics
+     * </pre>
+     *
+     * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+     * @return Whether the cgroupStats field is set.
+     */
+    @java.lang.Override
+    public boolean hasCgroupStats() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Container resource usage statistics
+     * </pre>
+     *
+     * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+     * @return The cgroupStats.
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Info.CgroupStats getCgroupStats() {
+      return cgroupStats_ == null ? org.vdaas.vald.api.v1.payload.Info.CgroupStats.getDefaultInstance() : cgroupStats_;
+    }
+    /**
+     * <pre>
+     * Container resource usage statistics
+     * </pre>
+     *
+     * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+     */
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Info.CgroupStatsOrBuilder getCgroupStatsOrBuilder() {
+      return cgroupStats_ == null ? org.vdaas.vald.api.v1.payload.Info.CgroupStats.getDefaultInstance() : cgroupStats_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ip_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ip_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(3, getCgroupStats());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ip_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ip_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCgroupStats());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Info.ResourceStats)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Info.ResourceStats other = (org.vdaas.vald.api.v1.payload.Info.ResourceStats) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getIp()
+          .equals(other.getIp())) return false;
+      if (hasCgroupStats() != other.hasCgroupStats()) return false;
+      if (hasCgroupStats()) {
+        if (!getCgroupStats()
+            .equals(other.getCgroupStats())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + IP_FIELD_NUMBER;
+      hash = (53 * hash) + getIp().hashCode();
+      if (hasCgroupStats()) {
+        hash = (37 * hash) + CGROUP_STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getCgroupStats().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Info.ResourceStats prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represent the resource stats
+     * </pre>
+     *
+     * Protobuf type {@code payload.v1.Info.ResourceStats}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Info.ResourceStats)
+        org.vdaas.vald.api.v1.payload.Info.ResourceStatsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_ResourceStats_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_ResourceStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Info.ResourceStats.class, org.vdaas.vald.api.v1.payload.Info.ResourceStats.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Info.ResourceStats.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCgroupStatsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        ip_ = "";
+        cgroupStats_ = null;
+        if (cgroupStatsBuilder_ != null) {
+          cgroupStatsBuilder_.dispose();
+          cgroupStatsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_ResourceStats_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.ResourceStats getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Info.ResourceStats.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.ResourceStats build() {
+        org.vdaas.vald.api.v1.payload.Info.ResourceStats result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.ResourceStats buildPartial() {
+        org.vdaas.vald.api.v1.payload.Info.ResourceStats result = new org.vdaas.vald.api.v1.payload.Info.ResourceStats(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Info.ResourceStats result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ip_ = ip_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cgroupStats_ = cgroupStatsBuilder_ == null
+              ? cgroupStats_
+              : cgroupStatsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Info.ResourceStats) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Info.ResourceStats)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Info.ResourceStats other) {
+        if (other == org.vdaas.vald.api.v1.payload.Info.ResourceStats.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIp().isEmpty()) {
+          ip_ = other.ip_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCgroupStats()) {
+          mergeCgroupStats(other.getCgroupStats());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                ip_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCgroupStatsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ip_ = "";
+      /**
+       * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+       * @return The ip.
+       */
+      public java.lang.String getIp() {
+        java.lang.Object ref = ip_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ip_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+       * @return The bytes for ip.
+       */
+      public com.google.protobuf.ByteString
+          getIpBytes() {
+        java.lang.Object ref = ip_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ip_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+       * @param value The ip to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIp(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ip_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIp() {
+        ip_ = getDefaultInstance().getIp();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ip = 2 [json_name = "ip", (.buf.validate.field) = { ... }</code>
+       * @param value The bytes for ip to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ip_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private org.vdaas.vald.api.v1.payload.Info.CgroupStats cgroupStats_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Info.CgroupStats, org.vdaas.vald.api.v1.payload.Info.CgroupStats.Builder, org.vdaas.vald.api.v1.payload.Info.CgroupStatsOrBuilder> cgroupStatsBuilder_;
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       * @return Whether the cgroupStats field is set.
+       */
+      public boolean hasCgroupStats() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       * @return The cgroupStats.
+       */
+      public org.vdaas.vald.api.v1.payload.Info.CgroupStats getCgroupStats() {
+        if (cgroupStatsBuilder_ == null) {
+          return cgroupStats_ == null ? org.vdaas.vald.api.v1.payload.Info.CgroupStats.getDefaultInstance() : cgroupStats_;
+        } else {
+          return cgroupStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       */
+      public Builder setCgroupStats(org.vdaas.vald.api.v1.payload.Info.CgroupStats value) {
+        if (cgroupStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cgroupStats_ = value;
+        } else {
+          cgroupStatsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       */
+      public Builder setCgroupStats(
+          org.vdaas.vald.api.v1.payload.Info.CgroupStats.Builder builderForValue) {
+        if (cgroupStatsBuilder_ == null) {
+          cgroupStats_ = builderForValue.build();
+        } else {
+          cgroupStatsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       */
+      public Builder mergeCgroupStats(org.vdaas.vald.api.v1.payload.Info.CgroupStats value) {
+        if (cgroupStatsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            cgroupStats_ != null &&
+            cgroupStats_ != org.vdaas.vald.api.v1.payload.Info.CgroupStats.getDefaultInstance()) {
+            getCgroupStatsBuilder().mergeFrom(value);
+          } else {
+            cgroupStats_ = value;
+          }
+        } else {
+          cgroupStatsBuilder_.mergeFrom(value);
+        }
+        if (cgroupStats_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       */
+      public Builder clearCgroupStats() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cgroupStats_ = null;
+        if (cgroupStatsBuilder_ != null) {
+          cgroupStatsBuilder_.dispose();
+          cgroupStatsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Info.CgroupStats.Builder getCgroupStatsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCgroupStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       */
+      public org.vdaas.vald.api.v1.payload.Info.CgroupStatsOrBuilder getCgroupStatsOrBuilder() {
+        if (cgroupStatsBuilder_ != null) {
+          return cgroupStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return cgroupStats_ == null ?
+              org.vdaas.vald.api.v1.payload.Info.CgroupStats.getDefaultInstance() : cgroupStats_;
+        }
+      }
+      /**
+       * <pre>
+       * Container resource usage statistics
+       * </pre>
+       *
+       * <code>.payload.v1.Info.CgroupStats cgroup_stats = 3 [json_name = "cgroupStats"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.vdaas.vald.api.v1.payload.Info.CgroupStats, org.vdaas.vald.api.v1.payload.Info.CgroupStats.Builder, org.vdaas.vald.api.v1.payload.Info.CgroupStatsOrBuilder> 
+          getCgroupStatsFieldBuilder() {
+        if (cgroupStatsBuilder_ == null) {
+          cgroupStatsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.vdaas.vald.api.v1.payload.Info.CgroupStats, org.vdaas.vald.api.v1.payload.Info.CgroupStats.Builder, org.vdaas.vald.api.v1.payload.Info.CgroupStatsOrBuilder>(
+                  getCgroupStats(),
+                  getParentForChildren(),
+                  isClean());
+          cgroupStats_ = null;
+        }
+        return cgroupStatsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Info.ResourceStats)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Info.ResourceStats)
+    private static final org.vdaas.vald.api.v1.payload.Info.ResourceStats DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Info.ResourceStats();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.ResourceStats getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceStats>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceStats>() {
+      @java.lang.Override
+      public ResourceStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceStats> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceStats> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Info.ResourceStats getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CgroupStatsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:payload.v1.Info.CgroupStats)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * CPU cores available
+     * </pre>
+     *
+     * <code>double cpu_limit_cores = 1 [json_name = "cpuLimitCores"];</code>
+     * @return The cpuLimitCores.
+     */
+    double getCpuLimitCores();
+
+    /**
+     * <pre>
+     * CPU usage in cores (not percentage)
+     * </pre>
+     *
+     * <code>double cpu_usage_cores = 2 [json_name = "cpuUsageCores"];</code>
+     * @return The cpuUsageCores.
+     */
+    double getCpuUsageCores();
+
+    /**
+     * <pre>
+     * Memory limit in bytes
+     * </pre>
+     *
+     * <code>uint64 memory_limit_bytes = 3 [json_name = "memoryLimitBytes"];</code>
+     * @return The memoryLimitBytes.
+     */
+    long getMemoryLimitBytes();
+
+    /**
+     * <pre>
+     * Memory usage in bytes
+     * </pre>
+     *
+     * <code>uint64 memory_usage_bytes = 4 [json_name = "memoryUsageBytes"];</code>
+     * @return The memoryUsageBytes.
+     */
+    long getMemoryUsageBytes();
+  }
+  /**
+   * Protobuf type {@code payload.v1.Info.CgroupStats}
+   */
+  public static final class CgroupStats extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:payload.v1.Info.CgroupStats)
+      CgroupStatsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CgroupStats.newBuilder() to construct.
+    private CgroupStats(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CgroupStats() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CgroupStats();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_CgroupStats_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_CgroupStats_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.vdaas.vald.api.v1.payload.Info.CgroupStats.class, org.vdaas.vald.api.v1.payload.Info.CgroupStats.Builder.class);
+    }
+
+    public static final int CPU_LIMIT_CORES_FIELD_NUMBER = 1;
+    private double cpuLimitCores_ = 0D;
+    /**
+     * <pre>
+     * CPU cores available
+     * </pre>
+     *
+     * <code>double cpu_limit_cores = 1 [json_name = "cpuLimitCores"];</code>
+     * @return The cpuLimitCores.
+     */
+    @java.lang.Override
+    public double getCpuLimitCores() {
+      return cpuLimitCores_;
+    }
+
+    public static final int CPU_USAGE_CORES_FIELD_NUMBER = 2;
+    private double cpuUsageCores_ = 0D;
+    /**
+     * <pre>
+     * CPU usage in cores (not percentage)
+     * </pre>
+     *
+     * <code>double cpu_usage_cores = 2 [json_name = "cpuUsageCores"];</code>
+     * @return The cpuUsageCores.
+     */
+    @java.lang.Override
+    public double getCpuUsageCores() {
+      return cpuUsageCores_;
+    }
+
+    public static final int MEMORY_LIMIT_BYTES_FIELD_NUMBER = 3;
+    private long memoryLimitBytes_ = 0L;
+    /**
+     * <pre>
+     * Memory limit in bytes
+     * </pre>
+     *
+     * <code>uint64 memory_limit_bytes = 3 [json_name = "memoryLimitBytes"];</code>
+     * @return The memoryLimitBytes.
+     */
+    @java.lang.Override
+    public long getMemoryLimitBytes() {
+      return memoryLimitBytes_;
+    }
+
+    public static final int MEMORY_USAGE_BYTES_FIELD_NUMBER = 4;
+    private long memoryUsageBytes_ = 0L;
+    /**
+     * <pre>
+     * Memory usage in bytes
+     * </pre>
+     *
+     * <code>uint64 memory_usage_bytes = 4 [json_name = "memoryUsageBytes"];</code>
+     * @return The memoryUsageBytes.
+     */
+    @java.lang.Override
+    public long getMemoryUsageBytes() {
+      return memoryUsageBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Double.doubleToRawLongBits(cpuLimitCores_) != 0) {
+        output.writeDouble(1, cpuLimitCores_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(cpuUsageCores_) != 0) {
+        output.writeDouble(2, cpuUsageCores_);
+      }
+      if (memoryLimitBytes_ != 0L) {
+        output.writeUInt64(3, memoryLimitBytes_);
+      }
+      if (memoryUsageBytes_ != 0L) {
+        output.writeUInt64(4, memoryUsageBytes_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Double.doubleToRawLongBits(cpuLimitCores_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, cpuLimitCores_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(cpuUsageCores_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, cpuUsageCores_);
+      }
+      if (memoryLimitBytes_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, memoryLimitBytes_);
+      }
+      if (memoryUsageBytes_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, memoryUsageBytes_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.vdaas.vald.api.v1.payload.Info.CgroupStats)) {
+        return super.equals(obj);
+      }
+      org.vdaas.vald.api.v1.payload.Info.CgroupStats other = (org.vdaas.vald.api.v1.payload.Info.CgroupStats) obj;
+
+      if (java.lang.Double.doubleToLongBits(getCpuLimitCores())
+          != java.lang.Double.doubleToLongBits(
+              other.getCpuLimitCores())) return false;
+      if (java.lang.Double.doubleToLongBits(getCpuUsageCores())
+          != java.lang.Double.doubleToLongBits(
+              other.getCpuUsageCores())) return false;
+      if (getMemoryLimitBytes()
+          != other.getMemoryLimitBytes()) return false;
+      if (getMemoryUsageBytes()
+          != other.getMemoryUsageBytes()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CPU_LIMIT_CORES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCpuLimitCores()));
+      hash = (37 * hash) + CPU_USAGE_CORES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCpuUsageCores()));
+      hash = (37 * hash) + MEMORY_LIMIT_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMemoryLimitBytes());
+      hash = (37 * hash) + MEMORY_USAGE_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMemoryUsageBytes());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.vdaas.vald.api.v1.payload.Info.CgroupStats prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code payload.v1.Info.CgroupStats}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:payload.v1.Info.CgroupStats)
+        org.vdaas.vald.api.v1.payload.Info.CgroupStatsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_CgroupStats_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_CgroupStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.vdaas.vald.api.v1.payload.Info.CgroupStats.class, org.vdaas.vald.api.v1.payload.Info.CgroupStats.Builder.class);
+      }
+
+      // Construct using org.vdaas.vald.api.v1.payload.Info.CgroupStats.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cpuLimitCores_ = 0D;
+        cpuUsageCores_ = 0D;
+        memoryLimitBytes_ = 0L;
+        memoryUsageBytes_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.vdaas.vald.api.v1.payload.ValdPayload.internal_static_payload_v1_Info_CgroupStats_descriptor;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.CgroupStats getDefaultInstanceForType() {
+        return org.vdaas.vald.api.v1.payload.Info.CgroupStats.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.CgroupStats build() {
+        org.vdaas.vald.api.v1.payload.Info.CgroupStats result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.vdaas.vald.api.v1.payload.Info.CgroupStats buildPartial() {
+        org.vdaas.vald.api.v1.payload.Info.CgroupStats result = new org.vdaas.vald.api.v1.payload.Info.CgroupStats(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(org.vdaas.vald.api.v1.payload.Info.CgroupStats result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cpuLimitCores_ = cpuLimitCores_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cpuUsageCores_ = cpuUsageCores_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.memoryLimitBytes_ = memoryLimitBytes_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.memoryUsageBytes_ = memoryUsageBytes_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.vdaas.vald.api.v1.payload.Info.CgroupStats) {
+          return mergeFrom((org.vdaas.vald.api.v1.payload.Info.CgroupStats)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.vdaas.vald.api.v1.payload.Info.CgroupStats other) {
+        if (other == org.vdaas.vald.api.v1.payload.Info.CgroupStats.getDefaultInstance()) return this;
+        if (other.getCpuLimitCores() != 0D) {
+          setCpuLimitCores(other.getCpuLimitCores());
+        }
+        if (other.getCpuUsageCores() != 0D) {
+          setCpuUsageCores(other.getCpuUsageCores());
+        }
+        if (other.getMemoryLimitBytes() != 0L) {
+          setMemoryLimitBytes(other.getMemoryLimitBytes());
+        }
+        if (other.getMemoryUsageBytes() != 0L) {
+          setMemoryUsageBytes(other.getMemoryUsageBytes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+                cpuLimitCores_ = input.readDouble();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 9
+              case 17: {
+                cpuUsageCores_ = input.readDouble();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 17
+              case 24: {
+                memoryLimitBytes_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                memoryUsageBytes_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private double cpuLimitCores_ ;
+      /**
+       * <pre>
+       * CPU cores available
+       * </pre>
+       *
+       * <code>double cpu_limit_cores = 1 [json_name = "cpuLimitCores"];</code>
+       * @return The cpuLimitCores.
+       */
+      @java.lang.Override
+      public double getCpuLimitCores() {
+        return cpuLimitCores_;
+      }
+      /**
+       * <pre>
+       * CPU cores available
+       * </pre>
+       *
+       * <code>double cpu_limit_cores = 1 [json_name = "cpuLimitCores"];</code>
+       * @param value The cpuLimitCores to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCpuLimitCores(double value) {
+
+        cpuLimitCores_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CPU cores available
+       * </pre>
+       *
+       * <code>double cpu_limit_cores = 1 [json_name = "cpuLimitCores"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCpuLimitCores() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cpuLimitCores_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double cpuUsageCores_ ;
+      /**
+       * <pre>
+       * CPU usage in cores (not percentage)
+       * </pre>
+       *
+       * <code>double cpu_usage_cores = 2 [json_name = "cpuUsageCores"];</code>
+       * @return The cpuUsageCores.
+       */
+      @java.lang.Override
+      public double getCpuUsageCores() {
+        return cpuUsageCores_;
+      }
+      /**
+       * <pre>
+       * CPU usage in cores (not percentage)
+       * </pre>
+       *
+       * <code>double cpu_usage_cores = 2 [json_name = "cpuUsageCores"];</code>
+       * @param value The cpuUsageCores to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCpuUsageCores(double value) {
+
+        cpuUsageCores_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CPU usage in cores (not percentage)
+       * </pre>
+       *
+       * <code>double cpu_usage_cores = 2 [json_name = "cpuUsageCores"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCpuUsageCores() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cpuUsageCores_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long memoryLimitBytes_ ;
+      /**
+       * <pre>
+       * Memory limit in bytes
+       * </pre>
+       *
+       * <code>uint64 memory_limit_bytes = 3 [json_name = "memoryLimitBytes"];</code>
+       * @return The memoryLimitBytes.
+       */
+      @java.lang.Override
+      public long getMemoryLimitBytes() {
+        return memoryLimitBytes_;
+      }
+      /**
+       * <pre>
+       * Memory limit in bytes
+       * </pre>
+       *
+       * <code>uint64 memory_limit_bytes = 3 [json_name = "memoryLimitBytes"];</code>
+       * @param value The memoryLimitBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMemoryLimitBytes(long value) {
+
+        memoryLimitBytes_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Memory limit in bytes
+       * </pre>
+       *
+       * <code>uint64 memory_limit_bytes = 3 [json_name = "memoryLimitBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMemoryLimitBytes() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        memoryLimitBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long memoryUsageBytes_ ;
+      /**
+       * <pre>
+       * Memory usage in bytes
+       * </pre>
+       *
+       * <code>uint64 memory_usage_bytes = 4 [json_name = "memoryUsageBytes"];</code>
+       * @return The memoryUsageBytes.
+       */
+      @java.lang.Override
+      public long getMemoryUsageBytes() {
+        return memoryUsageBytes_;
+      }
+      /**
+       * <pre>
+       * Memory usage in bytes
+       * </pre>
+       *
+       * <code>uint64 memory_usage_bytes = 4 [json_name = "memoryUsageBytes"];</code>
+       * @param value The memoryUsageBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMemoryUsageBytes(long value) {
+
+        memoryUsageBytes_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Memory usage in bytes
+       * </pre>
+       *
+       * <code>uint64 memory_usage_bytes = 4 [json_name = "memoryUsageBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMemoryUsageBytes() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        memoryUsageBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:payload.v1.Info.CgroupStats)
+    }
+
+    // @@protoc_insertion_point(class_scope:payload.v1.Info.CgroupStats)
+    private static final org.vdaas.vald.api.v1.payload.Info.CgroupStats DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.vdaas.vald.api.v1.payload.Info.CgroupStats();
+    }
+
+    public static org.vdaas.vald.api.v1.payload.Info.CgroupStats getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CgroupStats>
+        PARSER = new com.google.protobuf.AbstractParser<CgroupStats>() {
+      @java.lang.Override
+      public CgroupStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CgroupStats> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CgroupStats> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.vdaas.vald.api.v1.payload.Info.CgroupStats getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
